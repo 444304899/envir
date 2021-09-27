@@ -1,0 +1,131 @@
+[@假人登录设置]
+{
+#if
+CHECKDUMMYCOUNT < <$GLOBAL(假人_人数上限)>
+#act
+delaygoto 1 @假人首次上线
+#ELSEACT
+KICK
+BREAK
+
+#if
+#act
+;-----------------------------------
+movr N$随机数 1 30
+mov N$假人信息刷新间隔基数 40
+;                          ↑每秒保存身上装备及等级信息，如果影响CPU请改为每60秒一次.
+inc N$假人信息刷新间隔基数 <$str(N$随机数)>
+setontimer 255 <$str(N$假人信息刷新间隔基数)>
+
+;setontimer 251 60
+;251号计时器，用个检测假人下图之后，宝宝死了不自动招的，如果宝宝不容易死，可以不开。
+
+MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
+SETONTIMER 252 <$STR(N$频率)>
+
+;252号计时器，假人几率触发下图打怪 土城散步、
+;253号计时器是用来回城的。
+;254号计时器是用来检测假人范围内有没有怪  和  全图怪少于多少 回城 。。
+;255号计时器是用来 随机时间记录假人身上装备  保存的 死亡，上线读取保存的信息。
+
+
+#IF
+EQUAL <$GLOBAL(假人_入会开关)> 开启
+random <$GLOBAL(假人_入会等级几率)>
+CHECKLEVELEX > <$GLOBAL(假人_最低入会等级)>
+#ACT
+GETRANDOMLINETEXT ..\QuestDiary\寒流新假人\行会列表.txt <$STR(S$48)>
+ADDGUILDMEMBER <$STR(S$48)>
+;上面是假人随机入会的。。。。。。。。。。。。。。。。。。。
+
+
+[@假人首次上线]
+#if
+CHECKVAR HUMAN 假人是否为新人 =
+#act
+GETRANDOMLINETEXT ..\QuestDiary\寒流新假人\新人配置文件路径.txt S$新人配置文件路径
+SETDUMMYCONFIGFILENAME <$STR(S$新人配置文件路径)>
+LOADDUMMYCONFIGFILE
+CALCVAR HUMAN 假人是否为新人 = 否
+SAVEVAR HUMAN 假人是否为新人
+HUMANHP = <$MAXHP>
+HUMANMP = <$MAXMP>
+INC I88 1
+SETONTIMER 1 1
+SETONTIMER 3 3
+SETONTIMER 4 20
+HAIRSTYLE 999
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+give 新手甲
+give 新手剑
+give 回城石 1
+give 随机石 1
+AutoTakeOnItem 新手甲 0
+AutoTakeOnItem 新手剑 1
+SENDMSG 0 {欢迎新玩家|255:15}{『<$USERNAME>』|251:15}{来到了|255:15}{【<$SERVERNAME>】|250:15}{.让我们热烈欢迎这位玩家！！|255:15}
+SENDMSG 0 {欢迎新玩家|255:15}{『<$USERNAME>』|251:15}{来到了|255:15}{【<$SERVERNAME>】|250:15}{.让我们热烈欢迎这位玩家！！|255:15}
+SENDMSG 0 {欢迎新玩家|255:15}{『<$USERNAME>』|251:15}{来到了|255:15}{【<$SERVERNAME>】|250:15}{.让我们热烈欢迎这位玩家！！|255:15}
+SetSndaItemBox 1 2 8888 4 5 6 7 8 6666 9 10
+CHANGEATTATCKMODE 6
+delaygoto 10000 @飞主城
+#ELSEACT
+INC I88 1
+SETDUMMYCONFIGFILENAME ..\QuestDiary\寒流新假人\假人个人信息保存\<$USERNAME>.txt
+LOADDUMMYCONFIGFILE
+GOTO @飞主城
+
+
+
+[@飞主城]
+#ACT
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+delaygoto 5000 @JRLQQQLB
+
+
+
+
+[@JRLQQQLB]
+#if
+check [66] 0
+#act
+set [66] 1
+ADDSKILL 施毒术 3
+ADDSKILL 开天斩 3
+ADDSKILL 逐日剑法 3
+;GiveStateItem 切割神器·[一阶] 1 1 0 0 1 1 1 1
+GIVESTATEITEM 切割神器·[一阶] 1 1 1 0 0 1 1 1 0
+;GiveStateItem 【超神器】关注神器 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】关注神器 1 1 1 0 0 1 1 1 0
+;GiveStateItem 切割[凡] 1 1 0 0 1 1 1 1
+GIVESTATEITEM 切割[凡] 1 1 1 0 0 1 1 1 0
+AutoTakeOnItem 切割神器·[一阶] 14
+AutoTakeOnItem 【超神器】关注神器 39
+AutoTakeOnItem 切割[凡] 13
+SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

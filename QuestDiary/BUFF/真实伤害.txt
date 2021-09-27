@@ -1,0 +1,1056 @@
+[@伤害计算]
+{
+#if
+#act
+MOV N$固定伤害 0
+MOV N$百分比伤害 0
+MOV N$星星总数量 0
+MOV N$星星加成 0
+MOV N$幸运伤害 0
+
+#if
+#act
+GETHUMCUSTOMITEMVALUE -1 8 <$STR(N$装备切割)> N99
+INC N$百分比伤害 <$STR(N$装备切割)>
+
+#if
+
+CheckTextList ..\QuestDiary\BUFF\武器伤害.txt <$WEAPON>
+#ACT
+GetStringPos ..\QuestDiary\BUFF\武器伤害.txt <$WEAPON>
+INC N0 1
+GetListString ..\QuestDiary\BUFF\武器伤害.txt <$STR(N0)> S$武器切割
+INC N$固定伤害 <$STR(S$武器切割)>
+
+
+#if
+CheckTextList ..\QuestDiary\BUFF\面巾伤害.txt <$HAT>
+#ACT
+GetStringPos ..\QuestDiary\BUFF\面巾伤害.txt <$HAT>
+INC N0 1
+GetListString ..\QuestDiary\BUFF\面巾伤害.txt <$STR(N5)> S$面巾切割
+INC N$固定伤害 <$STR(S$面巾切割)>
+
+
+
+
+
+
+#if
+large U47 0
+#act
+mul n$巨螽基础固定 100 <$STR(u47)>
+;mul n$巨螽基础百分比 3 <$STR(u47)>
+INC N$固定伤害 <$STR(n$巨螽基础固定)>
+;INC N$百分比伤害 <$STR(n$巨螽基础百分比)>
+
+#if
+checkitemw 神火·灵能冲击I 1
+checkitemw 神火·灵能冲击II 1
+checkitemw 神火·灵能冲击III 1
+checkitemw 神火·灵能冲击IV 1
+#act
+INC N$固定伤害 1000
+
+#if
+checkitemw 神火·灵能击破I 1
+checkitemw 神火·灵能击破II 1
+checkitemw 神火·灵能击破III 1
+checkitemw 神火·灵能击破IV 1
+#act
+INC N$固定伤害 2000
+
+#if
+checkitemw 神火·灵能极速I 1
+checkitemw 神火·灵能极速II 1
+checkitemw 神火·灵能极速III 1
+checkitemw 神火·灵能极速IV 1
+#act
+INC N$固定伤害 5000
+
+#if
+checkitemw 神火·灵能涌动I 1
+checkitemw 神火·灵能涌动II 1
+checkitemw 神火·灵能涌动III 1
+checkitemw 神火·灵能涌动IV 1
+#act
+INC N$固定伤害 10000
+
+#if
+checkitemw 神火·灵能凝聚I 1
+checkitemw 神火·灵能凝聚II 1
+checkitemw 神火·灵能凝聚III 1
+checkitemw 神火·灵能凝聚IV 1
+#act
+INC N$固定伤害 20000
+
+#if
+checkitemw 神火·灵体护身I 1
+checkitemw 神火·灵体护身II 1
+checkitemw 神火·灵体护身III 1
+checkitemw 神火·灵体护身IV 1
+#act
+INC N$固定伤害 30000
+
+#if
+checkitemw 异火焚仙I 1
+checkitemw 异火焚仙II 1
+checkitemw 异火焚仙III 1
+checkitemw 异火焚仙IV 1
+#act
+INC N$固定伤害 40000
+
+#if
+checkitemw 魂灯紫炎I 1
+checkitemw 魂灯紫炎II 1
+checkitemw 魂灯紫炎III 1
+checkitemw 魂灯紫炎IV 1
+#act
+INC N$固定伤害 50000
+
+#if
+checkitemw 繁涅·妖莲I 1
+checkitemw 碎涅·妖莲II 1
+checkitemw 净涅·妖莲III 1
+checkitemw 空涅·妖莲IV 1
+#act
+INC N$固定伤害 60000
+
+
+
+#if
+checkitemw 九天·日月[限时] 1
+#act
+INC N$固定伤害 11111
+;INC N$百分比伤害 1
+
+#if
+checkitemw 切割神器·[一阶] 1
+#act
+INC N$固定伤害 5000
+INC N$百分比伤害 1
+
+#if
+checkitemw 切割神器·[二阶] 1
+#act
+INC N$固定伤害 15000
+INC N$百分比伤害 2
+
+
+#if
+checkitemw 切割神器·[三阶] 1
+#act
+INC N$固定伤害 30000
+INC N$百分比伤害 3
+
+
+#if
+checkitemw 切割神器·[四阶] 1
+#act
+INC N$固定伤害 50000
+INC N$百分比伤害 5
+
+
+#if
+checkitemw 切割神器·[五阶] 1
+#act
+INC N$固定伤害 70000
+INC N$百分比伤害 7
+
+
+#if
+checkitemw 切割神器·[六阶] 1
+#act
+INC N$固定伤害 90000
+INC N$百分比伤害 10
+
+
+#if
+checkitemw 切割神器·[七阶] 1
+#act
+INC N$固定伤害 120000
+INC N$百分比伤害 13
+
+
+#if
+checkitemw 切割神器·[八阶] 1
+#act
+INC N$固定伤害 150000
+INC N$百分比伤害 16
+
+
+#if
+checkitemw 切割神器·[九阶] 1
+#act
+INC N$固定伤害 180000
+INC N$百分比伤害 20
+
+
+#if
+checkitemw 切割神器·[十阶] 1
+#act
+INC N$固定伤害 210000
+INC N$百分比伤害 25
+
+
+#if
+checkitemw 切割神器·[超凡] 1
+#act
+INC N$固定伤害 240000
+INC N$百分比伤害 30
+
+
+#if
+checkitemw 切割神器·[不朽] 1
+#act
+INC N$固定伤害 270000
+INC N$百分比伤害 35
+
+
+#if
+checkitemw 切割神器·[星辰] 1
+#act
+INC N$固定伤害 300000
+INC N$百分比伤害 40
+
+
+#if
+checkitemw 切割神器·[龙啸] 1
+#act
+INC N$固定伤害 320000
+INC N$百分比伤害 45
+
+
+#if
+checkitemw 切割神器·[无尽] 1
+#act
+INC N$固定伤害 330000
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 切割神器·[末日] 1
+#act
+INC N$固定伤害 340000
+INC N$百分比伤害 65
+
+
+#if
+checkitemw 切割神器·[最终] 1
+#act
+INC N$固定伤害 350000
+INC N$百分比伤害 80
+
+
+#if
+checkitemw 切割神器·[终极] 1
+#act
+INC N$固定伤害 400000
+INC N$百分比伤害 100
+
+
+#if
+checkitemw 切割神器·[限时] 1
+#act
+INC N$固定伤害 400000
+INC N$百分比伤害 100
+
+
+#if
+checkitemw 『毒灭万物』 1
+#act
+INC N$固定伤害 688
+
+
+#if
+check [93] 1
+#act
+INC N$固定伤害 10000
+
+#if
+check [66] 1
+#act
+INC N$固定伤害 500
+
+#if
+checkitemw 王座之争 1
+#act
+INC N$百分比伤害 5
+
+#if
+checkitemw ★莫雷洛秘典★ 1
+#act
+INC N$百分比伤害 15
+
+#if
+checkitemw 永夜〝无光 1
+#act
+INC N$百分比伤害 5
+
+#if
+checkitemw ★死神の印记★ 1
+#act
+INC N$百分比伤害 12
+
+#if
+checkitemw 猎人的宽刃刀 1
+#act
+INC N$固定伤害 2222
+
+#if
+checkitemw 幽魂◆◆万象◆◆ 1
+#act
+INC N$固定伤害 11111
+
+
+#if
+checkitemw 恶魔之翼★ 1
+#act
+INC N$百分比伤害 12
+
+
+#if
+checkitemw 游击者的军刀 1
+#act
+INC N$固定伤害 4444
+
+#if
+checkitemw 附魔·战士 1
+#act
+INC N$固定伤害 6666
+
+
+#if
+checkitemw 魂·魄
+#act
+INC N$百分比伤害 45
+
+#if
+checkitemw 九天神雷
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 靠山图腾
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 琉璃五妙铃
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 西牛信物
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 四方珠
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 青花漫【涟漪】
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 三体道·岁月杀
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 焚尽·青丝
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 雨幕成珠帘
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 地灵的馈赠
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 昊天锤
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 风暴之声
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 悸哭戾气
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 尾王印记
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 不死鸟之眼
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 域外心魔花
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 元初仙光
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 蚊兽口器
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 步步生莲
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 古境魂灯
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 岁月终有极
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 轮回终有边
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 锦上添花
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 连天烽火
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 附心丝
+#act
+INC N$百分比伤害 50
+
+
+
+#if
+checkitemw 连臂
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 情天神镯
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 永恒的空间
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 唤雨
+#act
+INC N$百分比伤害 50
+
+
+
+
+#if
+large N$蒜香肠 1
+#act
+INC N$固定伤害 2888
+
+
+#if
+large N$爆裂肠 1
+#act
+INC N$百分比伤害 15
+
+#if
+HOUR 18 24
+checkitemw 夜行者 1
+#ACT
+INC N$百分比伤害 120
+
+#if
+;HOUR 18 24
+checkitemw 九星古神头骨 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 祖符头骨 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 不动冥王盔 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 三千烦恼丝 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 株天神树 1
+#ACT
+INC N$百分比伤害 50
+
+
+#if
+;HOUR 18 24
+checkitemw 獒牙 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 雁过拔毛 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 三环·三圣 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 香火一拜 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 自己才是靠山 1
+#ACT
+INC N$百分比伤害 50
+
+#if
+;HOUR 18 24
+checkitemw 鲸王鳍 1
+#ACT
+INC N$百分比伤害 50
+
+
+#if
+;HOUR 18 24
+checkitemw 囚封天之道 1
+#ACT
+INC N$百分比伤害 50
+
+
+#if
+;HOUR 18 24
+checkitemw 浊酒恋红尘 1
+#ACT
+INC N$百分比伤害 50
+
+
+
+#if
+checkitemw 切割[奕] 1
+#act
+INC N$固定伤害 30000
+INC N$百分比伤害 10
+
+#if
+checkitemw 切割[终·结] 1
+#act
+INC N$百分比伤害 20
+
+#if
+checkitemw ★切割[凡] 1
+#act
+INC N$百分比伤害 30
+
+#if
+checkitemw ★★★究魄★★★ 1
+#act
+INC N$百分比伤害 40
+
+#if
+checkitemw ★★★鬼切★★★ 1
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw ★★★妖切★★★ 1
+#act
+INC N$百分比伤害 60
+
+
+#if
+checkitemw 银光魔法团 1
+checkitemw 银光魔术师 1
+#act
+INC N$百分比伤害 80
+
+
+#if
+checkitemw 连臂
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 情天神镯
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 永恒的空间
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 青衣韩山
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 六道轮回盘
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 道方扳指
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 奉旨讨饭
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 撒豆成兵
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 幻幽命格·篡改
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 青虹终会盛开
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 魔戒
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 仙人指路
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 寒尽不知年
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 不死药
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 血妖·戒
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 杀戮本源
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 古道三分神
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 灭生拳
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 一缕白发笑苍茫
+#act
+INC N$百分比伤害 50
+
+
+
+#if
+checkitemw 九衍金鎏
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 落笔成殇
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 启龙·因果魂爪
+#act
+INC N$百分比伤害 50
+
+
+
+#if
+checkitemw の苍月岛主的权力 1
+#act
+INC N$百分比伤害 30
+
+
+
+#if
+checkitemw 白雾 1
+#act
+INC N$百分比伤害 40
+
+
+#if
+checkitemw ★幻影の之舞★ 1
+#act
+INC N$百分比伤害 12
+
+#if
+checkitemw 冰封◆◆千里◆◆ 1
+#act
+INC N$百分比伤害 15
+
+
+
+
+#if
+checkitemw 疾风之靴 1
+#act
+INC N$百分比伤害 5
+
+
+
+#if
+checkitemw 屠戮的裁决※※ 1
+#act
+INC N$固定伤害 8888
+
+
+#if
+checkitemw 放逐指环★ 1
+#act
+INC N$百分比伤害 8
+
+
+
+#if
+checkitemw 金玉钱币 1
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 你是恩赐也是劫 1
+#act
+INC N$百分比伤害 50
+
+#if
+checkitemw 只是一缕烛火 1
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw 切割[仙] 1
+#act
+INC N$固定伤害 4000
+
+#if
+checkitemw 切割[魔] 1
+#act
+INC N$固定伤害 2000
+#if
+checkitemw 切割[佛] 1
+#act
+INC N$固定伤害 2000
+#if
+checkitemw 切割[妖] 1
+#act
+INC N$固定伤害 2000
+#if
+checkitemw 切割[冥] 1
+#act
+INC N$固定伤害 2000
+#if
+checkitemw 切割[神] 1
+#act
+INC N$固定伤害 2000
+#if
+checkitemw 切割[道] 1
+#act
+INC N$固定伤害 2000
+#if
+checkitemw 切割[玄] 1
+#act
+INC N$固定伤害 2000
+
+#IF
+checkitemw ≮王冠≯
+#act
+INC N$百分比伤害 100
+
+#IF
+checkitemw ≮红钻≯
+#act
+INC N$百分比伤害 50
+
+
+#if
+checkitemw ★★割魂★★ 1
+#act
+INC N$百分比伤害 20
+
+
+
+#if
+checkitem 【布鲁斯·韦恩】 1
+#act
+INC N$百分比伤害 20
+
+
+#if
+check [101] 1
+#act
+INC N$固定伤害 2888
+
+#if
+checkitem 红牛饮料
+#act
+INC N$固定伤害 1888
+
+#if
+EQUAL T30 技术内裤
+#act
+INC N$固定伤害 2888
+
+#if
+CHECKTITLE 沙城捐献
+#act
+INC N$固定伤害 2000
+
+
+
+#if
+EQUAL T31 能量脉冲
+#act
+INC N$固定伤害 5000
+INC N$百分比伤害 10
+
+
+
+
+#if
+equal A120 <$USERNAME>
+#act
+INC N$百分比伤害 50
+
+#if
+equal A121 <$USERNAME>
+#act
+INC N$百分比伤害 30
+
+#if
+equal A122 <$USERNAME>
+#act
+INC N$百分比伤害 15
+
+#if
+equal A123 <$USERNAME>
+#act
+INC N$百分比伤害 10
+
+#if
+equal A124 <$USERNAME>
+#act
+INC N$百分比伤害 5
+
+
+#if
+CHECKTITLE 神魔·小成
+#act
+INC N$百分比伤害 10
+
+#if
+CHECKTITLE 神魔·大成
+#act
+INC N$百分比伤害 20
+
+#if
+CHECKTITLE 神魔·完满
+#act
+INC N$百分比伤害 30
+
+
+
+
+
+#IF
+CHECKTITLE 五行之体·混沌[一阶]
+#act
+INC N$百分比伤害 10
+
+
+#IF
+CHECKTITLE 五行之体·混沌[二阶]
+#act
+INC N$百分比伤害 20
+
+#IF
+CHECKTITLE 五行之体·混沌[三阶]
+#act
+INC N$百分比伤害 30
+
+#IF
+CHECKTITLE 五行之体·混沌[四阶]
+#act
+INC N$百分比伤害 40
+
+#IF
+CHECKTITLE 五行之体·混沌[五阶]
+#act
+INC N$百分比伤害 50
+
+
+
+
+
+#if
+large <$UPGRADECOUNT> 17
+#act
+MOV N$星星加成 500
+
+#if
+large <$UPGRADECOUNT> 27
+#act
+MOV N$星星加成 1000
+
+#if
+large <$UPGRADECOUNT> 37
+#act
+MOV N$星星加成 2000
+
+#if
+large <$UPGRADECOUNT> 47
+#act
+MOV N$星星加成 3000
+
+#if
+large <$UPGRADECOUNT> 67
+#act
+MOV N$星星加成 4000
+
+#if
+large <$UPGRADECOUNT> 87
+#act
+MOV N$星星加成 5000
+
+#if
+large N$星星加成 0
+#act
+INC N$固定伤害 <$STR(N$星星加成)>
+
+#if
+EQUAL T31 能量脉冲
+#act
+INC N$固定伤害 5000
+INC N$百分比伤害 10
+
+#if
+CHECKUSEITEM 3
+CHECKITEMADDVALUE 3 1 = 5
+#act
+INC N$百分比伤害 10
+
+#if
+CHECKUSEITEM 3
+CHECKITEMADDVALUE 3 1 = 6
+#act
+INC N$百分比伤害 20
+
+#if
+CHECKUSEITEM 3
+CHECKITEMADDVALUE 3 1 = 7
+#act
+INC N$百分比伤害 40
+
+#if
+CHECKUSEITEM 3
+CHECKITEMADDVALUE 3 1 = 8
+#act
+INC N$百分比伤害 60
+
+#if
+CHECKUSEITEM 3
+CHECKITEMADDVALUE 3 1 = 9
+#act
+INC N$百分比伤害 80
+
+#if
+CHECKUSEITEM 3
+CHECKITEMADDVALUE 3 1 = 10
+#act
+INC N$百分比伤害 100
+
+#if
+CHECKUSEITEM 3
+CHECKITEMADDVALUE 3 1 = 10
+#act
+INC N$百分比伤害 150
+
+#if
+#act
+ADDBUTTON 13  9 379 379 379 0 440 0 　　　　　　<$STR(N$百分比伤害)>%
+
+
+}

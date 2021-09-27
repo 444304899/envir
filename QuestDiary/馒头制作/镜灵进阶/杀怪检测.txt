@@ -1,0 +1,79 @@
+[@镜灵]
+{
+
+#if
+checkitemw 切割[凡]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\1自由大陆.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @1自由
+break
+
+
+#if
+checkitemw 切割[仙]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\2召唤师峡谷.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @2召唤
+break
+
+#if
+checkitemw 切割[魔]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\3峡谷之巅.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @3峡谷
+break
+
+#if
+checkitemw 切割[佛]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\4创世★巅峰.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @4创世
+break
+
+#if
+checkitemw 切割[妖]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\5原始大陆.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @5原始
+break
+
+#if
+checkitemw 切割[冥]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\6山海经.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @6山海
+break
+
+#if
+checkitemw 切割[神]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\7传奇之路.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @7传奇
+break
+
+#if
+checkitemw 切割[天]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\8死亡领地.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @8死亡
+break
+
+#if
+checkitemw 切割[道]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\9佛本世界.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @9佛本
+break
+
+#if
+checkitemw 切割[玄]
+CHECKTEXTLIST ..\QuestDiary\馒头制作\镜灵进阶\怪物阶段\10无限恐怖.txt <$KILLMONNAME>
+#act
+#CALL [馒头制作\镜灵进阶\进阶参数.txt] @10无限
+break
+
+
+
+
+
+}

@@ -1,0 +1,434 @@
+[@main]
+#if
+CheckBoxItemCount 3 1
+#act
+ReturnBoxItem 3
+
+#if
+CheckBoxItemCount 4 1
+#act
+ReturnBoxItem 4
+
+
+
+
+#IF
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                                                           <[幸运加成查看]
+|158#项链幸运5点:  打怪伤害加成10%
+^-^158#项链幸运6点:  打怪伤害加成20%
+^-^158#项链幸运7点:  打怪伤害加成40%
+^-^158#项链幸运8点:  打怪伤害加成60%
+^-^158#项链幸运9点:  打怪伤害加成80%(额外奖励神力倍数1.05倍)
+^-^158#项链幸运10点:  打怪伤害加成100%(额外奖励神力倍数1.10倍)
+^-^158#项链幸运11点:  打怪伤害加成150%(额外奖励神力倍数1.30倍,PK有几率使人黑屏)/FCOLOR=70>\
+
+<>                                                           <请你把要加幸运的项链放置框内,/FCOLOR=95>  \
+
+<>                                                           <本服幸运+9即可触发刀刀最大攻击!!/FCOLOR=95> <幸运7保底不掉>  \ \
+
+<>                                                           <洗练要求:/FCOLOR=250><3000灵符一次/FCOLOR=161> + <云顶结晶*10/FCOLOR=161>  \ \
+
+<>                                                              <开始洗练/@洗1>     <ITEMBOX:0:12:47:15:10:40:10:19:请放入你需要强化的项链>        <幸运转移/@幸运转>\ \ \ \
+
+<>                                                             <[项链幸运一键到7]/@一键到6> <需388钻石/FCOLOR=250>\
+
+
+
+
+
+
+[@幸运转]
+#if
+CheckBoxItemCount 0 1
+#act
+ReturnBoxItem 0
+
+
+
+
+#IF
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                          <[幸运项链]/FCOLOR=224><IMG:91:6:-81:-4>  \
+<>                                                                                           <[幸运加成查看]
+|158#项链幸运5点:  打怪伤害加成10%
+^-^158#项链幸运6点:  打怪伤害加成20%
+^-^158#项链幸运7点:  打怪伤害加成40%
+^-^158#项链幸运8点:  打怪伤害加成60%
+^-^158#项链幸运9点:  打怪伤害加成80%(额外奖励神力倍数1.05倍)
+^-^158#项链幸运10点:  打怪伤害加成100%(额外奖励神力倍数1.10倍)
+^-^158#项链幸运11点:  打怪伤害加成150%(额外奖励神力倍数1.30倍,PK有几率使人黑屏)/FCOLOR=70>\
+<>                                                           在我这,可以让你项链上的幸运转移到新的项链上\
+<>                                                           转移过后.老的装备将会被返回到背包 \
+<>                                                            <ITEMBOX:3:12:47:15:10:40:40:19:请放入有幸运的项链><ITEMBOX:4:12:47:50:10:40:40:19:请放入新的项链>\
+<>                               　　　　　　　                               　　　　<第一个框放入你已经有幸运的项链/FCOLOR=103>\
+<>                               　　　　　　　                               　　　　<第二个框放入你需要转移的项链/FCOLOR=103>\ \
+<>                               　　                                <[开始转移]/@转1>\
+
+
+[@ItemIntoBox4]
+#IF
+#ACT
+SetUpgradeItem 4
+
+
+
+[@ItemIntoBox3]
+#IF
+#ACT
+SetUpgradeItem 3
+
+
+#IF
+CHECKITEMADDVALUE -1 1 = 1
+#ACT
+MOV N$装备幸运 1
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 2
+#ACT
+MOV N$装备幸运 2
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 3
+#ACT
+MOV N$装备幸运 3
+break
+
+
+#IF
+CHECKITEMADDVALUE -1 1 = 4
+#ACT
+MOV N$装备幸运 4
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 5
+#ACT
+MOV N$装备幸运 5
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 6
+#ACT
+MOV N$装备幸运 6
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 7
+#ACT
+MOV N$装备幸运 7
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 8
+#ACT
+MOV N$装备幸运 8
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 9
+#ACT
+MOV N$装备幸运 9
+break
+
+
+#IF
+CHECKITEMADDVALUE -1 1 = 10
+#ACT
+MOV N$装备幸运 10
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 11
+#ACT
+MOV N$装备幸运 11
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 12
+#ACT
+MOV N$装备幸运 12
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 13
+#ACT
+MOV N$装备幸运 13
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 14
+#ACT
+MOV N$装备幸运 14
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 15
+#ACT
+MOV N$装备幸运 15
+break
+
+
+
+#IF
+CHECKITEMADDVALUE -1 1 = 0
+#ACT
+ReturnBoxItem 3
+MessageBox 放入的项链没有幸运！
+break
+
+
+[@转1]
+#if
+#ACT
+SetUpgradeItem 3
+SetUpgradeItem 4
+
+#IF
+EQUAL <$BOXITEM[3].NAME>
+#ACT
+MessageBox 请先在左边框中放入装备
+BREAK
+
+#IF
+EQUAL <$BOXITEM[4].NAME>
+#ACT
+MessageBox 请先在右边框中放入装备
+BREAK
+
+
+
+#IF
+#ACT
+SetUpgradeItem 3
+CHANGEITEMADDVALUE -1 1 = 0
+UpDateBoxItem 3
+ReturnBoxItem 3
+
+
+#IF
+#ACT
+SetUpgradeItem 4
+SetUpgradeItem 3
+CHANGEITEMADDVALUE -1 1 = <$STR(N$装备幸运)>
+UpDateBoxItem 4
+ReturnBoxItem 4
+
+
+
+
+
+
+[@一键到6]
+#IF
+#ACT
+SetUpgradeItem 0
+
+
+
+
+
+#if
+CheckItemAddValue -1 1 > 6
+#act
+MessageBox [提示]:你当前项链幸运大于7点无法使用！
+break
+
+#IF
+EQUAL <$BOXITEM[0].NAME>
+#ACT
+MESSAGEBOX 请先放入项链
+BREAK
+
+
+
+#if
+CHECKGamePoint > 387
+#act
+GamePoint - 388
+CHANGEITEMADDVALUE -1 1 = 7
+UpDateBoxItem 0
+MESSAGEBOX 强化成功！项链幸运提升至7点
+GuildNoticeMsg 5 250 玩家[<$USERNAME>]强化项链幸运成功.实力大幅提升！
+BREAK
+
+
+
+#if
+#act
+MessageBox [提示]:请检查你的钻石是否足够。
+break
+
+[@洗1]
+
+#IF
+#ACT
+SetUpgradeItem 0
+
+
+
+#if
+CheckItemAddValue -1 1 > 10
+#act
+MessageBox [提示]:你当前幸运已经达到10点无法继续提升
+break
+
+
+#if
+CHECKITEMADDVALUE -1 1 = 6
+#act
+MessageBox [提示]:你当前幸运点数已经到了6点，6点保底.7点开始强化失败，幸运将会掉落！  @继续提升
+break
+
+
+
+
+#if
+#act
+goto @继续提升
+break
+
+
+
+[@继续提升]
+#IF
+#ACT
+SetUpgradeItem 0
+
+
+#if
+NOT checkitem 云顶结晶 10
+#act
+MessageBox [提示]:请检查你的材料是否足够。
+break
+
+
+#if
+NOT CHECKGAMEGIRD ? 3000
+#act
+MessageBox [提示]:请检查你的灵符是否足够。
+break
+
+
+
+#IF
+CheckItemAddValue -1 1 > 10
+#ACT
+MESSAGEBOX 最高只能+11点幸运
+BREAK
+
+
+
+
+
+#IF
+EQUAL <$BOXITEM[0].NAME>
+#ACT
+MESSAGEBOX 请先放入项链
+BREAK
+
+
+
+#IF
+CheckItemAddValue -1 1 = 0
+#ACT
+mov S$成功几率 1
+
+#IF
+CheckItemAddValue -1 1 = 1
+#ACT
+mov S$成功几率 1
+
+#IF
+CheckItemAddValue -1 1 = 2
+#ACt
+mov S$成功几率 2
+
+#IF
+CheckItemAddValue -1 1 = 3
+#ACT
+mov S$成功几率 2
+
+#IF
+CheckItemAddValue -1 1 = 4
+#ACT
+mov S$成功几率 3
+
+#IF
+CheckItemAddValue -1 1 = 5
+#ACT
+mov S$成功几率 4
+
+#IF
+CheckItemAddValue -1 1 = 6
+#ACT
+mov S$成功几率 4
+
+#IF
+CheckItemAddValue -1 1 = 7
+#ACT
+mov S$成功几率 4
+
+#IF
+CheckItemAddValue -1 1 = 8
+#ACT
+mov S$成功几率 7
+
+#IF
+CheckItemAddValue -1 1 = 9
+#ACT
+mov S$成功几率 8
+
+#IF
+CheckItemAddValue -1 1 = 10
+#ACT
+mov S$成功几率 15
+
+
+
+
+
+
+
+
+#IF
+random <$STR(S$成功几率)>
+#ACT
+GAMEGIRD - 3000
+take 云顶结晶 10
+CHANGEITEMADDVALUE -1 1 + 1
+UpDateBoxItem 0
+MESSAGEBOX 强化成功！项链幸运提升1点
+GuildNoticeMsg 5 250 玩家[<$USERNAME>]强化项链幸运成功.实力大幅提升！
+BREAK
+#elseact
+goto @失败
+
+[@失败]
+#IF
+CheckItemAddValue -1 1 = 7
+#ACT
+GAMEGIRD - 3000
+take 云顶结晶 10
+UpDateBoxItem 0
+MESSAGEBOX 强化失败！项链幸运7保底不掉
+GuildNoticeMsg 5 255 玩家[<$USERNAME>]强化项链幸运失败！
+BREAk
+
+#IF
+#ACT
+GAMEGIRD - 3000
+take 云顶结晶 10
+CHANGEITEMADDVALUE -1 1 - 1
+UpDateBoxItem 0
+MESSAGEBOX 强化失败！项链幸运降低1点
+GuildNoticeMsg 5 255 玩家[<$USERNAME>]强化项链幸运失败！
+BREAk
+

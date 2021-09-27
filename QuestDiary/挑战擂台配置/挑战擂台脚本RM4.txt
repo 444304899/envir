@@ -1,0 +1,48 @@
+[@挑战擂台脚本RM4]
+{
+#IF
+checkvar GLOBAL 挑战开始判断4 = 0
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战开始计时4 > 0
+#ACT
+CALCVAR GLOBAL 挑战开始计时4 - 1
+BREAK
+#IF
+checkvar GLOBAL 挑战开始判断4 = 1
+#ACT
+MOV S26 <$GLOBAL(挑战发起姓名4)>
+CALCVAR GLOBAL 挑战发起姓名4 =
+CALCVAR GLOBAL 挑战邀请姓名4 =
+CALCVAR GLOBAL 挑战发起数量4 = 0
+CALCVAR GLOBAL 挑战开始计时4 = 0
+CALCVAR GLOBAL 挑战开始判断4 = 0
+SAVEVAR GLOBAL 挑战发起姓名4
+SAVEVAR GLOBAL 挑战邀请姓名4
+SAVEVAR GLOBAL 挑战发起数量4
+SAVEVAR GLOBAL 挑战开始计时4
+SAVEVAR GLOBAL 挑战开始判断4
+S26.SENDMSG 6 $(挑战擂台公告前缀)对不起，对方超时没有接受挑战！
+S26.close
+BREAK
+#IF
+checkvar GLOBAL 挑战开始判断4 = 2
+#ACT
+CALCVAR GLOBAL 挑战发起姓名4 =
+CALCVAR GLOBAL 挑战邀请姓名4 =
+CALCVAR GLOBAL 挑战发起数量4 = 0
+CALCVAR GLOBAL 挑战开始计时4 = 0
+CALCVAR GLOBAL 挑战开始判断4 = 0
+SAVEVAR GLOBAL 挑战发起姓名4
+SAVEVAR GLOBAL 挑战邀请姓名4
+SAVEVAR GLOBAL 挑战发起数量4
+SAVEVAR GLOBAL 挑战开始计时4
+SAVEVAR GLOBAL 挑战开始判断4
+Gmexecute $(挑战全服触发命令) @挑战擂台清理场地4
+SENDMSG 0 $(挑战擂台公告前缀)挑战双方超时未分成胜负，均视为挑战失败！
+BREAK
+
+[@挑战擂台常量加载]
+#CALL [\挑战擂台配置\挑战擂台常量.ini] @挑战擂台常量
+}

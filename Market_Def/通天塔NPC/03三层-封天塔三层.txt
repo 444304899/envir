@@ -1,0 +1,41 @@
+[@main]
+#if
+#say
+<《封天塔》/FCOLOR=249> \ \
+<你当前所处位置:<$MapTitle>/FCOLOR=7> \ \
+<前往下一层需要称号达到:/FCOLOR=7><艾泽拉斯的救世主/FCOLOR=250><,或以上！/FCOLOR=7>\ \ \
+<>                                                       <《下一层》/@进图>\
+
+[@进图]
+;#if
+;NOT CheckMonMap <$Map> 1
+;#act
+;MESSAGEBOX [提示]:请检查地图内的怪物是否已经清理完毕!!!
+;break
+
+#if
+equal A120 <$USERNAME>
+#act
+MAPmove 封天塔四层 37 77
+SendCenterMsg 70 0 〖封天塔〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+
+
+#or
+CHECKTITLE 艾泽拉斯的救世主
+CHECKTITLE 觉醒·热血之魂
+CHECKTITLE 集结·战斗号角
+CHECKTITLE 暴走·极限突破
+CHECKTITLE 天启·信仰之歌
+CHECKTITLE 进化之光·混沌开天
+CHECKTITLE 战鼓震天·异界战歌
+CHECKTITLE 毕方之炎·夜空魅影
+CHECKTITLE 勇士的荣耀·最终幻想
+#act
+MAPmove 封天塔四层 37 77
+SendCenterMsg 70 0 〖封天塔〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+#elseact
+MESSAGEBOX 进入此地图需要称号达到“艾泽拉斯的救世主”请检查你是否已经晋升!
+break

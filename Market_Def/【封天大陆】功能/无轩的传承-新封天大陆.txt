@@ -1,0 +1,53 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \
+<>                                                                                                      <点击关闭/@关闭>  \
+<>                                                  <神秘的过客：/FCOLOR=58> \ \
+<>                                                <收集来这件物品：/FCOLOR=161><无轩之黄魄图纸*5/FCOLOR=250><./FCOLOR=161><1000钻石/FCOLOR=250> \ \
+<>                                                <ItemShow:1609:5:0:-13:1> <+ 1000钻石 =/FCOLOR=161>  <ItemShow:1536:0:0:-13:1>  <《请帮我合成》/@提交>\ \ \
+<>                                                <收集来这件物品：/FCOLOR=161><无轩之玄魄图纸*5 + 无轩之黄魄/FCOLOR=250><./FCOLOR=161><5000钻石/FCOLOR=250> \ \
+<>                                                <ItemShow:1536:1:0:-13:1> + <ItemShow:1610:5:0:-13:1> <+ 5000钻石 =/FCOLOR=161> <ItemShow:1537:0:0:-19:1>  <《请帮我合成》/@提交1>\ \ \
+
+
+
+[@关闭]
+#if
+#act
+close
+BREAK
+
+
+[@提交]
+#if
+checkitem 无轩之黄魄图纸 5
+checkGAMEPOINT > 999
+#act
+take 无轩之黄魄图纸 5
+GAMEPOINT - 1000
+give 无轩之黄魄 1
+MESSAGEBOX [提示]:获得物品:无轩之散魄!
+SENDMOVEMSG 0 249 251 300 1 〖神秘的过客〗：恭喜玩家『<$USERNAME>』成功获得了无轩的传承，并得到了『无轩之黄魄』！！
+SENDMOVEMSG 0 249 251 400 1 〖神秘的过客〗：恭喜玩家『<$USERNAME>』成功获得了无轩的传承，并得到了『无轩之黄魄』！！
+#elseact
+MESSAGEBOX 请检测是否拥有无轩之黄魄图纸X5和钻石5000！
+BREAK
+
+
+[@提交1]
+#if
+checkitem 无轩之玄魄图纸 5
+checkitem 无轩之黄魄 1
+checkGAMEPOINT > 4999
+#act
+take 无轩之玄魄图纸 5
+take 无轩之黄魄 1
+GAMEPOINT - 5000
+give 无轩之玄魄 1
+MESSAGEBOX [提示]:获得物品:无轩之散魄!
+SENDMOVEMSG 0 249 251 300 1 〖神秘的过客〗：恭喜玩家『<$USERNAME>』成功获得了无轩的传承，并得到了『无轩之玄魄』！！
+SENDMOVEMSG 0 249 251 400 1 〖神秘的过客〗：恭喜玩家『<$USERNAME>』成功获得了无轩的传承，并得到了『无轩之玄魄』！！
+#elseact
+MESSAGEBOX 请检测是否拥有无轩之玄魄图纸X5和钻石5000！
+BREAK

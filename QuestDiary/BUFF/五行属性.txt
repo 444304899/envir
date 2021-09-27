@@ -1,0 +1,354 @@
+[@五行属性计算]
+{
+#if
+#act
+MOV N$吸血 0
+MOV N$减伤 0
+MOV N$最大攻击力 0
+MOV N$最大生命值 0
+MOV N$最大防御值 0
+ChangeHumAbility 11 = 0 65535
+ChangeHumAbility 5 = 0 65535
+ChangeHumAbility 6 = 0 65535
+#if
+CheckTextList ..\QuestDiary\BUFF\武器吸血.txt <$WEAPON>
+#ACT
+GetStringPos ..\QuestDiary\BUFF\武器吸血.txt <$WEAPON>
+INC N0 1
+GetListString ..\QuestDiary\BUFF\武器吸血.txt <$STR(N0)> S$吸血倍数
+INC N$吸血 <$STR(S$吸血倍数)>
+
+
+#if
+check [101] 1
+#act
+INC N$吸血 5
+
+#if
+checkitemw 吸血之触
+#act
+INC N$吸血 1
+
+
+
+#if
+CHECKTITLE 有钱有势
+#act
+INC N$吸血 1
+
+#if
+CHECKTITLE 财大气粗
+#act
+INC N$吸血 2
+
+#if
+CHECKTITLE 家财万贯
+#act
+INC N$吸血 3
+
+#if
+CHECKTITLE 富可敌国
+#act
+INC N$吸血 4
+
+
+#if
+CHECKTITLE 五行之体·金[一阶]
+#act
+INC N$吸血 1
+
+#if
+CHECKTITLE 五行之体·金[二阶]
+#act
+INC N$吸血 1
+
+#if
+CHECKTITLE 五行之体·金[三阶]
+#act
+INC N$吸血 2
+
+#if
+CHECKTITLE 五行之体·金[四阶]
+#act
+INC N$吸血 2
+
+#if
+CHECKTITLE 五行之体·金[五阶]
+#act
+INC N$吸血 3
+
+#if
+CHECKTITLE 五行之体·金[六阶]
+#act
+INC N$吸血 3
+
+#if
+CHECKTITLE 五行之体·金[七阶]
+#act
+INC N$吸血 4
+
+#if
+CHECKTITLE 五行之体·金[八阶]
+#act
+INC N$吸血 4
+
+#if
+CHECKTITLE 五行之体·金[九阶]
+#act
+INC N$吸血 5
+
+#if
+CHECKTITLE 五行之体·金[十阶]
+#act
+INC N$吸血 5
+
+#if
+CHECKTITLE 五行之体·木[一阶]
+#act
+INC N$减伤 10
+
+#if
+CHECKTITLE 五行之体·木[二阶]
+#act
+INC N$减伤 20
+
+#if
+CHECKTITLE 五行之体·木[三阶]
+#act
+INC N$减伤 30
+
+#if
+CHECKTITLE 五行之体·木[四阶]
+#act
+INC N$减伤 40
+
+#if
+CHECKTITLE 五行之体·木[五阶]
+#act
+INC N$减伤 50
+
+#if
+CHECKTITLE 五行之体·木[六阶]
+#act
+INC N$减伤 60
+
+#if
+CHECKTITLE 五行之体·木[七阶]
+#act
+INC N$减伤 70
+
+#if
+CHECKTITLE 五行之体·木[八阶]
+#act
+INC N$减伤 80
+
+#if
+CHECKTITLE 五行之体·木[九阶]
+#act
+INC N$减伤 90
+
+#if
+CHECKTITLE 五行之体·木[十阶]
+#act
+INC N$减伤 100
+
+#if
+checkitemw 忆古昔-霜心
+#act
+INC N$减伤 100
+
+#if
+CHECKTITLE 五行之体·火[一阶]
+#act
+INC N$最大攻击力 1
+
+#if
+CHECKTITLE 五行之体·火[二阶]
+#act
+INC N$最大攻击力 2
+
+#if
+CHECKTITLE 五行之体·火[三阶]
+#act
+INC N$最大攻击力 3
+
+#if
+CHECKTITLE 五行之体·火[四阶]
+#act
+INC N$最大攻击力 4
+
+#if
+CHECKTITLE 五行之体·火[五阶]
+#act
+INC N$最大攻击力 5
+
+#if
+CHECKTITLE 五行之体·火[六阶]
+#act
+INC N$最大攻击力 6
+
+#if
+CHECKTITLE 五行之体·火[七阶]
+#act
+INC N$最大攻击力 7
+
+#if
+CHECKTITLE 五行之体·火[八阶]
+#act
+INC N$最大攻击力 8
+
+#if
+CHECKTITLE 五行之体·火[九阶]
+#act
+INC N$最大攻击力 9
+
+#if
+CHECKTITLE 五行之体·火[十阶]
+#act
+INC N$最大攻击力 10
+
+#if
+checkitemw 灭世右眼
+#act
+INC N$最大攻击力 10
+
+#if
+large U48 0
+#act
+MUL N$精怪珠 1 <$STR(u48)>
+INC N$最大生命值 <$STR(N$精怪珠)>
+
+#if
+large U49 0
+#act
+MUL N$洞冥草 1 <$STR(u49)>
+INC N$最大攻击力 <$STR(N$洞冥草)>
+
+
+#if
+not equal t6
+#act
+MUL N$任性攻击 1 <$STR(t6)>
+INC N$最大攻击力 <$STR(t6)>
+#if
+not equal t7
+#act
+MUL N$任性生命 1 <$STR(t7)>
+INC N$最大生命值 <$STR(t7)>
+#if
+not equal t8
+#act
+MUL N$任性防御 1 <$STR(t8)>
+INC N$最大防御值 <$STR(t8)>
+
+
+#if
+CHECKTITLE 五行之体·土[一阶]
+#act
+INC N$最大生命值 1
+
+#if
+CHECKTITLE 五行之体·土[二阶]
+#act
+INC N$最大生命值 2
+
+#if
+CHECKTITLE 五行之体·土[三阶]
+#act
+INC N$最大生命值 3
+
+#if
+CHECKTITLE 五行之体·土[四阶]
+#act
+INC N$最大生命值 4
+
+#if
+CHECKTITLE 五行之体·土[五阶]
+#act
+INC N$最大生命值 5
+
+#if
+CHECKTITLE 五行之体·土[六阶]
+#act
+INC N$最大生命值 6
+
+#if
+CHECKTITLE 五行之体·土[七阶]
+#act
+INC N$最大生命值 7
+
+#if
+CHECKTITLE 五行之体·土[八阶]
+#act
+INC N$最大生命值 8
+
+#if
+CHECKTITLE 五行之体·土[九阶]
+#act
+INC N$最大生命值 9
+
+#if
+CHECKTITLE 五行之体·土[十阶]
+#act
+INC N$最大生命值 10
+
+#if
+checkitemw 血蹄
+#act
+INC N$最大生命值 5
+
+#if
+checkitemw 巨人的心脏
+#act
+INC N$最大生命值 10
+
+#if
+checkitemw 神谕左眼
+#act
+INC N$最大生命值 10
+
+#if
+checkitemw シ暗瞳Ж
+#act
+INC N$最大生命值 10
+INC N$最大攻击力 10
+
+
+
+#if
+large N$减伤 0
+#act
+SetSuckDamage = 2000000000 <$STR(N$减伤)> 100
+
+
+#if
+large N$最大攻击力 0
+#act
+MOV N$计算攻击力 <$MAXDC>
+mul N$计算攻击力 <$STR(N$最大攻击力)>
+div N$计算攻击力 200
+ChangeHumAbility 5 = <$STR(N$计算攻击力)> 65535
+ChangeHumAbility 6 = <$STR(N$计算攻击力)> 65535
+
+
+
+#if
+large N$最大生命值 0
+#act
+MOV N$计算生命值 <$MAXHP>
+div N$计算生命值 100
+mul N$计算生命值 <$STR(N$最大生命值)>
+
+ChangeHumAbility 11 = <$STR(N$计算生命值)> 65535
+
+
+#if
+large N$最大防御值 0
+#act
+MOV N$计算防御值 <$MAXAC>
+mul N$计算防御值 <$STR(N$最大防御值)>
+div N$计算防御值 100
+ChangeHumAbility 1 = <$STR(N$计算防御值)> 65535
+ChangeHumAbility 2 = <$STR(N$计算防御值)> 65535
+
+}

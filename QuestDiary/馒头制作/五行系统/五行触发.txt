@@ -1,0 +1,1311 @@
+[@五行]
+{
+
+;===================金进度变量
+
+#if
+#act
+MOV S$金当前阶段 金·零阶
+MOV S$金当前属性 +0%吸血
+MOV S$金下级属性 +1%吸血
+MOV S$金下级称号 五行之体·金[一阶]
+MOV S$金删除称号
+
+#if
+CHECKTITLE 五行之体·金[一阶]
+#act
+MOV S$金当前阶段 金·一阶
+MOV S$金当前属性 +1%吸血
+MOV S$金下级属性 +2%吸血
+MOV S$金下级称号 五行之体·金[二阶]
+MOV S$金删除称号 五行之体·金[一阶]
+
+
+#if
+CHECKTITLE 五行之体·金[二阶]
+#act
+MOV S$金当前阶段 金·二阶
+MOV S$金当前属性 +2%吸血
+MOV S$金下级属性 +3%吸血
+MOV S$金下级称号 五行之体·金[三阶]
+MOV S$金删除称号 五行之体·金[二阶]
+
+
+
+#if
+CHECKTITLE 五行之体·金[三阶]
+#act
+MOV S$金当前阶段 金·三阶
+MOV S$金当前属性 +3%吸血
+MOV S$金下级属性 +4%吸血
+MOV S$金下级称号 五行之体·金[四阶]
+MOV S$金删除称号 五行之体·金[三阶]
+
+
+
+#if
+CHECKTITLE 五行之体·金[四阶]
+#act
+MOV S$金当前阶段 金·四阶
+MOV S$金当前属性 +4%吸血
+MOV S$金下级属性 +5%吸血
+MOV S$金下级称号 五行之体·金[五阶]
+MOV S$金删除称号 五行之体·金[四阶]
+
+
+
+#if
+CHECKTITLE 五行之体·金[五阶]
+#act
+MOV S$金当前阶段 金·五阶
+MOV S$金当前属性 +5%吸血
+MOV S$金下级属性 +6%吸血
+MOV S$金下级称号 五行之体·金[六阶]
+MOV S$金删除称号 五行之体·金[五阶]
+
+
+#if
+CHECKTITLE 五行之体·金[六阶]
+#act
+MOV S$金当前阶段 金·六阶
+MOV S$金当前属性 +6%吸血
+MOV S$金下级属性 +7%吸血
+MOV S$金下级称号 五行之体·金[七阶]
+MOV S$金删除称号 五行之体·金[六阶]
+
+
+#if
+CHECKTITLE 五行之体·金[七阶]
+#act
+MOV S$金当前阶段 金·七阶
+MOV S$金当前属性 +7%吸血
+MOV S$金下级属性 +8%吸血
+MOV S$金下级称号 五行之体·金[八阶]
+MOV S$金删除称号 五行之体·金[七阶]
+
+
+#if
+CHECKTITLE 五行之体·金[八阶]
+#act
+MOV S$金当前阶段 金·八阶
+MOV S$金当前属性 +8%吸血
+MOV S$金下级属性 +9%吸血
+MOV S$金下级称号 五行之体·金[九阶]
+MOV S$金删除称号 五行之体·金[八阶]
+
+
+#if
+CHECKTITLE 五行之体·金[九阶]
+#act
+MOV S$金当前阶段 金·九阶
+MOV S$金当前属性 +9%吸血
+MOV S$金下级属性 +10%吸血
+MOV S$金下级称号 五行之体·金[十阶]
+MOV S$金删除称号 五行之体·金[九阶]
+#if
+CHECKTITLE 五行之体·金[十阶]
+#act
+MOV S$金当前阶段 金·十阶
+MOV S$金当前属性 +10%吸血
+MOV S$金下级属性 +10%吸血
+MOV S$金下级称号 五行之体·金[十阶]
+
+
+
+#if
+large u6 99
+#act
+DEC u6 100
+INC u5 1
+
+#if
+equal u5 10
+#act
+DEC u5 10
+DEPRIVETITLE <$STR(S$金删除称号)>
+CONFERTITLE <$STR(S$金下级称号)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+
+
+
+
+
+;===================木进度变量
+
+#if
+#act
+MOV S$木当前阶段 木·零阶
+MOV S$木当前属性 +0%暴击威力
+MOV S$木下级属性 +1%暴击威力
+MOV S$木下级称号 五行之体·木[一阶]
+MOV S$木删除称号
+
+#if
+CHECKTITLE 五行之体·木[一阶]
+#act
+MOV S$木当前阶段 木·一阶
+MOV S$木当前属性 +1%暴击威力
+MOV S$木下级属性 +2%暴击威力
+MOV S$木下级称号 五行之体·木[二阶]
+MOV S$木删除称号 五行之体·木[一阶]
+
+
+#if
+CHECKTITLE 五行之体·木[二阶]
+#act
+MOV S$木当前阶段 木·二阶
+MOV S$木当前属性 +2%暴击威力
+MOV S$木下级属性 +3%暴击威力
+MOV S$木下级称号 五行之体·木[三阶]
+MOV S$木删除称号 五行之体·木[二阶]
+
+
+
+#if
+CHECKTITLE 五行之体·木[三阶]
+#act
+MOV S$木当前阶段 木·三阶
+MOV S$木当前属性 +3%暴击威力
+MOV S$木下级属性 +4%暴击威力
+MOV S$木下级称号 五行之体·木[四阶]
+MOV S$木删除称号 五行之体·木[三阶]
+
+
+
+#if
+CHECKTITLE 五行之体·木[四阶]
+#act
+MOV S$木当前阶段 木·四阶
+MOV S$木当前属性 +4%暴击威力
+MOV S$木下级属性 +5%暴击威力
+MOV S$木下级称号 五行之体·木[五阶]
+MOV S$木删除称号 五行之体·木[四阶]
+
+
+
+#if
+CHECKTITLE 五行之体·木[五阶]
+#act
+MOV S$木当前阶段 木·五阶
+MOV S$木当前属性 +5%暴击威力
+MOV S$木下级属性 +6%暴击威力
+MOV S$木下级称号 五行之体·木[六阶]
+MOV S$木删除称号 五行之体·木[五阶]
+
+
+#if
+CHECKTITLE 五行之体·木[六阶]
+#act
+MOV S$木当前阶段 木·六阶
+MOV S$木当前属性 +6%暴击威力
+MOV S$木下级属性 +7%暴击威力
+MOV S$木下级称号 五行之体·木[七阶]
+MOV S$木删除称号 五行之体·木[六阶]
+
+
+#if
+CHECKTITLE 五行之体·木[七阶]
+#act
+MOV S$木当前阶段 木·七阶
+MOV S$木当前属性 +7%暴击威力
+MOV S$木下级属性 +8%暴击威力
+MOV S$木下级称号 五行之体·木[八阶]
+MOV S$木删除称号 五行之体·木[七阶]
+
+
+#if
+CHECKTITLE 五行之体·木[八阶]
+#act
+MOV S$木当前阶段 木·八阶
+MOV S$木当前属性 +8%暴击威力
+MOV S$木下级属性 +9%暴击威力
+MOV S$木下级称号 五行之体·木[九阶]
+MOV S$木删除称号 五行之体·木[八阶]
+
+
+#if
+CHECKTITLE 五行之体·木[九阶]
+#act
+MOV S$木当前阶段 木·九阶
+MOV S$木当前属性 +9%暴击威力
+MOV S$木下级属性 +10%暴击威力
+MOV S$木下级称号 五行之体·木[十阶]
+MOV S$木删除称号 五行之体·木[九阶]
+#if
+CHECKTITLE 五行之体·木[十阶]
+#act
+MOV S$木当前阶段 木·十阶
+MOV S$木当前属性 +10%暴击威力
+MOV S$木下级属性 +10%暴击威力
+MOV S$木下级称号 五行之体·木[十阶]
+
+#if
+large u10 99
+#act
+DEC u10 100
+INC u9 1
+
+#if
+equal u9 10
+#act
+DEC u9 10
+DEPRIVETITLE <$STR(S$木删除称号)>
+CONFERTITLE <$STR(S$木下级称号)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+
+
+
+
+
+;===================水进度变量
+
+
+#if
+#act
+MOV S$水当前阶段 水·零阶
+MOV S$水当前属性 +0%减伤
+MOV S$水下级属性 +1%减伤
+MOV S$水下级称号 五行之体·水[一阶]
+MOV S$水删除称号
+
+#if
+CHECKTITLE 五行之体·水[一阶]
+#act
+MOV S$水当前阶段 水·一阶
+MOV S$水当前属性 +1%减伤
+MOV S$水下级属性 +2%减伤
+MOV S$水下级称号 五行之体·水[二阶]
+MOV S$水删除称号 五行之体·水[一阶]
+
+
+#if
+CHECKTITLE 五行之体·水[二阶]
+#act
+MOV S$水当前阶段 水·二阶
+MOV S$水当前属性 +2%减伤
+MOV S$水下级属性 +3%减伤
+MOV S$水下级称号 五行之体·水[三阶]
+MOV S$水删除称号 五行之体·水[二阶]
+
+
+
+#if
+CHECKTITLE 五行之体·水[三阶]
+#act
+MOV S$水当前阶段 水·三阶
+MOV S$水当前属性 +3%减伤
+MOV S$水下级属性 +4%减伤
+MOV S$水下级称号 五行之体·水[四阶]
+MOV S$水删除称号 五行之体·水[三阶]
+
+
+
+#if
+CHECKTITLE 五行之体·水[四阶]
+#act
+MOV S$水当前阶段 水·四阶
+MOV S$水当前属性 +4%减伤
+MOV S$水下级属性 +5%减伤
+MOV S$水下级称号 五行之体·水[五阶]
+MOV S$水删除称号 五行之体·水[四阶]
+
+
+
+#if
+CHECKTITLE 五行之体·水[五阶]
+#act
+MOV S$水当前阶段 水·五阶
+MOV S$水当前属性 +5%减伤
+MOV S$水下级属性 +6%减伤
+MOV S$水下级称号 五行之体·水[六阶]
+MOV S$水删除称号 五行之体·水[五阶]
+
+
+#if
+CHECKTITLE 五行之体·水[六阶]
+#act
+MOV S$水当前阶段 水·六阶
+MOV S$水当前属性 +6%减伤
+MOV S$水下级属性 +7%减伤
+MOV S$水下级称号 五行之体·水[七阶]
+MOV S$水删除称号 五行之体·水[六阶]
+
+
+#if
+CHECKTITLE 五行之体·水[七阶]
+#act
+MOV S$水当前阶段 水·七阶
+MOV S$水当前属性 +7%减伤
+MOV S$水下级属性 +8%减伤
+MOV S$水下级称号 五行之体·水[八阶]
+MOV S$水删除称号 五行之体·水[七阶]
+
+
+#if
+CHECKTITLE 五行之体·水[八阶]
+#act
+MOV S$水当前阶段 水·八阶
+MOV S$水当前属性 +8%减伤
+MOV S$水下级属性 +9%减伤
+MOV S$水下级称号 五行之体·水[九阶]
+MOV S$水删除称号 五行之体·水[八阶]
+
+
+#if
+CHECKTITLE 五行之体·水[九阶]
+#act
+MOV S$水当前阶段 水·九阶
+MOV S$水当前属性 +9%减伤
+MOV S$水下级属性 +10%减伤
+MOV S$水下级称号 五行之体·水[十阶]
+MOV S$水删除称号 五行之体·水[九阶]
+#if
+CHECKTITLE 五行之体·水[十阶]
+#act
+MOV S$水当前阶段 水·十阶
+MOV S$水当前属性 +10%减伤
+MOV S$水下级属性 +10%减伤
+MOV S$水下级称号 五行之体·水[十阶]
+
+#if
+large u8 99
+#act
+DEC u8 100
+INC u7 1
+
+#if
+equal u7 10
+#act
+DEC u7 10
+DEPRIVETITLE <$STR(S$水删除称号)>
+CONFERTITLE <$STR(S$水下级称号)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+
+
+
+
+
+
+
+;===================火进度变量
+
+#if
+#act
+MOV S$火当前阶段 火·零阶
+MOV S$火当前属性 +0%最大攻击力
+MOV S$火下级属性 +1%最大攻击力
+MOV S$火下级称号 五行之体·火[一阶]
+MOV S$火删除称号
+
+#if
+CHECKTITLE 五行之体·火[一阶]
+#act
+MOV S$火当前阶段 火·一阶
+MOV S$火当前属性 +1%最大攻击力
+MOV S$火下级属性 +2%最大攻击力
+MOV S$火下级称号 五行之体·火[二阶]
+MOV S$火删除称号 五行之体·火[一阶]
+
+
+#if
+CHECKTITLE 五行之体·火[二阶]
+#act
+MOV S$火当前阶段 火·二阶
+MOV S$火当前属性 +2%最大攻击力
+MOV S$火下级属性 +3%最大攻击力
+MOV S$火下级称号 五行之体·火[三阶]
+MOV S$火删除称号 五行之体·火[二阶]
+
+
+
+#if
+CHECKTITLE 五行之体·火[三阶]
+#act
+MOV S$火当前阶段 火·三阶
+MOV S$火当前属性 +3%最大攻击力
+MOV S$火下级属性 +4%最大攻击力
+MOV S$火下级称号 五行之体·火[四阶]
+MOV S$火删除称号 五行之体·火[三阶]
+
+
+
+#if
+CHECKTITLE 五行之体·火[四阶]
+#act
+MOV S$火当前阶段 火·四阶
+MOV S$火当前属性 +4%最大攻击力
+MOV S$火下级属性 +5%最大攻击力
+MOV S$火下级称号 五行之体·火[五阶]
+MOV S$火删除称号 五行之体·火[四阶]
+
+
+
+#if
+CHECKTITLE 五行之体·火[五阶]
+#act
+MOV S$火当前阶段 火·五阶
+MOV S$火当前属性 +5%最大攻击力
+MOV S$火下级属性 +6%最大攻击力
+MOV S$火下级称号 五行之体·火[六阶]
+MOV S$火删除称号 五行之体·火[五阶]
+
+
+#if
+CHECKTITLE 五行之体·火[六阶]
+#act
+MOV S$火当前阶段 火·六阶
+MOV S$火当前属性 +6%最大攻击力
+MOV S$火下级属性 +7%最大攻击力
+MOV S$火下级称号 五行之体·火[七阶]
+MOV S$火删除称号 五行之体·火[六阶]
+
+
+#if
+CHECKTITLE 五行之体·火[七阶]
+#act
+MOV S$火当前阶段 火·七阶
+MOV S$火当前属性 +7%最大攻击力
+MOV S$火下级属性 +8%最大攻击力
+MOV S$火下级称号 五行之体·火[八阶]
+MOV S$火删除称号 五行之体·火[七阶]
+
+
+#if
+CHECKTITLE 五行之体·火[八阶]
+#act
+MOV S$火当前阶段 火·八阶
+MOV S$火当前属性 +8%最大攻击力
+MOV S$火下级属性 +9%最大攻击力
+MOV S$火下级称号 五行之体·火[九阶]
+MOV S$火删除称号 五行之体·火[八阶]
+
+
+#if
+CHECKTITLE 五行之体·火[九阶]
+#act
+MOV S$火当前阶段 火·九阶
+MOV S$火当前属性 +9%最大攻击力
+MOV S$火下级属性 +10%最大攻击力
+MOV S$火下级称号 五行之体·火[十阶]
+MOV S$火删除称号 五行之体·火[九阶]
+
+#if
+CHECKTITLE 五行之体·火[十阶]
+#act
+MOV S$火当前阶段 火·十阶
+MOV S$火当前属性 +10%最大攻击力
+MOV S$火下级属性 +10%最大攻击力
+MOV S$火下级称号 五行之体·火[十阶]
+
+
+#if
+large U4 99
+#act
+DEC U4 100
+INC U3 1
+
+#if
+equal U3 10
+#act
+DEC U3 10
+DEPRIVETITLE <$STR(S$火删除称号)>
+CONFERTITLE <$STR(S$火下级称号)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+
+
+
+
+
+
+;===================土进度变量
+
+#if
+#act
+MOV S$土当前阶段 土·零阶
+MOV S$土当前属性 +0%最大生命值
+MOV S$土下级属性 +1%最大生命值
+MOV S$土下级称号 五行之体·土[一阶]
+MOV S$土删除称号
+
+#if
+CHECKTITLE 五行之体·土[一阶]
+#act
+MOV S$土当前阶段 土·一阶
+MOV S$土当前属性 +1%最大生命值
+MOV S$土下级属性 +2%最大生命值
+MOV S$土下级称号 五行之体·土[二阶]
+MOV S$土删除称号 五行之体·土[一阶]
+
+
+#if
+CHECKTITLE 五行之体·土[二阶]
+#act
+MOV S$土当前阶段 土·二阶
+MOV S$土当前属性 +2%最大生命值
+MOV S$土下级属性 +3%最大生命值
+MOV S$土下级称号 五行之体·土[三阶]
+MOV S$土删除称号 五行之体·土[二阶]
+
+
+
+#if
+CHECKTITLE 五行之体·土[三阶]
+#act
+MOV S$土当前阶段 土·三阶
+MOV S$土当前属性 +3%最大生命值
+MOV S$土下级属性 +4%最大生命值
+MOV S$土下级称号 五行之体·土[四阶]
+MOV S$土删除称号 五行之体·土[三阶]
+
+
+
+#if
+CHECKTITLE 五行之体·土[四阶]
+#act
+MOV S$土当前阶段 土·四阶
+MOV S$土当前属性 +4%最大生命值
+MOV S$土下级属性 +5%最大生命值
+MOV S$土下级称号 五行之体·土[五阶]
+MOV S$土删除称号 五行之体·土[四阶]
+
+
+
+#if
+CHECKTITLE 五行之体·土[五阶]
+#act
+MOV S$土当前阶段 土·五阶
+MOV S$土当前属性 +5%最大生命值
+MOV S$土下级属性 +6%最大生命值
+MOV S$土下级称号 五行之体·土[六阶]
+MOV S$土删除称号 五行之体·土[五阶]
+
+
+#if
+CHECKTITLE 五行之体·土[六阶]
+#act
+MOV S$土当前阶段 土·六阶
+MOV S$土当前属性 +6%最大生命值
+MOV S$土下级属性 +7%最大生命值
+MOV S$土下级称号 五行之体·土[七阶]
+MOV S$土删除称号 五行之体·土[六阶]
+
+
+#if
+CHECKTITLE 五行之体·土[七阶]
+#act
+MOV S$土当前阶段 土·七阶
+MOV S$土当前属性 +7%最大生命值
+MOV S$土下级属性 +8%最大生命值
+MOV S$土下级称号 五行之体·土[八阶]
+MOV S$土删除称号 五行之体·土[七阶]
+
+
+#if
+CHECKTITLE 五行之体·土[八阶]
+#act
+MOV S$土当前阶段 土·八阶
+MOV S$土当前属性 +8%最大生命值
+MOV S$土下级属性 +9%最大生命值
+MOV S$土下级称号 五行之体·土[九阶]
+MOV S$土删除称号 五行之体·土[八阶]
+
+
+#if
+CHECKTITLE 五行之体·土[九阶]
+#act
+MOV S$土当前阶段 土·九阶
+MOV S$土当前属性 +9%最大生命值
+MOV S$土下级属性 +10%最大生命值
+MOV S$土下级称号 五行之体·土[十阶]
+MOV S$土删除称号 五行之体·土[九阶]
+#if
+CHECKTITLE 五行之体·土[十阶]
+#act
+MOV S$土当前阶段 土·十阶
+MOV S$土当前属性 +9%最大生命值
+MOV S$土下级属性 +10%最大生命值
+MOV S$土下级称号 五行之体·土[十阶]
+
+#if
+large u12 99
+#act
+DEC u12 100
+INC u11 1
+
+#if
+equal u11 10
+#act
+DEC u11 10
+DEPRIVETITLE <$STR(S$土删除称号)>
+CONFERTITLE <$STR(S$土下级称号)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+
+
+
+
+;===================总进度变量
+
+#if
+#act
+MOV S$当前阶段1 金·零阶
+MOV S$当前阶段2 木·零阶
+MOV S$当前阶段3 水·零阶
+MOV S$当前阶段4 火·零阶
+MOV S$当前阶段5 土·零阶
+MOV S$当前阶段6 混沌·零阶
+MOV N$金等级 0
+MOV N$木等级 0
+MOV N$水等级 0
+MOV N$火等级 0
+MOV N$土等级 0
+
+
+#if
+CHECKTITLE 五行之体·金[一阶]
+#act
+MOV S$当前阶段1 金·一阶
+MOV N$金等级 1
+
+#if
+CHECKTITLE 五行之体·金[二阶]
+#act
+MOV S$当前阶段1 金·二阶
+MOV N$金等级 2
+
+#if
+CHECKTITLE 五行之体·金[三阶]
+#act
+MOV S$当前阶段1 金·三阶
+MOV N$金等级 3
+
+#if
+CHECKTITLE 五行之体·金[四阶]
+#act
+MOV S$当前阶段1 金·四阶
+MOV N$金等级 4
+
+#if
+CHECKTITLE 五行之体·金[五阶]
+#act
+MOV S$当前阶段1 金·五阶
+MOV N$金等级 5
+
+#if
+CHECKTITLE 五行之体·金[六阶]
+#act
+MOV S$当前阶段1 金·六阶
+MOV N$金等级 6
+
+#if
+CHECKTITLE 五行之体·金[七阶]
+#act
+MOV S$当前阶段1 金·七阶
+MOV N$金等级 7
+
+#if
+CHECKTITLE 五行之体·金[八阶]
+#act
+MOV S$当前阶段1 金·八阶
+MOV N$金等级 8
+
+#if
+CHECKTITLE 五行之体·金[九阶]
+#act
+MOV S$当前阶段1 金·九阶
+MOV N$金等级 9
+
+#if
+CHECKTITLE 五行之体·金[十阶]
+#act
+MOV S$当前阶段1 金·十阶
+MOV N$金等级 10
+
+#if
+CHECKTITLE 五行之体·木[一阶]
+#act
+MOV S$当前阶段2 木·一阶
+MOV N$木等级 1
+
+#if
+CHECKTITLE 五行之体·木[二阶]
+#act
+MOV S$当前阶段2 木·二阶
+MOV N$木等级 2
+
+#if
+CHECKTITLE 五行之体·木[三阶]
+#act
+MOV S$当前阶段2 木·三阶
+MOV N$木等级 3
+
+#if
+CHECKTITLE 五行之体·木[四阶]
+#act
+MOV S$当前阶段2 木·四阶
+MOV N$木等级 4
+
+#if
+CHECKTITLE 五行之体·木[五阶]
+#act
+MOV S$当前阶段2 木·五阶
+MOV N$木等级 5
+
+#if
+CHECKTITLE 五行之体·木[六阶]
+#act
+MOV S$当前阶段2 木·六阶
+MOV N$木等级 6
+
+#if
+CHECKTITLE 五行之体·木[七阶]
+#act
+MOV S$当前阶段2 木·七阶
+MOV N$木等级 7
+
+#if
+CHECKTITLE 五行之体·木[八阶]
+#act
+MOV S$当前阶段2 木·八阶
+MOV N$木等级 8
+
+#if
+CHECKTITLE 五行之体·木[九阶]
+#act
+MOV S$当前阶段2 木·九阶
+MOV N$木等级 9
+
+#if
+CHECKTITLE 五行之体·木[十阶]
+#act
+MOV S$当前阶段2 木·十阶
+MOV N$木等级 10
+
+#if
+CHECKTITLE 五行之体·水[一阶]
+#act
+MOV S$当前阶段3 水·一阶
+MOV N$水等级 1
+
+#if
+CHECKTITLE 五行之体·水[二阶]
+#act
+MOV S$当前阶段3 水·二阶
+MOV N$水等级 2
+
+#if
+CHECKTITLE 五行之体·水[三阶]
+#act
+MOV S$当前阶段3 水·三阶
+MOV N$水等级 3
+
+
+#if
+CHECKTITLE 五行之体·水[四阶]
+#act
+MOV S$当前阶段3 水·四阶
+MOV N$水等级 4
+
+#if
+CHECKTITLE 五行之体·水[五阶]
+#act
+MOV S$当前阶段3 水·五阶
+MOV N$水等级 5
+
+#if
+CHECKTITLE 五行之体·水[六阶]
+#act
+MOV S$当前阶段3 水·六阶
+MOV N$水等级 6
+
+#if
+CHECKTITLE 五行之体·水[七阶]
+#act
+MOV S$当前阶段3 水·七阶
+MOV N$水等级 7
+
+#if
+CHECKTITLE 五行之体·水[八阶]
+#act
+MOV S$当前阶段3 水·八阶
+MOV N$水等级 8
+
+#if
+CHECKTITLE 五行之体·水[九阶]
+#act
+MOV S$当前阶段3 水·九阶
+MOV N$水等级 9
+
+#if
+CHECKTITLE 五行之体·水[十阶]
+#act
+MOV S$当前阶段3 水·十阶
+MOV N$水等级 10
+
+#if
+CHECKTITLE 五行之体·火[一阶]
+#act
+MOV S$当前阶段4 火·一阶
+MOV N$火等级 1
+
+#if
+CHECKTITLE 五行之体·火[二阶]
+#act
+MOV S$当前阶段4 火·二阶
+MOV N$火等级 2
+
+#if
+CHECKTITLE 五行之体·火[三阶]
+#act
+MOV S$当前阶段4 火·三阶
+MOV N$火等级 3
+
+#if
+CHECKTITLE 五行之体·火[四阶]
+#act
+MOV S$当前阶段4 火·四阶
+MOV N$火等级 4
+
+#if
+CHECKTITLE 五行之体·火[五阶]
+#act
+MOV S$当前阶段4 火·五阶
+MOV N$火等级 5
+
+#if
+CHECKTITLE 五行之体·火[六阶]
+#act
+MOV S$当前阶段4 火·六阶
+MOV N$火等级 6
+
+#if
+CHECKTITLE 五行之体·火[七阶]
+#act
+MOV S$当前阶段4 火·七阶
+MOV N$火等级 7
+
+#if
+CHECKTITLE 五行之体·火[八阶]
+#act
+MOV S$当前阶段4 火·八阶
+MOV N$火等级 8
+
+#if
+CHECKTITLE 五行之体·火[九阶]
+#act
+MOV S$当前阶段4 火·九阶
+MOV N$火等级 9
+
+#if
+CHECKTITLE 五行之体·火[十阶]
+#act
+MOV S$当前阶段4 火·十阶
+MOV N$火等级 10
+
+#if
+CHECKTITLE 五行之体·土[一阶]
+#act
+MOV S$当前阶段5 土·一阶
+MOV N$土等级 1
+
+#if
+CHECKTITLE 五行之体·土[二阶]
+#act
+MOV S$当前阶段5 土·二阶
+MOV N$土等级 2
+
+#if
+CHECKTITLE 五行之体·土[三阶]
+#act
+MOV S$当前阶段5 土·三阶
+MOV N$土等级 3
+
+#if
+CHECKTITLE 五行之体·土[四阶]
+#act
+MOV S$当前阶段5 土·四阶
+MOV N$土等级 4
+
+#if
+CHECKTITLE 五行之体·土[五阶]
+#act
+MOV S$当前阶段5 土·五阶
+MOV N$土等级 5
+
+#if
+CHECKTITLE 五行之体·土[六阶]
+#act
+MOV S$当前阶段5 土·六阶
+MOV N$土等级 6
+
+#if
+CHECKTITLE 五行之体·土[七阶]
+#act
+MOV S$当前阶段5 土·七阶
+MOV N$土等级 7
+
+#if
+CHECKTITLE 五行之体·土[八阶]
+#act
+MOV S$当前阶段5 土·八阶
+MOV N$土等级 8
+
+#if
+CHECKTITLE 五行之体·土[九阶]
+#act
+MOV S$当前阶段5 土·九阶
+MOV N$土等级 9
+
+#if
+CHECKTITLE 五行之体·土[十阶]
+#act
+MOV S$当前阶段5 土·十阶
+MOV N$土等级 10
+
+
+
+
+
+#if
+#act
+#say
+\ \ \  \
+<>                                                  <[混沌灵根]:/FCOLOR=70>\ \
+<>                                                  <五行灵根每达到2.4.6.8.10阶时可以/FCOLOR=161>\
+<>                                                  <免费提升一级混沌灵根，最高到五级/FCOLOR=161>\
+<>                                           \
+<>                                                  <领取成就称号：/FCOLOR=250>     <【五行之子】|253#领取条件：^-^254#需要五行灵根都达到10阶^-^253#称号属性：^-^254#人物属性+100/@五行之子>\
+<>     <IMG:255:6:255:3>\
+<>                                                    <[混沌灵根]:/FCOLOR=253><IMG:79:6:-82:-4>   <[混沌灵根属性]|253#每一级提升：^-^254#   暴击几率+2%^254#   攻击伤害+2%^254#   物伤减少+2%^254#   魔伤减少+2%^254#   忽视防御+2%^254#   人物体力+2%^254#   人物魔力+2%/FCOLOR=150>\ \
+<>                                                       <IMG:77:6:-2:-2><混沌灵根:/FCOLOR=150>  {<$STR(S$当前阶段6)>/FCOLOR=70}\
+<>                                                       <IMG:77:6:-2:-2><金·灵根:/FCOLOR=150>  {<$STR(S$当前阶段1)>/FCOLOR=250}\
+<>                                                       <IMG:77:6:-2:-2><木·灵根:/FCOLOR=150>  {<$STR(S$当前阶段2)>/FCOLOR=250}\
+<>                                                       <IMG:77:6:-2:-2><水·灵根:/FCOLOR=150>  {<$STR(S$当前阶段3)>/FCOLOR=250}\
+<>                                                       <IMG:77:6:-2:-2><火·灵根:/FCOLOR=150>  {<$STR(S$当前阶段4)>/FCOLOR=250}\
+<>                                                       <IMG:77:6:-2:-2><土·灵根:/FCOLOR=150>  {<$STR(S$当前阶段5)>/FCOLOR=250}\
+
+<>                                                              <IMG:256:6:-2:11/@升级> \
+
+<ImgEx:13:110:111:112:94:-260|151#点击图标进阶^-^151#[金之灵根]:^ ^161#灵根总共有10阶100级。^161#每提升10级灵根可提升一阶灵根！^161#每提升一阶灵根可为自身提升1%的攻击吸血！^250#10阶爆率提高50%^ ^253#[五行升级]:^ ^149#当前阶段:<$STR(S$金当前阶段)>^246#当前阶段:<$STR(u5)>／10^246#当前进度:<$STR(u6)>／100^244#当前属性:<$STR(S$金当前属性)>^244#下级属性:<$STR(S$金下级属性)>/@金升级>
+<ImgEx:13:113:114:115:-84:-194|151#点击图标进阶^-^224#[木之灵根]:^ ^161#灵根总共有10阶100级。^161#每提升10级灵根可提升一阶灵根！^161#每提升一阶灵根可为自身提升1%的暴击威力！^250#10阶爆率提高50%^ ^253#[五行升级]:^ ^149#当前阶段:<$STR(S$木当前阶段)>^246#当前阶段:<$STR(u9)>／10^246#当前进度:<$STR(u10)>／100^244#当前属性:<$STR(S$木当前属性)>^244#下级属性:<$STR(S$木下级属性)>/@木升级>
+<ImgEx:13:116:117:118:30:-194|151#点击图标进阶^-^254#[水之灵根]:^ ^161#灵根总共有10阶100级。^161#每提升10级灵根可提升一阶灵根！^161#每提升一阶灵根可为自身提升1%的减伤！^250#10阶爆率提高50%^ ^253#[五行升级]:^ ^149#当前阶段:<$STR(S$水当前阶段)>^246#当前阶段:<$STR(u7)>／10^246#当前进度:<$STR(u8)>／100^244#当前属性:<$STR(S$水当前属性)>^244#下级属性:<$STR(S$水下级属性)>/@水升级>
+<ImgEx:13:119:120:121:-210:-82|151#点击图标进阶^-^191#[火之灵根]:^ ^161#灵根总共有10阶100级。^161#每提升10级灵根可提升一阶灵根！^161#每提升一阶灵根可为自身提升1%的最大攻击力！^250#10阶爆率提高50%^ ^253#[五行升级]:^ ^149#当前阶段:<$STR(S$火当前阶段)>^246#当前阶段:<$STR(u3)>／10^246#当前进度:<$STR(u4)>／100^244#当前属性:<$STR(S$火当前属性)>^244#下级属性:<$STR(S$火下级属性)>/@火升级>
+<ImgEx:13:122:123:124:-160:-82|151#点击图标进阶^-^125#[土之灵根]:^ ^161#灵根总共有10阶100级。^161#每提升10级灵根可提升一阶灵根！^161#每提升一阶灵根可为自身提升1%的最大生命值！^250#10阶爆率提高50%^ ^253#[五行升级]:^ ^149#当前阶段:<$STR(S$土当前阶段)>^246#当前阶段:<$STR(u11)>／10^246#当前进度:<$STR(u12)>／100^244#当前属性:<$STR(S$土当前属性)>^244#下级属性:<$STR(S$土下级属性)>/@土升级>
+
+
+
+
+
+[@五行之子]
+
+#if
+CHECKTITLE 五行之子
+#act
+MESSAGEBOX 你已经完成了该成就称号，无法再次领取..
+break
+
+
+#if
+CHECKTITLE 五行之体·土[十阶]
+CHECKTITLE 五行之体·金[十阶]
+CHECKTITLE 五行之体·木[十阶]
+CHECKTITLE 五行之体·水[十阶]
+CHECKTITLE 五行之体·火[十阶]
+#act
+CONFERTITLE 五行之子
+SENDMSG 6 {五行阵法之地:|251:15}{『<$USERNAME>』|255:15}{成功完成了五行成就称号，获得了称号：|249:15}{【五行之子】|250:15}
+MESSAGEBOX 恭喜你成功获得了成就称号..
+break
+
+#if
+#act
+MESSAGEBOX 请查看你是否满足了领取要求..
+break
+
+
+
+
+[@升级]
+#if
+#act
+DEPRIVETITLE 五行之体·混沌[一阶]
+DEPRIVETITLE 五行之体·混沌[二阶]
+DEPRIVETITLE 五行之体·混沌[三阶]
+DEPRIVETITLE 五行之体·混沌[四阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+
+#if
+equal N$金等级 10
+equal N$木等级 10
+equal N$水等级 10
+equal N$火等级 10
+equal N$土等级 10
+#act
+CONFERTITLE 五行之体·混沌[五阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[五阶]..
+break
+
+
+#if
+large N$金等级 7
+large N$木等级 7
+large N$水等级 7
+large N$火等级 7
+large N$土等级 7
+#act
+DEPRIVETITLE 五行之体·混沌[一阶]
+DEPRIVETITLE 五行之体·混沌[二阶]
+DEPRIVETITLE 五行之体·混沌[三阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之体·混沌[四阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[四阶]..
+break
+
+#if
+large N$金等级 5
+large N$木等级 5
+large N$水等级 5
+large N$火等级 5
+large N$土等级 5
+#act
+DEPRIVETITLE 五行之体·混沌[一阶]
+DEPRIVETITLE 五行之体·混沌[二阶]
+DEPRIVETITLE 五行之体·混沌[四阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之体·混沌[三阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[三阶]..
+break
+
+#if
+large N$金等级 3
+large N$木等级 3
+large N$水等级 3
+large N$火等级 3
+large N$土等级 3
+#act
+DEPRIVETITLE 五行之体·混沌[一阶]
+DEPRIVETITLE 五行之体·混沌[三阶]
+DEPRIVETITLE 五行之体·混沌[四阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之体·混沌[二阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[二阶]..
+break
+
+
+#if
+large N$金等级 1
+large N$木等级 1
+large N$水等级 1
+large N$火等级 1
+large N$土等级 1
+#act
+DEPRIVETITLE 五行之体·混沌[二阶]
+DEPRIVETITLE 五行之体·混沌[三阶]
+DEPRIVETITLE 五行之体·混沌[四阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之体·混沌[一阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[一阶]..
+break
+
+#if
+#act
+MESSAGEBOX 你的条件不符，无法升级混沌之体。
+break
+
+
+
+
+[@金升级]
+#if
+CHECKTITLE 五行之体·金[十阶]
+#act
+MESSAGEBOX 当前已经升级到满级,无法继续提升
+break
+
+#if
+random 20
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+INC u6 100
+goto @五行
+MESSAGEBOX 鸿运当头,直接增加100点进度.
+goto @五行
+break
+
+
+
+
+#if
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+MOVR N$金随机进度 30 50
+INC u6 <$STR(N$金随机进度)>
+goto @五行
+MESSAGEBOX 升级成功,增加<$STR(N$金随机进度)>点进度值.
+#elseact
+MESSAGEBOX 升级失败，请检查你的条件是否都满足需要消耗元宝400五行石*50
+goto @五行
+break
+
+
+[@木升级]
+#if
+CHECKTITLE 五行之体·木[十阶]
+#act
+MESSAGEBOX 当前已经升级到满级,无法继续提升
+break
+
+#if
+random 20
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+INC u10 100
+goto @五行
+MESSAGEBOX 鸿运当头,直接增加100点进度.
+goto @五行
+break
+
+
+
+
+#if
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+MOVR N$木随机进度 30 50
+INC u10 <$STR(N$木随机进度)>
+goto @五行
+MESSAGEBOX 升级成功,增加<$STR(N$木随机进度)>点进度值.
+#elseact
+MESSAGEBOX 升级失败，请检查你的条件是否都满足需要消耗元宝400五行石*50
+goto @五行
+break
+
+
+[@水升级]
+#if
+CHECKTITLE 五行之体·水[十阶]
+#act
+MESSAGEBOX 当前已经升级到满级,无法继续提升
+break
+#if
+random 20
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+INC u8 100
+goto @五行
+MESSAGEBOX 鸿运当头,直接增加100点进度.
+goto @五行
+break
+
+
+
+
+#if
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+MOVR N$水随机进度  30 50
+INC u8 <$STR(N$水随机进度)>
+goto @五行
+MESSAGEBOX 升级成功,增加<$STR(N$水随机进度)>点进度值.
+#elseact
+MESSAGEBOX 升级失败，请检查你的条件是否都满足需要消耗元宝400五行石*50
+goto @五行
+break
+
+
+[@火升级]
+#if
+CHECKTITLE 五行之体·火[十阶]
+#act
+MESSAGEBOX 当前已经升级到满级,无法继续提升
+break
+
+#if
+random 20
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+INC U4 100
+goto @五行
+MESSAGEBOX 鸿运当头,直接增加100点进度.
+goto @五行
+break
+
+
+
+
+#if
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+MOVR N$火随机进度 30 50
+INC U4 <$STR(N$火随机进度)>
+goto @五行
+MESSAGEBOX 升级成功,增加<$STR(N$火随机进度)>点进度值.
+#elseact
+MESSAGEBOX 升级失败，请检查你的条件是否都满足需要消耗元宝400五行石*50
+goto @五行
+break
+
+
+[@土升级]
+#if
+CHECKTITLE 五行之体·土[十阶]
+#act
+MESSAGEBOX 当前已经升级到满级,无法继续提升
+break
+
+#if
+random 20
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+INC u12 100
+goto @五行
+MESSAGEBOX 鸿运当头,直接增加100点进度.
+goto @五行
+break
+
+
+
+
+#if
+checkitem 五行石 50
+CHECKGAMEGOLD ? 400
+#act
+take 五行石 50
+GAMEGOLD - 400
+MOVR N$土随机进度 30 50
+INC u12 <$STR(N$土随机进度)>
+goto @五行
+MESSAGEBOX 升级成功,增加<$STR(N$土随机进度)>点进度值.
+#elseact
+MESSAGEBOX 升级失败，请检查你的条件是否都满足需要消耗元宝400五行石*50
+goto @五行
+break
+
+
+}

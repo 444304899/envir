@@ -1,0 +1,95 @@
+[@main]
+#if
+#act
+GOTO @山海地图配置
+#say
+\ \ \ \ \ \  \ \  \
+
+<>                         <PLAYIMG:7:10:5:100:0:-1><【地图等级】：/AUTOCOLOR=150> <神级/AUTOCOLOR=250>   \
+<>                         <PLAYIMG:7:10:5:100:0:-1><【爆率说明】：/AUTOCOLOR=150> <中期专属装备/AUTOCOLOR=161>\
+<>                         <PLAYIMG:7:10:5:100:0:-1><【进入条件】：/AUTOCOLOR=150> <进图需要10转.攻击2.5万.血量35万/AUTOCOLOR=151>  \
+<>                         <PLAYIMG:7:10:5:100:0:-1><【特别说明】：/AUTOCOLOR=150> <本服所有装备打Boss均可爆出!/AUTOCOLOR=58>  \ \
+<>                    <ItemShow:1053:0:0:-9:1>  <ItemShow:1054:0:0:-9:1>  <ItemShow:1034:0:0:-9:1>  <ItemShow:1035:0:0:-9:1>  <ItemShow:1037:0:0:-9:1>  <ItemShow:1038:0:0:-9:1>  <ItemShow:1039:0:0:-9:1>\ \ \
+<>                    <ItemShow:1040:0:0:-9:1>  <ItemShow:1042:0:0:-9:1>  <ItemShow:1043:0:0:-9:1>  <ItemShow:1044:0:0:-9:1>  <ItemShow:1045:0:0:-9:1>  <ItemShow:1046:0:0:-9:1>  <ItemShow:1047:0:0:-9:1>\ \
+
+
+<>                                            <IMG:176:6:10:25|250#.10转.攻击2.5万.血量35万/@传送1>
+
+;<><IMG:216:13:-243:35> \
+
+;<><IMG:166:6:10:38>\ \ \
+
+
+[@山海地图配置]
+#IF
+#Act
+Getliststring ..\QuestDiary\馒头制作\地图产出\山海经.txt 0 S$山海显示0 S$无无0
+Getliststring ..\QuestDiary\馒头制作\地图产出\山海经.txt 1 S$山海显示1 S$无无1
+Getliststring ..\QuestDiary\馒头制作\地图产出\山海经.txt 2 S$山海显示2 S$无无2
+Getliststring ..\QuestDiary\馒头制作\地图产出\山海经.txt 3 S$山海显示3 S$无无3
+Getliststring ..\QuestDiary\馒头制作\地图产出\山海经.txt 4 S$山海显示4 S$无无4
+Getliststring ..\QuestDiary\馒头制作\地图产出\山海经.txt 5 S$山海显示5 S$无无5
+Getliststring ..\QuestDiary\馒头制作\地图产出\山海经.txt 6 S$山海显示6 S$无无6
+Getliststring ..\QuestDiary\馒头制作\地图产出\山海经.txt 7 S$山海显示7 S$无无7
+
+#IF
+Equal S$山海显示0
+#Act
+mov S$山海显示0 暂无产出数据
+
+#IF
+Equal S$山海显示1
+#Act
+mov S$山海显示1 暂无产出数据
+
+#IF
+Equal S$山海显示2
+#Act
+mov S$山海显示2 暂无产出数据
+
+#IF
+Equal S$山海显示3
+#Act
+mov S$山海显示3 暂无产出数据
+
+#IF
+Equal S$山海显示4
+#Act
+mov S$山海显示4 暂无产出数据
+
+#IF
+Equal S$山海显示5
+#Act
+mov S$山海显示5 暂无产出数据
+
+#IF
+Equal S$山海显示6
+#Act
+mov S$山海显示6 暂无产出数据
+
+#IF
+Equal S$山海显示7
+#Act
+mov S$山海显示7 暂无产出数据
+
+
+
+
+
+[@传送1]
+
+#if
+;large U21 0
+CHECKRENEWLEVEL > 9
+large <$MAXDC> 25000
+large <$MAXHP> 350000
+#act
+MAP mxdsj
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到10转！\\攻击力达到25000!\\生命值达到35W！
+break
+
+
+
+

@@ -1,0 +1,780 @@
+[@main]
+#if
+CheckBoxItemCount 1 1
+#act
+ReturnBoxItem 1
+
+#if
+CheckBoxItemCount 3 1
+#act
+ReturnBoxItem 3
+
+
+
+#if
+large <$BOXITEM[0].UPGRADECOUNT> 14
+#act
+MessageBox 强化失败：<$BOXITEM[0].NAME>已经不能再强化了
+ReturnBoxItem 0
+break
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 0
+#act
+mov N$强化石数量 1
+mov N$需要元宝 10000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 1
+#act
+mov N$强化石数量 1
+mov N$需要元宝 20000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 2
+#act
+mov N$强化石数量 1
+mov N$需要元宝 30000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 3
+#act
+mov N$强化石数量 1
+mov N$需要元宝 40000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 4
+#act
+mov N$强化石数量 1
+mov N$需要元宝 50000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 5
+#act
+mov N$强化石数量 1
+mov N$需要元宝 60000
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 6
+#act
+mov N$强化石数量 1
+mov N$需要元宝 70000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 7
+#act
+mov N$强化石数量 1
+mov N$需要元宝 80000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 8
+#act
+mov N$强化石数量 1
+mov N$需要元宝 90000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 9
+#act
+mov N$强化石数量 1
+mov N$需要元宝 100000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 10
+#act
+mov N$强化石数量 1
+mov N$需要元宝 110000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 11
+#act
+mov N$强化石数量 1
+mov N$需要元宝 120000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 12
+#act
+mov N$强化石数量 1
+mov N$需要元宝 130000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 13
+#act
+mov N$强化石数量 1
+mov N$需要元宝 140000
+
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 14
+#act
+mov N$强化石数量 1
+mov N$需要元宝 150000
+
+#if
+not CheckBoxItemCount 0 1
+#act
+mov N$强化石数量
+mov N$需要元宝
+
+
+#if
+large U33 49
+#act
+#SAY
+\  \ \  \  \
+<>                                                              <[强化属性]||253#说明:
+^255#强化失败，强化等级会跌落！
+^255#强化失败，强化等级会跌落！
+^251#强化属性＝基础属性×百分比
+^251#武器属性＝攻击.魔法.道术
+^251#衣服属性＝防御.魔御.生命值
+^250#╔====================╗
+^250#‖强化值    强化百分比‖
+^250#‖====================‖
+^250#‖强化+1        1%    ‖
+^250#‖强化+2        2%    ‖
+^250#‖强化+3        3%    ‖
+^250#‖强化+4        5%    ‖
+^250#‖强化+5        7%    ‖
+^250#‖强化+6        10%   ‖
+^250#‖强化+7        15%   ‖
+^250#‖强化+8        20%   ‖
+^250#‖强化+9        30%   ‖
+^250#‖强化+10       40%   ‖
+^250#‖强化+11       50%   ‖
+^250#‖强化+12       70%   ‖
+^250#‖强化+13       100%  ‖
+^250#‖强化+14       140%  ‖
+^250#‖强化+15       200%  ‖
+^250#  ====================╝>\ \ \
+
+<> <ITEMBOX:0:-1:0:195:-23:40:40:5,10:请放入你要强化的武器或衣服>\ \ \ \  \ \
+<>                            <材料/FCOLOR=250>          <元宝/FCOLOR=250>\
+<>                            < <$STR(N$强化石数量)>/FCOLOR=250>           < <$STR(N$需要元宝)>/FCOLOR=250>\ \
+
+<><playimg:13:725:10:100:170:-195:0>\ \
+
+<>                     <满足条件:可使用1500钻石直接强化+15>    <确定强化/@强化1>\ \ \
+<>                     <IMG:138:6:0:-3/@强化>      　<IMG:139:6:14:-3/@main2>　　　　　 \ \
+
+
+<>               <背包内放置强化卷轴，可直接点击强化，无需任何材料费用/FCOLOR=250>
+
+
+
+#if
+small U33 50
+#act
+#SAY
+\  \ \  \  \
+<>                                                              <[强化属性]||253#说明:
+^255#强化失败，强化等级会跌落！
+^255#强化失败，强化等级会跌落！
+^251#强化属性＝基础属性×百分比
+^251#武器属性＝攻击.魔法.道术
+^251#衣服属性＝防御.魔御.生命值
+^250#╔====================╗
+^250#‖强化值    强化百分比‖
+^250#‖====================‖
+^250#‖强化+1        1%    ‖
+^250#‖强化+2        2%    ‖
+^250#‖强化+3        3%    ‖
+^250#‖强化+4        5%    ‖
+^250#‖强化+5        7%    ‖
+^250#‖强化+6        10%   ‖
+^250#‖强化+7        15%   ‖
+^250#‖强化+8        20%   ‖
+^250#‖强化+9        30%   ‖
+^250#‖强化+10       40%   ‖
+^250#‖强化+11       50%   ‖
+^250#‖强化+12       70%   ‖
+^250#‖强化+13       100%  ‖
+^250#‖强化+14       140%  ‖
+^250#‖强化+15       200%  ‖
+^250#  ====================╝>\ \ \
+
+<> <ITEMBOX:0:-1:0:195:-23:40:40:5,10:请放入你要强化的武器或衣服>\ \ \ \  \ \
+<>                            <材料/FCOLOR=250>          <元宝/FCOLOR=250>\
+<>                            < <$STR(N$强化石数量)>/FCOLOR=250>           < <$STR(N$需要元宝)>/FCOLOR=250>\ \
+
+<><playimg:13:725:10:100:170:-195:0>\ \
+
+<>                     <[保底升级]||70#当前升级失败次数<$str(u33)次>^70#超过50次可使用1500钻石一次性升级到15> <可用材料元宝升级至+15/FCOLOR=249>\ \
+<>                     <IMG:138:6:0:-3/@强化>      　<IMG:139:6:14:-3/@main2>　　　　　 \ \
+
+
+<>           <背包内放置强化卷轴，可直接点击强化，无需任何材料费用/FCOLOR=250>
+
+
+
+[@保底]
+#if
+#act
+inc u33 50
+
+[@ItemIntoBox0]
+#if
+#act
+SetUpgradeItem 0
+CHANGECUSTOMITEMABIL -1 3 0 87
+CHANGECUSTOMITEMABIL -1 3 1 3
+CHANGECUSTOMITEMABIL -1 3 2 0
+CHANGECUSTOMITEMABIL -1 3 3 0
+
+CHANGECUSTOMITEMABIL -1 4 0 87
+CHANGECUSTOMITEMABIL -1 4 1 4
+CHANGECUSTOMITEMABIL -1 4 2 1
+CHANGECUSTOMITEMABIL -1 4 3 0
+
+CHANGECUSTOMITEMABIL -1 5 0 87
+CHANGECUSTOMITEMABIL -1 5 1 5
+CHANGECUSTOMITEMABIL -1 5 2 2
+CHANGECUSTOMITEMABIL -1 5 3 0
+
+CHANGECUSTOMITEMABIL -1 6 0 87
+CHANGECUSTOMITEMABIL -1 6 1 6
+CHANGECUSTOMITEMABIL -1 6 2 5
+CHANGECUSTOMITEMABIL -1 6 3 0
+
+CHANGECUSTOMITEMABIL -1 1 0 87
+CHANGECUSTOMITEMABIL -1 2 0 87
+CHANGECUSTOMITEMABIL -1 1 1 1
+CHANGECUSTOMITEMABIL -1 2 1 2
+CHANGECUSTOMITEMABIL -1 1 2 3
+CHANGECUSTOMITEMABIL -1 2 2 4
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMABIL -1 2 3 0
+
+
+#if
+large <$BOXITEM[0].UPGRADECOUNT> 14
+#act
+MessageBox 强化失败：<$BOXITEM[0].NAME>已经不能再强化了
+ReturnBoxItem 0
+break
+
+#if
+#act
+goto @main
+break
+
+
+
+[@强化1]
+#if
+not CheckBoxItemCount 0 1
+#act
+MessageBox 强化失败：你并没有放入装备！
+break
+
+#if
+large <$BOXITEM[0].UPGRADECOUNT> 14
+#act
+MessageBox 强化失败：<$BOXITEM[0].NAME>已经不能再强化了
+ReturnBoxItem 0
+break
+
+#if
+large U33 49
+CheckGamePoint > 1499
+#ACT
+MOV U33 0
+GamePoint - 1500
+ChangeItemUpgradeCount -1 = 15
+UpDateBoxItem 0
+MessageBox 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
+goto @计算强化后的属性
+#ELSEACT
+MessageBox 条件1:强化50次以上开启\条件2:钻石:1500
+break
+
+[@强化]
+#if
+not CheckBoxItemCount 0 1
+#act
+MessageBox 强化失败：你并没有放入装备！
+break
+
+#IF
+#ACT
+MOV N$强化数值 0
+#if
+checkitem 强化+10卷轴
+#ACT
+MOV N$强化数值 10
+#if
+checkitem 强化+12卷轴
+#ACT
+MOV N$强化数值 12
+#if
+checkitem 强化+13卷轴
+#ACT
+MOV N$强化数值 13
+#if
+checkitem 强化+15卷轴
+#ACT
+MOV N$强化数值 15
+
+
+#if
+small <$BOXITEM[0].UPGRADECOUNT> <$STR(N$强化数值)>
+LARGE N$强化数值 0
+#act
+take 强化+<$STR(N$强化数值)>卷轴 1
+ChangeItemUpgradeCount -1 = <$STR(N$强化数值)>
+UpDateBoxItem 0
+MessageBox 强化成功：装备强化等级:<$STR(N$强化数值)>
+goto @计算强化后的属性
+break
+
+#if
+CHECKGAMEGOLD < <$STR(N$需要元宝)>
+#ACT
+MessageBox 强化失败：你元宝不足:<$STR(N$需要元宝)>
+ReturnBoxItem 0
+break
+
+#if
+not checkitem 云顶结晶 <$STR(N$强化石数量)>
+#act
+MessageBox 强化失败：你强化石不足:<$STR(N$强化石数量)>
+ReturnBoxItem 0
+break
+
+#if
+small <$BOXITEM[0].UPGRADECOUNT> 6
+#act
+ChangeItemUpgradeCount -1 + 1
+GAMEGOLD - <$STR(N$需要元宝)>
+take 云顶结晶 <$STR(N$强化石数量)>
+UpDateBoxItem 0
+MessageBox 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
+goto @计算强化后的属性
+break
+
+
+#if
+small <$BOXITEM[0].UPGRADECOUNT> 10
+random 3
+#act
+ChangeItemUpgradeCount -1 + 1
+GAMEGOLD - <$STR(N$需要元宝)>
+take 云顶结晶 <$STR(N$强化石数量)>
+UpDateBoxItem 0
+MessageBox 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
+goto @计算强化后的属性
+break
+
+
+#if
+small <$BOXITEM[0].UPGRADECOUNT> 10
+#act
+ChangeItemUpgradeCount -1 - 1
+GAMEGOLD - <$STR(N$需要元宝)>
+take 云顶结晶 <$STR(N$强化石数量)>
+UpDateBoxItem 0
+MessageBox 强化失败：装备强化降为:<$BOXITEM[0].UPGRADECOUNT>
+goto @计算强化后的属性
+;增加强化 累计点满50次可使用18888钻石强化+15
+INC U33 1
+break
+
+
+
+#if
+large <$BOXITEM[0].UPGRADECOUNT> 12
+random 4
+#act
+ChangeItemUpgradeCount -1 + 1
+GAMEGOLD - <$STR(N$需要元宝)>
+take 云顶结晶 <$STR(N$强化石数量)>
+UpDateBoxItem 0
+MessageBox 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
+goto @计算强化后的属性
+break
+
+
+#if
+large <$BOXITEM[0].UPGRADECOUNT> 12
+#act
+ChangeItemUpgradeCount -1 - 1
+GAMEGOLD - <$STR(N$需要元宝)>
+take 云顶结晶 <$STR(N$强化石数量)>
+UpDateBoxItem 0
+MessageBox 强化失败：装备强化降为:<$BOXITEM[0].UPGRADECOUNT>
+goto @计算强化后的属性
+;增加强化 累计点满100次可使用18888钻石强化+15
+INC U33 1
+break
+
+
+
+
+
+
+#if
+large <$BOXITEM[0].UPGRADECOUNT> 9
+random 4
+#act
+ChangeItemUpgradeCount -1 + 1
+GAMEGOLD - <$STR(N$需要元宝)>
+take 云顶结晶 <$STR(N$强化石数量)>
+UpDateBoxItem 0
+MessageBox 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
+goto @计算强化后的属性
+break
+
+
+#if
+large <$BOXITEM[0].UPGRADECOUNT> 9
+#act
+ChangeItemUpgradeCount -1 - 1
+GAMEGOLD - <$STR(N$需要元宝)>
+take 云顶结晶 <$STR(N$强化石数量)>
+UpDateBoxItem 0
+MessageBox 强化失败：装备强化降为:<$BOXITEM[0].UPGRADECOUNT>
+goto @计算强化后的属性
+;增加强化 累计点满100次可使用18888钻石强化+15
+INC U33 1
+break
+
+
+
+
+
+[@计算强化后的属性]
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 1
+#act
+mov N$强倍 1
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 2
+#act
+mov N$强倍 2
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 3
+#act
+mov N$强倍 3
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 4
+#act
+mov N$强倍 5
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 5
+#act
+mov N$强倍 7
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 6
+#act
+mov N$强倍 10
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 7
+#act
+mov N$强倍 15
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 8
+#act
+mov N$强倍 20
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 9
+#act
+mov N$强倍 30
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 10
+#act
+mov N$强倍 40
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 11
+#act
+mov N$强倍 50
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 12
+#act
+mov N$强倍 70
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 13
+#act
+mov N$强倍 100
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 14
+#act
+mov N$强倍 140
+#if
+equal <$BOXITEM[0].UPGRADECOUNT> 15
+#act
+mov N$强倍 200
+
+
+
+#if
+#act
+mul n$强生 <$BOXITEM[0].HP>  <$STR(N$强倍)>
+mul n$强防 <$BOXITEM[0].HAC> <$STR(N$强倍)>
+mul n$强御 <$BOXITEM[0].HMAC> <$STR(N$强倍)>
+mul n$强攻 <$BOXITEM[0].HDC> <$STR(N$强倍)>
+mul n$强魔 <$BOXITEM[0].HMC> <$STR(N$强倍)>
+mul n$强道 <$BOXITEM[0].HSC> <$STR(N$强倍)>
+div n$强生 100
+div n$强防 100
+div n$强御 100
+div n$强攻 100
+div n$强魔 100
+div n$强道 100
+
+#if
+CompareText <$BOXITEM[0].STDMODE> 5
+#act
+CHANGECUSTOMITEMVALUE -1 3 = <$STR(n$强攻)>
+CHANGECUSTOMITEMVALUE -1 4 = <$STR(n$强魔)>
+CHANGECUSTOMITEMVALUE -1 5 = <$STR(n$强道)>
+CHANGECUSTOMITEMTEXTCOLOR -1 147
+CHANGECUSTOMITEMTEXT -1 [强化属性]
+ChangeItemName -1 <$BOXITEM[0].NAME>+<$BOXITEM[0].UPGRADECOUNT>
+UpDateBoxItem 0
+goto @main
+break
+
+
+#if
+CompareText <$BOXITEM[0].STDMODE> 10
+#act
+CHANGECUSTOMITEMVALUE -1 1 = <$STR(n$强防)>
+CHANGECUSTOMITEMVALUE -1 2 = <$STR(n$强御)>
+CHANGECUSTOMITEMVALUE -1 6 = <$STR(n$强生)>
+CHANGECUSTOMITEMTEXTCOLOR -1 147
+CHANGECUSTOMITEMTEXT -1 [强化属性]
+ChangeItemName -1 <$BOXITEM[0].NAME>+<$BOXITEM[0].UPGRADECOUNT>
+UpDateBoxItem 0
+goto @main
+break
+
+
+
+
+[@main2]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \   \  \ \ \
+<>                                                                          <[强化转移]||253#
+强化+10或以上的装备可以进行转移.转移过后
+^-^新的装备获得强化级数和强化属性
+^-^每次转移需要扣除1000灵符
+^-^第一个框放入你已经强化的武器或者衣服
+^-^第二个框放入需要被强化的新装备> \
+
+<>                                         <ITEMBOX:3:12:47:40:20:34:34:5,10:请放入已经强化+10或以上的装备>　 　<ITEMBOX:4:12:47:60:20:34:34:5,10:后放入要转移的装备> \\\　\ \　\ \
+
+<>                                        <转移后,被继承的装备将会返还 ！> \ \
+<>                                          <IMG:138:6:0:3/@main>       　<IMG:139:6:14:3/@开始转移>　　　　　 \ \
+
+
+
+
+
+[@ItemIntoBox3]
+#if
+#act
+SetUpgradeItem 3
+
+#if
+large <$BOXITEM[3].UPGRADECOUNT> 9
+#act
+break
+
+#if
+#act
+MessageBox 你放入的装备并没有强化到+10或以上.无法转移
+ReturnBoxItem 3
+break
+
+
+
+[@ItemIntoBox4]
+#if
+#act
+SetUpgradeItem 4
+
+
+#if
+equal <$BOXITEM[3].NAME>
+#act
+MessageBox 请先在左边框中放入强化+10或以上的装备.再到右边框中放入需要被强化的装备
+ReturnBoxItem 4
+break
+
+#if
+large <$BOXITEM[4].UPGRADECOUNT> 0
+#act
+MessageBox 你放入的装备已经强化过了.无法被转移
+ReturnBoxItem 4
+break
+
+
+#if
+#act
+CHANGECUSTOMITEMABIL -1 3 0 87
+CHANGECUSTOMITEMABIL -1 3 1 3
+CHANGECUSTOMITEMABIL -1 3 2 0
+CHANGECUSTOMITEMABIL -1 3 3 0
+
+CHANGECUSTOMITEMABIL -1 4 0 87
+CHANGECUSTOMITEMABIL -1 4 1 4
+CHANGECUSTOMITEMABIL -1 4 2 1
+CHANGECUSTOMITEMABIL -1 4 3 0
+
+CHANGECUSTOMITEMABIL -1 5 0 87
+CHANGECUSTOMITEMABIL -1 5 1 5
+CHANGECUSTOMITEMABIL -1 5 2 2
+CHANGECUSTOMITEMABIL -1 5 3 0
+
+CHANGECUSTOMITEMABIL -1 6 0 87
+CHANGECUSTOMITEMABIL -1 6 1 6
+CHANGECUSTOMITEMABIL -1 6 2 5
+CHANGECUSTOMITEMABIL -1 6 3 0
+
+CHANGECUSTOMITEMABIL -1 1 0 87
+CHANGECUSTOMITEMABIL -1 2 0 87
+CHANGECUSTOMITEMABIL -1 1 1 1
+CHANGECUSTOMITEMABIL -1 2 1 2
+CHANGECUSTOMITEMABIL -1 1 2 3
+CHANGECUSTOMITEMABIL -1 2 2 4
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMABIL -1 2 3 0
+break
+
+
+
+
+[@开始转移]
+#if
+CompareText <$BOXITEM[3].STDMODE> 10
+CompareText <$BOXITEM[4].STDMODE> 5
+#act
+messagebox 请放相同装备
+break
+
+#if
+CompareText <$BOXITEM[3].STDMODE> 5
+CompareText <$BOXITEM[4].STDMODE> 10
+#act
+messagebox 请放相同装备
+break
+
+#if
+#act
+SetUpgradeItem 4
+
+#if
+CHECKGameGird < 1000
+#ACT
+MessageBox 你的灵符太少了.无法转移
+ReturnBoxItem 3
+ReturnBoxItem 4
+break
+
+#if
+CHECKGameGird ? 1000
+#ACT
+GameGird - 1000
+
+
+#if
+equal <$BOXITEM[3].UPGRADECOUNT> 10
+#act
+mov N$强倍 40
+#if
+equal <$BOXITEM[3].UPGRADECOUNT> 11
+#act
+mov N$强倍 50
+#if
+equal <$BOXITEM[3].UPGRADECOUNT> 12
+#act
+mov N$强倍 70
+#if
+equal <$BOXITEM[3].UPGRADECOUNT> 13
+#act
+mov N$强倍 100
+#if
+equal <$BOXITEM[3].UPGRADECOUNT> 14
+#act
+mov N$强倍 140
+#if
+equal <$BOXITEM[3].UPGRADECOUNT> 15
+#act
+mov N$强倍 200
+
+#if
+equal <$BOXITEM[3].UPGRADECOUNT> 16
+#act
+mov N$强倍 280
+
+
+#if
+#act
+mul n$强生 <$BOXITEM[4].HP>  <$STR(N$强倍)>
+mul n$强防 <$BOXITEM[4].HAC> <$STR(N$强倍)>
+mul n$强御 <$BOXITEM[4].HMAC> <$STR(N$强倍)>
+mul n$强攻 <$BOXITEM[4].HDC> <$STR(N$强倍)>
+mul n$强魔 <$BOXITEM[4].HMC> <$STR(N$强倍)>
+mul n$强道 <$BOXITEM[4].HSC> <$STR(N$强倍)>
+
+div n$强生 100
+div n$强防 100
+div n$强御 100
+div n$强攻 100
+div n$强魔 100
+div n$强道 100
+
+#if
+CompareText <$BOXITEM[4].STDMODE> 5
+#act
+ChangeItemUpgradeCount -1 = <$BOXITEM[3].UPGRADECOUNT>
+CHANGECUSTOMITEMVALUE -1 3 = <$STR(n$强攻)>
+CHANGECUSTOMITEMVALUE -1 4 = <$STR(n$强魔)>
+CHANGECUSTOMITEMVALUE -1 5 = <$STR(n$强道)>
+CHANGECUSTOMITEMTEXTCOLOR -1 147
+CHANGECUSTOMITEMTEXT -1 [强化属性]
+ChangeItemName -1 <$BOXITEM[4].NAME>+<$BOXITEM[3].UPGRADECOUNT>
+UpDateBoxItem 4
+ReturnBoxItem 4
+
+SetUpgradeItem 3
+ChangeItemUpgradeCount -1 = 0
+CHANGECUSTOMITEMVALUE -1 3 = 0
+CHANGECUSTOMITEMVALUE -1 4 = 0
+CHANGECUSTOMITEMVALUE -1 5 = 0
+CHANGECUSTOMITEMTEXTCOLOR -1 147
+ChangeItemName -1 <$BOXITEM[3].NAME>
+
+UpDateBoxItem 3
+ReturnBoxItem 3
+goto @main
+;MESSAGEBOX 转移成功!!
+break
+
+
+#if
+CompareText <$BOXITEM[4].STDMODE> 10
+#act
+ChangeItemUpgradeCount -1 = <$BOXITEM[3].UPGRADECOUNT>
+CHANGECUSTOMITEMVALUE -1 1 = <$STR(n$强防)>
+CHANGECUSTOMITEMVALUE -1 2 = <$STR(n$强御)>
+CHANGECUSTOMITEMVALUE -1 6 = <$STR(n$强生)>
+CHANGECUSTOMITEMTEXTCOLOR -1 147
+CHANGECUSTOMITEMTEXT -1 [强化属性]
+ChangeItemName -1 <$BOXITEM[4].NAME>+<$BOXITEM[3].UPGRADECOUNT>
+
+UpDateBoxItem 4
+ReturnBoxItem 4
+
+#if
+#act
+SetUpgradeItem 3
+ChangeItemUpgradeCount -1 = 0
+CHANGECUSTOMITEMVALUE -1 1 = 0
+CHANGECUSTOMITEMVALUE -1 2 = 0
+CHANGECUSTOMITEMVALUE -1 6 = 0
+CHANGECUSTOMITEMTEXTCOLOR -1 147
+CHANGECUSTOMITEMTEXT -1 [强化属性]
+ChangeItemName -1 <$BOXITEM[3].NAME>
+ReturnBoxItem 3
+goto @main
+break

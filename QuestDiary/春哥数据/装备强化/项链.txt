@@ -1,0 +1,108 @@
+[@项链强化]
+{
+#IF
+NOT CHECKUSEITEM 3
+#ACT
+messagebox 请将项链佩带在身上再来强化吧!
+break
+
+#if
+#act
+MOV P81 0
+
+#IF
+CheckItemupgradeCount 1 3 = 0
+#ACT
+MOV N$需求材料数量 1
+MOV N$成功几率 0
+
+#IF
+CheckItemupgradeCount 1 3 = 1
+#ACT
+MOV N$需求材料数量 2
+MOV N$成功几率 10
+
+#IF
+CheckItemupgradeCount 1 3 = 2
+#ACT
+MOV N$需求材料数量 3
+MOV N$成功几率 20
+
+#IF
+CheckItemupgradeCount 1 3 = 3
+#ACT
+MOV N$需求材料数量 4
+MOV N$成功几率 30
+
+#IF
+CheckItemupgradeCount 1 3 = 4
+#ACT
+MOV N$需求材料数量 5
+MOV N$成功几率 40
+
+#IF
+CheckItemupgradeCount 1 3 = 5
+#ACT
+MOV N$需求材料数量 6
+MOV N$成功几率 50
+
+#IF
+CheckItemupgradeCount 1 3 = 6
+#ACT
+MOV N$需求材料数量 7
+MOV N$成功几率 60
+
+#IF
+CheckItemupgradeCount 1 3 = 7
+#ACT
+MOV N$需求材料数量 8
+MOV N$成功几率 70
+
+#IF
+CheckItemupgradeCount 1 3 = 8
+#ACT
+MOV N$需求材料数量 10
+MOV N$成功几率 80
+
+#IF
+CheckItemupgradeCount 1 3 = 9
+#ACT
+MOV N$需求材料数量 10
+MOV N$成功几率 90
+
+
+#IF
+CheckItemupgradeCount 1 3 = 10
+#ACT
+MESSAGEBOX 您的装备强化已满！无法再次强化了！
+break
+
+#IF
+SMALL U20 <$STR(N$需求材料数量)>
+#ACT
+messagebox 请检查您背包内的[装备强化石]是否足够[<$STR(N$需求材料数量)>]个
+break
+
+
+#IF
+#ACT
+MOVR N$成功几率中转 1 100
+
+#IF
+LARGE N$成功几率中转 <$STR(N$成功几率)>
+CheckItemupgradeCount 1 3 < 10
+LARGE U20 <$STR(N$需求材料数量)>
+#ACT
+DEC U20 <$STR(N$需求材料数量)>
+MOVR P81 30 100
+CHANGEITEMADDVALUE 3 2 + <$STR(P81)>
+CHANGEITEMADDVALUE 3 3 + <$STR(P81)>
+CHANGEITEMADDVALUE 3 4 + <$STR(P81)>
+ChangeItemUpgradeCount 3 + 1
+messagebox 恭喜您！摇出了[<$STR(N$成功几率中转)>]点,大于当前项链ROLL点成功值[<$STR(N$成功几率)>]点您的项链强化成功了\\您的项链强化成功了！星星数量+1！攻魔道增加了<$STR(P81)>点！
+sendmsg 6 恭喜您！摇出了[<$STR(N$成功几率中转)>]点,大于当前项链ROLL点成功值[<$STR(N$成功几率)>]点您的项链强化成功了！星星数量+1
+#elseact
+DEC U20 <$STR(N$需求材料数量)>
+MESSAGEBOX 很遗憾!您摇出了[<$STR(N$成功几率中转)>]点\\小于当前项链ROLL点成功值[<$STR(N$成功几率)>]点您的项链强化失败了\\您的项链强化失败了！!请再接再厉!
+BREAK
+}

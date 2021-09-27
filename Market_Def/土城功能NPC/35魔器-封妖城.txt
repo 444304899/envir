@@ -1,0 +1,384 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \ \ \ \ \
+<>                    <ItemShow:1093:0:0:-10:1/@超神器1>     <ItemShow:1094:0:0:-10:1>     <ItemShow:1095:0:0:-10:1>     <ItemShow:1096:0:0:-10:1>     <ItemShow:1097:0:0:-10:1>\
+<>                    <ItemShow:1098:0:0:25:1/@超神器1>     <ItemShow:1099:0:0:25:1>     <ItemShow:1100:0:0:25:1>     <ItemShow:1101:0:0:25:1>     <ItemShow:1102:0:0:25:1>\  \ \ \  \
+<>                                    <你是来锻造超神器的吗？/FCOLOR=161> \
+<>                             <鼠标移至对应的名字上即可查看合成需求/FCOLOR=161> \ \
+<>                  <《自由大陆》|^-^253#*.【超神器】关注神器^-^161#*.工匠石*50/@合成1>   <《召唤师峡谷》|253#*.【超神器】自由大陆^-^161#*.工匠石*100/@合成2>   <《峡谷之巅》|253#*.【超神器】召唤师峡谷^-^161#*.工匠石*200/@合成3>   <《创世★巅峰》|253#*.【超神器】峡谷之巅^-^161#*.工匠石*300/@合成4>\ \
+<>                  <《原始大陆》|^-^253#*.【超神器】创世★巅峰^-^161#*.工匠石*400/@合成5>   <《山海经》|253#*.【超神器】原始大陆^-^161#*.工匠石*500/@合成6>       <《传奇之路》|253#*.【超神器】山海经^-^161#*.工匠石*600/@合成7>   <《死亡领地》|253#*.【超神器】传奇之路^-^161#*.工匠石*700/@合成8> \ \
+<>                  <《佛本世界》|253#*.【超神器】死亡领地^-^161#*.工匠石*800/@合成9>   <《无限恐怖》|253#*.【超神器】佛本世界^-^161#*工匠石*1000/@合成10>   <《神话世界》|253#*.【超神器】无限恐怖^-^161#*.工匠石*2000/@合成11>     <《云顶之奕》|253#*.【超神器】神话世界^-^161#*工匠石4000/@合成12> \ \ \
+
+<><IMG:242:6:0:-300/@main> \ \
+<><IMG:243:6:0:-250/@悟道石> \ \
+
+
+[@合成1]
+#if
+;checkitem 工匠石 50
+checkitem 疾风之靴 1
+
+checkitem 【超神器】关注神器 1
+#act
+take 工匠石 50
+;take 疾风之靴 1
+
+take 【超神器】关注神器 1
+;GiveStateItem 【超神器】自由大陆 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】自由大陆 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】自由大陆]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+
+
+[@合成2]
+#if
+checkitem 工匠石 100
+;checkitem 速度之靴★ 1
+
+checkitem 【超神器】自由大陆 1
+#act
+take 工匠石 100
+;take 巨人腰带★ 1
+
+take 【超神器】自由大陆 1
+;GiveStateItem 【超神器】召唤师峡谷 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】召唤师峡谷 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】召唤师峡谷]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+
+
+[@合成3]
+#if
+checkitem 工匠石 200
+checkitem 【超神器】召唤师峡谷 1
+;checkitem ★冰霜之心★ 1
+
+
+#act
+take 工匠石 200
+;take ★冰霜之心★ 1
+
+
+take 【超神器】召唤师峡谷 1
+;GiveStateItem 【超神器】峡谷之巅 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】峡谷之巅 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】峡谷之巅]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+
+
+[@合成4]
+#if
+checkitem 工匠石 300
+;checkitem 残梦¤影杀 1
+
+
+checkitem 【超神器】峡谷之巅 1
+#act
+take 工匠石 300
+
+;take 残梦¤影杀 1
+
+take 【超神器】峡谷之巅 1
+;GiveStateItem 【超神器】创世★巅峰 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】创世★巅峰 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】创世★巅峰]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+
+
+
+[@合成5]
+#if
+checkitem 工匠石 400
+;checkitem 【蚩尤】 1
+
+checkitem 【超神器】创世★巅峰 1
+#act
+take 工匠石 400
+;take 【蚩尤】 1
+
+take 【超神器】创世★巅峰 1
+;GiveStateItem 【超神器】原始大陆 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】原始大陆 1 1 1 0 0 1 1 1 0
+
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】原始大陆]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+[@合成6]
+#if
+checkitem 工匠石 500
+;checkitem ●●貔貅●● 1
+
+checkitem 【超神器】原始大陆 1
+#act
+take 工匠石 500
+;take ●●貔貅●● 1
+
+take 【超神器】原始大陆 1
+;GiveStateItem 【超神器】山海经 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】山海经 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】山海经]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+[@合成7]
+#if
+checkitem 工匠石 600
+;checkitem の封魔尊者的疾风 1
+
+checkitem 【超神器】山海经 1
+#act
+take 工匠石 600
+;take の封魔尊者的疾风 1
+
+
+take 【超神器】山海经 1
+;GiveStateItem 【超神器】传奇之路 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】传奇之路 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】传奇之路]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+[@合成8]
+#if
+checkitem 工匠石 700
+;checkitem 魔尊的泯灭※※ 1
+
+checkitem 【超神器】传奇之路 1
+#act
+take 工匠石 700
+
+;take 魔尊的泯灭※※ 1
+take 【超神器】传奇之路 1
+;GiveStateItem 【超神器】死亡领地 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】死亡领地 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】死亡领地]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+[@合成9]
+#if
+checkitem 工匠石 800
+;checkitem “后天袋” 1
+
+checkitem 【超神器】死亡领地 1
+#act
+take 工匠石 800
+;take “后天袋” 1
+
+take 【超神器】死亡领地 1
+;GiveStateItem 【超神器】佛本世界 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】佛本世界 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】佛本世界]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+[@合成10]
+#if
+checkitem 工匠石 1000
+;checkitem 电锯 1
+
+checkitem 【超神器】佛本世界 1
+#act
+take 工匠石 1000
+;take 电锯 1
+
+take 【超神器】佛本世界 1
+;GiveStateItem 【超神器】无限恐怖 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】无限恐怖 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】无限恐怖]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+[@合成11]
+#if
+checkitem 工匠石 2000
+;checkitem 「共工-触山」 1
+
+checkitem 【超神器】无限恐怖 1
+#act
+take 工匠石 2000
+;take 「共工-触山」 1
+
+take 【超神器】无限恐怖 1
+;GiveStateItem 【超神器】神话世界 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】神话世界 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】神话世界]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+[@合成12]
+#if
+checkitem 工匠石 4000
+;checkitem ≮一拳≯ 1
+;checkitem ≮红钻≯ 1
+;checkitem ≮战勋≯ 1
+;checkitem ≮魔戒≯ 1
+checkitem 【超神器】神话世界 1
+#act
+take 工匠石 3000
+;take ≮一拳≯ 1
+;take ≮红钻≯ 1
+;take ≮战勋≯ 1
+;take ≮魔戒≯ 1
+take 【超神器】神话世界 1
+;GiveStateItem 【超神器】云顶之奕 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】云顶之奕 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 合成成功
+SENDMOVEMSG 0 243 0 130 1 {超神器:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}成功锻造{[【超神器】云顶之奕]/FCOLOR=254}整个世界将为他颤抖！ 11 30 0
+#ELSEACT
+MESSAGEBOX 臭小子，没材料别闹。
+break
+
+
+
+[@悟道石]
+#if
+CheckBoxItemCount 0 1
+#act
+ReturnBoxItem 0
+
+#if
+CheckBoxItemCount 1 1
+#act
+ReturnBoxItem 1
+
+#if
+CheckBoxItemCount 2 1
+#act
+ReturnBoxItem 2
+
+
+#IF
+#ACT
+#SAY
+\ \ \ \ \ \ \
+<>                <在这里，你可以将【悟道石】解封,解封的悟道石可以获得大量属性！/FCOLOR=254>\
+<>                <悟道石最高可以解封到【悟道石[完美]】/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\ \ \ \
+<>                  <解封方式一:/FCOLOR=7><ITEMBOX:1:12:47:15:-10:40:40:110:请将悟道石[未解封]放入框内>               <解封方式二:/FCOLOR=70><ITEMBOX:2:12:47:15:-10:40:40:110:请将悟道石[未解封]放入框内> \  \   \
+<>                            　 <开始解封/@货币解封>                         <开始解封/@人民币解封>   \
+<>                     <(消耗100w元宝+云顶结晶*50)/FCOLOR=250>              <(消耗钻石288)/FCOLOR=250>   \
+<>                                                          <保底解封为30%以上/FCOLOR=253>  \ \ \ \ \ \
+<><IMG:242:6:0:-300/@main> \ \
+<><IMG:243:6:0:-250/@悟道石> \ \
+<ItemShow:1608:0:190:-160:1>
+
+
+[@ItemIntoBox1]
+#if
+EQUAL <$BOXITEM[1].NAME> 悟道石[未解封]
+#ACT
+BREAK
+
+#if
+#ACT
+ReturnBoxItem 1
+MessageBox 该装备无法解封，请正确放入悟道石[未解封]！
+BREAK
+
+
+
+[@ItemIntoBox2]
+#if
+EQUAL <$BOXITEM[2].NAME> 悟道石[未解封]
+#ACT
+BREAK
+
+#if
+#ACT
+ReturnBoxItem 2
+MessageBox 该装备无法解封，请正确放入悟道石[未解封]
+BREAK
+
+
+
+
+
+[@货币解封]
+#IF
+checkitem 云顶结晶 50
+CHECKGAMEGOLD ? 1000000
+EQUAL <$BOXITEM[1].NAME> 悟道石[未解封]
+#ACT
+take 云顶结晶 50
+GAMEGOLD - 1000000
+DELBOXITEM 1
+GETRANDOMLINETEXT ..\QuestDiary\悟道石\货币解封.txt <$STR(S$悟道石)>
+GIVE <$STR(S$悟道石)> 1
+close
+MessageBox 恭喜你成功解封了装备，本次解封装备为：<$STR(S$悟道石)>
+UpDateBoxItem 1
+goto @main
+BREAK
+
+
+#IF
+#ACT
+MessageBox 请检测是否有足够的材料或元宝
+BREAK
+
+
+
+[@人民币解封]
+#IF
+EQUAL <$BOXITEM[2].NAME> 悟道石[未解封]
+CHECKGAMEPOINT ? 288
+#act
+GamePoint - 288
+DELBOXITEM 2
+GETRANDOMLINETEXT ..\QuestDiary\悟道石\钻石解封.txt <$STR(S$高级悟道石)>
+GIVE <$STR(S$高级悟道石)> 1
+close
+MessageBox 恭喜你成功解封了装备，本次解封装备为：<$STR(S$高级悟道石)>！
+UpDateBoxItem 2
+goto @main
+BREAK
+
+
+
+#IF
+#ACT
+MessageBox 请检测是否有足够的材料或点券
+BREAK

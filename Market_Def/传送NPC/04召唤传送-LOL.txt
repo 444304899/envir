@@ -1,0 +1,97 @@
+[@main]
+#if
+#act
+GOTO @召唤地图配置
+#say
+\ \ \ \ \ \  \ \  \
+
+<>                            <PLAYIMG:7:10:5:100:0:-1><【地图等级】：/AUTOCOLOR=150> <普通/AUTOCOLOR=250>   \
+<>                            <PLAYIMG:7:10:5:100:0:-1><【爆率说明】：/AUTOCOLOR=150> <中期专属装备/AUTOCOLOR=161>\
+<>                            <PLAYIMG:7:10:5:100:0:-1><【进入条件】：/AUTOCOLOR=150> <进图需要等级达到150级或者人物5转/AUTOCOLOR=151>  \
+<>                            <PLAYIMG:7:10:5:100:0:-1><【特别说明】：/AUTOCOLOR=150> <本服所有装备打Boss均可爆出!/AUTOCOLOR=58>  \ \
+<>                     <ItemShow:929:0:0:-9:1>  <ItemShow:928:0:0:-9:1>  <ItemShow:931:0:0:-9:1>  <ItemShow:930:0:0:-9:1>  <ItemShow:933:0:0:-9:1>  <ItemShow:934:0:0:-9:1>  <ItemShow:935:0:0:-9:1>\ \ \
+<>                     <ItemShow:936:0:0:-9:1>  <ItemShow:937:0:0:-9:1>  <ItemShow:938:0:0:-9:1>  <ItemShow:939:0:0:-9:1>  <ItemShow:940:0:0:-9:1>  <ItemShow:941:0:0:-9:1>  <ItemShow:942:0:0:-9:1>\ \
+
+
+<>                                           <IMG:176:6:10:25|250#150级或者人物5转/@传送1>
+
+;<><IMG:216:13:-243:35> \
+
+;<><IMG:166:6:10:38>\ \ \
+
+
+[@召唤地图配置]
+#IF
+#Act
+Getliststring ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt 0 S$召唤显示0 S$无无0
+Getliststring ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt 1 S$召唤显示1 S$无无1
+Getliststring ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt 2 S$召唤显示2 S$无无2
+Getliststring ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt 3 S$召唤显示3 S$无无3
+Getliststring ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt 4 S$召唤显示4 S$无无4
+Getliststring ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt 5 S$召唤显示5 S$无无5
+Getliststring ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt 6 S$召唤显示6 S$无无6
+Getliststring ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt 7 S$召唤显示7 S$无无7
+
+#IF
+Equal S$召唤显示0
+#Act
+mov S$召唤显示0 暂无产出数据
+
+#IF
+Equal S$召唤显示1
+#Act
+mov S$召唤显示1 暂无产出数据
+
+#IF
+Equal S$召唤显示2
+#Act
+mov S$召唤显示2 暂无产出数据
+
+#IF
+Equal S$召唤显示3
+#Act
+mov S$召唤显示3 暂无产出数据
+
+#IF
+Equal S$召唤显示4
+#Act
+mov S$召唤显示4 暂无产出数据
+
+#IF
+Equal S$召唤显示5
+#Act
+mov S$召唤显示5 暂无产出数据
+
+#IF
+Equal S$召唤显示6
+#Act
+mov S$召唤显示6 暂无产出数据
+
+#IF
+Equal S$召唤显示7
+#Act
+mov S$召唤显示7 暂无产出数据
+
+
+
+
+[@传送1]
+
+#if
+CheckMapSameMonCount 封妖城 海王 > 0
+#act
+MESSAGEBOX 海王正在守护着召唤师峡谷(封妖城64:62处)，请将其击杀后才能进入!
+break
+
+
+#or
+CHECKRENEWLEVEL > 4
+CHECKLEVELEX > 149
+#act
+map ytlds
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+#elseact
+messagebox [提示:]\\进图失败,请检查你的等级.人物转生是否达到要求.
+break
+
+

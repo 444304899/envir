@@ -1,0 +1,735 @@
+
+{
+(@buy @sell @repair @s_repair)
+%100
++100
++101
++102
++103
++104
++105
++106
++107
++108
++109
++110
++111
++16
++48
+
+[@服务]
+{
+#if
+#act
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+
+
+#if
+Check [9] 0
+#act
+MOV S$统计按钮 <〖关闭数值显示〗/@统计关>
+
+
+#if
+Check [9] 1
+#act
+MOV S$统计按钮 <〖开启数值显示〗/@统计开>
+
+
+#if
+Check [10] 0
+#act
+MOV S$屏蔽按钮 <〖打开信息屏蔽〗/@屏蔽关>
+
+
+#if
+Check [10] 1
+#act
+MOV S$屏蔽按钮 <〖关闭信息屏蔽〗/@屏蔽开>
+
+
+
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+
+<>                                                     <特殊服务:/FCOLOR=22>  <〖货币兑换〗/@货币兑换>          <特殊服务:/FCOLOR=22>  <〖人物改名〗|253#人物改名100金币一次，更改名字会重置沙捐数据，请慎重/@改名>\
+<>                                                 <IMG:166:6:0:0> <IMG:85:6:-382:-20> <IMG:85:6:-210:-20>\
+<>                                                     <特殊服务:/FCOLOR=22>  <〖全服喇叭〗/@喇叭>          <特殊服务:/FCOLOR=22>  <〖灵符兑换〗/@灵符兑换>\
+<>                                                 <IMG:166:6:0:0> <IMG:85:6:-382:-20> <IMG:85:6:-210:-20>\
+
+<>                                                     <特殊服务:/FCOLOR=22>   <$STR(S$统计按钮)>           <$STR(S$屏蔽按钮)>  \
+<>                                                 <IMG:166:6:0:0> <IMG:85:6:-382:-20> \
+<>                                                     <IMG:73:6:-2:0><欢迎使用货币兑换系统,此功能免费使用,不收取任何费用/FCOLOR=7>  \  \
+<>                                                   <〖 10钻石兑换   3000灵符充值〗/@兑钻石1>      <〖1000钻石兑换  300000灵符充值〗/@兑钻石44>\ \
+<>                                                   <〖100钻石兑换  30000灵符充值〗/@兑钻石2>      <〖3000钻石兑换  900000灵符充值〗/@兑钻石55>  \ \
+<>                                                   <〖500钻石兑换 150000灵符充值〗/@兑钻石3>      <〖5000钻石兑换 1500000灵符充值〗/@兑钻石66>  \   \
+<>                                                   <〖一键清理背包:慎点〗/@清理背包1>       \
+<>                                                 <IMG:0:6:-1:-115>    <IMG:0:6:170:-115> \ \
+<>                                                 <IMG:0:6:-1:-115>    <IMG:0:6:170:-115> \ \
+<>                                                 <IMG:0:6:-1:-115>    <IMG:0:6:170:-115> \ \
+<>                                                 <IMG:0:6:-1:-115>     \ \
+
+
+
+
+[@清理背包1]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \   \ \
+<>                                                           <“你确定要清理背包所有物品吗？无法找回”/FCOLOR=249> \
+<>                                                           <“你确定要清理背包所有物品吗？无法找回”/FCOLOR=249> \
+<>                                                           <“你确定要清理背包所有物品吗？无法找回”/FCOLOR=249> \\ \  \
+<>                                                            <〖一键清理背包:慎点〗/@清理背包>           <关闭/@exit>  \\
+
+
+
+
+
+[@清理背包]
+#IF
+checkitem 杀人书（封）
+#ACT
+MESSAGEBOX [提示]:请先解封杀人书在来！
+
+
+#IF
+checkitem 杀人书
+#ACT
+Gmexecute 清理背包  <$USERNAME>
+;GiveStateItem  杀人书 1 1 1 1 1 1 1 1
+GIVESTATEITEM 杀人书 1 1 1 1 1 1 1 1 0
+MESSAGEBOX [提示]:清理背包成功!!!!
+BREAK
+
+
+
+[@兑钻石66]
+#IF
+CHECKGAMEPOINT > 4999
+#ACT
+GAMEPOINT - 5000
+GAMEGIRD + 1500000
+MESSAGEBOX 兑换成功,获得1500000灵符....
+#ELSEACT
+MESSAGEBOX 对不起，您的钻石不足。
+break
+
+
+[@兑钻石55]
+#IF
+CHECKGAMEPOINT > 2999
+#ACT
+GAMEPOINT - 3000
+GAMEGIRD + 900000
+MESSAGEBOX 兑换成功,获得900000灵符....
+#ELSEACT
+MESSAGEBOX 对不起，您的钻石不足。
+break
+
+
+
+[@兑钻石44]
+#IF
+CHECKGAMEPOINT > 999
+#ACT
+GAMEPOINT - 1000
+GAMEGIRD + 300000
+MESSAGEBOX 兑换成功,获得300000灵符....
+#ELSEACT
+MESSAGEBOX 对不起，您的钻石不足。
+break
+
+
+
+
+
+
+[@改名]
+#if
+NOT CheckGold 100
+#act
+MESSAGEBOX 没钱还想改名?
+break
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                        <查询名称是否可以使用/@@InputString4(请输入新的名称：)>\ \
+<>                                                        <我要改名/@@InputString2(请输入新的名称：)>\  \
+<>                                                        <人物改名100金币一次，更改名字会重置沙捐数据，请慎重> \  \
+
+[@InputString4]
+#IF
+Equal S4
+#ACT
+SENDMSG 6 请输入一个正确的名称
+Break
+
+#OR
+CheckStringlength S4 > 20
+CheckStringlength S4 < 4
+#ACT
+SENDMSG 6 输入名称长度不正确
+Break
+
+#IF
+#ACT
+QUERYHUMNAMEEXIST S4
+
+[@InputString2]
+#IF
+Equal S2
+#ACT
+SENDMSG 6 请输入一个正确的名称
+Break
+
+#OR
+CheckStringlength S2 > 20
+CheckStringlength S2 < 4
+#ACT
+SENDMSG 6 输入名称长度不正确
+Break
+
+#IF
+#ACT
+CHANGEHUMNAME S2
+Take 金币 100
+;-----------------------------------------------------------------------------
+
+;QFunction-0.txt脚本相关触发
+
+[@QueryingHumName]
+正在查询请稍后。。。\ \
+<关闭/@exit>\
+
+[@QueryHumNameOK]
+查询成功，该名称可以使用\ \
+<关闭/@exit>\
+
+[@ChangeingHumName]
+正在修改请稍后。。。\ \
+<关闭/@exit>\
+
+[@ChangeHumNameOK]
+#ACT
+;这个命令是用来修改，你的变量保存文件和人物名称列表文件里面的人物名称的，如果没有这些可以不使用这个命令
+;这个命令也只能放在这个地方，放其他地方无效
+CHANGEHUMNAMEFILE ..\QuestDiary\改名文件\HQCQASave.txt
+CHANGEHUMNAMEFILE ..\QuestDiary\改名名称.txt
+#SAY
+你的名字修改成功，旧名称：<$USERNAME> 新名称：<$USERNEWNAME>！\ \
+<关闭/@exit>\
+
+[@NameLengthFail]
+名字长度不允许超过30个字符！\ \
+<关闭/@exit>\
+
+[@HumNameFilter]
+该名字存在非法字符！\ \
+<关闭/@exit>\
+
+[@HumNameExists]
+该名字已经被其他玩家占用，请选择其他名字\ \
+<关闭/@exit>\
+
+[@ChangeHumNameFail]
+改名失败！\ \
+<关闭/@exit>\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                              <特殊服务:/FCOLOR=22>  <〖货币兑换〗/@货币兑换>          <特殊服务:/FCOLOR=22>  <〖返回首页〗/@服务>\
+<>                                                           <IMG:166:6:0:0> <IMG:85:6:-382:-20> <IMG:85:6:-210:-20>\
+<>                                                             <特殊服务:/FCOLOR=22>  <〖全服喇叭〗/@喇叭>          <特殊服务:/FCOLOR=22>  <〖灵符兑换〗/@灵符兑换>\
+<>                                                           <IMG:166:6:0:0> <IMG:85:6:-382:-20> <IMG:85:6:-210:-20>\
+<>                                                             <特殊服务:/FCOLOR=22>     <$STR(S$统计按钮)>        <$STR(S$屏蔽按钮)>\
+<>                                                           <IMG:166:6:0:0> <IMG:85:6:-382:-20> \
+<>                                                           <IMG:73:6:-2:0><欢迎使用经验兑换系统,此功能免费使用,不收取任何费用/FCOLOR=7>  \  \
+<>                                                           <〖使用1%经验卷〗/@吃卷1>                    <〖使用10%经验卷〗/@吃卷4>    \ \
+<>                                                           <〖使用2%经验卷〗/@吃卷2>                    <〖五行石*99x5打包〗/@打包1>    \ \
+<>                                                           <〖使用5%经验卷〗/@吃卷3>                    <〖五行石*99x10打包〗/@打包2>    \ \ \ \
+<>                                                           <IMG:0:6:-1:-132>      <IMG:0:6:160:-132> \ \
+<>                                                           <IMG:0:6:-1:-132>      <IMG:0:6:160:-132> \ \
+<>                                                           <IMG:0:6:-1:-132>      <IMG:0:6:160:-132> \ \
+
+
+[@打包1]
+#IF
+checkitem 五行石 495
+#ACT
+take 五行石 495
+give 五行石(99)x5 1
+MESSAGEBOX 成功兑换,打开时请确认背包内有足够的格子！
+break
+#ELSEACT
+MESSAGEBOX 对不起，五行石不足！
+break
+
+
+
+[@打包2]
+#IF
+checkitem 五行石 990
+#ACT
+take 五行石 990
+give 五行石(99)x10 1
+MESSAGEBOX 成功兑换,打开时请确认背包内有足够的格子！
+break
+#ELSEACT
+MESSAGEBOX 对不起，五行石不足！
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@货币兑换]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                       <特殊服务:/FCOLOR=22>  <〖返回首页〗/@服务>          <特殊服务:/FCOLOR=22>  <〖使用经验〗/@使用经验>\
+<>                                                    <IMG:166:6:0:0> <IMG:85:6:-382:-20> <IMG:85:6:-210:-20>\
+<>                                                       <特殊服务:/FCOLOR=22>  <〖全服喇叭〗/@喇叭>          <特殊服务:/FCOLOR=22>  <〖灵符兑换〗/@灵符兑换>\
+<>                                                    <IMG:166:6:0:0> <IMG:85:6:-382:-20> <IMG:85:6:-210:-20>\
+<>                                                       <特殊服务:/FCOLOR=22>     <$STR(S$统计按钮)>        <$STR(S$屏蔽按钮)>\
+<>                                                    <IMG:166:6:0:0> <IMG:85:6:-382:-20> \
+<>                                                       <IMG:73:6:-2:0><欢迎使用货币兑换系统,此功能免费使用,不收取任何费用/FCOLOR=7>  \  \
+<>                                                       <〖兑换100灵符〗/@灵符1>                       <〖兑换5000灵符〗/@灵符4> \ \
+<>                                                       <〖兑换500灵符〗/@灵符2>                       <〖兑换10000灵符〗/@灵符5>  \ \
+<>                                                       <〖兑换1000灵符〗/@灵符3>                      <〖兑换50000灵符〗/@灵符6> \ \ \ \
+<>                                                   <IMG:0:6:-1:-132>    <IMG:0:6:180:-132> \ \
+<>                                                   <IMG:0:6:-1:-132>    <IMG:0:6:180:-132> \ \
+<>                                                   <IMG:0:6:-1:-132>    <IMG:0:6:180:-132> \ \
+
+
+
+
+
+[@灵符兑换]
+
+#if
+#act
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                       <特殊服务:/FCOLOR=22>  <〖货币兑换〗/@货币兑换>          <特殊服务:/FCOLOR=22>  <〖使用经验〗/@使用经验>\
+<>                                                    <IMG:166:6:0:0> <IMG:85:6:-382:-20> <IMG:85:6:-210:-20>\
+<>                                                       <特殊服务:/FCOLOR=22>  <〖全服喇叭〗/@喇叭>          <特殊服务:/FCOLOR=22>  <〖返回首页〗/@服务>\
+<>                                                    <IMG:166:6:0:0> <IMG:85:6:-382:-20> <IMG:85:6:-210:-20>\
+<>                                                       <特殊服务:/FCOLOR=22>     <$STR(S$统计按钮)>        <$STR(S$屏蔽按钮)>\
+<>                                                    <IMG:166:6:0:0> <IMG:85:6:-382:-20> \
+<>                                                       <IMG:73:6:-2:0><欢迎使用货币兑换系统/FCOLOR=7> \  \
+<>                                                       <〖元宝兑换100灵符〗/@兑1>                 <点此查看兑换比例|255#兑换比例如下：^255#100万元宝=100灵符^/FCOLOR=218>\ \
+<>                                                       <〖元宝兑换1000灵符〗/@兑2>                <点此查看兑换比例|255#兑换比例如下：^255#1000万元宝=1000灵符/FCOLOR=215>  \ \
+<>                                                       <〖元宝兑换10000灵符〗/@兑3>               <点此查看兑换比例|255#兑换比例如下：^255#1亿元宝=10000灵符/FCOLOR=250>  \ \ \ \
+<>                                                   <IMG:0:6:-1:-132>    <IMG:0:6:170:-132> \ \
+<>                                                   <IMG:0:6:-1:-132>    <IMG:0:6:170:-132> \ \
+<>                                                   <IMG:0:6:-1:-132>    <IMG:0:6:170:-132> \ \
+
+
+
+
+
+
+
+
+
+[@兑1]
+
+#if
+CHECKGAMEGOLD ? 1000000
+#act
+GAMEGOLD - 1000000
+GAMEGIRD + 100
+MESSAGEBOX 兑换成功..
+#elseact
+MESSAGEBOX 对不起，您的元宝不足。
+break
+
+
+
+[@兑2]
+
+#if
+CHECKGAMEGOLD ? 10000000
+#act
+GAMEGOLD - 10000000
+GAMEGIRD + 1000
+MESSAGEBOX 兑换成功..
+#elseact
+MESSAGEBOX 对不起，您的元宝不足。
+break
+
+
+
+
+
+[@兑3]
+#if
+CHECKGAMEGOLD ? 100000000
+#act
+GAMEGOLD - 100000000
+GAMEGIRD + 10000
+MESSAGEBOX 兑换成功..
+#elseact
+MESSAGEBOX 对不起，您的元宝不足。
+break
+
+
+
+
+
+
+[@统计开]
+
+
+#if
+#act
+set [9] 0
+goto @服务
+
+
+
+[@统计关]
+#if
+#act
+set [9] 1
+goto @服务
+
+
+
+[@屏蔽开]
+
+#if
+#act
+set [10] 0
+FILTERGLOBALMSG 1
+MESSAGEBOX 屏蔽全服信息..
+goto @服务
+
+
+[@屏蔽关]
+#if
+#act
+set [10] 1
+FILTERGLOBALMSG 0
+MESSAGEBOX 解除屏蔽信息....
+goto @服务
+
+
+
+
+
+
+[@灵符6]
+#IF
+CHECKGAMEGIRD ? 50000
+#act
+GAMEGIRD - 50000
+give 50000灵符 1
+MESSAGEBOX 兑换成功,获得50000灵符..
+break
+
+#if
+#act
+MESSAGEBOX  请检查你是否有这么多灵符..
+break
+
+
+[@灵符5]
+#IF
+CHECKGAMEGIRD ? 10000
+#act
+GAMEGIRD - 10000
+give 10000灵符 1
+MESSAGEBOX 兑换成功,获得10000灵符..
+break
+
+#if
+#act
+MESSAGEBOX  请检查你是否有这么多灵符..
+break
+
+
+
+[@灵符4]
+#IF
+CHECKGAMEGIRD ? 5000
+#act
+GAMEGIRD - 5000
+give 5000灵符 1
+MESSAGEBOX 兑换成功,获得5000灵符..
+break
+
+#if
+#act
+MESSAGEBOX  请检查你是否有这么多灵符..
+break
+
+
+
+[@灵符3]
+#IF
+CHECKGAMEGIRD ? 1000
+#act
+GAMEGIRD - 1000
+give 1000灵符 1
+MESSAGEBOX 兑换成功,获得1000灵符..
+break
+
+#if
+#act
+MESSAGEBOX  请检查你是否有这么多灵符..
+break
+
+
+
+
+[@灵符2]
+#IF
+CHECKGAMEGIRD ? 500
+#act
+GAMEGIRD - 500
+give 500灵符 1
+MESSAGEBOX 兑换成功,获得500灵符..
+break
+
+#if
+#act
+MESSAGEBOX  请检查你是否有这么多灵符..
+break
+
+
+
+
+[@灵符1]
+#IF
+CHECKGAMEGIRD ? 100
+#act
+GAMEGIRD - 100
+give 100灵符 1
+MESSAGEBOX 兑换成功,获得100灵符..
+break
+
+#if
+#act
+MESSAGEBOX  请检查你是否有这么多灵符..
+break
+
+
+
+
+
+
+
+
+[@喇叭]
+#if
+CHECKGAMEPOINT > 29
+#act
+#ELSEACT
+MESSAGEBOX  钻石大于30点才可以使用本功能..
+break
+
+
+#IF
+#ACT
+MOV N$喊话标识 1
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \  \ \
+<>                                              {尊敬的玩家！/FCOLOR=70}<您好，很高兴为您服务！(使用本功能一次扣费30钻石)/FCOLOR=250>\ \ \
+
+<>                                              「<全服喊话/@@InPutString89>」<→/FCOLOR=140> <输入提示：/FCOLOR=186><不要有特殊字符，内容不能超过50个汉字/FCOLOR=103>\　\　\
+
+[@InPutString89]
+#IF
+EQUAL N$喊话标识 1
+#ACT
+MOV N$喊话标识 0
+GAMEPOINT - 30
+SENDMOVEMSG 0 147 0 400 1 〖喇叭〗玩家[<$Username>]：<$STR(S89)>
+SENDTOPCHATBOARDMSG 0 147 0 15 <$STR(S89)> 0
+CLOSE
+break
+
+
+
+
+[@兑钻石1]
+
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;messagebox [提示]测试区无法使用..
+;BREAK
+
+
+#IF
+CHECKGAMEPOINT > 9
+#ACT
+GAMEPOINT - 10
+GAMEGIRD + 3000
+;GAMEDIAMOND + 1
+
+;INC U30 1
+
+
+MESSAGEBOX 兑换成功,获得3000灵符..
+#ELSEACT
+MESSAGEBOX 对不起，您的钻石不足。
+break
+
+[@兑钻石2]
+
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;messagebox [提示]测试区无法使用..
+;BREAK
+
+#IF
+CHECKGAMEPOINT > 99
+#ACT
+GAMEPOINT - 100
+GAMEGIRD + 30000
+;GAMEDIAMOND + 1
+
+;INC U30 1
+
+MESSAGEBOX 兑换成功,获得30000灵符..
+#ELSEACT
+MESSAGEBOX 对不起，您的钻石不足。
+break
+
+[@兑钻石3]
+
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;messagebox [提示]测试区无法使用..
+;BREAK
+
+#IF
+CHECKGAMEPOINT > 499
+#ACT
+GAMEPOINT - 500
+GAMEGIRD + 150000
+;GAMEDIAMOND + 5
+;INC U30 5
+
+MESSAGEBOX 兑换成功,获得150000灵符....
+#ELSEACT
+MESSAGEBOX 对不起，您的钻石不足。
+break
+
+
+[@兑钻石4]
+
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;messagebox [提示]测试区无法使用..
+;BREAK
+
+#IF
+CHECKGOLD 1
+#ACT
+TAKE 金币 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+INC U30 1
+
+MESSAGEBOX 兑换成功,获得10钻石+1积分....
+#ELSEACT
+MESSAGEBOX 对不起，您的金币不足。
+break
+
+
+
+[@兑钻石5]
+
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;messagebox [提示]测试区无法使用..
+;BREAK
+
+#IF
+CHECKGOLD 10
+#ACT
+TAKE 金币 10
+GAMEPOINT + 100
+GAMEDIAMOND + 10
+INC U30 10
+
+MESSAGEBOX 兑换成功,获得100钻石+10积分....
+#ELSEACT
+MESSAGEBOX 对不起，您的金币不足。
+break
+
+
+
+[@兑钻石6]
+
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;messagebox [提示]测试区无法使用..
+;BREAK
+
+#IF
+CHECKGOLD 50
+#ACT
+TAKE 金币 50
+GAMEPOINT + 500
+GAMEDIAMOND + 50
+INC U30 50
+
+MESSAGEBOX 兑换成功,获得500钻石+50积分....
+#ELSEACT
+MESSAGEBOX 对不起，您的金币不足。
+break
+
+
+
+
+
+
+
+
+}

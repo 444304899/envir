@@ -1,0 +1,510 @@
+[@装备栏强化触发]
+{
+
+#IF
+CheckContainsText 0;1;3;4;5;6;7;8;10;11; <$STR(N$装备栏强化位置)>;
+#ELSEACT
+MESSAGEBOX 请不要封包！！
+BREAK
+
+#IF
+EQUAL N$装备栏强化位置 0
+#ACT
+MOV S$装备栏所用变量 38
+MOV S$装备栏强化位置 衣服
+
+#IF
+EQUAL N$装备栏强化位置 1
+#ACT
+MOV S$装备栏所用变量 15
+MOV S$装备栏强化位置 武器
+
+#IF
+EQUAL N$装备栏强化位置 3
+#ACT
+MOV S$装备栏所用变量 23
+MOV S$装备栏强化位置 项链
+
+#IF
+EQUAL N$装备栏强化位置 4
+#ACT
+MOV S$装备栏所用变量 14
+MOV S$装备栏强化位置 头盔
+
+#IF
+EQUAL N$装备栏强化位置 5
+#ACT
+MOV S$装备栏所用变量 39
+MOV S$装备栏强化位置 左手
+
+#IF
+EQUAL N$装备栏强化位置 6
+#ACT
+MOV S$装备栏所用变量 16
+MOV S$装备栏强化位置 右手
+
+#IF
+EQUAL N$装备栏强化位置 7
+#ACT
+MOV S$装备栏所用变量 42
+MOV S$装备栏强化位置 左戒
+
+#IF
+EQUAL N$装备栏强化位置 8
+#ACT
+MOV S$装备栏所用变量 17
+MOV S$装备栏强化位置 右戒
+
+#IF
+EQUAL N$装备栏强化位置 10
+#ACT
+MOV S$装备栏所用变量 18
+MOV S$装备栏强化位置 腰带
+
+#IF
+EQUAL N$装备栏强化位置 11
+#ACT
+MOV S$装备栏所用变量 43
+MOV S$装备栏强化位置 靴子
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV N$装备栏强化等级 <$STR(U<$STR(S$装备栏所用变量)>)>
+INC N$装备栏强化等级 1
+
+#IF
+SMALL N$装备栏强化等级 31
+#ACT
+MOV N$装备栏强化给予属性 0
+MOV N$装备栏强化所需费用 0
+MOV S$装备栏强化所需类型
+GetListString ..\QuestDiary\春哥数据\装备栏强化\强化参数.txt <$STR(N$装备栏强化等级)> N$装备栏强化给予属性
+GetListString ..\QuestDiary\春哥数据\装备栏强化\几率参数.txt <$STR(N$装备栏强化等级)> N$强化成功几率
+GetListString ..\QuestDiary\春哥数据\装备栏强化\费用参数.txt <$STR(N$装备栏强化等级)> S$装备栏强化所需类型 N$装备栏强化所需费用
+#ELSEACT
+MESSAGEBOX 最大强化等级：30！
+BREAK
+
+#OR
+EQUAL N$强化成功几率 0
+EQUAL N$装备栏强化给予属性 0
+EQUAL N$装备栏强化所需费用 0
+EQUAL S$装备栏强化所需类型
+#ACT
+MESSAGEBOX 参数配置异常，请截图联系GM！！
+BREAK
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+MESSAGEBOX \ \强化位置：<$STR(S$装备栏强化位置)>\ \强化等级：<$STR(N$装备栏强化等级)>\ \强化所需：<$STR(S$装备栏强化所需类型)>*<$STR(N$装备栏强化所需费用)>\ \获得属性：<$STR(N$装备栏强化给予属性)>(总强化属性)  @确定装备栏强化 @EXIT
+
+[@确定装备栏强化]
+#IF
+CheckContainsText 0;1;3;4;5;6;7;8;10;11; <$STR(N$装备栏强化位置)>;
+#ELSEACT
+MESSAGEBOX 请不要封包！！
+BREAK
+
+#IF
+EQUAL N$装备栏强化位置 0
+#ACT
+MOV S$装备栏所用变量 38
+MOV S$装备栏强化位置 衣服
+
+#IF
+EQUAL N$装备栏强化位置 1
+#ACT
+MOV S$装备栏所用变量 15
+MOV S$装备栏强化位置 武器
+
+#IF
+EQUAL N$装备栏强化位置 3
+#ACT
+MOV S$装备栏所用变量 23
+MOV S$装备栏强化位置 项链
+
+#IF
+EQUAL N$装备栏强化位置 4
+#ACT
+MOV S$装备栏所用变量 14
+MOV S$装备栏强化位置 头盔
+
+#IF
+EQUAL N$装备栏强化位置 5
+#ACT
+MOV S$装备栏所用变量 39
+MOV S$装备栏强化位置 左手
+
+#IF
+EQUAL N$装备栏强化位置 6
+#ACT
+MOV S$装备栏所用变量 16
+MOV S$装备栏强化位置 右手
+
+#IF
+EQUAL N$装备栏强化位置 7
+#ACT
+MOV S$装备栏所用变量 42
+MOV S$装备栏强化位置 左戒
+
+#IF
+EQUAL N$装备栏强化位置 8
+#ACT
+MOV S$装备栏所用变量 17
+MOV S$装备栏强化位置 右戒
+
+#IF
+EQUAL N$装备栏强化位置 10
+#ACT
+MOV S$装备栏所用变量 18
+MOV S$装备栏强化位置 腰带
+
+#IF
+EQUAL N$装备栏强化位置 11
+#ACT
+MOV S$装备栏所用变量 43
+MOV S$装备栏强化位置 靴子
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV N$装备栏强化等级 <$STR(U<$STR(S$装备栏所用变量)>)>
+INC N$装备栏强化等级 1
+
+#IF
+SMALL N$装备栏强化等级 31
+#ACT
+MOV N$装备栏强化给予属性 0
+MOV N$装备栏强化所需费用 0
+MOV S$装备栏强化所需类型
+GetListString ..\QuestDiary\春哥数据\装备栏强化\强化参数.txt <$STR(N$装备栏强化等级)> N$装备栏强化给予属性
+GetListString ..\QuestDiary\春哥数据\装备栏强化\几率参数.txt <$STR(N$装备栏强化等级)> N$强化成功几率
+GetListString ..\QuestDiary\春哥数据\装备栏强化\费用参数.txt <$STR(N$装备栏强化等级)> S$装备栏强化所需类型 N$装备栏强化所需费用
+#ELSEACT
+MESSAGEBOX 最大强化等级：30！
+BREAK
+
+#OR
+EQUAL N$强化成功几率 0
+EQUAL N$装备栏强化给予属性 0
+EQUAL N$装备栏强化所需费用 0
+EQUAL S$装备栏强化所需类型
+#ACT
+MESSAGEBOX 参数配置异常，请截图联系GM！！
+BREAK
+
+#OR
+EQUAL U44 <$STR(N$装备栏强化所需费用)>
+LARGE U44 <$STR(N$装备栏强化所需费用)>
+#ACT
+DEC U44 <$STR(N$装备栏强化所需费用)>
+MOVR N$强化成功几率计算 100
+#ELSEACT
+MESSAGEBOX 强化所需：<$STR(S$装备栏强化所需类型)>*<$STR(N$装备栏强化所需费用)>！！
+BREAK
+
+#IF
+LARGE N$强化成功几率 <$STR(N$强化成功几率计算)>
+#ACT
+INC U<$STR(S$装备栏所用变量)> 1
+#CALL [春哥数据\装备栏强化\强化界面.txt] @强化界面
+SENDMSG 6 [<$STR(S$装备栏强化位置)>]强化成功，当前强化等级：<$STR(U<$STR(S$装备栏所用变量)>)>!!
+MOV N$装备栏强化全套 0
+GOTO @装备位置刷新
+#ELSEACT
+SENDMSG 5 很遗憾， [<$STR(S$装备栏强化位置)>]强化失败！！
+BREAK
+
+#IF
+LARGE U15 4
+LARGE U23 4
+LARGE U14 4
+LARGE U39 4
+LARGE U16 4
+LARGE U42 4
+LARGE U17 4
+LARGE U18 4
+LARGE U43 4
+LARGE U38 4
+#ACT
+MOV N$装备栏强化全套 5
+
+#IF
+LARGE U15 9
+LARGE U23 9
+LARGE U14 9
+LARGE U39 9
+LARGE U16 9
+LARGE U42 9
+LARGE U17 9
+LARGE U18 9
+LARGE U43 9
+LARGE U38 9
+
+#ACT
+MOV N$装备栏强化全套 10
+
+#IF
+LARGE U15 14
+LARGE U23 14
+LARGE U14 14
+LARGE U39 14
+LARGE U16 14
+LARGE U42 14
+LARGE U17 14
+LARGE U18 14
+LARGE U43 14
+LARGE U38 14
+
+#ACT
+MOV N$装备栏强化全套 15
+
+#IF
+LARGE U15 19
+LARGE U23 19
+LARGE U14 19
+LARGE U39 19
+LARGE U16 19
+LARGE U42 19
+LARGE U17 19
+LARGE U18 19
+LARGE U43 19
+LARGE U38 19
+#ACT
+MOV N$装备栏强化全套 20
+
+#IF
+LARGE U15 24
+LARGE U23 24
+LARGE U14 24
+LARGE U39 24
+LARGE U16 24
+LARGE U42 24
+LARGE U17 24
+LARGE U18 24
+LARGE U43 24
+LARGE U38 24
+#ACT
+MOV N$装备栏强化全套 25
+
+#IF
+LARGE U15 29
+LARGE U23 29
+LARGE U14 29
+LARGE U39 29
+LARGE U16 29
+LARGE U42 29
+LARGE U17 29
+LARGE U18 29
+LARGE U43 29
+LARGE U38 29
+#ACT
+MOV N$装备栏强化全套 30
+
+#IF
+EQUAL N$装备栏强化全套 5
+NOT CHECKTITLE 5星锻造大使
+#ACT
+CONFERTITLE 5星锻造大使
+SENDMSG 6 全身强化5级及以上，获得[5星锻造大使]！！
+BREAK
+
+#IF
+EQUAL N$装备栏强化全套 10
+NOT CHECKTITLE 10星锻造大使
+#ACT
+CONFERTITLE 10星锻造大使
+DEPRIVETITLE 5星锻造大使
+SENDMSG 6 全身强化10级及以上，获得[10星锻造大使]！！
+BREAK
+
+
+#IF
+EQUAL N$装备栏强化全套 15
+NOT CHECKTITLE 15星锻造大使
+#ACT
+CONFERTITLE 15星锻造大使
+DEPRIVETITLE 5星锻造大使
+DEPRIVETITLE 10星锻造大使
+SENDMSG 6 全身强化15级及以上，获得[15星锻造大使]！！
+BREAK
+
+#IF
+EQUAL N$装备栏强化全套 20
+NOT CHECKTITLE 20星锻造大使
+#ACT
+CONFERTITLE 20星锻造大使
+DEPRIVETITLE 5星锻造大使
+DEPRIVETITLE 10星锻造大使
+DEPRIVETITLE 15星锻造大使
+SENDMSG 6 全身强化20级及以上，获得[20星锻造大使]！！
+BREAK
+
+#IF
+EQUAL N$装备栏强化全套 25
+NOT CHECKTITLE 25星锻造大使
+#ACT
+CONFERTITLE 25星锻造大使
+DEPRIVETITLE 5星锻造大使
+DEPRIVETITLE 10星锻造大使
+DEPRIVETITLE 15星锻造大使
+DEPRIVETITLE 20星锻造大使
+SENDMSG 6 全身强化25级及以上，获得[25星锻造大使]！！
+BREAK
+
+#IF
+EQUAL N$装备栏强化全套 30
+NOT CHECKTITLE 30星锻造大使
+#ACT
+CONFERTITLE 30星锻造大使
+DEPRIVETITLE 5星锻造大使
+DEPRIVETITLE 10星锻造大使
+DEPRIVETITLE 15星锻造大使
+DEPRIVETITLE 20星锻造大使
+DEPRIVETITLE 25星锻造大使
+SENDMSG 6 全身强化30级及以上，获得[30星锻造大使]！！
+BREAK
+
+[@装备位置刷新]
+#IF
+CHECKUSEITEM <$STR(N$装备栏强化位置)>
+#ACT
+MOV N$装备栏穿戴位置 <$STR(N$装备栏强化位置)>
+#CALL [春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+}
+
+[@装备栏穿戴触发]
+{
+#IF
+CheckContainsText 0;1;3;4;5;6;7;8;10;11; <$STR(N$装备栏穿戴位置)>;
+#ELSEACT
+MESSAGEBOX 请不要封包！！
+BREAK
+
+#IF
+CHECKUSEITEM <$STR(N$装备栏穿戴位置)>
+#ELSEACT
+MESSAGEBOX 请不要封包！！
+BREAK
+
+#IF
+EQUAL N$装备栏穿戴位置 0
+#ACT
+MOV S$装备栏穿戴变量 38
+MOV S$装备栏穿戴位置 衣服
+MOV S$装备栏穿戴名称 <$DRESS>
+
+#IF
+EQUAL N$装备栏穿戴位置 1
+#ACT
+MOV S$装备栏穿戴变量 15
+MOV S$装备栏穿戴位置 武器
+MOV S$装备栏穿戴名称 <$WEAPON>
+
+#IF
+EQUAL N$装备栏穿戴位置 3
+#ACT
+MOV S$装备栏穿戴变量 23
+MOV S$装备栏穿戴位置 项链
+MOV S$装备栏穿戴名称 <$NECKLACE>
+
+#IF
+EQUAL N$装备栏穿戴位置 4
+#ACT
+MOV S$装备栏穿戴变量 14
+MOV S$装备栏穿戴位置 头盔
+MOV S$装备栏穿戴名称 <$HELMET>
+
+#IF
+EQUAL N$装备栏穿戴位置 5
+#ACT
+MOV S$装备栏穿戴变量 39
+MOV S$装备栏穿戴位置 左手
+MOV S$装备栏穿戴名称 <$ARMRING_L>
+
+#IF
+EQUAL N$装备栏穿戴位置 6
+#ACT
+MOV S$装备栏穿戴变量 16
+MOV S$装备栏穿戴位置 右手
+MOV S$装备栏穿戴名称 <$ARMRING_R>
+
+#IF
+EQUAL N$装备栏穿戴位置 7
+#ACT
+MOV S$装备栏穿戴变量 42
+MOV S$装备栏穿戴位置 左戒
+MOV S$装备栏穿戴名称 <$RING_L>
+
+#IF
+EQUAL N$装备栏穿戴位置 8
+#ACT
+MOV S$装备栏穿戴变量 17
+MOV S$装备栏穿戴位置 右戒
+MOV S$装备栏穿戴名称 <$RING_R>
+
+#IF
+EQUAL N$装备栏穿戴位置 10
+#ACT
+MOV S$装备栏穿戴变量 18
+MOV S$装备栏穿戴位置 腰带
+MOV S$装备栏穿戴名称 <$BELT>
+
+#IF
+EQUAL N$装备栏穿戴位置 11
+#ACT
+MOV S$装备栏穿戴变量 43
+MOV S$装备栏穿戴位置 靴子
+MOV S$装备栏穿戴名称 <$BOOTS>
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV N$装备栏穿戴等级 <$STR(U<$STR(S$装备栏穿戴变量)>)>
+GetListString ..\QuestDiary\春哥数据\装备栏强化\强化参数.txt <$STR(N$装备栏穿戴等级)> N$装备栏穿戴给予属性
+
+#IF
+EQUAL N$装备栏穿戴位置 1
+#ACT
+MOV N$装备栏强化位置一 0
+MOV N$装备栏强化位置二 1
+MOV N$装备栏强化位置三 2
+#ELSEACT
+MOV N$装备栏强化位置一 2
+MOV N$装备栏强化位置二 3
+MOV N$装备栏强化位置三 4
+
+#IF
+EQUAL N$装备栏穿戴等级 0
+#ACT
+MOV N$装备栏穿戴给予属性 0
+;ChangeItemUpgradeCount <$STR(N$装备栏穿戴位置)> = 0
+CHANGEITEMADDVALUE <$STR(N$装备栏穿戴位置)> <$STR(N$装备栏强化位置一)> = 0
+CHANGEITEMADDVALUE <$STR(N$装备栏穿戴位置)> <$STR(N$装备栏强化位置二)> = 0
+CHANGEITEMADDVALUE <$STR(N$装备栏穿戴位置)> <$STR(N$装备栏强化位置三)> = 0
+BREAK
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+;ChangeItemUpgradeCount <$STR(N$装备栏穿戴位置)> = <$STR(N$装备栏穿戴等级)>
+CHANGEITEMADDVALUE <$STR(N$装备栏穿戴位置)> <$STR(N$装备栏强化位置一)> = <$STR(N$装备栏穿戴给予属性)>
+CHANGEITEMADDVALUE <$STR(N$装备栏穿戴位置)> <$STR(N$装备栏强化位置二)> = <$STR(N$装备栏穿戴给予属性)>
+CHANGEITEMADDVALUE <$STR(N$装备栏穿戴位置)> <$STR(N$装备栏强化位置三)> = <$STR(N$装备栏穿戴给予属性)>
+SENDMSG 6 [<$STR(S$装备栏穿戴位置)>强化]：[<$STR(S$装备栏穿戴名称)>]获得强化+<$STR(U<$STR(S$装备栏穿戴变量)>)>属性！！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,25 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \
+<ItemShow:1317:1:56:105:1> \
+<><冒险家·巴恩.New~/FCOLOR=58> \ \
+<> <我觉得你可能需要这个东西，它能让你更快得到达这里！/FCOLOR=161> \ \
+<>  <当然这不是白送的，你得付出/FCOLOR=161><20自由币/FCOLOR=253> <.才能得到它/FCOLOR=161> \ \  \
+
+<>                          <《我要购买》/@提交> \ \
+
+
+
+
+[@提交]
+#if
+CHECKGamePoint > 19
+#act
+GamePoint - 20
+give 克洛诺斯海岛传送石 1
+MESSAGEBOX [提示]:获得物品:克洛诺斯海岛传送石!
+#elseact
+MESSAGEBOX 请检测是否有20自由币！
+BREAK

@@ -1,0 +1,27 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \  \
+<><神器合成.New~/FCOLOR=58> \ \
+<>  <切割[奕]/@升级1>     <需要材料如下/FCOLOR=116>  \ \
+<>                         <[★★★★究魄★★★★]/FCOLOR=250> + <[10000个头骨盖]/FCOLOR=250>\ \
+<>                         <[云顶结晶*1000]/FCOLOR=250> + <[元宝*3000w]/FCOLOR=151>\ \
+
+
+[@升级1]
+#if
+checkitem ★★★★究魄★★★★ 1
+checkitem 云顶结晶 1000
+CHECKGAMEGOLD ? 30000000
+checkitem 10000个头骨盖 1
+#act
+take 10000个头骨盖 1
+take ★★★★究魄★★★★ 1
+take 云顶结晶 1000
+GAMEGOLD - 30000000
+give 切割[奕] 1
+MESSAGEBOX [提示]:装备合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK

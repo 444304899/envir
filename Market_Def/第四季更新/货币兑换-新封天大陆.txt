@@ -1,0 +1,74 @@
+[@main]
+#if
+#act
+#say
+\ \ \
+
+<>    <金币兑换钻石New~/FCOLOR=58> \ \
+
+<>                       <100金币=100钻石/FCOLOR=58>      <我要兑换/@兑换>  \   \
+
+<>                       <1000金币=1000钻石/FCOLOR=58>    <我要兑换/@兑换1>   \  \
+
+<>                       <100金币=1亿元宝/FCOLOR=58>     <我要兑换/@兑换2>   \  \
+
+
+<>                       <兑换请注意：元宝超过21亿变为0/FCOLOR=254> \
+
+
+
+[@兑换2]
+#if
+CHECKGOLD 100
+#act
+TAKE 金币 100
+GAMEGOLD + 100000000
+MESSAGEBOX [提示]:兑换成功
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+[@兑换3]
+#if
+CHECKGOLD 500
+#act
+TAKE 金币 500
+GAMEGOLD + 1000000000
+MESSAGEBOX [提示]:兑换成功
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+
+
+
+[@兑换]
+#if
+CHECKGOLD 100
+#act
+TAKE 金币 100
+GAMEPOINT + 100
+GAMEDIAMOND + 10
+GAMEGLORY + 10
+MESSAGEBOX [提示]:兑换成功
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+
+
+[@兑换1]
+#if
+CHECKGOLD 1000
+#act
+TAKE 金币 1000
+GAMEPOINT + 1000
+GAMEDIAMOND + 100
+GAMEGLORY + 100
+MESSAGEBOX [提示]:兑换成功
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+

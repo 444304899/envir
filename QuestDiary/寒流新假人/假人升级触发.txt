@@ -1,0 +1,23 @@
+[@升级触发]
+{
+#act
+movr N$随机数 100
+
+#IF
+CHECKLEVELEX > <$GLOBAL(假人_能升最高等级)>
+#ACT
+CHANGELEVEL = <$GLOBAL(假人_能升最高等级)>
+
+#if
+isdummy
+checklevel <$GLOBAL(假人_最低下图等级)>
+small N$随机数 <$GLOBAL(假人_下图几率)>
+#act
+#CALL [\寒流新假人\假人走动打怪.txt] @假人下图打怪
+
+
+
+
+
+
+}

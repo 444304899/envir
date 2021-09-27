@@ -1,0 +1,385 @@
+[@领取钻石]
+{
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\01.txt
+#ACT
+GAMEPOINT + 1
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\01.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值1钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\1.txt
+#ACT
+GAMEPOINT + 10
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\1.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值10钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\02.txt
+#ACT
+GAMEPOINT + 2
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\02.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值2钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\2.txt
+#ACT
+GAMEPOINT + 20
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\2.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值20钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\03.txt
+#ACT
+GAMEPOINT + 3
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\03.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值3钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\3.txt
+#ACT
+GAMEPOINT + 30
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\3.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值30钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\04.txt
+#ACT
+GAMEPOINT + 4
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\04.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值4钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\4.txt
+#ACT
+GAMEPOINT + 40
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\4.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值40钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\05.txt
+#ACT
+GAMEPOINT + 5
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\05.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值5钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\5.txt
+#ACT
+GAMEPOINT + 50
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\5.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值50钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\06.txt
+#ACT
+GAMEPOINT + 6
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\06.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值6钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\6.txt
+#ACT
+GAMEPOINT + 60
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\6.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值60钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\07.txt
+#ACT
+GAMEPOINT + 7
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\07.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值7钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\7.txt
+#ACT
+GAMEPOINT + 70
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\7.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值70钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\08.txt
+#ACT
+GAMEPOINT + 8
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\08.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值8钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\8.txt
+#ACT
+GAMEPOINT + 80
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\8.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值80钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\09.txt
+#ACT
+GAMEPOINT + 9
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\09.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值9钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\9.txt
+#ACT
+GAMEPOINT + 90
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\9.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值90钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\10.txt
+#ACT
+GAMEPOINT + 100
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\10.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值100钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\20.txt
+#ACT
+GAMEPOINT + 200
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\20.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值200钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\30.txt
+#ACT
+GAMEPOINT + 300
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\30.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值300钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\40.txt
+#ACT
+GAMEPOINT + 400
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\40.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值400钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\50.txt
+#ACT
+GAMEPOINT + 500
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\50.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值500钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\60.txt
+#ACT
+GAMEPOINT + 600
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\60.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值600钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\70.txt
+#ACT
+GAMEPOINT + 700
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\70.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值700钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\80.txt
+#ACT
+GAMEPOINT + 800
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\80.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值800钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\90.txt
+#ACT
+GAMEPOINT + 900
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\90.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值900钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\100.txt
+#ACT
+GAMEPOINT + 1000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\100.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值1000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\200.txt
+#ACT
+GAMEPOINT + 2000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\200.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值2000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\300.txt
+#ACT
+GAMEPOINT + 3000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\300.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值3000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\400.txt
+#ACT
+GAMEPOINT + 4000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\400.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值4000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\500.txt
+#ACT
+GAMEPOINT + 5000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\500.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值5000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\600.txt
+#ACT
+GAMEPOINT + 6000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\600.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值6000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\700.txt
+#ACT
+GAMEPOINT + 7000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\700.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值7000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\800.txt
+#ACT
+GAMEPOINT + 8000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\800.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值8000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\900.txt
+#ACT
+GAMEPOINT + 9000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\900.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值9000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\1000.txt
+#ACT
+GAMEPOINT + 10000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\1000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值10000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\2000.txt
+#ACT
+GAMEPOINT + 20000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\2000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值20000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\3000.txt
+#ACT
+GAMEPOINT + 30000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\3000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值30000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\4000.txt
+#ACT
+GAMEPOINT + 40000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\4000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值40000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\5000.txt
+#ACT
+GAMEPOINT + 50000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\5000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值50000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\6000.txt
+#ACT
+GAMEPOINT + 60000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\6000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值60000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\7000.txt
+#ACT
+GAMEPOINT + 70000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\7000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值70000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\8000.txt
+#ACT
+GAMEPOINT + 80000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\8000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值80000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\9000.txt
+#ACT
+GAMEPOINT + 90000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\9000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值90000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\10000.txt
+#ACT
+GAMEPOINT + 100000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\10000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值100000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\20000.txt
+#ACT
+GAMEPOINT + 200000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\20000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值200000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\30000.txt
+#ACT
+GAMEPOINT + 300000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\30000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值300000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\40000.txt
+#ACT
+GAMEPOINT + 400000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\40000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值400000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\50000.txt
+#ACT
+GAMEPOINT + 500000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\50000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值500000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\60000.txt
+#ACT
+GAMEPOINT + 600000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\60000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值600000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\70000.txt
+#ACT
+GAMEPOINT + 700000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\70000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值700000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\80000.txt
+#ACT
+GAMEPOINT + 800000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\80000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值800000钻石，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\钻石\90000.txt
+#ACT
+GAMEPOINT + 900000
+DelAccountList ..\QuestDiary\76pay充值钻石\钻石\90000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值900000钻石，如果您也想获得，请赶快充值吧。
+
+#ELSESAY
+请查看自己的充值数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

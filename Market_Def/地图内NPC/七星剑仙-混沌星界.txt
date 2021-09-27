@@ -1,0 +1,89 @@
+[@main]
+#IF
+#Act
+#say
+\ \ \ \ \ \  \ \  \   \   \   \  \   \ \   \
+<>                                                   <七星·剑仙.New~/FCOLOR=58> \ \
+<>                                                   <本服唯一特殊打金件！强烈推荐，非必需品。装备全靠打!> \ \
+<>                                                                <合成条件：/FCOLOR=250><神器·冰魄+火焰·赫斯提亚/FCOLOR=70>    \
+<>                                                                <合成条件：/FCOLOR=250><“七星石·威”*500 颗/FCOLOR=70>    \
+<>                                                                <终极武器可兑换新区150充值/FCOLOR=250> \   \
+
+<>                                                   <购买【七星石·威】/@衣服合成4>    <购买【七星石·威*10】/@衣服合成5>   <合成【七星剑仙的剑气】/@衣服合成1> \
+<>                                                   <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g18)>／999颗/FCOLOR=70} \
+<>                                                   <ItemShow:1492:0:0:-115:1>
+
+
+
+
+[@衣服合成1]
+#if
+checkitem 神器·冰魄 1
+checkitem 火焰·赫斯提亚 1
+checkitem 七星石·威 500
+#act
+take 神器·冰魄 1
+take 火焰·赫斯提亚 1
+take 七星石·威 500
+;GiveStateItem 七星剑仙的剑气  1 1 0 0 1 1 0 1
+GIVESTATEITEM 七星剑仙的剑气 1 1 1 0 0 1 1 0 0
+MESSAGEBOX [提示]:获得物品:七星剑仙的剑气
+SENDMOVEMSG 0 253 255 200 1 恭喜玩家『<$USERNAME>』在十万大山成功锻造【七星剑仙的剑气】守护上古的战剑现世了，颤抖吧凡人！！
+SENDMOVEMSG 0 253 255 240 1 恭喜玩家『<$USERNAME>』在十万大山成功锻造【七星剑仙的剑气】守护上古的战剑现世了，颤抖吧凡人！！
+SENDMOVEMSG 0 253 255 280 1 恭喜玩家『<$USERNAME>』在十万大山成功锻造【七星剑仙的剑气】守护上古的战剑现世了，颤抖吧凡人！！
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@衣服合成4]
+#if
+large g18 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+
+#if
+checkgold 10
+#act
+take 金币 10
+GIVE 七星石·威 1
+INC G18 1
+GOTO @MAIN
+MESSAGEBOX [提示]:获得物品:[七星石·威]
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+[@衣服合成5]
+#if
+large g18 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 七星石·威 10
+INC G18 10
+GOTO @MAIN
+MESSAGEBOX [提示]:获得物品:[七星石·威*10]
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+

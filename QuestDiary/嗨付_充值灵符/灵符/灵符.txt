@@ -1,0 +1,514 @@
+[@领取灵符]
+{
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\01.txt
+#ACT
+GAMEGIRD + 30
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\01.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符30，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\02.txt
+#ACT
+GAMEGIRD + 60
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\02.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符60，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\03.txt
+#ACT
+GAMEGIRD + 90
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\03.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符90，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\04.txt
+#ACT
+GAMEGIRD + 120
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\04.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符120，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\05.txt
+#ACT
+GAMEGIRD + 150
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\05.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符150，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\06.txt
+#ACT
+GAMEGIRD + 180
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\06.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符180，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\07.txt
+#ACT
+GAMEGIRD + 210
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\07.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符210，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\08.txt
+#ACT
+GAMEGIRD + 240
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\08.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符240，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\09.txt
+#ACT
+GAMEGIRD + 270
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\09.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符270，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\1.txt
+#ACT
+GAMEGIRD + 300
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\1.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符300，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\2.txt
+#ACT
+GAMEGIRD + 600
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\2.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符600，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\3.txt
+#ACT
+GAMEGIRD + 900
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\3.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符900，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\4.txt
+#ACT
+GAMEGIRD + 1200
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\4.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1200，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\5.txt
+#ACT
+GAMEGIRD + 1500
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\5.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1500，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\6.txt
+#ACT
+GAMEGIRD + 1800
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\6.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1800，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\7.txt
+#ACT
+GAMEGIRD + 2100
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\7.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2100，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\8.txt
+#ACT
+GAMEGIRD + 2400
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\8.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2400，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\9.txt
+#ACT
+GAMEGIRD + 2700
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\9.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2700，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\10.txt
+#ACT
+GAMEGIRD + 3000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\10.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符3000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\20.txt
+#ACT
+GAMEGIRD + 6000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\20.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符6000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\30.txt
+#ACT
+GAMEGIRD + 9000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\30.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符9000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\40.txt
+#ACT
+GAMEGIRD + 12000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\40.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符12000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\50.txt
+#ACT
+GAMEGIRD + 15000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\50.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符15000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\60.txt
+#ACT
+GAMEGIRD + 18000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\60.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符18000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\70.txt
+#ACT
+GAMEGIRD + 21000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\70.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符21000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\80.txt
+#ACT
+GAMEGIRD + 24000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\80.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符24000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\90.txt
+#ACT
+GAMEGIRD + 27000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\90.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符27000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\100.txt
+#ACT
+GAMEGIRD + 30000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\100.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符30000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\200.txt
+#ACT
+GAMEGIRD + 60000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\200.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符60000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\300.txt
+#ACT
+GAMEGIRD + 90000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\300.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符90000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\400.txt
+#ACT
+GAMEGIRD + 120000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\400.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符120000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\500.txt
+#ACT
+GAMEGIRD + 150000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\500.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符150000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\600.txt
+#ACT
+GAMEGIRD + 180000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\600.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符180000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\700.txt
+#ACT
+GAMEGIRD + 210000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\700.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符210000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\800.txt
+#ACT
+GAMEGIRD + 240000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\800.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符240000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\900.txt
+#ACT
+GAMEGIRD + 270000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\900.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符270000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\1000.txt
+#ACT
+GAMEGIRD + 300000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\1000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符300000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\2000.txt
+#ACT
+GAMEGIRD + 600000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\2000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符600000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\3000.txt
+#ACT
+GAMEGIRD + 900000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\3000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符900000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\4000.txt
+#ACT
+GAMEGIRD + 1200000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\4000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1200000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\5000.txt
+#ACT
+GAMEGIRD + 1500000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\5000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1500000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\6000.txt
+#ACT
+GAMEGIRD + 1800000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\6000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1800000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\7000.txt
+#ACT
+GAMEGIRD + 2100000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\7000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2100000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\8000.txt
+#ACT
+GAMEGIRD + 2400000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\8000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2400000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\9000.txt
+#ACT
+GAMEGIRD + 2700000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\9000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2700000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\10000.txt
+#ACT
+GAMEGIRD + 3000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\10000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符3000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\20000.txt
+#ACT
+GAMEGIRD + 6000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\20000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符6000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\30000.txt
+#ACT
+GAMEGIRD + 9000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\30000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符9000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\40000.txt
+#ACT
+GAMEGIRD + 12000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\40000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符12000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\50000.txt
+#ACT
+GAMEGIRD + 15000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\50000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符15000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\60000.txt
+#ACT
+GAMEGIRD + 18000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\60000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符18000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\70000.txt
+#ACT
+GAMEGIRD + 21000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\70000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符21000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\80000.txt
+#ACT
+GAMEGIRD + 24000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\80000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符24000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\90000.txt
+#ACT
+GAMEGIRD + 27000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\90000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符27000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\100000.txt
+#ACT
+GAMEGIRD + 30000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\100000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符30000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\200000.txt
+#ACT
+GAMEGIRD + 60000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\200000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符60000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\300000.txt
+#ACT
+GAMEGIRD + 90000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\300000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符90000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\400000.txt
+#ACT
+GAMEGIRD + 120000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\400000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符120000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\500000.txt
+#ACT
+GAMEGIRD + 150000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\500000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符150000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\600000.txt
+#ACT
+GAMEGIRD + 180000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\600000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符180000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\700000.txt
+#ACT
+GAMEGIRD + 210000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\700000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符210000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\800000.txt
+#ACT
+GAMEGIRD + 240000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\800000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符240000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\900000.txt
+#ACT
+GAMEGIRD + 270000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\900000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符270000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\1000000.txt
+#ACT
+GAMEGIRD + 300000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\1000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符300000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\2000000.txt
+#ACT
+GAMEGIRD + 600000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\2000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符600000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\3000000.txt
+#ACT
+GAMEGIRD + 900000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\3000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符900000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\4000000.txt
+#ACT
+GAMEGIRD + 1200000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\4000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1200000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\5000000.txt
+#ACT
+GAMEGIRD + 1500000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\5000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1500000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\6000000.txt
+#ACT
+GAMEGIRD + 1800000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\6000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符1800000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\7000000.txt
+#ACT
+GAMEGIRD + 2100000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\7000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2100000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\8000000.txt
+#ACT
+GAMEGIRD + 2400000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\8000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2400000000，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\灵符\9000000.txt
+#ACT
+GAMEGIRD + 2700000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\灵符\9000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值灵符2700000000，如果您也想获得，请赶快充值吧。
+
+
+#ELSESAY
+\ \ \ \ \
+请查看自己的充值数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}
+

@@ -1,0 +1,144 @@
+[@掉落显示触发]
+{
+
+#or
+not CHECKTEXTLIST ..\QuestDiary\装备记录\装备记录列表.txt <$CURRTEMNAME>
+CHECKITEMADDVALUE -1 12 = 1
+#Act
+Break
+
+
+#OR
+ISONMAP 封印寺庙
+ISONMAP syyh
+ISONMAP rongyan11
+ISONMAP rongyan12
+ISONMAP rongyan13
+ISONMAP rongyan21
+ISONMAP rongyan22
+ISONMAP rongyan23
+ISONMAP ronghuo2boss
+ISONMAP 隐藏空间
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\神秘之地.txt <$CURRTEMNAME> 0
+
+#IF
+ISONMAP 1dl4
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\葬神山谷.txt <$CURRTEMNAME> 0
+
+#or
+ISONMAP 1dl5
+ISONMAP mfml
+ISONMAP ysbl
+ISONMAP sjdx
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\自由大陆.txt <$CURRTEMNAME> 0
+
+#or
+ISONMAP ytlds
+ISONMAP hszd
+ISONMAP D2067
+ISONMAP D2052
+ISONMAP D2061
+ISONMAP shmy
+ISONMAP krdm
+ISONMAP nqzd
+ISONMAP jlcx
+ISONMAP xwzy
+ISONMAP hgjt
+ISONMAP mhkj
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\召唤师峡谷.txt <$CURRTEMNAME> 0
+
+#or
+ISONMAP lfdl
+ISONMAP sysw
+ISONMAP slyd
+ISONMAP jkxg
+ISONMAP akyd
+ISONMAP hawg
+ISONMAP hsrm
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\峡谷之巅.txt <$CURRTEMNAME> 0
+
+
+#or
+ISONMAP xxsj
+ISONMAP jhsm
+ISONMAP syt
+ISONMAP T1
+ISONMAP pmf
+ISONMAP pmg
+ISONMAP fmb
+ISONMAP JZ002
+ISONMAP JZ006
+ISONMAP yxsd1
+ISONMAP yxsd
+ISONMAP ymzl
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\创世巅峰.txt <$CURRTEMNAME> 0
+
+
+#or
+ISONMAP dldl
+ISONMAP slzd
+ISONMAP ssjd
+ISONMAP zezy
+ISONMAP bssl
+ISONMAP bxhd
+ISONMAP xdsl
+ISONMAP bhg
+ISONMAP hsd
+ISONMAP ly4
+ISONMAP ly3
+ISONMAP ly2
+ISONMAP ly1
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\原始大陆.txt <$CURRTEMNAME> 0
+
+
+#or
+ISONMAP mxdsj
+ISONMAP szcb
+ISONMAP jyd
+ISONMAP chd
+ISONMAP ssc
+ISONMAP hmgb
+ISONMAP sscjw
+ISONMAP dunhuang1
+ISONMAP dunhuang2
+ISONMAP dunhuang3
+ISONMAP dunhuangboss
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\山海经.txt <$CURRTEMNAME> 0
+
+
+
+#or
+ISONMAP 通天塔一层
+ISONMAP 通天塔二层
+ISONMAP 通天塔三层
+ISONMAP 通天塔四层
+ISONMAP 通天塔五层
+ISONMAP 通天塔六层
+ISONMAP 通天塔七层
+ISONMAP 通天塔八层
+ISONMAP 通天塔九层
+ISONMAP 通天塔顶层
+#Act
+AddTextListEx ..\QuestDiary\馒头制作\地图产出\云顶塔.txt <$CURRTEMNAME> 0
+
+
+
+Break
+
+
+
+
+
+
+}
+
+
+

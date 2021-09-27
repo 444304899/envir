@@ -1,0 +1,794 @@
+[@假人下图打怪]
+{
+#act
+movr N$回城几率 100
+
+
+#if
+CHECKLEVELEX < 150
+LARGE n$家人使用 1
+checkitem 云顶结晶 2
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEC n$家人使用 2
+CHANGELEVEL + 1
+break
+
+
+#if
+CHECKLEVELEX > 149
+CHECKLEVELEX < 200
+LARGE n$家人使用 9
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEC n$家人使用 10
+CHANGELEVEL + 1
+break
+
+
+
+#if
+check [100] 0
+LARGE U0 10
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+set [100] 1
+DEC U0 10
+CONFERTITLE 新的征程 1
+SetIcon 6 7 736 7 -26 14 0 70 0
+BREAK
+
+#if
+CHECKTITLE 新的征程
+LARGE U0 20
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 新的征程
+CONFERTITLE 冰河踏破者 1
+SetIcon 6 7 750 7 -26 14 0 70 0
+DEC U0 20
+break
+
+
+
+#if
+CHECKTITLE 冰河踏破者
+LARGE U0 30
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 冰河踏破者
+CONFERTITLE 星界旅行者 1
+SetIcon 6 7 764 7 -26 14 0 70 0
+DEC U0 30
+break
+
+
+
+#if
+CHECKTITLE 星界旅行者
+LARGE U0 40
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 星界旅行者
+CONFERTITLE 暮光征服者 1
+SetIcon 6 7 778 7 -26 14 0 70 0
+DEC U0 40
+break
+
+
+
+#if
+CHECKTITLE 暮光征服者
+LARGE U0 50
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 暮光征服者
+CONFERTITLE 灭世终结者 1
+SetIcon 6 7 792 7 -26 14 0 70 0
+DEC U0 50
+break
+
+
+
+#if
+CHECKTITLE 灭世终结者
+LARGE U0 60
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 灭世终结者
+CONFERTITLE 灰烬审判军 1
+SetIcon 6 7 820 7 -26 14 0 70 0
+DEC U0 60
+break
+
+
+#if
+CHECKTITLE 灰烬审判军
+LARGE U0 70
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 灰烬审判军
+CONFERTITLE 黑曜石杀手 1
+SetIcon 6 7 834 7 -26 14 0 70 0
+DEC U0 70
+break
+
+
+#if
+CHECKTITLE 黑曜石杀手
+LARGE U0 80
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 黑曜石杀手
+CONFERTITLE 魔法追寻者 1
+SetIcon 6 7 848 7 -26 14 0 70 0
+DEC U0 80
+break
+
+
+#if
+CHECKTITLE 魔法追寻者
+LARGE U0 100
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 魔法追寻者
+CONFERTITLE 海加尔的复仇 1
+SetIcon 6 7 610 7 -26 14 0 70 0
+DEC U0 100
+break
+
+
+#if
+CHECKTITLE 海加尔的复仇
+LARGE U0 150
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 海加尔的复仇
+CONFERTITLE 地狱咆哮终结者 1
+SetIcon 6 7 624 7 -26 14 0 70 0
+DEC U0 150
+break
+
+
+#if
+CHECKTITLE 地狱咆哮终结者
+LARGE U0 200
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 地狱咆哮终结者
+CONFERTITLE 奥格瑞玛解放者 1
+SetIcon 6 7 638 7 -26 14 0 70 0
+DEC U0 200
+break
+
+
+#if
+CHECKTITLE 奥格瑞玛解放者
+LARGE U0 250
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 奥格瑞玛解放者
+CONFERTITLE 奥格瑞玛征服者 1
+SetIcon 6 7 652 7 -26 14 0 70 0
+DEC U0 250
+break
+
+
+#if
+CHECKTITLE 奥格瑞玛征服者
+LARGE U0 300
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 奥格瑞玛征服者
+CONFERTITLE 破碎世界的守护者 1
+SetIcon 6 7 666 7 -26 14 0 70 0
+DEC U0 300
+break
+
+
+
+#if
+CHECKTITLE 破碎世界的守护者
+LARGE U0 350
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 破碎世界的守护者
+CONFERTITLE 艾泽拉斯的救世主 1
+SetIcon 6 7 694 7 -26 14 0 70 0
+DEC U0 350
+break
+
+
+
+#if
+CHECKTITLE 艾泽拉斯的救世主
+LARGE U0 400
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 艾泽拉斯的救世主
+CONFERTITLE 觉醒·热血之魂 1
+SetIcon 6 7 1010 7 -43 30 0 70 0
+DEC U0 400
+break
+
+
+
+#if
+CHECKTITLE 觉醒·热血之魂
+LARGE U0 450
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+DEPRIVETITLE 觉醒·热血之魂
+CONFERTITLE 集结·战斗号角 1
+SetIcon 6 7 1040 7 -43 30 0 70 0
+DEC U0 450
+break
+
+
+
+#if
+CHECKTITLE 集结·战斗号角
+LARGE U0 1000
+CHECKGAMEGOLD ? 2000000
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+GAMEGOLD - 2000000
+DEPRIVETITLE 集结·战斗号角
+CONFERTITLE 暴走·极限突破 1
+SetIcon 6 7 1070 7 -43 30 0 70 0
+DEC U0 1000
+break
+
+
+#if
+CHECKTITLE 暴走·极限突破
+LARGE U0 1200
+CHECKGAMEGOLD ? 4000000
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+GAMEGOLD - 4000000
+DEPRIVETITLE 暴走·极限突破
+CONFERTITLE 天启·信仰之歌 1
+SetIcon 6 7 1100 7 -43 30 0 70 0
+DEC U0 1200
+break
+
+
+#if
+CHECKTITLE 天启·信仰之歌
+LARGE U0 1400
+CHECKGAMEGOLD ? 8000000
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+GAMEGOLD - 8000000
+DEPRIVETITLE 天启·信仰之歌
+CONFERTITLE 进化之光·混沌开天 1
+SetIcon 6 7 1130 7 -43 30 0 70 0
+DEC U0 1400
+break
+
+
+
+#if
+CHECKTITLE 进化之光·混沌开天
+LARGE U0 1600
+CHECKGAMEGOLD ? 10000000
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+GAMEGOLD - 10000000
+DEPRIVETITLE 进化之光·混沌开天
+CONFERTITLE 战鼓震天·异界战歌 1
+SetIcon 6 7 1160 7 -43 30 0 70 0
+DEC U0 1600
+break
+
+
+
+
+#if
+CHECKTITLE 战鼓震天·异界战歌
+LARGE U0 1800
+CHECKGAMEGOLD ? 15000000
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+GAMEGOLD - 15000000
+DEPRIVETITLE 战鼓震天·异界战歌
+CONFERTITLE 毕方之炎·夜空魅影 1
+SetIcon 6 7 1190 7 -43 30 0 70 0
+DEC U0 1800
+break
+
+
+
+
+#if
+CHECKTITLE 毕方之炎·夜空魅影
+LARGE U0 2000
+CHECKGAMEGOLD ? 30000000
+CHECKGAMEPOINT ? 3888
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+GAMEGOLD - 30000000
+GAMEPOINT - 3888
+DEPRIVETITLE 毕方之炎·夜空魅影
+CONFERTITLE 勇士的荣耀·最终幻想 1
+SetIcon 6 7 1220 7 -43 30 0 70 0
+DEC U0 2000
+break
+
+
+
+
+
+#if
+CHECKGAMEGOLD ? 5000
+LARGE n$家人使用 9
+CHECKRENEWLEVEL = 0
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 5000
+DEC n$家人使用 10
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+#if
+CHECKGAMEGOLD ? 10000
+LARGE n$家人使用 9
+CHECKRENEWLEVEL = 1
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 10000
+DEC n$家人使用 10
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+#if
+CHECKGAMEGOLD ? 15000
+LARGE n$家人使用 9
+CHECKRENEWLEVEL = 2
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 15000
+DEC n$家人使用 10
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+#if
+CHECKGAMEGOLD ? 20000
+LARGE n$家人使用 9
+CHECKRENEWLEVEL = 3
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 20000
+DEC n$家人使用 10
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+#if
+CHECKGAMEGOLD ? 25000
+LARGE n$家人使用 9
+CHECKRENEWLEVEL = 4
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 25000
+DEC n$家人使用 10
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+#if
+CHECKGAMEGOLD ? 500000
+LARGE n$家人使用 9
+CHECKRENEWLEVEL = 5
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 500000
+DEC n$家人使用 10
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+#if
+CHECKGAMEGOLD ? 500000
+LARGE n$家人使用 49
+CHECKRENEWLEVEL = 6
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 500000
+DEC n$家人使用 50
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+
+#if
+CHECKGAMEGOLD ? 500000
+LARGE n$家人使用 49
+CHECKRENEWLEVEL = 7
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 500000
+DEC n$家人使用 50
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+#if
+CHECKGAMEGOLD ? 500000
+LARGE n$家人使用 49
+CHECKRENEWLEVEL = 8
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 500000
+DEC n$家人使用 50
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+
+#if
+CHECKGAMEGOLD ? 500000
+LARGE n$家人使用 49
+CHECKRENEWLEVEL = 9
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#act
+RENEWLEVEL 1
+GAMEGOLD - 500000
+DEC n$家人使用 50
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+break
+
+
+
+
+#IF
+CheckHumInRange 封妖城 67 73 3
+SMALL I33 3
+#ACT
+INC I33 1
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值获得金币40,如果您也想获得,请赶快充值吧!
+;SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了积分50
+;SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过在线充值额外获得了真实充值50
+DelayGOTO 60000 @再次活跃
+DelayGOTO 5000 @假人领取回馈
+
+;==↓↓↓↓↓===假人光身或无剑自动补上=======
+#OR
+not CHECKUSEITEM 0
+not CHECKUSEITEM 1
+not CHECKUSEITEM 12
+#ACT
+#CALL [\寒流新假人\假人装备自补.txt] @假人不会光屁股
+;==↑↑↑↑↑↑↑↑===假人光身或无剑自动补上=====
+
+
+#IF
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+SMALL N$回城几率 <$GLOBAL(假人_土城走动几率)>
+#ACT
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+
+#if
+not ISONMAP <$GLOBAL(假人_盟重地图号)>
+EQUAL <$CURRRTARGETNAME>
+large N$回城几率 50
+small N$回城几率 52
+#act
+ChangeAttatckMode 6
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
+SETONTIMER 252 <$STR(N$频率)>
+break
+
+#IF
+CHECKLEVEL <$GLOBAL(假人_最低下图等级)>
+SMALL N$回城几率 <$GLOBAL(假人_下图几率)>
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+#ACT
+ChangeAttatckMode 6
+goto @下图
+break
+
+[@下图]
+#IF
+CHECKUNDERWAR 沙巴克
+#ACT
+break
+
+#if
+check [66] 0
+#act
+BREAK
+
+
+
+#if
+RANDOM 2
+CHECKRENEWLEVEL > 4
+CHECKLEVELEX > 149
+CHECKMAPDUMMYCOUNT ytlds < 2
+#act
+map ytlds
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+
+#if
+RANDOM 2
+large <$MAXHP> 150000
+CHECKMAPDUMMYCOUNT lfdl < 2
+#act
+MAP lfdl
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+#if
+RANDOM 2
+large <$MAXDC> 10000
+CHECKMAPDUMMYCOUNT xxsj < 2
+#act
+MAP xxsj
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+#if
+RANDOM 2
+CHECKRENEWLEVEL > 11
+large <$MAXDC> 15000
+large <$MAXHP> 250000
+CHECKMAPDUMMYCOUNT dldl < 2
+#act
+MAP dldl
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+
+
+#if
+RANDOM 2
+CHECKMAPDUMMYCOUNT lfdl < 2
+large <$MAXHP> 150000
+#act
+MAP lfdl
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+
+
+
+
+#if
+RANDOM 2
+CHECKMAPDUMMYCOUNT ytlds < 2
+CHECKLEVELEX > 149
+#act
+map ytlds
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+#if
+RANDOM 2
+CHECKMAPDUMMYCOUNT 1dl5 < 2
+CHECKLEVELEX > 99
+#act
+mapmove 1dl5
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+
+
+
+#if
+RANDOM 2
+CHECKMAPDUMMYCOUNT 1dl1 < 2
+CheckLevelEx > 70
+#act
+map 1dl1
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+#if
+RANDOM 2
+CHECKMAPDUMMYCOUNT 1dl11 < 2
+CheckLevelEx > 70
+#act
+map 1dl11
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+#if
+RANDOM 2
+CHECKMAPDUMMYCOUNT 1dl12 < 2
+CheckLevelEx > 70
+#act
+map 1dl12
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+#if
+RANDOM 2
+CHECKMAPDUMMYCOUNT sanren < 4
+CheckLevelEx > 70
+#act
+map sanren
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+#if
+CHECKMAPDUMMYCOUNT 1dl4 < 4
+CheckLevelEx > 70
+CheckLevelEx < 100
+#act
+map 1dl4
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+setofftimer 252
+setontimer 253 <$GLOBAL(假人_打怪回城时间为秒)>
+SetOnTimer 254 40
+dummystart
+break
+
+
+
+
+
+
+
+
+
+
+#elseact
+setofftimer 253
+setofftimer 254
+MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
+SETONTIMER 252 <$STR(N$频率)>
+break
+
+
+[@再次活跃]
+#act
+setofftimer 253
+setofftimer 254
+MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
+SETONTIMER 252 <$STR(N$频率)>
+break
+
+
+
+
+
+
+
+[@假人领取回馈]
+#if
+check [101] 0
+#act
+set [101] 1
+SETONTIMER 36 1
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+#CALL [\大熊功能\职位计算.txt] @开始计算
+ADDSKILL 护体神盾
+SENDMOVEMSG 0 253 255 150 1 ≮系统公告≯：[<$USERNAME>]成为封天赞助玩家，本服38元满赞助，无其他隐藏消费！
+SENDMOVEMSG 0 249 251 350 1 ≮系统公告≯：[<$USERNAME>]成为封天赞助玩家，本服38元满赞助，无其他隐藏消费！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

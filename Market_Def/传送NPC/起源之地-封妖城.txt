@@ -1,0 +1,66 @@
+[@main]
+
+#if
+#act
+MOV S$刷新状态33 <未刷新/AUTOCOLOR=247>
+MOV S$刷新状态34 <未刷新/AUTOCOLOR=247>
+MOV S$刷新状态34 <未刷新/AUTOCOLOR=247>
+MOV S$刷新状态36 <未刷新/AUTOCOLOR=247>
+
+#if
+CheckMapSameMonCount LOL 散人福利·超级BOSS > 0
+#Act
+MOV S$刷新状态33 <已刷新/AUTOCOLOR=251>
+
+#if
+CheckMapSameMonCount LOL ★扎昆★·【荒古传承】  > 0
+#Act
+MOV S$刷新状态34 <已刷新/AUTOCOLOR=251>
+
+#if
+CheckMapSameMonCount LOL 幻境·鬼王（终极SSS+） > 0
+#Act
+MOV S$刷新状态35 <已刷新/AUTOCOLOR=251>
+
+#if
+CheckMapSameMonCount LOL (远古)锤王·波罗丁 > 0
+#Act
+MOV S$刷新状态36 <已刷新/AUTOCOLOR=251>
+
+
+
+
+
+#IF
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \
+
+<>                                                <PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1> <【特别说明】：/AUTOCOLOR=150> <本服所有装备均可爆出!/AUTOCOLOR=58><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1>  \  \
+
+
+<>                                                    <起源之地为通向二大陆的必经之路，刷新前期所有怪物，/AUTOCOLOR=146> \   \
+<>                                                    <地图内有专属地图通道。地图中更是存在了神秘的超级BOSS，/AUTOCOLOR=146> \  \
+<>                                                    <可爆出本服唯一终极回血石，价值连城，没有实力不要轻易挑战/AUTOCOLOR=146> \   \
+<>                                                    <地图中间存在一只散人福利超级BOSS，必爆3-4大陆超级专属！/AUTOCOLOR=146> \   \
+<>                                      <ItemShow:1591:0:160:-12:1><ItemShow:1592:0:200:-12:1><ItemShow:1593:0:240:-12:1> \ \
+<>                                           BOSS刷新状态: <散人福利·超级BOSS：/AUTOCOLOR=103><$STR(S$刷新状态33)>           <★扎昆★·【荒古传承】：/AUTOCOLOR=103><$STR(S$刷新状态34)> \
+<>                                           BOSS刷新状态: <幻境·鬼王（终极SSS+）：/AUTOCOLOR=103><$STR(S$刷新状态35)>       <(远古)锤王·波罗丁：/AUTOCOLOR=103><$STR(S$刷新状态35)> \
+<>                                                                     <IMG:242:40:10:0|250#需要5转或者150级才可以进入/@传送1>
+
+
+
+
+
+[@传送1]
+#or
+CHECKRENEWLEVEL > 4
+CHECKLEVELEX > 149
+#act
+MAPMOVE  lol  17 168
+SENDMSG 0 {百团大战:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.探索神秘世界！！|255:15}
+#elseact
+MESSAGEBOX 进入此地图需要5转或者150级才可以进入!!!
+break
+
+

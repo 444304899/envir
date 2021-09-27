@@ -1,0 +1,399 @@
+[@自身勋章]
+{
+#IF
+CHECKLEVELEX > 0
+#ACT
+SETSHOWITEMMSG 0
+MOV S25
+MOV S26
+MOV S27
+MOV S$苍云虚弱
+MOV S$毁灭之力
+MOV S$鬼魅重重
+MOV S$无尽束缚
+MOV S$刺客诡道
+MOV S$无敌模式
+MOV N$复苏之风 0
+MOV N$斩杀威力 0
+MOV N$BUFF打宝 0
+SetNewItemValue -1 1 = 0
+SetNewItemValue -1 5 = 0
+CHANGEITEMADDVALUE -1 2 = 0
+CHANGEITEMADDVALUE -1 3 = 0
+CHANGEITEMADDVALUE -1 4 = 0
+
+#IF
+CHECKSOCKETABLEITEM -1 0 S24 S25
+CHECKSOCKETABLEITEM -1 1 S24 S26
+CHECKSOCKETABLEITEM -1 2 S24 S27
+CHECKSOCKETABLEITEM -1 3 S24 S28
+#ACT
+;------------------------------------------------------ 自身型
+#OR
+EQUAL S25 初级伤害
+EQUAL S26 初级伤害
+EQUAL S27 初级伤害
+EQUAL S28 初级伤害
+#ACT
+SetNewItemValue -1 1 + 5
+
+#OR
+EQUAL S25 高级伤害
+EQUAL S26 高级伤害
+EQUAL S27 高级伤害
+EQUAL S28 高级伤害
+#ACT
+SetNewItemValue -1 1 + 10
+
+#OR
+EQUAL S25 超级伤害
+EQUAL S26 超级伤害
+EQUAL S27 超级伤害
+EQUAL S28 超级伤害
+#ACT
+SetNewItemValue -1 1 + 20
+
+#OR
+EQUAL S25 泰坦之力
+EQUAL S26 泰坦之力
+EQUAL S27 泰坦之力
+EQUAL S28 泰坦之力
+#ACT
+CHANGEITEMADDVALUE -1 2 + 500
+CHANGEITEMADDVALUE -1 3 + 500
+CHANGEITEMADDVALUE -1 4 + 500
+
+
+#OR
+EQUAL S25 修罗之力
+EQUAL S26 修罗之力
+EQUAL S27 修罗之力
+EQUAL S28 修罗之力
+#ACT
+CHANGEITEMADDVALUE -1 2 + 1000
+CHANGEITEMADDVALUE -1 3 + 1000
+CHANGEITEMADDVALUE -1 4 + 1000
+
+#OR
+EQUAL S25 寒刀之力
+EQUAL S26 寒刀之力
+EQUAL S27 寒刀之力
+EQUAL S28 寒刀之力
+#ACT
+CHANGEITEMADDVALUE -1 2 + 1500
+CHANGEITEMADDVALUE -1 3 + 1500
+CHANGEITEMADDVALUE -1 4 + 1500
+
+#OR
+EQUAL S25 荆棘之伤
+EQUAL S26 荆棘之伤
+EQUAL S27 荆棘之伤
+EQUAL S28 荆棘之伤
+#ACT
+SetNewItemValue -1 5 = 10
+
+#OR
+EQUAL S25 初级打宝
+EQUAL S26 初级打宝
+EQUAL S27 初级打宝
+EQUAL S28 初级打宝
+#ACT
+MOV N$BUFF打宝 10
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+#OR
+EQUAL S25 高级打宝
+EQUAL S26 高级打宝
+EQUAL S27 高级打宝
+EQUAL S28 高级打宝
+#ACT
+MOV N$BUFF打宝 20
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+#OR
+EQUAL S25 超级打宝
+EQUAL S26 超级打宝
+EQUAL S27 超级打宝
+EQUAL S28 超级打宝
+#ACT
+MOV N$BUFF打宝 40
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+}
+;------------------------------------------------------
+[@攻击勋章]
+{
+#IF
+CHECKLEVELEX > 0
+#ACT
+SETSHOWITEMMSG 0
+MOV S25
+MOV S26
+MOV S27
+MOV N$斩杀威力 0
+MOV S$鬼魅重重
+MOV S$无尽束缚
+MOV S$苍云虚弱
+
+#IF
+CHECKSOCKETABLEITEM 16 0 S24 S25
+CHECKSOCKETABLEITEM 16 1 S24 S26
+CHECKSOCKETABLEITEM 16 2 S24 S27
+CHECKSOCKETABLEITEM 16 3 S24 S28
+#ACT
+
+#OR
+EQUAL S25 初级斩杀
+EQUAL S26 初级斩杀
+EQUAL S27 初级斩杀
+EQUAL S28 初级斩杀
+#ACT
+MOV N$斩杀威力 10
+
+#OR
+EQUAL S25 高级斩杀
+EQUAL S26 高级斩杀
+EQUAL S27 高级斩杀
+EQUAL S28 高级斩杀
+#ACT
+MOV N$斩杀威力 15
+
+#OR
+EQUAL S25 超级斩杀
+EQUAL S26 超级斩杀
+EQUAL S27 超级斩杀
+EQUAL S28 超级斩杀
+#ACT
+MOV N$斩杀威力 30
+
+#OR
+EQUAL S25 鬼魅重重
+EQUAL S26 鬼魅重重
+EQUAL S27 鬼魅重重
+EQUAL S28 鬼魅重重
+#ACT
+MOV S$鬼魅重重 鬼魅重重
+
+#OR
+EQUAL S25 无尽束缚
+EQUAL S26 无尽束缚
+EQUAL S27 无尽束缚
+EQUAL S28 无尽束缚
+#ACT
+MOV S$无尽束缚 无尽束缚
+
+#OR
+EQUAL S25 苍云虚弱
+EQUAL S26 苍云虚弱
+EQUAL S27 苍云虚弱
+EQUAL S28 苍云虚弱
+#ACT
+MOV S$苍云虚弱 苍云虚弱
+
+
+#IF
+RANDOM 99
+LARGE N$斩杀威力 0
+CHECKCURRTARGETRACE = 0
+#ACT
+<$CURRRTARGETNAME>.MOVEX N$斩杀威力 <$STR(N$斩杀威力)>
+<$CURRRTARGETNAME>.DIV N$斩杀血量 <$MAXHP> 100
+<$CURRRTARGETNAME>.MUL <$STR(N$斩杀血量)> <$STR(N$斩杀威力)>
+<$CURRRTARGETNAME>.HUMANHP - <$STR(N$斩杀血量)>
+<$CURRRTARGETNAME>.PLAYEFFECT 15 193 5 1 100 0
+GuildNoticeMsg 249 233 〖提示〗『<$USERNAME>』成功激发【斩杀BUFF】斩掉“<$CURRRTARGETNAME>”[<$STR(N$斩杀威力)>％]血量....
+BREAK
+
+#IF
+RANDOM 99
+EQUAL S$鬼魅重重 鬼魅重重
+CHECKCURRTARGETRACE = 0
+#ACT
+<$CURRRTARGETNAME>.SCREENEFFECT 24 16 14 100 10 1 300 0 0
+GuildNoticeMsg 249 0 〖提示〗『<$USERNAME>』成功触发【鬼魅重重BUFF】导致对手“<$CURRRTARGETNAME>”失明(2)秒....
+BREAK
+
+#IF
+RANDOM 99
+EQUAL S$无尽束缚 无尽束缚
+CHECKCURRTARGETRACE = 0
+#ACT
+<$CURRRTARGETNAME>.ChangeModeEx 11 3 1
+GuildNoticeMsg 254 0 〖提示〗『<$USERNAME>』成功触发【无尽束缚BUFF】将对手“<$CURRRTARGETNAME>”禁锢(3)秒....
+BREAK
+
+
+#IF
+RANDOM 99
+EQUAL S$苍云虚弱 苍云虚弱
+CHECKCURRTARGETRACE = 0
+#ACT
+<$CURRRTARGETNAME>.ChangeSpeed 1 -10 5
+<$CURRRTARGETNAME>.ChangeSpeed 2 -10 5
+GuildNoticeMsg 254 0 〖提示〗『<$USERNAME>』成功触发【苍云虚弱BUFF】将对手“<$CURRRTARGETNAME>”打虚弱了....
+BREAK
+
+#IF
+RANDOM 99
+CHECKCURRTARGETRACE = 0
+CHECKTITLE 独孤求败
+#ACT
+<$CURRRTARGETNAME>.take 随机传送卷 99
+<$CURRRTARGETNAME>.take 比奇传送石 99
+<$CURRRTARGETNAME>.take 盟重传送石 99
+<$CURRRTARGETNAME>.take 随机传送石 99
+<$CURRRTARGETNAME>.take 随机传送卷包 99
+SENDMSG 6 独孤求败称号BUFF触发【<$CURRRTARGETNAME>】被你打的无处可逃。。
+SENDMSG 6 独孤求败称号BUFF触发【<$CURRRTARGETNAME>】被你打的无处可逃。。
+SENDMSG 6 独孤求败称号BUFF触发【<$CURRRTARGETNAME>】被你打的无处可逃。。
+SENDMSG 6 独孤求败称号BUFF触发【<$CURRRTARGETNAME>】被你打的无处可逃。。
+<$CURRRTARGETNAME>.SENDMSG 6 独孤求败称号BUFF触发你的随机全部被打掉了。。
+<$CURRRTARGETNAME>.SENDMSG 6 独孤求败称号BUFF触发你的随机全部被打掉了。。
+<$CURRRTARGETNAME>.SENDMSG 6 独孤求败称号BUFF触发你的随机全部被打掉了。。
+<$CURRRTARGETNAME>.SENDMSG 6 独孤求败称号BUFF触发你的随机全部被打掉了。。
+}
+;------------------------------------------------------
+[@被攻勋章]
+{
+#IF
+CHECKLEVELEX > 0
+#ACT
+SETSHOWITEMMSG 0
+MOV S25
+MOV S26
+MOV S27
+MOV S$毁灭之力
+MOV N$复苏之风 0
+MOV S$刺客诡道
+MOV S$无敌模式
+
+#IF
+CHECKSOCKETABLEITEM 16 0 S24 S25
+CHECKSOCKETABLEITEM 16 1 S24 S26
+CHECKSOCKETABLEITEM 16 2 S24 S27
+CHECKSOCKETABLEITEM 16 3 S24 S28
+#ACT
+
+#OR
+EQUAL S25 毁灭之力
+EQUAL S26 毁灭之力
+EQUAL S27 毁灭之力
+EQUAL S28 毁灭之力
+#ACT
+MOV S$毁灭之力 毁灭之力
+
+#OR
+EQUAL S25 复苏之风
+EQUAL S26 复苏之风
+EQUAL S27 复苏之风
+EQUAL S28 复苏之风
+#ACT
+MOV N$复苏之风 5
+
+#OR
+EQUAL S25 刺客诡道
+EQUAL S26 刺客诡道
+EQUAL S27 刺客诡道
+EQUAL S28 刺客诡道
+#ACT
+MOV S$刺客诡道 刺客诡道
+
+#OR
+EQUAL S25 无敌模式
+EQUAL S26 无敌模式
+EQUAL S27 无敌模式
+EQUAL S28 无敌模式
+#ACT
+MOV S$无敌模式 无敌模式
+
+#IF
+RANDOM 99
+LARGE N$复苏之风 0
+CHECKUSEITEM 16
+#ACT
+DIV N$生生回血 <$MAXHP> 100
+MUL <$STR(N$生生回血)> <$STR(N$复苏之风)>
+HUMANHP + <$STR(N$生生回血)>
+PLAYEFFECT 15 70 10 1 100 0
+GuildNoticeMsg 254 0 〖提示〗您成功触发【复苏之风BUFF】瞬间恢复[<$STR(N$复苏之风)>%]血量.... Self
+BREAK
+
+#IF
+RANDOM 99
+EQUAL S$刺客诡道 刺客诡道
+CHECKUSEITEM 16
+#ACT
+ChangeModeEx 2 1
+SETBODYCOLOR 236 1
+SendCenterMsg 230 0 〖战报〗『<$USERNAME>』触发【刺客诡道BUFF】→隐身[1]秒.... 1 6
+Break
+;--------------------------
+#IF
+RANDOM 99
+EQUAL N$毁灭之力 0
+<$CURRRTARGETNAME>.EQUAL S$毁灭之力 毁灭之力
+#ACT
+POWERRATE 100 5
+MOV N$毁灭之力 5
+DelayCall 5000 @恢复神力
+SendCenterMsg 254 233 〖战报〗『<$USERNAME>』不幸中了『<$CURRRTARGETNAME>』的【毁灭之力BUFF→攻击倍数消失(5)秒】.... 1 6
+Break
+;----------------------------------------渡劫禁止项
+#IF
+ISONMAP dj1
+#ACT
+BREAK
+;---------------------------------------- 渡劫禁止项
+#IF
+RANDOM 3
+not EQUAL U6 2
+not EQUAL U6 3
+<$CURRRTARGETNAME>.EQUAL U7 1
+#ACT
+MOV U6 1
+MOV U5 10
+SETONTIMER 45 1
+
+#IF
+RANDOM 3
+not EQUAL U6 3
+<$CURRRTARGETNAME>.EQUAL U7 2
+#ACT
+MOV U6 2
+MOV U5 10
+SETONTIMER 45 1
+
+#IF
+RANDOM 3
+not EQUAL U6 3
+<$CURRRTARGETNAME>.EQUAL U7 3
+#ACT
+MOV U6 3
+MOV U5 10
+SETONTIMER 45 1
+
+#IF
+not <$CURRRTARGETNAME>.EQUAL U7 3
+EQUAL U4 0
+CHECKUSEITEM 16
+EQUAL S$无敌模式 无敌模式
+SMALL <$HP> <$STR(N$无敌计算)>
+#ACT
+ChangeModeEx 1 1
+PLAYEFFECT 15 80 10 1 100 0
+SendCenterMsg 146 245 提示：『<$USERNAME>』触发【无敌模式BUFF】→无敌[1]秒.... 1 6
+MOV U4 180
+SetClientBuff 6 1 86 <$STR(U4)> 215/[BUFF无敌模式]:\253/正在冷却中... -20 0
+SETONTIMER 46 1
+BREAK
+
+[@恢复神力]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV N$毁灭之力 0
+#CALL [\大熊功能\职位计算.txt] @开始计算
+SENDMSG 6 〖提示〗攻击倍数已恢复....
+Break
+
+}

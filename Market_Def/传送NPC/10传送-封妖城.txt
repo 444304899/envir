@@ -1,0 +1,47 @@
+[@main]
+#if
+#act
+#say
+\ \ \ \
+<>              <勇士你好,欢迎来到《自由幻想》的世界!/AUTOCOLOR=254>\ \
+
+<>          <PLAYIMG:7:10:5:100:0:-1><【地图介绍】：/AUTOCOLOR=150> <新人必经之地./AUTOCOLOR=250>   \
+<>          <PLAYIMG:7:10:5:100:0:-1><【爆率说明】：/AUTOCOLOR=150> <前期装备,元宝/AUTOCOLOR=161>\
+<>          <PLAYIMG:7:10:5:100:0:-1><【进入条件】：/AUTOCOLOR=150><进图需要等级达到150级+人物5转/AUTOCOLOR=151>  \
+<>          <PLAYIMG:7:10:5:100:0:-1><【特别说明】：/AUTOCOLOR=150><本服所有装备打Boss均可爆出!/AUTOCOLOR=58>  \ \
+<>     <ItemShow:913:0:40:-9:1>   <ItemShow:908:0:40:-9:1>   <ItemShow:907:0:40:-9:1>   <ItemShow:1076:0:40:-9:1>\ \ \
+<>                        <IMG:196:6:0:-9/@传送1>
+
+
+[@传送1]
+
+
+#or
+CHECKRENEWLEVEL > 4
+CHECKLEVELEX > 149
+#act
+mapmove 2dl 372 339
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+#elseact
+messagebox [提示:]\\进图失败,请检查你的等级.人物转生是否达到要求.
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

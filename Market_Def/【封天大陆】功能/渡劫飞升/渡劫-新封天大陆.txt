@@ -1,0 +1,277 @@
+[@MAIN]
+
+
+#IF
+small u2 1
+#ACT
+messagebox [提示]：这里不适合你。。。
+break
+
+
+
+#IF
+#ACT
+MOV N$属性加成
+MOV N$血量加成
+MOV N$飞升几率
+MOV N$飞升等级
+MOV N$飞升降级
+MOV S$称号名称
+MOV S$材料名称
+MOV S$图片显示
+MOV S$打坐特效
+
+
+
+#IF
+EQUAL U2 9
+#ACT
+MOV N$属性加成 2000
+MOV N$血量加成 30000
+MOV N$元素加成 200
+MOV N$雷劫伤害 600000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 1000000000
+MOV N$材料数量 20000
+MOV S$称号名称 神境
+MOV S$打坐特效 <PLAYIMG:28:858:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得超脱境称号
+GOTO @飞升2
+
+break
+#IF
+EQUAL U2 8
+#ACT
+MOV N$属性加成 1800
+MOV N$血量加成 27000
+MOV N$元素加成 180
+MOV N$雷劫伤害 550000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 900000000
+MOV N$材料数量 9999
+MOV S$称号名称 九源至尊
+MOV S$打坐特效 <PLAYIMG:10:858:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得九源至尊称号
+GOTO @飞升2
+
+break
+#IF
+EQUAL U2 7
+#ACT
+MOV N$属性加成 1600
+MOV N$血量加成 24000
+MOV N$元素加成 160
+MOV N$雷劫伤害 500000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 800000000
+MOV N$材料数量 9999
+MOV S$称号名称 八源至尊
+MOV S$打坐特效 <PLAYIMG:10:858:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得八源至尊称号
+GOTO @飞升2
+break
+
+
+#IF
+EQUAL U2 6
+#ACT
+MOV N$属性加成 1400
+MOV N$血量加成 21000
+MOV N$元素加成 140
+MOV N$雷劫伤害 450000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 700000000
+MOV N$材料数量 9999
+MOV S$称号名称 七源至尊
+MOV S$打坐特效 <PLAYIMG:28:852:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得七源至尊称号
+GOTO @飞升2
+BREAK
+
+#IF
+EQUAL U2 5
+#ACT
+MOV N$属性加成 1200
+MOV N$血量加成 18000
+MOV N$元素加成 120
+MOV N$雷劫伤害 400000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 600000000
+MOV N$材料数量 9999
+MOV S$称号名称 六源道尊
+MOV S$打坐特效 <PLAYIMG:28:852:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得六源道尊称号
+GOTO @飞升2
+BREAK
+#IF
+EQUAL U2 4
+#ACT
+MOV N$属性加成 1000
+MOV N$血量加成 15000
+MOV N$元素加成 100
+MOV N$雷劫伤害 350000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 500000000
+MOV N$材料数量 9999
+MOV S$称号名称 五源道尊
+MOV S$打坐特效 <PLAYIMG:28:852:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得五源道尊称号
+GOTO @飞升2
+BREAK
+#IF
+EQUAL U2 3
+#ACT
+MOV N$属性加成 800
+MOV N$血量加成 12000
+MOV N$元素加成 80
+MOV N$雷劫伤害 300000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 400000000
+MOV N$材料数量 9999
+MOV S$称号名称 四源道尊
+MOV S$打坐特效 <PLAYIMG:28:846:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得四源道尊称号
+GOTO @飞升2
+BREAK
+#IF
+EQUAL U2 2
+#ACT
+MOV N$属性加成 600
+MOV N$血量加成 9000
+MOV N$元素加成 60
+MOV N$雷劫伤害 250000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 300000000
+MOV N$材料数量 9999
+MOV S$称号名称 三源道主
+MOV S$打坐特效 <PLAYIMG:28:846:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得三源道主称号
+GOTO @飞升2
+BREAK
+#IF
+EQUAL U2 1
+#ACT
+MOV N$属性加成 400
+MOV N$血量加成 6000
+MOV N$元素加成 40
+MOV N$雷劫伤害 200000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 200000000
+MOV N$材料数量 5000
+MOV S$称号名称 二源道主
+MOV S$打坐特效 <PLAYIMG:28:846:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得二源道主称号
+GOTO @飞升2
+BREAK
+
+
+
+
+
+[@飞升2]
+#IF
+#ACT
+;CloseBigDialogBox
+#say
+<$STR(S$打坐特效)>\
+<><ImgEx:36:9:10:11:475:0|140#按“ESC”即可关闭/@EXIT>\
+<>\ \
+<><ImgEx:13:416:416:416:485:-75|140#按“ESC”即可关闭/@EXIT>\
+<>                                                          <渡劫境界:/FCOLOR=151>  {<$STR(S$称号名称)>/FCOLOR=250} \ \
+<>                                                          <下一境界属性增加/FCOLOR=151>  \
+<>                                                          <属性增加:/FCOLOR=151>   {+ <$STR(N$属性加成)>/FCOLOR=254}   <PLAYIMG:61:447:10:200:0:-10>\
+<>                                                          <血量增加:/FCOLOR=151>   {+ <$STR(N$血量加成)>/FCOLOR=254}   <PLAYIMG:61:447:10:200:0:-10>\
+<>                                                          <暴率增加:/FCOLOR=151>   {+ <$STR(N$元素加成)>%/FCOLOR=254}   <PLAYIMG:61:447:10:200:0:-10>\
+;<>                                                          <忽视防御:/FCOLOR=151>   {+ <$STR(N$元素加成)>%/FCOLOR=254}   <PLAYIMG:61:447:10:200:0:-10>\
+<> \ \ \
+<IMGEX:29:90:91:90:210:168|151#所需费用：^254#    <$STR(N$飞升元宝)>元宝 + <$STR(N$材料数量)>个云顶结晶^-^151#突破说明：^87#    九重雷劫共：？？？？伤害^87#    转生等级要求：<$STR(N$飞升等级)>级^-^249#<$STR(S$底部显示)>/@老白修仙>       \
+
+
+[@观礼]
+#IF
+EQUAL A19
+#ACT
+messagebox 提示：\　\现在没人渡劫看啥？
+#ELSEACT
+MAP DJT
+BREAK
+
+[@老白修仙]
+;#IF
+;EQUAL U12 0
+;#ACT
+;#ELSEACT
+;messagebox [无法飞升]：不符合要求！
+;break
+
+#IF
+EQUAL A19
+#ACT
+#ELSEACT
+messagebox 提示：\　\现在渡劫之地【<$STR(A19)>】在渡劫，请排队吧！
+break
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV N$元宝检测 <$GAMEGOLD>
+
+#IF
+SMALL N$元宝检测 <$STR(N$飞升元宝)>
+#ACT
+MESSAGEBOX 提示：\　\你的元宝不足<$STR(N$飞升元宝)>个，无法突破！
+BREAK
+
+
+#IF
+CHECKRENEWLEVEL < <$STR(N$飞升等级)>
+#ACT
+messagebox [无法突破]：本次突破转生需要达到“<$STR(N$飞升等级)>”级！
+break
+
+
+#IF
+CHECKBAGSIZE 2
+#ACT
+movr N$成功率 101
+#ELSEACT
+messagebox 你背包太满了，请至少留出二格！
+break
+
+#IF
+checkitem 云顶结晶 <$STR(N$材料数量)>
+#ACT
+MOV A19 <$USERNAME>
+GAMEGOLD - <$STR(N$飞升元宝)>
+TAKE  云顶结晶 <$STR(N$材料数量)>
+MAPMOVE DJT 38 39
+GuildNoticeMsg 250 0 传闻：{[%s]|151:0:1}前往渡劫台挑战雷劫他能否突破{“<$STR(S$称号名称)>”|70:0:1}？？？
+SENDDELAYMSG 羽化飞升：雷劫将在%s后降临，请做好准备， 10 255 1 @降劫
+Gmexecute 开始提问 @观看渡劫
+#ELSEACT
+messagebox 提示：\　\你的云顶结晶不足<$STR(N$材料数量)>个，或元宝不足无法突破！
+break
+
+[@降劫]
+#ACT
+MOV u34 0
+SetOnTimer 99 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

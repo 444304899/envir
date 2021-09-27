@@ -1,0 +1,57 @@
+[@main]
+#say
+<Img|x=18.0|y=-1.0|show=4|bg=1|img=public/box/001.png|esc=1|move=1>
+<Button|x=771.0|y=64.0|color=255|size=18|mimg=public/button/guanbi2.png|pimg=public/button/guanbi1.png|nimg=public/button/guanbi.png|link=@exit>
+<Text|x=193.0|y=216.0|color=151|size=24|text=刷装备|link=@刷装备>
+<Text|x=194.0|y=314.0|color=151|size=24|text=一键清理背包|link=@yes>
+
+[@清理]
+提醒:本操作将清空你背包里的所有物品.\
+所有请将背包里的贵重物品保存后再来！\ \
+你确定要清空背包所有物品吗？\ \
+
+<是的/@yes>   <返回/@main>
+
+[@yes]
+#ACT
+Gmexecute 清理背包 <$USERNAME>
+;GmExeCute ClearBag Self
+SendMsg 5 [提示]:<$USERNAME>你的背包已经全部清空!
+close
+
+[@刷装备]
+#if
+#act
+
+
+give	澄明的道心
+give	你是恩赐也是劫
+give	浊酒恋红尘
+give	极过·极未·极逍遥
+give	鸿蒙灵宝·再穷无非讨饭
+give	鸿蒙灵宝·不死终会出头
+give	青灯古庙·伴一生
+give	昊天锤
+give	附心丝
+give	鸿蒙灵宝·【量天尺】
+give	启龙·因果魂爪
+give	只是一缕烛火
+give	囚封天之道
+give	云雾
+give	善庸混天绫
+give	鸿蒙灵宝·【雷霄甲】
+give	刀刀一
+give	刀刀二
+give	法神头盔
+give	法神项链
+give	法神手镯
+give	法神护腕
+give	法神戒指
+give	法神指环
+give	法神披风
+give	血饮
+
+
+
+
+close

@@ -1,0 +1,607 @@
+[@大爆系统a]
+{
+
+
+#IF
+EQUAL T3
+#ACT
+MOV T3 平平常常
+
+
+
+#IF
+#ACT
+GOTO @超爽大爆界面
+
+[@超爽大爆界面]
+#IF
+#ACT
+GOTO @超爽大爆配置
+#SAY
+
+\ \
+<Text:爆率不够高？快来开启超爽大爆，击杀:-2:30{FCOLOR=255}><Text:地图级别BOSS:-2:30{FCOLOR=249}><Text:可触发大爆效果！:-2:30{FCOLOR=255}>\
+<Text:每日上线，免费玩家可享受:-4:30{FCOLOR=255}><Text:免费5次大爆:-2:30{FCOLOR=249}><Text:效果，每日00点重置次数！:-2:30{FCOLOR=255}>\
+<Text:默认超爽大爆效果为：:-2:30{FCOLOR=255}><Text:平平常常:-2:30{FCOLOR=249}><Text:，您可以使用50灵符刷新大爆等级！:-2:30{FCOLOR=255}>\
+<Text:每当超爽大爆效果成功触发后，大爆等级将会自动还原成：平平常常！:-2:30{FCOLOR=253}>\
+<Text:当前大爆等级：:115:35{FCOLOR=254}><Text:<$STR(T3)>:115:35{FCOLOR=<$STR(N$等级颜色)>}>\
+
+<Img:431:14:126:35><Text:今日剩余大爆次数:26:123{FCOLOR=249}><Img:<$STR(N$次数图标1)>:14:<$STR(S$大爆坐标1)>:75><Img:<$STR(N$次数图标2)>:14:<$STR(S$大爆坐标2)>:75>\
+
+
+
+<Text: （50灵符刷新）:10:124{FCOLOR=254}><Text:（<$STR(S$大爆开关_描述)>）:155:124{FCOLOR=<$STR(N$大爆开关_颜色)>}>\
+<Text:《 刷新大爆等级 》:2:129{FCOLOR=251}/@刷新大爆等级><Text:《 <$STR(S$大爆开关_按钮)> 》:137:129{FCOLOR=251}/@开启超爽大爆>\
+<Text:┌:-11:134{FCOLOR=241}><Text:┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄:-11:134{FCOLOR=109}><Text:┐:-11:134{FCOLOR=241}>\
+<Text:┆:-11:134{FCOLOR=109}> <Text:不同等级的大爆效果触发爆率效果不同，以下为大爆等级效果简介:-11:134{FCOLOR=249}> <Text:┆:-11:134{FCOLOR=109}>\
+<Text:┆:-11:134{FCOLOR=109}> <Text:平平常常：2.1倍大爆倍数、触发规则：人物爆率：<$STR(N$爆率显示)>% × 2.1倍:-11:134{FCOLOR=255}> <Text:┆:-11:134{FCOLOR=109}>\
+<Text:┆:-11:134{FCOLOR=109}> <Text:时来运转：2.2倍大爆倍数、触发规则：人物爆率：<$STR(N$爆率显示)>% × 2.2倍:-11:134{FCOLOR=243}> <Text:┆:-11:134{FCOLOR=109}>\
+<Text:┆:-11:134{FCOLOR=109}> <Text:顺风顺水：2.3倍大爆倍数、触发规则：人物爆率：<$STR(N$爆率显示)>% × 2.3倍:-11:134{FCOLOR=70}> <Text:┆:-11:134{FCOLOR=109}>\
+<Text:┆:-11:134{FCOLOR=109}> <Text:天随人意：2.4倍大爆倍数、触发规则：人物爆率：<$STR(N$爆率显示)>% × 2.4倍:-11:134{FCOLOR=250}> <Text:┆:-11:134{FCOLOR=109}>\
+<Text:┆:-11:134{FCOLOR=109}> <Text:神来气旺：2.5倍大爆倍数、触发规则：人物爆率：<$STR(N$爆率显示)>% × 2.5倍:-11:134{FCOLOR=251}> <Text:┆:-11:134{FCOLOR=109}>\
+<Text:┆:-11:134{FCOLOR=109}> <Text:鸿运当头：2.6倍大爆倍数、触发规则：人物爆率：<$STR(N$爆率显示)>% × 2.6倍:-11:134{FCOLOR=253}> <Text:┆:-11:134{FCOLOR=109}>\
+<Text:┆:-11:134{FCOLOR=109}> <Text:洪福齐天：3.0倍大爆倍数、触发规则：人物爆率：<$STR(N$爆率显示)>% × 3.0倍:-11:134{FCOLOR=249}> <Text:┆:-11:134{FCOLOR=109}>\
+<Text:└:-11:134{FCOLOR=241}><Text:┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄:-11:134{FCOLOR=109}><Text:┘:-11:134{FCOLOR=241}>\
+<Text:大爆次数加入会员、称号晋升自然增加，称号越高大爆次数越多:5:128{FCOLOR=21}> \
+<Text:大爆只针对BOSS触发，特殊BOSS除外,次数有限,开启前请慎重考虑:5:128{FCOLOR=21}> \
+
+
+[@超爽大爆配置]
+#IF
+#ACT
+MOV N$大爆次数 5
+
+#IF
+Check [101] 1
+#ACT
+INC N$大爆次数 5
+
+#IF
+CHECKTITLE 千元户
+#act
+INC N$大爆次数 5
+
+#IF
+CHECKTITLE 小土豪
+#act
+INC N$大爆次数 10
+
+
+#IF
+CHECKTITLE 魔法追寻者
+#act
+INC N$大爆次数 1
+
+#IF
+CHECKTITLE 海加尔的复仇
+#act
+INC N$大爆次数 2
+
+#IF
+CHECKTITLE 地狱咆哮终结者
+#act
+INC N$大爆次数 3
+
+#IF
+CHECKTITLE 奥格瑞玛解放者
+#act
+INC N$大爆次数 4
+
+#IF
+CHECKTITLE 奥格瑞玛征服者
+#act
+INC N$大爆次数 5
+
+#IF
+CHECKTITLE 破碎世界的守护者
+#act
+INC N$大爆次数 6
+
+#IF
+CHECKTITLE 艾泽拉斯的救世主
+#act
+INC N$大爆次数 7
+
+#IF
+CHECKTITLE 觉醒·热血之魂
+#act
+INC N$大爆次数 8
+
+#IF
+CHECKTITLE 集结·战斗号角
+#act
+INC N$大爆次数 9
+
+#IF
+CHECKTITLE 暴走·极限突破
+#act
+INC N$大爆次数 10
+
+#IF
+CHECKTITLE 天启·信仰之歌
+#act
+INC N$大爆次数 11
+
+#IF
+CHECKTITLE 天启·信仰之歌
+#act
+INC N$大爆次数 12
+
+#IF
+CHECKTITLE 天启·信仰之歌
+#act
+INC N$大爆次数 12
+
+#IF
+CHECKTITLE 进化之光·混沌开天
+#act
+INC N$大爆次数 13
+
+#IF
+CHECKTITLE 战鼓震天·异界战歌
+#act
+INC N$大爆次数 14
+
+#IF
+CHECKTITLE 毕方之炎·夜空魅影
+#act
+INC N$大爆次数 15
+
+#IF
+CHECKTITLE 勇士的荣耀·最终幻想
+#act
+INC N$大爆次数 18
+
+
+
+#IF
+#ACT
+DEC N$大爆次数 <$STR(J2)>
+MOV S$大爆开关_描述 大爆尚未开启
+MOV S$大爆开关_按钮 开启超爽大爆
+MOV N$大爆开关_颜色 241
+
+
+
+#IF
+EQUAL N$大爆次数 0
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 420
+MOV N$次数图标2 430
+
+#IF
+EQUAL N$大爆次数 1
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 421
+MOV N$次数图标2 430
+
+#IF
+EQUAL N$大爆次数 2
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 422
+MOV N$次数图标2 430
+
+#IF
+EQUAL N$大爆次数 3
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 423
+MOV N$次数图标2 430
+
+#IF
+EQUAL N$大爆次数 4
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 424
+MOV N$次数图标2 430
+
+
+#IF
+EQUAL N$大爆次数 5
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 425
+MOV N$次数图标2 430
+
+#IF
+EQUAL N$大爆次数 6
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 426
+MOV N$次数图标2 430
+
+#IF
+EQUAL N$大爆次数 7
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 427
+MOV N$次数图标2 430
+
+#IF
+EQUAL N$大爆次数 8
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 428
+MOV N$次数图标2 430
+
+#IF
+EQUAL N$大爆次数 9
+#ACT
+MOV S$大爆坐标1 -32
+MOV S$大爆坐标2 -32
+MOV N$次数图标1 429
+MOV N$次数图标2 430
+
+
+#IF
+EQUAL N$大爆次数 10
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 420
+
+#IF
+EQUAL N$大爆次数 11
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 421
+
+#IF
+EQUAL N$大爆次数 12
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 422
+
+#IF
+EQUAL N$大爆次数 13
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 423
+
+#IF
+EQUAL N$大爆次数 14
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 424
+
+#IF
+EQUAL N$大爆次数 15
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 425
+
+#IF
+EQUAL N$大爆次数 16
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 426
+
+#IF
+EQUAL N$大爆次数 17
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 427
+
+#IF
+EQUAL N$大爆次数 18
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 428
+
+#IF
+EQUAL N$大爆次数 19
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 421
+MOV N$次数图标2 429
+
+#IF
+EQUAL N$大爆次数 20
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 420
+
+#IF
+EQUAL N$大爆次数 21
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 421
+
+#IF
+EQUAL N$大爆次数 22
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 422
+
+#IF
+EQUAL N$大爆次数 23
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 423
+
+#IF
+EQUAL N$大爆次数 24
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 424
+
+#IF
+EQUAL N$大爆次数 25
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 425
+
+#IF
+EQUAL N$大爆次数 26
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 426
+
+#IF
+EQUAL N$大爆次数 27
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 427
+
+#IF
+EQUAL N$大爆次数 28
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 428
+
+#IF
+EQUAL N$大爆次数 29
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 422
+MOV N$次数图标2 429
+
+#IF
+EQUAL N$大爆次数 30
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 423
+MOV N$次数图标2 420
+
+#IF
+EQUAL N$大爆次数 31
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 423
+MOV N$次数图标2 421
+
+#IF
+EQUAL N$大爆次数 32
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 423
+MOV N$次数图标2 422
+
+#IF
+EQUAL N$大爆次数 33
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 423
+MOV N$次数图标2 423
+
+#IF
+EQUAL N$大爆次数 34
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 423
+MOV N$次数图标2 424
+
+#IF
+EQUAL N$大爆次数 35
+#ACT
+MOV S$大爆坐标1 -44
+MOV S$大爆坐标2 -47
+MOV N$次数图标1 423
+MOV N$次数图标2 425
+
+
+#IF
+LARGE U59 0
+#ACT
+MOV S$大爆开关_描述 大爆已经开启
+MOV S$大爆开关_按钮 关闭超爽大爆
+MOV N$大爆开关_颜色 250
+
+
+#IF
+EQUAL T3 平平常常
+#ACT
+MOV N$等级颜色 255
+
+#IF
+EQUAL T3 时来运转
+#ACT
+MOV N$等级颜色 243
+
+#IF
+EQUAL T3 顺风顺水
+#ACT
+MOV N$等级颜色 70
+
+#IF
+EQUAL T3 天随人意
+#ACT
+MOV N$等级颜色 250
+
+#IF
+EQUAL T3 神来气旺
+#ACT
+MOV N$等级颜色 251
+
+#IF
+EQUAL T3 鸿运当头
+#ACT
+MOV N$等级颜色 253
+
+#IF
+EQUAL T3 洪福齐天
+#ACT
+MOV N$等级颜色 249
+BREAK
+
+
+
+
+
+
+[@开启超爽大爆]
+#IF
+EQUAL U59 0
+#ACT
+MOV U59 1
+MESSAGEBOX 已开启超爽大爆！
+GOTO @超爽大爆界面
+BREAK
+
+#IF
+EQUAL U59 1
+#ACT
+MOV U59 0
+MESSAGEBOX 已关闭超爽大爆！
+GOTO @超爽大爆界面
+BREAK
+
+
+[@刷新大爆等级]
+#IF
+EQUAL T3 洪福齐天
+#ACT
+MESSAGEBOX 你当前超爽大爆等级已经满级！
+BREAK
+
+#IF
+CHECKGameGird < 50
+#ACT
+MESSAGEBOX 你当前账户中没有：50灵符
+BREAK
+
+#IF
+CHECKGameGird > 49
+#ACT
+GameGird - 50
+MOVR N$大爆随机 1 101
+GOTO @大爆等级赋值
+GOTO @超爽大爆界面
+SENDMOVEHINTMSG 大爆等级已刷新 151 0 170 -75
+BREAK
+
+
+[@大爆等级赋值]
+#IF
+EQUAL N$大爆随机 1
+#ACT
+MOV T3 洪福齐天
+SENDMSG 7 超爽大爆等级已刷新，你当前刷新的等级为：{<$STR(T3)>|249:0:0}
+BREAK
+
+#IF
+LARGE N$大爆随机 1
+SMALL N$大爆随机 5
+#ACT
+MOV T3 鸿运当头
+SENDMSG 7 超爽大爆等级已刷新，你当前刷新的等级为：{<$STR(T3)>|253:0:0}
+BREAK
+
+#IF
+LARGE N$大爆随机 4
+SMALL N$大爆随机 11
+#ACT
+MOV T3 神来气旺
+SENDMSG 7 超爽大爆等级已刷新，你当前刷新的等级为：{<$STR(T3)>|251:0:0}
+BREAK
+
+#IF
+LARGE N$大爆随机 10
+SMALL N$大爆随机 21
+#ACT
+MOV T3 天随人意
+SENDMSG 7 超爽大爆等级已刷新，你当前刷新的等级为：{<$STR(T3)>|250:0:0}
+BREAK
+
+#IF
+LARGE N$大爆随机 20
+SMALL N$大爆随机 36
+#ACT
+MOV T3 顺风顺水
+SENDMSG 7 超爽大爆等级已刷新，你当前刷新的等级为：{<$STR(T3)>|70:0:0}
+BREAK
+
+#IF
+LARGE N$大爆随机 35
+SMALL N$大爆随机 61
+#ACT
+MOV T3 时来运转
+SENDMSG 7 超爽大爆等级已刷新，你当前刷新的等级为：{<$STR(T3)>|243:0:0}
+BREAK
+
+#IF
+LARGE N$大爆随机 60
+SMALL N$大爆随机 101
+#ACT
+MOV T3 平平常常
+SENDMSG 7 超爽大爆等级已刷新，你当前刷新的等级为：{<$STR(T3)>|255:0:0}
+BREAK
+
+
+
+}
+

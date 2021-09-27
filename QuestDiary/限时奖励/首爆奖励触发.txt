@@ -1,0 +1,37 @@
+[@首爆奖励]
+{
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\限时奖励\首爆奖励数据.txt <$CURRTEMNAME>:
+#ACT
+GetStringPos  ..\QuestDiary\限时奖励\首爆奖励数据.txt <$CURRTEMNAME>:
+INC N0 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N0)>	S$无用	S$首爆金额
+INC N0 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N0)>	S$无用	S$首爆名额
+
+
+
+
+#if
+checkcontainstext <$Str(S$首爆名额)> 未领取
+#act
+DEC S$首爆金额 钻石
+CHANGEITEMADDVALUE -1  12 = 1
+MOV N$首爆名额 <$Str(S$首爆名额)>
+DelTextList   ..\QuestDiary\限时奖励\首爆奖励数据.txt <$CURRTEMNAME>:未领取
+GAMEPOINT + <$Str(S$首爆金额)>
+DEC N$首爆名额 1
+AddTextListEx ..\QuestDiary\限时奖励\首爆奖励数据.txt <$CURRTEMNAME>:[<$USERNAME>] <$Str(N0)>
+SENDMOVEMSG 0 253 255 100 1 <恭喜玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]在[/FCOLOR=161>{<$MapTitle>,<$X>,<$Y>/FCOLOR=250}<]处打到一个[/FCOLOR=161>{<$CURRTEMNAME>/FCOLOR=70}<]获得<$STR(S$首爆金额)>钻石现金奖励/FCOLOR=161>
+MESSAGEBOX  恭喜你获得永久奖励物品【<$CURRTEMNAME>】，获得<$STR(S$首爆金额)>钻石现金奖励！！
+MOV S$首爆金额
+MOV S$首爆名额
+MOV N$首爆名额
+MOV N0 0
+
+
+
+
+}

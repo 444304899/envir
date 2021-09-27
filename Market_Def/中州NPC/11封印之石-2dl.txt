@@ -1,0 +1,58 @@
+[@main]
+
+
+#if
+EQUAL G40 0
+#act
+MOV S$地图状态 未解封
+MOV S$进入按钮 <《解除-封印限制》/@解除>
+
+#if
+EQUAL G40 1
+#act
+MOV S$地图状态 已解封
+MOV S$进入按钮 <《进入-封印寺庙》/@进入>
+
+
+
+#if
+#act
+#say
+\ \ \ \ \
+<>     <这是一处被封印的寺庙，深处藏着你无法想象的恐怖存在！/AUTOCOLOR=254>\  \
+<>     <你必须解除封印，才能一步步踏入其中。否则将有大恐怖降临。/AUTOCOLOR=254>\  \
+
+
+
+
+<>          <PLAYIMG:7:10:5:100:0:-1><【地图状态】：/AUTOCOLOR=150> <[<$STR(S$地图状态)>]/AUTOCOLOR=250>   \
+<>          <PLAYIMG:7:10:5:100:0:-1><【解封说明】：/AUTOCOLOR=150> <解封需要/AUTOCOLOR=161><创世石碑X1/AUTOCOLOR=70>\
+<>          <PLAYIMG:7:10:5:100:0:-1><【进入条件】：/AUTOCOLOR=150><解封后全服玩家可进入！/AUTOCOLOR=151>\
+<>          <PLAYIMG:7:10:5:100:0:-1><【特别说明】：/AUTOCOLOR=150><可爆出一二大陆专属装备!/AUTOCOLOR=58>  \ \
+<>                        <$STR(S$进入按钮)>
+
+[@进入]
+
+
+#if
+EQUAL G40 1
+#act
+map 封印寺庙
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图:<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+[@解除]
+#if
+EQUAL G40 0
+checkitem 创世石碑 1
+#act
+take 创世石碑 1
+mov G40 1
+goto @main
+SENDMOVEMSG 0 249 251 350 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功解开了『封印寺庙』的禁忌，全服开启进入条件.地图在风之大陆，636.377进入！！
+SENDMOVEMSG 0 249 251 300 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功解开了『封印寺庙』的禁忌，全服开启进入条件.地图在风之大陆，636.377进入！！
+SENDMOVEMSG 0 249 251 400 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功解开了『封印寺庙』的禁忌，全服开启进入条件.地图在风之大陆，636.377进入！！
+#elseact
+MESSAGEBOX [提示:]\\解封失败,请检查你是否有创世石碑X1！
+break

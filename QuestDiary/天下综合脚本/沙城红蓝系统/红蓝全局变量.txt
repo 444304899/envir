@@ -1,0 +1,89 @@
+[@红蓝全局变量声明]
+{
+#IF
+#ACT
+VAR String GLOBAL 蓝方队伍名字
+VAR String GLOBAL 红方队伍名字
+VAR String GLOBAL 沙城状态控制
+VAR String GLOBAL 领奖状态控制
+VAR String GLOBAL 收人状态控制
+
+VAR Integer GLOBAL 沙城捐献总数
+VAR Integer GLOBAL 限制相差人数
+
+VAR Integer GLOBAL 红方总共人数
+VAR Integer GLOBAL 蓝方总共人数
+
+VAR Integer GLOBAL 红方在线人数
+VAR Integer GLOBAL 蓝方在线人数
+
+VAR Integer GLOBAL 红方达标人数
+VAR Integer GLOBAL 蓝方达标人数
+
+VAR Integer GLOBAL 红方大号人数
+VAR Integer GLOBAL 蓝方大号人数
+
+VAR Integer GLOBAL 对话框的编号
+VAR Integer GLOBAL 对话框图片号
+VAR Integer GLOBAL 沙奖励手续费
+VAR Integer GLOBAL 沙手续费记录
+VAR Integer GLOBAL 沙奖励实发数
+VAR Integer GLOBAL 扣全满后发数
+VAR Integer GLOBAL 胜方百分比数
+VAR Integer GLOBAL 胜方发奖数据
+VAR Integer GLOBAL 胜方数据记录
+VAR Integer GLOBAL 胜方平均金额
+VAR Integer GLOBAL 败方百分比数
+VAR Integer GLOBAL 败方发奖数据
+VAR Integer GLOBAL 败方数据记录
+VAR Integer GLOBAL 败方平均金额
+VAR Integer GLOBAL 全满百分比数
+VAR Integer GLOBAL 全满数据记录
+
+VAR Integer GLOBAL 胜方全满数据
+VAR Integer GLOBAL 胜方全满记录
+VAR Integer GLOBAL 败方全满数据
+VAR Integer GLOBAL 败方全满记录
+VAR Integer GLOBAL 胜满平均金额
+VAR Integer GLOBAL 败满平均金额
+
+;LOADVAR GLOBAL 蓝方队伍名字 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 红方队伍名字 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 沙城状态控制 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 领奖状态控制 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 收人状态控制 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 沙城捐献总数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 限制相差人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 红方总共人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 蓝方总共人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 红方在线人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 蓝方在线人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 红方达标人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 蓝方达标人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 红方大号人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 蓝方大号人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 对话框的编号 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 对话框图片号 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 沙奖励手续费 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 沙手续费记录 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 沙奖励实发数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 扣全满后发数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 胜方百分比数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 胜方发奖数据 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 胜方数据记录 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 胜方平均金额 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 败方百分比数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 败方发奖数据 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 败方数据记录 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 败方平均金额 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 全满百分比数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 全满数据记录 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+
+;LOADVAR GLOBAL 胜方全满数据 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 胜方全满记录 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 败方全满数据 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 败方全满记录 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+
+;LOADVAR GLOBAL 胜满平均金额 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+;LOADVAR GLOBAL 败满平均金额 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+}

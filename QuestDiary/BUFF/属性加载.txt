@@ -1,0 +1,73 @@
+[@属性加载]
+{
+
+#if
+#act
+MOV N$物防1 0
+MOV N$血量 0
+MOV N$炼体血量 0
+MOV N$炼体防御 0
+MOV N$爆发血量 0
+MOV N$攻击倍数 100
+ChangeHumAbility 1 = 0  ;防御下限
+ChangeHumAbility 2 = 0  ;防御上限
+ChangeHumAbility 5 = 0  ;物攻下限
+ChangeHumAbility 6 = 0  ;物攻上限
+ChangeHumAbility 11 = 0 ;HP
+ChangeHumAbility 12 = 0 ;MP
+
+
+#if
+LARGE U32 0
+#act
+MOV N$炼体血量 <$MAXHP>
+DIV N$炼体血量 100
+MUL N$炼体血量 <$STR(U32)>
+INC N$血量 <$STR(N$炼体血量)>
+MOV N$炼体防御 <$MAXAC>
+MUL N$炼体防御 <$STR(U32)>
+DIV N$炼体防御 100
+INC N$物防1 <$STR(N$炼体防御)>
+INC N$攻击倍数 <$STR(U32)>
+MOV N$按钮位置X <$SCREENWIDTH>
+DIV N$按钮位置X 50
+MOV N$按钮位置Y <$SCREENHEIGHT>
+DEC N$按钮位置Y 420
+ADDBUTTON 33 17 60 60 60 <$STR(N$按钮位置X)> <$STR(N$按钮位置Y)> 0 -1 *炼体爆发*[每秒扣取炼体精魄*1]\背包炼体精魄大于50个\加成炼体附加血量的2倍\点击开启,再次点击关闭
+
+
+#if
+EQUAL N$炼体爆发 1
+#act
+MOV N$爆发血量 <$STR(N$炼体血量)>
+MUL N$爆发血量 2
+INC N$血量 <$STR(N$爆发血量)>
+
+#if
+#act
+POWERRATE <$STR(N$攻击倍数)> 0
+
+#OR
+LARGE N$物防1 0
+LARGE N$物攻 0
+LARGE N$物攻1 0
+LARGE N$血量 0
+LARGE N$蓝量 0
+#act
+ChangeHumAbility 1 = 0  ;防御下限
+ChangeHumAbility 2 = <$STR(N$物防1)>  ;防御上限
+ChangeHumAbility 3 = 0  ;魔防下限
+ChangeHumAbility 4 = <$STR(N$魔防1)>  ;魔防上限
+ChangeHumAbility 5 = <$STR(N$物攻)>  ;物攻下限
+ChangeHumAbility 6 = <$STR(N$物攻1)>  ;物攻上限
+ChangeHumAbility 7 = 50  ;魔法下限
+ChangeHumAbility 8 = 50  ;魔法上限
+ChangeHumAbility 11 = <$STR(N$血量)> ;HP
+ChangeHumAbility 12 = <$STR(N$蓝量)> ;MP
+
+
+
+
+
+
+}

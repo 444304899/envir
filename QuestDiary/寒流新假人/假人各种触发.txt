@@ -1,0 +1,103 @@
+[@假人被攻击触发]
+{
+#IF
+isdummy
+#ACT
+MOV N$总血量A <$MAXHP>
+DIV N$总血量A 100
+MUL N$总血量A <$GLOBAL(假人_被人打血低百分之多少反击)>
+
+#IF
+isdummy
+CHECKCURRTARGETRACE = 0
+SMALL <$HP> <$STR(N$总血量A)>
+#ACT
+CHANGEATTATCKMODE 0
+DUMMYSTART
+;=======被人打，改变攻击模式 全体攻击。。 本身是红名模式、、不改 被攻击也会还手的。。
+
+#IF
+isdummy
+#ACT
+MOV N$总血量 <$MAXHP>
+DIV N$总血量 100
+MUL N$总血量 <$GLOBAL(假人_血低百分之多少回城)>
+MOV N$总蓝量 <$MAXMP>
+DIV N$总蓝量 100
+MUL N$总蓝量 20
+;========  下面检测被人打，血低于  <$GLOBAL(假人_血低百分之多少回城)>% 回城 =============
+#IF
+isdummy
+;CHECKCURRTARGETRACE = 0
+SMALL <$HP> <$STR(N$总血量)>
+#ACT
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+HUMANHP = <$MAXHP>
+HUMANMP = <$MAXMP>
+
+;========  下面检测被人打，血低于  <$GLOBAL(假人_血低于多少值回城)> 回城 =============
+#IF
+isdummy
+;CHECKCURRTARGETRACE = 0
+SMALL <$HP> <$GLOBAL(假人_血低于多少值回城)>
+#ACT
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+HUMANHP = <$MAXHP>
+HUMANMP = <$MAXMP>
+
+;========  下面检测被攻击，蓝低于20% 满蓝 =============
+#IF
+isdummy
+SMALL <$MP> <$STR(N$总蓝量)>
+#ACT
+HUMANMP = <$MAXMP>
+;========  下面检测被人物攻击，蓝低于 200 回城  然后满血满蓝 =============
+#IF
+isdummy
+CHECKCURRTARGETRACE = 0
+SMALL <$MP> 100
+#ACT
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+HUMANHP = <$MAXHP>
+HUMANMP = <$MAXMP>
+
+
+}
+
+[@假人补伤害]
+{
+#IF
+ISDUMMY
+#ACT
+MOVR N$寒流假人PK不会怕 <$GLOBAL(假人_补伤害最低值)> <$GLOBAL(假人_补伤害最高值)>
+M.HUMANHP - <$STR(N$寒流假人PK不会怕)>
+}
+
+[@假人吸血]
+{
+#IF
+ISDUMMY
+#ACT
+MOVR N$寒流假人PK不会虚 <$GLOBAL(假人_攻击吸血最低值)> <$GLOBAL(假人_攻击吸血最高值)>
+HUMANHP + <$STR(N$寒流假人PK不会虚)>
+
+}
+

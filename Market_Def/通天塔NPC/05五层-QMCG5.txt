@@ -1,0 +1,32 @@
+[@main]
+#if
+#say
+<《全民闯关》/FCOLOR=249> \ \
+<你当前所处位置:<$MapTitle>/FCOLOR=7> \ \
+<前往下一层需要:/FCOLOR=7><清理地图内所有怪物/FCOLOR=250>\ \
+<第五关奖励：188钻石 + 元宝*1000W/FCOLOR=254>\ \
+<>                             <《领取奖励，进入下一层》/@进图>\
+
+[@进图]
+#IF
+CheckMonMap QMCG5 1
+#ACT
+MESSAGEBOX 请先清理完地图内的所有怪物
+BREAK
+
+#IF
+CHECK [35] 0
+#ACT
+SET [35] 1
+GAMEPOINT + 188
+GAMEGOLD + 10000000
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+SENDMSG 0 【全民闯关】：玩家[<$USERNAME>]闯关成功，领取了第五关奖励：188钻石+1000W元宝！！
+SENDMSG 0 【全民闯关】：玩家[<$USERNAME>]闯关成功，领取了第五关奖励：188钻石+1000W元宝！！
+SENDMSG 0 【全民闯关】：玩家[<$USERNAME>]闯关成功，领取了第五关奖励：188钻石+1000W元宝！！
+BREAK
+
+
+

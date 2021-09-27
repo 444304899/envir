@@ -1,0 +1,56 @@
+[@main]
+#IF
+#SAY
+;GM请注意,所列各种脚本内有网关识别项,请勿修改,其他内容可按自己NPC样式修改
+<$USERNAME>你好，欢迎来到<$SERVERNAME>，很高兴为您服务\
+-----------------------注意充值事项------------------------\
+①本系统支持网上银行、微信扫码、支付宝。\
+②本服充值比例为:1元=10钻石\
+③申明：请认准本服【官网】或本NPC充值渠道！！\ \
+<领取/@领取>　　　　<充值/@充值>　　　　<关闭/@exit>\
+
+[@领取]
+#CALL [\76pay充值钻石\钻石\钻石.txt] @领取钻石
+#CALL [\76pay充值钻石\附加赠送\充值金额\充值金额.txt] @领取充值金额
+#CALL [\76pay充值钻石\附加赠送\积分\积分.txt] @领取积分
+[@充值]
+#IF
+#SAY
+<分流地址一/@通道一>　┆　<分流地址二/@通道二>　┆　<分流地址三/@通道三>\ \
+<分流地址四/@通道四>　┆　<分流地址五/@通道五>　┆　<分流地址六/@通道六>\ \
+<退出/@exit>
+[@通道一]
+#IF
+#ACT
+OpenWebSite http://qlzf666.yikaka.cn/game/choose/66E780114757B53C4108304E5A13ED80
+break
+
+[@通道二]
+#IF
+#ACT
+OpenWebSite http://qlzf666.yikaka.cn/game/choose/66E780114757B53C4108304E5A13ED80
+break
+
+[@通道三]
+#IF
+#ACT
+OpenWebSite http://qlzf666.jsykkkj.com/game/choose/66E780114757B53C4108304E5A13ED80
+break
+
+[@通道四]
+#IF
+#ACT
+OpenWebSite http://qlzf888.yikaka.cn/game/choose/66E780114757B53C4108304E5A13ED80
+break
+
+[@通道五]
+#IF
+#ACT
+OpenWebSite http://qlzf666.yikaka.cn/game/choose/66E780114757B53C4108304E5A13ED80
+break
+
+[@通道六]
+#IF
+#ACT
+OpenWebSite http://qlzfhao.jsykkkj.com/game/choose/66E780114757B53C4108304E5A13ED80
+break

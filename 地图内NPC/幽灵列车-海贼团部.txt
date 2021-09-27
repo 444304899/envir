@@ -1,0 +1,9 @@
+[@main]
+
+#if
+#act
+
+map 幽灵列车
+SendCenterMsg 251 14 还剩余%d离开本地图. 0 3600 @ExitMap
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+

@@ -1,0 +1,30 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \
+<><神秘的过客：/FCOLOR=58> \ \
+<>  <收集来这两件物品：/FCOLOR=161><无轩之散魄图纸X1/FCOLOR=250><./FCOLOR=161><强烈之痕迹X5/FCOLOR=250> \ \
+<>                         <ItemShow:1153:0:0:-13:1>        <ItemShow:1154:0:0:-13:1> \ \
+<>  <我将帮助你将其融合成一件你从未所见的超级神器！/FCOLOR=161> \ \<ItemShow:1152:0:50:0:1>   \ \
+
+<>                          <《请帮我合成》/@提交> \ \
+
+
+
+
+[@提交]
+#if
+checkitem 无轩之散魄图纸 1
+checkitem 强烈之痕迹 5
+#act
+take 无轩之散魄图纸 1
+take 强烈之痕迹 5
+
+give 无轩之散魄 1
+MESSAGEBOX [提示]:获得物品:无轩之散魄!
+SENDMOVEMSG 0 249 251 300 1 〖神秘的过客〗：恭喜玩家『<$USERNAME>』成功获得了无轩的传承，并得到了『无轩之散魄』！！
+SENDMOVEMSG 0 249 251 400 1 〖神秘的过客〗：恭喜玩家『<$USERNAME>』成功获得了无轩的传承，并得到了『无轩之散魄』！！
+#elseact
+MESSAGEBOX 请检测是否拥有无轩之散魄图纸X1和强烈之痕迹X5！
+BREAK

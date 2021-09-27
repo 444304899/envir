@@ -1,0 +1,132 @@
+
+
+
+
+
+
+
+
+
+[@行会系统_QManage触发-个人]
+{
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 一区
+CHECKCONTAINSTEXT <$SERVERNAME> 二区
+CHECKCONTAINSTEXT <$SERVERNAME> 三区
+CHECKCONTAINSTEXT <$SERVERNAME> 四区
+CHECKCONTAINSTEXT <$SERVERNAME> 五区
+CHECKCONTAINSTEXT <$SERVERNAME> 六区
+#ACT
+BREAK
+#IF
+Not ISDUMMY
+#ACT
+VAR Integer HUMAN 个人活跃
+;LOADVAR HUMAN 个人活跃 ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt
+VAR Integer HUMAN 入会标识
+;LOADVAR HUMAN 入会标识 ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt
+VAR Integer HUMAN 账号标识
+;LOADVAR HUMAN 账号标识 ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt
+VAR Integer HUMAN 账号警告
+;LOADVAR HUMAN 账号警告 ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt
+VAR Integer HUMAN 领奖标识
+;LOADVAR HUMAN 领奖标识 ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt
+VAR Integer HUMAN 攻城斩杀
+;LOADVAR HUMAN 攻城斩杀 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt
+VAR Integer HUMAN 攻城被杀
+;LOADVAR HUMAN 攻城被杀 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt
+VAR Integer HUMAN 攻城计时
+;LOADVAR HUMAN 攻城计时 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt
+#IF
+Not CHECKTEXTLIST ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$USERNAME>]
+#ACT
+CALCVAR HUMAN 个人活跃 = 0
+SAVEVAR HUMAN 个人活跃
+CALCVAR HUMAN 入会标识 = 0
+SAVEVAR HUMAN 入会标识
+CALCVAR HUMAN 账号标识 = 0
+SAVEVAR HUMAN 账号标识
+CALCVAR HUMAN 账号警告 = 0
+SAVEVAR HUMAN 账号警告
+CALCVAR HUMAN 领奖标识 = 0
+SAVEVAR HUMAN 领奖标识
+CALCVAR HUMAN 攻城斩杀 = 0
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 攻城被杀 = 0
+SAVEVAR HUMAN 攻城被杀
+CALCVAR HUMAN 攻城计时 = 0
+SAVEVAR HUMAN 攻城计时
+#IF
+Equal <$HUMAN(账号标识)> 2
+#ACT
+SETBODYCOLOR 253 65535
+#IF
+HAVEGUILD
+#ACT
+GOTO @加载行会系统变量
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@加载行会系统变量]
+;#IF
+;CheckTextList ..\QuestDiary\B03_行会系统\行会系统_行会活跃加载标识.txt <$GUILDNAME>
+;#ELSEACT
+;VAR Integer GUILD 行会活跃
+;LOADVAR GUILD 行会活跃 ..\QuestDiary\B03_行会系统\行会系统_活跃排行数据.txt
+;AddTextList ..\QuestDiary\B03_行会系统\行会系统_行会活跃加载标识.txt <$GUILDNAME>
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@行会系统_QManage触发-全局]
+#IF
+#ACT
+ClearNameList ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会系统_行会活跃加载标识.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会成员活跃数据中心\红方成员活跃数据中心\成员活跃度排行排名.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会成员活跃数据中心\红方成员活跃数据中心\成员活跃度排行数据.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会成员活跃数据中心\红方成员活跃数据中心\成员名称记录列表.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会成员活跃数据中心\蓝方成员活跃数据中心\成员活跃度排行排名.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会成员活跃数据中心\蓝方成员活跃数据中心\成员活跃度排行数据.txt
+ClearNameList ..\QuestDiary\B03_行会系统\行会成员活跃数据中心\蓝方成员活跃数据中心\成员名称记录列表.txt
+;===============================================================
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt 杀人王名字[未领取]:0 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt 失败方单份奖金:0 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt 失败方奖金份数:0 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt 胜利方单份奖金:0 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt 胜利方奖金份数:0 0
+;===============================================================
+Mov $(红方_人数) 0
+Mov $(蓝方_人数) 0
+Mov $(红方_活跃) 0
+Mov $(蓝方_活跃) 0
+Mov $(红方_有效) 0
+Mov $(蓝方_有效) 0
+Mov $(红方_斩杀) 0
+Mov $(蓝方_斩杀) 0
+Mov $(攻城_进度) 0
+Mov $(入会_开关) 1
+#IF
+Not CheckContainsText <$SERVERNAME> 一区
+Not CheckContainsText <$SERVERNAME> 二区
+Not CheckContainsText <$SERVERNAME> 三区
+Not CheckContainsText <$SERVERNAME> 四区
+Not CheckContainsText <$SERVERNAME> 五区
+Not CheckContainsText <$SERVERNAME> 六区
+#ACT
+Mov $(入会_开关) 1
+AddAttackSabukAll 0
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@行会系统常量加载]
+#CALL [\B03_行会系统\行会系统_常量设置.ini] @行会系统常量
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+
+
+
+
+
+
+}

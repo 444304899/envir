@@ -1,0 +1,810 @@
+[@假人开始上线]
+#if
+small g51 13
+#act
+break
+#IF
+CHECKVAR GLOBAL 假人_自动上线开关 = 开启
+CHECKDUMMYCOUNT < <$GLOBAL(假人_人数上限)>
+#ACT
+INC I66 1
+
+#IF
+LARGE I66 <$GLOBAL(假人_上线间隔)>
+CHECKDUMMYCOUNT < <$GLOBAL(假人_人数上限)>
+#ACT
+MOV I66 0
+MOVR I11 <$GLOBAL(假人_新手地图X左)> <$GLOBAL(假人_新手地图X右)>
+MOVR I12 <$GLOBAL(假人_新手地图Y左)> <$GLOBAL(假人_新手地图Y右)>
+DUMMYLOGON <$GLOBAL(假人_新手地图)> <$STR(I11)> <$STR(I12)> 1
+BREAK
+
+
+
+
+
+[@MIRYZ角色安全RM]
+
+
+#if
+large g496 0
+#act
+dec g496 1
+#if
+large g495 0
+#act
+dec g495 1
+
+#IF
+EQUAL g496 1
+#ACT
+Gmexecute 全服触发 @杀人游戏触发
+
+
+#if
+large g498 0
+#act
+dec g498 1
+#if
+equal g498 1
+#act
+DelNpc 星界传送门 混沌星界
+CLEARMAPMON 星界传送门
+Gmexecute 全服触发 @星界回城
+
+#IF
+#ACT
+Gmexecute 开始提问 @MIRYZ角色安全QM
+
+
+
+[@清除]
+#IF
+#ACT
+CLEARNAMELIST ..\QuestDiary\每日福利.txt
+CLEARNAMELIST ..\QuestDiary\每日领取.txt
+Gmexecute 开始提问 @每日清理个人变量QM
+
+
+[@一区记录]
+#IF
+CheckContainsText <$SERVERNAME> 1区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
+
+#IF
+CheckContainsText <$SERVERNAME> 总区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\合区统计.txt 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\合区统计.txt <$STR(N99)> 0
+
+
+
+
+
+
+[@二区记录]
+#IF
+CheckContainsText <$SERVERNAME> 2区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
+
+[@三区记录]
+#IF
+CheckContainsText <$SERVERNAME> 3区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
+
+[@四区记录]
+#IF
+CheckContainsText <$SERVERNAME> 4区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
+
+[@五区记录]
+#IF
+CheckContainsText <$SERVERNAME> 5区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
+
+
+[@六区记录]
+#IF
+CheckContainsText <$SERVERNAME> 6区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
+
+
+[@七区记录]
+#IF
+CheckContainsText <$SERVERNAME> 七区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
+
+
+
+[@八区记录]
+#IF
+CheckContainsText <$SERVERNAME> 八区
+#ACT
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
+inc N99 <$str(g300)>
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
+
+
+
+
+
+
+
+[@拿沙刷新boss]
+#IF
+EQUAL G30 1
+EQUAL G35 0
+#ACT
+MOV G35 1
+MonGenEx zc 148 147  第一使徒·宿命者·卡恩  1 1 0 253
+SENDMOVEMSG 0 243 0 130 1 {沙城BOSS:/FCOLOR=250}第一使徒:{宿命者·卡恩/FCOLOR=253}已经降临，148,148处，请各位玩家前往沙巴克复活点击杀使徒 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {沙城BOSS:/FCOLOR=250}第一使徒:{宿命者·卡恩/FCOLOR=253}已经降临，148,148处，请各位玩家前往沙巴克复活点击杀使徒 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {沙城BOSS:/FCOLOR=250}第一使徒:{宿命者·卡恩/FCOLOR=253}已经降临，148,148处，请各位玩家前往沙巴克复活点击杀使徒 11 30 0
+break
+
+[@合区刷新boss]
+#IF
+large G30 0
+#ACT
+MonGenEx zc 148 147  第二使徒·哭泣之眼·赫尔德  1 1 0 253
+Gmexecute 全服触发 @世界BOSS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}第二使徒:{哭泣之眼·赫尔德/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}第二使徒:{哭泣之眼·赫尔德/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}第二使徒:{哭泣之眼·赫尔德/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+break
+
+
+[@开区计时]
+
+#if
+large G499 2100
+#act
+MOV G499 0
+
+#if
+#act
+INC G51 1
+
+
+
+
+
+#IF
+EQUAL G51 45
+not CheckContainsText <$SERVERNAME> 测试
+#ACT
+Gmexecute 全服触发 @答题
+
+
+
+
+
+
+
+#IF
+equal G51 30
+#ACT
+MOV G54 1
+ThrowItem 封妖城 179 97 12 冰の书 4|60
+ThrowItem 封妖城 179 97 12 火の书 4|60
+ThrowItem 封妖城 179 97 12 1w元宝 100|60
+ThrowItem 封妖城 179 97 12 5w元宝 50|60
+ThrowItem 封妖城 179 97 12 云顶结晶 500|60
+ThrowItem 封妖城 179 97 12 时装羽毛 500|60
+ThrowItem 封妖城 179 97 12 神祈之泪 200|60
+ThrowItem 封妖城 179 97 12 称号卷 200|60
+ThrowItem 封妖城 179 97 12 技能强化卷 100|60
+ThrowItem 封妖城 179 97 12 创世石碑 2|60
+ThrowItem 封妖城 179 97 12 ★★圣·王之悲鸣★★ 1|60
+ThrowItem 封妖城 179 97 12 の沙城霸主的战刃 1|60
+ThrowItem 封妖城 179 97 12 充值红包 5|60
+Gmexecute 全服触发 @天降财富
+SENDMOVEMSG 0 243 0 130 1 {游戏活动:/FCOLOR=250}封妖城正在举行{[天降财富]/FCOLOR=254}活动，大量元宝材料红包装备,请各位玩家点击屏幕上方活动按钮参加{[天降财富]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {游戏活动:/FCOLOR=250}封妖城正在举行{[天降财富]/FCOLOR=254}活动，大量元宝材料红包装备,请各位玩家点击屏幕上方活动按钮参加{[天降财富]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {游戏活动:/FCOLOR=250}封妖城正在举行{[天降财富]/FCOLOR=254}活动，大量元宝材料红包装备,请各位玩家点击屏幕上方活动按钮参加{[天降财富]/FCOLOR=254} 11 30 0
+
+
+#IF
+equal G51 33
+#ACT
+MOV G54 0
+SENDMOVEMSG 0 243 0 130 1 {游戏活动:/FCOLOR=250}{[天降财富]/FCOLOR=254}活动已结束,感谢各位玩家的参与! 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {游戏活动:/FCOLOR=250}{[天降财富]/FCOLOR=254}活动已结束,感谢各位玩家的参与! 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {游戏活动:/FCOLOR=250}{[天降财富]/FCOLOR=254}活动已结束,感谢各位玩家的参与! 11 30 0
+
+
+
+
+
+
+#IF
+equal G51 60
+#ACT
+MOV G53 1
+
+ThrowItem 活动地图 30 30 20 云顶结晶 400|20
+ThrowItem 活动地图 30 30 20 时装羽毛 400|20
+ThrowItem 活动地图 30 30 20 神祈之泪 200|20
+ThrowItem 活动地图 30 30 20 称号卷 180|20
+ThrowItem 活动地图 30 30 20 技能强化卷 80|20
+
+ThrowItem 活动地图 30 30 20 5w元宝 100|20
+
+ThrowItem 活动地图 30 30 20 白肆的祈祷※※  1|20
+ThrowItem 活动地图 30 30 20 ·定海の神针·  1|20
+
+ThrowItem 活动地图 30 30 20 充值红包 3|20
+ThrowItem 活动地图 30 30 20 创世石碑 2|20
+ThrowItem 活动地图 30 30 20 冰の书 2|20
+ThrowItem 活动地图 30 30 20 火の书 2|20
+ThrowItem 活动地图 30 30 20 VIP证明 1|20
+
+Gmexecute 全服触发 @眼疾手快
+SENDMOVEMSG 0 243 0 130 1 {游戏活动:/FCOLOR=250}封天大陆正在举行{[手疾眼快]/FCOLOR=254}活动，大量元宝材料红包装备,请各位玩家点击屏幕上方活动按钮参加{[手疾眼快]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {游戏活动:/FCOLOR=250}封天大陆正在举行{[手疾眼快]/FCOLOR=254}活动，大量元宝材料红包装备,请各位玩家点击屏幕上方活动按钮参加{[手疾眼快]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {游戏活动:/FCOLOR=250}封天大陆正在举行{[手疾眼快]/FCOLOR=254}活动，大量元宝材料红包装备,请各位玩家点击屏幕上方活动按钮参加{[手疾眼快]/FCOLOR=254} 11 30 0
+
+
+#IF
+equal G51 63
+#ACT
+MOV G53 0
+SENDMOVEMSG 0 243 0 130 1 {游戏活动:/FCOLOR=250}{[手疾眼快]/FCOLOR=254}活动已结束,感谢各位玩家的参与 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {游戏活动:/FCOLOR=250}{[手疾眼快]/FCOLOR=254}活动已结束,感谢各位玩家的参与 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {游戏活动:/FCOLOR=250}{[手疾眼快]/FCOLOR=254}活动已结束,感谢各位玩家的参与 11 30 0
+
+
+
+
+#IF
+equal G51 90
+#ACT
+MOV G55 1
+MonGenEx T2061   19   24    角蝇     5     2      0    2
+MonGenEx T2061   19   24    楔蛾     5     2      0   2
+MonGenEx T2061   19   24    电僵王   5     2      0   2
+MonGenEx T2062   19   24    角蝇     5     2      0   2
+MonGenEx T2062   19   24    楔蛾     5     2      0   2
+MonGenEx T2062   19   24    电僵王   5     2      0   2
+MonGenEx T2063   19   24    角蝇     5     2      0   2
+MonGenEx T2063   19   24    楔蛾     5     2      0   2
+MonGenEx T2063   19   24    电僵王   5     2      0   2
+MonGenEx T3061   19   24    角蝇     5     2      0   2
+MonGenEx T3061   19   24    楔蛾     5     2      0   2
+MonGenEx T3061   19   24    电僵王   5     2      0   2
+MonGenEx T3062   19   24    角蝇     5     2      0   2
+MonGenEx T3062   19   24    楔蛾     5     2      0   2
+MonGenEx T3062   19   24    电僵王   5     2      0   2
+MonGenEx T3063   19   24    角蝇     5     2      0   2
+MonGenEx T3063   19   24    楔蛾     5     2      0   2
+MonGenEx T3063   19   24    电僵王   5     2      0    2
+MonGenEx h008    73   77    幻境恶魔     0      1    0   5
+Gmexecute 全服触发 @迷宫
+
+#IF
+equal G51 120
+#ACT
+MOV G55 0
+SENDMOVEMSG 0 243 0 130 1 {游戏活动:/FCOLOR=250}{[复古迷宫]/FCOLOR=254}活动已结束,感谢各位玩家的参与! 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {游戏活动:/FCOLOR=250}{[复古迷宫]/FCOLOR=254}活动已结束,感谢各位玩家的参与! 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {游戏活动:/FCOLOR=250}{[复古迷宫]/FCOLOR=254}活动已结束,感谢各位玩家的参与! 11 30 0
+
+
+
+
+
+
+
+[@世界BOSS开]
+#IF
+#ACT
+RandomKillMon SJBOSS 第六使徒·黑色瘟疫·狄瑞吉 1
+RandomKillMon SJBOSS 第七使徒·火焰吞噬者·安徒恩 1
+RandomKillMon SJBOSS 第八使徒·长脚·罗特斯 1
+RandomKillMon SJBOSS 第九使徒·爆龙王·巴卡尔 1
+RandomKillMon SJBOSS 第十使徒·制造者·卢克 1
+RandomKillMon SJBOSS 第十一使徒·混沌之神·奥兹玛 1
+RandomKillMon SJBOSS 第十二使徒·圣者·米歇尔 1
+
+
+#IF
+equal G400 6
+#ACT
+inc g400 1
+MonGenEx  SJBOSS 148 147 第六使徒·黑色瘟疫·狄瑞吉  1 1 0 253
+Gmexecute 全服触发 @世界BOSS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}第六使徒:{黑色瘟疫·狄瑞吉/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}第六使徒:{黑色瘟疫·狄瑞吉/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}第六使徒:{黑色瘟疫·狄瑞吉/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+break
+
+#IF
+equal G400 5
+#ACT
+inc g400 1
+MonGenEx  SJBOSS 148 147 第七使徒·火焰吞噬者·安徒恩  1 1 0 253
+Gmexecute 全服触发 @世界BOSS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}第七使徒:{火焰吞噬者·安徒恩/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}第七使徒:{火焰吞噬者·安徒恩/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}第七使徒:{火焰吞噬者·安徒恩/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+break
+
+
+#IF
+equal G400 4
+#ACT
+inc g400 1
+MonGenEx  SJBOSS 148 147 第八使徒·长脚·罗特斯  1 1 0 253
+Gmexecute 全服触发 @世界BOSS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}第八使徒:{长脚·罗特斯/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}第八使徒:{长脚·罗特斯/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}第八使徒:{长脚·罗特斯/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+break
+
+
+#IF
+equal G400 3
+#ACT
+inc g400 1
+MonGenEx  SJBOSS 148 147 第九使徒·爆龙王·巴卡尔  1 1 0 253
+Gmexecute 全服触发 @世界BOSS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}第九使徒:{爆龙王·巴卡尔/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}第九使徒:{爆龙王·巴卡尔/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}第九使徒:{爆龙王·巴卡尔/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+break
+
+#IF
+equal G400 2
+#ACT
+inc g400 1
+MonGenEx  SJBOSS 148 147 第十使徒·制造者·卢克  1 1 0 253
+Gmexecute 全服触发 @世界BOSS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}第十使徒:{制造者·卢克/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}第十使徒:{制造者·卢克/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}第十使徒:{制造者·卢克/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+break
+
+#IF
+equal G400 1
+#ACT
+inc g400 1
+MonGenEx  SJBOSS 148 147 第十一使徒·混沌之神·奥兹玛 1 1 0 253
+Gmexecute 全服触发 @世界BOSS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}第十一使徒:{混沌之神·奥兹玛/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}第十一使徒:{混沌之神·奥兹玛/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}第十一使徒:{混沌之神·奥兹玛/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+break
+
+
+
+#IF
+equal G400 0
+#ACT
+inc g400 1
+MonGenEx  SJBOSS 148 147 第十二使徒·圣者·米歇尔 1 1 0 253
+Gmexecute 全服触发 @世界BOSS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}第十二使徒:{圣者·米歇尔/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}第十二使徒:{圣者·米歇尔/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}第十二使徒:{圣者·米歇尔/FCOLOR=253}已经降临在世界BOSS地图，254,255处，请各位玩家点击屏幕上方活动按钮参加{[世界BOSS]/FCOLOR=254} 11 30 0
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@集体回城]
+#IF
+;EQUAL G30 2
+EQUAL G30 1
+#ACT
+Gmexecute 全服触发 @攻沙回城
+SENDMOVEMSG 0 243 0 130 1 {游戏活动:/FCOLOR=250}{[沙城之战]/FCOLOR=254}活动已开启,万里长城十亿兵，沙城岂待儿孙平，愿提兄弟虎狼族，越马扬刀入沙城。兄弟们冲！ 11 30 0
+SENDMOVEMSG 0 243 0 160 1 {游戏活动:/FCOLOR=250}{[沙城之战]/FCOLOR=254}活动已开启,万里长城十亿兵，沙城岂待儿孙平，愿提兄弟虎狼族，越马扬刀入沙城。兄弟们冲！ 11 30 0
+SENDMOVEMSG 0 243 0 190 1 {游戏活动:/FCOLOR=250}{[沙城之战]/FCOLOR=254}活动已开启,万里长城十亿兵，沙城岂待儿孙平，愿提兄弟虎狼族，越马扬刀入沙城。兄弟们冲！ 11 30 0
+
+
+
+
+
+
+
+
+
+
+[@首次攻沙计算]
+#IF
+#act
+INC G30 1
+break
+
+[@攻沙提示公告]
+#if
+;EQUAL G30 2
+LARGE G30 0
+#act
+SendCenterMsg 0 249 【注意】：所有行会于今天晚上8点准时攻沙巴克，请个大行会做好准备！~！ 1 30
+SendCenterMsg 0 249 【注意】：所有行会于今天晚上8点准时攻沙巴克，请个大行会做好准备！~！ 1 30
+SENDMSG 0 ┏≈☆★≈☆★≈☆★☆≈【攻城信息提示】≈☆★☆≈★☆≈★☆≈┓
+SENDMSG 0 ╔┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╗
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→请提早建会,否则参加不了集体攻城！┇
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每晚20点,自动开启全服大型攻城战！┇
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每个行会都可以攻城!无需提交头像！┇
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→如果您的势力不行,建议找结盟好友！┇
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→请所有行会做好准备,倒计时30分钟！┇
+SENDMSG 0 ╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝
+SENDMSG 0 ┗≈☆★≈☆★≈☆★☆≈【倒计时30分钟】≈☆★☆≈★☆≈★☆≈┛
+
+#if
+EQUAL G31 1
+#act
+SendCenterMsg 0 249 【注意】：所有行会于今天晚上8点准时攻沙巴克，请个大行会做好准备！~！ 1 30
+SendCenterMsg 0 249 【注意】：所有行会于今天晚上8点准时攻沙巴克，请个大行会做好准备！~！ 1 30
+SENDMSG 0 ┏≈☆★≈☆★≈☆★☆≈【攻城信息提示】≈☆★☆≈★☆≈★☆≈┓
+SENDMSG 0 ╔┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╗
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→请提早建会,否则参加不了集体攻城！┇
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每晚20点,自动开启全服大型攻城战！┇
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每个行会都可以攻城!无需提交头像！┇
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→如果您的势力不行,建议找结盟好友！┇
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→请所有行会做好准备,倒计时30分钟！┇
+SENDMSG 0 ╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝
+SENDMSG 0 ┗≈☆★≈☆★≈☆★☆≈【倒计时30分钟】≈☆★☆≈★☆≈★☆≈┛
+break
+
+[@加载攻沙行会]
+#if
+;EQUAL G30 2
+LARGE G30 0
+#act
+AddAttackSabukAll 0
+SendCenterMsg 0 249 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 0 249 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+
+#if
+EQUAL G31 1
+#act
+AddAttackSabukAll 0
+SendCenterMsg 0 249 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 0 249 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+break
+
+[@沙巴克占领奖励]
+#IF
+;EQUAL G30 2
+EQUAL G30 1
+#act
+MOV G12 1
+SendCenterMsg 0 249 沙巴克老大请到沙城管理NPC处领取拿沙奖励！ 1 20
+SendCenterMsg 0 249 沙巴克老大请到沙城管理NPC处领取拿沙奖励！ 1 20
+SENDMSG 0 沙巴克老大请到沙城管理NPC处领取拿沙奖励！
+SENDMSG 0 沙巴克老大请到沙城管理NPC处领取拿沙奖励！
+
+#IF
+EQUAL G31 1
+#act
+MOV G12 1
+SendCenterMsg 0 249 沙巴克老大请到沙城管理NPC处领取拿沙奖励！ 1 20
+SendCenterMsg 0 249 沙巴克老大请到沙城管理NPC处领取拿沙奖励！ 1 20
+SENDMSG 0 沙巴克老大请到沙城管理NPC处领取拿沙奖励！
+SENDMSG 0 沙巴克老大请到沙城管理NPC处领取拿沙奖励！
+break
+
+[@攻沙喊话333]
+#IF
+EQUAL G30 1
+#ACT
+SENDMSG 1 ぐ系统：明晚集体攻城20:00开启!--请提早建会!否则参加不了集体攻城!
+SENDMSG 1 ぐ系统：明晚集体攻城20:00开启!--每天晚上8点开启全服大型攻城活动!
+SENDMSG 1 ぐ系统：明晚集体攻城20:00开启!--每个行会都可以攻城,无需提交头像!
+SENDMSG 1 ぐ系统：明晚集体攻城20:00开启!--如果您的势力不行,建议找结盟好友!
+SENDMSG 1 ぐ系统：明晚集体攻城20:00开启!--所有行会做好准备,它是否属于你呢?
+BREAK
+
+#IF
+EQUAL G30 2
+#ACT
+SENDMSG 1 ぐ系统：今晚集体攻城20:00开启!--请提早建会!否则参加不了集体攻城!
+SENDMSG 1 ぐ系统：今晚集体攻城20:00开启!--每天晚上8点开启全服大型攻城活动!
+SENDMSG 1 ぐ系统：今晚集体攻城20:00开启!--每个行会都可以攻城,无需提交头像!
+SENDMSG 1 ぐ系统：今晚集体攻城20:00开启!--如果您的势力不行,建议找结盟好友!
+SENDMSG 1 ぐ系统：今晚集体攻城20:00开启!--所有行会做好准备,它是否属于你呢?
+BREAK
+;============================================================================================================
+
+[@早上提示]
+#IF
+#act
+SENDMSG 1 亲爱的玩家，现在已经是早上了
+SENDMSG 1 游戏虽然好玩，可别忘了工作和学习的时间
+
+[@中午提示]
+#IF
+#act
+SENDMSG 1 亲爱的玩家，现在已经是中午了
+SENDMSG 1 游戏虽然好玩，可别忘了多陪陪你的朋友和家人
+
+[@晚上提示]
+#IF
+#act
+SENDMSG 1 亲爱的玩家，现在已经是晚上了
+SENDMSG 1 游戏虽然好玩，也别忘了陪朋友和家人吃顿晚饭
+
+[@凌晨提示]
+#IF
+#act
+SENDMSG 1 亲爱的玩家，现在已经是凌晨了
+SENDMSG 1 游戏虽然好玩，也别忘了是不是该休息了
+
+[@挑战擂台脚本RM加载]
+#CALL [\挑战擂台配置\挑战擂台脚本RM.txt] @挑战擂台脚本RM
+
+[@挑战擂台脚本RM加载2]
+#CALL [\挑战擂台配置\挑战擂台脚本RM2.txt] @挑战擂台脚本RM2
+
+[@挑战擂台脚本RM加载3]
+#CALL [\挑战擂台配置\挑战擂台脚本RM3.txt] @挑战擂台脚本RM3
+
+[@挑战擂台脚本RM加载4]
+#CALL [\挑战擂台配置\挑战擂台脚本RM4.txt] @挑战擂台脚本RM4
+
+
+
+[@活动BOSS开]
+#IF
+CheckMapSameMonCount 封妖城 牛气冲天【必爆】 = 0
+#act
+MonGenEx 封妖城 99 92 牛气冲天【必爆】 1 1 0 253
+Gmexecute 全服触发 @活动BOS
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}:{牛气冲天【必爆】/FCOLOR=253}已经降临在封妖城，100,26处，请各位玩家前去击杀，此怪物必爆神之都到混沌星界的首饰一个 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}:{牛气冲天【必爆】/FCOLOR=253}已经降临在封妖城，100,26处，请各位玩家前去击杀，此怪物必爆神之都到混沌星界的首饰一个 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}:{牛气冲天【必爆】/FCOLOR=253}已经降临在封妖城，100,26处，请各位玩家前去击杀，此怪物必爆神之都到混沌星界的首饰一个 11 30 0
+break
+
+
+[@活动BOSS开1]
+#IF
+CheckMapSameMonCount 必经之地 牛气冲天【必爆】 = 0
+#act
+MonGenEx 必经之地 60  61 牛气冲天【必爆】 1 1 0 253
+Gmexecute 全服触发 @活动BOS1
+SENDMOVEMSG 0 243 0 130 1 {世界BOSS:/FCOLOR=250}:{牛气冲天【必爆】/FCOLOR=253}已经降临在封妖城，100,26处，请各位玩家前去击杀，此怪物必爆神之都到混沌星界的首饰一个 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {世界BOSS:/FCOLOR=250}:{牛气冲天【必爆】/FCOLOR=253}已经降临在封妖城，100,26处，请各位玩家前去击杀，此怪物必爆神之都到混沌星界的首饰一个 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {世界BOSS:/FCOLOR=250}:{牛气冲天【必爆】/FCOLOR=253}已经降临在封妖城，100,26处，请各位玩家前去击杀，此怪物必爆神之都到混沌星界的首饰一个 11 30 0
+break
+
+
+
+[@苍茫星空]
+#IF
+;large S$合区信息 0
+CheckContainsText <$SERVERNAME> 总区
+#act
+CreateNPC 苍茫星空 封妖城 104 89 20106  0
+set [444] 88
+SENDMOVEMSG 0 243 0 130 1 {温馨提示:/FCOLOR=250}:{苍茫星空/FCOLOR=253}已经降临封妖城，限时10分钟，请各位玩家前去进入地图击杀，此地图怪物必爆神终极装备 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {温馨提示:/FCOLOR=250}:{苍茫星空/FCOLOR=253}已经降临封妖城，限时10分钟，请各位玩家前去进入地图击杀，此地图怪物必爆神终极装备 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {温馨提示:/FCOLOR=250}:{苍茫星空/FCOLOR=253}已经降临封妖城，限时10分钟，请各位玩家前去进入地图击杀，此地图怪物必爆神终极装备 11 30 0
+break
+
+
+
+[@取消苍茫星空]
+#IF
+#act
+DelNpc 苍茫星空 封妖城
+MoveMapPlay 苍茫星空 封妖城  104 89
+set [444] 1
+
+
+
+
+
+[@1小时]
+#IF
+#act
+MOV G16 0
+MOV G17 0
+MOV G18 0
+;SENDMOVEMSG 0 243 0 130 1 {温馨提示:/FCOLOR=250}:{合成材料已刷新/FCOLOR=253}各位老板赶快抢购!!! 11 30 0
+;SENDMOVEMSG 0 243 0 170 1 {温馨提示:/FCOLOR=250}:{合成材料已刷新/FCOLOR=253}各位老板赶快抢购!!! 11 30 0
+BREAK
+
+
+
+
+
+;======================================================================================
+[@红蓝行会关闭]
+#if
+;检查是否老区变量
+LARGE G498 1
+#act
+MOV <$GLOBAL(收人状态控制)> 关闭
+break
+;======================================================================================
+[@红蓝领奖检查]
+#if
+;检查是否老区变量
+LARGE G498 1
+#act
+#ELSEACT
+break
+
+
+#IF
+#ACT
+MOV <$GLOBAL(沙城状态控制)> 统计完毕
+MOV <$GLOBAL(红方达标人数)> 0
+MOV <$GLOBAL(蓝方达标人数)> 0
+GMEXECUTE 开始提问 @统计达标人数QM
+GetListString ..\..\..\..\杀神忘忧\捐献文件\<$STR(A100)>\当前01区.txt 0 I10 I11
+GetListString ..\..\..\..\杀神忘忧\捐献文件\<$STR(A100)>\当前02区.txt 0 I10 I12
+GetListString ..\..\..\..\杀神忘忧\捐献文件\<$STR(A100)>\当前03区.txt 0 I10 I13
+GetListString ..\..\..\..\杀神忘忧\捐献文件\<$STR(A100)>\当前04区.txt 0 I10 I14
+GetListString ..\..\..\..\杀神忘忧\捐献文件\<$STR(A100)>\当前05区.txt 0 I10 I15
+MOV <$GLOBAL(沙城捐献总数)> 0
+INC <$GLOBAL(沙城捐献总数)> <$STR(I11)>
+INC <$GLOBAL(沙城捐献总数)> <$STR(I12)>
+INC <$GLOBAL(沙城捐献总数)> <$STR(I13)>
+INC <$GLOBAL(沙城捐献总数)> <$STR(I14)>
+INC <$GLOBAL(沙城捐献总数)> <$STR(I15)>
+
+MOV <$GLOBAL(沙手续费记录)> <$GLOBAL(沙城捐献总数)>
+MUL <$GLOBAL(沙手续费记录)> <$GLOBAL(沙奖励手续费)>
+DIV <$GLOBAL(沙手续费记录)> 10
+
+MOV <$GLOBAL(沙奖励实发数)> <$GLOBAL(沙城捐献总数)>
+CALCVAR GLOBAL 沙奖励实发数 - <$GLOBAL(沙手续费记录)>
+
+MOV <$GLOBAL(全满数据记录)> <$GLOBAL(沙奖励实发数)>
+MUL <$GLOBAL(全满数据记录)> <$GLOBAL(全满百分比数)>
+DIV <$GLOBAL(全满数据记录)> 100
+
+MOV <$GLOBAL(扣全满后发数)> <$GLOBAL(沙奖励实发数)>
+CALCVAR GLOBAL 扣全满后发数 - <$GLOBAL(全满数据记录)>
+
+MOV <$GLOBAL(胜方发奖数据)> <$GLOBAL(扣全满后发数)>
+MUL <$GLOBAL(胜方发奖数据)> <$GLOBAL(胜方百分比数)>
+DIV <$GLOBAL(胜方发奖数据)> 10
+
+MOV <$GLOBAL(胜方数据记录)> <$GLOBAL(胜方发奖数据)>
+
+MOV <$GLOBAL(败方发奖数据)> <$GLOBAL(扣全满后发数)>
+CALCVAR GLOBAL 败方发奖数据 - <$GLOBAL(胜方发奖数据)>
+MOV <$GLOBAL(败方数据记录)> <$GLOBAL(败方发奖数据)>
+
+;------------------------------------------------------------------
+MOV <$GLOBAL(胜方全满数据)> <$GLOBAL(全满数据记录)>
+MUL <$GLOBAL(胜方全满数据)> 7
+DIV <$GLOBAL(胜方全满数据)> 10
+
+MOV <$GLOBAL(胜方全满记录)> <$GLOBAL(胜方全满数据)>
+
+
+MOV <$GLOBAL(败方全满数据)> <$GLOBAL(全满数据记录)>
+MUL <$GLOBAL(败方全满数据)> 3
+DIV <$GLOBAL(败方全满数据)> 10
+MOV <$GLOBAL(败方全满记录)> <$GLOBAL(败方全满数据)>
+
+
+#IF
+EQUAL <$OWNERGUILD> <$GLOBAL(红方队伍名字)>
+#ACT
+MOV <$GLOBAL(胜方平均金额)> <$GLOBAL(胜方数据记录)>
+DIV <$GLOBAL(胜方平均金额)> <$GLOBAL(红方达标人数)>
+
+MOV <$GLOBAL(败方平均金额)> <$GLOBAL(败方数据记录)>
+DIV <$GLOBAL(败方平均金额)> <$GLOBAL(蓝方达标人数)>
+
+MOV <$GLOBAL(胜满平均金额)> <$GLOBAL(胜方全满记录)>
+DIV <$GLOBAL(胜满平均金额)> <$GLOBAL(红方大号人数)>
+
+MOV <$GLOBAL(败满平均金额)> <$GLOBAL(败方全满记录)>
+DIV <$GLOBAL(败满平均金额)> <$GLOBAL(蓝方大号人数)>
+
+
+#IF
+EQUAL <$OWNERGUILD> <$GLOBAL(蓝方队伍名字)>
+#ACT
+MOV <$GLOBAL(胜方平均金额)> <$GLOBAL(胜方数据记录)>
+DIV <$GLOBAL(胜方平均金额)> <$GLOBAL(蓝方达标人数)>
+
+MOV <$GLOBAL(败方平均金额)> <$GLOBAL(败方数据记录)>
+DIV <$GLOBAL(败方平均金额)> <$GLOBAL(红方达标人数)>
+
+MOV <$GLOBAL(胜满平均金额)> <$GLOBAL(胜方全满记录)>
+DIV <$GLOBAL(胜满平均金额)> <$GLOBAL(蓝方大号人数)>
+
+MOV <$GLOBAL(败满平均金额)> <$GLOBAL(败方全满记录)>
+DIV <$GLOBAL(败满平均金额)> <$GLOBAL(红方大号人数)>
+
+
+
+#IF
+#ACT
+MOV <$GLOBAL(领奖状态控制)> 领奖开启
+SAVEVAR GLOBAL 蓝方队伍名字
+SAVEVAR GLOBAL 红方队伍名字
+SAVEVAR GLOBAL 沙城状态控制
+SAVEVAR GLOBAL 领奖状态控制
+SAVEVAR GLOBAL 收人状态控制
+SAVEVAR GLOBAL 沙城捐献总数
+SAVEVAR GLOBAL 限制相差人数
+SAVEVAR GLOBAL 红方总共人数
+SAVEVAR GLOBAL 蓝方总共人数
+SAVEVAR GLOBAL 红方在线人数
+SAVEVAR GLOBAL 蓝方在线人数
+SAVEVAR GLOBAL 红方达标人数
+SAVEVAR GLOBAL 蓝方达标人数
+SAVEVAR GLOBAL 红方大号人数
+SAVEVAR GLOBAL 蓝方大号人数
+SAVEVAR GLOBAL 对话框的编号
+SAVEVAR GLOBAL 对话框图片号
+SAVEVAR GLOBAL 沙奖励手续费
+SAVEVAR GLOBAL 沙手续费记录
+SAVEVAR GLOBAL 沙奖励实发数
+SAVEVAR GLOBAL 扣全满后发数
+SAVEVAR GLOBAL 胜方百分比数
+SAVEVAR GLOBAL 胜方发奖数据
+SAVEVAR GLOBAL 胜方数据记录
+SAVEVAR GLOBAL 胜方平均金额
+SAVEVAR GLOBAL 败方百分比数
+SAVEVAR GLOBAL 败方发奖数据
+SAVEVAR GLOBAL 败方数据记录
+SAVEVAR GLOBAL 败方平均金额
+SAVEVAR GLOBAL 全满百分比数
+SAVEVAR GLOBAL 全满数据记录
+
+SAVEVAR GLOBAL 胜方全满数据
+SAVEVAR GLOBAL 胜方全满记录
+SAVEVAR GLOBAL 败方全满数据
+SAVEVAR GLOBAL 败方全满记录
+
+SAVEVAR GLOBAL 胜满平均金额
+SAVEVAR GLOBAL 败满平均金额
+
+
+
+
+
+
+
+
+
+
+

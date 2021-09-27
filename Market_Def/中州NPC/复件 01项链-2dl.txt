@@ -1,0 +1,262 @@
+[@main]
+#IF
+#act
+#say
+\  \  \ \
+<>                                             <[幸运加成查看]
+|158#全身幸运4点:  打怪伤害加成5%
+^-^158#全身幸运5点:  打怪伤害加成10%
+^-^158#全身幸运6点:  打怪伤害加成15%
+^-^158#全身幸运7点:  打怪伤害加成20%
+^-^158#全身幸运8点:  打怪伤害加成25%
+^-^158#全身幸运9点:  打怪伤害加成30%
+^-^158#全身幸运10点:  打怪伤害加成35%
+^-^158#全身幸运11点:  打怪伤害加成40%
+^-^158#全身幸运12点:  打怪伤害加成50%
+^-^158#全身幸运13点:  打怪伤害加成60%(触发刀刀最大伤害)
+^-^158#全身幸运14点:  打怪伤害加成80%
+^-^158#全身幸运15点:  打怪伤害加成100%/FCOLOR=70>  \ \
+<>             <请你把要加幸运的项链佩戴在你身上,/FCOLOR=95>  \ \
+<>             <本服幸运+13即可触发刀刀最大攻击!!/FCOLOR=95>  \ \
+<>             <洗练要求:/FCOLOR=250><200灵符一次/FCOLOR=161> + <云顶结晶*10/FCOLOR=161>  \ \
+<>                <开始洗练/@洗1>            <幸运转移/@幸运转>\ \
+
+[@幸运转]
+#IF
+#act
+#say
+\  \  \ \
+<>   <[幸运项链]/FCOLOR=224><IMG:91:6:-81:-4><IMG:0:6:-172:-4>  \
+<>                                <[幸运加成详细查看]
+|158#全身幸运4点:  打怪伤害加成5%
+^-^158#全身幸运5点:  打怪伤害加成10%
+^-^158#全身幸运6点:  打怪伤害加成15%
+^-^158#全身幸运7点:  打怪伤害加成20%
+^-^158#全身幸运8点:  打怪伤害加成25%
+^-^158#全身幸运9点:  打怪伤害加成30%
+^-^158#全身幸运10点:  打怪伤害加成35%
+^-^158#全身幸运11点:  打怪伤害加成40%
+^-^158#全身幸运12点:  打怪伤害加成50%
+^-^158#全身幸运13点:  打怪伤害加成60%(触发刀刀最大伤害)
+^-^158#全身幸运14点:  打怪伤害加成80%
+^-^158#全身幸运15点:  打怪伤害加成100%/FCOLOR=70>  \ \
+<>  在我这,可以让你项链上的幸运转移到新的项链上\
+<>  转移过后.老的装备将会被销毁 \
+<> <ITEMBOX:3:6:135:15:10:40:40:19:请放入有幸运的项链><ITEMBOX:4:6:135:50:10:40:40:19:请放入新的项链>\
+<>   　　　　　　　　　　　<第一个框放入你已经有幸运的项链/FCOLOR=103>\
+<>   　　　　　　　　　　　<第二个框放入你需要转移的项链/FCOLOR=103>\ \
+<>   　　 <[开始转移]/@转1>\
+
+
+[@ItemIntoBox4]
+#IF
+#ACT
+SetUpgradeItem 4
+
+
+
+[@ItemIntoBox3]
+#IF
+#ACT
+SetUpgradeItem 3
+
+
+#IF
+CHECKITEMADDVALUE -1 1 = 1
+#ACT
+MOV N$装备幸运 1
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 2
+#ACT
+MOV N$装备幸运 2
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 3
+#ACT
+MOV N$装备幸运 3
+break
+
+
+#IF
+CHECKITEMADDVALUE -1 1 = 4
+#ACT
+MOV N$装备幸运 4
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 5
+#ACT
+MOV N$装备幸运 5
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 6
+#ACT
+MOV N$装备幸运 6
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 7
+#ACT
+MOV N$装备幸运 7
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 8
+#ACT
+MOV N$装备幸运 8
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 9
+#ACT
+MOV N$装备幸运 9
+break
+
+
+#IF
+CHECKITEMADDVALUE -1 1 = 10
+#ACT
+MOV N$装备幸运 10
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 11
+#ACT
+MOV N$装备幸运 11
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 12
+#ACT
+MOV N$装备幸运 12
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 13
+#ACT
+MOV N$装备幸运 13
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 14
+#ACT
+MOV N$装备幸运 14
+break
+
+#IF
+CHECKITEMADDVALUE -1 1 = 15
+#ACT
+MOV N$装备幸运 15
+break
+
+
+
+#IF
+CHECKITEMADDVALUE -1 1 = 0
+#ACT
+ReturnBoxItem 3
+SENDMOVEHINTMSG 放入的项链没有幸运！ 103 0 0 -10
+break
+
+
+[@转1]
+#if
+#ACT
+SetUpgradeItem 3
+SetUpgradeItem 4
+
+#IF
+EQUAL <$BOXITEM[3].NAME>
+#ACT
+SENDMOVEHINTMSG 请先在左边框中放入装备 103 0 0 -10
+BREAK
+
+#IF
+EQUAL <$BOXITEM[4].NAME>
+#ACT
+SENDMOVEHINTMSG 请先在右边框中放入装备 103 0 0 -10
+BREAK
+
+
+#IF
+#ACT
+goto @清空
+
+[@清空]
+#IF
+#ACT
+SetUpgradeItem 3
+CHANGEITEMADDVALUE -1 1 = 0
+UpDateBoxItem 3
+ReturnBoxItem 3
+goto @转移成功
+
+[@转移成功]
+#IF
+#ACT
+SetUpgradeItem 4
+SetUpgradeItem 3
+CHANGEITEMADDVALUE -1 1 = <$STR(N$装备幸运)>
+UpDateBoxItem 4
+ReturnBoxItem 4
+
+
+
+
+
+
+[@洗1]
+#if
+CHECKUSEITEM 3
+#act
+#ELSEACT
+SENDMOVEHINTMSG [提示]:请佩戴好项链再开始洗练。。 103 0 0 -10
+break
+
+
+#if
+checkitem 云顶结晶 10
+#act
+take 云顶结晶 10
+#ELSEACT
+SENDMOVEHINTMSG [提示]:请检查你的材料是否足够。 103 0 0 -10
+break
+
+
+#if
+CHECKGAMEGIRD > 199
+#act
+GAMEGIRD - 200
+#ELSEACT
+SENDMOVEHINTMSG [提示]:请检查你的灵符是否足够。 103 0 0 -10
+break
+
+
+
+#if
+random 90
+#act
+MOVR N$幸运点数 9 16
+CHANGEITEMADDVALUE 3 1 = <$STR(N$幸运点数)>
+SENDMOVEHINTMSG [提示]:项链洗练成功,幸运点数为(<$STR(N$幸运点数)>)。 103 0 0 -10
+break
+
+
+#if
+random 30
+#act
+MOVR N$幸运点数 6 10
+CHANGEITEMADDVALUE 3 1 = <$STR(N$幸运点数)>
+SENDMOVEHINTMSG [提示]:项链洗练成功,幸运点数为(<$STR(N$幸运点数)>)。 103 0 0 -10
+break
+
+#if
+#act
+MOVR N$幸运点数 1 6
+CHANGEITEMADDVALUE 3 1 = <$STR(N$幸运点数)>
+SENDMOVEHINTMSG [提示]:项链洗练成功,幸运点数为(<$STR(N$幸运点数)>)。 103 0 0 -10
+break

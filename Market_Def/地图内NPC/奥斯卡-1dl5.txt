@@ -1,0 +1,25 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \
+<><食物系·奥斯卡.New~/FCOLOR=58> \ \
+<>  <你找我是需要食物系的大烤肠吗？如果你需要的话。给我带来20根火腿肠/FCOLOR=161> \ \
+<>  <我就能帮助你，得到能增强你爆率的火腿。之后的历练可就要靠你自己了呀！/FCOLOR=161> \ \  \ \
+
+<>                          <《提交火腿肠》/@提交> \ \
+
+
+
+
+[@提交]
+#if
+checkitem 火腿肠 20
+#act
+take 火腿肠 20
+GETRANDOMLINETEXT ..\QuestDiary\火腿列表.txt <$STR(S0)>
+give <$STR(S0)> 1
+MESSAGEBOX [提示]:获得物品:<$STR(S0)>!
+#elseact
+MESSAGEBOX 请检测是否有足够的火腿肠！
+BREAK

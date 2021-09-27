@@ -1,0 +1,186 @@
+[@main]
+
+
+
+#if
+#act
+MOV S$当前阶段 土·零阶
+MOV S$当前属性 +0%最大生命值
+MOV S$下级属性 +1%最大生命值
+MOV S$下级称号 五行之体·土[一阶]
+MOV S$删除称号
+
+#if
+CHECKTITLE 五行之体·土[一阶]
+#act
+MOV S$当前阶段 土·一阶
+MOV S$当前属性 +1%最大生命值
+MOV S$下级属性 +2%最大生命值
+MOV S$下级称号 五行之体·土[二阶]
+MOV S$删除称号 五行之体·土[一阶]
+
+
+#if
+CHECKTITLE 五行之体·土[二阶]
+#act
+MOV S$当前阶段 土·二阶
+MOV S$当前属性 +2%最大生命值
+MOV S$下级属性 +3%最大生命值
+MOV S$下级称号 五行之体·土[三阶]
+MOV S$删除称号 五行之体·土[二阶]
+
+
+
+#if
+CHECKTITLE 五行之体·土[三阶]
+#act
+MOV S$当前阶段 土·三阶
+MOV S$当前属性 +3%最大生命值
+MOV S$下级属性 +4%最大生命值
+MOV S$下级称号 五行之体·土[四阶]
+MOV S$删除称号 五行之体·土[三阶]
+
+
+
+#if
+CHECKTITLE 五行之体·土[四阶]
+#act
+MOV S$当前阶段 土·四阶
+MOV S$当前属性 +4%最大生命值
+MOV S$下级属性 +5%最大生命值
+MOV S$下级称号 五行之体·土[五阶]
+MOV S$删除称号 五行之体·土[四阶]
+
+
+
+#if
+CHECKTITLE 五行之体·土[五阶]
+#act
+MOV S$当前阶段 土·五阶
+MOV S$当前属性 +5%最大生命值
+MOV S$下级属性 +6%最大生命值
+MOV S$下级称号 五行之体·土[六阶]
+MOV S$删除称号 五行之体·土[五阶]
+
+
+#if
+CHECKTITLE 五行之体·土[六阶]
+#act
+MOV S$当前阶段 土·六阶
+MOV S$当前属性 +6%最大生命值
+MOV S$下级属性 +7%最大生命值
+MOV S$下级称号 五行之体·土[七阶]
+MOV S$删除称号 五行之体·土[六阶]
+
+
+#if
+CHECKTITLE 五行之体·土[七阶]
+#act
+MOV S$当前阶段 土·七阶
+MOV S$当前属性 +7%最大生命值
+MOV S$下级属性 +8%最大生命值
+MOV S$下级称号 五行之体·土[八阶]
+MOV S$删除称号 五行之体·土[七阶]
+
+
+#if
+CHECKTITLE 五行之体·土[八阶]
+#act
+MOV S$当前阶段 土·八阶
+MOV S$当前属性 +8%最大生命值
+MOV S$下级属性 +9%最大生命值
+MOV S$下级称号 五行之体·土[九阶]
+MOV S$删除称号 五行之体·土[八阶]
+
+
+#if
+CHECKTITLE 五行之体·土[九阶]
+#act
+MOV S$当前阶段 土·九阶
+MOV S$当前属性 +9%最大生命值
+MOV S$下级属性 +10%最大生命值
+MOV S$下级称号 五行之体·土[十阶]
+MOV S$删除称号 五行之体·土[九阶]
+
+
+#if
+large u12 99
+#act
+DEC u12 100
+INC u11 1
+
+#if
+equal u11 10
+#act
+DEC u11 10
+DEPRIVETITLE <$STR(S$删除称号)>
+CONFERTITLE <$STR(S$下级称号)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+
+
+
+#if
+CHECKTITLE 五行之体·土[十阶]
+#act
+MESSAGEBOX 当前已经升级到满级,无法继续提升
+close
+break
+
+
+
+
+#if
+#act
+#say
+\ \ \  \ \
+<>                                           <[土之灵根]:/FCOLOR=70>\ \
+<>                                           <灵根总共有10阶100级。/FCOLOR=161>\
+<>                                           <每提升10级灵根可提升一阶灵根！/FCOLOR=161>\
+<>                                           <每提升一阶灵根可为自身提升1%的最大生命值/FCOLOR=161>\
+<>                                           < /FCOLOR=161>\
+<><IMG:255:6:255:3>\
+<>                                             <[五行升级]:/FCOLOR=253><IMG:79:6:-82:-4>\ \
+<>                                                    <IMG:77:6:-2:-2><当前阶段:/FCOLOR=150>  {<$STR(S$当前阶段)>/FCOLOR=149}\
+<>                                                    <IMG:77:6:-2:-2><当前等级:/FCOLOR=150>   {<$STR(u11)>/FCOLOR=246}/{10/FCOLOR=246}\
+<>                                                    <IMG:77:6:-2:-2><当前进度:/FCOLOR=150>   {<$STR(u12)>/FCOLOR=246}/{100/FCOLOR=246}\
+<>                                                    <IMG:77:6:-2:-2><当前属性:/FCOLOR=150>  {<$STR(S$当前属性)>/FCOLOR=244}\
+<>                                                    <IMG:77:6:-2:-2><下级属性:/FCOLOR=150>  {<$STR(S$下级属性)>/FCOLOR=244}\
+
+<>                                                          <IMG:256:6:-2:15|253#升级灵根:^-^250#需要:五行石*5^250#需要: 元 宝*200^-^158#注:升级灵根时有概率直接提升一级/@升级> \ \
+<PlayImg:5:770:10:100:-48:-220:0>
+
+
+
+
+
+[@升级]
+#if
+random 20
+checkitem 五行石 5
+CHECKGAMEGOLD ? 200
+#act
+take 五行石 5
+GAMEGOLD - 200
+INC u12 100
+goto @main
+MESSAGEBOX 鸿运当头,直接增加100点进度.
+goto @main
+break
+
+
+
+
+#if
+checkitem 五行石 5
+CHECKGAMEGOLD ? 200
+#act
+take 五行石 5
+GAMEGOLD - 200
+MOVR N$随机进度 1 6
+INC u12 <$STR(N$随机进度)>
+goto @main
+MESSAGEBOX 升级成功,增加<$STR(N$随机进度)>点进度值.
+#elseact
+MESSAGEBOX 升级失败，请检查你的条件是否都满足。
+goto @main
+break

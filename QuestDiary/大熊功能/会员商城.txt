@@ -1,0 +1,374 @@
+[@商城界面]
+{
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+
+<>                              \  \
+\ \
+<>                                                                  <神祈之泪|^250#100灵符一个,单次最多可买9999个/@@InPutInteger3>             <称号卷|^250#100灵符一个,单次最多可买9999个/@@InPutInteger4>    \  \
+
+<>                                                                  <五行石|^250#100灵符一个,单次最多可买9999个/@@InPutInteger7>               <时装羽毛|^250#100灵符一个,单次最多可买9999个/@@InPutInteger8>         \  \
+
+<>            \
+\ \
+
+<>                                                            <以上材料全部可以爆出，打到材料可以卖给玩家./FCOLOR=249> \ \
+\ \
+
+
+
+
+
+
+
+
+[@InPutInteger16]
+#if
+#act
+mul N$灵符 <$str(n16)> 150
+
+#if
+large N16 9999
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N16 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N$灵符 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+
+#if
+checkGameGird < <$str(N$灵符)>
+#act
+MESSAGEBOX [提示]：对不起，你的灵符不足以购买<$str(n16)>个技能强化卷
+break
+
+
+#if
+checkGameGird ? <$str(N$灵符)>
+#act
+GameGird - <$str(N$灵符)>
+give 技能强化卷 <$str(n16)>
+MESSAGEBOX [提示]：购买成功！花费<$str(N$灵符)>灵符！
+mov N$灵符 0
+break
+
+
+
+
+
+
+
+[@InPutInteger8]
+#if
+#act
+mul N$灵符 <$str(n8)> 100
+
+#if
+large N8 9999
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N8 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N$灵符 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+
+#if
+checkGameGird < <$str(N$灵符)>
+#act
+MESSAGEBOX [提示]：对不起，你的灵符不足以购买<$str(n8)>个时装羽毛
+break
+
+
+#if
+checkGameGird ? <$str(N$灵符)>
+#act
+GameGird - <$str(N$灵符)>
+give 时装羽毛 <$str(n8)>
+MESSAGEBOX [提示]：购买成功！花费<$str(N$灵符)>灵符！
+mov N$灵符 0
+break
+
+
+
+
+
+
+
+
+
+
+
+[@InPutInteger7]
+#if
+#act
+mul N$灵符 <$str(n7)> 100
+
+#if
+large N7 9999
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N7 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N$灵符 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+
+#if
+checkGameGird < <$str(N$灵符)>
+#act
+MESSAGEBOX [提示]：对不起，你的灵符不足以购买<$str(n7)>个五行石
+break
+
+
+#if
+checkGameGird ? <$str(N$灵符)>
+#act
+GameGird - <$str(N$灵符)>
+give 五行石 <$str(n7)>
+MESSAGEBOX [提示]：购买成功！花费<$str(N$灵符)>灵符！
+mov N$灵符 0
+break
+
+
+
+
+
+[@InPutInteger6]
+#if
+#act
+mul N$灵符 <$str(n6)> 150
+
+#if
+large N6 9999
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N6 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N$灵符 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+
+#if
+checkGameGird < <$str(N$灵符)>
+#act
+MESSAGEBOX [提示]：对不起，你的灵符不足以购买<$str(n6)>个云顶结晶
+break
+
+
+#if
+checkGameGird ? <$str(N$灵符)>
+#act
+GameGird - <$str(N$灵符)>
+give 云顶结晶 <$str(n6)>
+MESSAGEBOX [提示]：购买成功！花费<$str(N$灵符)>灵符！
+mov N$灵符 0
+break
+
+
+
+
+
+
+
+[@InPutInteger4]
+#if
+#act
+mul N$灵符 <$str(n4)> 100
+
+#if
+large N4 9999
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N4 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N$灵符 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+
+#if
+checkGameGird < <$str(N$灵符)>
+#act
+MESSAGEBOX [提示]：对不起，你的灵符不足以购买<$str(n4)>个称号卷
+break
+
+
+#if
+checkGameGird ? <$str(N$灵符)>
+#act
+GameGird - <$str(N$灵符)>
+give 称号卷 <$str(n4)>
+MESSAGEBOX [提示]：购买成功！花费<$str(N$灵符)>灵符！
+mov N$灵符 0
+break
+
+
+
+[@InPutInteger3]
+#if
+#act
+mul N$灵符 <$str(n3)> 100
+
+#if
+large N3 9999
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N3 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+#if
+EQUAL N$灵符 0
+#act
+MESSAGEBOX [提示]：请输入准确的数量1-9999
+break
+
+
+#if
+checkGameGird < <$str(N$灵符)>
+#act
+MESSAGEBOX [提示]：对不起，你的灵符不足以购买<$str(n3)>个神祈之泪
+break
+
+
+#if
+checkGameGird ? <$str(N$灵符)>
+#act
+GameGird - <$str(N$灵符)>
+give 神祈之泪 <$str(n3)>
+MESSAGEBOX [提示]：购买成功！花费<$str(N$灵符)>灵符！
+mov N$灵符 0
+break
+
+
+
+[@买1]
+#if
+CHECKGAMEGIRD ? 150
+#act
+give 神祈之泪 1
+GAMEGIRD - 150
+MESSAGEBOX 购买成功!
+#ELSEACT
+MESSAGEBOX 你的灵符不足。
+break
+
+[@买2]
+#if
+CHECKGAMEGIRD ? 1500
+#act
+give 神祈之泪 10
+GAMEGIRD - 1500
+MESSAGEBOX 购买成功!
+#ELSEACT
+MESSAGEBOX 你的灵符不足。
+break
+
+
+[@买3]
+#if
+CHECKGAMEGIRD ? 6000
+#act
+give 神祈之泪 50
+GAMEGIRD - 6000
+MESSAGEBOX 购买成功!
+#ELSEACT
+MESSAGEBOX 你的灵符不足。
+break
+
+
+
+
+[@买4]
+#if
+CHECKGAMEGIRD ? 120
+#act
+give 称号卷 1
+GAMEGIRD - 120
+MESSAGEBOX 购买成功!
+#ELSEACT
+MESSAGEBOX 你的灵符不足。
+break
+
+[@买5]
+#if
+CHECKGAMEGIRD ? 1200
+#act
+give 称号卷 10
+GAMEGIRD - 1200
+MESSAGEBOX 购买成功!
+#ELSEACT
+MESSAGEBOX 你的灵符不足。
+break
+
+
+[@买6]
+#if
+CHECKGAMEGIRD ? 6000
+#act
+give 称号卷 50
+GAMEGIRD - 6000
+MESSAGEBOX 购买成功!
+#ELSEACT
+MESSAGEBOX 你的灵符不足。
+break
+
+
+
+
+
+
+
+}

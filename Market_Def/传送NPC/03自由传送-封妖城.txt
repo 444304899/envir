@@ -1,0 +1,98 @@
+[@main]
+#if
+#act
+GOTO @自由地图配置
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+
+<>                                                        <PLAYIMG:7:10:5:100:0:-1><【地图介绍】：/AUTOCOLOR=150> <新人起飞之地./AUTOCOLOR=250>   \
+<>                                                        <PLAYIMG:7:10:5:100:0:-1><【爆率说明】：/AUTOCOLOR=150> <前期基础专属装备/AUTOCOLOR=161>\
+<>                                                        <PLAYIMG:7:10:5:100:0:-1><【进入条件】：/AUTOCOLOR=150> <进图需要等级达到100级或者赞助会员/AUTOCOLOR=151>  \
+<>                                                        <PLAYIMG:7:10:5:100:0:-1><【特别说明】：/AUTOCOLOR=150> <<进入一层刀刀冰冻！唯一触发冰冻地图！!/AUTOCOLOR=58>  \ \
+<>                                                        <ItemShow:901:0:40:-9:1>   <ItemShow:902:0:40:-9:1>   <ItemShow:903:0:40:-9:1>   <ItemShow:898:0:40:-9:1>\ \ \
+
+<>                                                        <ItemShow:879:0:40:-9:1>   <ItemShow:880:0:40:-9:1>   <ItemShow:887:0:40:-9:1>   <ItemShow:888:0:40:-9:1>\ \
+
+<>                                                                     <IMG:242:40:10:25|/@传送1>
+
+;<><IMG:216:13:-243:35> \
+
+;<><IMG:166:6:10:38>\ \ \
+
+
+[@自由地图配置]
+#IF
+#Act
+Getliststring ..\QuestDiary\馒头制作\地图产出\自由大陆.txt 0 S$大陆显示0 S$无无0
+Getliststring ..\QuestDiary\馒头制作\地图产出\自由大陆.txt 1 S$大陆显示1 S$无无1
+Getliststring ..\QuestDiary\馒头制作\地图产出\自由大陆.txt 2 S$大陆显示2 S$无无2
+Getliststring ..\QuestDiary\馒头制作\地图产出\自由大陆.txt 3 S$大陆显示3 S$无无3
+Getliststring ..\QuestDiary\馒头制作\地图产出\自由大陆.txt 4 S$大陆显示4 S$无无4
+Getliststring ..\QuestDiary\馒头制作\地图产出\自由大陆.txt 5 S$大陆显示5 S$无无5
+Getliststring ..\QuestDiary\馒头制作\地图产出\自由大陆.txt 6 S$大陆显示6 S$无无6
+Getliststring ..\QuestDiary\馒头制作\地图产出\自由大陆.txt 7 S$大陆显示7 S$无无7
+
+#IF
+Equal S$大陆显示0
+#Act
+mov S$大陆显示0 暂无产出数据
+
+#IF
+Equal S$大陆显示1
+#Act
+mov S$大陆显示1 暂无产出数据
+
+#IF
+Equal S$大陆显示2
+#Act
+mov S$大陆显示2 暂无产出数据
+
+#IF
+Equal S$大陆显示3
+#Act
+mov S$大陆显示3 暂无产出数据
+
+#IF
+Equal S$大陆显示4
+#Act
+mov S$大陆显示4 暂无产出数据
+
+#IF
+Equal S$大陆显示5
+#Act
+mov S$大陆显示5 暂无产出数据
+
+#IF
+Equal S$大陆显示6
+#Act
+mov S$大陆显示6 暂无产出数据
+
+#IF
+Equal S$大陆显示7
+#Act
+mov S$大陆显示7 暂无产出数据
+
+
+
+[@传送1]
+#if
+check [101] 1
+#act
+mapmove 1dl5 124 157
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+break
+
+
+#if
+CHECKLEVELEX > 99
+#act
+mapmove 1dl5 124 157
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+break
+
+
+
+#if
+#act
+MESSAGEBOX 进图失败,请检查你的等级是否达到要求
+break

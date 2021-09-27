@@ -1,0 +1,83 @@
+[@main]
+#IF
+#act
+#say
+\ \ \
+
+<>    <PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1> <【特别说明】：/AUTOCOLOR=150> <本服所有装备均可爆出!/AUTOCOLOR=58><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1>  \  \
+
+<>         <此地图爆率加成500% 超多怪物/AUTOCOLOR=158> \
+<>         <进图要求超脱秘境卷轴*10张或者100个金币一次/AUTOCOLOR=158>\
+<>         <进图1小时后自动返回仙古筑桥/AUTOCOLOR=158>\
+<>         <全区进入次数达到10次后触发秘境boss/AUTOCOLOR=158>\
+<>         <当前进入次数 <$str(g72)>／次,10次后重新计算/AUTOCOLOR=158>\
+<>                      \   \    \
+
+
+<>                  <IMG:176:6:230:-26/@传送1>    \
+
+
+
+
+
+[@传送1]
+#if
+checkitem 超脱秘境卷轴 10
+#act
+take 超脱秘境卷轴 10
+MAPMOVE  仙古筑桥密境
+INC G72 1
+GOTO @脚本
+SENDDELAYMSG 自动传回仙古筑桥%s 3600 255 0 @给礼物
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+#if
+checkgold 100
+#act
+take 金币 100
+MAPMOVE  仙古筑桥密境
+INC G72 1
+GOTO @脚本
+SENDDELAYMSG 自动传回仙古筑桥%s 3600 255 0 @给礼物
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+[@脚本]
+#if
+large g72 9
+#act
+MonGenEx 仙古筑桥秘境 60  61 【超脱之·仙古】  10  1 0 253
+GOTO @脚本1
+SENDMOVEMSG 0 243 0 130 1 {提示:/FCOLOR=250}封妖古地秘境中{[仙古筑桥秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {提示:/FCOLOR=250}封妖古地秘境中{[仙古筑桥秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {提示:/FCOLOR=250}封妖古地秘境中{[仙古筑桥秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 00
+break
+
+
+[@脚本1]
+#if
+large g72 9
+#act
+MOV G72 0
+
+
+
+[@给礼物]
+#if
+#act
+MAPMOVE  仙古筑桥
+
+
+
+
+
+
+
+
+
+
+
+
+

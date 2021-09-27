@@ -1,0 +1,525 @@
+[@挑战擂台脚本ST4]
+{
+#ACT
+VAR String GLOBAL 挑战发起姓名4
+VAR String GLOBAL 挑战邀请姓名4
+VAR Integer GLOBAL 挑战发起数量4
+VAR Integer GLOBAL 挑战开始计时4
+VAR Integer GLOBAL 挑战开始判断4
+;LOADVAR GLOBAL 挑战发起姓名4 ..\QuestDiary\挑战擂台配置\挑战擂台变量4.txt
+;LOADVAR GLOBAL 挑战邀请姓名4 ..\QuestDiary\挑战擂台配置\挑战擂台变量4.txt
+;LOADVAR GLOBAL 挑战发起数量4 ..\QuestDiary\挑战擂台配置\挑战擂台变量4.txt
+;LOADVAR GLOBAL 挑战开始计时4 ..\QuestDiary\挑战擂台配置\挑战擂台变量4.txt
+;LOADVAR GLOBAL 挑战开始判断4 ..\QuestDiary\挑战擂台配置\挑战擂台变量4.txt
+}
+
+[@挑战擂台脚本QM4]
+{
+#ACT
+VAR String HUMAN 挑战个人姓名4
+VAR Integer HUMAN 挑战个人数量4
+VAR String HUMAN 挑战个人开启4
+MOV N$挑战N87 1
+
+[@挑战擂台清理场地4]
+#IF
+CheckHumInRange leitai 46 47 5
+#ACT
+MAPMOVE YD 189 67
+BREAK
+
+[@挑战擂台邀请响应4]
+#IF
+EQUAL N$挑战N87 0
+ONLINELONGMIN < 1
+#ACT
+break
+#IF
+checkvar human 挑战个人开启4 = 关闭
+#ELSEACT
+DELAYCALL 1 @挑战擂台脚本NPC4
+
+[@挑战擂台脚本NPC4]
+#IF
+checkvar GLOBAL 挑战发起姓名 = <$USERNAME>
+
+#ACT
+messagebox 错误，不可以同时参加2个擂台！！
+BREAK
+
+#IF
+checkvar GLOBAL 挑战邀请姓名 = <$USERNAME>
+
+#ACT
+messagebox 错误，不可以同时参加2个擂台！！
+BREAK
+
+
+
+#IF
+checkvar GLOBAL 挑战发起姓名2 = <$USERNAME>
+
+#ACT
+messagebox 错误，不可以同时参加2个擂台！！
+BREAK
+
+#IF
+checkvar GLOBAL 挑战邀请姓名2 = <$USERNAME>
+
+#ACT
+messagebox 错误，不可以同时参加2个擂台！！
+BREAK
+
+#IF
+checkvar GLOBAL 挑战发起姓名3 = <$USERNAME>
+
+#ACT
+messagebox 错误，不可以同时参加2个擂台！！
+BREAK
+
+#IF
+checkvar GLOBAL 挑战邀请姓名3 = <$USERNAME>
+
+#ACT
+messagebox 错误，不可以同时参加2个擂台！！
+BREAK
+
+
+
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+CALCVAR HUMAN 挑战个人开启4 =
+#IF
+checkvar GLOBAL 挑战开始判断4 = 1
+#ACT
+OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+Gmexecute 开始提问 @擂台接受令4
+BREAK
+#SAY
+<>\ \ \ \ \ \ \
+<>　 　 　 　 玩家【<$GLOBAL(挑战发起姓名4)>】向【<$GLOBAL(挑战邀请姓名4)>】发起了擂台邀请\ \
+<>　 　 　 　 是否接受他的挑战？       倒计时：<$GLOBAL(挑战开始计时4)>秒\ \
+<>　 　 　 　 挑战擂台发起玩家：<$GLOBAL(挑战发起姓名4)>\ \
+<>　 　 　 　 挑战押注钻石数量：<$GLOBAL(挑战发起数量4)>\ \
+<>　 　 　 　 <接受挑战/@挑战擂台邀请响应接受4>　　　<拒绝挑战/@挑战擂台邀请响应拒绝4>　　　　　　<关闭接收/@挑战擂台关闭接收4>\
+
+#IF
+checkvar GLOBAL 挑战开始判断4 = 0
+#ACT
+OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+BREAK
+#SAY
+<>\ \ \ \ \ \ \
+<>　 　 　 　 <输入玩家姓名和押注数量，点确定发起即可向该玩家发起单挑邀请！/FCOLOR=245>\
+\ \
+<>　 　 　 　 <输入邀请玩家名字/@@InPutString94>:<$HUMAN(挑战个人姓名4)>　　<邀请全服任意玩家/@挑战擂台输入全服4>\
+<>　 　 　 　 <输入押注钻石数量/@@InPutInteger94>:<$HUMAN(挑战个人数量4)>　　\
+<>　 　 　 　 <挑战获胜方式:/FCOLOR=69><地图内剩余1人时可领取获胜奖励！双方均离开地图视为失败！/FCOLOR=6>\
+<>　 　 　 　 <挑战进行时长:/FCOLOR=69><如果$(挑战擂台进行时间)分钟内不分胜负，双方均视为挑战失败！/FCOLOR=6>\
+
+\ \
+<>　 　 　 　 <确定发起单挑/@挑战擂台发起确定4>
+
+#ELSEACT
+MOV D18 0
+MOV S26 <$GLOBAL(挑战发起姓名4)>
+MOV S27 <$GLOBAL(挑战邀请姓名4)>
+#IF
+S26.checkonline
+S26.ISONMAP leitai
+#ELSEACT
+INC D18 1
+#IF
+S27.checkonline
+S27.ISONMAP leitai
+#ELSEACT
+INC D18 1
+#IF
+LARGE D18 1
+#ACT
+CALCVAR GLOBAL 挑战发起姓名4 =
+CALCVAR GLOBAL 挑战邀请姓名4 =
+CALCVAR GLOBAL 挑战发起数量4 = 0
+CALCVAR GLOBAL 挑战开始计时4 = 0
+CALCVAR GLOBAL 挑战开始判断4 = 0
+SAVEVAR GLOBAL 挑战发起姓名4
+SAVEVAR GLOBAL 挑战邀请姓名4
+SAVEVAR GLOBAL 挑战发起数量4
+SAVEVAR GLOBAL 挑战开始计时4
+SAVEVAR GLOBAL 挑战开始判断4
+SENDMSG 0 $(挑战擂台公告前缀)挑战双方已离开挑战地图，均视为挑战失败！
+DELAYCALL 1 @挑战擂台脚本NPC4
+BREAK
+#ELSEACT
+MOV D17 <$GLOBAL(挑战开始计时4)>
+MOV D16 <$GLOBAL(挑战开始计时4)>
+DIV D17 <$STR(D17)> 60
+MOV D18 <$STR(D17)>
+MUL D18 <$STR(D18)> 60
+DEC D16 <$STR(D18)>
+BREAK
+#ELSESAY
+挑战擂台正在进行.....倒计时：<$STR(D17)>分<$STR(D16)>秒\
+挑战擂台发起玩家：<$GLOBAL(挑战发起姓名4)>\
+挑战擂台响应玩家：<$GLOBAL(挑战邀请姓名4)>\
+挑战押注钻石数量：<$GLOBAL(挑战发起数量4)>\ \
+<挑战胜利领取奖励/@挑战擂台领取奖励4>　　　\
+
+[@挑战擂台领取奖励4]
+#IF
+checkvar GLOBAL 挑战开始判断4 < 2
+#ACT
+MESSAGEBOX 对不起，挑战已经结束！
+break
+#ELSEACT
+MOV S26
+#IF
+checkvar GLOBAL 挑战邀请姓名4 = <$USERNAME>
+#ACT
+MOV S26 <$GLOBAL(挑战发起姓名4)>
+#IF
+checkvar GLOBAL 挑战发起姓名4 = <$USERNAME>
+#ACT
+MOV S26 <$GLOBAL(挑战邀请姓名4)>
+#IF
+EQUAL S26
+#ACT
+MESSAGEBOX 对不起，您不是挑战者！
+BREAK
+#IF
+S26.checkonline
+S26.CheckHumInRange leitai 46 47 5
+#ACT
+SENDMSG 6 请将对手清理出光环外才能领取奖励！
+close
+BREAK
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV D18 <$GLOBAL(挑战发起数量4)>
+MOV S27
+#IF
+checkvar GLOBAL 挑战发起数量4 > 20000000
+#ACT
+MOV D17 <$GLOBAL(挑战发起数量4)>
+DIV D17 <$STR(D17)> 100
+MUL D17 <$STR(D17)> $(挑战擂台纳税比例)
+#ELSEACT
+MOV D17 <$GLOBAL(挑战发起数量4)>
+MUL D17 <$STR(D17)> $(挑战擂台纳税比例)
+DIV D17 <$STR(D17)> 100
+#IF
+LARGE D17 0
+#ACT
+DEC D18 <$STR(D17)>
+MOV S27 （已扣除$(挑战擂台纳税比例)%共
+INC S27 <$STR(D17)>
+INC S27 钻石税金4）
+#IF
+CheckHumInRange leitai 46 47 5
+CHECKLEVELEX > 0
+#ACT
+GamePoint + <$GLOBAL(挑战发起数量4)>
+GamePoint + <$STR(D18)>
+SENDMSG 0 $(挑战擂台公告前缀)恭喜【<$USERNAME>】挑战胜利赢取【<$STR(S26)>】的【<$STR(D18)>钻石】<$STR(S27)>！
+CALCVAR GLOBAL 挑战发起姓名4 =
+CALCVAR GLOBAL 挑战邀请姓名4 =
+CALCVAR GLOBAL 挑战发起数量4 = 0
+CALCVAR GLOBAL 挑战开始计时4 = 0
+CALCVAR GLOBAL 挑战开始判断4 = 0
+SAVEVAR GLOBAL 挑战发起姓名4
+SAVEVAR GLOBAL 挑战邀请姓名4
+SAVEVAR GLOBAL 挑战发起数量4
+SAVEVAR GLOBAL 挑战开始计时4
+SAVEVAR GLOBAL 挑战开始判断4
+MAPMOVE YD 189 67
+
+MESSAGEBOX 恭喜您，挑战胜利赢取【<$STR(S26)>】的【<$STR(D18)>钻石】！\　\<$STR(S27)>
+
+[@挑战擂台输入全服4]
+#ACT
+CALCVAR HUMAN 挑战个人姓名4 = $(挑战全服玩家姓名)
+goto @挑战擂台脚本NPC4
+
+[@InPutInteger94]
+#IF
+SMALL N94 $(挑战押注钻石最小)
+#ACT
+MESSAGEBOX 对不起，最小需要输入$(挑战押注钻石最小)钻石！
+break
+#IF
+LARGE N94 $(挑战押注钻石最大)
+#ACT
+MESSAGEBOX 对不起，最多只能输入$(挑战押注钻石最大)钻石！
+break
+#IF
+CHECKGamePoint < <$STR(N94)>
+#ACT
+MESSAGEBOX 对不起，您身上的钻石数量不足<$STR(N94)>个！
+BREAK
+#ELSEACT
+CALCVAR HUMAN 挑战个人数量4 = <$STR(N94)>
+goto @挑战擂台脚本NPC4
+
+[@InPutString94]
+#IF
+EQUAL S94 0
+#ACT
+CALCVAR HUMAN 挑战个人姓名4 = $(挑战全服玩家姓名)
+goto @挑战擂台脚本NPC4
+BREAK
+#IF
+EQUAL S94 <$USERNAME>
+#act
+MESSAGEBOX 对不起，不能输入自己的名字！
+BREAK
+#IF
+S94.checkonline
+#ELSEACT
+MESSAGEBOX 对不起，玩家【<$STR(S94)>】不在线，请确认名字是否正确！
+BREAK
+#ACT
+CALCVAR HUMAN 挑战个人姓名4 = <$STR(S94)>
+goto @挑战擂台脚本NPC4
+
+[@挑战擂台发起确定4]
+#IF
+CHECKLEVELEX > 0
+#ACT
+DELAYCALL 1 @挑战擂台脚本NPC4
+#IF
+checkvar human 挑战个人数量4 < $(挑战押注钻石最小)
+#ACT
+MESSAGEBOX 对不起，最小需要输入$(挑战押注钻石最小)钻石！
+break
+#IF
+checkvar human 挑战个人数量4 > $(挑战押注钻石最大)
+#ACT
+MESSAGEBOX 对不起，最多只能输入$(挑战押注钻石最大)钻石！
+break
+#IF
+CHECKGamePoint < <$HUMAN(挑战个人数量4)>
+#ACT
+MESSAGEBOX 对不起，您身上的钻石数量不足<$HUMAN(挑战个人数量4)>个！
+BREAK
+#IF
+checkvar human 挑战个人姓名4 = <$USERNAME>
+#ACT
+MESSAGEBOX 对不起，不能输入自己的名字！
+BREAK
+#ELSEACT
+MOV S26 天儿天4
+MOV S26 <$HUMAN(挑战个人姓名4)>
+#IF
+checkvar human 挑战个人姓名4 =
+#ACT
+CALCVAR HUMAN 挑战个人姓名4 = $(挑战全服玩家姓名)
+#IF
+checkvar human 挑战个人姓名4 = $(挑战全服玩家姓名)
+#ACT
+MOV S26
+#IF
+S27.checkonline
+#ACT
+MOV S26
+#IF
+EQUAL S26
+#ELSEACT
+MESSAGEBOX 对不起，玩家【<$HUMAN(挑战个人姓名4)>】不在线，请确认名字是否正确！
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名4 = <$USERNAME>
+#act
+MESSAGEBOX 对不起，您已经发起挑战，请勿重复提交！
+break
+#IF
+checkvar GLOBAL 挑战发起姓名4 =
+#ACT
+CALCVAR GLOBAL 挑战发起姓名4 = <$USERNAME>
+CALCVAR GLOBAL 挑战邀请姓名4 = <$HUMAN(挑战个人姓名4)>
+CALCVAR GLOBAL 挑战发起数量4 = <$HUMAN(挑战个人数量4)>
+CALCVAR GLOBAL 挑战开始计时4 = $(挑战擂台响应时间)
+CALCVAR GLOBAL 挑战开始判断4 = 1
+SAVEVAR GLOBAL 挑战发起姓名4
+SAVEVAR GLOBAL 挑战邀请姓名4
+SAVEVAR GLOBAL 挑战发起数量4
+SAVEVAR GLOBAL 挑战开始计时4
+SAVEVAR GLOBAL 挑战开始判断4
+SENDMSG 0 $(挑战擂台公告前缀)【<$USERNAME>】向【<$HUMAN(挑战个人姓名4)>】发起了擂台邀请
+MESSAGEBOX 发起成功，请等待【<$HUMAN(挑战个人姓名4)>】回应..点擂台NPC接受挑战.
+#ELSEACT
+MESSAGEBOX 对不起，当前已有玩家挑战，请等待结束或进入观战！
+BREAK
+
+[@挑战擂台关闭接收4]
+#ACT
+mov U41 300
+CALCVAR HUMAN 挑战个人开启4 = 关闭
+SENDMSG 6 $(挑战擂台公告前缀)你已关闭接受挑战信息！需重新开启请点击NPC！
+close
+
+[@挑战擂台邀请响应观战4]
+#IF
+CHECKSLAVECOUNT > 0
+#ACT
+MESSAGEBOX 本地图禁止携带宝宝进入，是否清理您的宝宝？ @挑战擂台邀请响应观战B4 @
+BREAK
+#ELSEACT
+goto @挑战擂台邀请响应观战B4
+
+[@挑战擂台邀请响应观战B4]
+#IF
+ISONMAP leitai
+#ACT
+MESSAGEBOX 你已在挑战擂台地图！
+break
+#IF
+H.checkonline
+#ACT
+MESSAGEBOX 对不起，本地图禁止携带英雄进入！
+break
+#IF
+checkvar GLOBAL 挑战开始判断4 > 1
+checkvar GLOBAL 挑战邀请姓名4 = <$USERNAME>
+#ACT
+MESSAGEBOX 对不起，您是挑战者，挑战期间不能进行围观！
+break
+#IF
+checkvar GLOBAL 挑战开始判断4 > 1
+checkvar GLOBAL 挑战发起姓名4 = <$USERNAME>
+#ACT
+MESSAGEBOX 对不起，您是挑战者，挑战期间不能进行围观！
+break
+#IF
+CHECKSLAVECOUNT > 0
+#ACT
+KILLSLAVE
+#IF
+CHECKSLAVECOUNT > 0
+#ACT
+MESSAGEBOX 对不起，清理宝宝失败，请将您的宝宝召唤到身边再点确定！
+break
+#IF
+CHECKLEVELEX > 0
+#ACT
+MAPMOVE leitai 40 40
+SetHumAttackMode 1 7200
+
+[@挑战擂台邀请响应拒绝4]
+#IF
+checkvar GLOBAL 挑战开始判断4 = 1
+#ELSEACT
+close
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名4 = <$USERNAME>
+#ACT
+SENDMSG 0 $(挑战擂台公告前缀)【<$GLOBAL(挑战邀请姓名4)>】拒绝了【<$GLOBAL(挑战发起姓名4)>】的挑战！
+MOV S26 <$GLOBAL(挑战发起姓名4)>
+CALCVAR GLOBAL 挑战发起姓名4 =
+CALCVAR GLOBAL 挑战邀请姓名4 =
+CALCVAR GLOBAL 挑战发起数量4 = 0
+CALCVAR GLOBAL 挑战开始计时4 = 0
+CALCVAR GLOBAL 挑战开始判断4 = 0
+SAVEVAR GLOBAL 挑战发起姓名4
+SAVEVAR GLOBAL 挑战邀请姓名4
+SAVEVAR GLOBAL 挑战发起数量4
+SAVEVAR GLOBAL 挑战开始计时4
+SAVEVAR GLOBAL 挑战开始判断4
+S26.MESSAGEBOX 对不起，对方拒绝接受您的挑战！
+#ELSEACT
+close
+break
+
+[@挑战擂台邀请响应接受4]
+#IF
+S27.CheckHumInRange leitai 46 32 5
+#ACT
+MESSAGEBOX 对不起，擂主已经在擂台中间！
+BREAK
+
+#IF
+S27.CheckHumInRange leitai 32 47 5
+#ACT
+MESSAGEBOX 对不起，擂主已经在擂台中间！
+BREAK
+
+#IF
+S27.CheckHumInRange leitai 32 32 5
+#ACT
+MESSAGEBOX 对不起，擂主已经在擂台中间！
+BREAK
+
+
+#IF
+checkvar GLOBAL 挑战发起姓名4 = <$USERNAME>
+#act
+MESSAGEBOX 对不起，您是挑战发起者，不能响应！
+break
+#IF
+checkvar GLOBAL 挑战开始判断4 = 0
+#ACT
+MESSAGEBOX 对不起，该挑战已经结束！
+close
+BREAK
+#IF
+checkvar GLOBAL 挑战开始判断4 > 1
+#ACT
+MESSAGEBOX 对不起，该挑战已经有人响应，您可选择进入观战！
+BREAK
+#ELSEACT
+MOV S26
+MOV S27 <$GLOBAL(挑战发起姓名4)>
+#IF
+checkvar GLOBAL 挑战邀请姓名4 = $(挑战全服玩家姓名)
+#ACT
+MOV S26 天儿天4
+#IF
+checkvar GLOBAL 挑战邀请姓名4 = <$USERNAME>
+#ACT
+MOV S26 天儿天4
+#IF
+EQUAL S26
+#ACT
+MESSAGEBOX 对不起，该挑战只邀请玩家【<$GLOBAL(挑战邀请姓名4)>】！\　\您可选择进入观战！
+BREAK
+#IF
+CHECKGamePoint < <$GLOBAL(挑战发起数量4)>
+#ACT
+MESSAGEBOX 对不起，您身上的钻石数量不足<$GLOBAL(挑战发起数量4)>个！
+BREAK
+#IF
+S27.checkonline
+#ELSEACT
+MESSAGEBOX 对不起，擂主【<$GLOBAL(挑战发起姓名4)>】已经下线！\　\请稍后再试！
+BREAK
+#IF
+S26.CHECKGamePoint < <$GLOBAL(挑战发起数量4)>
+#ACT
+S26.MESSAGEBOX 对不起，您的钻石数量已不足<$GLOBAL(挑战发起数量4)>个！\　\对方无法接受挑战，请勿将钻石转走！
+MESSAGEBOX 对不起，擂主【<$GLOBAL(挑战发起姓名4)>】的钻石数量已不足<$GLOBAL(挑战发起数量4)>个！\　\请告知其将钻石转回再接受挑战！
+BREAK
+#ELSEACT
+Gmexecute $(挑战全服触发命令) @挑战擂台清理场地4
+CALCVAR GLOBAL 挑战邀请姓名4 = <$USERNAME>
+CALCVAR GLOBAL 挑战开始计时4 = $(挑战擂台进行时间)
+CALCVAR GLOBAL 挑战开始计时4 * 60
+CALCVAR GLOBAL 挑战开始判断4 = 2
+SAVEVAR GLOBAL 挑战开始判断4
+SAVEVAR GLOBAL 挑战邀请姓名4
+SAVEVAR GLOBAL 挑战开始计时4
+GamePoint - <$GLOBAL(挑战发起数量4)>
+SENDMSG 6 挑战正式开始！
+S27.GamePoint - <$GLOBAL(挑战发起数量4)>
+S27.SENDMSG 6 挑战正式开始！
+MAPMOVE leitai 43 51
+S27.MAPMOVE leitai 50 44
+SetHumAttackMode 0 7200
+S27.SetHumAttackMode 0 7200
+
+[@挑战擂台常量加载]
+#CALL [\挑战擂台配置\挑战擂台常量.ini] @挑战擂台常量
+}

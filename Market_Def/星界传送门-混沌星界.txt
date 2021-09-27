@@ -1,0 +1,14 @@
+[@main]
+#if
+large g498 0
+#act
+map 星界传送门
+SENDDELAYMSG 鸿蒙空间限时开启一小时，%s后自动传回主城 <$str(g498)> 255 1 @给礼物
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+#elseact
+messagebox [提示:]\\进图失败,传送已关闭
+break
+
+[@给礼物]
+#act
+mapmove 封妖城 138 98

@@ -1,0 +1,202 @@
+(@@InPutInteger)
+[@main]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                          <[加入QQ群领取豪华礼包]/FCOLOR=70>\
+<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【刀刀切割+1000】/FCOLOR=250> \
+<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【施毒术*1】/FCOLOR=250> \
+<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【开天斩*1】/FCOLOR=250> \
+<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【逐日剑法*1】/FCOLOR=250> \
+<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【十星勋章*1】/FCOLOR=250> \
+<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【手术刀+10*1】/FCOLOR=250> \
+<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【麻醉枪+10*1】/FCOLOR=250> \ \ \ \ \
+
+;<>                                        \ \ \
+
+<>                                        <加入QQ群198605888"/FCOLOR=249>             <输入激活码/@@InPutString69> <(赠送:自动拾取)/FCOLOR=250> \    \
+
+
+
+
+<>                                           <玩家交流群 ①198605888  ②198605888/FCOLOR=161>           <一键加群请点我!/@加群>  \
+
+<>                                                            <ItemShow:1723:0:95:-104:1>  <ItemShow:509:0:95:-104:1>  <ItemShow:1092:0:95:-101:1>  <ItemShow:585:0:95:-101:1>\
+
+
+
+[@加群]
+#ACT
+OpenWebSite https://jq.qq.com/?_wv=1027&k=E70FQqIV
+
+
+[@InPutString69]
+
+#if
+CHECKGOLD 20000
+;check [66] 0
+EQUAL S69 1888
+#act
+;set [66] 1
+MOV U25 20
+MOV U26 20
+MOV U27 20
+MOV U28 20
+DEPRIVETITLE 血脉之力Lv1
+DEPRIVETITLE 血脉之力Lv2
+DEPRIVETITLE 血脉之力Lv3
+DEPRIVETITLE 血脉之力Lv4
+DEPRIVETITLE 血脉之力Lv5
+DEPRIVETITLE 血脉之力Lv6
+DEPRIVETITLE 血脉之力Lv7
+DEPRIVETITLE 血脉之力Lv8
+DEPRIVETITLE 血脉之力Lv9
+DEPRIVETITLE 血脉之力Lv10
+DEPRIVETITLE 血脉之力Lv11
+DEPRIVETITLE 血脉之力Lv12
+DEPRIVETITLE 血脉之力Lv13
+DEPRIVETITLE 血脉之力Lv14
+DEPRIVETITLE 血脉之力Lv15
+DEPRIVETITLE 血脉之力Lv16
+DEPRIVETITLE 血脉之力Lv17
+DEPRIVETITLE 血脉之力Lv18
+DEPRIVETITLE 血脉之力Lv19
+DEPRIVETITLE 血脉之力Lv20
+DEPRIVETITLE 物理攻击Lv1
+DEPRIVETITLE 物理攻击Lv2
+DEPRIVETITLE 物理攻击Lv3
+DEPRIVETITLE 物理攻击Lv4
+DEPRIVETITLE 物理攻击Lv5
+DEPRIVETITLE 物理攻击Lv6
+DEPRIVETITLE 物理攻击Lv7
+DEPRIVETITLE 物理攻击Lv8
+DEPRIVETITLE 物理攻击Lv9
+DEPRIVETITLE 物理攻击Lv10
+DEPRIVETITLE 物理攻击Lv11
+DEPRIVETITLE 物理攻击Lv12
+DEPRIVETITLE 物理攻击Lv13
+DEPRIVETITLE 物理攻击Lv14
+DEPRIVETITLE 物理攻击Lv15
+DEPRIVETITLE 物理攻击Lv16
+DEPRIVETITLE 物理攻击Lv17
+DEPRIVETITLE 物理攻击Lv18
+DEPRIVETITLE 物理攻击Lv19
+DEPRIVETITLE 物理攻击Lv20
+DEPRIVETITLE 上古神力Lv1
+DEPRIVETITLE 上古神力Lv2
+DEPRIVETITLE 上古神力Lv3
+DEPRIVETITLE 上古神力Lv4
+DEPRIVETITLE 上古神力Lv5
+DEPRIVETITLE 上古神力Lv6
+DEPRIVETITLE 上古神力Lv7
+DEPRIVETITLE 上古神力Lv8
+DEPRIVETITLE 上古神力Lv9
+DEPRIVETITLE 上古神力Lv10
+DEPRIVETITLE 上古神力Lv11
+DEPRIVETITLE 上古神力Lv12
+DEPRIVETITLE 上古神力Lv13
+DEPRIVETITLE 上古神力Lv14
+DEPRIVETITLE 上古神力Lv15
+DEPRIVETITLE 上古神力Lv16
+DEPRIVETITLE 上古神力Lv17
+DEPRIVETITLE 上古神力Lv18
+DEPRIVETITLE 上古神力Lv19
+DEPRIVETITLE 上古神力Lv20
+DEPRIVETITLE 物理免伤Lv1
+DEPRIVETITLE 物理免伤Lv2
+DEPRIVETITLE 物理免伤Lv3
+DEPRIVETITLE 物理免伤Lv4
+DEPRIVETITLE 物理免伤Lv5
+DEPRIVETITLE 物理免伤Lv6
+DEPRIVETITLE 物理免伤Lv7
+DEPRIVETITLE 物理免伤Lv8
+DEPRIVETITLE 物理免伤Lv9
+DEPRIVETITLE 物理免伤Lv10
+DEPRIVETITLE 物理免伤Lv11
+DEPRIVETITLE 物理免伤Lv12
+DEPRIVETITLE 物理免伤Lv13
+DEPRIVETITLE 物理免伤Lv14
+DEPRIVETITLE 物理免伤Lv15
+DEPRIVETITLE 物理免伤Lv16
+DEPRIVETITLE 物理免伤Lv17
+DEPRIVETITLE 物理免伤Lv18
+DEPRIVETITLE 物理免伤Lv19
+DEPRIVETITLE 物理免伤Lv20
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+CONFERTITLE 沙城捐献
+CONFERTITLE 狂暴之力
+CONFERTITLE 神魔·完满
+CONFERTITLE 血脉之力Lv20
+CONFERTITLE 物理攻击Lv20
+CONFERTITLE 上古神力Lv20
+CONFERTITLE 物理免伤Lv20
+CONFERTITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之子
+CONFERTITLE 五行之体·土[十阶]
+CONFERTITLE 五行之体·金[十阶]
+CONFERTITLE 五行之体·木[十阶]
+CONFERTITLE 五行之体·水[十阶]
+CONFERTITLE 五行之体·火[十阶]
+give  队友之灾(称号卷) 1
+give  祖安狂人(称号卷) 1
+give  表面兄弟(称号卷) 1
+give  神之信徒称号卷 1
+give 空城泪-旧王愁称号卷 1
+break
+
+
+
+
+#if
+CHECKGOLD 20000
+;check [66] 0
+EQUAL S69 1888
+#act
+;set [66] 1
+give 云顶结晶 9999
+give 云顶结晶 9999
+give 云顶结晶 9999
+give 工匠石 9999
+give 工匠石 9999
+give 时装羽毛 9999
+give 时装羽毛 9999
+give 技能强化卷 9999
+give 强化+15卷轴 2
+give 10亿元宝蛋 5
+give 20亿元宝蛋 5
+break
+
+
+
+
+
+
+
+#if
+check [66] 0
+EQUAL S69 1888
+#act
+set [66] 1
+ADDSKILL 施毒术 3
+ADDSKILL 开天斩 3
+ADDSKILL 逐日剑法 3
+;GiveStateItem 切割神器·[一阶] 1 1 0 0 1 1 1 1
+GIVESTATEITEM 切割神器·[一阶] 1 1 1 0 0 1 1 1 0
+;GiveStateItem 【超神器】关注神器 1 1 0 0 1 1 1 1
+GIVESTATEITEM 【超神器】关注神器 1 1 1 0 0 1 1 1 0
+;GiveStateItem 切割[凡] 1 1 0 0 1 1 1 1
+GIVESTATEITEM 切割[凡] 1 1 1 0 0 1 1 1 0
+give 十星勋章 1
+give 手术刀+10 1
+give 麻醉枪+10 1
+;GiveStateItem  杀人书（封） 1 1 1 1 1 1 1 1
+GIVESTATEITEM 杀人书（封） 1 1 1 1 1 1 1 1 0
+SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+#ELSEACT
+MESSAGEBOX [提示]：对不起，激活码错误\\[提示]：或者你已经领过了该礼包！

@@ -1,0 +1,24 @@
+[@main]
+#IF
+#Act
+#say
+<><>\
+<接引仙使/FCOLOR=154> <New/FCOLOR=249>\
+<九重雷劫渡苍生，不是那么容易的，小伙子。。/FCOLOR=87>\
+<Img:803:0:0:4>\
+<我这里有可帮你抵消一重雷劫伤害的;‘渡劫丹’不知道你有没有兴趣/FCOLOR=147>\
+<虽然很多地方都有爆，价格嘛100金币点就可以卖给你，你考虑考虑/FCOLOR=147>\ \
+<Img:803:0:0:4>\
+<购买渡劫丹·√/@购买> \
+
+
+[@购买]
+#IF
+CheckGold 100
+#act
+TAKE 金币 100
+give 渡劫丹 1
+GuildNoticeMsg 5 255 玩家[<$USERNAME>]获得了：渡劫丹
+#ELSEACT
+MESSAGEBOX 提示：\\你没有100金币
+BREAK

@@ -1,0 +1,18 @@
+[@main]
+
+#IF
+CHECKTITLE 沙城捐献
+CHECKTITLE 狂暴之力
+#act
+MAP 斯卡萨巢穴
+SendCenterMsg 70 0 〖必经之地〗:捐献狂暴玩家[<$USERNAME>]进入了地图<$MapTitle>.探索未知领域!. 1 10
+break
+
+
+#if
+#act
+MESSAGEBOX 进入此地图需要开通捐献+狂暴！！！
+break
+
+
+

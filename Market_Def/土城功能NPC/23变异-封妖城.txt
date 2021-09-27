@@ -1,0 +1,561 @@
+[@main]
+
+#IF
+equal S$强化技能
+#act
+mov S$强化技能 未选择
+MOV S$强化重数 0
+MOV S$强化材料 0
+MOV S$强化元宝 0
+
+
+
+#if
+#act
+#SAY
+\ \ \ \ \
+<>                                   <点击左侧你需要强化技能/FCOLOR=7> \
+<>                                <即可查看强化所需要的具体内容/FCOLOR=7> \ \  \ \  \  \
+<>                                 <技能名称：/FCOLOR=161> <《<$STR(S$强化技能)>》/FCOLOR=250>\
+<>                                 <可强化数：/FCOLOR=161>     <9重/FCOLOR=250>\
+<>                                 <当前强化：/FCOLOR=161>    < <$STR(S$强化重数)>重/FCOLOR=250>\
+<>                                 <所需材料：/FCOLOR=161> <技能强化卷*<$STR(S$强化材料)>/FCOLOR=251>\
+<>                                 <所需费用：/FCOLOR=161>  < <$STR(S$强化元宝)>元宝/FCOLOR=251>\
+<>                           <IMG:151:6:80:20/@强化技能>\
+
+
+
+<ImgEx:13:57:58:57:0:-220/@刺杀剑术> \
+<ImgEx:13:59:60:59:0:-184/@半月弯刀> \
+<ImgEx:13:61:62:61:0:-148/@烈火剑法> \
+<ImgEx:13:63:64:63:0:-112/@逐日剑法> \
+<ImgEx:13:65:66:65:0:-76/@开天斩> \
+
+
+
+
+
+[@强化技能]
+
+#IF
+CHECKSKILL <$STR(S$选择技能)> = 9 1
+#act
+GOTO @MAIN
+MESSAGEBOX 修炼失败：\　\该技能已经修炼到了最高层次，无法为你进行技能修炼！
+break
+
+
+
+
+#if
+CHECKGAMEGOLD ? <$STR(S$强化元宝)>
+checkitem 技能强化卷 <$STR(S$强化材料)>
+#act
+GAMEGOLD - <$STR(S$强化元宝)>
+take 技能强化卷 <$STR(S$强化材料)>
+SKILLLEVEL <$STR(S$强化技能)> = <$STR(S$强化重数)> 1
+GuildNoticeMsg 254 0  恭喜：[<$USERNAME>]成功将“<$STR(S$强化技能)>”强化到了<$STR(S$强化重数)>重，威力大大的增加了！！
+goto @<$STR(S$强化技能)>
+break
+#ELSEACT
+MESSAGEBOX 强化失败：\　\您没有满足强化技能的需求，无法为你进行技能修炼！
+
+
+
+
+
+
+
+
+
+[@烈火剑法]
+#IF
+NOT CheckMagicName 烈火剑法
+#act
+GOTO @MAIN
+MESSAGEBOX 选择失败：\　\您并未修炼该技能，无法为你进行技能修炼！
+break
+
+
+#IF
+CHECKSKILL 烈火剑法 = 9 1
+#act
+GOTO @MAIN
+MESSAGEBOX 修炼失败：\　\该技能已经修炼到了最高层次，无法为你进行技能修炼！
+break
+
+
+
+
+#IF
+CHECKSKILL 烈火剑法 = 0 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 1
+MOV S$强化材料 20
+MOV S$强化元宝 100000
+
+#IF
+CHECKSKILL 烈火剑法 = 1 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 2
+MOV S$强化材料 40
+MOV S$强化元宝 200000
+
+#IF
+CHECKSKILL 烈火剑法 = 2 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 3
+MOV S$强化材料 80
+MOV S$强化元宝 400000
+
+#IF
+CHECKSKILL 烈火剑法 = 3 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 4
+MOV S$强化材料 120
+MOV S$强化元宝 600000
+
+#IF
+CHECKSKILL 烈火剑法 = 4 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 5
+MOV S$强化材料 160
+MOV S$强化元宝 800000
+
+#IF
+CHECKSKILL 烈火剑法 = 5 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 6
+MOV S$强化材料 240
+MOV S$强化元宝 1000000
+
+#IF
+CHECKSKILL 烈火剑法 = 6 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 7
+MOV S$强化材料 280
+MOV S$强化元宝 1500000
+
+#IF
+CHECKSKILL 烈火剑法 = 7 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 8
+MOV S$强化材料 320
+MOV S$强化元宝 2000000
+
+#IF
+CHECKSKILL 烈火剑法 = 8 1
+#act
+mov S$强化技能 烈火剑法
+MOV S$强化重数 9
+MOV S$强化材料 400
+MOV S$强化元宝 3000000
+
+
+
+
+
+
+#if
+#act
+goto @main
+
+
+
+
+[@逐日剑法]
+#IF
+NOT CheckMagicName 逐日剑法
+#act
+GOTO @MAIN
+MESSAGEBOX 选择失败：\　\您并未修炼该技能，无法为你进行技能修炼！
+break
+
+#IF
+CHECKSKILL 逐日剑法 = 9 1
+#act
+GOTO @MAIN
+MESSAGEBOX 修炼失败：\　\该技能已经修炼到了最高层次，无法为你进行技能修炼！
+break
+
+
+
+
+
+#IF
+CHECKSKILL 逐日剑法 = 0 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 1
+MOV S$强化材料 20
+MOV S$强化元宝 100000
+
+#IF
+CHECKSKILL 逐日剑法 = 1 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 2
+MOV S$强化材料 40
+MOV S$强化元宝 200000
+
+#IF
+CHECKSKILL 逐日剑法 = 2 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 3
+MOV S$强化材料 80
+MOV S$强化元宝 400000
+
+#IF
+CHECKSKILL 逐日剑法 = 3 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 4
+MOV S$强化材料 120
+MOV S$强化元宝 600000
+
+#IF
+CHECKSKILL 逐日剑法 = 4 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 5
+MOV S$强化材料 160
+MOV S$强化元宝 800000
+
+#IF
+CHECKSKILL 逐日剑法 = 5 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 6
+MOV S$强化材料 240
+MOV S$强化元宝 1000000
+
+#IF
+CHECKSKILL 逐日剑法 = 6 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 7
+MOV S$强化材料 280
+MOV S$强化元宝 1500000
+
+#IF
+CHECKSKILL 逐日剑法 = 7 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 8
+MOV S$强化材料 320
+MOV S$强化元宝 2000000
+
+#IF
+CHECKSKILL 逐日剑法 = 8 1
+#act
+mov S$强化技能 逐日剑法
+MOV S$强化重数 9
+MOV S$强化材料 400
+MOV S$强化元宝 3000000
+
+
+#if
+#act
+goto @main
+
+
+
+
+[@开天斩]
+#IF
+NOT CheckMagicName 开天斩
+#act
+GOTO @MAIN
+MESSAGEBOX 选择失败：\　\您并未修炼该技能，无法为你进行技能修炼！
+break
+
+#IF
+CHECKSKILL 开天斩 = 9 1
+#act
+GOTO @MAIN
+MESSAGEBOX 修炼失败：\　\该技能已经修炼到了最高层次，无法为你进行技能修炼！
+break
+
+
+
+#IF
+CHECKSKILL 开天斩 = 0 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 1
+MOV S$强化材料 20
+MOV S$强化元宝 100000
+
+#IF
+CHECKSKILL 开天斩 = 1 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 2
+MOV S$强化材料 40
+MOV S$强化元宝 200000
+
+#IF
+CHECKSKILL 开天斩 = 2 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 3
+MOV S$强化材料 80
+MOV S$强化元宝 400000
+
+#IF
+CHECKSKILL 开天斩 = 3 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 4
+MOV S$强化材料 120
+MOV S$强化元宝 600000
+
+#IF
+CHECKSKILL 开天斩 = 4 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 5
+MOV S$强化材料 160
+MOV S$强化元宝 800000
+
+#IF
+CHECKSKILL 开天斩 = 5 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 6
+MOV S$强化材料 240
+MOV S$强化元宝 1000000
+
+#IF
+CHECKSKILL 开天斩 = 6 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 7
+MOV S$强化材料 280
+MOV S$强化元宝 1500000
+
+#IF
+CHECKSKILL 开天斩 = 7 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 8
+MOV S$强化材料 320
+MOV S$强化元宝 2000000
+
+#IF
+CHECKSKILL 开天斩 = 8 1
+#act
+mov S$强化技能 开天斩
+MOV S$强化重数 9
+MOV S$强化材料 400
+MOV S$强化元宝 3000000
+
+
+#if
+#act
+goto @main
+
+
+
+
+
+[@半月弯刀]
+#IF
+#act
+MESSAGEBOX 半月技能强化暂时取消！！
+break
+
+
+
+#IF
+NOT CheckMagicName 半月弯刀
+#act
+GOTO @MAIN
+MESSAGEBOX 选择失败：\　\您并未修炼该技能，无法为你进行技能修炼！
+break
+
+
+
+#IF
+CHECKSKILL 半月弯刀 = 0 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 1
+MOV S$强化材料 20
+MOV S$强化元宝 100000
+
+#IF
+CHECKSKILL 半月弯刀 = 1 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 2
+MOV S$强化材料 40
+MOV S$强化元宝 200000
+
+#IF
+CHECKSKILL 半月弯刀 = 2 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 3
+MOV S$强化材料 80
+MOV S$强化元宝 400000
+
+#IF
+CHECKSKILL 半月弯刀 = 3 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 4
+MOV S$强化材料 120
+MOV S$强化元宝 600000
+
+#IF
+CHECKSKILL 半月弯刀 = 4 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 5
+MOV S$强化材料 160
+MOV S$强化元宝 800000
+
+#IF
+CHECKSKILL 半月弯刀 = 5 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 6
+MOV S$强化材料 240
+MOV S$强化元宝 1000000
+
+#IF
+CHECKSKILL 半月弯刀 = 6 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 7
+MOV S$强化材料 280
+MOV S$强化元宝 1500000
+
+#IF
+CHECKSKILL 半月弯刀 = 7 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 8
+MOV S$强化材料 320
+MOV S$强化元宝 2000000
+
+#IF
+CHECKSKILL 半月弯刀 = 8 1
+#act
+mov S$强化技能 半月弯刀
+MOV S$强化重数 9
+MOV S$强化材料 400
+MOV S$强化元宝 3000000
+
+
+#if
+#act
+goto @main
+
+
+
+
+
+[@刺杀剑术]
+
+#IF
+CHECKSKILL 刺杀剑术 = 9 1
+#act
+GOTO @MAIN
+MESSAGEBOX 修炼失败：\　\该技能已经修炼到了最高层次，无法为你进行技能修炼！
+break
+
+
+
+#IF
+CHECKSKILL 刺杀剑术 = 0 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 1
+MOV S$强化材料 20
+MOV S$强化元宝 100000
+
+#IF
+CHECKSKILL 刺杀剑术 = 1 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 2
+MOV S$强化材料 40
+MOV S$强化元宝 200000
+
+#IF
+CHECKSKILL 刺杀剑术 = 2 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 3
+MOV S$强化材料 80
+MOV S$强化元宝 400000
+
+#IF
+CHECKSKILL 刺杀剑术 = 3 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 4
+MOV S$强化材料 120
+MOV S$强化元宝 600000
+
+#IF
+CHECKSKILL 刺杀剑术 = 4 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 5
+MOV S$强化材料 160
+MOV S$强化元宝 800000
+
+#IF
+CHECKSKILL 刺杀剑术 = 5 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 6
+MOV S$强化材料 240
+MOV S$强化元宝 1000000
+
+#IF
+CHECKSKILL 刺杀剑术 = 6 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 7
+MOV S$强化材料 280
+MOV S$强化元宝 1500000
+
+#IF
+CHECKSKILL 刺杀剑术 = 7 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 8
+MOV S$强化材料 320
+MOV S$强化元宝 2000000
+
+#IF
+CHECKSKILL 刺杀剑术 = 8 1
+#act
+mov S$强化技能 刺杀剑术
+MOV S$强化重数 9
+MOV S$强化材料 400
+MOV S$强化元宝 3000000
+
+
+#if
+#act
+goto @main
+
+
+
+
+
+

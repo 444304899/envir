@@ -1,0 +1,4521 @@
+[@永久回收脚本]
+{
+
+#IF
+not isonmap 封妖城
+#ACT
+MESSAGEBOX 请回城后查看！
+close
+BREAK
+
+#if
+#act
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+
+
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+
+<> {No.1/FCOLOR=150}     {★★★妖切★★★/FCOLOR=249}              { 2金币/FCOLOR=150}          <$STR(G351)>        <点击回收|246#此装备永久回收/@新永久回收1>        <点击回购|246#回购金额：10金币/@新永久回购1>\ \
+
+<> {No.2/FCOLOR=150}     {锦上添花/FCOLOR=249}                      { 150金币/FCOLOR=150}        <$STR(G352)>        <点击回收|246#此装备永久回收/@新永久回收2>        <点击回购|246#回购金额：400金币/@新永久回购2>\ \
+
+<> {No.3/FCOLOR=150}     {看善则善·看恶则恶/FCOLOR=249}            { 150金币/FCOLOR=150}        <$STR(G353)>        <点击回收|246#此装备永久回收/@新永久回收3>        <点击回购|246#回购金额：400金币/@新永久回购3>\ \
+
+<> {No.4/FCOLOR=150}     {指天摘月/FCOLOR=249}                      { 150金币/FCOLOR=150}        <$STR(G354)>        <点击回收|246#此装备永久回收/@新永久回收4>        <点击回购|246#回购金额：400金币/@新永久回购4>\ \
+
+<> {No.5/FCOLOR=150}     {熏风履/FCOLOR=249}                        { 150金币/FCOLOR=150}        <$STR(G355)>        <点击回收|246#此装备永久回收/@新永久回收5>        <点击回购|246#回购金额：400金币/@新永久回购5>\ \
+
+<> {No.6/FCOLOR=150}     {雨幕成珠帘/FCOLOR=249}                    { 150金币/FCOLOR=150}        <$STR(G356)>        <点击回收|246#此装备永久回收/@新永久回收6>        <点击回购|246#回购金额：400金币/@新永久回购6>\ \
+
+<> {No.7/FCOLOR=150}     {原罪·第一剑/FCOLOR=249}                  { 888金币/FCOLOR=150}        <$STR(G357)>        <点击回收|246#此装备永久回收/@新永久回收7>        <点击回购|246#回购金额：1888金币/@新永久回购7>\ \
+
+<> {No.8/FCOLOR=150}     {水泽国度/FCOLOR=249}                      { 400金币/FCOLOR=150}        <$STR(G358)>        <点击回收|246#此装备永久回收/@新永久回收8>        <点击回购|246#回购金额：444金币/@新永久回购8>\ \
+
+<> {No.9/FCOLOR=150}     {罗衫叶叶绣重重/FCOLOR=249}                { 999金币/FCOLOR=150}        <$STR(G359)>        <点击回收|246#此装备永久回收/@新永久回收9>        <点击回购|246#回购金额：1888金币/@新永久回购9>\ \
+
+<> {No.10/FCOLOR=150}    {神.妖.魔.灵.≮古道无仙≯/FCOLOR=249}      { 28金币/FCOLOR=150}         <$STR(G360)>        <点击回收|246#此装备永久回收/@新永久回收10>        <点击回购|246#回购金额：128金币/@新永久回购10>\ \
+
+
+<>                                    <上一页/@永久回收脚本>    <下一页/@永久回收脚本2>   <1／11/FCOLOR=250> \
+
+
+
+[@永久回收脚本2]
+
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+
+<> {No.11/FCOLOR=150}     {人.仙.鬼.怪.≮善恶兩分≯/FCOLOR=249}     { 38金币/FCOLOR=150}         <$STR(G361)>        <点击回收|246#此装备永久回收/@新永久回收11>        <点击回购|246#回购金额：128金币/@新永久回购11>\ \
+
+<> {No.12/FCOLOR=150}     {万灵血玺/FCOLOR=249}                     { 50金币/FCOLOR=150}         <$STR(G362)>        <点击回收|246#此装备永久回收/@新永久回收12>        <点击回购|246#回购金额：188金币/@新永久回购12>\ \
+
+<> {No.13/FCOLOR=150}     {季主配剑≮太初始≯/FCOLOR=249}           { 18金币/FCOLOR=150}         <$STR(G363)>        <点击回收|246#此装备永久回收/@新永久回收13>        <点击回购|246#回购金额：58金币/@新永久回购13>\ \
+
+<> {No.14/FCOLOR=150}     {李主仙衣≮洪荒终≯/FCOLOR=249}           { 18金币/FCOLOR=150}         <$STR(G364)>        <点击回收|246#此装备永久回收/@新永久回收14>        <点击回购|246#回购金额：58金币/@新永久回购14>\ \
+
+<> {No.15/FCOLOR=150}     {步步生莲/FCOLOR=249}                     {  4金币/FCOLOR=150}         <$STR(G365)>        <点击回收|246#此装备永久回收/@新永久回收15>        <点击回购|246#回购金额：10金币/@新永久回购15>\ \
+
+<> {No.16/FCOLOR=150}     {奉旨讨饭/FCOLOR=249}                     {  4金币/FCOLOR=150}         <$STR(G366)>        <点击回收|246#此装备永久回收/@新永久回收16>        <点击回购|246#回购金额：10金币/@新永久回购16>\ \
+
+<> {No.17/FCOLOR=150}     {方父筑桥/FCOLOR=249}                     {  5金币/FCOLOR=150}         <$STR(G367)>        <点击回收|246#此装备永久回收/@新永久回收17>        <点击回购|246#回购金额：18金币/@新永久回购17>\ \
+
+<> {No.18/FCOLOR=150}     {清棺璇/FCOLOR=249}                       {  5金币/FCOLOR=150}         <$STR(G368)>        <点击回收|246#此装备永久回收/@新永久回收18>        <点击回购|246#回购金额：18金币/@新永久回购18>\ \
+
+<> {No.19/FCOLOR=150}     {杀戮本源/FCOLOR=249}                     {  5金币/FCOLOR=150}         <$STR(G369)>        <点击回收|246#此装备永久回收/@新永久回收19>        <点击回购|246#回购金额：18金币/@新永久回购19>\ \
+
+<> {No.20/FCOLOR=150}     {枯冥九衰/FCOLOR=249}                     {  4金币/FCOLOR=150}         <$STR(G370)>        <点击回收|246#此装备永久回收/@新永久回收20>        <点击回购|246#回购金额：10金币/@新永久回购20>\ \
+
+
+<>                                    <上一页/@永久回收脚本>    <下一页/@永久回收脚本3>   <2／11/FCOLOR=250> \
+
+
+
+[@永久回收脚本3]
+
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+
+<> {No.21/FCOLOR=150}     {雁过拔毛/FCOLOR=249}                     {  4金币/FCOLOR=150}         <$STR(G371)>        <点击回收|246#此装备永久回收/@新永久回收21>        <点击回购|246#回购金额：10金币/@新永久回购21>\ \
+
+<> {No.22/FCOLOR=150}     {一汽化三清/FCOLOR=249}                   {  4金币/FCOLOR=150}         <$STR(G372)>        <点击回收|246#此装备永久回收/@新永久回收22>        <点击回购|246#回购金额：10金币/@新永久回购22>\ \
+
+<> {No.23/FCOLOR=150}     {三经钉/FCOLOR=249}                       {  4金币/FCOLOR=150}         <$STR(G373)>        <点击回收|246#此装备永久回收/@新永久回收23>        <点击回购|246#回购金额：10金币/@新永久回购23>\ \
+
+<> {No.24/FCOLOR=150}     {四方珠/FCOLOR=249}                       {  4金币/FCOLOR=150}         <$STR(G374)>        <点击回收|246#此装备永久回收/@新永久回收24>        <点击回购|246#回购金额：10金币/@新永久回购24>\ \
+
+<> {No.25/FCOLOR=150}     {封妖古葫芦/FCOLOR=249}                   {  2金币/FCOLOR=150}         <$STR(G375)>        <点击回收|246#此装备永久回收/@新永久回收25>        <点击回购|246#回购金额：10金币/@新永久回购25>\ \
+
+<> {No.26/FCOLOR=150}     {墨土的雨滴/FCOLOR=249}                   {  2金币/FCOLOR=150}         <$STR(G376)>        <点击回收|246#此装备永久回收/@新永久回收26>        <点击回购|246#回购金额：10金币/@新永久回购26>\ \
+
+<> {No.27/FCOLOR=150}     {七妃殇/FCOLOR=249}                       {  2金币/FCOLOR=150}         <$STR(G377)>        <点击回收|246#此装备永久回收/@新永久回收27>        <点击回购|246#回购金额：10金币/@新永久回购27>\ \
+
+<> {No.28/FCOLOR=150}     {千层绣花毡/FCOLOR=249}                   {  2金币/FCOLOR=150}         <$STR(G378)>        <点击回收|246#此装备永久回收/@新永久回收28>        <点击回购|246#回购金额：10金币/@新永久回购28>\ \
+
+<> {No.29/FCOLOR=150}     {西牛信物/FCOLOR=249}                     {  2金币/FCOLOR=150}         <$STR(G379)>        <点击回收|246#此装备永久回收/@新永久回收29>        <点击回购|246#回购金额：10金币/@新永久回购29>\ \
+
+<> {No.30/FCOLOR=150}     {獒牙/FCOLOR=249}                         {  3金币/FCOLOR=150}         <$STR(G380)>        <点击回收|246#此装备永久回收/@新永久回收30>        <点击回购|246#回购金额：10金币/@新永久回购30>\ \
+
+
+
+<>                                    <上一页/@永久回收脚本2>    <下一页/@永久回收脚本4>   <3／11/FCOLOR=250> \
+
+
+[@永久回收脚本4]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.31/FCOLOR=150}     {蚊兽口器/FCOLOR=249}                     {  3金币/FCOLOR=150}         <$STR(G381)>        <点击回收|246#此装备永久回收/@新永久回收31>        <点击回购|246#回购金额：10金币/@新永久回购31>\ \
+
+<> {No.32/FCOLOR=150}     {∞离经判道∞/FCOLOR=249}                 {  3金币/FCOLOR=150}         <$STR(G382)>        <点击回收|246#此装备永久回收/@新永久回收32>        <点击回购|246#回购金额：10金币/@新永久回购32>\ \
+
+<> {No.33/FCOLOR=150}     {血妖·戒/FCOLOR=249}                     {  3金币/FCOLOR=150}         <$STR(G383)>        <点击回收|246#此装备永久回收/@新永久回收33>        <点击回购|246#回购金额：10金币/@新永久回购33>\ \
+
+<> {No.34/FCOLOR=150}     {道方扳指/FCOLOR=249}                     {  3金币/FCOLOR=150}         <$STR(G384)>        <点击回收|246#此装备永久回收/@新永久回收34>        <点击回购|246#回购金额：10金币/@新永久回购34>\ \
+
+<> {No.35/FCOLOR=150}     {启龙·因果魂爪/FCOLOR=249}               {  500金币/FCOLOR=150}       <$STR(G385)>        <点击回收|246#此装备永久回收/@新永久回收35>        <点击回购|246#回购金额：777金币/@新永久回购35>\ \
+
+<> {No.36/FCOLOR=150}     {只是一缕烛火/FCOLOR=249}                 {  500金币/FCOLOR=150}       <$STR(G386)>        <点击回收|246#此装备永久回收/@新永久回收36>        <点击回购|246#回购金额：777金币/@新永久回购36>\ \
+
+<> {No.37/FCOLOR=150}     {囚封天之道/FCOLOR=249}                   {  500金币/FCOLOR=150}       <$STR(G387)>        <点击回收|246#此装备永久回收/@新永久回收37>        <点击回购|246#回购金额：777金币/@新永久回购37>\ \
+
+<> {No.38/FCOLOR=150}     {云雾/FCOLOR=249}                         {  500金币/FCOLOR=150}       <$STR(G388)>        <点击回收|246#此装备永久回收/@新永久回收38>        <点击回购|246#回购金额：777金币/@新永久回购38>\ \
+
+<> {No.39/FCOLOR=150}     {善庸混天绫/FCOLOR=249}                   {  500金币/FCOLOR=150}       <$STR(G389)>        <点击回收|246#此装备永久回收/@新永久回收39>        <点击回购|246#回购金额：777金币/@新永久回购39>\ \
+
+<> {No.40/FCOLOR=150}     {五龙铡/FCOLOR=249}                       {  10金币/FCOLOR=150}        <$STR(G390)>        <点击回收|246#此装备永久回收/@新永久回收40>        <点击回购|246#回购金额：12金币/@新永久回购40>\ \
+
+
+<>                                    <上一页/@永久回收脚本3>    <下一页/@永久回收脚本5>   <4／11/FCOLOR=250> \
+
+[@永久回收脚本5]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.51/FCOLOR=150}     {不死药/FCOLOR=249}                       {  1金币/FCOLOR=150}         <$STR(G391)>        <点击回收|246#此装备永久回收/@新永久回收51>        <点击回购|246#回购金额：5金币/@新永久回购51>\ \
+
+<> {No.52/FCOLOR=150}     {株天神树/FCOLOR=249}                     {  1金币/FCOLOR=150}         <$STR(G392)>        <点击回收|246#此装备永久回收/@新永久回收52>        <点击回购|246#回购金额：5金币/@新永久回购52>\ \
+
+<> {No.53/FCOLOR=150}     {六道轮回盘/FCOLOR=249}                   {  1金币/FCOLOR=150}         <$STR(G393)>        <点击回收|246#此装备永久回收/@新永久回收53>        <点击回购|246#回购金额：5金币/@新永久回购53>\ \
+
+<> {No.54/FCOLOR=150}     {元初仙光/FCOLOR=249}                     {  1金币/FCOLOR=150}         <$STR(G394)>        <点击回收|246#此装备永久回收/@新永久回收54>        <点击回购|246#回购金额：5金币/@新永久回购54>\ \
+
+<> {No.55/FCOLOR=150}     {九转轮回/FCOLOR=249}                     {  1金币/FCOLOR=150}         <$STR(G395)>        <点击回收|246#此装备永久回收/@新永久回收55>        <点击回购|246#回购金额：5金币/@新永久回购55>\ \
+
+<> {No.56/FCOLOR=150}     {天荒/FCOLOR=249}                         {  8金币/FCOLOR=150}         <$STR(G396)>        <点击回收|246#此装备永久回收/@新永久回收56>        <点击回购|246#回购金额：38金币/@新永久回购56>\ \
+
+<> {No.57/FCOLOR=150}     {鸿蒙灵宝·【量天尺】/FCOLOR=249}         { 1888金币/FCOLOR=150}       <$STR(G397)>        <点击回收|246#此装备永久回收/@新永久回收57>        <点击回购|246#回购金额：2888金币/@新永久回购57>\ \
+
+<> {No.58/FCOLOR=150}     {附心丝/FCOLOR=249}                       { 400金币/FCOLOR=150}        <$STR(G398)>        <点击回收|246#此装备永久回收/@新永久回收58>        <点击回购|246#回购金额：666金币/@新永久回购58>\ \
+
+<> {No.59/FCOLOR=150}     {昊天锤/FCOLOR=249}                       { 400金币/FCOLOR=150}        <$STR(G399)>        <点击回收|246#此装备永久回收/@新永久回收59>        <点击回购|246#回购金额：666金币/@新永久回购59>\ \
+
+<> {No.60/FCOLOR=150}     {青灯古庙·伴一生/FCOLOR=249}             { 400金币/FCOLOR=150}        <$STR(G431)>        <点击回收|246#此装备永久回收/@新永久回收60>        <点击回购|246#回购金额：666金币/@新永久回购60>\ \
+
+
+<>                                    <上一页/@永久回收脚本4>    <下一页/@永久回收脚本6>   <5／11/FCOLOR=250> \
+
+
+[@永久回收脚本6]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.61/FCOLOR=150}     {鸿蒙灵宝·不死终会出头/FCOLOR=249}       { 400金币/FCOLOR=150}        <$STR(G401)>        <点击回收|246#此装备永久回收/@新永久回收61>        <点击回购|246#回购金额：666金币/@新永久回购61>\ \
+
+<> {No.62/FCOLOR=150}     {鸿蒙灵宝·再穷无非讨饭/FCOLOR=249}       { 400金币/FCOLOR=150}        <$STR(G402)>        <点击回收|246#此装备永久回收/@新永久回收62>        <点击回购|246#回购金额：666金币/@新永久回购62>\ \
+
+<> {No.63/FCOLOR=150}     {极过·极未·极逍遥/FCOLOR=249}           { 1388金币/FCOLOR=150}       <$STR(G403)>        <点击回收|246#此装备永久回收/@新永久回收63>        <点击回购|246#回购金额：2288金币/@新永久回购63>\ \
+
+<> {No.64/FCOLOR=150}     {浊酒恋红尘/FCOLOR=249}                   { 300金币/FCOLOR=150}        <$STR(G404)>        <点击回收|246#此装备永久回收/@新永久回收64>        <点击回购|246#回购金额：555金币/@新永久回购64>\ \
+
+<> {No.65/FCOLOR=150}     {你是恩赐也是劫/FCOLOR=249}               { 300金币/FCOLOR=150}        <$STR(G405)>        <点击回收|246#此装备永久回收/@新永久回收65>        <点击回购|246#回购金额：555金币/@新永久回购65>\ \
+
+<> {No.66/FCOLOR=150}     {澄明的道心/FCOLOR=249}                   { 300金币/FCOLOR=150}        <$STR(G406)>        <点击回收|246#此装备永久回收/@新永久回收66>        <点击回购|246#回购金额：555金币/@新永久回购66>\ \
+
+<> {No.67/FCOLOR=150}     {落笔成殇/FCOLOR=249}                     { 300金币/FCOLOR=150}        <$STR(G407)>        <点击回收|246#此装备永久回收/@新永久回收67>        <点击回购|246#回购金额：555金币/@新永久回购67>\ \
+
+<> {No.68/FCOLOR=150}     {一针一线缝紫月/FCOLOR=249}               { 300金币/FCOLOR=150}        <$STR(G408)>        <点击回收|246#此装备永久回收/@新永久回收68>        <点击回购|246#回购金额：555金币/@新永久回购68>\ \
+
+<> {No.69/FCOLOR=150}     {地爆·天星/FCOLOR=249}                   {  30金币/FCOLOR=150}        <$STR(G409)>        <点击回收|246#此装备永久回收/@新永久回收69>        <点击回购|246#回购金额：99金币/@新永久回购69>\ \
+
+<> {No.70/FCOLOR=150}     {九天·日月/FCOLOR=249}                   {  50金币/FCOLOR=150}        <$STR(G410)>        <点击回收|246#此装备永久回收/@新永久回收70>        <点击回购|246#回购金额：188金币/@新永久回购70>\ \
+
+
+<>                                    <上一页/@永久回收脚本5>    <下一页/@永久回收脚本7>   <6／11/FCOLOR=250> \
+
+
+[@永久回收脚本7]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.71/FCOLOR=150}     {神力玉玺/FCOLOR=249}                     {  10金币/FCOLOR=150}        <$STR(G411)>        <点击回收|246#此装备永久回收/@新永久回收71>        <点击回购|246#回购金额：28金币/@新永久回购71>\ \
+
+<> {No.72/FCOLOR=150}     {封妖古卷/FCOLOR=249}                     {  10金币/FCOLOR=150}        <$STR(G412)>        <点击回收|246#此装备永久回收/@新永久回收72>        <点击回购|246#回购金额：28金币/@新永久回购72>\ \
+
+<> {No.73/FCOLOR=150}     {九衍金鎏/FCOLOR=249}                     { 200金币/FCOLOR=150}        <$STR(G413)>        <点击回收|246#此装备永久回收/@新永久回收73>        <点击回购|246#回购金额：444金币/@新永久回购73>\ \
+
+<> {No.74/FCOLOR=150}     {一岁一枯荣/FCOLOR=249}                   { 200金币/FCOLOR=150}        <$STR(G414)>        <点击回收|246#此装备永久回收/@新永久回收74>        <点击回购|246#回购金额：444金币/@新永久回购74>\ \
+
+<> {No.75/FCOLOR=150}     {金玉钱币/FCOLOR=249}                     { 200金币/FCOLOR=150}        <$STR(G415)>        <点击回收|246#此装备永久回收/@新永久回收75>        <点击回购|246#回购金额：444金币/@新永久回购75>\ \
+
+<> {No.76/FCOLOR=150}     {鲸王鳍/FCOLOR=249}                       { 200金币/FCOLOR=150}        <$STR(G416)>        <点击回收|246#此装备永久回收/@新永久回收76>        <点击回购|246#回购金额：444金币/@新永久回购76>\ \
+
+<> {No.77/FCOLOR=150}     {连天烽火/FCOLOR=249}                     { 250金币/FCOLOR=150}        <$STR(G417)>        <点击回收|246#此装备永久回收/@新永久回收77>        <点击回购|246#回购金额：500金币/@新永久回购77>\ \
+
+<> {No.78/FCOLOR=150}     {道域之宝/FCOLOR=249}                     { 250金币/FCOLOR=150}        <$STR(G418)>        <点击回收|246#此装备永久回收/@新永久回收78>        <点击回购|246#回购金额：500金币/@新永久回购78>\ \
+
+<> {No.79/FCOLOR=150}     {梵音·悟/FCOLOR=249}                     { 250金币/FCOLOR=150}        <$STR(G419)>        <点击回收|246#此装备永久回收/@新永久回收79>        <点击回购|246#回购金额：500金币/@新永久回购79>\ \
+
+<> {No.80/FCOLOR=150}     {玄华之悲苦/FCOLOR=249}                   { 250金币/FCOLOR=150}        <$STR(G420)>        <点击回收|246#此装备永久回收/@新永久回收80>        <点击回购|246#回购金额：500金币/@新永久回购80>\ \
+
+
+<>                                    <上一页/@永久回收脚本6>    <下一页/@永久回收脚本8>   <7／11/FCOLOR=250> \
+
+
+[@永久回收脚本8]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.81/FCOLOR=150}     {地灵的馈赠/FCOLOR=249}                   { 250金币/FCOLOR=150}        <$STR(G421)>        <点击回收|246#此装备永久回收/@新永久回收81>        <点击回购|246#回购金额：500金币/@新永久回购81>\ \
+
+<> {No.82/FCOLOR=150}     {十万念动【十万界】/FCOLOR=249}           { 1288金币/FCOLOR=150}       <$STR(G422)>        <点击回收|246#此装备永久回收/@新永久回收82>        <点击回购|246#回购金额：2188金币/@新永久回购82>\ \
+
+<> {No.83/FCOLOR=150}     {九山九海·刑罚/FCOLOR=249}               { 288金币/FCOLOR=150}        <$STR(G423)>        <点击回收|246#此装备永久回收/@新永久回收83>        <点击回购|246#回购金额：999金币/@新永久回购83>\ \
+
+<> {No.84/FCOLOR=150}     {魂入冥河·黄泉/FCOLOR=249}               { 10金币/FCOLOR=150}         <$STR(G424)>        <点击回收|246#此装备永久回收/@新永久回收84>        <点击回购|246#回购金额：33金币/@新永久回购84>\ \
+
+<> {No.85/FCOLOR=150}     {雷鼎/FCOLOR=249}                         { 10金币/FCOLOR=150}         <$STR(G425)>        <点击回收|246#此装备永久回收/@新永久回收85>        <点击回购|246#回购金额：33金币/@新永久回购85>\ \
+
+<> {No.86/FCOLOR=150}     {天妖【蚀】/FCOLOR=249}                   { 10金币/FCOLOR=150}         <$STR(G426)>        <点击回收|246#此装备永久回收/@新永久回收86>        <点击回购|246#回购金额：33金币/@新永久回购86>\ \
+
+<> {No.87/FCOLOR=150}     {青花漫【涟漪】/FCOLOR=249}               { 10金币/FCOLOR=150}         <$STR(G427)>        <点击回收|246#此装备永久回收/@新永久回收87>        <点击回购|246#回购金额：33金币/@新永久回购87>\ \
+
+<> {No.88/FCOLOR=150}     {古境魂灯/FCOLOR=249}                     { 10金币/FCOLOR=150}         <$STR(G428)>        <点击回收|246#此装备永久回收/@新永久回收88>        <点击回购|246#回购金额：33金币/@新永久回购88>\ \
+
+<> {No.89/FCOLOR=150}     {至尊青布衫/FCOLOR=249}                   { 388金币/FCOLOR=150}        <$STR(G429)>        <点击回收|246#此装备永久回收/@新永久回收89>        <点击回购|246#回购金额：999金币/@新永久回购89>\ \
+
+<> {No.90/FCOLOR=150}     {撒豆成兵/FCOLOR=249}                     { 20金币/FCOLOR=150}         <$STR(G430)>        <点击回收|246#此装备永久回收/@新永久回收90>        <点击回购|246#回购金额：66金币/@新永久回购90>\ \
+
+
+<>                                    <上一页/@永久回收脚本7>    <下一页/@永久回收脚本9>   <8／11/FCOLOR=250> \
+
+
+
+[@永久回收脚本9]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.91/FCOLOR=150}     {古神七踏/FCOLOR=249}                     { 20金币/FCOLOR=150}         <$STR(G431)>        <点击回收|246#此装备永久回收/@新永久回收91>        <点击回购|246#回购金额：66金币/@新永久回购91>\ \
+
+<> {No.92/FCOLOR=150}     {古道三分神/FCOLOR=249}                   { 20金币/FCOLOR=150}         <$STR(G432)>        <点击回收|246#此装备永久回收/@新永久回收92>        <点击回购|246#回购金额：66金币/@新永久回购92>\ \
+
+<> {No.93/FCOLOR=150}     {【道音】/FCOLOR=249}                     { 20金币/FCOLOR=150}         <$STR(G433)>        <点击回收|246#此装备永久回收/@新永久回收93>        <点击回购|246#回购金额：66金币/@新永久回购93>\ \
+
+<> {No.94/FCOLOR=150}     {三环·三圣/FCOLOR=249}                   { 20金币/FCOLOR=150}         <$STR(G434)>        <点击回收|246#此装备永久回收/@新永久回收94>        <点击回购|246#回购金额：66金币/@新永久回购94>\ \
+
+<> {No.95/FCOLOR=150}     {请带我●去杀人/FCOLOR=249}               { 488金币/FCOLOR=150}        <$STR(G435)>        <点击回收|246#此装备永久回收/@新永久回收95>        <点击回购|246#回购金额：1188金币/@新永久回购95>\ \
+
+<> {No.96/FCOLOR=150}     {如法【无边】/FCOLOR=249}                 { 50金币/FCOLOR=150}         <$STR(G436)>        <点击回收|246#此装备永久回收/@新永久回收96>        <点击回购|246#回购金额：188金币/@新永久回购96>\ \
+
+<> {No.97/FCOLOR=150}     {一念●斩判官/FCOLOR=249}                 { 50金币/FCOLOR=150}         <$STR(G437)>        <点击回收|246#此装备永久回收/@新永久回收97>        <点击回购|246#回购金额：188金币/@新永久回购97>\ \
+
+<> {No.98/FCOLOR=150}     {如术【无尽】/FCOLOR=249}                 { 50金币/FCOLOR=150}         <$STR(G438)>        <点击回收|246#此装备永久回收/@新永久回收98>        <点击回购|246#回购金额：188金币/@新永久回购98>\ \
+
+<> {No.99/FCOLOR=150}     {三体道·岁月杀/FCOLOR=249}               { 50金币/FCOLOR=150}         <$STR(G439)>        <点击回收|246#此装备永久回收/@新永久回收99>        <点击回购|246#回购金额：188金币/@新永久回购99>\ \
+
+<> {No.100/FCOLOR=150}    {岁月终有极/FCOLOR=249}                   { 50金币/FCOLOR=150}         <$STR(G440)>        <点击回收|246#此装备永久回收/@新永久回收100>        <点击回购|246#回购金额：188金币/@新永久回购100>\ \
+
+
+<>                                    <上一页/@永久回收脚本8>    <下一页/@永久回收脚本10>   <9／11/FCOLOR=250> \
+
+
+
+
+[@永久回收脚本10]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.101/FCOLOR=150}    {天尘●最强状态/FCOLOR=249}               { 588金币/FCOLOR=150}        <$STR(G494)>        <点击回收|246#此装备永久回收/@新永久回收101>        <点击回购|246#回购金额：1388金币/@新永久回购101>\ \
+
+<> {No.102/FCOLOR=150}    {幻幽命格·篡改/FCOLOR=249}               { 80金币/FCOLOR=150}         <$STR(G442)>        <点击回收|246#此装备永久回收/@新永久回收102>        <点击回购|246#回购金额：222金币/@新永久回购102>\ \
+
+<> {No.103/FCOLOR=150}    {一指·篡天运/FCOLOR=249}                 { 80金币/FCOLOR=150}         <$STR(G443)>        <点击回收|246#此装备永久回收/@新永久回收103>        <点击回购|246#回购金额：222金币/@新永久回购103>\ \
+
+<> {No.104/FCOLOR=150}    {灭生拳/FCOLOR=249}                       { 80金币/FCOLOR=150}         <$STR(G444)>        <点击回收|246#此装备永久回收/@新永久回收104>        <点击回购|246#回购金额：222金币/@新永久回购104>\ \
+
+<> {No.105/FCOLOR=150}    {墨池·环/FCOLOR=249}                     { 80金币/FCOLOR=150}         <$STR(G445)>        <点击回收|246#此装备永久回收/@新永久回收105>        <点击回购|246#回购金额：222金币/@新永久回购105>\ \
+
+<> {No.106/FCOLOR=150}    {香火一拜/FCOLOR=249}                     { 80金币/FCOLOR=150}         <$STR(G446)>        <点击回收|246#此装备永久回收/@新永久回收106>        <点击回购|246#回购金额：222金币/@新永久回购106>\ \
+
+<> {No.107/FCOLOR=150}    {我命如妖·欲封天/FCOLOR=249}             { 688金币/FCOLOR=150}        <$STR(G447)>        <点击回收|246#此装备永久回收/@新永久回收107>        <点击回购|246#回购金额：1588金币/@新永久回购107>\ \
+
+<> {No.108/FCOLOR=150}    {南柯一梦/FCOLOR=249}                     { 100金币/FCOLOR=150}        <$STR(G448)>        <点击回收|246#此装备永久回收/@新永久回收108>        <点击回购|246#回购金额：288金币/@新永久回购108>\ \
+
+<> {No.109/FCOLOR=150}    {轮回梦中取/FCOLOR=249}                   { 100金币/FCOLOR=150}        <$STR(G449)>        <点击回收|246#此装备永久回收/@新永久回收109>        <点击回购|246#回购金额：288金币/@新永久回购109>\ \
+
+<> {No.110/FCOLOR=150}    {脚踝上的铃铛/FCOLOR=249}                 { 100金币/FCOLOR=150}        <$STR(G450)>        <点击回收|246#此装备永久回收/@新永久回收110>        <点击回购|246#回购金额：288金币/@新永久回购110>\ \
+
+
+<>                                    <上一页/@永久回收脚本9>    <下一页/@永久回收脚本11>   <10／11/FCOLOR=250> \
+
+
+
+[@永久回收脚本11]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.111/FCOLOR=150}    {焚尽·青丝/FCOLOR=249}                   { 100金币/FCOLOR=150}        <$STR(G451)>        <点击回收|246#此装备永久回收/@新永久回收111>        <点击回购|246#回购金额：288金币/@新永久回购111>\ \
+
+<> {No.112/FCOLOR=150}    {轮回终有边/FCOLOR=249}                   { 100金币/FCOLOR=150}        <$STR(G452)>        <点击回收|246#此装备永久回收/@新永久回收112>        <点击回购|246#回购金额：288金币/@新永久回购112>\ \
+
+<> {No.113/FCOLOR=150}    {一纸因果·你欠我钱/FCOLOR=249}           { 788金币/FCOLOR=150}        <$STR(G453)>        <点击回收|246#此装备永久回收/@新永久回收113>        <点击回购|246#回购金额：1588金币/@新永久回购113>\ \
+
+<> {No.114/FCOLOR=150}    {青虹终会盛开/FCOLOR=249}                 { 125金币/FCOLOR=150}        <$STR(G454)>        <点击回收|246#此装备永久回收/@新永久回收114>        <点击回购|246#回购金额：300金币/@新永久回购114>\ \
+
+<> {No.115/FCOLOR=150}    {终有良人相伴/FCOLOR=249}                 { 125金币/FCOLOR=150}        <$STR(G455)>        <点击回收|246#此装备永久回收/@新永久回收115>        <点击回购|246#回购金额：300金币/@新永久回购115>\ \
+
+<> {No.116/FCOLOR=150}    {一缕白发笑苍茫/FCOLOR=249}               { 125金币/FCOLOR=150}        <$STR(G456)>        <点击回收|246#此装备永久回收/@新永久回收116>        <点击回购|246#回购金额：300金币/@新永久回购116>\ \
+
+<> {No.117/FCOLOR=150}    {寻道无涯/FCOLOR=249}                     { 125金币/FCOLOR=150}        <$STR(G457)>        <点击回收|246#此装备永久回收/@新永久回收117>        <点击回购|246#回购金额：300金币/@新永久回购117>\ \
+
+<> {No.118/FCOLOR=150}    {自己才是靠山/FCOLOR=249}                 { 125金币/FCOLOR=150}        <$STR(G458)>        <点击回收|246#此装备永久回收/@新永久回收118>        <点击回购|246#回购金额：300金币/@新永久回购118>\ \
+
+<> {No.119/FCOLOR=150}    {★★★残月★★★/FCOLOR=249}             { 10金币/FCOLOR=150}         <$STR(G459)>        <点击回收|246#此装备永久回收/@新永久回收119>        <点击回购|246#回购金额：33金币/@新永久回购119>\ \
+
+<> {No.120/FCOLOR=150}    {鸿蒙灵宝·【雷霄甲】/FCOLOR=249}         {1888金币/FCOLOR=150}        <$STR(G460)>        <点击回收|246#此装备永久回收/@新永久回收120>        <点击回购|246#回购金额：2888金币/@新永久回购120>\ \
+
+
+<>                                    <上一页/@永久回收脚本10>    <下一页/@永久回收脚本12>   <11／11/FCOLOR=250> \
+
+
+[@限时加载]
+#CALL [\馒头制作\奖励大厅\奖励大厅脚本.txt] @奖励大厅触发NAM
+
+
+
+
+
+[@新永久回收120]
+#if
+checkitem 鸿蒙灵宝·【雷霄甲】 1
+#act
+take 鸿蒙灵宝·【雷霄甲】 1
+give 金币 1888
+inc G460 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购20]
+#IF
+SMALL G460 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 2888
+LARGE G460 0
+#act
+DEC G460 1
+GIVE 鸿蒙灵宝·【雷霄甲】 1
+TAKE 金币 2888
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收119]
+#if
+checkitem ★★★残月★★★ 1
+#act
+take ★★★残月★★★ 1
+give 金币 10
+inc G459 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购119]
+#IF
+SMALL G459 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 33
+LARGE G459 0
+#act
+DEC G459 1
+GIVE ★★★残月★★★ 1
+TAKE 金币 33
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+[@新永久回收118]
+#if
+checkitem 自己才是靠山 1
+#act
+take 自己才是靠山 1
+give 金币 125
+inc G458 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购118]
+#IF
+SMALL G458 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 300
+LARGE G458 0
+#act
+DEC G458 1
+GIVE 自己才是靠山 1
+TAKE 金币 300
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收117]
+#if
+checkitem 寻道无涯 1
+#act
+take 寻道无涯 1
+give 金币 125
+inc G457 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购117]
+#IF
+SMALL G457 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 300
+LARGE G457 0
+#act
+DEC G457 1
+GIVE 寻道无涯 1
+TAKE 金币 300
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收116]
+#if
+checkitem 一缕白发笑苍茫 1
+#act
+take 一缕白发笑苍茫 1
+give 金币 125
+inc G456 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购116]
+#IF
+SMALL G456 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 300
+LARGE G456 0
+#act
+DEC G456 1
+GIVE 一缕白发笑苍茫 1
+TAKE 金币 300
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+[@新永久回收115]
+#if
+checkitem 终有良人相伴 1
+#act
+take 终有良人相伴 1
+give 金币 125
+inc G455 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购115]
+#IF
+SMALL G455 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 300
+LARGE G455 0
+#act
+DEC G455 1
+GIVE 终有良人相伴 1
+TAKE 金币 300
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收114]
+#if
+checkitem 青虹终会盛开 1
+#act
+take 青虹终会盛开 1
+give 金币 125
+inc G454 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购114]
+#IF
+SMALL G454 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 300
+LARGE G454 0
+#act
+DEC G454 1
+GIVE 青虹终会盛开 1
+TAKE 金币 300
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收113]
+#if
+checkitem 一纸因果·你欠我钱 1
+#act
+take 一纸因果·你欠我钱 1
+give 金币 788
+inc G453 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购113]
+#IF
+SMALL G453 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 1588
+LARGE G453 0
+#act
+DEC G453 1
+GIVE 一纸因果·你欠我钱 1
+TAKE 金币 1588
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收112]
+#if
+checkitem 轮回终有边 1
+#act
+take 轮回终有边 1
+give 金币 100
+inc G452 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购112]
+#IF
+SMALL G452 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 288
+LARGE G452 0
+#act
+DEC G452 1
+GIVE 轮回终有边 1
+TAKE 金币 288
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收111]
+#if
+checkitem 焚尽·青丝 1
+#act
+take 焚尽·青丝 1
+give 金币 100
+inc G451 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+[@新永久回购111]
+#IF
+SMALL G451 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 288
+LARGE G451 0
+#act
+DEC G451 1
+GIVE 焚尽·青丝 1
+TAKE 金币 288
+MessageBox 装备回购成功..
+GOTO @永久回收脚本11
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收110]
+#if
+checkitem 脚踝上的铃铛 1
+#act
+take 脚踝上的铃铛 1
+give 金币 100
+inc G450 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购110]
+#IF
+SMALL G450 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 288
+LARGE G450 0
+#act
+DEC G450 1
+GIVE 脚踝上的铃铛 1
+TAKE 金币 288
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收109]
+#if
+checkitem 轮回梦中取 1
+#act
+take 轮回梦中取 1
+give 金币 100
+inc G449 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购109]
+#IF
+SMALL G449 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 288
+LARGE G449 0
+#act
+DEC G449 1
+GIVE 轮回梦中取 1
+TAKE 金币 288
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+[@新永久回收108]
+#if
+checkitem 南柯一梦 1
+#act
+take 南柯一梦 1
+give 金币 100
+inc G448 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购108]
+#IF
+SMALL G448 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 288
+LARGE G448 0
+#act
+DEC G448 1
+GIVE 南柯一梦 1
+TAKE 金币 288
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收107]
+#if
+checkitem 我命如妖·欲封天 1
+#act
+take 我命如妖·欲封天 1
+give 金币 688
+inc G447 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购107]
+#IF
+SMALL G447 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 1588
+LARGE G447 0
+#act
+DEC G447 1
+GIVE 我命如妖·欲封天 1
+TAKE 金币 1588
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收106]
+#if
+checkitem 香火一拜 1
+#act
+take 香火一拜 1
+give 金币 80
+inc G446 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购106]
+#IF
+SMALL G446 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 222
+LARGE G446 0
+#act
+DEC G446 1
+GIVE 香火一拜 1
+TAKE 金币 222
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收105]
+#if
+checkitem 墨池·环 1
+#act
+take 墨池·环 1
+give 金币 80
+inc G445 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购105]
+#IF
+SMALL G445 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 222
+LARGE G445 0
+#act
+DEC G445 1
+GIVE 墨池·环 1
+TAKE 金币 222
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收104]
+#if
+checkitem 灭生拳 1
+#act
+take 灭生拳 1
+give 金币 80
+inc G444 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购104]
+#IF
+SMALL G444 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 222
+LARGE G444 0
+#act
+DEC G444 1
+GIVE 灭生拳 1
+TAKE 金币 222
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收103]
+#if
+checkitem 一指·篡天运 1
+#act
+take 一指·篡天运 1
+give 金币 80
+inc G443 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购103]
+#IF
+SMALL G443 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 222
+LARGE G443 0
+#act
+DEC G443 1
+GIVE 一指·篡天运 1
+TAKE 金币 222
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收102]
+#if
+checkitem 幻幽命格·篡改 1
+#act
+take 幻幽命格·篡改 1
+give 金币 80
+inc G442 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购102]
+#IF
+SMALL G442 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 222
+LARGE G442 0
+#act
+DEC G442 1
+GIVE 幻幽命格·篡改 1
+TAKE 金币 222
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收101]
+#if
+checkitem 天尘●最强状态 1
+#act
+take 天尘●最强状态 1
+give 金币 588
+inc G494 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购101]
+#IF
+SMALL G494 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 1388
+LARGE G494 0
+#act
+DEC G494 1
+GIVE 天尘●最强状态 1
+TAKE 金币 1388
+MessageBox 装备回购成功..
+GOTO @永久回收脚本10
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收100]
+#if
+checkitem 岁月终有极 1
+#act
+take 岁月终有极 1
+give 金币 50
+inc G440 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购100]
+#IF
+SMALL G440 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 188
+LARGE G440 0
+#act
+DEC G440 1
+GIVE 岁月终有极 1
+TAKE 金币 188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收99]
+#if
+checkitem 三体道·岁月杀 1
+#act
+take 三体道·岁月杀 1
+give 金币 50
+inc G439 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购99]
+#IF
+SMALL G439 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 188
+LARGE G439 0
+#act
+DEC G439 1
+GIVE 三体道·岁月杀 1
+TAKE 金币 188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收98]
+#if
+checkitem 如术【无尽】 1
+#act
+take 如术【无尽】 1
+give 金币 50
+inc G438 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购98]
+#IF
+SMALL G438 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 188
+LARGE G438 0
+#act
+DEC G438 1
+GIVE 如术【无尽】 1
+TAKE 金币 188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收97]
+#if
+checkitem 一念●斩判官 1
+#act
+take 一念●斩判官 1
+give 金币 50
+inc G437 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购97]
+#IF
+SMALL G437 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 188
+LARGE G437 0
+#act
+DEC G437 1
+GIVE 一念●斩判官 1
+TAKE 金币 188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收96]
+#if
+checkitem 如法【无边】 1
+#act
+take 如法【无边】 1
+give 金币 50
+inc G436 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购96]
+#IF
+SMALL G436 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 188
+LARGE G436 0
+#act
+DEC G436 1
+GIVE 如法【无边】 1
+TAKE 金币 188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收95]
+#if
+checkitem 请带我●去杀人 1
+#act
+take 请带我●去杀人 1
+give 金币 488
+inc G435 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购95]
+#IF
+SMALL G435 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 1188
+LARGE G435 0
+#act
+DEC G435 1
+GIVE 请带我●去杀人 1
+TAKE 金币 1188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+[@新永久回收94]
+#if
+checkitem 三环·三圣 1
+#act
+take 三环·三圣 1
+give 金币 20
+inc G434 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购94]
+#IF
+SMALL G434 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 66
+LARGE G434 0
+#act
+DEC G434 1
+GIVE 三环·三圣 1
+TAKE 金币 66
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收93]
+#if
+checkitem 【道音】 1
+#act
+take 【道音】 1
+give 金币 20
+inc G433 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购93]
+#IF
+SMALL G433 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 66
+LARGE G433 0
+#act
+DEC G433 1
+GIVE 【道音】 1
+TAKE 金币 66
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收92]
+#if
+checkitem 古道三分神 1
+#act
+take 古道三分神 1
+give 金币 20
+inc G432 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购92]
+#IF
+SMALL G432 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 66
+LARGE G432 0
+#act
+DEC G432 1
+GIVE 古道三分神 1
+TAKE 金币 66
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收91]
+#if
+checkitem 古神七踏 1
+#act
+take 古神七踏 1
+give 金币 20
+inc G431 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购91]
+#IF
+SMALL G431 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 66
+LARGE G431 0
+#act
+DEC G431 1
+GIVE 古神七踏 1
+TAKE 金币 66
+MessageBox 装备回购成功..
+GOTO @永久回收脚本9
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+
+
+
+
+[@新永久回收90]
+#if
+checkitem 撒豆成兵 1
+#act
+take 撒豆成兵 1
+give 金币 20
+inc G430 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购90]
+#IF
+SMALL G430 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 66
+LARGE G430 0
+#act
+DEC G430 1
+GIVE 撒豆成兵 1
+TAKE 金币 66
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收89]
+#if
+checkitem 至尊青布衫 1
+#act
+take 至尊青布衫 1
+give 金币 388
+inc G429 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购89]
+#IF
+SMALL G429 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 999
+LARGE G429 0
+#act
+DEC G429 1
+GIVE 至尊青布衫 1
+TAKE 金币 999
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收88]
+#if
+checkitem 古境魂灯 1
+#act
+take 古境魂灯 1
+give 金币 10
+inc G428 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购88]
+#IF
+SMALL G428 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 33
+LARGE G428 0
+#act
+DEC G428 1
+GIVE 古境魂灯 1
+TAKE 金币 33
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收87]
+#if
+checkitem 青花漫【涟漪】 1
+#act
+take 青花漫【涟漪】 1
+give 金币 10
+inc G427 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购87]
+#IF
+SMALL G427 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 33
+LARGE G427 0
+#act
+DEC G427 1
+GIVE 青花漫【涟漪】 1
+TAKE 金币 33
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收86]
+#if
+checkitem 天妖【蚀】 1
+#act
+take 天妖【蚀】 1
+give 金币 10
+inc G426 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购86]
+#IF
+SMALL G426 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 33
+LARGE G426 0
+#act
+DEC G426 1
+GIVE 天妖【蚀】 1
+TAKE 金币 33
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收85]
+#if
+checkitem 雷鼎 1
+#act
+take 雷鼎 1
+give 金币 10
+inc G425 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购85]
+#IF
+SMALL G425 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 33
+LARGE G425 0
+#act
+DEC G425 1
+GIVE 雷鼎 1
+TAKE 金币 33
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收84]
+#if
+checkitem 魂入冥河·黄泉 1
+#act
+take 魂入冥河·黄泉 1
+give 金币 10
+inc G424 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购84]
+#IF
+SMALL G424 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 33
+LARGE G424 0
+#act
+DEC G424 1
+GIVE 魂入冥河·黄泉 1
+TAKE 金币 33
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收83]
+#if
+checkitem 九山九海·刑罚 1
+#act
+take 九山九海·刑罚 1
+give 金币 288
+inc G423 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购83]
+#IF
+SMALL G423 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 999
+LARGE G423 0
+#act
+DEC G423 1
+GIVE 九山九海·刑罚 1
+TAKE 金币 999
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+
+[@新永久回收82]
+#if
+checkitem 十万念动【十万界】 1
+#act
+take 十万念动【十万界】 1
+give 金币 1288
+inc G422 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购82]
+#IF
+SMALL G422 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 2188
+LARGE G422 0
+#act
+DEC G422 1
+GIVE 十万念动【十万界】 1
+TAKE 金币 2188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收81]
+#if
+checkitem 地灵的馈赠 1
+#act
+take 地灵的馈赠 1
+give 金币 250
+inc G421 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购81]
+#IF
+SMALL G421 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 500
+LARGE G421 0
+#act
+DEC G421 1
+GIVE 地灵的馈赠 1
+TAKE 金币 500
+MessageBox 装备回购成功..
+GOTO @永久回收脚本8
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+
+[@新永久回收80]
+#if
+checkitem 玄华之悲苦 1
+#act
+take 玄华之悲苦 1
+give 金币 250
+inc G420 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购80]
+#IF
+SMALL G420 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 500
+LARGE G420 0
+#act
+DEC G420 1
+GIVE 玄华之悲苦 1
+TAKE 金币 500
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收79]
+#if
+checkitem 梵音·悟 1
+#act
+take 梵音·悟 1
+give 金币 250
+inc G419 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购79]
+#IF
+SMALL G419 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 500
+LARGE G419 0
+#act
+DEC G419 1
+GIVE 梵音·悟 1
+TAKE 金币 500
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收78]
+#if
+checkitem 道域之宝 1
+#act
+take 道域之宝 1
+give 金币 250
+inc G418 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购78]
+#IF
+SMALL G418 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 500
+LARGE G418 0
+#act
+DEC G418 1
+GIVE 道域之宝 1
+TAKE 金币 500
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收77]
+#if
+checkitem 连天烽火 1
+#act
+take 连天烽火 1
+give 金币 250
+inc G417 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购77]
+#IF
+SMALL G417 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 500
+LARGE G417 0
+#act
+DEC G417 1
+GIVE 连天烽火 1
+TAKE 金币 500
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收76]
+#if
+checkitem 鲸王鳍 1
+#act
+take 鲸王鳍 1
+give 金币 200
+inc G416 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购76]
+#IF
+SMALL G416 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 444
+LARGE G416 0
+#act
+DEC G416 1
+GIVE 鲸王鳍 1
+TAKE 金币 444
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收75]
+#if
+checkitem 金玉钱币 1
+#act
+take 金玉钱币 1
+give 金币 200
+inc G415 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购75]
+#IF
+SMALL G415 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 444
+LARGE G415 0
+#act
+DEC G415 1
+GIVE 金玉钱币 1
+TAKE 金币 444
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收74]
+#if
+checkitem 一岁一枯荣 1
+#act
+take 一岁一枯荣 1
+give 金币 200
+inc G414 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购74]
+#IF
+SMALL G414 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 444
+LARGE G414 0
+#act
+DEC G414 1
+GIVE 一岁一枯荣 1
+TAKE 金币 444
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收73]
+#if
+checkitem 九衍金鎏 1
+#act
+take 九衍金鎏 1
+give 金币 200
+inc G413 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购73]
+#IF
+SMALL G413 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 444
+LARGE G413 0
+#act
+DEC G413 1
+GIVE 九衍金鎏 1
+TAKE 金币 444
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收72]
+#if
+checkitem 封妖古卷 1
+#act
+take 封妖古卷 1
+give 金币 10
+inc G412 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购72]
+#IF
+SMALL G412 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 28
+LARGE G412 0
+#act
+DEC G412 1
+GIVE 封妖古卷 1
+TAKE 金币 28
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收71]
+#if
+checkitem 神力玉玺 1
+#act
+take 神力玉玺 1
+give 金币 10
+inc G411 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购71]
+#IF
+SMALL G411 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 28
+LARGE G411 0
+#act
+DEC G411 1
+GIVE 神力玉玺 1
+TAKE 金币 28
+MessageBox 装备回购成功..
+GOTO @永久回收脚本7
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收70]
+#if
+checkitem 九天·日月 1
+#act
+take 九天·日月 1
+give 金币 50
+inc G410 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购70]
+#IF
+SMALL G410 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 188
+LARGE G410 0
+#act
+DEC G410 1
+GIVE 九天·日月 1
+TAKE 金币 188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收69]
+#if
+checkitem 地爆·天星 1
+#act
+take 地爆·天星 1
+give 金币 30
+inc G409 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购69]
+#IF
+SMALL G409 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 99
+LARGE G409 0
+#act
+DEC G409 1
+GIVE 地爆·天星 1
+TAKE 金币 99
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收68]
+#if
+checkitem 一针一线缝紫月 1
+#act
+take 一针一线缝紫月 1
+give 金币 300
+inc G408 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购68]
+#IF
+SMALL G408 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 555
+LARGE G408 0
+#act
+DEC G408 1
+GIVE 一针一线缝紫月 1
+TAKE 金币 555
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收67]
+#if
+checkitem 落笔成殇 1
+#act
+take 落笔成殇 1
+give 金币 300
+inc G407 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购67]
+#IF
+SMALL G407 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 555
+LARGE G407 0
+#act
+DEC G407 1
+GIVE 落笔成殇 1
+TAKE 金币 555
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收66]
+#if
+checkitem 澄明的道心 1
+#act
+take 澄明的道心 1
+give 金币 300
+inc G406 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购66]
+#IF
+SMALL G406 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 555
+LARGE G406 0
+#act
+DEC G406 1
+GIVE 澄明的道心 1
+TAKE 金币 555
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收65]
+#if
+checkitem 你是恩赐也是劫 1
+#act
+take 你是恩赐也是劫 1
+give 金币 300
+inc G405 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购65]
+#IF
+SMALL G405 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 555
+LARGE G405 0
+#act
+DEC G405 1
+GIVE 你是恩赐也是劫 1
+TAKE 金币 555
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收64]
+#if
+checkitem 浊酒恋红尘 1
+#act
+take 浊酒恋红尘 1
+give 金币 300
+inc G404 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购64]
+#IF
+SMALL G404 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 555
+LARGE G404 0
+#act
+DEC G404 1
+GIVE 浊酒恋红尘 1
+TAKE 金币 555
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收63]
+#if
+checkitem 极过·极未·极逍遥 1
+#act
+take 极过·极未·极逍遥 1
+give 金币 1388
+inc G403 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购63]
+#IF
+SMALL G403 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 2288
+LARGE G403 0
+#act
+DEC G403 1
+GIVE 极过·极未·极逍遥 1
+TAKE 金币 2288
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+[@新永久回收62]
+#if
+checkitem 鸿蒙灵宝·再穷无非讨饭 1
+#act
+take 鸿蒙灵宝·再穷无非讨饭 1
+give 金币 400
+inc G402 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购62]
+#IF
+SMALL G402 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 666
+LARGE G402 0
+#act
+DEC G402 1
+GIVE 鸿蒙灵宝·再穷无非讨饭 1
+TAKE 金币 666
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收61]
+#if
+checkitem 鸿蒙灵宝·不死终会出头 1
+#act
+take 鸿蒙灵宝·不死终会出头 1
+give 金币 400
+inc G401 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购61]
+#IF
+SMALL G401 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 666
+LARGE G401 0
+#act
+DEC G401 1
+GIVE 鸿蒙灵宝·不死终会出头 1
+TAKE 金币 666
+MessageBox 装备回购成功..
+GOTO @永久回收脚本6
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收60]
+#if
+checkitem 青灯古庙·伴一生 1
+#act
+take 青灯古庙·伴一生 1
+give 金币 400
+inc G431 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购60]
+#IF
+SMALL G431 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 666
+LARGE G431 0
+#act
+DEC G431 1
+GIVE 青灯古庙·伴一生 1
+TAKE 金币 666
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收59]
+#if
+checkitem 昊天锤 1
+#act
+take 昊天锤 1
+give 金币 400
+inc G399 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购59]
+#IF
+SMALL G399 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 666
+LARGE G399 0
+#act
+DEC G399 1
+GIVE 昊天锤 1
+TAKE 金币 666
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收58]
+#if
+checkitem 附心丝 1
+#act
+take 附心丝 1
+give 金币 400
+inc G398 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购58]
+#IF
+SMALL G398 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 666
+LARGE G398 0
+#act
+DEC G398 1
+GIVE 附心丝 1
+TAKE 金币 666
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+[@新永久回收57]
+#if
+checkitem 鸿蒙灵宝·【量天尺】 1
+#act
+take 鸿蒙灵宝·【量天尺】 1
+give 金币 1888
+inc G397 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购57]
+#IF
+SMALL G397 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 2888
+LARGE G397 0
+#act
+DEC G397 1
+GIVE 鸿蒙灵宝·【量天尺】 1
+TAKE 金币 2888
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收56]
+#if
+checkitem 天荒 1
+#act
+take 天荒 1
+give 金币 8
+inc G396 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购56]
+#IF
+SMALL G396 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 38
+LARGE G396 0
+#act
+DEC G396 1
+GIVE 天荒 1
+TAKE 金币 38
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收55]
+#if
+checkitem 九转轮回 1
+#act
+take 九转轮回 1
+give 金币 1
+inc G395 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购55]
+#IF
+SMALL G395 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 5
+LARGE G395 0
+#act
+DEC G395 1
+GIVE 九转轮回 1
+TAKE 金币 5
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收54]
+#if
+checkitem 元初仙光 1
+#act
+take 元初仙光 1
+give 金币 1
+inc G394 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购54]
+#IF
+SMALL G394 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 5
+LARGE G394 0
+#act
+DEC G394 1
+GIVE 元初仙光 1
+TAKE 金币 5
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收53]
+#if
+checkitem 六道轮回盘 1
+#act
+take 六道轮回盘 1
+give 金币 1
+inc G393 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购53]
+#IF
+SMALL G393 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 5
+LARGE G393 0
+#act
+DEC G393 1
+GIVE 六道轮回盘 1
+TAKE 金币 5
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收52]
+#if
+checkitem 株天神树 1
+#act
+take 株天神树 1
+give 金币 1
+inc G392 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购52]
+#IF
+SMALL G392 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 5
+LARGE G392 0
+#act
+DEC G392 1
+GIVE 株天神树 1
+TAKE 金币 5
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收51]
+#if
+checkitem 不死药 1
+#act
+take 不死药 1
+give 金币 1
+inc G391 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购51]
+#IF
+SMALL G391 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 5
+LARGE G391 0
+#act
+DEC G391 1
+GIVE 不死药 1
+TAKE 金币 5
+MessageBox 装备回购成功..
+GOTO @永久回收脚本5
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收31]
+#if
+checkitem 蚊兽口器 1
+#act
+take 蚊兽口器 1
+give 金币 3
+inc G381 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购31]
+#IF
+SMALL G381 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G381 0
+#act
+DEC G381 1
+GIVE 蚊兽口器 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收32]
+#if
+checkitem ∞离经判道∞ 1
+#act
+take ∞离经判道∞ 1
+give 金币 3
+inc G382 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购32]
+#IF
+SMALL G382 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G382 0
+#act
+DEC G382 1
+GIVE ∞离经判道∞ 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收33]
+#if
+checkitem 血妖·戒 1
+#act
+take 血妖·戒 1
+give 金币 3
+inc G383 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购33]
+#IF
+SMALL G383 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G383 0
+#act
+DEC G383 1
+GIVE 血妖·戒 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+[@新永久回收34]
+#if
+checkitem 道方扳指 1
+#act
+take 道方扳指 1
+give 金币 3
+inc G384 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购34]
+#IF
+SMALL G384 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 10
+LARGE G384 0
+#act
+DEC G384 1
+GIVE 道方扳指 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收35]
+#if
+checkitem 启龙·因果魂爪 1
+#act
+take 启龙·因果魂爪 1
+give 金币 500
+inc G385 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购35]
+#IF
+SMALL G385 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 777
+LARGE G385 0
+#act
+DEC G385 1
+GIVE 启龙·因果魂爪 1
+TAKE 金币 777
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收36]
+#if
+checkitem 只是一缕烛火 1
+#act
+take 只是一缕烛火 1
+give 金币 500
+inc G386 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购36]
+#IF
+SMALL G386 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 777
+LARGE G386 0
+#act
+DEC G386 1
+GIVE 只是一缕烛火 1
+TAKE 金币 777
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收37]
+#if
+checkitem 囚封天之道 1
+#act
+take 囚封天之道 1
+give 金币 500
+inc G387 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购37]
+#IF
+SMALL G387 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 777
+LARGE G387 0
+#act
+DEC G387 1
+GIVE 囚封天之道 1
+TAKE 金币 777
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收38]
+#if
+checkitem 云雾 1
+#act
+take 云雾 1
+give 金币 500
+inc G388 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购38]
+#IF
+SMALL G388 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 777
+LARGE G388 0
+#act
+DEC G388 1
+GIVE 云雾 1
+TAKE 金币 777
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+[@新永久回收39]
+#if
+checkitem 善庸混天绫 1
+#act
+take 善庸混天绫 1
+give 金币 500
+inc G389 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购39]
+#IF
+SMALL G389 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 777
+LARGE G389 0
+#act
+DEC G389 1
+GIVE 善庸混天绫 1
+TAKE 金币 777
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收40]
+#if
+checkitem 五龙铡 1
+#act
+take 五龙铡 1
+give 金币 10
+inc G390 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购40]
+#IF
+SMALL G390 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 12
+LARGE G390 0
+#act
+DEC G390 1
+GIVE 五龙铡 1
+TAKE 金币 12
+MessageBox 装备回购成功..
+GOTO @永久回收脚本4
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收21]
+#if
+checkitem 雁过拔毛 1
+#act
+take 雁过拔毛 1
+give 金币 4
+inc G371 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购21]
+#IF
+SMALL G371 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G371 0
+#act
+DEC G371 1
+GIVE 雁过拔毛 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收22]
+#if
+checkitem 一汽化三清 1
+#act
+take 一汽化三清 1
+give 金币 4
+inc G372 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购22]
+#IF
+SMALL G372 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G372 0
+#act
+DEC G372 1
+GIVE 一汽化三清 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收23]
+#if
+checkitem 三经钉 1
+#act
+take 三经钉 1
+give 金币 4
+inc G373 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购23]
+#IF
+SMALL G373 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G373 0
+#act
+DEC G373 1
+GIVE 三经钉 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收24]
+#if
+checkitem 四方珠 1
+#act
+take 四方珠 1
+give 金币 4
+inc G374 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购24]
+#IF
+SMALL G374 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G374 0
+#act
+DEC G374 1
+GIVE 四方珠 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收25]
+#if
+checkitem 封妖古葫芦 1
+#act
+take 封妖古葫芦 1
+give 金币 2
+inc G375 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购25]
+#IF
+SMALL G375 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G375 0
+#act
+DEC G375 1
+GIVE 封妖古葫芦 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收26]
+#if
+checkitem 墨土的雨滴 1
+#act
+take 墨土的雨滴 1
+give 金币 2
+inc G376 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购26]
+#IF
+SMALL G376 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G376 0
+#act
+DEC G376 1
+GIVE 墨土的雨滴 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+[@新永久回收27]
+#if
+checkitem 七妃殇 1
+#act
+take 七妃殇 1
+give 金币 2
+inc G377 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购27]
+#IF
+SMALL G377 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G377 0
+#act
+DEC G377 1
+GIVE 七妃殇 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收28]
+#if
+checkitem 千层绣花毡 1
+#act
+take 千层绣花毡 1
+give 金币 2
+inc G378 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购28]
+#IF
+SMALL G378 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G378 0
+#act
+DEC G378 1
+GIVE 千层绣花毡 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收29]
+#if
+checkitem 西牛信物 1
+#act
+take 西牛信物 1
+give 金币 2
+inc G379 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购29]
+#IF
+SMALL G379 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G379 0
+#act
+DEC G379 1
+GIVE 西牛信物 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+[@新永久回收30]
+#if
+checkitem 獒牙 1
+#act
+take 獒牙 1
+give 金币 3
+inc G380 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购30]
+#IF
+SMALL G380 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G380 0
+#act
+DEC G380 1
+GIVE 獒牙 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本3
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收1]
+#if
+checkitem ★★★妖切★★★ 1
+#act
+take ★★★妖切★★★ 1
+give 金币 2
+inc G351 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购1]
+#IF
+SMALL G351 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G351 0
+#act
+DEC G351 1
+GIVE ★★★妖切★★★ 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收2]
+#if
+checkitem 锦上添花 1
+#act
+take 锦上添花 1
+give 金币 150
+inc G352 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购2]
+#IF
+SMALL G352 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 400
+LARGE G352 0
+#act
+DEC G352 1
+GIVE 锦上添花 1
+TAKE 金币 400
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收3]
+#if
+checkitem 看善则善·看恶则恶 1
+#act
+take 看善则善·看恶则恶 1
+give 金币 150
+inc G353 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购3]
+#IF
+SMALL G353 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 400
+LARGE G353 0
+#act
+DEC G353 1
+GIVE 看善则善·看恶则恶 1
+TAKE 金币 400
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收4]
+#if
+checkitem 指天摘月 1
+#act
+take 指天摘月 1
+give 金币 150
+inc G354 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购4]
+#IF
+SMALL G354 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 400
+LARGE G354 0
+#act
+DEC G354 1
+GIVE 指天摘月 1
+TAKE 金币 400
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收5]
+#if
+checkitem 熏风履 1
+#act
+take 熏风履 1
+give 金币 150
+inc G355 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购5]
+#IF
+SMALL G355 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 400
+LARGE G355 0
+#act
+DEC G355 1
+GIVE 熏风履 1
+TAKE 金币 400
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收6]
+#if
+checkitem 雨幕成珠帘 1
+#act
+take 雨幕成珠帘 1
+give 金币 150
+inc G356 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购6]
+#IF
+SMALL G356 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 400
+LARGE G356 0
+#act
+DEC G356 1
+GIVE 雨幕成珠帘 1
+TAKE 金币 400
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收7]
+#if
+checkitem 原罪·第一剑 1
+#act
+take 原罪·第一剑 1
+give 金币 888
+inc G357 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购7]
+#IF
+SMALL G357 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 1888
+LARGE G357 0
+#act
+DEC G357 1
+GIVE 原罪·第一剑 1
+TAKE 金币 1888
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收8]
+#if
+checkitem 水泽国度 1
+#act
+take 水泽国度 1
+give 金币 400
+inc G358 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购8]
+#IF
+SMALL G358 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 444
+LARGE G358 0
+#act
+DEC G358 1
+GIVE 水泽国度 1
+TAKE 金币 444
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收9]
+#if
+checkitem 罗衫叶叶绣重重  1
+#act
+take 罗衫叶叶绣重重  1
+give 金币 999
+inc G359 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购9]
+#IF
+SMALL G359 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 1888
+LARGE G359 0
+#act
+DEC G359 1
+GIVE 罗衫叶叶绣重重  1
+TAKE 金币 1888
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收10]
+#if
+checkitem 神.妖.魔.灵.≮古道无仙≯ 1
+#act
+take 神.妖.魔.灵.≮古道无仙≯ 1
+give 金币 28
+inc G360 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购10]
+#IF
+SMALL G360 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 128
+LARGE G360 0
+#act
+DEC G360 1
+GIVE 神.妖.魔.灵.≮古道无仙≯ 1
+TAKE 金币 128
+MessageBox 装备回购成功..
+GOTO @永久回收脚本
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收11]
+#if
+checkitem 人.仙.鬼.怪.≮善恶兩分≯ 1
+#act
+take 人.仙.鬼.怪.≮善恶兩分≯ 1
+give 金币 38
+inc G361 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@新永久回购11]
+#IF
+SMALL G361 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 128
+LARGE G361 0
+#act
+DEC G361 1
+GIVE 人.仙.鬼.怪.≮善恶兩分≯ 1
+TAKE 金币 128
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收12]
+#if
+checkitem 万灵血玺 1
+#act
+take 万灵血玺 1
+give 金币 50
+inc G362 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购12]
+#IF
+SMALL G362 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 188
+LARGE G362 0
+#act
+DEC G362 1
+GIVE 万灵血玺 1
+TAKE 金币 188
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收13]
+#if
+checkitem 季主配剑≮太初始≯ 1
+#act
+take 季主配剑≮太初始≯ 1
+give 金币 18
+inc G363 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@新永久回购13]
+#IF
+SMALL G363 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 58
+LARGE G363 0
+#act
+DEC G363 1
+GIVE 季主配剑≮太初始≯ 1
+TAKE 金币 58
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+[@新永久回收14]
+#if
+checkitem 李主仙衣≮洪荒终≯ 1
+#act
+take 李主仙衣≮洪荒终≯ 1
+give 金币 18
+inc G364 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购14]
+#IF
+SMALL G364 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 58
+LARGE G364 0
+#act
+DEC G364 1
+GIVE 李主仙衣≮洪荒终≯  1
+TAKE 金币 58
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收15]
+#if
+checkitem 步步生莲 1
+#act
+take 步步生莲 1
+give 金币 4
+inc G365 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购15]
+#IF
+SMALL G365 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G365 0
+#act
+DEC G365 1
+GIVE 步步生莲 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收16]
+#if
+checkitem 奉旨讨饭 1
+#act
+take 奉旨讨饭 1
+give 金币 4
+inc G366 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购16]
+#IF
+SMALL G366 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G366 0
+#act
+DEC G366 1
+GIVE 奉旨讨饭 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+[@新永久回收17]
+#if
+checkitem 方父筑桥 1
+#act
+take 方父筑桥 1
+give 金币 5
+inc G367 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购17]
+#IF
+SMALL G367 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 18
+LARGE G367 0
+#act
+DEC G367 1
+GIVE 方父筑桥 1
+TAKE 金币 18
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收18]
+#if
+checkitem 清棺璇 1
+#act
+take 清棺璇 1
+give 金币 5
+inc G368 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购18]
+#IF
+SMALL G368 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 18
+LARGE G368 0
+#act
+DEC G368 1
+GIVE 清棺璇 1
+TAKE 金币 18
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+[@新永久回收19]
+#if
+checkitem 杀戮本源 1
+#act
+take 杀戮本源 1
+give 金币 5
+inc G369 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购19]
+#IF
+SMALL G369 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+#if
+CHECKGOLD 18
+LARGE G369 0
+#act
+DEC G369 1
+GIVE 杀戮本源 1
+TAKE 金币 18
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+[@新永久回收20]
+#if
+checkitem 枯冥九衰 1
+#act
+take 枯冥九衰 1
+give 金币 4
+inc G370 1
+MessageBox 装备回收成功金币获得增加..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@新永久回购20]
+#IF
+SMALL G370 1
+#ACT
+MESSAGEBOX 当前装备没有可回购数量！！
+BREAK
+
+#if
+CHECKGOLD 10
+LARGE G370 0
+#act
+DEC G370 1
+GIVE 枯冥九衰 1
+TAKE 金币 10
+MessageBox 装备回购成功..
+GOTO @永久回收脚本2
+BREAK
+#ELSEACT
+MessageBox [提示]:请检查您是否有足够的金币!!!
+break
+
+
+
+
+
+
+
+
+
+
+}

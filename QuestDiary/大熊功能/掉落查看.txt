@@ -1,0 +1,660 @@
+
+[@掉落界面]
+{
+
+#IF
+EQUAL N$出装记录行数1-1 0
+#ACT
+Mov N$出装记录行数1-1 0
+Mov N$出装记录行数1-2 1
+Mov N$出装记录行数1-3 2
+Mov N$出装记录行数1-4 3
+Mov N$出装记录行数1-5 4
+Mov N$出装记录行数1-6 5
+
+
+
+
+
+#IF
+#ACT
+Mov  S$拆分一1
+Mov  S$拆分二1
+Mov  S$拆分三1
+Mov  S$拆分四1
+Mov  S$拆分五1
+Mov  S$拆分六1
+Mov  S$拆分一2
+Mov  S$拆分二2
+Mov  S$拆分三2
+Mov  S$拆分四2
+Mov  S$拆分五2
+Mov  S$拆分六2
+Mov  S$拆分一3
+Mov  S$拆分二3
+Mov  S$拆分三3
+Mov  S$拆分四3
+Mov  S$拆分五3
+Mov  S$拆分六3
+Mov  S$拆分一4
+Mov  S$拆分二4
+Mov  S$拆分三4
+Mov  S$拆分四4
+Mov  S$拆分五4
+Mov  S$拆分六4
+Mov  S$拆分一5
+Mov  S$拆分二5
+Mov  S$拆分三5
+Mov  S$拆分四5
+Mov  S$拆分五5
+Mov  S$拆分六5
+
+
+
+
+
+
+#IF
+#ACT
+GetListString ..\QuestDiary\装备记录\装备记录文本.txt <$str(N$出装记录行数1-1)> <$str(S$出装记录1)>
+GetListString ..\QuestDiary\装备记录\装备记录文本.txt <$str(N$出装记录行数1-2)> <$str(S$出装记录2)>
+GetListString ..\QuestDiary\装备记录\装备记录文本.txt <$str(N$出装记录行数1-3)> <$str(S$出装记录3)>
+GetListString ..\QuestDiary\装备记录\装备记录文本.txt <$str(N$出装记录行数1-4)> <$str(S$出装记录4)>
+GetListString ..\QuestDiary\装备记录\装备记录文本.txt <$str(N$出装记录行数1-5)> <$str(S$出装记录5)>
+GetListString ..\QuestDiary\装备记录\装备记录文本.txt <$str(N$出装记录行数1-6)> <$str(S$出装记录6)>
+
+
+MOV S$出装记录行数1-1 <$STR(N$出装记录行数1-1)>
+MOV S$出装记录行数1-2 <$STR(N$出装记录行数1-2)>
+MOV S$出装记录行数1-3 <$STR(N$出装记录行数1-3)>
+MOV S$出装记录行数1-4 <$STR(N$出装记录行数1-4)>
+MOV S$出装记录行数1-5 <$STR(N$出装记录行数1-5)>
+MOV S$出装记录行数1-6 <$STR(N$出装记录行数1-6)>
+
+
+#IF
+NOT EQUAl S$出装记录1
+#ACT
+PGExtractString : <$str(S$出装记录1)> S$分割结果数组1
+mov S$拆分一1 <$STR(S$分割结果数组1_1)>
+mov S$拆分一2 <$STR(S$分割结果数组1_2)>
+mov S$拆分一3 <$STR(S$分割结果数组1_3)>
+mov S$拆分一4 <$STR(S$分割结果数组1_4)>
+mov S$拆分一5 <$STR(S$分割结果数组1_5)>
+
+#IF
+NOT EQUAl S$出装记录2
+#ACT
+PGExtractString : <$str(S$出装记录2)> S$分割结果数组2
+mov S$拆分二1 <$STR(S$分割结果数组2_1)>
+mov S$拆分二2 <$STR(S$分割结果数组2_2)>
+mov S$拆分二3 <$STR(S$分割结果数组2_3)>
+mov S$拆分二4 <$STR(S$分割结果数组2_4)>
+mov S$拆分二5 <$STR(S$分割结果数组2_5)>
+
+#IF
+NOT EQUAl S$出装记录3
+#ACT
+PGExtractString : <$str(S$出装记录3)> S$分割结果数组3
+mov S$拆分三1 <$STR(S$分割结果数组3_1)>
+mov S$拆分三2 <$STR(S$分割结果数组3_2)>
+mov S$拆分三3 <$STR(S$分割结果数组3_3)>
+mov S$拆分三4 <$STR(S$分割结果数组3_4)>
+mov S$拆分三5 <$STR(S$分割结果数组3_5)>
+
+#IF
+NOT EQUAl S$出装记录4
+#ACT
+PGExtractString : <$str(S$出装记录4)> S$分割结果数组4
+mov S$拆分四1 <$STR(S$分割结果数组4_1)>
+mov S$拆分四2 <$STR(S$分割结果数组4_2)>
+mov S$拆分四3 <$STR(S$分割结果数组4_3)>
+mov S$拆分四4 <$STR(S$分割结果数组4_4)>
+mov S$拆分四5 <$STR(S$分割结果数组4_5)>
+
+#IF
+NOT EQUAl S$出装记录5
+#ACT
+PGExtractString : <$str(S$出装记录5)> S$分割结果数组5
+mov S$拆分五1 <$STR(S$分割结果数组5_1)>
+mov S$拆分五2 <$STR(S$分割结果数组5_2)>
+mov S$拆分五3 <$STR(S$分割结果数组5_3)>
+mov S$拆分五4 <$STR(S$分割结果数组5_4)>
+mov S$拆分五5 <$STR(S$分割结果数组5_5)>
+
+#IF
+NOT EQUAl S$出装记录6
+#ACT
+PGExtractString : <$str(S$出装记录6)> S$分割结果数组6
+mov S$拆分六1 <$STR(S$分割结果数组6_1)>
+mov S$拆分六2 <$STR(S$分割结果数组6_2)>
+mov S$拆分六3 <$STR(S$分割结果数组6_3)>
+mov S$拆分六4 <$STR(S$分割结果数组6_4)>
+mov S$拆分六5 <$STR(S$分割结果数组6_5)>
+
+
+#IF
+Equal S$拆分一1
+#Act
+mov S$拆分一1 暂无产出数据
+
+#IF
+Equal S$拆分二1
+#Act
+mov S$拆分二1 暂无产出数据
+
+#IF
+Equal S$拆分三1
+#Act
+mov S$拆分三1 暂无产出数据
+
+#IF
+Equal S$拆分四1
+#Act
+mov S$拆分四1 暂无产出数据
+
+#IF
+Equal S$拆分五1
+#Act
+mov S$拆分五1 暂无产出数据
+
+#IF
+Equal S$拆分六1
+#Act
+mov S$拆分六1 暂无产出数据
+
+
+
+#IF
+#ACT
+;SetStringBlank <$STR(S$出装记录行数1-1)> 3 1
+SetStringBlank S$出装记录行数1-1 3 1
+;SetStringBlank <$STR(S$出装记录行数1-2)> 3 1
+SetStringBlank S$出装记录行数1-2 3 1
+;SetStringBlank <$STR(S$出装记录行数1-3)> 3 1
+SetStringBlank S$出装记录行数1-3 3 1
+;SetStringBlank <$STR(S$出装记录行数1-4)> 3 1
+SetStringBlank S$出装记录行数1-4 3 1
+;SetStringBlank <$STR(S$出装记录行数1-5)> 3 1
+SetStringBlank S$出装记录行数1-5 3 1
+;SetStringBlank <$STR(S$出装记录行数1-6)> 3 1
+SetStringBlank S$出装记录行数1-6 3 1
+
+;SetStringBlank <$str(S$拆分一1)> 19 1
+SetStringBlank S$拆分一1 19 1
+;SetStringBlank <$str(S$拆分二1)> 19 1
+SetStringBlank S$拆分二1 19 1
+;SetStringBlank <$str(S$拆分三1)> 19 1
+SetStringBlank S$拆分三1 19 1
+;SetStringBlank <$str(S$拆分四1)> 19 1
+SetStringBlank S$拆分四1 19 1
+;SetStringBlank <$str(S$拆分五1)> 19 1
+SetStringBlank S$拆分五1 19 1
+;SetStringBlank <$str(S$拆分六1)> 19 1
+SetStringBlank S$拆分六1 19 1
+
+;SetStringBlank <$str(S$拆分一2)> 15 1
+SetStringBlank S$拆分一2 15 1
+;SetStringBlank <$str(S$拆分二2)> 15 1
+SetStringBlank S$拆分二2 15 1
+;SetStringBlank <$str(S$拆分三2)> 15 1
+SetStringBlank S$拆分三2 15 1
+;SetStringBlank <$str(S$拆分四2)> 15 1
+SetStringBlank S$拆分四2 15 1
+;SetStringBlank <$str(S$拆分五2)> 15 1
+SetStringBlank S$拆分五2 15 1
+;SetStringBlank <$str(S$拆分六2)> 15 1
+SetStringBlank S$拆分六2 15 1
+
+;SetStringBlank <$str(S$拆分一3)> 16 1
+SetStringBlank S$拆分一3 16 1
+;SetStringBlank <$str(S$拆分二3)> 16 1
+SetStringBlank S$拆分二3 16 1
+;SetStringBlank <$str(S$拆分三3)> 16 1
+SetStringBlank S$拆分三3 16 1
+;SetStringBlank <$str(S$拆分四3)> 16 1
+SetStringBlank S$拆分四3 16 1
+;SetStringBlank <$str(S$拆分五3)> 16 1
+SetStringBlank S$拆分五3 16 1
+;SetStringBlank <$str(S$拆分六3)> 16 1
+SetStringBlank S$拆分六3 16 1
+
+;SetStringBlank <$str(S$拆分一4)> 14 1
+SetStringBlank S$拆分一4 14 1
+;SetStringBlank <$str(S$拆分二4)> 14 1
+SetStringBlank S$拆分二4 14 1
+;SetStringBlank <$str(S$拆分三4)> 14 1
+SetStringBlank S$拆分三4 14 1
+;SetStringBlank <$str(S$拆分四4)> 14 1
+SetStringBlank S$拆分四4 14 1
+;SetStringBlank <$str(S$拆分五4)> 14 1
+SetStringBlank S$拆分五4 14 1
+;SetStringBlank <$str(S$拆分六4)> 14 1
+SetStringBlank S$拆分六4 14 1
+
+;SetStringBlank <$str(S$拆分一5)> 29 1
+SetStringBlank S$拆分一5 29 1
+;SetStringBlank <$str(S$拆分二5)> 29 1
+SetStringBlank S$拆分二5 29 1
+;SetStringBlank <$str(S$拆分三5)> 29 1
+SetStringBlank S$拆分三5 29 1
+;SetStringBlank <$str(S$拆分四5)> 29 1
+SetStringBlank S$拆分四5 29 1
+;SetStringBlank <$str(S$拆分五5)> 29 1
+SetStringBlank S$拆分五5 29 1
+;SetStringBlank <$str(S$拆分六5)> 29 1
+SetStringBlank S$拆分六5 29 1
+
+
+
+
+
+#IF
+CHECKLEVELEX > 0
+
+#ACT
+
+#SAY
+\ \ \ \
+\<>        <封天珍宝掉落系统，只有特殊专属装备物品才可显示在珍宝界面中，爆率绝对真实！/FCOLOR=254> \ \
+<> {<$STR(S$出装记录行数1-1)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分一1)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分一5)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分一3)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分一4)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分一2)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-2)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分二1)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分二5)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分二3)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分二4)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分二2)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-3)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分三1)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分三5)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分三3)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分三4)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分三2)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-4)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分四1)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分四5)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分四3)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分四4)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分四2)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-5)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分五1)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分五5)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分五3)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分五4)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分五2)>/FCOLOR=249} \
+<> {-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-6)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分六1)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分六5)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分六3)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分六4)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分六2)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+<>   <IMG:159:6:90:-7/@掉落上一页>   <IMG:158:6:180:-7/@掉落下一页>     {第<$STR(N$掉落页码)>页/FCOLOR=103}                       {本区记录/FCOLOR=249}      <全区记录/@全区记录> \
+
+
+
+
+
+[@掉落上一页]
+
+
+#IF
+LARGE N$出装记录行数1-1 1
+#ACT
+DEC N$出装记录行数1-1 7
+DEC N$出装记录行数1-2 7
+DEC N$出装记录行数1-3 7
+DEC N$出装记录行数1-4 7
+DEC N$出装记录行数1-5 7
+DEC N$出装记录行数1-6 7
+DEC N$掉落页码 1
+goto @掉落界面
+BREAk
+#elseact
+messagebox 已经是第1页了!
+BREAk
+
+[@掉落下一页]
+
+#if
+#ACT
+INC N$出装记录行数1-1 7
+INC N$出装记录行数1-2 7
+INC N$出装记录行数1-3 7
+INC N$出装记录行数1-4 7
+INC N$出装记录行数1-5 7
+INC N$出装记录行数1-6 7
+inc N$掉落页码 1
+goto @掉落界面
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@全区记录]
+
+#IF
+EQUAL N$出装记录行数1-1a 0
+#ACT
+Mov N$出装记录行数1-1a 0
+Mov N$出装记录行数1-2a 1
+Mov N$出装记录行数1-3a 2
+Mov N$出装记录行数1-4a 3
+Mov N$出装记录行数1-5a 4
+Mov N$出装记录行数1-6a 5
+
+
+
+
+
+#IF
+#ACT
+Mov  S$拆分一1a
+Mov  S$拆分二1a
+Mov  S$拆分三1a
+Mov  S$拆分四1a
+Mov  S$拆分五1a
+Mov  S$拆分六1a
+Mov  S$拆分一2a
+Mov  S$拆分二2a
+Mov  S$拆分三2a
+Mov  S$拆分四2a
+Mov  S$拆分五2a
+Mov  S$拆分六2a
+Mov  S$拆分一3a
+Mov  S$拆分二3a
+Mov  S$拆分三3a
+Mov  S$拆分四3a
+Mov  S$拆分五3a
+Mov  S$拆分六3a
+Mov  S$拆分一4a
+Mov  S$拆分二4a
+Mov  S$拆分三4a
+Mov  S$拆分四4a
+Mov  S$拆分五4a
+Mov  S$拆分六4a
+Mov  S$拆分一5a
+Mov  S$拆分二5a
+Mov  S$拆分三5a
+Mov  S$拆分四5a
+Mov  S$拆分五5a
+Mov  S$拆分六5a
+
+
+
+
+
+
+#IF
+#ACT
+GetListString ..\..\..\..\跨区文件夹\装备记录\装备记录文本.txt <$str(N$出装记录行数1-1a)> <$str(S$出装记录1a)>
+GetListString ..\..\..\..\跨区文件夹\装备记录\装备记录文本.txt <$str(N$出装记录行数1-2a)> <$str(S$出装记录2a)>
+GetListString ..\..\..\..\跨区文件夹\装备记录\装备记录文本.txt <$str(N$出装记录行数1-3a)> <$str(S$出装记录3a)>
+GetListString ..\..\..\..\跨区文件夹\装备记录\装备记录文本.txt <$str(N$出装记录行数1-4a)> <$str(S$出装记录4a)>
+GetListString ..\..\..\..\跨区文件夹\装备记录\装备记录文本.txt <$str(N$出装记录行数1-5a)> <$str(S$出装记录5a)>
+GetListString ..\..\..\..\跨区文件夹\装备记录\装备记录文本.txt <$str(N$出装记录行数1-6a)> <$str(S$出装记录6a)>
+
+
+MOV S$出装记录行数1-1a <$STR(N$出装记录行数1-1a)>
+MOV S$出装记录行数1-2a <$STR(N$出装记录行数1-2a)>
+MOV S$出装记录行数1-3a <$STR(N$出装记录行数1-3a)>
+MOV S$出装记录行数1-4a <$STR(N$出装记录行数1-4a)>
+MOV S$出装记录行数1-5a <$STR(N$出装记录行数1-5a)>
+MOV S$出装记录行数1-6a <$STR(N$出装记录行数1-6a)>
+
+
+#IF
+NOT EQUAl S$出装记录1a
+#ACT
+PGExtractString : <$str(S$出装记录1a)> S$分割结果数组7
+mov S$拆分一1a <$STR(S$分割结果数组7_1)>
+mov S$拆分一2a <$STR(S$分割结果数组7_2)>
+mov S$拆分一3a <$STR(S$分割结果数组7_3)>
+mov S$拆分一4a <$STR(S$分割结果数组7_4)>
+mov S$拆分一5a <$STR(S$分割结果数组7_5)>
+
+#IF
+NOT EQUAl S$出装记录2a
+#ACT
+PGExtractString : <$str(S$出装记录2a)> S$分割结果数组8
+mov S$拆分二1a <$STR(S$分割结果数组8_1)>
+mov S$拆分二2a <$STR(S$分割结果数组8_2)>
+mov S$拆分二3a <$STR(S$分割结果数组8_3)>
+mov S$拆分二4a <$STR(S$分割结果数组8_4)>
+mov S$拆分二5a <$STR(S$分割结果数组8_5)>
+
+#IF
+NOT EQUAl S$出装记录3a
+#ACT
+PGExtractString : <$str(S$出装记录3a)> S$分割结果数组9
+mov S$拆分三1a <$STR(S$分割结果数组9_1)>
+mov S$拆分三2a <$STR(S$分割结果数组9_2)>
+mov S$拆分三3a <$STR(S$分割结果数组9_3)>
+mov S$拆分三4a <$STR(S$分割结果数组9_4)>
+mov S$拆分三5a <$STR(S$分割结果数组9_5)>
+
+#IF
+NOT EQUAl S$出装记录4a
+#ACT
+PGExtractString : <$str(S$出装记录4a)> S$分割结果数组10
+mov S$拆分四1a <$STR(S$分割结果数组10_1)>
+mov S$拆分四2a <$STR(S$分割结果数组10_2)>
+mov S$拆分四3a <$STR(S$分割结果数组10_3)>
+mov S$拆分四4a <$STR(S$分割结果数组10_4)>
+mov S$拆分四5a <$STR(S$分割结果数组10_5)>
+
+#IF
+NOT EQUAl S$出装记录5a
+#ACT
+PGExtractString : <$str(S$出装记录5a)> S$分割结果数组11
+mov S$拆分五1a <$STR(S$分割结果数组11_1)>
+mov S$拆分五2a <$STR(S$分割结果数组11_2)>
+mov S$拆分五3a <$STR(S$分割结果数组11_3)>
+mov S$拆分五4a <$STR(S$分割结果数组11_4)>
+mov S$拆分五5a <$STR(S$分割结果数组11_5)>
+
+#IF
+NOT EQUAl S$出装记录6a
+#ACT
+PGExtractString : <$str(S$出装记录6a)> S$分割结果数组12
+mov S$拆分六1a <$STR(S$分割结果数组12_1)>
+mov S$拆分六2a <$STR(S$分割结果数组12_2)>
+mov S$拆分六3a <$STR(S$分割结果数组12_3)>
+mov S$拆分六4a <$STR(S$分割结果数组12_4)>
+mov S$拆分六5a <$STR(S$分割结果数组12_5)>
+
+
+#IF
+Equal S$拆分一1a
+#Act
+mov S$拆分一1a 暂无产出数据
+
+#IF
+Equal S$拆分二1a
+#Act
+mov S$拆分二1a 暂无产出数据
+
+#IF
+Equal S$拆分三1a
+#Act
+mov S$拆分三1a 暂无产出数据
+
+#IF
+Equal S$拆分四1a
+#Act
+mov S$拆分四1a 暂无产出数据
+
+#IF
+Equal S$拆分五1a
+#Act
+mov S$拆分五1a 暂无产出数据
+
+#IF
+Equal S$拆分六1a
+#Act
+mov S$拆分六1a 暂无产出数据
+
+#IF
+#ACT
+;SetStringBlank <$STR(S$出装记录行数1-1a)> 3 1
+SetStringBlank S$出装记录行数1-1a 3 1
+;SetStringBlank <$STR(S$出装记录行数1-2a)> 3 1
+SetStringBlank S$出装记录行数1-2a 3 1
+;SetStringBlank <$STR(S$出装记录行数1-3a)> 3 1
+SetStringBlank S$出装记录行数1-3a 3 1
+;SetStringBlank <$STR(S$出装记录行数1-4a)> 3 1
+SetStringBlank S$出装记录行数1-4a 3 1
+;SetStringBlank <$STR(S$出装记录行数1-5a)> 3 1
+SetStringBlank S$出装记录行数1-5a 3 1
+;SetStringBlank <$STR(S$出装记录行数1-6a)> 3 1
+SetStringBlank S$出装记录行数1-6a 3 1
+
+;SetStringBlank <$str(S$拆分一1a)> 19 1
+SetStringBlank S$拆分一1a 19 1
+;SetStringBlank <$str(S$拆分二1a)> 19 1
+SetStringBlank S$拆分二1a 19 1
+;SetStringBlank <$str(S$拆分三1a)> 19 1
+SetStringBlank S$拆分三1a 19 1
+;SetStringBlank <$str(S$拆分四1a)> 19 1
+SetStringBlank S$拆分四1a 19 1
+;SetStringBlank <$str(S$拆分五1a)> 19 1
+SetStringBlank S$拆分五1a 19 1
+;SetStringBlank <$str(S$拆分六1a)> 19 1
+SetStringBlank S$拆分六1a 19 1
+
+;SetStringBlank <$str(S$拆分一2a)> 15 1
+SetStringBlank S$拆分一2a 15 1
+;SetStringBlank <$str(S$拆分二2a)> 15 1
+SetStringBlank S$拆分二2a 15 1
+;SetStringBlank <$str(S$拆分三2a)> 15 1
+SetStringBlank S$拆分三2a 15 1
+;SetStringBlank <$str(S$拆分四2a)> 15 1
+SetStringBlank S$拆分四2a 15 1
+;SetStringBlank <$str(S$拆分五2a)> 15 1
+SetStringBlank S$拆分五2a 15 1
+;SetStringBlank <$str(S$拆分六2a)> 15 1
+SetStringBlank S$拆分六2a 15 1
+
+;SetStringBlank <$str(S$拆分一3a)> 16 1
+SetStringBlank S$拆分一3a 16 1
+;SetStringBlank <$str(S$拆分二3a)> 16 1
+SetStringBlank S$拆分二3a 16 1
+;SetStringBlank <$str(S$拆分三3a)> 16 1
+SetStringBlank S$拆分三3a 16 1
+;SetStringBlank <$str(S$拆分四3a)> 16 1
+SetStringBlank S$拆分四3a 16 1
+;SetStringBlank <$str(S$拆分五3a)> 16 1
+SetStringBlank S$拆分五3a 16 1
+;SetStringBlank <$str(S$拆分六3a)> 16 1
+SetStringBlank S$拆分六3a 16 1
+
+;SetStringBlank <$str(S$拆分一4a)> 14 1
+SetStringBlank S$拆分一4a 14 1
+;SetStringBlank <$str(S$拆分二4a)> 14 1
+SetStringBlank S$拆分二4a 14 1
+;SetStringBlank <$str(S$拆分三4a)> 14 1
+SetStringBlank S$拆分三4a 14 1
+;SetStringBlank <$str(S$拆分四4a)> 14 1
+SetStringBlank S$拆分四4a 14 1
+;SetStringBlank <$str(S$拆分五4a)> 14 1
+SetStringBlank S$拆分五4a 14 1
+;SetStringBlank <$str(S$拆分六4a)> 14 1
+SetStringBlank S$拆分六4a 14 1
+
+;SetStringBlank <$str(S$拆分一5a)> 29 1
+SetStringBlank S$拆分一5a 29 1
+;SetStringBlank <$str(S$拆分二5a)> 29 1
+SetStringBlank S$拆分二5a 29 1
+;SetStringBlank <$str(S$拆分三5a)> 29 1
+SetStringBlank S$拆分三5a 29 1
+;SetStringBlank <$str(S$拆分四5a)> 29 1
+SetStringBlank S$拆分四5a 29 1
+;SetStringBlank <$str(S$拆分五5a)> 29 1
+SetStringBlank S$拆分五5a 29 1
+;SetStringBlank <$str(S$拆分六5a)> 29 1
+SetStringBlank S$拆分六5a 29 1
+
+
+
+
+
+#IF
+CHECKLEVELEX > 0
+
+#ACT
+
+#SAY
+\<>        <封天珍宝掉落系统，只有特殊专属装备物品才可显示在珍宝界面中，爆率绝对真实！/FCOLOR=254> \ \
+<> {<$STR(S$出装记录行数1-1a)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分一1a)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分一5a)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分一3a)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分一4a)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分一2a)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-2a)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分二1a)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分二5a)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分二3a)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分二4a)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分二2a)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-3a)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分三1a)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分三5a)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分三3a)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分三4a)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分三2a)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-4a)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分四1a)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分四5a)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分四3a)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分四4a)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分四2a)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-5a)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分五1a)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分五5a)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分五3a)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分五4a)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分五2a)>/FCOLOR=249} \
+<> {-----------------------------------------------------------------------------------------/FCOLOR=14}\
+
+<> {<$STR(S$出装记录行数1-6a)>/FCOLOR=253}            {名称：/FCOLOR=243}{<$str(S$拆分六1a)>/FCOLOR=7}        {分区：/FCOLOR=243}{<$str(S$拆分六5a)>/FCOLOR=253} \
+<>                {地图：/FCOLOR=243}{<$str(S$拆分六3a)>/FCOLOR=215}           {时间：/FCOLOR=243}{<$str(S$拆分六4a)>/FCOLOR=255}   {角色：/FCOLOR=243}{<$str(S$拆分六2a)>/FCOLOR=249} \
+<>{-----------------------------------------------------------------------------------------/FCOLOR=14}\
+<>   <IMG:159:6:90:-7/@掉落上一页a>   <IMG:158:6:180:-7/@掉落下一页a>     {第<$STR(N$掉落页码a)>页/FCOLOR=103}                       <本区记录/@掉落界面>      <全区记录> \
+
+
+
+
+
+[@掉落上一页a]
+
+
+#IF
+LARGE N$出装记录行数1-1a 1
+#ACT
+DEC N$出装记录行数1-1a 6
+DEC N$出装记录行数1-2a 6
+DEC N$出装记录行数1-3a 6
+DEC N$出装记录行数1-4a 6
+DEC N$出装记录行数1-5a 6
+DEC N$出装记录行数1-6a 6
+DEC N$掉落页码a 1
+goto @全区记录
+BREAk
+#elseact
+messagebox 已经是第1页了!
+BREAk
+
+[@掉落下一页a]
+
+#if
+#ACT
+INC N$出装记录行数1-1a 6
+INC N$出装记录行数1-2a 6
+INC N$出装记录行数1-3a 6
+INC N$出装记录行数1-4a 6
+INC N$出装记录行数1-5a 6
+INC N$出装记录行数1-6a 6
+inc N$掉落页码a 1
+goto @全区记录
+BREAK
+
+
+
+
+
+
+
+}

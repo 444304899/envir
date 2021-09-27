@@ -1,0 +1,182 @@
+[@Main]
+#IF
+CHECKLEVELEX > 0
+#ACT
+;CloseBigDialogBox
+#SAY
+<ImgEx:22:377:378:379:65:136/@01><ImgEx:22:377:378:379:88:136/@02><ImgEx:22:377:378:379:111:136/@03><ImgEx:22:377:378:379:134:136/@04><ImgEx:22:377:378:379:157:136/@05>\
+<ImgEx:22:377:378:379:65:242/@06><ImgEx:22:377:378:379:88:242/@07><ImgEx:22:377:378:379:111:242/@08><ImgEx:22:377:378:379:134:242/@09><ImgEx:22:377:378:379:157:242/@10>\
+
+<Img:55:22:70:26/@01><Img:56:22:103:26/@02><Img:57:22:140:26/@03><Img:58:22:175:26/@04><Img:59:22:208:26/@05>\
+<Img:60:22:70:134/@06><Img:61:22:103:134/@07><Img:62:22:140:134/@08><Img:63:22:175:134/@09><Img:64:22:208:134/@10>\
+
+;<ItemShow:1437:0:85:18:0/@01><ItemShow:1438:0:133:18:0/@02><ItemShow:1439:0:183:18:0/@03><ItemShow:1440:0:233:18:0/@04><ItemShow:1441:0:283:18:0/@05>\
+;<ItemShow:1442:0:85:125:0/@06><ItemShow:1443:0:133:125:0/@07><ItemShow:1444:0:183:125:0/@08><ItemShow:1445:0:233:125:0/@09><ItemShow:1446:0:283:125:0/@10>\
+
+
+[@01]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 红双喜
+MOV N$兑换价格 1
+MOV N$兑换积分 0
+GOTO @开始兑换
+break
+
+[@02]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 大前门
+MOV N$兑换价格 2
+MOV N$兑换积分 0
+GOTO @开始兑换
+break
+
+[@03]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 黄鹤楼
+MOV N$兑换价格 3
+MOV N$兑换积分 0
+GOTO @开始兑换
+break
+
+[@04]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 玉溪
+MOV N$兑换价格 4
+MOV N$兑换积分 0
+GOTO @开始兑换
+break
+
+[@05]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 宽窄
+MOV N$兑换价格 6
+MOV N$兑换积分 0
+GOTO @开始兑换
+break
+
+[@06]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 煊赫门
+MOV N$兑换价格 8
+GOTO @开始兑换
+break
+
+[@07]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 苏烟
+MOV N$兑换价格 10
+MOV N$兑换积分 1
+GOTO @开始兑换
+break
+
+[@08]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 中华
+MOV N$兑换价格 10
+MOV N$兑换积分 1
+GOTO @开始兑换
+break
+
+[@09]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 利群
+MOV N$兑换价格 20
+MOV N$兑换积分 2
+GOTO @开始兑换
+break
+
+[@10]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV S$实物名称 和天下
+MOV N$兑换价格 30
+MOV N$兑换积分 3
+GOTO @开始兑换
+break
+
+[@开始兑换]
+#IF
+NOT CHECKITEM <$STR(S$实物名称)> 1
+#ACT
+messagebox \【兑换失败】:\\\您的包裹里面没有<$STR(S$实物名称)>香烟。
+Break
+
+
+#IF
+CHECKLEVELEX > 0
+CHECKITEM <$STR(S$实物名称)> 100
+#ACT
+TAKE <$STR(S$实物名称)> 100
+GamePoint + <$STR(N$兑换价格)>00
+GAMEDIAMOND + <$STR(N$兑换积分)>00
+INC G87 <$STR(N$兑换价格)>00
+INC G87 <$STR(N$兑换积分)>00
+SENDMOVEMSG 0 253 255 200 1 ≮实物兑换≯：恭喜玩家『<$USERNAME>』成功兑换实物名品香烟『<$STR(S$实物名称)>*100』获得『<$STR(N$兑换价格)>00』钻石,『<$STR(N$兑换积分)>0』积分！
+SENDMOVEMSG 0 251 252 320 1 ≮实物兑换≯：恭喜玩家『<$USERNAME>』成功兑换实物名品香烟『<$STR(S$实物名称)>*100』获得『<$STR(N$兑换价格)>00』钻石,『<$STR(N$兑换积分)>0』积分！
+GOTO @main
+BREAK
+
+
+#IF
+CHECKLEVELEX > 0
+CHECKITEM <$STR(S$实物名称)> 10
+#ACT
+TAKE <$STR(S$实物名称)> 10
+GamePoint + <$STR(N$兑换价格)>0
+GAMEDIAMOND + <$STR(N$兑换积分)>0
+INC G87 <$STR(N$兑换价格)>0
+INC G87 <$STR(N$兑换积分)>0
+SENDMOVEMSG 0 253 255 200 1 ≮实物兑换≯：恭喜玩家『<$USERNAME>』成功兑换实物名品香烟『<$STR(S$实物名称)>*10』获得『<$STR(N$兑换价格)>0』钻石,『<$STR(N$兑换积分)>』积分！
+SENDMOVEMSG 0 251 252 320 1 ≮实物兑换≯：恭喜玩家『<$USERNAME>』成功兑换实物名品香烟『<$STR(S$实物名称)>*10』获得『<$STR(N$兑换价格)>0』钻石,『<$STR(N$兑换积分)>』积分！
+GOTO @main
+BREAK
+
+#IF
+CHECKLEVELEX > 0
+CHECKITEM <$STR(S$实物名称)> 1
+#ACT
+TAKE <$STR(S$实物名称)> 1
+GamePoint + <$STR(N$兑换价格)>
+GAMEDIAMOND + <$STR(N$兑换积分)>
+INC G87 <$STR(N$兑换价格)>
+INC G87 <$STR(N$兑换积分)>
+SENDMOVEMSG 0 253 255 200 1 ≮实物兑换≯：恭喜玩家『<$USERNAME>』成功兑换实物名品香烟『<$STR(S$实物名称)>』获得『<$STR(N$兑换价格)>』钻石,『<$STR(N$兑换积分)>』积分！
+SENDMOVEMSG 0 251 252 320 1 ≮实物兑换≯：恭喜玩家『<$USERNAME>』成功兑换实物名品香烟『<$STR(S$实物名称)>』获得『<$STR(N$兑换价格)>』钻石,『<$STR(N$兑换积分)>』积分！
+GOTO @main
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

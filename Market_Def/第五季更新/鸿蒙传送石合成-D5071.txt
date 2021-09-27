@@ -1,0 +1,52 @@
+[@main]
+
+
+
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                                 <勇士你好,欢迎来到《封妖录》的世界!/AUTOCOLOR=254>\  \  \
+<>                                                    <当你集齐 法神套装和鸿. 蒙. 传. 送. 石. 五个材料可以在我这里合成传送石/AUTOCOLOR=250>   \   \   \
+
+<>                                                                        <《合成》/@1>
+
+[@1]
+
+#if
+checkitem 鸿. 1
+checkitem 蒙. 1
+checkitem 传. 1
+checkitem 送. 1
+checkitem 石. 1
+checkitem 法神头盔
+checkitem 法神项链
+checkitem 法神手镯
+checkitem 法神护腕
+checkitem 法神戒指
+checkitem 法神指环
+checkitem 法神披风
+checkitem 血饮
+#act
+take 鸿.  9999
+take 蒙.  9999
+take 传.  9999
+take 送.  9999
+take 石.  9999
+take 法神头盔
+take 法神项链
+take 法神手镯
+take 法神护腕
+take 法神戒指
+take 法神指环
+take 法神披风
+take 血饮
+;GiveStateItem 鸿蒙传送石 1 1 0 0 1 1 1 1
+GIVESTATEITEM 鸿蒙传送石 1 1 1 0 0 1 1 1 0
+map 鸿蒙之境 31 41
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+#elseact
+MESSAGEBOX [提示:]\\进图失败,请检查你的等级是否达到要求
+break
+

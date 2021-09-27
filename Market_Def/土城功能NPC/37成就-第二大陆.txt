@@ -1,0 +1,79 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \
+<>                                                <激活隐藏成就.New~/FCOLOR=58> \
+<>                                                <你同时拥有《队友之灾》《祖安狂人》《表面兄弟》就可以激活隐藏的成就/FCOLOR=146> \
+<>                                                <《激活成就》/@升级1>  <·√/FCOLOR=146> <彩蛋/FCOLOR=116><[神秘之地隐藏着以上称号的BOSS，看你能力...]/FCOLOR=151>\
+<>                                                <Img:174:6:40:7>\
+
+<>                                                <你找我是需要食物系的大烤肠吗？如果你需要的话。给我带来20根火腿肠/FCOLOR=146>\
+<>                                                <《提交火腿肠》/@提交><·√/FCOLOR=58> <彩蛋/FCOLOR=116><[随机可激活4种不同状态的BUFF，不过限时哦...]/FCOLOR=151>\
+<>                                                <Img:174:6:40:7>\
+
+<>                                                <冰与火之歌是一件强大的神器,若你给我足够的材料我就可以帮你打造!!/FCOLOR=146> \
+<>                                                <ItemShow:909:0:50:10:1><ItemShow:910:0:80:10:1><ItemShow:913:0:130:10:1><ItemShow:1525:0:160:10:1>\  \   \  \
+<>                                                 <冰与火之歌/@冰火升级1> <·√/FCOLOR=146> <需要/FCOLOR=116> <[冰の书*38]/FCOLOR=254> + <[火の书*38]/FCOLOR=249> + <[神祈之泪*5000]/FCOLOR=151>\  \
+<>                                                 <冰与火【洗灵】/@冰火升级2> <·√/FCOLOR=58> <需要/FCOLOR=116> <[冰の书*288]/FCOLOR=254> + <[火の书*288]/FCOLOR=249>\
+<>                                                                          <[冰与火之歌]/FCOLOR=150> + <[神祈之泪*9999]/FCOLOR=151>\
+
+[@升级1]
+#if
+CHECKTITLE 队友之灾
+CHECKTITLE 祖安狂人
+CHECKTITLE 表面兄弟
+#act
+DEPRIVETITLE 队友之灾
+DEPRIVETITLE 祖安狂人
+DEPRIVETITLE 表面兄弟
+CONFERTITLE 封天之主
+MESSAGEBOX [提示]：成就激活成功,获得大量属性!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@冰火升级2]
+#if
+checkitem 冰与火之歌
+checkitem 冰の书 288
+checkitem 火の书 288
+checkitem 神祈之泪 9999
+#act
+take 冰の书 288
+take 火の书 288
+take 神祈之泪 9999
+take 冰与火之歌 1
+give 冰与火【洗灵】 1
+MESSAGEBOX [提示]:《冰与火【洗灵】》合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@冰火升级1]
+#if
+checkitem 冰の书 38
+checkitem 火の书 38
+checkitem 神祈之泪 5000
+#act
+take 冰の书 38
+take 火の书 38
+take 神祈之泪 5000
+give 冰与火之歌 1
+MESSAGEBOX [提示]:《冰与火之歌》合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@提交]
+#if
+checkitem 火腿肠 20
+#act
+take 火腿肠 20
+GETRANDOMLINETEXT ..\QuestDiary\火腿列表.txt <$STR(S0)>
+give <$STR(S0)> 1
+MESSAGEBOX [提示]:获得物品:<$STR(S0)>!
+#elseact
+MESSAGEBOX 请检测是否有足够的火腿肠！
+BREAK

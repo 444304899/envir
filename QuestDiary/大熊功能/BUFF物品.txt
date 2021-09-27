@@ -1,0 +1,55 @@
+[@计算BUFF]
+{
+#if
+equal T5 通灵术·忍犬
+#act
+ChangeModeEx 3 900 30000
+
+#if
+equal T5 通灵术·忍龟
+#act
+MOV N$临时爆率 30
+MOV N$临时真爆率 8
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+#if
+equal T5 通灵术·蛤蟆
+#act
+MOV N$临时伤害 10
+MOV N$临时伤害计时 900
+#CALL [\BUFF\真实伤害.txt] @伤害计算
+
+#if
+equal T5 通灵术·蛤蟆仙人
+#act
+SetSuckDamage + 1000000 50 100
+
+
+
+#if
+equal T5 橡胶果实
+#act
+ChangeModeEx 3 900 50000
+SHOWPHANTOM 1 2 3 4 5 105 7 8 900 10
+
+#if
+equal T5 爆率果实
+#act
+MOV N$临时爆率 50
+MOV N$临时真爆率 10
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+#if
+equal T5 伤害果实
+#act
+MOV N$临时伤害 20
+#CALL [\BUFF\真实伤害.txt] @伤害计算
+
+#if
+equal T5 吸收果实
+#act
+SetSuckDamage + 1000000 10 100
+
+
+
+}

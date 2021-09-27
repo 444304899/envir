@@ -1,0 +1,3454 @@
+[@Startup]
+#if
+equal G0 0
+#act
+MOV G0 1
+MOV A0 <$MONTH>月<$DAY>号
+
+
+;=============红蓝行会==============================================
+#if
+#ACT
+#CALL [\天下综合脚本\沙城红蓝系统\红蓝全局变量.txt] @红蓝全局变量声明
+
+
+#IF
+;EQUAL G20 0
+EQUAL G1 0
+#ACT
+;MOV G20 1
+MOV G1 1
+;CLEARNAMELIST ..\QuestDiary\天下综合脚本\沙城红蓝系统\领奖机器码.txt
+;CLEARNAMELIST ..\QuestDiary\天下综合脚本\沙城红蓝系统\领奖玩家名.txt
+;CLEARNAMELIST ..\QuestDiary\天下综合脚本\沙城红蓝系统\领奖胜利方数据记录.txt
+;CLEARNAMELIST ..\QuestDiary\天下综合脚本\沙城红蓝系统\领奖失败方数据记录.txt
+;CLEARNAMELIST ..\QuestDiary\限时装备\限时奖励\限时变量.txt
+;CLEARNAMELIST ..\QuestDiary\限时装备\BOSS系统\BOSS变量.txt
+;CLEARNAMELIST ..\QuestDiary\限时装备\永久回收\回收变量.txt
+;CLEARNAMELIST ..\QuestDiary\江湖数据\钻石捐献.txt
+;CLEARNAMELIST ..\QuestDiary\江湖数据\捐献币.txt
+;CLEARNAMELIST ..\QuestDiary\江湖数据\捐献币捐款名.txt
+;CLEARNAMELIST ..\QuestDiary\江湖数据\捐献币捐款数.txt
+
+
+#if
+not equal A1 已领取
+#act
+;MOV G14 10800
+;MOV G15 1
+;MOV G17 172800
+
+MOV G3 10800
+MOV G4 1
+MOV G5 172800
+
+;=================================================================
+
+#if
+#act
+#CALL [\寒流新假人\假人全局变量申明.txt] @申明假人变量
+
+
+
+#IF
+EQUAL A401
+NOT CheckContainsText <$SERVERNAME> 测试
+#ACT
+MOV A401 <$SERVERNAME>
+
+
+#if
+CHECK [24] 0
+CheckContainsText <$SERVERNAME> 测试
+#act
+set [24] 1
+
+
+
+
+
+#if
+equal G199 0
+#act
+MOV G199 1
+MOV G200 20
+MOV G201 20
+MOV G202 20
+MOV G203 20
+MOV G204 20
+MOV G205 20
+MOV G206 20
+MOV G207 20
+MOV G208 20
+MOV G209 20
+MOV G210 20
+MOV G211 20
+MOV G212 20
+MOV G213 20
+MOV G214 20
+MOV G215 20
+MOV G216 20
+MOV G217 20
+MOV G218 20
+MOV G219 20
+MOV G220 20
+MOV G221 20
+MOV G222 20
+MOV G223 20
+MOV G224 20
+MOV G225 20
+MOV G226 20
+MOV G227 20
+MOV G228 20
+MOV G229 20
+MOV G230 20
+MOV G231 20
+MOV G232 20
+MOV G233 20
+MOV G234 20
+MOV G235 15
+MOV G236 15
+MOV G237 15
+MOV G238 15
+MOV G239 15
+MOV G240 15
+MOV G241 15
+MOV G242 15
+MOV G243 15
+MOV G244 15
+MOV G245 10
+MOV G246 10
+MOV G247 10
+MOV G248 10
+MOV G249 10
+
+MOV G16 100
+
+MOV G496 781
+MOV G495 180
+
+MOV G499 1
+
+
+
+#if
+CHECKLEVELEX > 0
+#act
+;-------新加
+;MAPEFFECT YD 188 68 19 110 12 -1 70 0
+
+PLAYMAGICBALLEFFECT 12 2126 18 100 -1 0 1 0 -2 5
+PLAYMAGICBALLEFFECT 12 2146 18 100 -1 1 1 0 53 6
+
+
+
+MAPEFFECT 混沌星界 134 175 17  1194 9 -1 100 0
+MAPEFFECT 混沌星界 34 76 17  1194 9 -1 100 0
+MAPEFFECT 混沌星界 19 196 17  1194 9 -1 100 0
+MAPEFFECT 混沌星界 73 27 17  1194 9 -1 100 0
+
+MAPEFFECT 斯卡萨巢穴 92 56 17  1194 9 -1 100 0
+
+MAPEFFECT 灰烬岛 72 76 17  1194 9 -1 100 0
+MAPEFFECT 灰烬岛 44 228 17  1194 9 -1 100 0
+MAPEFFECT 灰烬岛 206 193 17  1194 9 -1 100 0
+MAPEFFECT 灰烬岛 161 127 17  1194 9 -1 100 0
+MAPEFFECT 莱托废墟 28 91 17  1194 9 -1 100 0
+MAPEFFECT 沼泽森林 8 7 17  1194 9 -1 100 0
+MAPEFFECT 镜像世界 33 170 17  1194 9 -1 100 0
+MAPEFFECT 布拉巴斯 32 75 17  1194 9 -1 100 0
+
+MAPEFFECT 玛法古城 8 142 17  1194 9 -1 100 0
+MAPEFFECT 玛法古城 9 16 17  1194 9 -1 100 0
+MAPEFFECT 玛法古城 229 116 17  1194 9 -1 100 0
+MAPEFFECT 玛法古城 226 32 17  1194 9 -1 100 0
+MAPEFFECT 神秘之地 11 17 17  1194 9 -1 100 0
+MAPEFFECT 泰坦之城 75 122 17  1194 9 -1 100 0
+MAPEFFECT 金字塔遗迹 44 109 17  1194 9 -1 100 0
+MAPEFFECT 玛法遗迹 24 40 17  1194 9 -1 100 0
+
+MAPEFFECT 十万大山 33 95 17  1194 9 -1 100 0
+MAPEFFECT 十万大山 345 327 17  1194 9 -1 100 0
+MAPEFFECT 十万大山 308 112 17  1194 9 -1 100 0
+MAPEFFECT 三百五十里 18 71 17  1194 9 -1 100 0
+MAPEFFECT 西天 82 15 17  1194 9 -1 100 0
+MAPEFFECT 华山 180 181 17  1194 9 -1 100 0
+
+MAPEFFECT 混沌星界 504 147 17  1194 9 -1 100 0
+MAPEFFECT 混沌星界 22 762 17  1194 9 -1 100 0
+MAPEFFECT 混沌星界 578 419 17  1194 9 -1 100 0
+MAPEFFECT 混沌星界 208 86 17  1194 9 -1 100 0
+MAPEFFECT 七杀贪狼星 69 72 17  1194 9 -1 100 0
+MAPEFFECT 武曲禄存星 72 22 17  1194 9 -1 100 0
+MAPEFFECT 暗夜廉贞星 157 158 17  1194 9 -1 100 0
+MAPEFFECT 守护神 60 133 17  1194 9 -1 100 0
+
+;MAPEFFECT rongyan11  165  91  17  1194 9 -1 100 0
+;MAPEFFECT rongyan12  67   134  17  1194 9 -1 100 0
+;MAPEFFECT rongyan13  127  129  17  1194 9 -1 100 0
+;MAPEFFECT rongyan11  42   16   17  1194 9 -1 100 0
+;MAPEFFECT ronghuo21  133  126  17  1194 9 -1 100 0
+;MAPEFFECT ronghuo22  31   22   17  1194 9 -1 100 0
+;MAPEFFECT ronghuo23  107  40   17  1194 9 -1 100 0
+
+;-------序章
+MAPEFFECT 1dl5 464 70 17  1194 9 -1 100 0
+MAPEFFECT 1dl5 472 376 17  1194 9 -1 100 0
+MAPEFFECT 1dl5 261 312 17  1194 9 -1 100 0
+MAPEFFECT mfml 29 58 17  1194 9 -1 100 0
+MAPEFFECT ysbl 28 231 17  1194 9 -1 100 0
+MAPEFFECT sjdx 18 176 17  1194 9 -1 100 0
+;-------
+;MAPEFFECT ytlds 20 27 17  1194 9 -1 100 0
+;MAPEFFECT ytlds 20 220 17  1194 9 -1 100 0
+;MAPEFFECT ytlds 178 220 17  1194 9 -1 100 0
+;MAPEFFECT ytlds 178 27 17  1194 9 -1 100 0
+
+MAPEFFECT hszd 139 267 17  1194 9 -1 100 0
+MAPEFFECT hszd 289 118 17  1194 9 -1 100 0
+MAPEFFECT shmy 127 60 17  1194 9 -1 100 0
+MAPEFFECT krdm 142 226 17  1194 9 -1 100 0
+MAPEFFECT krdm 30 33 17  1194 9 -1 100 0
+MAPEFFECT nqzd 45 44 17  1194 9 -1 100 0
+MAPEFFECT krdm 216 33 17  1194 9 -1 100 0
+MAPEFFECT jlcx 100 98 17  1194 9 -1 100 0
+MAPEFFECT xwzy 72 184 17  1194 9 -1 100 0
+MAPEFFECT xwzy 22 48 17  1194 9 -1 100 0
+MAPEFFECT hgjt 13 12 17  1194 9 -1 100 0
+MAPEFFECT xwzy 216 217 17  1194 9 -1 100 0
+MAPEFFECT mhkj 128 23 17  1194 9 -1 100 0
+;-------
+;MAPEFFECT lfdl 66 77 17  1194 9 -1 100 0
+;MAPEFFECT lfdl 410 659 17  1194 9 -1 100 0
+;MAPEFFECT lfdl 647 536 17  1194 9 -1 100 0
+;MAPEFFECT lfdl 165 589 17  1194 9 -1 100 0
+MAPEFFECT sysw 357 350 17  1194 9 -1 100 0
+MAPEFFECT slyd 375 233 17  1194 9 -1 100 0
+MAPEFFECT jkxg 20 327 17  1194 9 -1 100 0
+MAPEFFECT jkxg 479 194 17  1194 9 -1 100 0
+MAPEFFECT akyd 59 284 17  1194 9 -1 100 0
+MAPEFFECT hawg 31 267 17  1194 9 -1 100 0
+MAPEFFECT hawg 264 40 17  1194 9 -1 100 0
+MAPEFFECT hsrm 159 150 17  1194 9 -1 100 0
+;-------
+;MAPEFFECT dldl 182 546 17  1194 9 -1 100 0
+MAPEFFECT slzd 190 221 17  1194 9 -1 100 0
+MAPEFFECT slzd 39 201 17  1194 9 -1 100 0
+MAPEFFECT ssjd 18 246 17  1194 9 -1 100 0
+MAPEFFECT ssjd 275 42 17  1194 9 -1 100 0
+MAPEFFECT zezy 10 15 17  1194 9 -1 100 0
+;MAPEFFECT dldl 68 55 17  1194 9 -1 100 0
+MAPEFFECT bssl 142 153 17  1194 9 -1 100 0
+MAPEFFECT bssl 26 28 17  1194 9 -1 100 0
+MAPEFFECT bxhd 63 73 17  1194 9 -1 100 0
+;MAPEFFECT dldl 755 196 17  1194 9 -1 100 0
+MAPEFFECT xdsl 60 53 17  1194 9 -1 100 0
+MAPEFFECT xdsl 709 113 17  1194 9 -1 100 0
+MAPEFFECT bhg 100 99 17  1194 9 -1 100 0
+;MAPEFFECT dldl 764 320 17  1194 9 -1 100 0
+MAPEFFECT hsd 158 96 17  1194 9 -1 100 0
+MAPEFFECT hsd 376 490 17  1194 9 -1 100 0
+;-------
+;MAPEFFECT mxdsj 255 280 17  1194 9 -1 100 0
+;MAPEFFECT mxdsj 393 237 17  1194 9 -1 100 0
+;MAPEFFECT mxdsj 643 333 17  1194 9 -1 100 0
+;MAPEFFECT mxdsj 423 540 17  1194 9 -1 100 0
+;MAPEFFECT mxdsj 102 415 17  1194 9 -1 100 0
+
+MAPEFFECT szcb 201 199 17  1194 9 -1 100 0
+MAPEFFECT jyd 215 232 17  1194 9 -1 100 0
+MAPEFFECT chd 203 187 17  1194 9 -1 100 0
+MAPEFFECT ssc 152 153 17  1194 9 -1 100 0
+MAPEFFECT ssc 17 248 17  1194 9 -1 100 0
+MAPEFFECT hmgb 309 50 17  1194 9 -1 100 0
+MAPEFFECT ssc 279 38 17  1194 9 -1 100 0
+MAPEFFECT sscjw 70 50 17  1194 9 -1 100 0
+MAPEFFECT ssc 34 44 17  1194 9 -1 100 0
+MAPEFFECT dunhuang1 32 213 17  1194 9 -1 100 0
+;-------
+;MAPEFFECT xxsj 36 60 17  1194 9 -1 100 0
+;MAPEFFECT xxsj 29 436 17  1194 9 -1 100 0
+;MAPEFFECT xxsj 210 416 17  1194 9 -1 100 0
+;MAPEFFECT xxsj 373 262 17  1194 9 -1 100 0
+MAPEFFECT jhsm 283 276 17  1194 9 -1 100 0
+MAPEFFECT jhsm 239 35 17  1194 9 -1 100 0
+MAPEFFECT syt 181 184 17  1194 9 -1 100 0
+MAPEFFECT syt 77 76 17  1194 9 -1 100 0
+MAPEFFECT T1 46 50 17  1194 9 -1 100 0
+MAPEFFECT pmf 167 181 17  1194 9 -1 100 0
+MAPEFFECT pmf 55 63 17  1194 9 -1 100 0
+MAPEFFECT pmg 50 348 17  1194 9 -1 100 0
+MAPEFFECT fmb 213 229 17  1194 9 -1 100 0
+MAPEFFECT fmb 37 30 17  1194 9 -1 100 0
+MAPEFFECT ymzl 36 33 17  1194 9 -1 100 0
+;MAPEFFECT T10 39 16 17  1194 9 -1 100 0
+MAPEFFECT 克洛诺斯海岛 188 657  17  1194 9 -1 100 0
+MAPEFFECT 克洛诺斯海岛 341 11 17  1194 9 -1 100 0
+MAPEFFECT 西海岸 287 545 17  1194 9 -1 100 0
+;MAPEFFECT 西海岸 638 65 17  1194 9 -1 100 0
+MAPEFFECT 天空之城  93 98 17  1194 9 -1 100 0
+MAPEFFECT 城主宫殿  50 58 17  1194 9 -1 100 0
+MAPEFFECT 天空之城  154 161 17  1194 9 -1 100 0
+MAPEFFECT 石巨人塔  137 228 17  1194 9 -1 100 0
+MAPEFFECT 天空之城  299 108 17  1194 9 -1 100 0
+MAPEFFECT 人偶玄关  25 127 17  1194 9 -1 100 0
+MAPEFFECT 天空之城  288 307 17  1194 9 -1 100 0
+MAPEFFECT 黑暗玄廊 38 138 17  1194 9 -1 100 0
+MAPEFFECT 人偶玄关 132 122 17  1194 9 -1 100 0
+MAPEFFECT 黑暗玄廊  28 65 17  1194 9 -1 100 0
+MAPEFFECT 石巨人塔  122 132 17  1194 9 -1 100 0
+MAPEFFECT 龙人之塔  52 50 17  1194 9 -1 100 0
+;MAPEFFECT 西海岸 694 678 17  1194 9 -1 100 0
+;MAPEFFECT 赫顿玛尔区域  28 91 17  1194 9 -1 100 0
+;MAPEFFECT 西海岸  652 380 17  1194 9 -1 100 0
+MAPEFFECT 神殿外围  761 725 17  1194 9 -1 100 0
+MAPEFFECT 神殿外围   60 53 17  1194 9 -1 100 0
+MAPEFFECT 极昼  99 107 17  1194 9 -1 100 0
+MAPEFFECT 极昼  10 15 17  1194 9 -1 100 0
+MAPEFFECT 炼狱  108 42 17  1194 9 -1 100 0
+MAPEFFECT 神殿外围   727 131 17  1194 9 -1 100 0
+MAPEFFECT 天维禁地 48 42 17  1194 9 -1 100 0
+MAPEFFECT 神殿外围   524 269 17  1194 9 -1 100 0
+MAPEFFECT 第二脊椎 181 29 17  1194 9 -1 100 0
+MAPEFFECT 第二脊椎 113 111 17  1194 9 -1 100 0
+MAPEFFECT 第一脊椎 23 22 17  1194 9 -1 100 0
+MAPEFFECT 神殿外围   270 537 17  1194 9 -1 100 0
+MAPEFFECT 第一脊椎 36 226 17  1194 9 -1 100 0
+;MAPEFFECT 西海岸 251 34 17  1194 9 -1 100 0
+MAPEFFECT 阿法利亚营地 27 46 17  1194 9 -1 100 0
+MAPEFFECT 暗黑城入口  49 136 17  1194 9 -1 100 0
+MAPEFFECT 暗黑城入口  114 27 17  1194 9 -1 100 0
+MAPEFFECT 暗黑城  14 96 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹远古 174 200 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹远古 21 190 17  1194 9 -1 100 0
+MAPEFFECT 格兰之森  39 201 17  1194 9 -1 100 0
+MAPEFFECT 暗黑废墟  263 267 17  1194 9 -1 100 0
+MAPEFFECT 格兰之森  42 47 17  1194 9 -1 100 0
+MAPEFFECT 雷鸣殿   124 122 17  1194 9 -1 100 0
+MAPEFFECT 格兰之森  219 123 17  1194 9 -1 100 0
+MAPEFFECT 猛毒废墟 45 105 17  1194 9 -1 100 0
+MAPEFFECT 格兰之森  180 14 17  1194 9 -1 100 0
+MAPEFFECT 格拉卡  142 129 17  1194 9 -1 100 0
+MAPEFFECT 格兰之森  188 224 17  1194 9 -1 100 0
+MAPEFFECT 幽暗密林  282 22 17  1194 9 -1 100 0
+MAPEFFECT 格拉卡  39 27 17  1194 9 -1 100 0
+MAPEFFECT 烈焰格拉卡 57 54 17  1194 9 -1 100 0
+MAPEFFECT 幽暗密林 26 271 17  1194 9 -1 100 0
+MAPEFFECT 幽暗密林深处  106 25 17  1194 9 -1 100 0
+;MAPEFFECT 王之遗迹远古  21 190 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹风  13 18 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹远古 198 382 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹炎  13 18 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹远古 381 214 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹雷  13 18 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹远古  206 22 17  1194 9 -1 100 0
+MAPEFFECT 王之遗迹冰  13 18 17  1194 9 -1 100 0
+
+MAPEFFECT 海上列车  226 250   17  1194 9 -1 100 0
+MAPEFFECT 海上列车  40  58   17  1194 9 -1 100 0
+MAPEFFECT 海贼团部 9  231 17  1194 9 -1 100 0
+MAPEFFECT 雾都赫伊斯  239 35  17  1194 9 -1 100 0
+MAPEFFECT  阿登高地  25 75 17  1194 9 -1 100 0
+;-------
+;MAPEFFECT 西海岸  111 117 17  1194 9 -1 100 0
+MAPEFFECT 万年雪山  283 276 17  1194 9 -1 100 0
+MAPEFFECT 万年雪山  67 39 17  1194 9 -1 100 0
+MAPEFFECT 冰心少年  113 65 17  1194 9 -1 100 0
+MAPEFFECT 冰心少年  63 71 17  1194 9 -1 100 0
+MAPEFFECT 斯卡萨巢穴  30 84 17  1194 9 -1 100 0
+MAPEFFECT 万年雪山  239 35 17  1194 9 -1 100 0
+MAPEFFECT 白色废墟  33 120 17  1194 9 -1 100 0
+MAPEFFECT 白色废墟  110 31 17  1194 9 -1 100 0
+MAPEFFECT 利库天井  13 41 17  1194 9 -1 100 0
+MAPEFFECT 万年雪山  66 232 17  1194 9 -1 100 0
+MAPEFFECT 山脊  15 329 17  1194 9 -1 100 0
+MAPEFFECT 山脊  486 185 17  1194 9 -1 100 0
+MAPEFFECT 布万加修炼场  25 75 17  1194 9 -1 100 0
+
+;-------
+
+
+
+
+;MAPEFFECT 克洛诺斯海岛  20 659 17  1194 9 -1 100 0
+;MAPEFFECT 神之都·根特 36 59 17  1194 9 -1 100 0
+
+MAPEFFECT 神之都·根特 372 261 17  1194 9 -1 100 0
+MAPEFFECT 安特贝鲁峡谷  12 17  17  1194 9 -1 100 0
+
+MAPEFFECT 神之都·根特  52 322 17  1194 9 -1 100 0
+MAPEFFECT 根特南门  21 179  17  1194 9 -1 100 0
+
+MAPEFFECT 根特南门  165 35 17  1194 9 -1 100 0
+MAPEFFECT 夜间袭击地 128 22 17  1194 9 -1 100 0
+
+MAPEFFECT 神之都·根特   230 88 17  1194 9 -1 100 0
+MAPEFFECT 根特北门 90 88 17  1194 9 -1 100 0
+
+MAPEFFECT 根特北门  13 12 17  1194 9 -1 100 0
+MAPEFFECT 追击歼灭地 45 44 17  1194 9 -1 100 0
+
+MAPEFFECT 神之都·根特  115 36 17  1194 9 -1 100 0
+MAPEFFECT 根特东门 71 85 17  1194 9 -1 100 0
+
+MAPEFFECT 根特东门 21 25 17  1194 9 -1 100 0
+MAPEFFECT 卡勒特补给地  158 160 17  1194 9 -1 100 0
+
+MAPEFFECT 神之都·根特  95 437 17  1194 9 -1 100 0
+MAPEFFECT 根特外围 254 244 17  1194 9 -1 100 0
+
+MAPEFFECT 根特外围 51 35 17  1194 9 -1 100 0
+MAPEFFECT 根特防御地 76 139 17  1194 9 -1 100 0
+;---------------------------------------------------------------------------------------------------------------------------------
+
+MAPEFFECT 海上列车  40 58   17  1194 9 -1 100 0
+MAPEFFECT 海贼团部   9 231 17  1194 9 -1 100 0
+
+MAPEFFECT 雾都赫伊斯  239 35  17  1194 9 -1 100 0
+MAPEFFECT 阿登高地     25 75 17  1194 9 -1 100 0
+
+
+MAPEFFECT 鲁夫特悬空海港 239 293 17  1194 9 -1 100 0
+MAPEFFECT 鲁夫特悬空海港  30 222 17  1194 9 -1 100 0
+MAPEFFECT 鲁夫特悬空海港  35  29 17  1194 9 -1 100 0
+
+
+
+MAPEFFECT 踏天路 10 27 17  1194 9 -1 100 0
+MAPEFFECT 踏天桥 11 10 17  1194 9 -1 100 0
+MAPEFFECT 踏天桥 89 14 17  1194 9 -1 100 0
+
+
+MAPEFFECT 血肉传承 23 18 17  1194 9 -1 100 0
+MAPEFFECT 骨骼传承 42  9 17  1194 9 -1 100 0
+MAPEFFECT 骨骼传承 98  9 17  1194 9 -1 100 0
+
+MAPEFFECT 隐藏空间 72 25 17  1194 9 -1 100 0
+
+MAPEFFECT 仙墟      15  87  17  1194 9 -1 100 0
+MAPEFFECT 仙墟      87  94  17  1194 9 -1 100 0
+MAPEFFECT 祭祀之地  49  82  17  1194 9 -1 100 0
+MAPEFFECT 丹界一脉  43  82  17  1194 9 -1 100 0
+MAPEFFECT 三十三天   6  68  17  1194 9 -1 100 0
+MAPEFFECT 三十三天  58  15  17  1194 9 -1 100 0
+MAPEFFECT 第七九天  60  14  17  1194 9 -1 100 0
+MAPEFFECT 第九天    60  14  17  1194 9 -1 100 0
+MAPEFFECT 第九山海 117  72  17  1194 9 -1 100 0
+MAPEFFECT 东胜      49  11  17  1194 9 -1 100 0
+MAPEFFECT 第九山海  66  25  17  1194 9 -1 100 0
+MAPEFFECT 南天       6  97  17  1194 9 -1 100 0
+MAPEFFECT 第九山海  67  123 17  1194 9 -1 100 0
+MAPEFFECT 西牛      77  9   17  1194 9 -1 100 0
+MAPEFFECT 如风界    84  11  17  1194 9 -1 100 0
+MAPEFFECT DT_1      19 118  17  1194 9 -1 100 0
+MAPEFFECT 如风界    16 15  17  1194 9 -1 100 0
+MAPEFFECT 仙古道场  12 68   17  1194 9 -1 100 0
+MAPEFFECT DT_2      9  159  17  1194 9 -1 100 0
+MAPEFFECT 彼岸      16  51  17  1194 9 -1 100 0
+MAPEFFECT 封妖城    140  93  43  926  1 -1 100 0
+
+MAPEFFECT 棋盘   43 23  17  1194 9 -1 100 0
+MAPEFFECT 棋盘1   43 23  17  1194 9 -1 100 0
+
+MAPEFFECT 棋盘1   13 47  17  1194 9 -1 100 0
+MAPEFFECT 棋盘2   13 47  17  1194 9 -1 100 0
+
+MAPEFFECT 海化桑田   13 47  17  1194 9 -1 100 0
+
+MAPEFFECT 超脱地图   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境1   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境2   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境3   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境4   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境5   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境6   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境7   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境8   54 97  17  1194 9 -1 100 0
+MAPEFFECT 超脱密境9   54 97  17  1194 9 -1 100 0
+
+
+
+
+#if
+NOT CHECKTEXTLIST ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt 已创建目录
+#act
+ForceDirectories ..\..\..\..\跨区文件夹\<$STR(A0)>
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt 已创建目录 0
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日0区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日1区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日2区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日3区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日4区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日5区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日6区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日7区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日8区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\合区统计.txt
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日0区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日1区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日2区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日3区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日4区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日5区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日6区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日7区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日8区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\合区统计.txt 0 0
+
+
+
+
+[@Login]
+
+;=================红蓝行会===============
+#IF
+CHECKLEVELEX > 0
+#ACT
+VAR Integer HUMAN 活跃点数
+;LOADVAR HUMAN 活跃点数 ..\QuestDiary\临时数据\攻沙数据.txt
+VAR Integer HUMAN 攻沙杀人
+;LOADVAR HUMAN 攻沙杀人 ..\QuestDiary\临时数据\攻沙数据.txt
+VAR Integer HUMAN 攻沙死亡
+;LOADVAR HUMAN 攻沙死亡 ..\QuestDiary\临时数据\攻沙数据.txt
+
+;====================================
+
+
+;#or
+;not ISONMAP 封妖城
+;not ISONMAP xsdt
+;not ISONMAP SRDT
+;#ACT
+;movr N$坐标x 131 150
+;movr N$坐标y 86 100
+;MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+#IF
+not isdummy
+CHECKLEVELEX > 0
+#ACT
+
+#CALL [\密保脚本\密保功能.txt] @登录检测
+
+
+
+#IF
+HAVEGUILD
+NOT CHECKGUILDLIST ..\QuestDiary\寒流新假人\行会列表.txt
+#ACT
+ADDGUILDLIST ..\QuestDiary\寒流新假人\行会列表.txt
+#IF
+ISDUMMY
+#ACT
+VAR string HUMAN 假人是否为新人
+;LOADVAR HUMAN 假人是否为新人 ..\QuestDiary\寒流新假人\假人个人信息保存\新人变量\新人变量.txt
+mov S$假人个人信息保存路径 ..\QuestDiary\寒流新假人\假人个人信息保存\<$USERNAME>.txt
+CreateFile <$str(S$假人个人信息保存路径)>
+#CALL [\寒流新假人\假人登录脚本.txt] @假人登录设置
+SETONTIMER 101 1
+PGStartAutoPickItem 1
+PGStartAutoPickItem 1
+
+#IF
+#ACT
+VAR Integer HUMAN 虚空·行者
+;LOADVAR HUMAN 虚空·行者 ..\QuestDiary\个人任务\虚空·行者.txt
+
+VAR Integer HUMAN 异兽·玄蜂
+;LOADVAR HUMAN 异兽·玄蜂 ..\QuestDiary\个人任务\异兽·玄蜂.txt
+
+VAR Integer HUMAN 亡剑林
+;LOADVAR HUMAN 亡剑林 ..\QuestDiary\个人任务\亡剑林.txt
+
+VAR Integer HUMAN 虚空·先知
+;LOADVAR HUMAN 虚空·先知 ..\QuestDiary\个人任务\虚空·先知.txt
+
+VAR Integer HUMAN 异兽·罔象
+;LOADVAR HUMAN 异兽·罔象 ..\QuestDiary\个人任务\异兽·罔象.txt
+
+VAR Integer HUMAN 码云
+;LOADVAR HUMAN 码云 ..\QuestDiary\个人任务\码云.txt
+
+VAR Integer HUMAN 虚空·遁地兽
+;LOADVAR HUMAN 虚空·遁地兽 ..\QuestDiary\个人任务\虚空·遁地兽.txt
+
+VAR Integer HUMAN 异兽·魍魉
+;LOADVAR HUMAN 异兽·魍魉 ..\QuestDiary\个人任务\异兽·魍魉.txt
+
+VAR Integer HUMAN 麻花藤
+;LOADVAR HUMAN 麻花藤 ..\QuestDiary\个人任务\麻花藤.txt
+
+VAR Integer HUMAN ★★★云顶之奕★★★
+;LOADVAR HUMAN ★★★云顶之奕★★★ ..\QuestDiary\个人任务\★★★云顶之奕★★★.txt
+
+
+VAR Integer HUMAN 魔王★
+;LOADVAR HUMAN 魔王★ ..\QuestDiary\个人任务\魔王★.txt
+
+VAR Integer HUMAN 魔王★★
+;LOADVAR HUMAN 魔王★★ ..\QuestDiary\个人任务\魔王★★.txt
+
+VAR Integer HUMAN 魔王★★★
+;LOADVAR HUMAN 魔王★★★ ..\QuestDiary\个人任务\魔王★★★.txt
+
+VAR Integer HUMAN 魔王★★★★
+;LOADVAR HUMAN 魔王★★★★ ..\QuestDiary\个人任务\魔王★★★★.txt
+
+
+
+VAR Integer HUMAN 普通福利
+;LOADVAR HUMAN 普通福利 ..\QuestDiary\每日福利.txt
+VAR Integer HUMAN 会员福利
+;LOADVAR HUMAN 会员福利 ..\QuestDiary\每日福利.txt
+VAR Integer HUMAN 土豪福利
+;LOADVAR HUMAN 土豪福利 ..\QuestDiary\每日福利.txt
+
+
+#IF
+#ACT
+SETONTIMER 101 1
+PGStartAutoPickItem 1
+PGStartAutoPickItem 1
+
+
+
+#if
+ISNEWHUMAN
+#act
+#CALL [\大熊功能\新人登陆.txt] @登陆设置
+close
+
+
+
+
+#IF
+Check [101] 1
+#ACT
+SETONTIMER 36 1
+
+
+
+#if
+#act
+SETSHOWITEMMSG 0
+SETONTIMER 1 1
+SETONTIMER 3 3
+SETONTIMER 78 1
+SETONTIMER 4 20
+SETONTIMER 51 60
+SETONTIMER 100 1
+SETONTIMER 119 1
+SETONTIMER 116 1
+HAIRSTYLE 999
+
+
+
+;xin
+ADDBUTTON 13 16 392 393 394 0 0 0 -1
+;攻略
+ADDBUTTON 13 2 353 354 355 90 0 0 -1
+;游戏商城
+ADDBUTTON 13 3 356 357 358 180 0 0 -1
+;活动大厅
+ADDBUTTON 13 4 359 360 361 270 0 0 -1
+;狂暴之力
+ADDBUTTON 13 5 362 363 364 360 0 0 -1
+;奖励
+ADDBUTTON 13 6 365 366 367 450 0 0 -1
+;神器匠炉
+ADDBUTTON 13 7 368 369 370 540 0 0 -1
+;强化转移
+ADDBUTTON 13 15 683 684 685 630 0 0 -1
+;掉落界面
+ADDBUTTON 13 19 374 375 376 720 0 0 -1
+
+
+
+SENDTOPCHATBOARDMSG 1 254 0 65535 《百团大战》：{（一场大战从这里开始·独家专属）|154:0:0}{·|253:0:0}{·官方Q交流群：198605888·|251:0:0}{无门槛|218:0:0} 1
+SENDTOPCHATBOARDMSG 1 254 0 65535  装备靠打·爆率全开·无任何收费地图·散人玩爽·土豪嗨到爆·神秘专属·无限激情，合区清理200级以下小号 1
+
+
+
+
+
+
+VAR Integer HUMAN 职位捐款数量
+;LOADVAR HUMAN 职位捐款数量 ..\QuestDiary\大熊数据\捐款数据.txt
+
+VAR Integer HUMAN 职位捐款数量1
+;LOADVAR HUMAN 职位捐款数量1 ..\QuestDiary\大熊数据\灵符捐款数据.txt
+
+#CALL [\大熊功能\职位计算.txt] @开始计算
+#CALL [\BUFF\暴击伤害.txt] @计算
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+#CALL [\BUFF\属性加载.txt] @属性加载
+#CALL [\杀人游戏\杀人游戏相关触发.txt] @杀人游戏QM触发
+#CALL [\挑战擂台配置\挑战擂台脚本.txt] @挑战擂台脚本QM
+#CALL [\挑战擂台配置\挑战擂台脚本2.txt] @挑战擂台脚本QM2
+#CALL [\挑战擂台配置\挑战擂台脚本3.txt] @挑战擂台脚本QM3
+#CALL [\挑战擂台配置\挑战擂台脚本4.txt] @挑战擂台脚本QM4
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+
+
+goto @捐献等级刷新
+
+close
+#if
+large g496 0
+#act
+SendCenterMsg 180 249 离正式开区还有%d.等待区开启杀人游戏活动，杀人前三名获得丰厚奖励和属性！ 0 <$str(g496)>
+SendCenterMsg 180 249 离正式开区还有%d.等待区开启杀人游戏活动，杀人前三名获得丰厚奖励和属性！ 0 <$str(g496)>
+SendCenterMsg 180 249 离正式开区还有%d.等待区开启杀人游戏活动，杀人前三名获得丰厚奖励和属性！ 0 <$str(g496)>
+
+#if
+checkitemw 神秘人[斗笠]
+#act
+AutoTakeOffItem 13
+takew 神秘人[斗笠]
+take 神秘人[斗笠] 46
+
+
+#if
+checkitemw 七星剑仙的剑气[活动]
+#act
+AutoTakeOffItem 1
+takew 七星剑仙的剑气[活动]
+take 七星剑仙的剑气[活动] 46
+
+#if
+checkitemw 阳光战神的威严[活动]
+#act
+AutoTakeOffItem 0
+takew 阳光战神的威严[活动]
+take 阳光战神的威严[活动] 46
+
+#if
+#act
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+
+
+
+;#if
+;large S$合区信息 0
+;NOT CHECKTEXTLIST ..\QuestDiary\大熊数据\捐款数据.txt [<$USERNAME>]
+;#ACT
+;DEPRIVETITLE 沙城捐献
+
+
+
+
+
+
+#if
+large S$合区信息 0
+equal G301 0
+#ACT
+MOV G300 0
+MOV G301 1
+
+#if
+large S$合区信息 1
+equal G301 1
+#ACT
+MOV G300 0
+MOV G301 2
+
+#if
+large S$合区信息 2
+equal G301 2
+#ACT
+MOV G300 0
+MOV G301 3
+
+#if
+large S$合区信息 3
+equal G301 3
+#ACT
+MOV G300 0
+MOV G301 4
+
+#if
+large S$合区信息 4
+equal G301 4
+#ACT
+MOV G300 0
+MOV G301 5
+
+
+
+#IF
+not CHECKSKILL 基本剑术
+#ACT
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+
+#IF
+CHECK [12] 1
+#ACT
+SETONTIMER 15 5
+
+
+#if
+check [271] 1
+#act
+MESSAGEBOX 账号已回收，无法继续使用
+KICK
+break
+
+
+#if
+#act
+mov N$权利の剑 120
+mov N$【沃玛号角】CD 120
+mov N$咒念 60
+
+
+#IF
+#ACT
+DelTextList ..\..\..\..\跨区文件夹\玩家机器码.txt <$SERVERNAME>:<$USERNAME>:<$MACHINEID>
+AddTextList ..\..\..\..\跨区文件夹\玩家机器码.txt <$SERVERNAME>:<$USERNAME>:<$MACHINEID>
+
+DelTextList ..\..\..\..\跨区文件夹\玩家IP.txt <$SERVERNAME>:<$USERNAME>:<$IPADDR>
+AddTextList ..\..\..\..\跨区文件夹\玩家IP.txt <$SERVERNAME>:<$USERNAME>:<$IPADDR>
+
+
+
+#IF
+CheckTextList ..\..\..\..\跨区文件夹\禁止登陆的IP.txt <$IPADDR>
+#ACT
+KICK
+MessageBox 提示：该IP已被停封！若有疑问请联系客服！
+BREAK
+
+#IF
+CheckTextList ..\..\..\..\跨区文件夹\禁止登陆的机器码.txt <$MACHINEID>
+#ACT
+KICK
+MessageBox 提示：该机器码已被停封！若有疑问请联系客服！
+BREAK
+
+#IF
+CheckTextList ..\..\..\..\跨区文件夹\开挂机器码.txt <$MACHINEID>
+#ACT
+KICK
+MessageBox 提示：使用脱机，号已被封！
+BREAK
+
+#IF
+CheckTextList ..\..\..\..\跨区文件夹\开挂IP.txt <$IPADDR>
+#ACT
+KICK
+MessageBox 提示：使用脱机，号已被封！
+BREAK
+
+
+
+
+
+
+#if
+#act
+GOTO @新手上线禁言
+
+
+
+[@新手上线禁言]
+#IF
+CHECKLEVELEX < 100
+#ACT
+Gmexecute 禁言 Self 99999
+SENDMSG 6 [提示]：您的等级低于100级，所以被禁言了，快去升级吧!
+BREAK
+#IF
+checklevelex > 99
+#ACT
+GMEXECUTE 解除禁言722 SELF
+BREAK
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+
+
+
+
+
+[@ontimer1]
+
+
+#if
+not ISDUMMY
+ISONMAP 封妖城
+equal T1
+#act
+movr N$坐标x 29 35
+movr N$坐标y 35 44
+MAPMOVE xsdt <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+#IF
+NOT Checktextlist ..\..\..\..\【攻城限制地图】\攻城不传地图.txt <$MAP>
+CHECKUNDERWAR 沙巴克
+#Act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+MESSAGEBOX  攻城期间不允许在非攻城区域地图
+
+
+#IF
+ISONMAP 318级
+NOT CHECKLEVELEX = 318
+#ACT
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+MESSAGEBOX  你已经不是最高等级了,免费送你回城
+
+
+#if
+CHECKGAMEGOLD > 2000000000
+#act
+GAMEGOLD - 2000000000
+give 5亿元宝蛋 4
+
+
+
+
+
+
+#IF
+ISONMAP 个人捐献第一地图
+not equal A2 <$USERNAME>
+#ACT
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+MESSAGEBOX  你已经不是个人捐献排名第一,免费送你回城
+
+
+#if
+checkitem 装备强化石 1
+#act
+take 装备强化石 1
+INC U44 1
+
+
+
+#IF
+CHECKITEMW 生命之玺
+#ACT
+PGAddHpPer + 1
+PGAddmpPer + 1
+#IF
+CHECKITEMW 神力玉玺
+#ACT
+PGAddHpPer + 2
+PGAddmpPer + 2
+
+#IF
+CHECKITEMW 万灵血玺
+#ACT
+PGAddHpPer + 3
+PGAddmpPer + 3
+
+
+
+
+#if
+large g496 0
+not ISONMAP 二级
+not ISONMAP xsdt
+not ISONMAP srdt
+#act
+movr N$坐标x 29 35
+movr N$坐标y 35 44
+MAPMOVE xsdt <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+
+#IF
+LARGE N$限时爆率 0
+#ACT
+DEC N$限时爆率 1
+#IF
+CHECK [19] 1
+EQUAL N$限时爆率 1
+#ACT
+SET [19] 0
+#CALL [\大熊功能\职位计算.txt] @开始计算
+#IF
+CHECK [20] 1
+EQUAL N$限时爆率 1
+#ACT
+SET [20] 0
+#CALL [\大熊功能\职位计算.txt] @开始计算
+#IF
+CHECK [21] 1
+EQUAL N$限时爆率 1
+#ACT
+SET [21] 0
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+
+#if
+CHECKITEM 1w元宝 1
+#ACT
+GAMEGOLD + 10000
+take 1w元宝 1
+
+
+#IF
+#ACT
+INC N$战神铠甲CD 1
+
+
+
+#if
+;equal N$加速CD 10
+#act
+dec N$加速CD 1
+
+
+#IF
+SMALL N$复活CD 300
+#ACT
+INC N$复活CD 1
+
+
+#IF
+SMALL N$连续复活CD 300
+#ACT
+inc N$连续复活CD 1
+
+
+#if
+NOT ISDUMMY
+CHECKLEVELEX < 150
+not ISONMAP srdt
+#act
+CHANGEEXP + 500000
+
+#if
+ISDUMMY
+CHECKLEVELEX < 200
+#act
+CHANGEEXP + 500000
+
+
+
+#IF
+isonmap 封妖城
+INSAFEZONE
+PGCheckhpPer < 99
+#act
+PGAddHpPer + 20
+PLAYEFFECT 15 370 10 1 80
+SENDMSG 6 华佗再世BUFF触发，安全区每秒增加20%血量。
+
+
+#IF
+isonmap 封妖城
+INSAFEZONE
+PGCheckMpPer < 99
+#act
+PGAddmpPer + 20
+PLAYEFFECT 15 370 10 1 80
+SENDMSG 6 华佗再世BUFF触发，安全区每秒增加20%血量。
+
+
+
+
+
+#if
+#act
+ADDBUTTON 13 10 377 377 377 0 400 0 　　　　　　<$STR(N$爆率显示)>%
+ADDBUTTON 13 11 378 378 378 0 420 0 　　　　　　<$STR(N$倍攻加成)>%
+ADDBUTTON 13  9 379 379 379 0 440 0 　　　　　　<$STR(N$百分比伤害)>%
+ADDBUTTON 13 12 381 381 381 0 460 0 　　　　　　<$GAMEPOINT>
+ADDBUTTON 13 18 380 380 380 0 480 0 　　　　　　<$GOLDCOUNT>
+
+#if
+;Checkitem 杀人书
+#act
+ADDBUTTON 6 20 999 999 999 0 200 0 　当前杀人书层数:<$STR(u31)>
+
+
+
+
+
+#If
+#act
+SETRANKLEVELNAME %s\-=≡☆百团大战☆≡=-\『转生:<$RELEVEL>转』\『渡劫:<$STR(U2)>重』\『斩杀:<$STR(U35)>人』\『牺牲:<$STR(U36)>次』\『杀人书:<$STR(U31)>层』\
+
+
+
+
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+
+
+
+
+;#if
+;CHECKUNDERWAR 沙巴克
+;CheckInWarArea
+;NOT CHECKTITLE 沙城捐献
+;#ACT
+;mapmove YD 195 62
+;MESSAGEBOX 你并没有捐献过，攻城期间无法进入攻城区域！！
+
+
+
+
+
+;#if
+;ISONMAP 万年雪山
+;CHECKRENEWLEVEL < 19
+;#act
+;map 西海岸
+;MESSAGEBOX [提示]:你的转生未达到19转，无法在此地逗留!!!
+;break
+
+
+
+
+
+
+#if
+ISONMAP 封妖城
+#act
+CLEARDELAYGOTO 1
+
+
+
+
+#if
+large N$权利の剑 0
+#act
+dec N$权利の剑 1
+
+#if
+large N$“魔罗伞” 0
+#act
+dec N$“魔罗伞” 1
+
+
+
+#if
+large N$方父筑桥 0
+#act
+dec N$方父筑桥 1
+
+
+
+#if
+large 终有良人相伴 0
+#act
+dec N$终有良人相伴 1
+
+
+
+#if
+large N$咒念 0
+#act
+dec N$咒念 1
+
+#if
+large N$十字斩刀斗 0
+#act
+dec N$十字斩刀斗 1
+
+#if
+large N$十字斩刀者 0
+#act
+dec N$十字斩刀者 1
+
+
+
+
+#if
+large N$赤炎天照 0
+#act
+dec N$赤炎天照 1
+
+
+
+#if
+large N$终结 0
+#act
+dec N$终结 1
+
+
+#if
+large N$风蚀之殇 0
+#act
+dec N$风蚀之殇 1
+
+
+
+#if
+large N$风蚀之殇 0
+#act
+dec N$风蚀之殇 1
+
+#if
+large N$吞天魔剑 0
+#act
+dec N$吞天魔剑 1
+
+#if
+large N$九曲天刀 0
+#act
+dec N$九曲天刀 1
+
+
+
+
+
+#if
+large N$冥火钢牙 0
+#act
+dec N$冥火钢牙 1
+
+#if
+large U40 0
+#act
+dec u40 1
+
+
+
+#if
+large U41 0
+#act
+dec u41 1
+
+#if
+CHECKUSEITEM 12
+large U20 0
+#act
+dec u20 1
+MOV S$复活 冷却中:<$str(U20)>秒
+ADDBUTTON 13 13 391 391 391 0 500 0 　　　　　　　　<$STR(S$复活)>
+
+#if
+CHECKUSEITEM 12
+equal U20 0
+#act
+MOV S$复活 可复活
+ADDBUTTON 13 13 391 391 391 0 500 0 　　　　　　<$STR(S$复活)>
+
+#if
+NOT CHECKUSEITEM 12
+#act
+ADDBUTTON 13 13 391 391 391 0 500 0 　　　　　　无复活
+
+
+
+
+#if
+large n$战斗中 0
+#act
+dec n$战斗中 1
+
+#if
+large N$电锯 0
+#act
+dec N$电锯 1
+
+#if
+large n$末日使者 0
+#act
+dec n$末日使者 1
+
+#if
+large N$被攻击 0
+#act
+dec N$被攻击 1
+
+#if
+large N$冥界衣服CD 0
+#act
+dec N$冥界衣服CD 1
+
+#if
+large N$落雷CD 0
+#act
+dec N$落雷CD 1
+
+
+#if
+large N$【沃玛号角】CD 0
+#act
+dec N$【沃玛号角】CD 1
+
+
+#if
+SMALL <$HP> <$MAXHP>
+LARGE <$HP> 0
+large N$【沃玛号角】 0
+#act
+dec N$【沃玛号角】 1
+PGAddHpPer + 5
+
+
+
+
+#if
+equal n$战斗中 0
+#act
+ADDBUTTON 6 14 219 219 219 3 170 0 　脱战中
+
+
+
+
+
+#if
+SMALL <$HP> <$MAXHP>
+LARGE <$HP> 0
+equal N$被攻击 0
+CheckTextList ..\QuestDiary\BUFF\回血护符.txt <$BUJUK>
+#ACT
+GetStringPos ..\QuestDiary\BUFF\回血护符.txt <$BUJUK>
+INC N0 1
+GetListString ..\QuestDiary\BUFF\回血护符.txt <$STR(N0)> S$特殊恢复
+humanhp + <$STR(S$特殊恢复)>
+humanMp + <$STR(S$特殊恢复)>
+
+
+
+#if
+SMALL <$HP> <$MAXHP>
+LARGE <$HP> 0
+equal N$被攻击 0
+equal n$战斗中 0
+checkitemw 治疗宝珠★ 1
+#ACT
+humanhp + 3000
+humanMp + 3000
+
+
+#if
+SMALL <$HP> <$MAXHP>
+LARGE <$HP> 0
+equal N$被攻击 0
+equal n$战斗中 0
+large N$热狗肠 1
+#act
+humanhp + 666
+humanMp + 666
+DEC N$热狗肠 1
+
+
+#if
+large N$水晶肠 1
+#act
+dec N$水晶肠 1
+
+#if
+large N$蒜香肠 1
+#act
+dec N$蒜香肠 1
+
+
+#if
+large N$爆裂肠 1
+#act
+dec N$爆裂肠 1
+
+
+
+
+#if
+PGCheckhpPer < 30
+checkitemw 争战铠甲★ 1
+SMALL <$HP> <$MAXHP>
+LARGE <$HP> 0
+equal N$被攻击 0
+equal N$冥界衣服CD 0
+#ACT
+MOV N$冥界衣服CD 60
+PGAddHpPer + 20
+SendCenterMsg 251 14 《争战铠甲★》触发,生命值恢复20%,冷却60秒. 0 10
+
+
+
+
+
+
+
+
+
+#if
+CHECKTEXTLIST ..\QuestDiary\装备检测\手镯检测.txt <$ARMRING_L>
+#act
+TakeEx 5
+ChangeModeEx 10 1
+messagebox 【系统提示】:此物品禁止戴在手镯位置
+break
+
+
+#if
+CHECKTEXTLIST ..\QuestDiary\装备检测\手镯检测.txt <$ARMRING_R>
+#act
+TakeEx 6
+ChangeModeEx 10 1
+messagebox 【系统提示】:此物品禁止戴在手镯位置
+break
+
+
+
+[@ontimer9]
+#if
+CHECKLEVELEX < 203
+equal a120 <$username>
+#act
+setofftimer 9
+SENDMSG 6 您是捐献第一名，需要达到在人物等级NPC处，使用云顶结晶提升到203才能使用经验卷.!!
+break
+#if
+CHECKLEVELEX < 202
+equal a121 <$username>
+#act
+setofftimer 9
+SENDMSG 6 您是捐献第二名，需要达到在人物等级NPC处，使用云顶结晶提升到202才能使用经验卷.!!
+break
+#if
+CHECKLEVELEX < 201
+equal a120 <$username>
+#act
+setofftimer 9
+SENDMSG 6 您是捐献第三名，需要达到在人物等级NPC处，使用云顶结晶提升到201才能使用经验卷.!!
+break
+
+#if
+CHECKLEVELEX < 200
+#act
+setofftimer 9
+break
+
+#if
+small u1 1
+#act
+SENDMSG 6 你的觉醒等级上限为0.!!
+break
+
+#if
+check [14] 1
+CHECKLEVELEX < 303
+checkitem 经验卷(1%) 1
+#act
+take 经验卷(1%) 1
+MOV N$经验卷轴 <$MAXEXP>
+DIV N$经验卷轴 100
+CHANGEEXP + <$str(N$经验卷轴)>
+SENDMSG 6 使用经验卷轴,增加1%的经验.!!
+SENDMSG 6 你的觉醒等级上限还可以为你提升<$str(u1)>级.!!
+
+#if
+check [14] 1
+CHECKLEVELEX < 303
+checkitem 经验卷(2%) 1
+#act
+take 经验卷(2%) 1
+MOV N$经验卷轴 <$MAXEXP>
+DIV N$经验卷轴 100
+mul N$经验卷轴 2
+CHANGEEXP + <$str(N$经验卷轴)>
+SENDMSG 6 使用经验卷轴,增加2%的经验.!!
+SENDMSG 6 你的觉醒等级上限还可以为你提升<$str(u1)>级.!!
+
+#if
+check [14] 1
+CHECKLEVELEX < 303
+checkitem 经验卷(5%) 1
+#act
+take 经验卷(5%) 1
+MOV N$经验卷轴 <$MAXEXP>
+DIV N$经验卷轴 100
+mul N$经验卷轴 5
+CHANGEEXP + <$str(N$经验卷轴)>
+SENDMSG 6 使用经验卷轴,增加5%的经验.!!
+SENDMSG 6 你的觉醒等级上限还可以为你提升<$str(u1)>级.!!
+
+#if
+check [14] 1
+CHECKLEVELEX < 303
+checkitem 经验卷(10%) 1
+#act
+take 经验卷(10%) 1
+MOV N$经验卷轴 <$MAXEXP>
+DIV N$经验卷轴 100
+mul N$经验卷轴 10
+CHANGEEXP + <$str(N$经验卷轴)>
+SENDMSG 6 使用经验卷轴,增加10%的经验.!!
+SENDMSG 6 你的觉醒等级上限还可以为你提升<$str(u1)>级.!!
+break
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[@ontimer3]
+#if
+#act
+#CALL [\BUFF\真实伤害.txt] @伤害计算
+
+
+
+
+#if
+equal N$被攻击 0
+SMALL <$HP> <$MAXHP>
+LARGE <$HP> 0
+checkitemw 寒冰卍神甲 1
+#act
+mul N$回血值 <$RELEVEL> 300
+humanhp + <$STR(N$回血值)>
+SENDMSG 6 《寒冰卍神甲》BUFF触发,恢复<$STR(N$回血值)>点Hp值..
+
+
+
+#if
+equal N$被攻击 0
+SMALL <$HP> <$MAXHP>
+LARGE <$HP> 0
+checkitemw ★★★地★★★ 1
+#act
+PGAddHpPer + 1
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[@ontimer4]
+
+#IF
+#ACT
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+
+
+
+
+
+#IF
+CheckMapHumanCount  DJT  < 1
+#ACT
+MOV A19
+
+#IF
+ISONMAP DJT
+large G19 0
+#ACT
+CHANGEEXP + 100000
+DEC G19 1
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[@OnTimer5]
+
+
+#if
+CHECKLEVELEX < 100
+#act
+CHANGEEXP + 100000
+
+#if
+CHECKLEVELEX > 99
+#act
+SetOffTimer 5
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[@OnTimer50]
+#if
+equal N$被攻击 0
+SMALL <$HP> <$MAXHP>
+LARGE <$HP> 0
+checkitemw 仙女护符 1
+#act
+PGAddHpPer + 1
+SENDMSG 6 《仙女护符》BUFF触发,恢复1%的Hp
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[@OnTimer51]
+#IF
+LARGE n$累计时长 180
+#ACT
+MOV n$累计时长 0
+
+
+#if
+EQUAL T32 我是先知
+#act
+INC n$累计时长 1
+
+
+#IF
+EQUAL n$累计时长 180
+#ACT
+give 杰斯的祝福
+MOV n$累计时长 0
+MESSAGEBOX [提示]:累计时长达到3小时,获得先知奖励:杰斯的祝福!!!
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[@开船提问]
+#if
+large <$MAXDC> 39999
+large U21 4
+CHECKRENEWLEVEL > 14
+CheckHumInRange 2dl 34 37 5
+#act
+MAPMOVE 克洛诺斯海岛 290 339
+
+
+
+
+[@天降财富]
+#if
+#act
+#SAY
+\ \ \
+<>                               <[活动提示]/FCOLOR=70>\ \
+<>                      <封妖城正在举行天降/FCOLOR=161>\
+<>                      <财宝活动，手速要快哟!/FCOLOR=161>\ \
+<>                              <《参加活动》/@参加天降财宝>
+
+[@参加天降财宝]
+
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+#if
+#act
+MAPMOVE 封妖城 180 91
+;MAPMOVE 封妖城 <$STR(N$坐标Y)>  <$STR(N$坐标X)>
+
+
+[@眼疾手快]
+#if
+#act
+#SAY
+\ \ \
+<>                               <[活动提示]/FCOLOR=70>\ \
+<>                           <封妖城正在举行眼疾/FCOLOR=161>\ \
+<>                           <手快活动，手速要快哟!/FCOLOR=161>\ \
+<>                              <《参加活动》/@参加眼疾手快>
+
+[@参加眼疾手快]
+
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+
+#if
+#act
+MAP 活动地图
+
+
+
+
+[@迷宫]
+#if
+#act
+#SAY
+\ \ \
+
+
+<>          <      1.活动说明:/FCOLOR=150>< 忆青春，可曾记得神秘的幻境迷宫？/FCOLOR=70> \ \
+<>          <      2.迷宫走法:/FCOLOR=150>< 上上左下右下/FCOLOR=250> \ \
+<>          <      3.奖励物品:/FCOLOR=150>< 大量钻石,大量金币.可提现,真实有效!./FCOLOR=241> \ \
+<>          <      4.进入条件:/FCOLOR=150>< 需开启狂暴,捐献才可进入./FCOLOR=241> \  \
+<>                              <《参加活动》/@参加迷宫>
+
+
+[@参加迷宫]
+
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+#if
+CHECKTITLE 沙城捐献
+CHECKTITLE 狂暴之力
+#act
+MAPMOVE T2061
+SendCenterMsg 70 0 〖迷宫〗:玩家[<$USERNAME>]进入了地图<$MapTitle>.探索未知领域!. 1 10
+#ELSEACT
+MESSAGEBOX [提示:]\\活动还没开启！,你没有开启狂暴之力,
+break
+
+
+
+
+[@世界BOSS]
+#if
+large G400 6
+#act
+break
+
+
+#if
+small G400 6
+#act
+#SAY
+\ \ \
+<>                               <[活动提示]/FCOLOR=70>\ \
+<>                      <封妖城正在举行世界/FCOLOR=161>\
+<>                      <Boss活动，几率必爆专属哦哟!/FCOLOR=161>\ \
+<>                              <《参加活动》/@参加世界Boss>
+
+
+
+
+[@参加世界Boss]
+
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+
+[@活动BOS]
+#if
+#act
+#SAY
+\ \ \
+<>                               <[活动提示]/FCOLOR=70>\ \
+<>                      <封妖城正在举行牛气冲天【必爆】/FCOLOR=161>\
+<>                        <Boss活动，必爆专属哦哟!/FCOLOR=161>\ \
+<>                              <《参加活动》/@参加世界99Boss>
+
+[@活动BOS1]
+#if
+#act
+#SAY
+\ \ \
+<>                             <[活动提示]/FCOLOR=70>\ \
+<>                      <必经之地正在举行牛气冲天【必爆】/FCOLOR=161>\
+<>                        <Boss活动，必爆专属哦哟!/FCOLOR=161>\ \
+<>                            <《参加活动》/@参加世界99Boss1>
+
+
+
+[@参加世界99Boss]
+
+#if
+#act
+MAPMOVE  封妖城 109 92
+BREAK
+
+
+
+[@参加世界99Boss1]
+
+#if
+#act
+MAPMOVE 必经之地 54 55
+BREAK
+
+
+
+[@小土豪活动]
+#if
+#act
+#SAY
+\ \ \
+<>                               <[活动提示]/FCOLOR=70>\ \
+<>                        <狂暴活动正在举行/FCOLOR=161>\
+<>                      <狂暴活动，[小土豪]已刷新!/FCOLOR=161>\ \
+<>                              <《参加活动》/@参加狂暴>
+[@参加狂暴]
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+
+#if
+CHECKTITLE 狂暴之力
+#act
+MOVR N$XX 223 230
+MOVR N$yy 93 98
+map 0101
+#elseact
+messagebox 操作失败:\\请检查\是否开启狂暴模式
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+
+
+
+
+;=============华丽的分割线，以下↓↓↓=为寒流假人相关参数，不改动假人请向上↑↑↑↑↑
+[@假人重读活跃]
+#IF
+ISDUMMY
+#ACT
+MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
+SETONTIMER 252 <$STR(N$频率)>
+BREAK
+
+[@寒流假人加经验]
+#IF
+ISDUMMY
+;NOT ISONMAP <$GLOBAL(假人_盟重地图号)>
+#ACT
+CHANGEEXP + <$GLOBAL(假人_手动加经验)>
+BREAK
+
+[@寒流假人加等级]
+#IF
+ISDUMMY
+#ACT
+CHANGELEVEL + 1
+BREAK
+
+
+[@寒流假人下图]
+#IF
+ISDUMMY
+#ACT
+MOVR N$时间间隔 1000 29000
+DELAYGOTO <$STR(N$时间间隔)> @假人下图
+
+[@假人下图]
+#IF
+#ACT
+#CALL [\寒流新假人\假人走动打怪.txt] @假人下图打怪
+
+
+[@寒流假人几率回城]
+#IF
+RANDOM 50
+NOT ISONMAP <$GLOBAL(假人_盟重地图号)>
+ISDUMMY
+#ACT
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+BREAK
+
+[@寒流假人回土城]
+#IF
+NOT ISONMAP 3
+ISDUMMY
+#ACT
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+BREAK
+
+
+
+[@土城寒流假人全部停止]
+#IF
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+ISDUMMY
+#ACT
+DUMMYSTOP
+BREAK
+
+[@土城假人几率停止]
+#IF
+RANDOM 2
+ISONMAP <$GLOBAL(假人_盟重地图号)>
+ISDUMMY
+#ACT
+SET [222] 1
+DUMMYSTOP
+BREAK
+
+
+[@寒流假人全部停止]
+#IF
+ISDUMMY
+#ACT
+SET [222] 1
+DUMMYSTOP
+BREAK
+
+[@寒流假人全部活动]
+#IF
+ISDUMMY
+#ACT
+SET [222] 0
+DUMMYSTART
+BREAK
+
+
+[@寒流假人全部下线]
+#IF
+ISDUMMY
+#ACT
+MOV I88 0
+KICK
+BREAK
+
+[@寒流假人几率下线]
+#IF
+ISDUMMY
+RANDOM 20
+#ACT
+DEC I88 1
+KICK
+BREAK
+
+[@ontimer251]
+
+#IF
+LARGE N$改回模式 0
+#ACT
+DEC N$改回模式 1
+
+#IF
+SMALL N$改回模式 1
+#ACT
+ChangeAttatckMode 5
+SETOFFTIMER 251
+SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
+SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
+SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
+SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
+SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
+SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
+SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
+
+[@ONTIMER252]
+#IF
+ISDUMMY
+#ACT
+#CALL [\寒流新假人\假人走动打怪.txt] @假人下图打怪
+
+[@ontimer253]
+#if
+isdummy
+#act
+setofftimer 253
+MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
+SETONTIMER 252 <$STR(N$频率)>
+killslave
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+HUMANHP = <$MAXHP>
+HUMANMP = <$MAXMP>
+
+
+[@ontimer255]
+#IF
+ISDUMMY
+checkjob Warr
+#act
+#CALL [\寒流新假人\假人装备\战士.txt] @战士
+break
+#if
+ISDUMMY
+checkjob Wizard
+#act
+#CALL [\寒流新假人\假人装备\法师.txt] @法师
+break
+#if
+ISDUMMY
+checkjob Taos
+#act
+#CALL [\寒流新假人\假人装备\道士.txt] @道士
+break
+
+
+
+
+
+
+[@ontimer254]
+
+#IF
+CheckHumBag <$USERNAME> < 25
+#ACT
+#CALL [\寒流新假人\假人回收.txt] @假人一键回收
+GMEXECUTE 清理背包 <$USERNAME>
+
+
+#IF
+ISDUMMY
+NOT ISONMAP <$GLOBAL(假人_盟重地图号)>
+CheckRangeMonCount <$MAP> <$X> <$Y> 20 < 1
+#ACT
+MAP <$map>
+BREAK
+
+#IF
+ISDUMMY
+NOT ISONMAP <$GLOBAL(假人_盟重地图号)>
+CheckRangeMonCount <$MAP> <$X> <$Y> 100 < 5
+#ACT
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+HUMANHP = <$MAXHP>
+HUMANMP = <$MAXMP>
+SETOFFTIMER 253
+MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
+SETONTIMER 252 <$STR(N$频率)>
+;==↑↑↑↑↑↑↑↑===假人回城后  跑动跑动下，不然SB不动  =============
+
+
+[@捐献等级刷新]
+#if
+equal a120 <$USERNAME>
+check [16] 1
+check [17] 0
+check [18] 0
+#act
+BREAK
+#if
+equal a121 <$USERNAME>
+check [16] 0
+check [17] 1
+check [18] 0
+#act
+BREAK
+#if
+equal a122 <$USERNAME>
+check [16] 0
+check [17] 0
+check [18] 1
+#act
+BREAK
+;================================
+#IF
+CHECK [16] 1
+#ACT
+CHANGELEVEL - 3
+set [16] 0
+SETICON 4 -1
+;================================
+#IF
+CHECK [17] 1
+#ACT
+CHANGELEVEL - 2
+set [17] 0
+SETICON 4 -1
+;================================
+#IF
+CHECK [18] 1
+#ACT
+CHANGELEVEL - 1
+set [18] 0
+SETICON 4 -1
+;================================
+#IF
+NOT equal a120 <$USERNAME>
+NOT equal a121 <$USERNAME>
+NOT equal a122 <$USERNAME>
+#ACT
+;DELSKILL 全屏吸怪
+DELSKILL 擒龙手
+;================================
+
+#if
+equal a120 <$USERNAME>
+LARGE U1 0
+#act
+INC U1 1
+set [16] 1
+set [17] 0
+set [18] 0
+set [19] 0
+set [20] 0
+CHANGELEVEL + 3
+;ADDSKILL 全屏吸怪 3
+ADDSKILL 擒龙手 3
+BREAK
+
+#if
+equal a120 <$USERNAME>
+#act
+set [16] 1
+set [17] 0
+set [18] 0
+set [19] 0
+set [20] 0
+CHANGELEVEL + 3
+;ADDSKILL 全屏吸怪 3
+ADDSKILL 擒龙手 3
+BREAK
+;================================
+#if
+equal a121 <$USERNAME>
+LARGE U1 0
+#act
+INC U1 1
+set [16] 0
+set [17] 1
+set [18] 0
+set [19] 0
+set [20] 0
+CHANGELEVEL + 2
+;ADDSKILL 全屏吸怪 3
+ADDSKILL 擒龙手 3
+BREAK
+
+#if
+equal a121 <$USERNAME>
+#act
+set [16] 0
+set [17] 1
+set [18] 0
+set [19] 0
+set [20] 0
+CHANGELEVEL + 2
+;ADDSKILL 全屏吸怪 3
+ADDSKILL 擒龙手 3
+BREAK
+;================================
+#if
+equal a122 <$USERNAME>
+LARGE U1 0
+#act
+INC U1 1
+set [16] 0
+set [17] 0
+set [18] 1
+set [19] 0
+set [20] 0
+CHANGELEVEL + 1
+ADDSKILL 擒龙手
+;ADDSKILL 全屏吸怪 3
+BREAK
+
+#if
+equal a122 <$USERNAME>
+#act
+set [16] 0
+set [17] 0
+set [18] 1
+set [19] 0
+set [20] 0
+CHANGELEVEL + 1
+ADDSKILL 擒龙手
+;ADDSKILL 全屏吸怪 3
+BREAK
+;================================
+
+
+
+
+[@星界回城]
+#if
+ISONMAP 苍茫星空
+#ACT
+MOVR N$XX 131 750
+MOVR N$YY 86 110
+DELNPC 苍茫星空  封妖古地
+MAPMOVE 封妖城 <$STR(N$XX)> <$STR(N$YY)>
+
+
+
+[@杀人游戏触发]
+#if
+checkitemw 神秘人[斗笠]
+#act
+AutoTakeOffItem 13
+takew 神秘人[斗笠]
+take 神秘人[斗笠] 46
+
+
+#if
+checkitemw 神秘人[斗笠]
+#act
+AutoTakeOffItem 13
+takew 神秘人[斗笠]
+take 神秘人[斗笠] 46
+
+#if
+checkitemw 神秘人[斗笠]
+#act
+AutoTakeOffItem 13
+takew 神秘人[斗笠]
+take 神秘人[斗笠] 46
+
+
+#if
+checkitemw 七星剑仙的剑气[活动]
+#act
+AutoTakeOffItem 1
+takew 七星剑仙的剑气[活动]
+take 七星剑仙的剑气[活动] 46
+
+#if
+checkitemw 阳光战神的威严[活动]
+#act
+AutoTakeOffItem 0
+takew 阳光战神的威严[活动]
+take 阳光战神的威严[活动] 46
+
+
+
+
+#if
+ISONMAP srdt
+#act
+movr N$坐标x 29 35
+movr N$坐标y 35 44
+MAPMOVE xsdt <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+#if
+#act
+goto @排名检测
+
+
+
+[@模式变回来]
+#if
+#act
+mov n$模式时间 3
+SETONTIMER 251 1
+
+
+
+[@OnTimer78]
+#if
+large U41 0
+#act
+DEC U41 1
+
+
+
+[@擂台接受令]
+
+
+#IF
+checkvar GLOBAL 挑战发起姓名2 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名2 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名3 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名3 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名4 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名4 = <$USERNAME>
+#ACT
+BREAK
+
+#IF
+large  U41 0
+#ACT
+BREAK
+
+
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+CALCVAR HUMAN 挑战个人开启 =
+#IF
+checkvar GLOBAL 挑战开始判断 = 1
+#ACT
+OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+BREAK
+#SAY
+<>\ \ \ \ \ \ \
+
+<>　 　 　 　 玩家【<$GLOBAL(挑战发起姓名)>】向【<$GLOBAL(挑战邀请姓名)>】发起了擂台邀请\ \
+<>　 　 　 　 是否接受他的挑战？       倒计时：<$GLOBAL(挑战开始计时)>秒\ \
+<>　 　 　 　 挑战擂台发起玩家：<$GLOBAL(挑战发起姓名)>\ \
+<>　 　 　 　 挑战押注钻石数量：<$GLOBAL(挑战发起数量)>\ \
+<>　 　 　 　 <接受挑战/@挑战擂台邀请响应接受>　　　<拒绝挑战/@挑战擂台邀请响应拒绝>　　　<前去观战/@挑战擂台邀请响应观战>　　　<关闭5分钟内不再接收/@挑战擂台关闭接收>\
+[@擂台接受令2]
+
+
+#IF
+checkvar GLOBAL 挑战发起姓名 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名3 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名3 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名4 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名4 = <$USERNAME>
+#ACT
+BREAK
+
+#IF
+large  U41 0
+#ACT
+BREAK
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+CALCVAR HUMAN 挑战个人开启2 =
+#IF
+checkvar GLOBAL 挑战开始判断2 = 1
+#ACT
+OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+BREAK
+#SAY
+<>\ \ \ \ \ \ \
+<>　 　 　 　 玩家【<$GLOBAL(挑战发起姓名2)>】向【<$GLOBAL(挑战邀请姓名2)>】发起了擂台邀请\ \
+<>　 　 　 　 是否接受他的挑战？       倒计时：<$GLOBAL(挑战开始计时2)>秒\ \
+<>　 　 　 　 挑战擂台发起玩家：<$GLOBAL(挑战发起姓名2)>\ \
+<>　 　 　 　 挑战押注钻石数量：<$GLOBAL(挑战发起数量2)>\ \
+<>　 　 　 　 <接受挑战/@挑战擂台邀请响应接受2>　　　<拒绝挑战/@挑战擂台邀请响应拒绝2>　　　<前去观战/@挑战擂台邀请响应观战2>　　　<关闭5分钟内不再接收/@挑战擂台关闭接收2>\
+[@擂台接受令3]
+
+#IF
+checkvar GLOBAL 挑战发起姓名2 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名2 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名4 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名4 = <$USERNAME>
+#ACT
+BREAK
+
+#IF
+large  U41 0
+#ACT
+BREAK
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+CALCVAR HUMAN 挑战个人开启3 =
+#IF
+checkvar GLOBAL 挑战开始判断3 = 1
+#ACT
+OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+BREAK
+#SAY
+<>\ \ \ \ \ \ \
+<>　 　 　 　 玩家【<$GLOBAL(挑战发起姓名3)>】向【<$GLOBAL(挑战邀请姓名3)>】发起了擂台邀请\ \
+<>　 　 　 　 是否接受他的挑战？       倒计时：<$GLOBAL(挑战开始计时3)>秒\ \
+<>　 　 　 　 挑战擂台发起玩家：<$GLOBAL(挑战发起姓名3)>\ \
+<>　 　 　 　 挑战押注钻石数量：<$GLOBAL(挑战发起数量3)>\ \
+<>　 　 　 　 <接受挑战/@挑战擂台邀请响应接受3>　　　<拒绝挑战/@挑战擂台邀请响应拒绝3>　　　<前去观战/@挑战擂台邀请响应观战3>　　　<关闭5分钟内不再接收/@挑战擂台关闭接收3>\
+[@擂台接受令4]
+
+#IF
+checkvar GLOBAL 挑战发起姓名2 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名2 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名3 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名3 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战发起姓名 = <$USERNAME>
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战邀请姓名 = <$USERNAME>
+#ACT
+BREAK
+
+#IF
+large  U41 0
+#ACT
+BREAK
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+CALCVAR HUMAN 挑战个人开启4 =
+#IF
+checkvar GLOBAL 挑战开始判断4 = 1
+#ACT
+OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+BREAK
+#SAY
+<>\ \ \ \ \ \ \
+<>　 　 　 　 玩家【<$GLOBAL(挑战发起姓名4)>】向【<$GLOBAL(挑战邀请姓名4)>】发起了擂台邀请\ \
+<>　 　 　 　 是否接受他的挑战？       倒计时：<$GLOBAL(挑战开始计时4)>秒\ \
+<>　 　 　 　 挑战擂台发起玩家：<$GLOBAL(挑战发起姓名4)>\ \
+<>　 　 　 　 挑战押注钻石数量：<$GLOBAL(挑战发起数量4)>\ \
+<>　 　 　 　 <接受挑战/@挑战擂台邀请响应接受4>　　　<拒绝挑战/@挑战擂台邀请响应拒绝4>　　　<前去观战/@挑战擂台邀请响应观战4>　　　<关闭5分钟内不再接收/@挑战擂台关闭接收4>\
+
+[@排名检测]
+#IF
+CHECKLEVELEX > 0
+#ACT
+SortHumVarToListEx SRYX-个人杀人 ..\QuestDiary\杀人游戏\杀人游戏排行数据.txt 1 ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1
+AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
+AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 0 s93 N90
+#IF
+LARGE N90 0
+#ACT
+CALCVAR GLOBAL SRYX-杀人第1名 = <$STR(s93)>
+CALCVAR GLOBAL SRYX-杀人第1数 = <$STR(N90)>
+#ELSEACT
+CALCVAR GLOBAL SRYX-杀人第1名 =
+CALCVAR GLOBAL SRYX-杀人第1数 =
+#IF
+CHECKLEVELEX > 0
+#ACT
+GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1 s93 N90
+#IF
+LARGE N90 0
+#ACT
+CALCVAR GLOBAL SRYX-杀人第2名 = <$STR(s93)>
+CALCVAR GLOBAL SRYX-杀人第2数 = <$STR(N90)>
+#ELSEACT
+CALCVAR GLOBAL SRYX-杀人第2名 =
+CALCVAR GLOBAL SRYX-杀人第2数 =
+#IF
+CHECKLEVELEX > 0
+#ACT
+GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 2 s93 N90
+#IF
+LARGE N90 0
+#ACT
+CALCVAR GLOBAL SRYX-杀人第3名 = <$STR(s93)>
+CALCVAR GLOBAL SRYX-杀人第3数 = <$STR(N90)>
+#ELSEACT
+CALCVAR GLOBAL SRYX-杀人第3名 =
+CALCVAR GLOBAL SRYX-杀人第3数 =
+
+#if
+CHECKVAR GLOBAL SRYX-杀人第1名 = <$USERNAME>
+#act
+MOV S$当前排名 第一名
+BREAK
+#if
+CHECKVAR GLOBAL SRYX-杀人第2名 = <$USERNAME>
+#act
+MOV S$当前排名 第二名
+BREAK
+#if
+CHECKVAR GLOBAL SRYX-杀人第3名 = <$USERNAME>
+#act
+MOV S$当前排名 第三名
+BREAK
+
+
+
+[@答题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第一题]/FCOLOR=70>\ \
+<>       <问:/FCOLOR=158> <百团大战好不好玩，你会带朋友来玩吗？/FCOLOR=250> \ \
+<>       <第一题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+<>       < ①良心版本敲好玩，一定要带！/@一题1>      <②垃圾服！/@一题2> \ \
+
+
+[@一题1]
+#if
+;check [80] 0
+#act
+;set [80] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第一题:玩家[<$USERNAME>]答对第一题获得大量奖励!.
+SENDMSG 0 第一题:玩家[<$USERNAME>]答对第一题获得大量奖励!.
+SENDMSG 0 第一题:玩家[<$USERNAME>]答对第一题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @2题
+#ELSEACT
+MESSAGEBOX [提示]：你已经答题过了！
+
+[@一题2]
+#if
+#act
+goto @2题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+
+
+
+[@2题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第二题]/FCOLOR=70>\ \
+<>        <问:/FCOLOR=158> <我们纯广告，没有托，发现漏洞你会及时告诉我们吗？/FCOLOR=250> \ \
+<>        <第二题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+
+<>        < ①当然会呢，有奖励嘛！/@2题1>      <②我偷偷用漏洞刷东西/@2题2> \ \
+
+
+
+[@2题1]
+#if
+;check [81] 0
+#act
+;set [81] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第2题:玩家[<$USERNAME>]答对第2题获得大量奖励!.
+SENDMSG 0 第2题:玩家[<$USERNAME>]答对第2题获得大量奖励!.
+SENDMSG 0 第2题:玩家[<$USERNAME>]答对第2题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @3题
+#ELSEACT
+MESSAGEBOX [提示]：你已经答题过了！
+
+[@2题2]
+#if
+#act
+goto @3题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+
+[@3题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第三题]/FCOLOR=70>\ \
+<>        <问:/FCOLOR=158> <独家自创开区杀人游戏刺不刺激？/FCOLOR=250> \ \
+<>        <第三题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+
+<>          < ①刺激 ！/@3题1>      <②不刺激/@3题2> \ \
+
+
+
+
+[@3题1]
+#if
+;check [82] 0
+#act
+;set [82] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第3题:玩家[<$USERNAME>]答对第3题获得大量奖励!.
+SENDMSG 0 第3题:玩家[<$USERNAME>]答对第3题获得大量奖励!.
+SENDMSG 0 第3题:玩家[<$USERNAME>]答对第3题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @4题
+#ELSEACT
+MESSAGEBOX [提示]：你已经答题过了！
+
+[@3题2]
+#if
+#act
+goto @4题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+
+[@4题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第四题]/FCOLOR=70>\ \
+<>        <问:/FCOLOR=158> <百团大战属于激情服还是长期服？/FCOLOR=250> \ \
+<>        <第四题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+
+<>        < ①激情服 ！/@4题1>      <②耐玩激情又长久/@4题2> \ \
+
+
+
+
+[@4题2]
+#if
+;check [83] 0
+#act
+;set [83] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第4题:玩家[<$USERNAME>]答对第4题获得大量奖励!.
+SENDMSG 0 第4题:玩家[<$USERNAME>]答对第4题获得大量奖励!.
+SENDMSG 0 第4题:玩家[<$USERNAME>]答对第4题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @5题
+#ELSEACT
+MESSAGEBOX [提示]：你已经答题过了！
+
+[@4题1]
+#if
+#act
+goto @5题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+
+
+[@5题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第五题]/FCOLOR=70>\ \
+<>         <问:/FCOLOR=158> <管理美不美 ？？/FCOLOR=250> \ \
+<>         <第五题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+
+<>         <①美若天仙 ！/@5题1>      <②丑的要死/@5题2> \ \
+
+
+
+[@5题1]
+#if
+;check [84] 0
+#act
+;set [84] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第5题:玩家[<$USERNAME>]答对第5题获得大量奖励!.
+SENDMSG 0 第5题:玩家[<$USERNAME>]答对第5题获得大量奖励!.
+SENDMSG 0 第5题:玩家[<$USERNAME>]答对第5题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @6题
+#ELSEACT
+MESSAGEBOX [提示]：你已经答题过了！
+
+[@5题2]
+#if
+#act
+goto @6题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+[@6题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第六题]/FCOLOR=70>\ \
+<>         <问:/FCOLOR=158> <百团大战有没有比例？？/FCOLOR=250> \ \
+<>         <第六题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+
+<>         <①充一块送一万 ！/@6题1>      <②无比例纯绿色大站广告/@6题2> \ \
+
+
+
+[@6题2]
+#if
+;check [85] 0
+#act
+;set [85] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第6题:玩家[<$USERNAME>]答对第6题获得大量奖励!.
+SENDMSG 0 第6题:玩家[<$USERNAME>]答对第6题获得大量奖励!.
+SENDMSG 0 第6题:玩家[<$USERNAME>]答对第6题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @7题
+
+[@6题1]
+#if
+#act
+goto @7题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+
+
+[@7题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第七题]/FCOLOR=70>\ \
+<>         <问:/FCOLOR=158> <百团大战一天稳定开几个区？？/FCOLOR=250> \ \
+<>         <第七题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+
+<>         <①一万个！/@7题1>      <②7个/@7题2> \ \
+
+
+
+[@7题2]
+#if
+;check [86] 0
+#act
+;set [86] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第7题:玩家[<$USERNAME>]答对第7题获得大量奖励!.
+SENDMSG 0 第7题:玩家[<$USERNAME>]答对第7题获得大量奖励!.
+SENDMSG 0 第7题:玩家[<$USERNAME>]答对第7题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @8题
+
+[@7题1]
+#if
+#act
+goto @8题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+
+
+[@8题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第八题]/FCOLOR=70>\ \
+<>         <问:/FCOLOR=158> <百团大战的官方网址是多少？/FCOLOR=250> \ \
+<>         <第八题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+
+<>         <①百团大战/@8题1>      <②www.woshishabi.com/@8题2> \ \
+
+
+
+[@8题1]
+#if
+;check [87] 0
+#act
+;set [87] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第8题:玩家[<$USERNAME>]答对第8题获得大量奖励!.
+SENDMSG 0 第8题:玩家[<$USERNAME>]答对第8题获得大量奖励!.
+SENDMSG 0 第8题:玩家[<$USERNAME>]答对第8题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @9题
+
+[@8题2]
+#if
+#act
+goto @9题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+
+
+[@9题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第九题]/FCOLOR=70>\ \
+<>         <问:/FCOLOR=158> <百团大战的QQ群和群礼包码分别是什么？/FCOLOR=250> \ \
+<>         <第九题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \ \
+
+
+<>         <①Q群198605888,礼包码1888/@9题1>      <②群198605888,礼包码6666/@9题2> \ \
+
+
+
+[@9题1]
+#if
+;check [88] 0
+#act
+;set [88] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第9题:玩家[<$USERNAME>]答对第9题获得大量奖励!.
+SENDMSG 0 第9题:玩家[<$USERNAME>]答对第9题获得大量奖励!.
+SENDMSG 0 第9题:玩家[<$USERNAME>]答对第9题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @10题
+
+[@9题2]
+#if
+;check [88] 0
+#act
+;set [88] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第9题:玩家[<$USERNAME>]答对第9题获得大量奖励!.
+SENDMSG 0 第9题:玩家[<$USERNAME>]答对第9题获得大量奖励!.
+SENDMSG 0 第9题:玩家[<$USERNAME>]答对第9题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @10题
+
+[@10题]
+#if
+#act
+#say
+\ \ \
+<><IMG:0:6:0:-3><[第十题]/FCOLOR=70>\ \
+<>         <问:/FCOLOR=158> <百团大战的游戏顾问是不是很有责任心和耐心？/FCOLOR=250> \ \
+<>         <第十题奖励:/FCOLOR=158> <奖励10钻石+1积分+100W元宝/FCOLOR=250> \  \
+
+
+<>         <①超级负责任/@10题1>      <②发信息从来不回/@100题2> \ \
+
+
+
+[@10题1]
+#if
+;check [89] 0
+#act
+;set [89] 1
+GAMEPOINT + 10
+GAMEDIAMOND + 1
+GAMEGOLD + 1000000
+SENDMSG 0 第10题:玩家[<$USERNAME>]答对第10题获得大量奖励!.
+SENDMSG 0 第10题:玩家[<$USERNAME>]答对第10题获得大量奖励!.
+SENDMSG 0 第10题:玩家[<$USERNAME>]答对第10题获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+goto @11题
+MESSAGEBOX [提示]：你已经答题过了！
+
+[@10题2]
+#if
+#act
+goto @11题
+#ELSEACT
+MESSAGEBOX [提示]：对不起，答题错误！
+
+
+
+[@11题]
+#if
+#act
+#say
+\ \ \  \ \ \  \
+
+<>               <题目已经全部答完:/FCOLOR=158> <题目已经全部答完/FCOLOR=250> \
+<>               <题目已经全部答完:/FCOLOR=158> <题目已经全部答完/FCOLOR=250> \
+
+
+
+
+
+
+
+
+
+[@OnTimer99]
+#IF
+not ISONMAP DJT
+#ACT
+mov U34 1
+mov G19 1
+SetOffTimer 99
+
+
+
+#IF
+equal U2 0
+#ACT
+MOV N$雷劫伤害 6000000
+#IF
+equal U2 1
+#ACT
+MOV N$雷劫伤害 20000000
+#IF
+equal U2 2
+#ACT
+MOV N$雷劫伤害 25000000
+#IF
+equal U2 3
+#ACT
+MOV N$雷劫伤害 30000000
+#IF
+equal U2 4
+#ACT
+MOV N$雷劫伤害 35000000
+#IF
+equal U2 5
+#ACT
+MOV N$雷劫伤害 40000000
+#IF
+equal U2 6
+#ACT
+MOV N$雷劫伤害 45000000
+#IF
+equal U2 7
+#ACT
+MOV N$雷劫伤害 50000000
+#IF
+equal U2 8
+#ACT
+MOV N$雷劫伤害 55000000
+#IF
+equal U2 9
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 10
+#ACT
+MOV N$雷劫伤害 65000000
+
+#IF
+equal U2 11
+#ACT
+MOV N$雷劫伤害 70000000
+
+#IF
+equal U2 12
+#ACT
+MOV N$雷劫伤害 75000000
+
+#IF
+equal U2 13
+#ACT
+MOV N$雷劫伤害 80000000
+
+#IF
+equal U2 14
+#ACT
+MOV N$雷劫伤害 85000000
+
+#IF
+equal U2 15
+#ACT
+MOV N$雷劫伤害 90000000
+
+#IF
+equal U2 16
+#ACT
+MOV N$雷劫伤害 95000000
+
+#IF
+equal U2 17
+#ACT
+MOV N$雷劫伤害 100000000
+
+#IF
+equal U2 18
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 19
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 20
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 21
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 22
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 23
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 24
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 25
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 26
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 27
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 28
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 29
+#ACT
+MOV N$雷劫伤害 60000000
+
+
+#IF
+equal U2 30
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 31
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 32
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 33
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 34
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 35
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 36
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 37
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 38
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 39
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 40
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 41
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 42
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 43
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 44
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 45
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 46
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 47
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 48
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 49
+#ACT
+MOV N$雷劫伤害 60000000
+
+#IF
+equal U2 50
+#ACT
+MOV N$雷劫伤害 60000000
+
+
+
+
+#IF
+ISONMAP DJT
+SMALL U34 9
+large U9 0
+#ACT
+DEC U9 1
+PLAYSOUND Wav\M11-2.wav 1 4
+PLAYEFFECT 28 920 13 1 100
+INC U34 1
+SENDMSG 6 渡劫丹为您抵消了一层雷劫伤害！
+BREAK
+
+#IF
+ISONMAP DJT
+SMALL U34 9
+#ACT
+PLAYSOUND Wav\M11-2.wav 1 4
+PLAYEFFECT 28 920 13 1 100
+HUMANHP - <$STR(N$雷劫伤害)>
+INC U34 1
+BREAK
+
+#IF
+ISONMAP DJT
+equal U34 9
+#ACT
+MOV U34 0
+SetOffTimer 99
+
+
+
+
+INC U2 1
+MOV A19
+MOV G19 120
+DEPRIVETITLE 一源道主
+DEPRIVETITLE 二源道主
+DEPRIVETITLE 三源道主
+DEPRIVETITLE 四源道尊
+DEPRIVETITLE 五源道尊
+DEPRIVETITLE 六源道尊
+DEPRIVETITLE 七源至尊
+DEPRIVETITLE 八源至尊
+DEPRIVETITLE 九源至尊
+DEPRIVETITLE 神境
+DEPRIVETITLE 妖境
+DEPRIVETITLE 魔境
+DEPRIVETITLE 仙境
+DEPRIVETITLE 灵镜
+DEPRIVETITLE 超脱
+CONFERTITLE <$STR(S$称号名称)>
+SCENEVIBRATION 1 1 1
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+messagebox [飞升成功]：\\恭喜成功飞升,获得称号：“<$STR(S$称号名称)>”！
+GuildNoticeMsg 250 0 恭喜：{[%s]|151:0:1}成功飞升，脱离凡道，位列仙班，羽化成仙，成功晋升至“<$STR(S$称号名称)>”...
+SENDMOVEMSG 0 150 0 80 1 恭喜：[{<$USERNAME>/FCOLOR=254}]成功飞升，脱离凡道，位列仙班，成功晋升至“<$STR(S$称号名称)>”...
+PLAYEFFECT 28 870 26 1 100 1
+
+
+
+[@观看渡劫]
+#IF
+#ACT
+Close
+;CloseBigDialogBox
+SendCenterMsg 245 251 【<$STR(A19)>】正在飞升渡劫，是否前往观看？ 0 5
+#SAY
+\  \  \  \
+<>\
+<   江湖传闻：/FCOLOR=255>\
+<>\
+{   【<$STR(A19)>】正在飞升渡劫，是否前往观礼？/FCOLOR=254}\
+<>\
+<   如此人渡劫成功在场所有人将获得极高的经验加成/FCOLOR=250>          \
+<>\
+< --------------------------------------------------------------/FCOLOR=91>\
+<>                                            ※<我要前往观礼/@进渡劫>※\
+
+
+[@进渡劫]
+#ACT
+MAP DJT
+
+[@神力刷新]
+#ACT
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+
+
+[@OnTimer199]
+#IF
+#ACT
+INC U30 1
+;SENDDELAYMSG 请在%s内，清理完第一关怪物，否则活动提前关闭 <$str(g15)> 250 1
+SENDDELAYMSG 爆率卷爆率还剩余<$str(U30)>秒
+BREAK
+
+
+
+
+
+;[@OnTimer10]
+;#IF
+;INSAFEZONE
+;#act
+;break
+
+;#IF
+;large U18 0
+;#act
+;DEC U18 1
+
+
+;#IF
+;small U18 10
+;#act
+;StopAutoPlayGame
+;SetOffTimer 5
+;MESSAGEBOX 挂机时间不足，已经停止。~
+;break
+
+
+[@OnTimer35]
+#IF
+#act
+ACTREPAIRALL
+break
+
+
+
+
+[@ONTIMER13]
+#if
+EQUAL N$炼体爆发 1
+checkitem 炼体精魄 1
+#act
+TAKE 炼体精魄 1
+;SENDMSG 6 炼体精魄扣除1个,炼体持续爆发!
+#elseact
+SETOFFTIMER 13
+MOV N$炼体爆发 0
+GOTO @属性加载
+SETICON 9 -1
+SENDMSG 5 炼体精魄不足1个,炼体爆发关闭!
+break
+
+
+
+
+
+[@OnTimer117]
+#if
+#act
+<$CURRRTARGETNAME>.PGAddHpPer - 2
+
+
+
+[@OnTimer113]
+#if
+#act
+MOV S$命运魂环攻击 未开启
+MOV N$命运魂环攻击次数 0
+
+
+
+[@OnTimer112]
+#IF
+#ACT
+SetOffTimer 112
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+
+
+
+
+
+[@OnTimer119]
+#IF
+large N$免疫 0
+#ACT
+dec N$免疫  1
+
+#if
+large N$免疫CD 0
+#ACT
+dec N$免疫CD  1
+
+
+[@OnTimer120]
+#IF
+#ACT
+SETICON 1 -1
+
+
+
+[@OnTimer115]
+
+#if
+large N$万法之心时间 0
+#act
+dec N$万法之心时间 1
+
+#if
+equal N$万法之心时间 60
+#act
+SetOffTimer 115
+
+
+[@ontimer116]
+#IF
+CHECKITEMW [时装]·鳯求凰 1
+#ACT
+PGDelMonHpEx 3 2 0 0 <$X> <$Y> 3 3
+
+
+
+
+
+[@在线人数统计]
+#IF
+NOT CheckOffline
+EQUAL <$GUILDNAME> <$GLOBAL(红方队伍名字)>
+#ACT
+CALCVAR GLOBAL 红方在线人数 + 1
+;SAVEVAR GLOBAL 红方在线人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+
+#IF
+NOT CheckOffline
+EQUAL <$GUILDNAME> <$GLOBAL(红方队伍名字)>
+CHECKLEVELEX > 500
+#ACT
+CALCVAR GLOBAL 红方大号人数 + 1
+;SAVEVAR GLOBAL 红方大号人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+
+;----------------------------------------------------------------------------------------------------
+#IF
+NOT CheckOffline
+EQUAL <$GUILDNAME> <$GLOBAL(蓝方队伍名字)>
+#ACT
+CALCVAR GLOBAL 蓝方在线人数 + 1
+;SAVEVAR GLOBAL 蓝方在线人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+
+#IF
+NOT CheckOffline
+EQUAL <$GUILDNAME> <$GLOBAL(蓝方队伍名字)>
+CHECKLEVELEX > 500
+#ACT
+CALCVAR GLOBAL 蓝方大号人数 + 1
+;SAVEVAR GLOBAL 蓝方大号人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+
+
+[@统计达标人数QM]
+;------------------达标统计
+#IF
+NOT CheckOffline
+EQUAL <$GUILDNAME> <$GLOBAL(红方队伍名字)>
+CHECKVAR HUMAN 活跃点数 > 99
+#ACT
+CALCVAR GLOBAL 红方达标人数 + 1
+;SAVEVAR GLOBAL 红方达标人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+
+
+#IF
+NOT CheckOffline
+EQUAL <$GUILDNAME> <$GLOBAL(蓝方队伍名字)>
+CHECKVAR HUMAN 活跃点数 > 99
+#ACT
+CALCVAR GLOBAL 蓝方达标人数 + 1
+;SAVEVAR GLOBAL 蓝方达标人数 ..\QuestDiary\天下综合脚本\沙城红蓝系统\红蓝全局变量数据.txt
+
+
+
+
+
+
+
+
+
+
+
+

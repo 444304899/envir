@@ -1,0 +1,285 @@
+
+
+
+
+
+
+
+
+
+[@行会系统_QF触发-击杀]
+{
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 630 283 8
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 2
+INC $(红方_斩杀) 1
+BREAK
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 630 283 8
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 2
+INC $(蓝方_斩杀) 1
+BREAK
+;===========================
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 621 275 10
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 2
+INC $(红方_斩杀) 1
+BREAK
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 621 275 10
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 2
+INC $(蓝方_斩杀) 1
+BREAK
+;===========================
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 609 272 3
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 2
+INC $(红方_斩杀) 1
+BREAK
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 609 272 3
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 2
+INC $(蓝方_斩杀) 1
+BREAK
+;===========================
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 614 273 3
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 2
+INC $(红方_斩杀) 1
+BREAK
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 614 273 3
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 2
+INC $(蓝方_斩杀) 1
+BREAK
+;===========================
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 621 266 3
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 2
+INC $(红方_斩杀) 1
+BREAK
+#IF
+Large $(攻城_进度) 0
+Small $(攻城_进度) 4
+CheckHumInRange 3 621 266 3
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 2
+INC $(蓝方_斩杀) 1
+BREAK
+;===========================
+#IF
+Large $(攻城_进度) 1
+Small $(攻城_进度) 4
+ISONMAP $(皇宫_地图)
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 3
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 3
+INC $(红方_斩杀) 1
+BREAK
+#IF
+Large $(攻城_进度) 1
+Small $(攻城_进度) 4
+ISONMAP $(皇宫_地图)
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 3
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 3
+INC $(蓝方_斩杀) 1
+BREAK
+;===========================
+#IF
+Large $(攻城_进度) 2
+Small $(攻城_进度) 4
+ISONMAP $(集结_地图)
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 2
+INC $(红方_斩杀) 1
+BREAK
+#IF
+Large $(攻城_进度) 2
+Small $(攻城_进度) 4
+ISONMAP $(集结_地图)
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城斩杀 + 1
+SAVEVAR HUMAN 攻城斩杀
+CALCVAR HUMAN 个人活跃 + 2
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 2
+INC $(蓝方_斩杀) 1
+BREAK
+;===========================
+;━━━━━━━━━━━━━━━━━━━━━━━━━
+[@行会系统_QF触发-被杀]
+#Or
+CheckHumInRange 3 630 283 8
+CheckHumInRange 3 621 275 10
+CheckHumInRange 3 609 272 3
+CheckHumInRange 3 614 273 3
+CheckHumInRange 3 621 266 3
+#ACT
+CALCVAR HUMAN 攻城被杀 + 1
+SAVEVAR HUMAN 攻城被杀
+CALCVAR HUMAN 个人活跃 + 1
+SAVEVAR HUMAN 个人活跃
+GOTO @活跃_检测记录
+BREAK
+;===========================
+#IF
+Large $(攻城_进度) 1
+Small $(攻城_进度) 4
+ISONMAP $(皇宫_地图)
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城被杀 + 1
+SAVEVAR HUMAN 攻城被杀
+CALCVAR HUMAN 个人活跃 + 1
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 1
+BREAK
+#IF
+Large $(攻城_进度) 1
+Small $(攻城_进度) 4
+ISONMAP $(皇宫_地图)
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城被杀 + 1
+SAVEVAR HUMAN 攻城被杀
+CALCVAR HUMAN 个人活跃 + 1
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 1
+BREAK
+;===========================
+#IF
+Large $(攻城_进度) 2
+Small $(攻城_进度) 4
+ISONMAP $(集结_地图)
+Equal <$HUMAN(入会标识)> 1
+#ACT
+CALCVAR HUMAN 攻城被杀 + 1
+SAVEVAR HUMAN 攻城被杀
+CALCVAR HUMAN 个人活跃 + 1
+SAVEVAR HUMAN 个人活跃
+INC $(红方_活跃) 1
+BREAK
+#IF
+Large $(攻城_进度) 2
+Small $(攻城_进度) 4
+ISONMAP $(集结_地图)
+Equal <$HUMAN(入会标识)> 2
+#ACT
+CALCVAR HUMAN 攻城被杀 + 1
+SAVEVAR HUMAN 攻城被杀
+CALCVAR HUMAN 个人活跃 + 1
+SAVEVAR HUMAN 个人活跃
+INC $(蓝方_活跃) 1
+BREAK
+;===========================
+[@活跃_检测记录]
+#IF
+Equal <$HUMAN(入会标识)> 1
+#ACT
+INC $(红方_活跃) 1
+#IF
+Equal <$HUMAN(入会标识)> 2
+#ACT
+INC $(蓝方_活跃) 1
+}
+
+
+
+
+
+
+
+
+

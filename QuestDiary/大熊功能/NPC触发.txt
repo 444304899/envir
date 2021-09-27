@@ -1,0 +1,15 @@
+[@开始触发]
+{
+
+#IF
+CheckKillMonName 五爷
+#act
+CreateNPC  苍茫星空  封妖古地  98 109  20106     苍茫星空-封妖古地
+SENDDELAYMSG 苍茫星空将在%s后关闭！ 300 249 0 @删除龙柱
+
+[@删除龙柱]
+#act
+DELNPC 苍茫星空  封妖古地  104 107  20106
+
+
+}

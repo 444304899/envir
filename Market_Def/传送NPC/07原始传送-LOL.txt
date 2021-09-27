@@ -1,0 +1,100 @@
+[@main]
+
+
+
+#if
+#act
+GOTO @原始地图配置
+#say
+\ \ \ \ \ \  \ \  \
+
+<>                         <PLAYIMG:7:10:5:100:0:-1><【地图等级】：/AUTOCOLOR=150> <超级/AUTOCOLOR=250>   \
+<>                         <PLAYIMG:7:10:5:100:0:-1><【爆率说明】：/AUTOCOLOR=150> <中期专属装备/AUTOCOLOR=161>\
+<>                         <PLAYIMG:7:10:5:100:0:-1><【进入条件】：/AUTOCOLOR=150> <进图需要攻击力15000.生命值25W/AUTOCOLOR=151>  \
+<>                         <PLAYIMG:7:10:5:100:0:-1><【特别说明】：/AUTOCOLOR=150> <本服所有装备打Boss均可爆出!/AUTOCOLOR=58>  \ \
+<>                    <ItemShow:1007:0:0:-9:1>  <ItemShow:1008:0:0:-9:1>  <ItemShow:1011:0:0:-9:1>  <ItemShow:1012:0:0:-9:1>  <ItemShow:1013:0:0:-9:1>  <ItemShow:1014:0:0:-9:1>  <ItemShow:1015:0:0:-9:1>\ \ \
+<>                    <ItemShow:1016:0:0:-9:1>  <ItemShow:1017:0:1:-9:1>  <ItemShow:1018:0:0:-9:1>  <ItemShow:1019:0:0:-9:1>  <ItemShow:1020:0:0:-9:1>    \ \
+
+
+<>                                            <IMG:176:6:10:25|250#攻击力15000.生命值25W/@传送1>
+
+;<><IMG:216:13:-243:35> \
+
+;<><IMG:166:6:10:38>\ \ \
+
+
+[@原始地图配置]
+#IF
+#Act
+Getliststring ..\QuestDiary\馒头制作\地图产出\原始大陆.txt 0 S$原始显示0 S$无无0
+Getliststring ..\QuestDiary\馒头制作\地图产出\原始大陆.txt 1 S$原始显示1 S$无无1
+Getliststring ..\QuestDiary\馒头制作\地图产出\原始大陆.txt 2 S$原始显示2 S$无无2
+Getliststring ..\QuestDiary\馒头制作\地图产出\原始大陆.txt 3 S$原始显示3 S$无无3
+Getliststring ..\QuestDiary\馒头制作\地图产出\原始大陆.txt 4 S$原始显示4 S$无无4
+Getliststring ..\QuestDiary\馒头制作\地图产出\原始大陆.txt 5 S$原始显示5 S$无无5
+Getliststring ..\QuestDiary\馒头制作\地图产出\原始大陆.txt 6 S$原始显示6 S$无无6
+Getliststring ..\QuestDiary\馒头制作\地图产出\原始大陆.txt 7 S$原始显示7 S$无无7
+
+#IF
+Equal S$原始显示0
+#Act
+mov S$原始显示0 暂无产出数据
+
+#IF
+Equal S$原始显示1
+#Act
+mov S$原始显示1 暂无产出数据
+
+#IF
+Equal S$原始显示2
+#Act
+mov S$原始显示2 暂无产出数据
+
+#IF
+Equal S$原始显示3
+#Act
+mov S$原始显示3 暂无产出数据
+
+#IF
+Equal S$原始显示4
+#Act
+mov S$原始显示4 暂无产出数据
+
+#IF
+Equal S$原始显示5
+#Act
+mov S$原始显示5 暂无产出数据
+
+#IF
+Equal S$原始显示6
+#Act
+mov S$原始显示6 暂无产出数据
+
+#IF
+Equal S$原始显示7
+#Act
+mov S$原始显示7 暂无产出数据
+
+
+
+
+
+
+[@传送1]
+
+
+
+#if
+CHECKRENEWLEVEL > 11
+large <$MAXDC> 15000
+large <$MAXHP> 250000
+#act
+MAP dldl
+SENDMSG 0 {传送使者:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.真希望他能满载而归！！|255:15}
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到12转,\\攻击力达到15000!\\生命值达到25W
+break
+
+
+
+

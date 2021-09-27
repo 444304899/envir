@@ -1,0 +1,28 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \ \
+<><神器合成.New~/FCOLOR=58> \ \
+<>  <◎◎◎传奇骨灰◎◎◎/@升级1>     <需要材料如下/FCOLOR=116>  \ \
+<>                         <[の沃玛教皇的号角]/FCOLOR=250> + <[の白日门主的空间]/FCOLOR=250>\ \
+<>                         <[元宝*1000W]/FCOLOR=250> + <[灵符*10000]/FCOLOR=151>\ \
+
+
+[@升级1]
+#if
+checkitem の沃玛教皇的号角 1
+checkitem の白日门主的空间 1
+checkGAMEGOLD > 9999999
+CHECKGAMEGIRD ? 10000
+
+#act
+take の沃玛教皇的号角 1
+take の白日门主的空间 1
+GAMEGOLD - 10000000
+GAMEGIRD - 10000
+give ◎◎◎传奇骨灰◎◎◎ 1
+MESSAGEBOX [提示]:装备合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK

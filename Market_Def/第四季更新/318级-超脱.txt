@@ -1,0 +1,48 @@
+[@main]
+#IF
+#act
+#say
+\ \ \ \   \ \    \  \ \ \
+
+<>                 <PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1> <【特别说明】：/AUTOCOLOR=150> <本服所有装备均可爆出!/AUTOCOLOR=58><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1><PLAYIMG:7:10:5:100:0:-1>  \ \ \
+
+
+<>                                    <等级达到318方可进入/AUTOCOLOR=151>\   \
+<>                                    <此地图刷新5大陆所有怪/AUTOCOLOR=151>\   \
+\
+
+<>                      \   \    \ \
+
+
+<>       <IMG:176:6:230:-26/@传送1>    \
+
+
+
+
+
+[@传送1]
+#if
+;equal A120 <$USERNAME>
+CHECKLEVELEX > 317
+#act
+MAPMOVE  318级
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+#elseact
+MESSAGEBOX 您还没有实力挑战地图！！
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

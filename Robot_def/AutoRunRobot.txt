@@ -1,0 +1,104 @@
+#AutoRun NPC SEC 1 @挑战擂台脚本RM
+#AutoRun NPC SEC 1 @挑战擂台脚本RM2
+#AutoRun NPC SEC 1 @挑战擂台脚本RM3
+#AutoRun NPC SEC 1 @挑战擂台脚本RM4
+
+
+#AutoRun NPC SEC 1 @MIRYZ角色安全RM
+
+#AutoRun NPC RUNONDAY 0:00  @清除
+
+#AutoRun NPC MIN 1   @开区计时
+
+
+
+;#AutoRun NPC RUNONDAY 20:00 @苍茫星空
+;#AutoRun NPC RUNONDAY 20:10 @取消苍茫星空
+
+
+
+#AutoRun NPC HOUR  1  @1小时
+
+
+#AutoRun NPC HOUR  1  @1小时1
+
+
+
+
+#AutoRun NPC RUNONDAY 7:00 @早上提示
+#AutoRun NPC RUNONDAY 12:00 @中午提示
+#AutoRun NPC RUNONDAY 18:00 @晚上提示
+#AutoRun NPC RUNONDAY 0:00 @凌晨提示
+#AutoRun NPC MIN 30 @攻沙喊话
+#AutoRun NPC RUNONDAY 00:01 @首次攻沙计算
+#AutoRun NPC RUNONDAY 19:29 @攻沙提示公告
+#AutoRun NPC RUNONDAY 19:55 @加载攻沙行会
+;#AutoRun NPC MIN 30 @开船提示
+;#AutoRun NPC MIN 33 @正式开船
+
+#AutoRun NPC RUNONDAY 00:02 @一区记录
+#AutoRun NPC RUNONDAY 00:03 @二区记录
+#AutoRun NPC RUNONDAY 00:04 @三区记录
+#AutoRun NPC RUNONDAY 00:05 @四区记录
+#AutoRun NPC RUNONDAY 00:06 @五区记录
+
+
+#AutoRun NPC RUNONDAY 19:00 @合区刷新boss
+
+#AutoRun NPC RUNONDAY 21:00 @拿沙刷新boss
+
+
+#AutoRun NPC RUNONDAY 20:01 @集体回城
+
+#AutoRun NPC RUNONDAY 22:01 @沙巴克占领奖励
+
+
+;#AutoRun NPC RUNONDAY 11:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 11:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 13:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 13:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 15:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 15:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 17:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 17:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 19:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 19:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 21:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 21:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 23:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 23:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 1:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 1:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 3:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 3:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 5:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 5:55 @跑酷停止
+
+;#AutoRun NPC RUNONDAY 7:50 @跑酷活动
+;#AutoRun NPC RUNONDAY 7:55 @跑酷停止
+
+#AutoRun NPC MIN 120  @世界BOSS开
+
+
+#AutoRun NPC HOUR 5  @活动BOSS开
+
+
+#AutoRun NPC HOUR 2  @活动BOSS开1
+
+#AutoRun NPC SEC 1 @假人开始上线
+
+
+;#AutoRun NPC RUNONDAY 20:30 @红蓝行会关闭
+;#AutoRun NPC RUNONDAY 22:01 @红蓝领奖检查
+
+
+

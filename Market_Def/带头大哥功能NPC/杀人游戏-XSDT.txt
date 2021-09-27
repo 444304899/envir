@@ -1,0 +1,88 @@
+[@main]
+
+#if
+#act
+SENDMSG 4 杀人活动为正式区等待时间活动，奖励丰厚，第一名可获得唯一称号。人人都有奖励拿。可开启狂暴增强自身实力，被击杀不掉狂暴。
+
+#if
+small g495 1
+#act
+mov s$活动举行 正在举行
+#ELSEACT
+mov s$活动举行 <$str(g495)>秒后开启
+
+
+
+
+#IF
+#ACT
+MOV S$第一名 <$GLOBAL(SRYX-杀人第1名)>
+;SetStringBlank S$第一名 14 1
+SetStringBlank S$第一名 14 1
+MOV S$第二名 <$GLOBAL(SRYX-杀人第2名)>
+;SetStringBlank S$第二名 14 1
+SetStringBlank S$第二名 14 1
+MOV S$第三名 <$GLOBAL(SRYX-杀人第3名)>
+;SetStringBlank S$第三名 14 1
+SetStringBlank S$第三名 14 1
+
+MOV S$第一数 <$GLOBAL(SRYX-杀人第1数)>
+;SetStringBlank S$第一数 3 1
+SetStringBlank S$第一数 3 1
+MOV S$第二数 <$GLOBAL(SRYX-杀人第2数)>
+;SetStringBlank S$第二数 3 1
+SetStringBlank S$第二数 3 1
+MOV S$第三数 <$GLOBAL(SRYX-杀人第3数)>
+;SetStringBlank S$第三数 3 1
+SetStringBlank S$第三数 3 1
+
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                     <[活动提示]/FCOLOR=70>  \
+<>                                                     <杀人活动/FCOLOR=161>{<$str(s$活动举行)>　/FCOLOR=151}\ \ \
+<>                                                     <活动规则：进入活动后，获得80级，神秘BUFF，无法回城/FCOLOR=215>\
+<>                                                     <活动规则：活动期间可开启狂暴，死亡不消失，可商铺购买药品/FCOLOR=215>\
+<>                                                     <活动规则：活动时间为7分钟，查看活动奖励/FCOLOR=215> <查看活动奖励
+|253#杀人数第一获得：[称号]杀戮之王+赞助会员+500钻石
+^253#杀人数第二获得：赞助会员+500钻石
+^253#杀人数第三获得：500钻石奖励
+^253#杀人数满20获得：200钻石奖励
+
+^251#当前第一名获得者：【<$str(S$第一名)>】　当前第一名杀人数：【<$str(S$第一数)>】
+^251#当前第二名获得者：【<$str(S$第二名)>】　当前第二名杀人数：【<$str(S$第二数)>】
+^251#当前第三名获得者：【<$str(S$第三名)>】　当前第三名杀人数：【<$str(S$第三数)>】>\
+\ \ \
+<>                                                                          <《进入杀人活动》/@杀人活动>
+[@杀人活动]
+#IF
+small g495 1
+LARGE G496 0
+#ACT
+SET [22] 1
+CHANGELEVEL = 80
+PGAddHpPer + 100
+takew 神秘人[斗笠] 1
+takew 七星剑仙的剑气[活动] 1
+takew 阳光战神的威严[活动] 1
+take 神秘人[斗笠] 46
+take 七星剑仙的剑气[活动] 46
+take 阳光战神的威严[活动] 46
+;GiveStateItem 神秘人[斗笠] 1 1 1 1 1 1 1
+GIVESTATEITEM 神秘人[斗笠]  1 1 1 1 1 1 1 0
+;GiveStateItem 七星剑仙的剑气[活动] 1 1 1 1 1 1 1
+GIVESTATEITEM 七星剑仙的剑气[活动]  1 1 1 1 1 1 1 0
+;GiveStateItem 阳光战神的威严[活动] 1 1 1 1 1 1 1
+GIVESTATEITEM 阳光战神的威严[活动]  1 1 1 1 1 1 1 0
+AutoTakeOnItem 神秘人[斗笠] 13
+AutoTakeOnItem 七星剑仙的剑气[活动] 1
+AutoTakeOnItem 阳光战神的威严[活动] 0
+AutoTakeOnItem 火龙の靴子 11
+MAP SRDT
+HumanHP + 100000000
+HumanMP + 100000000
+;SendCenterMsg 70 0 〖杀人活动〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..杀人前三名可获得奖励!. 1 10
+#ELSEACT
+messagebox 活动已关闭,开启时间为正式区开区10分钟,测试区无效

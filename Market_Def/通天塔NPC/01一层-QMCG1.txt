@@ -1,0 +1,50 @@
+[@main]
+#if
+#say
+<《全民闯关》/FCOLOR=249> \ \
+<你当前所处位置:<$MapTitle>/FCOLOR=7> \ \
+<前往下一层需要:/FCOLOR=7><清理地图内所有怪物/FCOLOR=250>\ \
+<第一关奖励：灵符*1000 + 元宝*100W/FCOLOR=254>\ \
+<>                             <《领取奖励，进入下一层》/@进图>\
+
+[@进图]
+#IF
+CheckMonMap QMCG1 1
+#ACT
+MESSAGEBOX 请先清理完地图内的所有怪物
+BREAK
+#IF
+EQUAL A13 QMCG1
+#ACT
+MOV A13 QMCG2
+MOV G15 600
+SENDMSG 0 【全民闯关】：第一层闯关结束，第二层闯关已开启！请在限定十分钟内清理完第二层怪物！！
+SENDMSG 0 【全民闯关】：第一层闯关结束，第二层闯关已开启！请在限定十分钟内清理完第二层怪物！！
+SENDMSG 0 【全民闯关】：第一层闯关结束，第二层闯关已开启！请在限定十分钟内清理完第二层怪物！！
+SENDMSG 0 【全民闯关】：第一层闯关结束，第二层闯关已开启！请在限定十分钟内清理完第二层怪物！！
+SENDMSG 0 【全民闯关】：第一层闯关结束，第二层闯关已开启！请在限定十分钟内清理完第二层怪物！！
+SENDMSG 0 【全民闯关】：第一层闯关结束，第二层闯关已开启！请在限定十分钟内清理完第二层怪物！！
+SENDMSG 0 【全民闯关】：第一层闯关结束，第二层闯关已开启！请在限定十分钟内清理完第二层怪物！！
+
+#IF
+CHECK [31] 0
+#ACT
+SET [31] 1
+GAMEGIRD + 1000
+GAMEGOLD + 1000000
+MAP QMCG2
+SendCenterMsg 70 0 〖全民闯关〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 3
+SENDDELAYMSG 请在%s内，清理完第二关怪物，否则活动提前关闭 <$str(g15)> 255 1 @啊啊啊全民
+SENDMSG 0 【全民闯关】：玩家[<$USERNAME>]闯关成功，领取了第一关奖励：1000灵符+100W元宝！！
+SENDMSG 0 【全民闯关】：玩家[<$USERNAME>]闯关成功，领取了第一关奖励：1000灵符+100W元宝！！
+SENDMSG 0 【全民闯关】：玩家[<$USERNAME>]闯关成功，领取了第一关奖励：1000灵符+100W元宝！！
+BREAK
+#IF
+CHECK [31] 1
+#ACT
+MAP QMCG2
+SendCenterMsg 70 0 〖全民闯关〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 3
+SENDDELAYMSG 请在%s内，清理完第二关怪物，否则活动提前关闭 <$str(g15)> 255 1 @啊啊啊全民
+BREAK
+
+[@啊啊啊全民]

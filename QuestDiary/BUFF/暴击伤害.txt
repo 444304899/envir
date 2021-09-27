@@ -1,0 +1,150 @@
+[@计算]
+{
+#if
+#act
+MOV N$暴击伤害 100
+
+#IF
+CHECKTITLE 五行之体·水[一阶]
+#ACT
+INC N$暴击伤害 1
+
+
+#IF
+CHECKTITLE 五行之体·水[二阶]
+#ACT
+INC N$暴击伤害 2
+
+
+#IF
+CHECKTITLE 五行之体·水[三阶]
+#ACT
+INC N$暴击伤害 3
+
+
+#IF
+CHECKTITLE 五行之体·水[四阶]
+#ACT
+INC N$暴击伤害 4
+
+
+#IF
+CHECKTITLE 五行之体·水[五阶]
+#ACT
+INC N$暴击伤害 5
+
+
+#IF
+CHECKTITLE 五行之体·水[六阶]
+#ACT
+INC N$暴击伤害 6
+
+
+#IF
+CHECKTITLE 五行之体·水[七阶]
+#ACT
+INC N$暴击伤害 7
+
+
+#IF
+CHECKTITLE 五行之体·水[八阶]
+#ACT
+INC N$暴击伤害 8
+
+
+#IF
+CHECKTITLE 五行之体·水[九阶]
+#ACT
+INC N$暴击伤害 9
+
+
+#IF
+CHECKTITLE 五行之体·水[十阶]
+#ACT
+INC N$暴击伤害 10
+
+
+
+
+
+#IF
+equal U22 1
+#ACT
+INC N$暴击伤害 1
+
+
+#IF
+equal U22 2
+#ACT
+INC N$暴击伤害 2
+
+#IF
+equal U22 3
+#ACT
+INC N$暴击伤害 3
+
+#IF
+equal U22 4
+#ACT
+INC N$暴击伤害 4
+
+#IF
+equal U22 5
+#ACT
+INC N$暴击伤害 5
+
+#IF
+equal U22 6
+#ACT
+INC N$暴击伤害 6
+
+#IF
+equal U22 7
+#ACT
+INC N$暴击伤害 7
+
+#IF
+equal U22 8
+#ACT
+INC N$暴击伤害 8
+
+#IF
+equal U22 9
+#ACT
+INC N$暴击伤害 9
+
+#IF
+equal U22 10
+#ACT
+INC N$暴击伤害 10
+
+#if
+#act
+GETHUMCUSTOMITEMVALUE -1 10 <$STR(N$鉴定暴击)> N99
+INC N$暴击伤害 <$STR(N$鉴定暴击)>
+
+
+#IF
+CHECKTITLE 神魔·小成
+#ACT
+INC N$暴击伤害 3
+
+
+#IF
+CHECKTITLE 神魔·大成
+#ACT
+INC N$暴击伤害 5
+
+
+#IF
+CHECKTITLE 神魔·完满
+#ACT
+INC N$暴击伤害 10
+
+
+#if
+#act
+ChangeHumNewValue 0 1 65535 <$STR(n$暴击伤害)>
+
+
+}

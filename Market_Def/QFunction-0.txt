@@ -1,0 +1,4742 @@
+(@storage @getback @@offlinemsg)(@buy @sell @repair @s_repair)
+%100
++100
++101
++102
++103
++104
++105
++106
++107
++108
++109
++110
++111
+
+
+[@主界面按钮设置]
+#CALL [\主界面基础按钮\主界面基础按钮QF.txt] @基础按钮QF
+[@ButtonClick10]
+#IF
+CHECKLEVELEX > 0
+#ACT
+DELBUTTON 1
+DELBUTTON 2
+DELBUTTON 3
+DELBUTTON 4
+DELBUTTON 5
+DELBUTTON 6
+DELBUTTON 7
+DELBUTTON 8
+DELBUTTON 9
+DELBUTTON 10
+ADDBUTTON 100 11 71 72 73 0 350 0 -1
+SET [11] 1
+BREAK
+[@usercmd9]
+#IF
+ISADMIN
+#ACT
+#CALL [\寒流新假人\假人控制台.txt] @假人控制
+
+
+[@GETEXP]
+#IF
+ISDUMMY
+EQUAL <$GLOBAL(假人_杀怪快速升级开关)> 开启
+#ACT
+MOVR N$寒流假人升级就是快 <$GLOBAL(假人_杀怪补经验最低)> <$GLOBAL(假人_杀怪补经验最高)>
+CHANGEEXP + <$STR(N$寒流假人升级就是快)>
+
+
+
+
+
+[@CloseClientBuff1]
+#IF
+#ACT
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+MESSAGEBOX 　　　温馨提示：\　\　　　　　当前在地图时间已到，系统自动将你传回！
+BREAK
+
+
+[@ButtonClick2]
+
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+#if
+#act
+OpenWebSite http://www.95gm.com
+
+
+[@ButtonClick3]
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+#if
+#act
+#CALL [\大熊功能\会员商城.txt] @商城界面
+
+
+[@ButtonClick4]
+#IF
+EQUAL <$MAP> 沙巴克皇宫
+EQUAL <$MAP> zc
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+#if
+#act
+#CALL [\大熊功能\活动界面.txt] @活动1
+
+
+[@ButtonClick5]
+#IF
+;#CALL [\大熊功能\神火熔炉.txt] @神火系统
+#CALL [\大熊功能\狂暴.txt] @开启狂暴
+
+
+
+[@ButtonClick6]
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+#if
+#act
+#CALL [\馒头制作\奖励大厅\奖励大厅脚本.txt] @奖励大厅触发NAM
+
+[@ButtonClick7]
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+#
+#act
+#CALL [\大熊功能\神器匠炉.txt] @神器匠炉
+
+
+
+[@ButtonClick16]
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+#if
+#act
+OpenWebSite http://www.95gm.com
+
+[@ButtonClick8]
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+#if
+#act
+#CALL [\大熊功能\神火熔炉.txt] @神火系统
+
+
+[@ButtonClick19]
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+#if
+#act
+#CALL [\大熊功能\掉落查看.txt] @掉落界面
+
+
+
+[@ButtonClick15]
+#IF
+EQUAL <$MAP> xsdt
+#ACT
+BREAK
+
+#if
+#act
+#CALL [\大熊功能\强化转移.txt] @强化转移
+
+
+
+
+
+[@ItemBagButtonClick1]
+
+#IF
+#ACT
+#CALL [\大熊功能\装备回收1.txt] @回收界面1
+
+
+
+[@ItemBagButtonClick2]
+\ \ \
+#if
+#say
+\ \
+<存放物品/@storage>\
+<取回物品/@getback>\
+<离开/@exit>
+#act
+;CLOSEMERCHANTBIGDLG
+break
+
+
+[@storage]
+\ \ \ \
+需要保管什么东西?\ \
+<返回/@main>
+
+[@getback]
+\ \ \ \
+请看目录决定找什么东西.\ \ \
+<返回/@main>
+
+;[@ItemBagButtonClick4]
+;#IF
+;#ACT
+;#CALL [\大熊功能\装备回收.txt] @回收界面
+
+
+
+
+[@ItemBagButtonClick3]
+#IF
+#ACT
+#CALL [\大熊功能\综合服务.txt] @服务
+
+
+[@ItemBagButtonClick5]
+
+#if
+check [10] 0
+#act
+set [10] 1
+FILTERGLOBALMSG 1
+MESSAGEBOX 屏蔽全服信息..
+break
+
+#if
+check [10] 1
+#act
+set [10] 0
+FILTERGLOBALMSG 0
+MESSAGEBOX 解除屏蔽信息....
+break
+
+
+
+[@PlayLevelUp]
+
+#if
+isdummy
+#ACT
+movr N$下图随机数 100
+#CALL [\寒流新假人\假人升级触发.txt] @升级触发
+
+#if
+isdummy
+checklevel <$GLOBAL(假人_最低下图等级)>
+small N$下图随机数 <$GLOBAL(假人_下图几率)>
+#act
+#CALL [\寒流新假人\假人走动打怪.txt] @假人下图打怪
+
+
+#IF
+checklevelex > 200
+checklevelex < 303
+large u1 0
+#act
+dec u1 1
+SENDMSG 6 你的觉醒等级上限为<$str(u1)>.!!
+
+#IF
+checklevelex = 100
+#ACT
+GMEXECUTE 解除禁言722 SELF
+BREAK
+
+
+
+
+
+
+[@QueryMyShopFail]
+#ACT
+MESSAGEBOX 你还没有个人商店，是否创建你的个人商店？\\点击确定创建个人商店。 @创建个人商店 @取消
+
+[@创建个人商店]
+\ \ \ \
+<>        亲爱的玩家你好。这里可以申请开店。\
+<>        你可以把你的物品放到你的店铺里出售，\
+<>        游戏中的玩家可以查询到你要出售的物品。\
+<>        也可以把不用的物品放到店铺的仓库里。\
+<>        点击客户端中“店”就可以进入到你的店铺中,\
+<>        也可以查询其他用户的店铺和物品，\
+<>        可以很方便的把仓库物品和出售的物品相互转移。\
+<>        还可以进行摆摊操作。\
+
+<>         <我要开店(点击输入你喜欢的店铺名称)/@@InputString1>\
+
+[@InputString1]
+#IF
+CheckTextList ..\..\..\..\..\跨区文件夹\全服商铺名称.txt <$STR(S1)>
+#ACT
+MessageBox 提示：此商铺名称重复.
+BREAK
+
+
+#IF
+NOT CheckTextList ..\..\..\..\..\跨区文件夹\全服商铺名称.txt <$STR(S1)>
+#ACT
+AddTextListEX ..\..\..\..\..\跨区文件夹\全服商铺名称.txt <$STR(S1)>
+
+
+
+
+
+#IF
+CHECKMYSHOP
+#ACT
+MESSAGEBOX 你已经有店铺了
+BREAK
+
+#IF
+CHECKSHOPNAME <$STR(S$1)>
+#ACT
+MESSAGEBOX <$STR(S$1)>店铺名称已经存在，请重新选择一个
+BREAK
+
+#IF
+#ACT
+CREATEMYSHOP <$STR(S$1)>
+
+[@CreateMyShopOK]
+#SAY
+\ \ \ \
+你的店铺创建成功
+
+[@CreateMyShopFail]
+#SAY
+\ \ \ \
+你的店铺创建失败
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@PlayReconnection]
+
+
+
+
+
+[@PlayOffLine]
+#if
+#act
+SetOffTimer 1
+SetOffTimer 3
+SetOffTimer 4
+SetOffTimer 10
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+OFFLINEPLAY 65535
+BREAK
+
+
+
+
+
+
+
+
+[@StdModeFunc98]
+
+#if
+large n$战斗中 0
+#act
+SENDMSG 7 战斗中,无法使用特殊传送石!
+SENDMSG 7 战斗中,无法使用特殊传送石!
+SENDMSG 7 战斗中,无法使用特殊传送石!
+SENDMSG 7 战斗中,无法使用特殊传送石!
+Break
+
+
+#IF
+#ACT
+SHOWPROGRESSBARDLG 1 @随机吧_1 准备随机中,进度%d%... 0 @随机中断
+BREAK
+
+
+[@随机吧_1]
+
+
+#IF
+#Act
+CLEARDELAYGOTO 1
+map <$MAP>
+CloseClientBuff 1
+Break
+
+
+[@随机中断]
+#IF
+#Act
+SendMsg 5 提示：随机被中断，随机状态中不能移动和攻击！
+Break
+
+
+
+
+[@StdModeFunc262]
+#if
+large n$战斗中 0
+#act
+SENDMSG 6 战斗中,无法使用特殊传送石!
+BREAK
+
+
+
+#if
+NOT CHECKUNDERWAR 沙巴克
+large <$MAXDC> 39999
+large U21 4
+CHECKRENEWLEVEL > 14
+#act
+MAPMOVE 克洛诺斯海岛 290 339
+BREAK
+
+
+#if
+#act
+MESSAGEBOX [提示]:你未达到使用资格！请继续变强！
+BREAK
+
+[@StdModeFunc97]
+
+#IF
+#Act
+CLEARDELAYGOTO 1
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+CloseClientBuff 1
+Break
+
+
+[@StdModeFunc423]
+#IF
+#ACT
+SHOWPROGRESSBARDLG 3 @超脱吧_1 准备回城中,进度%d%... 1 @回城中断
+BREAK
+
+
+[@超脱吧_1]
+#IF
+#Act
+CLEARDELAYGOTO 1
+MAPMOVE 超脱  41 37
+CloseClientBuff 1
+Break
+
+
+
+
+
+[@StdModeFunc99]
+#IF
+#ACT
+SHOWPROGRESSBARDLG 3 @回城吧_1 准备回城中,进度%d%... 1 @回城中断
+BREAK
+
+
+[@回城吧_1]
+#IF
+#Act
+CLEARDELAYGOTO 1
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+CloseClientBuff 1
+Break
+
+
+
+
+[@回城中断]
+#IF
+#Act
+SendMsg 5 提示：回城被中断，回城状态中不能移动和攻击！
+Break
+
+
+
+[@StdModeFunc10]
+#if
+#act
+CHANGEPKPOINT = 0
+;CHANGEITEMADDVALUE 1 4 = 0
+CHANGEITEMADDVALUE 1 5 = -0
+
+MESSAGEBOX [提示]:你的PK点已经清除,下次小心点哦
+
+
+
+
+
+
+[@QueryingHumName]
+正在查询请稍后。。。\ \
+<关闭/@exit>\
+
+[@QueryHumNameOK]
+查询成功，该名称可以使用\ \
+<关闭/@exit>\
+
+[@ChangeingHumName]
+正在修改请稍后。。。\ \
+<关闭/@exit>\
+
+[@ChangeHumNameOK]
+#ACT
+;这个命令是用来修改，你的变量保存文件和人物名称列表文件里面的人物名称的，如果没有这些可以不使用这个命令
+;这个命令也只能放在这个地方，放其他地方无效
+CHANGEHUMNAMEFILE ..\QuestDiary\变量文件\HQCQASave.txt
+CHANGEHUMNAMEFILE ..\QuestDiary\会员名称.txt
+#SAY
+你的名字修改成功，旧名称：<$USERNAME> 新名称：<$USERNEWNAME>！\ \
+<关闭/@exit>\
+
+[@NameLengthFail]
+名字长度不允许超过30个字符！\ \
+<关闭/@exit>\
+
+[@HumNameFilter]
+该名字存在非法字符！\ \
+<关闭/@exit>\
+
+[@HumNameExists]
+该名字已经被其他玩家占用，请选择其他名字\ \
+<关闭/@exit>\
+
+[@ChangeHumNameFail]
+改名失败！\ \
+<关闭/@exit>\
+
+
+
+[@开始杀人排名]
+#IF
+CHECKLEVELEX > 0
+#ACT
+SortHumVarToListEx SRYX-个人杀人 ..\QuestDiary\杀人游戏\杀人游戏排行数据.txt 1 ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1
+AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
+AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 0 s93 N90
+#IF
+LARGE N90 0
+#ACT
+CALCVAR GLOBAL SRYX-杀人第1名 = <$STR(s93)>
+CALCVAR GLOBAL SRYX-杀人第1数 = <$STR(N90)>
+#ELSEACT
+CALCVAR GLOBAL SRYX-杀人第1名 =
+CALCVAR GLOBAL SRYX-杀人第1数 =
+#IF
+CHECKLEVELEX > 0
+#ACT
+GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1 s93 N90
+#IF
+LARGE N90 0
+#ACT
+CALCVAR GLOBAL SRYX-杀人第2名 = <$STR(s93)>
+CALCVAR GLOBAL SRYX-杀人第2数 = <$STR(N90)>
+#ELSEACT
+CALCVAR GLOBAL SRYX-杀人第2名 =
+CALCVAR GLOBAL SRYX-杀人第2数 =
+#IF
+CHECKLEVELEX > 0
+#ACT
+GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 2 s93 N90
+#IF
+LARGE N90 0
+#ACT
+CALCVAR GLOBAL SRYX-杀人第3名 = <$STR(s93)>
+CALCVAR GLOBAL SRYX-杀人第3数 = <$STR(N90)>
+#ELSEACT
+CALCVAR GLOBAL SRYX-杀人第3名 =
+CALCVAR GLOBAL SRYX-杀人第3数 =
+
+#if
+CHECKVAR GLOBAL SRYX-杀人第1名 = <$USERNAME>
+#act
+MOV S$当前排名 第一名
+BREAK
+#if
+CHECKVAR GLOBAL SRYX-杀人第2名 = <$USERNAME>
+#act
+MOV S$当前排名 第二名
+BREAK
+#if
+CHECKVAR GLOBAL SRYX-杀人第3名 = <$USERNAME>
+#act
+MOV S$当前排名 第三名
+BREAK
+
+[@KillPlay]
+
+#IF
+ISONMAP SRDT
+large g496 0
+#act
+MOV S$当前排名 暂无排名
+CALCVAR HUMAN SRYX-个人杀人 + 1
+SAVEVAR HUMAN SRYX-个人杀人
+GOTO @开始杀人排名
+SENDMSG 7 当前杀人排行第一玩家： 【<$GLOBAL(SRYX-杀人第1名)>】，杀人数量：【<$GLOBAL(SRYX-杀人第1数)>】
+SENDMSG 7 当前杀人排行第二玩家： 【<$GLOBAL(SRYX-杀人第2名)>】，杀人数量：【<$GLOBAL(SRYX-杀人第2数)>】
+SENDMSG 7 当前杀人排行第三玩家： 【<$GLOBAL(SRYX-杀人第3名)>】，杀人数量：【<$GLOBAL(SRYX-杀人第3数)>】
+SENDMSG 7 你在杀人游戏中，当前击杀人数为：<$HUMAN(SRYX-个人杀人)>..当前排名：<$str(S$当前排名)>
+
+#if
+#ACT
+INC U35 1
+
+#if
+CHECKCASTLEWARAREA 沙巴克
+ISONMAP 0150
+#ACT
+inc u19 1
+
+
+#if
+NOT CHECKCASTLEWARAREA 沙巴克
+NOT ISONMAP 0150
+NOT ISONMAP SRDT
+small u31 20
+<$CURRRTARGETNAME>.checktitle 狂暴之力
+Checkitem 杀人书 1
+CHECKTITLE 狂暴之力
+#ACT
+INC u31 1
+
+
+#if
+CHECKCASTLEWARAREA 沙巴克
+ISONMAP 0150
+ISONMAP SRDT
+small u31 20
+Checkitem 杀人书 1
+CHECKTITLE 狂暴之力
+<$CURRRTARGETNAME>.checktitle 狂暴之力
+#ACT
+;INC u31 0
+
+
+
+
+
+[@PlayDie]
+
+
+#if
+;CHECKCURRTARGETRACE = 0
+CHECKCASTLEWARAREA 沙巴克
+ISONMAP 0150
+ISONMAP SRDT
+Checkitem 杀人书 1
+large U31 0
+#ACT
+dec u31 1
+
+
+
+
+
+#if
+CHECKTITLE 狂暴之力
+<$CURRRTARGETNAME>.checktitle 狂暴之力
+#ACT
+goto @杀人书检测
+
+
+#if
+NOT CHECKCASTLEWARAREA 沙巴克
+NOT ISONMAP 0150
+NOT ISONMAP SRDT
+CHECKTITLE 狂暴之力
+CHECKCURRTARGETRACE = 0
+#ACT
+DELSKILL 半月弯刀
+DEPRIVETITLE 狂暴之力
+;dec u31 3
+INC G497 1
+SENDTOPCHATBOARDMSG 0 149 235 10 累计击杀狂暴玩家已达<$str(g497)>个,累计38个[百团大战100,98]出现神秘BOSS,击杀将获得大量金币.
+SENDTOPCHATBOARDMSG 0 149 235 10 累计击杀狂暴玩家已达<$str(g497)>个,累计38个[百团大战100,98]出现神秘BOSS,击杀将获得大量金币.
+SENDMSG 6 你被人物【<$CURRRTARGETNAME>】杀死了,你身上的狂暴之力消失!!
+<$CURRRTARGETNAME>.give 金币 20
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 击杀奖励:你成功杀死拥有狂暴之力的玩家,获得20金币的奖励. 0 5
+SETICON 1 -1
+SETICON 5 -1
+;goto @杀人书检测
+
+#IF
+EQUAL G497 38
+#ACT
+MOV G497 0
+MonGenEx 0101 9 16 小土豪 1 1 0 253
+Gmexecute 全服触发 @小土豪活动
+
+
+
+
+
+
+
+
+
+
+
+#IF
+CHECKITEMW [时装]·鳯求凰 1
+#ACT
+SETOFFTIMER 116
+
+
+#IF
+ISONMAP DJT
+#ACT
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+#IF
+not ISONMAP DJT
+checkitemw 「赤炎·天照」 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 50
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发「赤炎·天照」效果,原地复活.... 1 5
+;BREAK
+
+
+#IF
+not ISONMAP DJT
+checkitemw ◎黑鳞铠甲◎ 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 55
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发◎黑鳞铠甲◎效果,原地复活.... 1 5
+;BREAK
+
+
+#IF
+not ISONMAP DJT
+checkitemw 古神皮甲 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 60
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发古神皮甲效果,原地复活.... 1 5
+;BREAK
+
+
+#IF
+not ISONMAP DJT
+checkitemw 九曲三相 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 65
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发九曲三相效果,原地复活... 1 5
+
+#IF
+not ISONMAP DJT
+checkitemw 布拉巴斯王者统袍 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 70
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发布拉巴斯王者统袍效果,原地复活.... 1 5
+;BREAK
+
+#IF
+not ISONMAP DJT
+checkitemw 十万妖魂兽甲 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 75
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发十万妖魂兽甲效果,原地复活.... 1 5
+;BREAK
+
+#IF
+not ISONMAP DJT
+checkitemw 阿耳忒弥斯神袍 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 80
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发阿耳忒弥斯神袍效果,原地复活... 1 5
+
+;BREAK
+
+#IF
+not ISONMAP DJT
+checkitemw 阳光战神的威严 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 85
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发阳光战神的威严效果,原地复活... 1 5
+;BREAK
+
+#IF
+not ISONMAP DJT
+checkitemw 阳光战神的威严【超脱】 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 85
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发阳光战神的威严效果,原地复活... 1 5
+;BREAK
+
+
+
+
+#IF
+not ISONMAP DJT
+checkitemw 五龙铡 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 90
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发五龙铡效果,原地复活... 1 5
+;BREAK
+
+
+#IF
+not ISONMAP DJT
+checkitemw 李主仙衣≮洪荒终≯ 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 100
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发李主仙衣≮洪荒终≯效果,原地复活... 1 5
+;BREAK
+
+
+
+
+#IF
+not ISONMAP DJT
+checkitemw 人.仙.鬼.怪.≮善恶兩分≯ 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 100
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发人.仙.鬼.怪.≮善恶兩分≯效果,原地复活.. 1 5
+;BREAK
+
+
+#IF
+not ISONMAP DJT
+checkitemw 孟姝皇袍 1
+LARGE N$复活CD 299
+#ACT
+MOV N$复活CD 0
+GmExeCute 复活 Self
+PGAddHpPer + 100
+SendCenterMsg 70 0 玩家【<$USERNAME>】触发孟姝皇袍效果,原地复活.. 1 5
+;BREAK
+
+
+#IF
+CHECKTITLE 轮回梦中取
+KILLBYHUM
+#ACT
+<$KILLER>.PGAddHpPer + 20
+<$KILLER>.SENDMSG 7 恭喜你杀死对方，血量恢复20%
+;BREAK
+
+
+#IF
+CHECKTITLE 镇压【天.地.人】
+KILLBYHUM
+#ACT
+<$KILLER>.PGAddHpPer + 20
+<$KILLER>.SENDMSG 7 恭喜你杀死对方，血量恢复20%
+
+
+#IF
+CHECKTITLE 清棺璇
+KILLBYHUM
+#ACT
+<$KILLER>.PGAddHpPer + 20
+<$KILLER>.SENDMSG 7 恭喜你杀死对方，血量恢复20%
+
+
+#IF
+CHECKTITLE 善庸混天绫
+KILLBYHUM
+#ACT
+<$KILLER>.PGAddHpPer + 20
+<$KILLER>.SENDMSG 7 恭喜你杀死对方，血量恢复20%
+
+
+
+
+#IF
+ISDUMMY
+KillByHum
+#ACT
+SENDMSG 1 【江湖传言】:在[<$MapTitle>]发生一起凶案[<$USERNAME>]被[<$CURRRTARGETNAME>]杀死了
+DelayGoto 5000 @假人复活回城
+;BREAK
+
+#IF
+ISDUMMY
+#ACT
+SENDMSG 1 【江湖传言】:在[<$MapTitle>]发生一起怪物伤人事件[<$USERNAME>]被[<$CURRRTARGETNAME>]杀死了
+DelayGoto 5000 @假人复活回城
+;BREAK
+
+
+#IF
+CHECKCURRTARGETRACE = 0
+#ACT
+SENDMSG 1 【江湖传言】:在[<$MapTitle>]发生一起凶案[<$USERNAME>]被[<$CURRRTARGETNAME>]杀死了
+INC u36 1
+
+#IF
+NOT CHECKCURRTARGETRACE = 0
+#ACT
+SENDMSG 1 【江湖传言】:在[<$MapTitle>]发生一起怪物伤人事件[<$USERNAME>]被[<$CURRRTARGETNAME>]杀死了
+
+
+
+
+
+
+
+#IF
+ISONMAP SRDT
+#ACT
+;AutoTakeOffItem 0
+;AutoTakeOffItem 1
+;AutoTakeOffItem 3
+;AutoTakeOffItem 4
+;AutoTakeOffItem 5
+;AutoTakeOffItem 6
+;AutoTakeOffItem 7
+;AutoTakeOffItem 8
+;AutoTakeOffItem 10
+AutoTakeOffItem 13
+TAKEw 神秘人[斗笠] 1
+TAKE 神秘人[斗笠] 46
+TAKEw 七星剑仙的剑气[活动] 1
+TAKE 七星剑仙的剑气[活动] 46
+TAKEw 阳光战神的威严[活动] 1
+TAKE 阳光战神的威严[活动] 46
+;TAKE 火龙の战甲 46
+;TAKE 火龙の头盔 46
+;TAKE 火龙の项链 46
+;TAKE 火龙の手镯 46
+;TAKE 火龙の戒指 46
+;TAKE 火龙の腰带 46
+;TAKE 火龙の靴子 46
+SHOWPROGRESSBARDLG 3 @杀人活动复活 复活回城中,进度%d%...
+break
+
+
+
+#if
+ISCASTLEGUILD
+CHECKUNDERWAR 沙巴克
+#act
+SHOWPROGRESSBARDLG 5 @复活22 正在复活中...,进度%d%...
+
+
+
+
+
+#IF
+NOT CHECKUNDERWAR 沙巴克
+not ISONMAP 0150
+#act
+#say
+\ \ \ \ \ \ \ \ \ \ \
+
+<>                                <整天杀猪，今天终于被猪杀了，是否复活回城！/AUTOCOLOR=158>\
+<>                                <整天杀猪，今天终于被猪杀了，是否复活回城！/AUTOCOLOR=158>\
+<>                                <整天杀猪，今天终于被猪杀了，是否复活回城！/AUTOCOLOR=158>\
+<>                                <强化衣服武器，升级切割称号可大福提升实力！/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+<>                                <强化衣服武器，升级切割称号可大福提升实力！/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+<>                                <强化衣服武器，升级切割称号可大福提升实力！/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\  \  \
+
+
+<>                                               <我要复活/@我要复活>   \
+
+
+[@杀人活动复活]
+#IF
+#ACT
+GmExeCute 复活 Self
+movr N$坐标x 29 35
+movr N$坐标y 35 44
+MAPMOVE xsdt <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+[@我要复活]
+#IF
+#act
+SHOWPROGRESSBARDLG 1 @复活 复活回城中,进度%d%...
+
+
+[@复活]
+
+#if
+#act
+CLEARDELAYGOTO 1
+
+
+
+#IF
+#ACT
+GmExeCute 复活 Self
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+SETONTIMER 1 1
+SETONTIMER 3 3
+SETONTIMER 4 20
+SETONTIMER 51 60
+SetOnTimer 116 1
+CloseClientBuff 1
+ChangeModeEx 10 1
+HumanHP + 500000000
+#CALL [\大熊功能\职位计算.txt] @开始计算
+#CALL [\BUFF\暴击伤害.txt] @计算
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+break
+
+
+
+[@复活22]
+#if
+;ISCASTLEGUILD
+;CHECKUNDERWAR 沙巴克
+#ACT
+GmExeCute 复活 Self
+mapmove zc 148 148
+PGAddHpPer + 10
+
+
+
+
+
+[@假人复活回城]
+#IF
+ISDUMMY
+#ACT
+GMEXECUTE 复活 Self
+HUMANHP + 80000000
+HUMANMP + 80000000
+movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
+DUMMYSTOP
+movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
+movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
+GOTONOW <$str(N$XX)> <$str(N$YY)>
+SETOFFTIMER 253
+MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
+SETONTIMER 252 <$STR(N$频率)>
+
+
+
+
+;;===================================
+
+
+
+[@Attack]
+
+
+#if
+#act
+;#CALL [\BUFF\真实伤害.txt] @伤害计算
+#CALL [\BUFF\攻击BUFF.txt] @攻击BUFF
+
+
+;#IF
+;CHECKUSEITEM 16
+;#ACT
+;MOVR N$无限几率 1 101
+;#CALL [\BUFF触发\勋章BUFF.txt] @攻击勋章
+
+
+
+
+
+[@Struck]
+#IF
+ISDUMMY
+#ACT
+#CALL [\寒流新假人\假人各种触发.txt] @假人被攻击触发
+
+#IF
+#ACT
+#CALL [\BUFF\被攻击BUFF.txt] @被攻击BUFF
+
+
+;#IF
+;CHECKCURRTARGETRACE = 0
+;#ACT
+;MOV N$被攻击 10
+;DIV N$无敌计算 <$MAXHP> 3
+;#CALL [\BUFF触发\勋章BUFF.txt] @被攻勋章
+
+
+
+
+
+[@MagicStruck]
+#IF
+ISDUMMY
+#ACT
+#CALL [\寒流新假人\假人各种触发.txt] @假人被攻击触发
+
+
+
+[@MagicAttack]
+#IF
+ISDUMMY
+EQUAL <$GLOBAL(假人_补伤害开关)> 开启
+#ACT
+#CALL [\寒流新假人\假人各种触发.txt] @假人补伤害
+
+#IF
+ISDUMMY
+EQUAL <$GLOBAL(假人_攻击吸血开关)> 开启
+#ACT
+#CALL [\寒流新假人\假人各种触发.txt] @假人吸血
+
+
+
+#IF
+ISONMAP 1dl4
+NOT CHECKCURRTARGETRACE = 0
+#act
+ChangeModeEx 12 5 1 5
+
+
+#IF
+ISONMAP 1dl5
+NOT CHECKCURRTARGETRACE = 0
+#act
+ChangeModeEx 12 5 1 5
+
+#if
+checkitemw の沙城霸主的战刃 1
+CHECKCURRTARGETRACE = 0
+EQUAL <$CURRRUSEMAGICID> 27
+#act
+P.PGAddHpPer - 15
+SENDMSG 6 使用野蛮冲撞撞击敌人使目标掉血15%
+
+[@MagTagFunc71]
+#if
+CHECKCURRTARGETRACE = 0
+;EQUAL <$CURRRUSEMAGICID> 71
+LARGE N$连续复活CD 12
+CHECKPOSELEVEL < <$LEVEL>
+#act
+MOV N$连续复活CD 0
+m.ChangeModeEx 10 2
+SENDMSG 6 使用擒龙手使目标锁定2秒，无法移动
+
+
+
+
+[@MagSelfFunc85]
+#if
+;EQUAL <$CURRRUSEMAGICID> 85
+not ISONMAP 封妖城
+not ISONMAP zc
+not ISONMAP 0150
+#act
+PGMoveMonsters <$X> <$Y> 20 0 0 0
+sendmsg 6 范围20的所有怪物都吸过来了
+
+
+
+;========================================================================================================
+[@StdModeFunc1]
+#if
+;CHECKITEMADDVALUE 1 4 > 0
+CHECKITEMADDVALUE 1 5 > -0
+#act
+;CHANGEITEMADDVALUE 1 4 - 1
+CHANGEITEMADDVALUE 1 5 - -1
+BREAK
+
+#if
+;CHECKITEMADDVALUE 1 3 < 5
+CHECKITEMADDVALUE 1 5 < 5
+#act
+;CHANGEITEMADDVALUE 1 3 + 1
+CHANGEITEMADDVALUE 1 5 + 1
+#elseact
+give 超级祝福油 1
+MESSAGEBOX 武器幸运已经达到上限，无法再继续使用了！
+BREAK
+
+
+
+
+[@StdModeFunc20]
+#if
+#act
+GAMEGOLD + 100
+
+SENDMSG 6 元宝增加100.!!
+
+[@StdModeFunc21]
+#if
+#act
+GAMEGOLD + 200
+inc u24 200
+SENDMSG 6 元宝增加200.!!
+
+[@StdModeFunc22]
+#if
+#act
+GAMEGOLD + 500
+inc u24 500
+SENDMSG 6 元宝增加500.!!
+
+[@StdModeFunc23]
+#if
+#act
+GAMEGOLD + 1000
+inc u24 1000
+SENDMSG 6 元宝增加1000.!!
+
+[@StdModeFunc24]
+#if
+#act
+GAMEGOLD + 3000
+inc u24 3000
+SENDMSG 6 元宝增加3000.!!
+
+
+[@StdModeFunc25]
+#if
+#act
+GAMEGOLD + 5000
+inc u24 5000
+SENDMSG 6 元宝增加5000.!!
+
+
+[@StdModeFunc26]
+#if
+#act
+GAMEGOLD + 10000
+inc u24 10000
+SENDMSG 6 元宝增加10000.!!
+
+
+[@StdModeFunc27]
+#if
+#act
+GAMEGOLD + 50000
+inc u24 50000
+SENDMSG 6 元宝增加50000.!!
+
+
+[@StdModeFunc28]
+#if
+#act
+GAMEGOLD + 100000
+inc u24 100000
+SENDMSG 6 元宝增加100000.!!
+
+
+[@StdModeFunc29]
+#if
+#act
+GAMEGOLD + 500000
+inc u24 500000
+SENDMSG 6 元宝增加500000.!!
+
+
+
+[@StdModeFunc30]
+#if
+#act
+GAMEGOLD + 1000000
+inc u24 1000000
+SENDMSG 6 元宝增加1000000.!!
+
+
+[@StdModeFunc31]
+#if
+#act
+GAMEGOLD + 5000000
+inc u24 5000000
+SENDMSG 6 元宝增加5000000.!!
+
+
+[@StdModeFunc32]
+#if
+#act
+GAMEGOLD + 10000000
+inc u24 10000000
+SENDMSG 6 元宝增加10000000.!!
+
+
+
+
+
+
+
+[@PickUpItem868]
+
+;[@StdModeFunc70]
+;#if
+;random 5
+;checkitem 神火·灵能の箱 1
+;#act
+;GETRANDOMLINETEXT ..\QuestDiary\抽奖文件\低级神火.txt <$STR(S$抽奖一)>
+;give <$STR(S$抽奖一)>
+;MESSAGEBOX [提示:]\\打开神火·灵能の盒获得《<$STR(S$抽奖一)>》
+;break
+
+#if
+checkitem 神火·灵能の盒 1
+#act
+take 神火·灵能の盒
+MOVR N$神火点1 1 3
+INC U13 <$STR(n$神火点1)>
+SENDMSG 6 神火点增加<$STR(n$神火点1)>,当前共拥有神火点<$STR(U13)>.!!
+
+
+[@PickUpItem869]
+;[@StdModeFunc71]
+;#if
+;random 5
+;checkitem 神火·灵能の箱 1
+;#act
+;take 神火·灵能の箱
+;GETRANDOMLINETEXT ..\QuestDiary\抽奖文件\高级神火.txt <$STR(S$抽奖二)>
+;give <$STR(S$抽奖二)>
+;MESSAGEBOX [提示:]\\打开神火·灵能の箱获得《<$STR(S$抽奖二)>》
+;break
+
+#if
+checkitem 神火·灵能の箱 1
+#act
+take 神火·灵能の箱 1
+MOVR N$神火点2 5 10
+INC U13 <$STR(n$神火点2)>
+SENDMSG 6 神火点增加<$STR(n$神火点2)>,当前共拥有神火点<$STR(U13)>.!!
+
+
+
+
+
+[@StdModeFunc50]
+#if
+#act
+movr n$灵符红包 10 99
+GAMEGIRD + <$STR(N$灵符红包)>
+SENDMSG 6 你打开了藏宝盒,灵符增加<$STR(N$灵符红包)>点...!!
+
+
+
+[@StdModeFunc51]
+#if
+#act
+movr n$元宝红包小 5000 50000
+GAMEGOLD + <$STR(n$元宝红包小)>
+SENDMSG 6 你打开了藏宝箱,获得元宝<$STR(n$元宝红包小)>点...!!
+
+[@StdModeFunc52]
+#if
+#act
+movr n$元宝红包中 20000 80000
+GAMEGOLD + <$STR(n$元宝红包中)>
+SENDMSG 6 你打开了绝世盒,获得元宝<$STR(n$元宝红包中)>点...!!
+
+[@StdModeFunc53]
+#if
+#act
+movr n$元宝红包大 30000 150000
+GAMEGOLD + <$STR(n$元宝红包大)>
+SENDMSG 6 你打开了绝世箱,获得元宝<$STR(n$元宝红包大)>点...!!
+
+
+[@StdModeFunc200]
+#if
+#act
+MOV N$蒜香肠 1800
+
+[@StdModeFunc201]
+#if
+#act
+MOV N$水晶肠 1800
+
+[@StdModeFunc202]
+#if
+#act
+MOV N$热狗肠 1800
+
+[@StdModeFunc203]
+#if
+#act
+MOV N$爆裂肠 1800
+
+
+
+[@StdModeFunc54]
+#if
+NOT CHECKTITLE 封天之主
+NOT CHECKTITLE 队友之灾
+#act
+CONFERTITLE 队友之灾 1
+MESSAGEBOX [提示]:使用成功,获得称号《队友之灾》!!..
+break
+#elseact
+give 队友之灾(称号卷) 1
+MESSAGEBOX 您已经激活了此荣誉称号！
+BREAK
+
+
+[@StdModeFunc55]
+#if
+NOT CHECKTITLE 封天之主
+NOT CHECKTITLE 祖安狂人
+#act
+CONFERTITLE 祖安狂人 1
+MESSAGEBOX [提示]:使用成功,获得称号《祖安狂人》!!..
+break
+#elseact
+give 祖安狂人(称号卷) 1
+MESSAGEBOX 您已经激活了此荣誉称号！
+BREAK
+
+[@StdModeFunc56]
+#if
+NOT CHECKTITLE 封天之主
+NOT CHECKTITLE 表面兄弟
+#act
+CONFERTITLE 表面兄弟 1
+MESSAGEBOX [提示]:使用成功,获得称号《表面兄弟》!!..
+break
+#elseact
+give 表面兄弟(称号卷) 1
+MESSAGEBOX 您已经激活了此荣誉称号！
+BREAK
+
+
+[@StdModeFunc230]
+#if
+#act
+MOV U41 3600
+MESSAGEBOX 成功使用神圣之书,爆率提升+100%,并且刀刀切割佛本世界内的怪物1%的血量,持续一小时
+
+[@StdModeFunc235]
+#IF
+CHECKGAMEGOLD < 30000000
+#ACT
+give 空城泪-旧王愁称号卷
+MESSAGEBOX 开启需要扣除3000W元宝
+BREAK
+
+#IF
+NOT CHECKTITLE 空城泪-旧王愁
+#ACT
+GAMEGOLD - 30000000
+CONFERTITLE 空城泪-旧王愁
+#ELSEACT
+SENDMSG 6 已经有了该称号
+give 空城泪-旧王愁称号卷
+
+
+[@StdModeFunc236]
+#IF
+#ACT
+INC U40 1800
+MESSAGEBOX 使用物品:杰斯的祝福,爆率提升+100%,持续三十分钟
+
+
+
+
+
+
+
+
+[@StdModeFunc231]
+#IF
+CHECKGAMEGOLD < 20000000
+#ACT
+give 神之信徒称号卷
+MESSAGEBOX 开启需要扣除2000W元宝
+BREAK
+#IF
+NOT CHECKTITLE 神之信徒
+#ACT
+GAMEGOLD - 20000000
+CONFERTITLE 神之信徒
+#ELSEACT
+SENDMSG 6 已经有了该称号
+give 神之信徒称号卷
+
+[@StdModeFunc232]
+#IF
+small U47 200
+#ACT
+inc u47 1
+#ELSEACT
+SENDMSG 6 属性已经提升至满级无法继续提升
+give 巨螽
+
+
+[@StdModeFunc233]
+#IF
+small U48 5
+#ACT
+inc u48 1
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+#ELSEACT
+SENDMSG 6 属性已经提升至满级无法继续提升
+give 精怪珠
+
+
+[@StdModeFunc234]
+#IF
+small U49 5
+#ACT
+inc u49 1
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+#ELSEACT
+SENDMSG 6 属性已经提升至满级无法继续提升
+give 洞冥草
+
+
+
+[@StdModeFunc261]
+#IF
+check [101] 0
+#ACT
+set [101] 1
+;give 护体神盾
+SETONTIMER 36 1
+#CALL [\大熊功能\职位计算.txt] @开始计算
+MESSAGEBOX 你已经是VIP了
+#ELSEACT
+SENDMSG 6 你已经是VIP了无法再继续使用。
+give VIP证明
+
+;================================================
+
+
+
+[@StdModeFunc110]
+#IF
+#ACT
+GAMEGIRD + 100
+
+[@StdModeFunc111]
+#IF
+#ACT
+GAMEGIRD + 500
+
+[@StdModeFunc112]
+#IF
+#ACT
+GAMEGIRD + 1000
+
+[@StdModeFunc113]
+#IF
+#ACT
+GAMEGIRD + 5000
+
+[@StdModeFunc114]
+#IF
+#ACT
+GAMEGIRD + 10000
+
+[@StdModeFunc115]
+#IF
+#ACT
+GAMEGIRD + 50000
+
+
+[@StdModeFunc101]
+#if
+#act
+mov u35 0
+mov u36 0
+SETRANKLEVELNAME %s\-=≡☆云·顶≈之·奕☆≡=-\『转生:<$RELEVEL>』\『斩杀:<$STR(U35)>』\『牺牲:<$STR(U36)>』\
+
+
+
+
+[@StdModeFunc356]
+#if
+CHECKBAGSIZE  8
+#act
+give 五行石 495
+#ELSEACT
+give 五行石(99)x5 1
+MESSAGEBOX  [提示]:你的背包空位不足无法打开!!..
+break
+
+[@StdModeFunc288]
+#if
+
+#act
+MOVR N$充值金币 10 20
+give 金币 <$STR(N$充值金币)>
+SENDMOVEMSG 0 253 255 100 1 <恭喜玩家/FCOLOR=250>{[<$USERNAME>]}<打开/FCOLOR=250>{红包/FCOLOR=253}<获得/FCOLOR=250>{<$STR(N$充值金币)>金币/FCOLOR=253}<奖励/FCOLOR=250>
+
+
+
+[@StdModeFunc357]
+#if
+CHECKBAGSIZE  13
+#act
+give 五行石 990
+#ELSEACT
+give 五行石(99)x10 1
+MESSAGEBOX  [提示]:你的背包空位不足无法打开!!..
+break
+
+;================================================
+
+
+
+
+
+
+[@StdModeFunc100]
+
+#if
+equal U21 0
+#act
+give 符文药剂
+MESSAGEBOX [提示]:你当前不是觉醒者,无法使用!!..
+break
+
+#if
+EQUAL U45 1
+#ACT
+MESSAGEBOX [提示]:你已经使用过符文药剂,无法再次使用!!..
+give 符文药剂
+break
+
+#if
+random 6
+#act
+MOV U45 1
+SENDMOVEMSG 0 243 0 250 1 {符文药剂:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}使用符文药剂成功,获得超强属性！ 11 30 0
+#CALL [\大熊功能\职位计算.txt] @开始计算
+break
+#ELSEACT
+PGAddHpPer = 0
+SENDMOVEMSG 0 243 0 250 1 {符文药剂:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}使用符文药剂时突发意外,经脉逆乱而亡! 11 30 0
+MESSAGEBOX [提示]:使用失败,角色死亡!!..
+break
+
+[@TitleChanged_1]
+#if
+#act
+SetIcon 6 7 736 7 -26 14 0 70 0
+
+[@TitleChanged_2]
+#if
+#act
+SetIcon 6 7 750 7 -26 14 0 70 0
+
+[@TitleChanged_3]
+#if
+#act
+SetIcon 6 7 764 7 -26 14 0 70 0
+
+[@TitleChanged_4]
+#if
+#act
+SetIcon 6 7 778 7 -26 14 0 70 0
+
+[@TitleChanged_5]
+#if
+#act
+SetIcon 6 7 792 7 -26 14 0 70 0
+
+[@TitleChanged_6]
+#if
+#act
+SetIcon 6 7 820 7 -26 14 0 70 0
+
+[@TitleChanged_7]
+#if
+#act
+SetIcon 6 7 834 7 -26 14 0 70 0
+
+[@TitleChanged_8]
+#if
+#act
+SetIcon 6 7 848 7 -26 14 0 70 0
+
+[@TitleChanged_9]
+#if
+#act
+SetIcon 6 7 610 7 -26 14 0 70 0
+
+[@TitleChanged_10]
+#if
+#act
+SetIcon 6 7 624 7 -26 14 0 70 0
+
+[@TitleChanged_11]
+#if
+#act
+SetIcon 6 7 638 7 -26 14 0 70 0
+
+[@TitleChanged_12]
+#if
+#act
+SetIcon 6 7 652 7 -26 14 0 70 0
+
+[@TitleChanged_13]
+#if
+#act
+SetIcon 6 7 666 7 -26 14 0 70 0
+
+[@TitleChanged_14]
+#if
+#act
+SetIcon 6 7 694 7 -26 14 0 70 0
+
+[@TitleChanged_130]
+#if
+#act
+SetIcon 6 7 1010 7 -43 30 0 70 0
+
+[@TitleChanged_131]
+#if
+#act
+SetIcon 6 7 1040 7 -43 30 0 70 0
+
+[@TitleChanged_132]
+#if
+#act
+SetIcon 6 7 1070 7 -43 30 0 70 0
+
+[@TitleChanged_133]
+#if
+#act
+SetIcon 6 7 1100 7 -43 30 0 70 0
+
+[@TitleChanged_134]
+#if
+#act
+SetIcon 6 7 1130 7 -43 30 0 70 0
+
+[@TitleChanged_135]
+#if
+#act
+SetIcon 6 7 1160 7 -43 30 0 70 0
+
+[@TitleChanged_136]
+#if
+#act
+SetIcon 6 7 1190 7 -43 30 0 70 0
+
+[@TitleChanged_137]
+#if
+#act
+SetIcon 6 7 1220 7 -43 30 0 70 0
+
+
+
+
+
+[@GroupItemOn146]
+#if
+#act
+ChangeModeEx 13 2 30 2
+
+[@GroupItemOff146]
+#if
+#act
+ChangeModeEx 13 1 99 2
+
+
+[@GroupItemOn151]
+#if
+NOT CHECKTEXTLIST ..\QuestDiary\不吃任何切割包括时装的怪物.txt <$CURRRTARGETNAME>
+NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
+NOT CHECKTEXTLIST ..\QuestDiary\不吃刀刀1%切割的怪.txt <$CURRRTARGETNAME>
+
+#act
+ChangeModeEx 12 65535 20 2
+
+[@GroupItemOff151]
+#if
+#act
+ChangeModeEx 12 1 99 2
+
+
+[@GroupItemOn544]
+#if
+NOT CHECKTEXTLIST ..\QuestDiary\不吃任何切割包括时装的怪物.txt <$CURRRTARGETNAME>
+NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
+NOT CHECKTEXTLIST ..\QuestDiary\不吃刀刀1%切割的怪.txt <$CURRRTARGETNAME>
+
+#act
+ChangeModeEx 12 65535 20 2
+
+[@GroupItemOff544]
+#if
+#act
+ChangeModeEx 12 1 99 2
+
+
+[@GroupItemOn545]
+#if
+NOT CHECKTEXTLIST ..\QuestDiary\不吃任何切割包括时装的怪物.txt <$CURRRTARGETNAME>
+NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
+NOT CHECKTEXTLIST ..\QuestDiary\不吃刀刀1%切割的怪.txt <$CURRRTARGETNAME>
+
+#act
+ChangeModeEx 12 65535 20 2
+
+[@GroupItemOff545]
+#if
+#act
+ChangeModeEx 12 1 99 2
+
+
+
+
+
+[@GroupItemOn178]
+#if
+#act
+ChangeModeEx 16 65535
+
+[@GroupItemOff178]
+#if
+#act
+ChangeModeEx 16 1
+
+
+[@GroupItemOn205]
+#if
+#act
+ChangeModeEx 15 65535
+ChangeModeEx 16 65535
+ChangeModeEx 17 65535
+
+
+[@GroupItemOff205]
+#if
+#act
+ChangeModeEx 15 1
+ChangeModeEx 16 1
+ChangeModeEx 17 1
+
+
+[@GroupItemOn225]
+#if
+#act
+ChangeModeEx 16 65535
+
+[@GroupItemOff225]
+#if
+#act
+ChangeModeEx 16 1
+
+
+[@GroupItemOn226]
+#if
+#act
+ChangeModeEx 16 65535
+
+[@GroupItemOff226]
+#if
+#act
+ChangeModeEx 16 1
+
+[@GroupItemOn227]
+#if
+#act
+ChangeModeEx 16 65535
+
+[@GroupItemOff227]
+#if
+#act
+ChangeModeEx 16 1
+
+[@GroupItemOn567]
+#if
+#act
+ChangeModeEx 16 65535
+
+[@GroupItemOff567]
+#if
+#act
+ChangeModeEx 16 1
+
+[@GroupItemOn568]
+#if
+#act
+ChangeModeEx 16 65535
+
+[@GroupItemOff568]
+#if
+#act
+ChangeModeEx 16 1
+
+
+[@GroupItemOn616]
+#if
+#act
+ChangeModeEx 16 65535
+
+[@GroupItemOff616]
+#if
+#act
+ChangeModeEx 16 1
+
+
+
+[@GroupItemOn314]
+#if
+#act
+SETONTIMER 50 10
+
+[@GroupItemOff314]
+#if
+#act
+SetOffTimer 50
+
+[@GroupItemOn281]
+#if
+#act
+SHOWPHANTOM 1 2 3 4 5 60 7 8 65535 10
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+
+[@GroupItemOff281]
+#if
+#act
+SHOWPHANTOM 1 2 3 4 5 60 7 8 1 10
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+
+
+
+
+
+[@GroupItemOn297]
+#if
+#act
+MOV N$电锯 60
+
+[@GroupItemOff297]
+#if
+#act
+MOV N$电锯 60
+
+
+
+[@Revival]
+
+#if
+large N$防复活 0
+#act
+KILL 1
+
+#if
+#act
+SetOnTimer 116 1
+
+
+#IF
+not ISONMAP DJT
+#ACT
+MOV U20 60
+MOVR N$连续复活几率 100
+
+
+#if
+checkitemw 扇扇生灵【吸血】 1
+#act
+mov N$万法之心时间 60
+SetOnTimer 115 1
+
+
+
+
+
+#IF
+not ISONMAP DJT
+checkitemw 【沃玛号角】 1
+#ACT
+MOV N$【沃玛号角】CD 120
+MOV N$【沃玛号角】 10
+SendCenterMsg 251 14 《【沃玛号角】》触发,每秒恢复10%的Hp.. 0 10
+
+
+#IF
+not ISONMAP DJT
+checkitemw 冠军披风★ 1
+#ACT
+ChangeModeEx 1 1
+SendCenterMsg 251 14 《冠军披风★》触发,触发无敌,持续一秒. 0 10
+
+
+#IF
+not ISONMAP DJT
+checkitemw ·兽武修真¤软金甲· 1
+#ACT
+ChangeModeEx 1 1
+SendCenterMsg 251 14 《·兽武修真¤软金甲·》触发,触发无敌,持续一秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 「赤炎·天照」 1
+#ACT
+ChangeModeEx 1 1
+SendCenterMsg 251 14 《「赤炎·天照」》触发,触发无敌,持续一秒. 0 10
+
+
+#IF
+not ISONMAP DJT
+checkitemw ◎黑鳞铠甲◎ 1
+#ACT
+ChangeModeEx 1 1
+SendCenterMsg 251 14 《◎黑鳞铠甲◎》触发,触发无敌,持续一秒. 0 10
+
+
+#IF
+not ISONMAP DJT
+checkitemw 古神皮甲 1
+#ACT
+ChangeModeEx 1 1
+SendCenterMsg 251 14 《古神皮甲》触发,触发无敌,持续一秒. 0 10
+
+
+#IF
+not ISONMAP DJT
+checkitemw 九曲三相 1
+#ACT
+ChangeModeEx 1 1
+SendCenterMsg 251 14 《九曲三相》触发,触发无敌,持续一秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 布拉巴斯王者统袍 1
+#ACT
+ChangeModeEx 1 1
+SendCenterMsg 251 14 《布拉巴斯王者统袍》触发,触发无敌,持续一秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 阿耳忒弥斯神袍 1
+#ACT
+ChangeModeEx 1 1
+SendCenterMsg 251 14 《阿耳忒弥斯神袍》触发,触发无敌,持续一秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 十万妖魂兽甲 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《十万妖魂兽甲》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 阳光战神的威严 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《阳光战神的威严》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 阳光战神的威严【超脱】 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《阳光战神的威严》触发,触发无敌,持续2秒. 0 10
+
+
+
+
+#IF
+not ISONMAP DJT
+checkitemw 五龙铡 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《五龙铡》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 李主仙衣≮洪荒终≯ 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《李主仙衣≮洪荒终≯》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 人.仙.鬼.怪.≮善恶兩分≯ 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《人.仙.鬼.怪.≮善恶兩分≯》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 孟姝皇袍 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《孟姝皇袍》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 至尊青布衫 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《至尊青布衫》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 天尘●最强状态 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《天尘●最强状态》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 罗衫叶叶绣重重 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《罗衫叶叶绣重重》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 极过·极未·极逍遥 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《极过·极未·极逍遥》触发,触发无敌,持续2秒. 0 10
+
+#IF
+not ISONMAP DJT
+checkitemw 鸿蒙灵宝·【雷霄甲】 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《鸿蒙灵宝·【雷霄甲】》触发,触发无敌,持续2秒. 0 10
+
+
+
+
+
+
+#IF
+not ISONMAP DJT
+checkitemw 一纸因果·你欠我钱 1
+#ACT
+ChangeModeEx 1 2
+SendCenterMsg 251 14 《一纸因果·你欠我钱》触发,触发无敌,持续2秒. 0 10
+
+
+
+
+
+;======
+
+
+
+#IF
+checkitemw 幽魂面具★ 1
+#ACT
+ChangeModeEx 3 30 150000
+humanhp + 100000
+SendCenterMsg 251 14 《幽魂面具★》触发,最大生命值+15W.同时恢复100000生命值. 0 10
+
+
+
+[@进图亚特兰]
+#if
+CheckMapSameMonCount 封妖城 海王 = 0
+#act
+mapmove ytlds  79 111
+#elseact
+MESSAGEBOX 海王正在守护着召唤师峡谷(封妖城64:62处)，请将其击杀后才能进入!
+break
+
+
+
+
+
+[@进图1]
+#if
+large <$MAXHP> 150000
+#act
+MAPmove lfdl 549 289
+#elseact
+MESSAGEBOX 进入此地图需要生命值达到15W.
+break
+
+
+
+[@进图2]
+#if
+large <$MAXDC> 10000
+#act
+MAPmove xxsj 194 137
+#elseact
+MESSAGEBOX 进入此地图需要攻击力达到10000!
+break
+
+
+
+[@进图3]
+#if
+CHECKRENEWLEVEL > 11
+large <$MAXDC> 15000
+large <$MAXHP> 250000
+#act
+MAPmove dldl 426 372
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到12转,\\攻击力达到15000!\\生命值达到25W
+break
+
+
+
+
+[@进图4]
+#if
+large U21 1
+CHECKRENEWLEVEL > 11
+large <$MAXDC> 25000
+large <$MAXHP> 350000
+#act
+MAPmove mxdsj 257 280
+#elseact
+MESSAGEBOX 进入此地图需要人物觉醒2次，\\人物转生达到12转！\\攻击力达到25000!\\生命值达到35W！
+break
+
+
+
+
+[@3dl进图1]
+#if
+CHECKRENEWLEVEL > 15
+#act
+MAPmove 天空之城 98 307
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到16转！
+break
+
+
+
+[@3dl进图2]
+#if
+CHECKRENEWLEVEL > 16
+#act
+MAPmove 神殿外围 759 723
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到17转！
+break
+
+[@3dl进图3]
+#if
+CHECKRENEWLEVEL > 17
+#act
+MAPmove 阿法利亚营地 377 376
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到18转！
+break
+
+
+[@3dl进图4]
+#if
+CHECKRENEWLEVEL > 19
+#act
+MAPmove 王之遗迹远古 176 202
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到20转！
+break
+
+
+
+
+[@神之都·根特]
+#if
+CHECKRENEWLEVEL > 22
+#act
+MAPmove 神之都·根特 37 62
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到23转！
+break
+
+
+[@鲁夫特悬空海港]
+#if
+CHECKRENEWLEVEL > 23
+#act
+MAPmove 鲁夫特悬空海港 236 289
+#elseact
+MESSAGEBOX 进入此地图需要人物转生达到24转！
+break
+
+
+
+
+
+
+
+[@Walk]
+
+#if
+ISONMAP 棋盘
+CHECKGOLD 10
+#act
+TAKE 金币 10
+SENDMSG 6 人物走动中,金币-10
+
+
+#if
+ISONMAP 棋盘1
+CHECKGOLD 10
+#act
+TAKE 金币 10
+SENDMSG 6 人物走动中,金币-10
+
+#if
+ISONMAP 棋盘2
+CHECKGOLD 10
+#act
+TAKE 金币 10
+SENDMSG 6 人物走动中,金币-10
+
+
+
+#if
+ISONMAP 棋盘
+not CHECKGOLD 10
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+#if
+ISONMAP 棋盘1
+not CHECKGOLD 10
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+#if
+ISONMAP 棋盘2
+not CHECKGOLD 10
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+[@MapEventRun]
+#if
+ISONMAP 跑酷专用
+checkitem 红牛饮料 1
+#act
+CHANGESPEED 1 7 2
+
+[@run]
+
+#IF
+#ACT
+INC N$出刀次数2 1
+
+#IF
+EQUAL N$检测开关2 0
+#act
+MOV N$检测开关2 1
+DELAYGOTO 3000 @外挂检测2
+BREAk
+
+
+
+#if
+ISONMAP 棋盘
+CHECKGOLD 1
+#act
+TAKE 金币 20
+SENDMSG 6 人物跑动中,金币-20
+
+
+#if
+ISONMAP 棋盘1
+CHECKGOLD 1
+#act
+TAKE 金币 20
+SENDMSG 6 人物跑动中,金币-20
+
+
+#if
+ISONMAP 棋盘2
+CHECKGOLD 1
+#act
+TAKE 金币 20
+SENDMSG 6 人物跑动中,金币-20
+
+
+
+
+#if
+ISONMAP 棋盘
+not CHECKGOLD 20
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+#if
+ISONMAP 棋盘1
+not CHECKGOLD 20
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+#if
+ISONMAP 棋盘2
+not CHECKGOLD 20
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+
+
+
+
+#if
+RANDOM 3
+ISONMAP 超脱之路
+#act
+MAKEPOSION 13 1
+
+
+
+
+
+
+#if
+checkitemw 魔尊的泯灭※※ 1
+small N$魔尊的泯灭※※ 100
+#act
+movr N$随机怒气 1 3
+INC N$魔尊的泯灭※※ <$STR(N$随机怒气)>
+SENDMSG 6 《魔尊的泯灭※※Buff》:人物跑动中,怒气值+<$STR(N$随机怒气)>,当前怒气值为:<$STR(N$魔尊的泯灭※※)>
+
+#if
+checkitemw 天荒 1
+small N$魔尊的泯灭※※ 100
+#act
+movr N$随机怒气 1 3
+INC N$魔尊的泯灭※※ <$STR(N$随机怒气)>
+SENDMSG 6 《天荒Buff》:人物跑动中,怒气值+<$STR(N$随机怒气)>,当前怒气值为:<$STR(N$魔尊的泯灭※※)>
+
+#if
+checkitemw 季主配剑≮太初始≯ 1
+small N$魔尊的泯灭※※ 100
+#act
+movr N$随机怒气 1 3
+INC N$魔尊的泯灭※※ <$STR(N$随机怒气)>
+SENDMSG 6 《季主配剑≮太初始≯Buff》:人物跑动中,怒气值+<$STR(N$随机怒气)>,当前怒气值为:<$STR(N$魔尊的泯灭※※)>
+
+#if
+checkitemw 神.妖.魔.灵.≮古道无仙≯ 1
+small N$魔尊的泯灭※※ 100
+#act
+movr N$随机怒气 1 3
+INC N$魔尊的泯灭※※ <$STR(N$随机怒气)>
+SENDMSG 6 《神.妖.魔.灵.≮古道无仙≯Buff》:人物跑动中,怒气值+<$STR(N$随机怒气)>,当前怒气值为:<$STR(N$魔尊的泯灭※※)>
+
+#if
+checkitemw 韩江孤影 1
+small N$魔尊的泯灭※※ 100
+#act
+movr N$随机怒气 1 3
+INC N$魔尊的泯灭※※ <$STR(N$随机怒气)>
+SENDMSG 6 《韩江孤影Buff》:人物跑动中,怒气值+<$STR(N$随机怒气)>,当前怒气值为:<$STR(N$魔尊的泯灭※※)>
+
+
+
+[@onhorse]
+#if
+ISONMAP 跑酷专用
+checkitemw 雅迪电动车 1
+#act
+CHANGESPEED 1 7 65535
+
+
+
+
+[@offhorse]
+#if
+#act
+CHANGESPEED 1 0
+
+
+
+
+[@PickUpItemEx]
+
+#IF
+#ACT
+LINKPICKUPITEM
+
+#IF
+ISDUMMY
+#act
+mov S$捡到的装备名称  <$CURRTEMNAME>
+#CALL [\寒流新假人\假人自动穿戴更好的装备.txt] @假人自动穿戴更好的装备
+
+
+#IF
+EQUAL <$CURRTEMNAME> 100灵符
+#ACT
+TAKE 100灵符 1
+GAMEGIRD + 100
+
+
+#if
+EQUAL <$CURRTEMNAME> 藏宝盒
+#act
+take 藏宝盒 1
+movr n$灵符红包 10 99
+GAMEGIRD + <$STR(N$灵符红包)>
+SENDMSG 6 你打开了藏宝盒,灵符增加<$STR(N$灵符红包)>点...!!
+
+
+#if
+EQUAL <$CURRTEMNAME> 藏宝箱
+#act
+take 藏宝箱 1
+movr n$元宝红包小 5000 50000
+GAMEGOLD + <$STR(n$元宝红包小)>
+SENDMSG 6 你打开了藏宝箱,获得元宝<$STR(n$元宝红包小)>点...!!
+
+
+
+
+#if
+EQUAL <$CURRTEMNAME> 绝世盒
+#act
+take 绝世盒 1
+movr n$元宝红包中 20000 80000
+GAMEGOLD + <$STR(n$元宝红包中)>
+SENDMSG 6 你打开了绝世盒,获得元宝<$STR(n$元宝红包中)>点...!!
+
+
+#if
+EQUAL <$CURRTEMNAME> 绝世箱
+#act
+TAKE 绝世箱 1
+movr n$元宝红包大 30000 150000
+GAMEGOLD + <$STR(n$元宝红包大)>
+SENDMSG 6 你打开了绝世箱,获得元宝<$STR(n$元宝红包大)>点...!!
+
+
+
+
+
+
+#if
+equal N$自动开关 1
+check [66] 1
+;CHECKBAGSIZE 1
+#act
+#CALL [\大熊功能\装备回收1.txt] @回收
+
+#if
+equal N$自动分解 1
+check [101] 1
+;CHECKBAGSIZE 1
+#act
+#CALL [\大熊功能\装备回收1.txt] @雪山分解
+#CALL [\大熊功能\装备回收1.txt] @神都分解
+#CALL [\大熊功能\装备回收1.txt] @海港分解
+#CALL [\大熊功能\装备回收1.txt] @幻想分解
+#CALL [\大熊功能\装备回收1.txt] @亚特兰分解
+#CALL [\大熊功能\装备回收1.txt] @流放分解
+#CALL [\大熊功能\装备回收1.txt] @修仙分解
+#CALL [\大熊功能\装备回收1.txt] @斗罗分解
+#CALL [\大熊功能\装备回收1.txt] @冒险岛分解
+#CALL [\大熊功能\装备回收1.txt] @格兰分解
+#CALL [\大熊功能\装备回收1.txt] @天空分解
+#CALL [\大熊功能\装备回收1.txt] @天帷分解
+#CALL [\大熊功能\装备回收1.txt] @阿法分解
+#CALL [\大熊功能\装备回收1.txt] @神话分解
+
+
+
+
+
+#if
+#ACT
+LINKPICKUPITEM
+#Call [\馒头制作\掉落显示.txt] @掉落显示触发
+
+
+
+
+
+#if
+NOT CheckContainsText <$SERVERNAME> 测试
+CHECKTEXTLIST ..\QuestDiary\装备记录\装备记录列表.txt <$CURRTEMNAME>
+CHECKITEMADDVALUE -1 12 < 1
+#ACT
+CHANGEITEMADDVALUE -1  12 = 1
+mov S$出装记录 <$CURRTEMNAME>:<$USERNAME>:<$MapTitle>:<$DAY>日<$HOUR>点<$MINUTE>分:<$SERVERNAME>
+AddTextListEx ..\..\..\..\跨区文件夹\装备记录\装备记录文本.txt <$str(S$出装记录)>
+AddTextListEx ..\QuestDiary\装备记录\装备记录文本.txt <$str(S$出装记录)>
+
+
+#IF
+CHECKTITLE 沙城捐献
+;NOT CheckContainsText <$SERVERNAME> 总区
+#ACT
+#CALL [\限时奖励\首爆奖励JMB触发.txt] @首爆奖励JMB
+
+
+
+#IF
+#ACT
+#CALL [\限时奖励\首爆奖励钻石触发.txt] @首爆奖励钻石
+
+
+
+
+[@OnKillMob]
+
+
+#if
+CheckKillMonName 小土豪
+#act
+ThrowItem 0101 9 16 5 红包 20|60
+
+
+#if
+CheckKillMonName 幻境恶魔
+#act
+ThrowItem h008  73  77  5 封天宝箱 2|60
+ThrowItem h008  73  77  5 充值红包 10|60
+
+
+
+
+#if
+#act
+#CALL [馒头制作\镜灵进阶\杀怪检测.txt] @镜灵
+
+
+#IF
+CheckKillMonName 五爷1
+#act
+CreateNPC  苍茫星空  封妖古地  104 107  20106   苍茫星空-封妖古地
+SENDDELAYMSG 苍茫星空将在%s后关闭 300 249 0 @删除龙柱
+SENDMOVEMSG 0 253 255 140 2 <玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]杀戮过重,触发了封妖古地内的隐藏地图！{苍茫星空/FCOLOR=253}已经降临在封妖古地,104,107处,此地图极度危险 11 30 0
+
+
+#if
+not ISDUMMY
+ISONMAP 混沌星界
+#act
+INC G499 1
+SENDMSG 6 当前击杀《混沌星界》怪物数量为【<$STR(G499)>】...
+
+
+#IF
+not ISDUMMY
+large G499 2000
+#ACT
+MOV G499 0
+MOV G498 3601
+SENDMOVEMSG 0 253 255 140 3 <玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]杀戮过重,触发了混沌星界内的隐藏地图！[/FCOLOR=161>{<$MapTitle>,86,118/FCOLOR=250}<]处，限时开启一小时！听说隐藏着传说中的终极装备！赶快行动吧！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 160 3 <玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]杀戮过重,触发了混沌星界内的隐藏地图！[/FCOLOR=161>{<$MapTitle>,86,118/FCOLOR=250}<]处，限时开启一小时！听说隐藏着传说中的终极装备！赶快行动吧！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 180 3 <玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]杀戮过重,触发了混沌星界内的隐藏地图！[/FCOLOR=161>{<$MapTitle>,86,118/FCOLOR=250}<]处，限时开启一小时！听说隐藏着传说中的终极装备！赶快行动吧！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 200 3 <玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]杀戮过重,触发了混沌星界内的隐藏地图！[/FCOLOR=161>{<$MapTitle>,86,118/FCOLOR=250}<]处，限时开启一小时！听说隐藏着传说中的终极装备！赶快行动吧！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 220 3 <玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]杀戮过重,触发了混沌星界内的隐藏地图！[/FCOLOR=161>{<$MapTitle>,86,118/FCOLOR=250}<]处，限时开启一小时！听说隐藏着传说中的终极装备！赶快行动吧！！！/FCOLOR=161>
+Gmexecute 全服触发 @混沌星界触发
+CreateNPC 星界传送门 混沌星界 86 118 10100 星界传送门-混沌星界 0
+
+
+
+
+#if
+;check [90] 1
+;check [93] 0
+CheckKillMonName 虚空·行者
+#act
+CALCVAR HUMAN 虚空·行者 + 1
+SAVEVAR HUMAN 虚空·行者
+SENDMSG 6 当前击杀《虚空·行者》进度为【<$HUMAN(虚空·行者)>/10】...
+
+
+
+#if
+check [90] 1
+check [93] 0
+CheckKillMonName 异兽·玄蜂
+#act
+CALCVAR HUMAN 异兽·玄蜂 + 1
+SAVEVAR HUMAN 异兽·玄蜂
+SENDMSG 6 当前击杀《异兽·玄蜂》进度为【<$HUMAN(异兽·玄蜂)>/10】...
+
+
+#if
+check [90] 1
+check [93] 0
+CheckKillMonName 亡剑林
+#act
+CALCVAR HUMAN 亡剑林 + 1
+SAVEVAR HUMAN 亡剑林
+SENDMSG 6 当前击杀《亡剑林》进度为【<$HUMAN(亡剑林)>/10】...
+
+
+
+
+
+#if
+check [91] 1
+check [94] 0
+CheckKillMonName 虚空·先知
+#act
+CALCVAR HUMAN 虚空·先知 + 1
+SAVEVAR HUMAN 虚空·先知
+SENDMSG 6 当前击杀《异兽·罔象》进度为【<$HUMAN(虚空·先知)>/10】...
+
+
+
+
+#if
+check [91] 1
+check [94] 0
+CheckKillMonName 异兽·罔象
+#act
+CALCVAR HUMAN 异兽·罔象 + 1
+SAVEVAR HUMAN 异兽·罔象
+SENDMSG 6 当前击杀《异兽·罔象》进度为【<$HUMAN(异兽·罔象)>/10】...
+
+
+
+#if
+check [91] 1
+check [94] 0
+CheckKillMonName 码云
+#act
+CALCVAR HUMAN 码云 + 1
+SAVEVAR HUMAN 码云
+SENDMSG 6 当前击杀《码云》进度为【<$HUMAN(码云)>/10】...
+
+
+
+
+#if
+check [92] 1
+check [95] 0
+CheckKillMonName 虚空·遁地兽
+#act
+CALCVAR HUMAN 虚空·遁地兽 + 1
+SAVEVAR HUMAN 虚空·遁地兽
+SENDMSG 6 当前击杀《异兽·魍魉》进度为【<$HUMAN(虚空·遁地兽)>/10】...
+
+
+
+
+#if
+check [92] 1
+check [95] 0
+CheckKillMonName 异兽·魍魉
+#act
+CALCVAR HUMAN 异兽·魍魉 + 1
+SAVEVAR HUMAN 异兽·魍魉
+SENDMSG 6 当前击杀《异兽·魍魉》进度为【<$HUMAN(异兽·魍魉)>/10】...
+
+
+
+#if
+check [92] 1
+check [95] 0
+CheckKillMonName 麻花藤
+#act
+CALCVAR HUMAN 麻花藤 + 1
+SAVEVAR HUMAN 麻花藤
+SENDMSG 6 当前击杀《麻花藤》进度为【<$HUMAN(麻花藤)>/10】...
+
+
+#if
+check [96] 1
+check [97] 0
+CheckKillMonName ★★★云顶之奕★★★
+#act
+CALCVAR HUMAN ★★★云顶之奕★★★ + 1
+SAVEVAR HUMAN ★★★云顶之奕★★★
+SENDMSG 6 当前击杀《★★★云顶之奕★★★》进度为【<$HUMAN(★★★云顶之奕★★★)>/10】...
+
+
+#if
+check [98] 1
+;check [99] 0
+CheckKillMonName 魔王★
+#act
+CALCVAR HUMAN 魔王★ + 1
+SAVEVAR HUMAN 魔王★
+SENDMSG 6 当前击杀《魔王★★》进度为【<$HUMAN(魔王★)>/20】...
+
+#if
+check [108] 1
+;check [109] 0
+CheckKillMonName 魔王★★
+#act
+CALCVAR HUMAN 魔王★★ + 1
+SAVEVAR HUMAN 魔王★★
+SENDMSG 6 当前击杀《魔王★★★》进度为【<$HUMAN(魔王★★)>/30】...
+
+
+#if
+check [228] 1
+;check [109] 0
+CheckKillMonName 魔王★★★
+#act
+CALCVAR HUMAN 魔王★★★ + 1
+SAVEVAR HUMAN 魔王★★★
+SENDMSG 6 当前击杀《魔王★★★》进度为【<$HUMAN(魔王★★★)>/40】...
+
+
+
+
+
+
+#if
+CheckKillMonName 帝直共工★水神
+#act
+INC G41 1
+SENDMSG 6 当前击杀《帝直共工★水神》进度为【<$STR(G41)/50>】...
+
+
+
+#if
+CheckKillMonName 帝喾后羿★射官
+#act
+INC G42 1
+SENDMSG 6 当前击杀《帝喾后羿★射官》进度为【<$STR(G42)/50>】...
+
+
+
+#if
+CheckKillMonName 后羿之妻★嫦娥
+#act
+INC G43 1
+SENDMSG 6 当前击杀《后羿之妻★嫦娥》进度为【<$STR(G43)/50>】...
+
+
+
+#if
+CheckKillMonName 创世女神★女娲
+#act
+INC G44 1
+SENDMSG 6 当前击杀《创世女神★女娲》进度为【<$STR(G45)/50>】...
+
+
+
+#if
+CheckKillMonName 王之守护·守护
+#act
+INC G45 1
+SENDMSG 6 当前击杀《王之守护·守护》进度为【<$STR(G45)/10>】...
+
+
+
+
+
+
+
+#if
+large g41 49
+large g42 49
+large g43 49
+large g44 49
+large g45 9
+#act
+mov g41 0
+mov g42 0
+mov g43 0
+mov g44 0
+mov g45 0
+
+MonGenEx 王之遗迹远古 200 203 (远古)锤王·波罗丁 1 1 0 253
+
+SENDMOVEMSG 0 243 0 130 1 {神话世界:/FCOLOR=250}:{(远古)锤王·波罗丁/FCOLOR=253}已经降临了 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {神话世界:/FCOLOR=250}:{(远古)锤王·波罗丁/FCOLOR=253}已经降临了 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {神话世界:/FCOLOR=250}:{(远古)锤王·波罗丁/FCOLOR=253}已经降临了 11 30 0
+
+
+
+#IF
+CHECK [101] 1
+#ACT
+DEC N$任务触发随机值 10
+
+#if
+random <$STR(N$任务触发随机值)>
+CHECKTEXTLIST ..\QuestDiary\任务系统\初级任务地图.txt <$MAP>
+#act
+GETRANDOMLINETEXT ..\QuestDiary\任务系统\初级召唤怪物.txt <$STR(S35)>
+MonGenEx <$MAP> <$X> <$Y> <$STR(S35)> 1 1 0 70
+SENDMSG 1 玩家：《<$USERNAME>》杀戮怪物太多惊动了隐藏怪物：《<$STR(S35)>》前来为他的小弟报仇！此怪物携带大量财宝,单车变摩托就看这一下了！
+
+
+#if
+random <$STR(N$任务触发随机值)>
+CHECKTEXTLIST ..\QuestDiary\任务系统\中级任务地图.txt <$MAP>
+#act
+GETRANDOMLINETEXT ..\QuestDiary\任务系统\中级召唤怪物.txt <$STR(S35)>
+MonGenEx <$MAP> <$X> <$Y> <$STR(S35)> 1 1 0 70
+SENDMSG 1 玩家：《<$USERNAME>》杀戮怪物太多惊动了隐藏怪物：《<$STR(S35)>》前来为他的小弟报仇！此怪物携带大量财宝,单车变摩托就看这一下了！
+
+
+#if
+random <$STR(N$任务触发随机值)>
+CHECKTEXTLIST ..\QuestDiary\任务系统\高级任务地图.txt <$MAP>
+#act
+GETRANDOMLINETEXT ..\QuestDiary\任务系统\高级召唤怪物.txt <$STR(S35)>
+MonGenEx <$MAP> <$X> <$Y> <$STR(S35)> 1 1 0 70
+SENDMSG 1 玩家：《<$USERNAME>》杀戮怪物太多惊动了隐藏怪物：《<$STR(S35)>》前来为他的小弟报仇！此怪物携带大量财宝,单车变摩托就看这一下了！
+
+
+
+#if
+checkitemw 号令之旗 1
+random 85
+#act
+MOVR N$幸运元宝 10000 100000
+GAMEGOLD + <$STR(N$幸运元宝)>
+SendCenterMsg 250 14 《号令之旗》BUFF触发,元宝增加:(<$STR(N$幸运元宝)>)个. 0 10
+break
+
+
+#if
+checkitemw 号令之旗 1
+random 30
+#act
+MOVR N$幸运元宝 1 6000
+GAMEGOLD + <$STR(N$幸运元宝)>
+SendCenterMsg 250 14 《号令之旗》BUFF触发,元宝增加:(<$STR(N$幸运元宝)>)个. 0 10
+break
+
+
+
+
+
+
+
+
+
+
+
+
+[@PickUpItem147]
+
+#if
+checkitem 50元宝 1
+#act
+take 50元宝 1
+GAMEGOLD + 50
+inc u24 50
+
+[@PickUpItem148]
+#if
+checkitem 100元宝 1
+#act
+take 100元宝 1
+GAMEGOLD + 100
+inc u24 100
+
+[@PickUpItem149]
+#if
+checkitem 200元宝 1
+#act
+take 200元宝 1
+GAMEGOLD + 200
+inc u24 200
+
+[@PickUpItem150]
+#if
+checkitem 500元宝 1
+#act
+take 500元宝 1
+GAMEGOLD + 500
+inc u24 500
+
+
+
+[@PickUpItem151]
+#if
+checkitem 1000元宝 1
+#act
+take 1000元宝 1
+GAMEGOLD + 1000
+inc u24 1000
+
+
+[@PickUpItem152]
+#if
+checkitem 3000元宝 1
+#act
+take 3000元宝 1
+GAMEGOLD + 3000
+inc u24 3000
+
+
+[@PickUpItem153]
+#if
+checkitem 5000元宝 1
+#act
+take 5000元宝 1
+GAMEGOLD + 5000
+inc u24 5000
+
+
+
+[@PickUpItem154]
+#if
+checkitem 1w元宝 1
+#act
+take 1w元宝 1
+GAMEGOLD + 10000
+inc u24 10000
+
+[@PickUpItem155]
+#if
+checkitem 5w元宝 1
+#act
+take 5w元宝 1
+GAMEGOLD + 50000
+inc u24 50000
+
+
+
+[@PickUpItem631]
+#if
+checkitem 1灵符 1
+#act
+take 1灵符 1
+GAMEGIRD + 1
+
+
+[@PickUpItem632]
+#if
+checkitem 2灵符 1
+#act
+take 2灵符 1
+GAMEGIRD + 2
+
+[@PickUpItem633]
+#if
+checkitem 5灵符 1
+#act
+take 5灵符 1
+GAMEGIRD + 5
+
+[@PickUpItem634]
+#if
+checkitem 10灵符 1
+#act
+take 10灵符 1
+GAMEGIRD + 10
+
+[@PickUpItem635]
+#if
+checkitem 20灵符 1
+#act
+take 20灵符 1
+GAMEGIRD + 20
+
+[@PickUpItem636]
+#if
+checkitem 50灵符 1
+#act
+take 50灵符 1
+GAMEGIRD + 50
+
+
+
+
+;---------------------------------------------------- 精灵穿脱
+
+[@Takeon18]
+#IF
+CHECKLEVELEX > 0
+#ACT
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+[@TakeOFF18]
+#IF
+CHECKLEVELEX > 0
+#ACT
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+
+[@TAKEON0]
+#if
+#ACT
+MOV N$装备栏穿戴位置 0
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+
+[@TAKEON1]
+#if
+#ACT
+MOV N$装备栏穿戴位置 1
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+
+[@TAKEON3]
+#if
+#ACT
+MOV N$装备栏穿戴位置 3
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+
+
+[@TAKEON4]
+#IF
+#ACT
+MOV N$装备栏穿戴位置 4
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+
+[@TAKEON5]
+#IF
+#ACT
+MOV N$装备栏穿戴位置 5
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+[@TAKEON6]
+#IF
+#ACT
+MOV N$装备栏穿戴位置 6
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+[@TAKEOn7]
+#IF
+#ACT
+MOV N$装备栏穿戴位置 7
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+#
+[@TAKEOn8]
+#ACT
+MOV N$装备栏穿戴位置 8
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+[@TAKEON10]
+#ACT
+MOV N$装备栏穿戴位置 10
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+[@TAKEON11]
+#ACT
+MOV N$装备栏穿戴位置 11
+#CALL [\春哥数据\装备栏强化\强化触发.txt] @装备栏穿戴触发
+
+
+
+;---------------------------------------------------- 魂器
+
+[@StateWindowsButtonClick1]
+#if
+#act
+#CALL [\馒头制作\魂器触发\魂器触发.txt] @魂器
+
+[@UserStateButtonClick1]
+#if
+#act
+#CALL [\馒头制作\魂器触发\查看魂器.txt] @他人魂器
+
+
+;---------------------------------------------------- 五行
+
+[@StateWindowsButtonClick3]
+#if
+#act
+#CALL [\馒头制作\五行系统\五行触发.txt] @五行
+
+
+;---------------------------------------------------- 魂器物品
+
+[@StdModeFunc250]
+#if
+NOT EQUAL T30 技术内裤
+#act
+MOV T30 技术内裤
+#CALL [\大熊功能\职位计算.txt] @开始计算
+MESSAGEBOX [提示]:激活成功，请查看魂器属性!!..
+break
+#elseact
+give 技术の内裤 1
+MESSAGEBOX 您已经激活了此魂器！
+BREAK
+
+
+[@StdModeFunc251]
+#if
+NOT EQUAL T31 能量脉冲
+#act
+MOV T31 能量脉冲
+#CALL [\大熊功能\职位计算.txt] @开始计算
+MESSAGEBOX [提示]:激活成功，请查看魂器属性!!..
+break
+#elseact
+give 能量脉冲 1
+MESSAGEBOX 您已经激活了此魂器！
+BREAK
+
+[@StdModeFunc252]
+#if
+NOT EQUAL T32 我是先知
+#act
+MOV T32 我是先知
+#CALL [\大熊功能\职位计算.txt] @开始计算
+MESSAGEBOX [提示]:激活成功，请查看魂器属性!!..
+break
+#elseact
+give 我是先知 1
+MESSAGEBOX 您已经激活了此魂器！
+BREAK
+
+[@StdModeFunc253]
+#if
+NOT EQUAL T33 艾克塞之怒
+#act
+MOV T33 艾克塞之怒
+#CALL [\大熊功能\职位计算.txt] @开始计算
+MESSAGEBOX [提示]:激活成功，请查看魂器属性!!..
+break
+#elseact
+give 艾克塞之怒 1
+MESSAGEBOX 您已经激活了此魂器！
+BREAK
+
+
+;=====================斗笠触发==============
+[@TakeOn13]
+#ACT
+#CALL [\馒头制作\镜灵进阶\镜灵检测.txt] @检测镜灵
+
+
+
+
+[@OpenSndaItemBox]
+#act
+SetSndaItemBox 1
+SENDMSG 6 魔器开启成功
+
+
+[@StdModeFunc237]
+
+#IF
+ISONMAP DJT
+#act
+MESSAGEBOX 渡届地图不能使用！
+BREAK
+
+#IF
+#act
+SHOWPROGRESSBARDLG 3 @满血材料 能量恢复中,进度%d%... 1 @满血中断
+
+[@满血材料]
+#IF
+#ACT
+PGAddHpPer + 99
+PGAddmpPer + 99
+[@满血中断]
+#IF
+#ACT
+GIVE 能量恢复 1
+
+
+
+
+
+[@StdModeFunc300]
+#IF
+RANDOM 5
+#ACT
+SetItemBind 1 1
+SetItemState 1 5 1
+SetItemState 1 0 1
+MESSAGEBOX 恭喜你成功绑定武器，武器无法掉落，无法丢弃
+#ELSEACT
+MESSAGEBOX 绑定武器失败扣除卷轴，你要相信下次会成功的加油
+
+
+
+[@StdModeFunc301]
+#IF
+RANDOM 5
+#ACT
+SetItemBind 0 1
+SetItemState 0 5 1
+SetItemState 0 0 1
+MESSAGEBOX 恭喜你成功绑定衣服，衣服无法掉落
+#ELSEACT
+MESSAGEBOX 绑定衣服失败扣除卷轴，你要相信下次会成功的加油
+
+
+[@GroupItemOn574]
+#IF
+#ACT
+ADDSKILL 全屏吸怪
+
+[@GroupItemOff574]
+#IF
+#ACT
+DELSKILL 全屏吸怪
+
+
+[@GroupItemOn618]
+#IF
+#ACT
+ADDSKILL 全屏吸怪
+
+[@GroupItemOff618]
+#IF
+#ACT
+DELSKILL 全屏吸怪
+
+
+
+
+
+
+[@GroupItemOn569]
+#IF
+;CHECKITEMW [时装]·鳯求凰 1
+#ACT
+SETICON 7 13 474 70 10 20 0 100 0
+;set [444] 1
+
+[@GroupItemOff569]
+#IF
+#ACT
+;DELMONHPEX 3 2 0 0 <$X> <$Y> 3 3
+;SETICON 7 27 1311 -5 -85 50 0 100 0
+SETICON 7 -1
+
+
+
+[@STDMODEFUNC9]
+#IF
+#ACT
+INC U9 1
+SENDMSG 6 [系统]：服用渡劫丹，渡劫时将为您抵消一层雷劫,剩余抵消雷劫<$str(U9)>次！
+BREAK
+
+
+
+[@StdModeFunc400]
+#IF
+#Act
+CONFERTITLE 杀戮之王
+SETICON 4 19 120 0 -105 10 0 100 0
+
+
+[@MagSelfFunc114]
+#IF
+
+#Act
+movr n$切割 1 9
+;m.AddhpPer - <$STR(n$切割)>
+PGDelMonHpEx <$STR(n$切割)> 2 0 0 <$X> <$Y> 10 3
+SENDMSG 6 [系统]：倚天辟地切割(<$STR(N$切割)>)%血量
+
+
+
+[@StdModeFunc401]
+#IF
+#Act
+MOV N$爆率卷轴 3600
+;SetOnTimer 199 1
+
+
+
+
+[@删除龙柱]
+#act
+DELNPC 苍茫星空  封妖古地  104 107  20106
+
+
+[@StdModeFunc402]
+#IF
+#Act
+GAMEGOLD  + 1000000000
+MESSAGEBOX 恭喜你获得10亿元宝!!!
+BREAK
+
+
+[@StdModeFunc403]
+#IF
+#Act
+GAMEGOLD  + 1500000000
+MESSAGEBOX 恭喜你获得15亿元宝!!!
+BREAK
+
+[@StdModeFunc404]
+#IF
+#Act
+GAMEGOLD  + 2000000000
+MESSAGEBOX 恭喜你获得20亿元宝!!!
+BREAK
+
+
+[@StdModeFunc405]
+#IF
+#Act
+GAMEGOLD  + 500000000
+MESSAGEBOX 恭喜你获得5亿元宝!!!
+BREAK
+
+[@StdModeFunc406]
+#IF
+#Act
+GAMEGOLD  + 100000000
+MESSAGEBOX 恭喜你获得1亿元宝!!!
+BREAK
+
+[@StdModeFunc445]
+#IF
+#Act
+GAMEGOLD  + 1000000
+MESSAGEBOX 恭喜你获得100万元宝!!!
+BREAK
+
+[@StdModeFunc446]
+#IF
+#Act
+GAMEGOLD  + 5000000
+MESSAGEBOX 恭喜你获得500万元宝!!!
+BREAK
+
+
+
+[@StdModeFunc407]
+#IF
+#Act
+MAPMOVE  仙墟  92 142
+SENDDELAYMSG 将在%s后回城 1800 255 0 @仙墟
+
+[@仙墟]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+[@StdModeFunc408]
+#IF
+#Act
+MAPMOVE  仙墟  92 142
+SENDDELAYMSG 将在%s后回城 3600 255 0 @仙墟1
+
+[@仙墟1]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+[@StdModeFunc409]
+#IF
+#Act
+MAPMOVE  仙墟  92 142
+SENDDELAYMSG 将在%s后回城 7200 255 0 @仙墟2
+
+[@仙墟2]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+[@StdModeFunc410]
+#IF
+#Act
+MAPMOVE  三十三天  58 26
+SENDDELAYMSG 将在%s后回城 1800 255 0 @三十三天
+
+[@三十三天]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+[@StdModeFunc411]
+#IF
+#Act
+MAPMOVE  三十三天  58 26
+SENDDELAYMSG 将在%s后回城 3600 255 0 @三十三天1
+
+[@三十三天1]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+[@StdModeFunc412]
+#IF
+#Act
+MAPMOVE  三十三天  58 26
+SENDDELAYMSG 将在%s后回城 7200 255 0 @三十三天2
+
+[@三十三天2]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+[@StdModeFunc413]
+#IF
+#Act
+MAPMOVE  第九山海  66 67
+SENDDELAYMSG 将在%s后回城 1800 255 0 @第九山海
+
+[@第九山海]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+[@StdModeFunc414]
+#IF
+#Act
+MAPMOVE  第九山海  66 67
+SENDDELAYMSG 将在%s后回城 3600 255 0 @第九山海1
+
+[@第九山海1]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+
+[@StdModeFunc415]
+#IF
+#Act
+MAPMOVE  第九山海  66 67
+SENDDELAYMSG 将在%s后回城 7200 255 0 @第九山海2
+
+[@第九山海2]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+
+[@StdModeFunc416]
+#IF
+#Act
+MAPMOVE  如风界  92 44
+SENDDELAYMSG 将在%s后回城 1800 255 0 @如风界
+
+[@如风界]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+[@StdModeFunc417]
+#IF
+#Act
+MAPMOVE  如风界  92 44
+SENDDELAYMSG 将在%s后回城 3600 255 0 @如风界1
+
+[@如风界1]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+[@StdModeFunc418]
+#IF
+#Act
+MAPMOVE  如风界  92 44
+SENDDELAYMSG 将在%s后回城 7200 255 0 @如风界2
+
+[@如风界2]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+[@StdModeFunc419]
+#IF
+#Act
+MAPMOVE  封妖古地  23 115
+SENDDELAYMSG 将在%s后回城 1800 255 0 @封妖古地
+
+[@封妖古地]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+[@StdModeFunc420]
+#IF
+#Act
+MAPMOVE  封妖古地  23 115
+SENDDELAYMSG 将在%s后回城 3600 255 0 @封妖古地1
+
+[@封妖古地1]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+[@StdModeFunc421]
+#IF
+#Act
+MAPMOVE  封妖古地  23 115
+SENDDELAYMSG 将在%s后回城 7200 255 0 @封妖古地2
+
+[@封妖古地2]
+#if
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+[@StdModeFunc422]
+#IF
+CHECKTITLE 狂暴之力
+CHECKTITLE 沙城捐献
+#Act
+;GiveStateItem 杀人书 1 1 1 1 1 1 1 1
+GIVESTATEITEM 杀人书 1 1 1 1 1 1 1 1 0
+#elseact
+goto @反杀人书
+MESSAGEBOX 请检测是否有解封杀人书的条件！
+BREAK
+
+[@反杀人书]
+#IF
+#Act
+;GiveStateItem  杀人书（封） 1 1 1 1 1 1 1 1
+GIVESTATEITEM 杀人书（封） 1 1 1 1 1 1 1 1 0
+
+
+
+
+
+
+[@ButtonClick17]
+#if
+EQUAL N$炼体爆发 0
+checkitem 炼体精魄 100
+#act
+MOV N$炼体爆发 1
+SETONTIMER 13 1
+#CALL [\BUFF\属性加载.txt] @属性加载
+SETICON 9 33 76 40 -45 12 1 100 0
+SENDMSG 5 成功开启炼体爆发!每秒扣除1个炼体精魄!
+break
+#IF
+EQUAL N$炼体爆发 0
+checkitem 炼体精魄 100
+#act
+SENDMSG 5 炼体精魄100,不能开启炼体爆发!
+BREAK
+#elseact
+MOV N$炼体爆发 0
+SETOFFTIMER 13
+GOTO @属性加载
+SETICON 9 -1
+SENDMSG 5 关闭炼体爆发!爆发属性加成失效!
+break
+
+
+
+[@KillMon]
+
+#if
+#act
+MOV N$鞭尸随机值 100
+MOV N$任务触发随机值 50
+
+
+
+#if
+checkitemw [时装]·燃炎の飞焰 1
+#act
+dec N$鞭尸随机值 1
+
+#if
+checkitemw [时装]·紫炎の破军 1
+#act
+dec N$鞭尸随机值 2
+
+#if
+checkitemw [时装]·狂の圣战 1
+#act
+dec N$鞭尸随机值 3
+
+#if
+checkitemw [时装]·巫の妖王 1
+#act
+dec N$鞭尸随机值 4
+
+#if
+checkitemw [时装]·魂の幽冥 1
+#act
+dec N$鞭尸随机值 5
+
+#if
+checkitemw [时装]·义の青龙 1
+#act
+dec N$鞭尸随机值 6
+
+#if
+checkitemw [时装]·忍の鬼鲛 1
+#act
+dec N$鞭尸随机值 7
+
+#if
+checkitemw [时装]·冥の王 1
+#act
+dec N$鞭尸随机值 8
+
+#if
+checkitemw [时装]·魑の魅 1
+#act
+dec N$鞭尸随机值 9
+
+#if
+checkitemw [时装]·冰の火 1
+#act
+dec N$鞭尸随机值 10
+
+#if
+checkitemw [时装]·孙の悟饭 1
+#act
+dec N$鞭尸随机值 12
+#if
+checkitemw [时装]·快乐风男 1
+#act
+dec N$鞭尸随机值 14
+#if
+checkitemw [时装]·黑崎一护 1
+#act
+dec N$鞭尸随机值 16
+
+#if
+checkitemw [时装]·更木剑八 1
+#act
+dec N$鞭尸随机值 18
+
+#if
+checkitemw [时装]·橘右京 1
+#act
+dec N$鞭尸随机值 20
+
+
+#if
+checkitemw [时装]·鳯求凰 1
+#act
+dec N$鞭尸随机值 25
+
+
+#if
+small N$鞭尸随机值 100
+random <$STR(N$鞭尸随机值)>
+#act
+;ESPMonItems
+SendCenterMsg 251 14 恭喜“<$USERNAME>”成功将怪物：【<$CURRRTARGETNAME>】进行了鞭尸，装备狂暴二次！ 1 4
+
+
+
+[@MagSelfFunc82]
+#or
+checkitemw 掌天印
+checkitemw 太古的岁月
+checkitemw 如法【无边】
+checkitemw 道域之宝
+#ACT
+<$CURRRTARGETNAME>.MAKEPOSION 13 3
+<$CURRRTARGETNAME>.SENDMSG 7 [十步一杀]buff触发成功，你被对方的十步一杀的蛛网网住了，持续时间2秒！
+sendmsg 6 103 5  你的十步一杀把他网住了，持续时间3秒！
+break
+
+
+
+
+[@GroupItemOn620]
+#if
+;checkitemw 扇扇生火【生命】
+#ACT
+SHOWPHANTOM 1 2 3 4 5 255 7 8 65535 10
+
+
+[@GroupItemOff620]
+#if
+;checkitemw 扇扇生火【生命】
+#ACT
+SHOWPHANTOM 1 2 3 4 5 60 7 8 1 10
+
+
+
+
+
+
+
+
+[@ESPRangeHarm1]
+#ACT
+;ESPPlayEffect 1
+
+
+
+[@杀人书检测]
+
+#if
+CHECKCURRTARGETRACE = 0
+CheckInWarArea
+;ISONMAP 0150
+;ISONMAP SRDT
+Checkitem 杀人书 1
+large U31 2
+#ACT
+dec u31 1
+
+
+
+
+
+#if
+CHECKCURRTARGETRACE = 0
+not CHECKCASTLEWARAREA 沙巴克
+not ISONMAP 0150
+not ISONMAP SRDT
+Checkitem 杀人书 1
+large U31 3
+#ACT
+dec u31 3
+break
+
+#if
+CHECKCURRTARGETRACE = 0
+not CHECKCASTLEWARAREA 沙巴克
+not ISONMAP 0150
+not ISONMAP SRDT
+Checkitem 杀人书 1
+small U31 4
+#ACT
+mov u31 0
+
+
+
+[@StdModeFunc424]
+#if
+#act
+MOVR N$充值钻石  10 200
+MOVR N$充值积分 1 20
+GAMEPOINT + <$STR(N$充值钻石)>
+;GAMEDIAMOND + <$STR(N$充值积分)>
+SENDMOVEMSG 0 253 255 100 1 <恭喜玩家/FCOLOR=250>{[<$USERNAME>]}<打开/FCOLOR=250>{充值红包/FCOLOR=253}<获得/FCOLOR=250>{钻石<$STR(N$充值钻石)>/FCOLOR=215}<奖励/FCOLOR=250>
+
+
+
+[@StdModeFunc425]
+#if
+#act
+MOVR N$充值金币  10 250
+give 金币 <$STR(N$充值金币)>
+SENDMOVEMSG 0 253 255 100 1 <恭喜玩家/FCOLOR=250>{[<$USERNAME>]}<打开/FCOLOR=250>{充值红包/FCOLOR=253}<获得/FCOLOR=250>{金币<$STR(N$充值金币)>/FCOLOR=215}<奖励/FCOLOR=250>
+
+
+[@StdModeFunc260]
+
+#if
+not ISONMAP xsdt
+not ISONMAP srdt
+#act
+#ELSEACT
+MESSAGEBOX 此地图无法使用~
+;GiveStateItem  首充礼包 1 1 1 1 1 1 1 1
+GIVESTATEITEM 首充礼包 1 1 1 1 1 1 1 1 0
+BREAK
+
+
+
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                                                  <IMG:0:6:0:-3><[6元首冲礼包]/FCOLOR=70>\  \ \ \
+<>                                                                                  <ItemShow:1752:0:-27:-12:0> <ItemShow:1753:0:-15:-25:0> <ItemShow:1269:0:-10:-16:0> <ItemShow:1282:0:-22:-45:0>                     \  \ \
+<>                                                                                  <playimg:13:725:10:100:-60:-92:0><playimg:13:725:10:100:-100:-92:0><playimg:13:725:10:100:-140:-92:0><playimg:13:725:10:100:-180:-92:0>  \
+<>                                                                             <超值首充礼包打开获取永久刀刀切割1%【强力推荐】|^253#超强切割限时体验^253#超强生肖限时体验^253#风灵石·天*6^253#超强剑甲强化卷*2^253#转生5转^253#永久刀刀切割怪物1%>         \
+<>                                                                             <超值首充礼包打开获取永久刀刀切割1%【强力推荐】|^253#超强切割限时体验^253#超强生肖限时体验^253#风灵石·天*6^253#超强剑甲强化卷*2^253#转生5转^253#永久刀刀切割怪物1%>         \
+
+<>                                        <playimg:41:190:20:150:-65:-230|249#各位老板赚大钱>   \
+
+<>                                                  <IMG:2466:12:155:0|246#首充6元金币领取，/@礼包11>     <IMG:780:13:155:0|246#关闭/@返还礼包>                       \
+
+[@礼包11]
+
+#if
+CHECKRENEWLEVEL > 4
+#ACT
+GOTO @返还礼包2
+break
+
+#if
+CHECKGOLD 60
+#ACT
+RestRenewLevel
+give 强化+13卷轴 2
+give 风灵石·天 6
+;GiveStateItem  九天·日月[限时] 1 1 1 1 1 1 1 1
+GIVESTATEITEM 九天·日月[限时] 1 1 1 1 1 1 1 1 0
+;GiveStateItem  切割神器·[限时] 1 1 1 1 1 1 1 1
+GIVESTATEITEM 切割神器·[限时] 1 1 1 1 1 1 1 1 0
+RENEWLEVEL 5
+TAKE 金币 60
+set [23] 1
+close
+#elseact
+MESSAGEBOX 打开首充礼包需要60金币！
+;GiveStateItem  首充礼包 1 1 1 1 1 1 1 1
+GIVESTATEITEM 首充礼包 1 1 1 1 1 1 1 1 0
+close
+break
+
+
+[@返还礼包]
+#if
+#ACT
+;GiveStateItem  首充礼包 1 1 1 1 1 1 1 1
+GIVESTATEITEM 首充礼包 1 1 1 1 1 1 1 1 0
+close
+break
+
+
+[@返还礼包2]
+#if
+CHECKGOLD 60
+#ACT
+give 强化+13卷轴 2
+give 风灵石·天 6
+;GiveStateItem  九天·日月[限时] 1 1 1 1 1 1 1 1
+GIVESTATEITEM 九天·日月[限时] 1 1 1 1 1 1 1 1 0
+;GiveStateItem  切割神器·[限时] 1 1 1 1 1 1 1 1
+GIVESTATEITEM 切割神器·[限时] 1 1 1 1 1 1 1 1 0
+TAKE 金币 60
+set [23] 1
+close
+#elseact
+MESSAGEBOX 打开首充礼包需要60金币！
+;GiveStateItem  首充礼包 1 1 1 1 1 1 1 1
+GIVESTATEITEM 首充礼包 1 1 1 1 1 1 1 1 0
+close
+break
+
+
+
+
+
+[@StdModeFunc426]
+
+#or
+not checkitem  神级魂环·SSS 1
+not checkitem 「九天·祥云」★·图纸① 1
+not checkitem 「九天·祥云」★·图纸② 1
+not checkitem 「九天·祥云」★·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  「九天·祥云」★·合成锦囊
+break
+
+
+#if
+random 2
+checkitem  神级魂环·SSS 1
+checkitem 「九天·祥云」★·图纸① 1
+checkitem 「九天·祥云」★·图纸② 1
+checkitem 「九天·祥云」★·图纸③ 1
+#ACT
+take 「九天·祥云」★·图纸① 1
+take 「九天·祥云」★·图纸② 1
+take 「九天·祥云」★·图纸③ 1
+take 神级魂环·SSS 1
+give 「九天·祥云」★ 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 「九天·祥云」★·图纸① 1
+take 「九天·祥云」★·图纸② 1
+take 「九天·祥云」★·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+
+
+
+
+[@StdModeFunc427]
+
+
+#or
+not checkitem 「九天·祥云」★ 1
+not checkitem 「九天·祥云」★★·图纸① 1
+not checkitem 「九天·祥云」★★·图纸② 1
+not checkitem 「九天·祥云」★★·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  「九天·祥云」★★·合成锦囊
+break
+
+
+
+#if
+random 3
+checkitem 「九天·祥云」★ 1
+checkitem 「九天·祥云」★★·图纸① 1
+checkitem 「九天·祥云」★★·图纸② 1
+checkitem 「九天·祥云」★★·图纸③ 1
+#ACT
+take 「九天·祥云」★★·图纸① 1
+take 「九天·祥云」★★·图纸② 1
+take 「九天·祥云」★★·图纸③ 1
+take 「九天·祥云」★ 1
+give 「九天·祥云」★★ 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 「九天·祥云」★★·图纸① 1
+take 「九天·祥云」★★·图纸② 1
+take 「九天·祥云」★★·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+
+
+[@StdModeFunc428]
+
+#or
+not checkitem 「九天·祥云」★★ 1
+not checkitem 「九天·祥云」★★★·图纸① 1
+not checkitem 「九天·祥云」★★★·图纸② 1
+not checkitem 「九天·祥云」★★★·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  「九天·祥云」★★★·合成锦囊
+break
+
+
+
+#if
+random 5
+checkitem 「九天·祥云」★★ 1
+checkitem 「九天·祥云」★★★·图纸① 1
+checkitem 「九天·祥云」★★★·图纸② 1
+checkitem 「九天·祥云」★★★·图纸③ 1
+#ACT
+take 「九天·祥云」★★★·图纸① 1
+take 「九天·祥云」★★★·图纸② 1
+take 「九天·祥云」★★★·图纸③ 1
+take 「九天·祥云」★★ 1
+give 「九天·祥云」★★★ 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><「九天·祥云」★★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 「九天·祥云」★★★·图纸① 1
+take 「九天·祥云」★★★·图纸② 1
+take 「九天·祥云」★★★·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+
+[@StdModeFunc429]
+
+#or
+not checkitem 「九天·祥云」★★★ 1
+not checkitem ★★「九天·祥云」★★·图纸① 1
+not checkitem ★★「九天·祥云」★★·图纸② 1
+not checkitem ★★「九天·祥云」★★·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  ★★「九天·祥云」★★合成锦囊
+break
+
+
+
+#if
+random 15
+checkitem 「九天·祥云」★★★ 1
+checkitem ★★「九天·祥云」★★·图纸① 1
+checkitem ★★「九天·祥云」★★·图纸② 1
+checkitem ★★「九天·祥云」★★·图纸③ 1
+#ACT
+take ★★「九天·祥云」★★·图纸① 1
+take ★★「九天·祥云」★★·图纸② 1
+take ★★「九天·祥云」★★·图纸③ 1
+take 「九天·祥云」★★★ 1
+give ★★「九天·祥云」★★ 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><★★「九天·祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><★★「九天·祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><★★「九天·祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take ★★「九天·祥云」★★·图纸① 1
+take ★★「九天·祥云」★★·图纸② 1
+take ★★「九天·祥云」★★·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+
+
+
+[@StdModeFunc430]
+
+
+#or
+not checkitem ★★「九天·祥云」★★ 1
+not checkitem ★★「九天★祥云」★★·图纸① 1
+not checkitem ★★「九天★祥云」★★·图纸② 1
+not checkitem ★★「九天★祥云」★★·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  ★★「九天★祥云」★★合成锦囊
+break
+
+
+#if
+random 100
+checkitem ★★「九天·祥云」★★ 1
+checkitem ★★「九天★祥云」★★·图纸① 1
+checkitem ★★「九天★祥云」★★·图纸② 1
+checkitem ★★「九天★祥云」★★·图纸③ 1
+#ACT
+take ★★「九天★祥云」★★·图纸① 1
+take ★★「九天★祥云」★★·图纸② 1
+take ★★「九天★祥云」★★·图纸③ 1
+take ★★「九天·祥云」★★ 1
+give ★★「九天★祥云」★★ 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><★★「九天★祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><★★「九天★祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集祥云图纸,免费锻造吸血神器[/FCOLOR=161><★★「九天★祥云」★★/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take ★★「九天★祥云」★★·图纸① 1
+take ★★「九天★祥云」★★·图纸② 1
+take ★★「九天★祥云」★★·图纸③ 1
+give ★★「九天★祥云」★★合成锦囊 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+
+
+
+[@StdModeFunc437]
+
+
+#or
+not checkitem  [时装]·孙の悟饭 1
+not checkitem 「时装」·快乐风男·图纸① 1
+not checkitem 「时装」·快乐风男·图纸② 1
+not checkitem 「时装」·快乐风男·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  「时装」·快乐风男·合成锦囊
+break
+
+
+#if
+random 3
+checkitem [时装]·孙の悟饭 1
+checkitem 「时装」·快乐风男·图纸① 1
+checkitem 「时装」·快乐风男·图纸② 1
+checkitem 「时装」·快乐风男·图纸③ 1
+#ACT
+take 「时装」·快乐风男·图纸① 1
+take 「时装」·快乐风男·图纸② 1
+take 「时装」·快乐风男·图纸③ 1
+take 「时装」·孙の悟饭 1
+give [时装]·快乐风男 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·快乐风男/FCOLOR=250><]超强吸血神器，面对疾风吧！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·快乐风男/FCOLOR=250><]超强吸血神器，面对疾风吧！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·快乐风男/FCOLOR=250><]超强吸血神器，面对疾风吧！！！/FCOLOR=161>
+#elseact
+take 「时装」·快乐风男·图纸① 1
+take 「时装」·快乐风男·图纸② 1
+take 「时装」·快乐风男·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+
+
+
+[@StdModeFunc431]
+
+#or
+not checkitem  [时装]·快乐风男 1
+not checkitem 「时装」·黑崎一护·图纸① 1
+not checkitem 「时装」·黑崎一护·图纸② 1
+not checkitem 「时装」·黑崎一护·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  「时装」·黑崎一护·合成锦囊
+break
+
+
+#if
+random 8
+checkitem [时装]·快乐风男 1
+checkitem 「时装」·黑崎一护·图纸① 1
+checkitem 「时装」·黑崎一护·图纸② 1
+checkitem 「时装」·黑崎一护·图纸③ 1
+#ACT
+take 「时装」·黑崎一护·图纸① 1
+take 「时装」·黑崎一护·图纸② 1
+take 「时装」·黑崎一护·图纸③ 1
+take [时装]·快乐风男 1
+give [时装]·黑崎一护 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·黑崎一护/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·黑崎一护/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·黑崎一护/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 「时装」·黑崎一护·图纸① 1
+take 「时装」·黑崎一护·图纸② 1
+take 「时装」·黑崎一护·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+
+[@StdModeFunc432]
+#or
+not checkitem  [时装]·黑崎一护  1
+not checkitem 「时装」·更木剑八·图纸① 1
+not checkitem 「时装」·更木剑八·图纸② 1
+not checkitem 「时装」·更木剑八·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  「时装」·更木剑八·合成锦囊
+break
+
+
+#if
+random 12
+checkitem [时装]·黑崎一护 1
+checkitem 「时装」·更木剑八·图纸① 1
+checkitem 「时装」·更木剑八·图纸② 1
+checkitem 「时装」·更木剑八·图纸③ 1
+#ACT
+take 「时装」·更木剑八·图纸① 1
+take 「时装」·更木剑八·图纸② 1
+take 「时装」·更木剑八·图纸③ 1
+take [时装]·黑崎一护 1
+give [时装]·更木剑八 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·更木剑八/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·更木剑八/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·更木剑八/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 「时装」·更木剑八·图纸① 1
+take 「时装」·更木剑八·图纸② 1
+take 「时装」·更木剑八·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+[@StdModeFunc433]
+#or
+not checkitem  [时装]·更木剑八  1
+not checkitem 「时装」·橘右京·图纸① 1
+not checkitem 「时装」·橘右京·图纸② 1
+not checkitem 「时装」·橘右京·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  「时装」·橘右京·合成锦囊
+break
+
+
+#if
+random 16
+checkitem [时装]·更木剑八 1
+checkitem 「时装」·橘右京·图纸① 1
+checkitem 「时装」·橘右京·图纸② 1
+checkitem 「时装」·橘右京·图纸③ 1
+#ACT
+take 「时装」·橘右京·图纸① 1
+take 「时装」·橘右京·图纸② 1
+take 「时装」·橘右京·图纸③ 1
+take [时装]·更木剑八 1
+give [时装]·橘右京 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·橘右京/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·橘右京/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·橘右京/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 「时装」·橘右京·图纸① 1
+take 「时装」·橘右京·图纸② 1
+take 「时装」·橘右京·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+[@StdModeFunc434]
+
+#or
+not checkitem  [时装]·橘右京  1
+not checkitem 「时装」·鳯求凰·图纸① 1
+not checkitem 「时装」·鳯求凰·图纸② 1
+not checkitem 「时装」·鳯求凰·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  「时装」·鳯求凰·合成锦囊
+break
+
+
+#if
+random 1000
+checkitem [时装]·橘右京 1
+checkitem 「时装」·鳯求凰·图纸① 1
+checkitem 「时装」·鳯求凰·图纸② 1
+checkitem 「时装」·鳯求凰·图纸③ 1
+#ACT
+take 「时装」·鳯求凰·图纸① 1
+take 「时装」·鳯求凰·图纸② 1
+take 「时装」·鳯求凰·图纸③ 1
+take [时装]·橘右京 1
+give [时装]·鳯求凰 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·鳯求凰/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·鳯求凰/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集时装图纸,免费锻造吸血神器[/FCOLOR=161><「时装」·鳯求凰/FCOLOR=250><]超强吸血神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 「时装」·鳯求凰·图纸① 1
+take 「时装」·鳯求凰·图纸② 1
+take 「时装」·鳯求凰·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+[@StdModeFunc435]
+#or
+not checkitem 神器·冰魄 1
+not checkitem 火焰·赫斯提亚 1
+not checkitem 七星剑仙的剑气·图纸① 1
+not checkitem 七星剑仙的剑气·图纸② 1
+not checkitem 七星剑仙的剑气·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  七星剑仙的剑气·合成锦囊
+break
+
+
+#if
+random 1000
+checkitem 神器·冰魄 1
+checkitem 火焰·赫斯提亚 1
+checkitem 七星剑仙的剑气·图纸① 1
+checkitem 七星剑仙的剑气·图纸② 1
+checkitem 七星剑仙的剑气·图纸③ 1
+#ACT
+take 七星剑仙的剑气·图纸① 1
+take 七星剑仙的剑气·图纸② 1
+take 七星剑仙的剑气·图纸③ 1
+take 神器·冰魄 1
+take 火焰·赫斯提亚 1
+give 七星剑仙的剑气 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集七星剑图纸,免费锻造打金神器[/FCOLOR=161><七星剑仙的剑气/FCOLOR=250><]超强切割毒素神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集七星剑图纸,免费锻造打金神器[/FCOLOR=161><七星剑仙的剑气/FCOLOR=250><]超强切割毒素神器，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集七星剑图纸,免费锻造打金神器[/FCOLOR=161><七星剑仙的剑气/FCOLOR=250><]超强切割毒素神器，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 七星剑仙的剑气·图纸① 1
+take 七星剑仙的剑气·图纸② 1
+take 七星剑仙的剑气·图纸③ 1
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+[@StdModeFunc436]
+#or
+not checkitem 布拉巴斯王者统袍 1
+not checkitem 十万妖魂兽甲 1
+not checkitem 阳光战神的威严·图纸① 1
+not checkitem 阳光战神的威严·图纸② 1
+not checkitem 阳光战神的威严·图纸③ 1
+#ACT
+;#elseact
+MESSAGEBOX 材料不足,请看清使用条件！
+give  阳光战神的威严·合成锦囊
+break
+
+
+#if
+random 10
+checkitem 布拉巴斯王者统袍 1
+checkitem 十万妖魂兽甲 1
+checkitem 阳光战神的威严·图纸① 1
+checkitem 阳光战神的威严·图纸② 1
+checkitem 阳光战神的威严·图纸③ 1
+#ACT
+take 阳光战神的威严·图纸① 1
+take 阳光战神的威严·图纸② 1
+take 阳光战神的威严·图纸③ 1
+take 布拉巴斯王者统袍 1
+take 十万妖魂兽甲 1
+give 阳光战神的威严 1
+SENDMOVEMSG 0 253 255 130 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集阳光战神图纸,免费锻造打金神器[/FCOLOR=161><阳光战神的威严/FCOLOR=250><]附带全屏吸怪神技，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 170 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集阳光战神图纸,免费锻造打金神器[/FCOLOR=161><阳光战神的威严/FCOLOR=250><]附带全屏吸怪神技，PK打怪更牛比！！！/FCOLOR=161>
+SENDMOVEMSG 0 253 255 210 1 <【恭喜】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功收集阳光战神图纸,免费锻造打金神器[/FCOLOR=161><阳光战神的威严/FCOLOR=250><]附带全屏吸怪神技，PK打怪更牛比！！！/FCOLOR=161>
+#elseact
+take 阳光战神的威严·图纸① 1
+take 阳光战神的威严·图纸② 1
+take 阳光战神的威严·图纸③
+MESSAGEBOX 很遗憾,锦囊合成失败,扣除所有图纸!
+break
+
+
+
+
+
+
+
+[@STDMODEFUNC438]
+#if
+#ACT
+MOV S$来路 正常
+#IF
+EQUAL S$来路 正常
+#ACT
+INC U44 1
+MOV S$来路 假
+sendmsg 5 解开成功，得到1个装备强化石,当前数量：<$STR(U44)>个！
+BREAK
+
+
+
+
+[@STDMODEFUNC439]
+#if
+#ACT
+MOV S$来路 正常
+#IF
+EQUAL S$来路 正常
+#ACT
+INC U44 10
+MOV S$来路 假
+sendmsg 5 解开成功，得到1个装备强化石,当前数量：<$STR(U44)>个！
+BREAK
+
+
+
+
+[@STDMODEFUNC440]
+#if
+#ACT
+MOV S$来路 正常
+#IF
+EQUAL S$来路 正常
+#ACT
+INC U44 100
+MOV S$来路 假
+sendmsg 5 解开成功，得到100个装备强化石,当前数量：<$STR(U44)>个！
+BREAK
+
+
+
+[@STDMODEFUNC441]
+#if
+#ACT
+MOV S$来路 正常
+#IF
+EQUAL S$来路 正常
+#ACT
+INC U44 1000
+MOV S$来路 假
+sendmsg 5 解开成功，得到1000个装备强化石,当前数量：<$STR(U44)>个！
+BREAK
+
+
+
+[@STDMODEFUNC442]
+#if
+#ACT
+MOV S$来路 正常
+#IF
+EQUAL S$来路 正常
+#ACT
+INC U44 5000
+MOV S$来路 假
+sendmsg 5 解开成功，得到5000个装备强化石,当前数量：<$STR(U44)>个！
+BREAK
+
+
+
+[@STDMODEFUNC443]
+#if
+#ACT
+MOV S$来路 正常
+#IF
+EQUAL S$来路 正常
+#ACT
+INC U44 10000
+MOV S$来路 假
+sendmsg 5 解开成功，得到10000个装备强化石,当前数量：<$STR(U44)>个！
+BREAK
+
+
+
+
+
+[@GroupItemOn663]
+#IF
+#ACT
+ADDSKILL 火墙 3
+
+[@GroupItemOff663]
+#IF
+#ACT
+DELSKILL 火墙
+
+
+[@GroupItemOn664]
+#IF
+#ACT
+ADDSKILL 冰咆哮 3
+
+[@GroupItemOff664]
+#IF
+#ACT
+DELSKILL 冰咆哮
+
+
+
+
+
+[@StdModeFunc444]
+#ACT
+SHOWPROGRESSBARDLG 2 @鸿蒙之境 正在传送,进度%d%... 1 @鸿蒙中断
+Break
+
+[@鸿蒙之境]
+#IF
+#ACT
+map 鸿蒙之境 31 41
+;GiveStateItem 鸿蒙传送石 1 1 0 0 1 1 1 1
+GIVESTATEITEM 鸿蒙传送石 1 1 1 0 0 1 1 1 0
+
+[@鸿蒙中断]
+#ACT
+SendMsg 5 传送被中断
+;GiveStateItem 鸿蒙传送石 1 1 0 0 1 1 1 1
+GIVESTATEITEM 鸿蒙传送石 1 1 1 0 0 1 1 1 0
+Break
+
+
+
+[@StartAutoPlayGame]
+;#IF
+;Checktextlist ..\..\..\..\【挂机地图】\四大陆所有地图.txt <$MAP>
+;#ACT
+;goto @检测1
+;BREAK
+
+
+
+#IF
+Checktextlist ..\..\..\..\【挂机地图】\五大陆所有地图.txt <$MAP>
+;not Checktextlist ..\..\..\..\【挂机地图】\四大陆所有地图.txt <$MAP>
+#ACT
+goto @检测2
+BREAK
+
+
+
+#IF
+Checktextlist ..\..\..\..\【挂机地图】\六大陆所有地图.txt <$MAP>
+#ACT
+goto @检测3
+BREAK
+
+
+
+
+#IF
+check [101] 1
+;not Checktextlist ..\..\..\..\【挂机地图】\四大陆所有地图.txt <$MAP>
+;not Checktextlist ..\..\..\..\【挂机地图】\五大陆所有地图.txt <$MAP>
+;not Checktextlist ..\..\..\..\【挂机地图】\六大陆所有地图.txt <$MAP>
+#ACT
+StartAutoPlayGame 100 60 1
+#ELSEACT
+MESSAGEBOX 需要开通会员才能挂机~
+BREAK
+
+;[@检测1]
+;#IF
+;checkGAMEGLORY > 999
+;#ACT
+;StartAutoPlayGame 100 60 1
+;#ELSEACT
+;MESSAGEBOX 第四大陆需要充值1000以上才能挂机~
+;BREAK
+
+[@检测2]
+#IF
+checkGAMEGLORY > 2999
+#ACT
+StartAutoPlayGame 100 60 1
+#ELSEACT
+MESSAGEBOX 第五大陆需要充值3000以上才能挂机~
+BREAK
+
+[@检测3]
+#IF
+checkGAMEGLORY > 4999
+#ACT
+StartAutoPlayGame 100 60 1
+#ELSEACT
+MESSAGEBOX 第六大陆需要充值5000以上才能挂机~
+BREAK
+
+[@StopAutoPlayGame]
+#ACT
+SENDMSG 6 挂机结束，使用快捷键“CTRL+ALT+X”开始挂机
+
+
+
+
+[@挂机]
+#IF
+#ACT
+StartAutoPlayGame 100 60 1
+SENDMSG 6 开始挂机，使用快捷键“CTRL+ALT+X”停止挂机
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

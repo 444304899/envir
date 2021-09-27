@@ -1,0 +1,386 @@
+[@领取金币]
+{
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\01.txt
+#ACT
+give 金币 1
+DelAccountList ..\QuestDiary\92cz金币\金币\01.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值1金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\1.txt
+#ACT
+give 金币 10
+DelAccountList ..\QuestDiary\92cz金币\金币\1.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值10金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\02.txt
+#ACT
+give 金币 2
+DelAccountList ..\QuestDiary\92cz金币\金币\02.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值2金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\2.txt
+#ACT
+give 金币 20
+DelAccountList ..\QuestDiary\92cz金币\金币\2.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值20金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\03.txt
+#ACT
+give 金币 3
+DelAccountList ..\QuestDiary\92cz金币\金币\03.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值3金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\3.txt
+#ACT
+give 金币 30
+DelAccountList ..\QuestDiary\92cz金币\金币\3.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值30金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\04.txt
+#ACT
+give 金币 4
+DelAccountList ..\QuestDiary\92cz金币\金币\04.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值4金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\4.txt
+#ACT
+give 金币 40
+DelAccountList ..\QuestDiary\92cz金币\金币\4.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值40金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\05.txt
+#ACT
+give 金币 5
+DelAccountList ..\QuestDiary\92cz金币\金币\05.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值5金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\5.txt
+#ACT
+give 金币 50
+DelAccountList ..\QuestDiary\92cz金币\金币\5.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值50金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\06.txt
+#ACT
+give 金币 6
+DelAccountList ..\QuestDiary\92cz金币\金币\06.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值6金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\6.txt
+#ACT
+give 金币 60
+DelAccountList ..\QuestDiary\92cz金币\金币\6.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值60金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\07.txt
+#ACT
+give 金币 7
+DelAccountList ..\QuestDiary\92cz金币\金币\07.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值7金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\7.txt
+#ACT
+give 金币 70
+DelAccountList ..\QuestDiary\92cz金币\金币\7.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值70金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\08.txt
+#ACT
+give 金币 8
+DelAccountList ..\QuestDiary\92cz金币\金币\08.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值8金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\8.txt
+#ACT
+give 金币 80
+DelAccountList ..\QuestDiary\92cz金币\金币\8.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值80金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\09.txt
+#ACT
+give 金币 9
+DelAccountList ..\QuestDiary\92cz金币\金币\09.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值9金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\9.txt
+#ACT
+give 金币 90
+DelAccountList ..\QuestDiary\92cz金币\金币\9.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值90金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\10.txt
+#ACT
+give 金币 100
+DelAccountList ..\QuestDiary\92cz金币\金币\10.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值100金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\20.txt
+#ACT
+give 金币 200
+DelAccountList ..\QuestDiary\92cz金币\金币\20.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值200金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\30.txt
+#ACT
+give 金币 300
+DelAccountList ..\QuestDiary\92cz金币\金币\30.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值300金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\40.txt
+#ACT
+give 金币 400
+DelAccountList ..\QuestDiary\92cz金币\金币\40.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值400金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\50.txt
+#ACT
+give 金币 500
+DelAccountList ..\QuestDiary\92cz金币\金币\50.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值500金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\60.txt
+#ACT
+give 金币 600
+DelAccountList ..\QuestDiary\92cz金币\金币\60.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值600金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\70.txt
+#ACT
+give 金币 700
+DelAccountList ..\QuestDiary\92cz金币\金币\70.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值700金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\80.txt
+#ACT
+give 金币 800
+DelAccountList ..\QuestDiary\92cz金币\金币\80.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值800金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\90.txt
+#ACT
+give 金币 900
+DelAccountList ..\QuestDiary\92cz金币\金币\90.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值900金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\100.txt
+#ACT
+give 金币 1000
+DelAccountList ..\QuestDiary\92cz金币\金币\100.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值1000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\200.txt
+#ACT
+give 金币 2000
+DelAccountList ..\QuestDiary\92cz金币\金币\200.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值2000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\300.txt
+#ACT
+give 金币 3000
+DelAccountList ..\QuestDiary\92cz金币\金币\300.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值3000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\400.txt
+#ACT
+give 金币 4000
+DelAccountList ..\QuestDiary\92cz金币\金币\400.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值4000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\500.txt
+#ACT
+give 金币 5000
+DelAccountList ..\QuestDiary\92cz金币\金币\500.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值5000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\600.txt
+#ACT
+give 金币 6000
+DelAccountList ..\QuestDiary\92cz金币\金币\600.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值6000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\700.txt
+#ACT
+give 金币 7000
+DelAccountList ..\QuestDiary\92cz金币\金币\700.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值7000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\800.txt
+#ACT
+give 金币 8000
+DelAccountList ..\QuestDiary\92cz金币\金币\800.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值8000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\900.txt
+#ACT
+give 金币 9000
+DelAccountList ..\QuestDiary\92cz金币\金币\900.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值9000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\1000.txt
+#ACT
+give 金币 10000
+DelAccountList ..\QuestDiary\92cz金币\金币\1000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值10000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\2000.txt
+#ACT
+give 金币 20000
+DelAccountList ..\QuestDiary\92cz金币\金币\2000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值20000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\3000.txt
+#ACT
+give 金币 30000
+DelAccountList ..\QuestDiary\92cz金币\金币\3000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值30000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\4000.txt
+#ACT
+give 金币 40000
+DelAccountList ..\QuestDiary\92cz金币\金币\4000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值40000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\5000.txt
+#ACT
+give 金币 50000
+DelAccountList ..\QuestDiary\92cz金币\金币\5000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值50000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\6000.txt
+#ACT
+give 金币 60000
+DelAccountList ..\QuestDiary\92cz金币\金币\6000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值60000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\7000.txt
+#ACT
+give 金币 70000
+DelAccountList ..\QuestDiary\92cz金币\金币\7000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值70000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\8000.txt
+#ACT
+give 金币 80000
+DelAccountList ..\QuestDiary\92cz金币\金币\8000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值80000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\9000.txt
+#ACT
+give 金币 90000
+DelAccountList ..\QuestDiary\92cz金币\金币\9000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值90000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\10000.txt
+#ACT
+give 金币 100000
+DelAccountList ..\QuestDiary\92cz金币\金币\10000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值100000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\20000.txt
+#ACT
+give 金币 200000
+DelAccountList ..\QuestDiary\92cz金币\金币\20000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值200000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\30000.txt
+#ACT
+give 金币 300000
+DelAccountList ..\QuestDiary\92cz金币\金币\30000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值300000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\40000.txt
+#ACT
+give 金币 400000
+DelAccountList ..\QuestDiary\92cz金币\金币\40000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值400000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\50000.txt
+#ACT
+give 金币 500000
+DelAccountList ..\QuestDiary\92cz金币\金币\50000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值500000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\60000.txt
+#ACT
+give 金币 600000
+DelAccountList ..\QuestDiary\92cz金币\金币\60000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值600000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\70000.txt
+#ACT
+give 金币 700000
+DelAccountList ..\QuestDiary\92cz金币\金币\70000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值700000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\80000.txt
+#ACT
+give 金币 800000
+DelAccountList ..\QuestDiary\92cz金币\金币\80000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值800000金币，如果您也想获得，请赶快充值吧。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz金币\金币\90000.txt
+#ACT
+give 金币 900000
+DelAccountList ..\QuestDiary\92cz金币\金币\90000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值900000金币，如果您也想获得，请赶快充值吧。
+
+#ELSESAY
+\　\ \
+<>       请查看自己的充值数量!\
+<>       没有充值请按提示进行充值!\
+<>       <退出/@exit>
+}

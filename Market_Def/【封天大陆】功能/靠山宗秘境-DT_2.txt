@@ -1,0 +1,83 @@
+[@main]
+
+#IF
+#act
+#say
+\ \ \  \
+
+
+<>         <想去看看那传说中的靠山宗秘境吗？/AUTOCOLOR=158>\
+<>         <此地图爆率加成500% 超多怪物/AUTOCOLOR=158>\
+<>         <进图要求秘境卷轴*5张或者50个金币一次/AUTOCOLOR=158>\
+<>         <进图1小时后自动返回靠山宗/AUTOCOLOR=158>\
+<>         <全区进入次数达到10次后触发秘境boss/AUTOCOLOR=158>\
+<>         <当前进入次数 <$str(g66)>／次,10次后重新计算/AUTOCOLOR=158>\
+<>                      \   \  \
+
+
+<>                  <IMG:176:6:230:-26/@传送1>    \
+
+
+
+[@传送1]
+
+
+
+#if
+checkitem 秘境卷轴 5
+#act
+take 秘境卷轴 5
+MAPMOVE 靠山宗秘境
+SENDDELAYMSG 剩余[%s]自动传回靠山宗 3600 250 1 @传回地图
+INC G66 1
+GOTO @脚本
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+#if
+checkgold 50
+#act
+take 金币 50
+MAPMOVE 靠山宗秘境
+SENDDELAYMSG 剩余[%s]自动传回靠山宗 3600 250 1 @传回地图
+INC G66 1
+GOTO @脚本
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+[@脚本]
+#if
+large g66 9
+#act
+MonGenEx 靠山宗秘境 60  61 靠山宗秘境boss  10  1 0 253
+GOTO @脚本1
+SENDMOVEMSG 0 243 0 130 1 {提示:/FCOLOR=250}靠山宗秘境中{[靠山宗秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 170 1 {提示:/FCOLOR=250}靠山宗秘境中{[靠山宗秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 0
+SENDMOVEMSG 0 243 0 210 1 {提示:/FCOLOR=250}靠山宗秘境中{[靠山宗秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 00
+break
+
+
+[@脚本1]
+#if
+large g66 9
+#act
+MOV G66 0
+
+
+
+[@传回地图]
+#if
+#act
+MAP DT_2
+
+
+
+
+
+
+
+
+
+

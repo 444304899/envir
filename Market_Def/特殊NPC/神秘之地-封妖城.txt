@@ -1,0 +1,176 @@
+[@main]
+
+#if
+#act
+MOV S$刷新状态1 <未刷新/AUTOCOLOR=247>
+MOV S$刷新状态2 <未刷新/AUTOCOLOR=247>
+MOV S$刷新状态3 <未刷新/AUTOCOLOR=247>
+
+
+
+#OR
+CheckMapSameMonCount 隐藏空间 全暴◇【队友之灾１８２】 > 0
+CheckMapSameMonCount 隐藏空间 全暴◇【祖安狂人音洛】 > 0
+CheckMapSameMonCount 隐藏空间 全暴◇【表面兄弟均衡】 > 0
+#Act
+MOV S$刷新状态1 <已刷新/AUTOCOLOR=251>
+
+#IF
+CheckMapSameMonCount ronghuo2boss ★扎昆★·【荒古传承】 > 0
+#Act
+MOV S$刷新状态2 <已刷新/AUTOCOLOR=251>
+
+#IF
+CheckMapSameMonCount syyh 幻境·鬼王（终极SSS+） > 0
+#Act
+MOV S$刷新状态3 <已刷新/AUTOCOLOR=251>
+
+#if
+EQUAL G40 0
+#act
+MOV S$地图状态 未解封
+MOV S$进入按钮 <《解除-封印限制》|250#需要创世石碑解封，解封后全区可进入/@解除封印>
+
+#if
+EQUAL G40 1
+#act
+MOV S$地图状态 已解封
+MOV S$进入按钮 <《进入-封印寺庙》|250#创世石碑召唤必爆专属BOSS/@进入封印>
+
+
+
+
+
+#IF
+#Act
+GOTO @神秘之地地图配置
+#say
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \
+
+<>                                                        <BOSS名称：/AUTOCOLOR=103><全暴◇【队友之灾１８２】/AUTOCOLOR=249>  <所在地图：/AUTOCOLOR=103><隐藏空间/AUTOCOLOR=250>   <刷新时间：/AUTOCOLOR=103><60分钟/AUTOCOLOR=146>   <刷新状态：/AUTOCOLOR=103><$STR(S$刷新状态1)>  \ \
+<>                                                                                                                                     <我要挑战|250#免费进入/@挑战隐藏>\\ \
+
+<>                                                        <BOSS名称：/AUTOCOLOR=103><★★★云顶之奕★★★/AUTOCOLOR=249>      <所在地图：/AUTOCOLOR=103><封印寺庙/AUTOCOLOR=250>   <解封怪物：/AUTOCOLOR=103><必爆怪/AUTOCOLOR=146>   <刷新状态：/AUTOCOLOR=103><自助/AUTOCOLOR=253>  \  \
+<>                                                                                                                                  <$STR(S$进入按钮)>\ \ \ \ \  \ \
+
+<>                                                                        <ItemShow:920:0:0:-82:1><ItemShow:921:0:40:-82:1><ItemShow:922:0:80:-82:1><ItemShow:1523:0:120:-82:1>       \
+
+
+[@神秘之地地图配置]
+
+#IF
+#Act
+Getliststring ..\QuestDiary\馒头制作\地图产出\神秘之地.txt 0 S$神秘显示0 S$无无0
+Getliststring ..\QuestDiary\馒头制作\地图产出\神秘之地.txt 1 S$神秘显示1 S$无无1
+Getliststring ..\QuestDiary\馒头制作\地图产出\神秘之地.txt 2 S$神秘显示2 S$无无2
+Getliststring ..\QuestDiary\馒头制作\地图产出\神秘之地.txt 3 S$神秘显示3 S$无无3
+Getliststring ..\QuestDiary\馒头制作\地图产出\神秘之地.txt 4 S$神秘显示4 S$无无4
+Getliststring ..\QuestDiary\馒头制作\地图产出\神秘之地.txt 5 S$神秘显示5 S$无无5
+Getliststring ..\QuestDiary\馒头制作\地图产出\神秘之地.txt 6 S$神秘显示6 S$无无6
+Getliststring ..\QuestDiary\馒头制作\地图产出\神秘之地.txt 7 S$神秘显示7 S$无无7
+
+#IF
+Equal S$神秘显示0
+#Act
+mov S$神秘显示0 暂无产出数据
+
+#IF
+Equal S$神秘显示1
+#Act
+mov S$神秘显示1 暂无产出数据
+
+#IF
+Equal S$神秘显示2
+#Act
+mov S$神秘显示2 暂无产出数据
+
+#IF
+Equal S$神秘显示3
+#Act
+mov S$神秘显示3 暂无产出数据
+
+#IF
+Equal S$神秘显示4
+#Act
+mov S$神秘显示4 暂无产出数据
+
+#IF
+Equal S$神秘显示5
+#Act
+mov S$神秘显示5 暂无产出数据
+
+#IF
+Equal S$神秘显示6
+#Act
+mov S$神秘显示6 暂无产出数据
+
+#IF
+Equal S$神秘显示7
+#Act
+mov S$神秘显示7 暂无产出数据
+
+
+
+
+
+
+[@挑战隐藏]
+
+#IF
+#act
+MAPMOVE 隐藏空间 31 74
+SendCenterMsg 70 0 〖隐藏空间〗:玩家[<$USERNAME>]免费进入了地图<$MapTitle>.挑战全爆机甲!. 1 10
+break
+
+[@挑战深渊]
+
+#if
+checkitem 深渊之地入场券 1
+#act
+take 深渊之地入场券 1
+MAPmove syyh 49 42
+SetClientBuff 12 1 3680 3599 254/当前地图：<$MapTitle> 0 0
+#elseact
+MESSAGEBOX 进入此地图需要“深渊之地入场券*1”请检查你是否有对应物品!
+break
+
+
+[@挑战扎昆]
+
+
+#if
+checkitem 扎昆洞穴入场券 1
+#act
+take 扎昆洞穴入场券 1
+MAPMOVE ronghuo2boss
+SetClientBuff 12 1 3680 3599 254/当前地图：<$MapTitle> 0 0
+#elseact
+MESSAGEBOX 进入此地图需要“扎昆洞穴入场券*1”请检查你是否有对应物品!
+break
+
+
+[@进入封印]
+
+
+#if	
+EQUAL G40 1
+#act
+map 封印寺庙
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图:<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+[@解除封印]
+#if
+EQUAL G40 0
+checkitem 创世石碑 1
+#act
+take 创世石碑 1
+mov G40 1
+goto @main
+SENDMOVEMSG 0 249 251 350 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功解开了『封印寺庙』的禁忌，全服开启进入条件.请通过神秘之地进入！！
+SENDMOVEMSG 0 249 251 300 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功解开了『封印寺庙』的禁忌，全服开启进入条件.请通过神秘之地进入！！
+SENDMOVEMSG 0 249 251 400 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功解开了『封印寺庙』的禁忌，全服开启进入条件.请通过神秘之地进入！！
+#elseact
+MESSAGEBOX [提示:]\\解封失败,请检查你是否有创世石碑X1！
+break

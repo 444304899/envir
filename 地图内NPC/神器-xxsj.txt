@@ -1,0 +1,73 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \
+<><神器合成.New~/FCOLOR=58> \ \
+<><★切割[凡]/@升级1>   <需要/FCOLOR=116> <[切割[玄]]/FCOLOR=250>+<[云顶结晶*300]/FCOLOR=250>+<[元宝*500w]/FCOLOR=151>\ \
+<><★割魂★/@升级2>   <需要/FCOLOR=116> <[★切割[凡]]/FCOLOR=250>+<[云顶结晶*500]/FCOLOR=250>+<[元宝*1000w]/FCOLOR=151>\ \
+<><★鬼切★/@升级3>   <需要/FCOLOR=116> <[★★割魂★★]/FCOLOR=250>+<[云顶结晶*700]/FCOLOR=250>+<[元宝*1500w]/FCOLOR=151>\ \
+<><★究魄★/@升级4>   <需要/FCOLOR=116> <[★★★鬼切★★★]/FCOLOR=250>+<[云顶结晶*1000]/FCOLOR=250>+<[元宝*2000w]/FCOLOR=151>\ \
+<><IMG:166:6:5:-7>\
+<>       <ItemShow:595:0:0:-9:1>       <ItemShow:596:0:0:-9:1>       <ItemShow:597:0:0:-9:1>       <ItemShow:598:0:0:-9:1>
+
+[@升级1]
+#if
+checkitem 切割[玄] 1
+checkitem 云顶结晶 300
+CHECKGAMEGOLD ? 5000000
+#act
+take 切割[玄] 1
+take 云顶结晶 300
+GAMEGOLD - 5000000
+give ★切割[凡] 1
+MESSAGEBOX [提示]:装备合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@升级2]
+#if
+checkitem ★切割[凡] 1
+checkitem 云顶结晶 500
+CHECKGAMEGOLD ? 10000000
+#act
+take ★切割[凡] 1
+take 云顶结晶 500
+GAMEGOLD - 10000000
+give ★★割魂★★ 1
+MESSAGEBOX [提示]:装备合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@升级3]
+#if
+checkitem ★★割魂★★ 1
+checkitem 云顶结晶 700
+CHECKGAMEGOLD ? 15000000
+#act
+take ★★割魂★★ 1
+take 云顶结晶 700
+GAMEGOLD - 15000000
+give ★★★鬼切★★★ 1
+MESSAGEBOX [提示]:装备合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@升级4]
+#if
+checkitem ★★★鬼切★★★ 1
+checkitem 云顶结晶 1000
+CHECKGAMEGOLD ? 20000000
+#act
+take ★★★鬼切★★★ 1
+take 云顶结晶 1000
+GAMEGOLD - 20000000
+give ★★★★究魄★★★★ 1
+MESSAGEBOX [提示]:装备合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK

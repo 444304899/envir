@@ -1,0 +1,385 @@
+[@领取充值金额]
+{
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\01.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\01.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\1.txt
+#ACT
+GAMEGLORY + 1
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\1.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了1充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\02.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\02.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\2.txt
+#ACT
+GAMEGLORY + 2
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\2.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了2充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\03.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\03.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\3.txt
+#ACT
+GAMEGLORY + 3
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\3.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了3充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\04.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\04.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\4.txt
+#ACT
+GAMEGLORY + 4
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\4.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了4充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\05.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\05.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\5.txt
+#ACT
+GAMEGLORY + 5
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\5.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了5充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\06.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\06.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\6.txt
+#ACT
+GAMEGLORY + 6
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\6.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了6充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\07.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\07.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\7.txt
+#ACT
+GAMEGLORY + 7
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\7.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了7充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\08.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\08.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\8.txt
+#ACT
+GAMEGLORY + 8
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\8.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了8充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\09.txt
+#ACT
+GAMEGLORY + 0
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\09.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\9.txt
+#ACT
+GAMEGLORY + 9
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\9.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了9充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\10.txt
+#ACT
+GAMEGLORY + 10
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\10.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了10充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\20.txt
+#ACT
+GAMEGLORY + 20
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\20.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了20充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\30.txt
+#ACT
+GAMEGLORY + 30
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\30.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了30充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\40.txt
+#ACT
+GAMEGLORY + 40
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\40.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了40充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\50.txt
+#ACT
+GAMEGLORY + 50
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\50.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了50充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\60.txt
+#ACT
+GAMEGLORY + 60
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\60.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了60充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\70.txt
+#ACT
+GAMEGLORY + 70
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\70.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了70充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\80.txt
+#ACT
+GAMEGLORY + 80
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\80.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了80充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\90.txt
+#ACT
+GAMEGLORY + 90
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\90.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了90充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\100.txt
+#ACT
+GAMEGLORY + 100
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\100.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了100充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\200.txt
+#ACT
+GAMEGLORY + 200
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\200.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了200充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\300.txt
+#ACT
+GAMEGLORY + 300
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\300.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了300充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\400.txt
+#ACT
+GAMEGLORY + 400
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\400.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了400充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\500.txt
+#ACT
+GAMEGLORY + 500
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\500.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了500充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\600.txt
+#ACT
+GAMEGLORY + 600
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\600.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了600充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\700.txt
+#ACT
+GAMEGLORY + 700
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\700.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了700充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\800.txt
+#ACT
+GAMEGLORY + 800
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\800.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了800充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\900.txt
+#ACT
+GAMEGLORY + 900
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\900.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了900充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\1000.txt
+#ACT
+GAMEGLORY + 1000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\1000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了1000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\2000.txt
+#ACT
+GAMEGLORY + 2000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\2000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了2000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\3000.txt
+#ACT
+GAMEGLORY + 3000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\3000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了3000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\4000.txt
+#ACT
+GAMEGLORY + 4000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\4000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了4000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\5000.txt
+#ACT
+GAMEGLORY + 5000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\5000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了5000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\6000.txt
+#ACT
+GAMEGLORY + 6000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\6000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了6000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\7000.txt
+#ACT
+GAMEGLORY + 7000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\7000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了7000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\8000.txt
+#ACT
+GAMEGLORY + 8000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\8000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了8000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\9000.txt
+#ACT
+GAMEGLORY + 9000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\9000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了9000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\10000.txt
+#ACT
+GAMEGLORY + 10000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\10000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了10000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\20000.txt
+#ACT
+GAMEGLORY + 20000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\20000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了20000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\30000.txt
+#ACT
+GAMEGLORY + 30000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\30000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了30000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\40000.txt
+#ACT
+GAMEGLORY + 40000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\40000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了40000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\50000.txt
+#ACT
+GAMEGLORY + 50000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\50000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了50000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\60000.txt
+#ACT
+GAMEGLORY + 60000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\60000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了60000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\70000.txt
+#ACT
+GAMEGLORY + 70000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\70000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了70000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\80000.txt
+#ACT
+GAMEGLORY + 80000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\80000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了80000充值金额。
+
+#IF
+CheckAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\90000.txt
+#ACT
+GAMEGLORY + 90000
+DelAccountList ..\QuestDiary\76pay充值钻石\附加赠送\充值金额\90000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了90000充值金额。
+
+#ELSESAY
+请查看自己的充值数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}

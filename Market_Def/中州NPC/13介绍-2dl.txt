@@ -1,0 +1,7 @@
+[@main]
+#if
+#say
+\
+<> <¡¶×¨Êô½éÉÜ¡·~/FCOLOR=58> \  \
+<>   <ItemShow:928:0:0:0:1>  <ItemShow:929:0:0:0:1>  <ItemShow:930:0:0:0:1>  <ItemShow:931:0:0:0:1>  <ItemShow:933:0:0:0:1>  <ItemShow:934:0:0:0:1>  <ItemShow:935:0:0:0:1>\ \ \ \
+<>   <ItemShow:936:0:0:-8:1>  <ItemShow:937:0:0:-8:1>  <ItemShow:938:0:0:-8:1>  <ItemShow:939:0:0:-8:1>  <ItemShow:940:0:0:-8:1>  <ItemShow:941:0:0:-8:1>  <ItemShow:942:0:0:-8:1>\ \ \

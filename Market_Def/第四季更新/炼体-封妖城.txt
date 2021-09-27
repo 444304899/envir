@@ -1,0 +1,499 @@
+[@main]
+
+
+
+#if
+SMALL U32 10
+#act
+MOV S$标头显示 <炼体一阶段/FCOLOR=253><*觉醒*/FCOLOR=249>
+MOV S$阶段判断 <$STR(U32)>
+GOTO @炼体阶段显示
+MOV S$显示神力 1.0<$STR(U32)>
+MOV S$点击标签 <升级觉醒|253#当前获得属性:^250#加成<$STR(U32)>%血量/@炼体开始>
+MOV N$炼体材料 20
+MOV N$炼体元宝 1000000
+MOV N$炼体钻石 0
+MOV N$炼体金币 0
+MOV N$炼体成功率 60
+MOV N$炼体下一阶 10
+MOV N$人物图片位置 0
+GOTO @炼体界面
+break
+
+#if
+SMALL U32 20
+#act
+MOV S$标头显示 <炼体二阶段/FCOLOR=253><*枷锁*/FCOLOR=249>
+MOV S$阶段判断 <$STR(U32)>
+DEC S$阶段判断 1 1
+GOTO @炼体阶段显示
+MOV S$显示神力 1.<$STR(U32)>
+MOV S$点击标签 <激活枷锁|253#当前获得属性:^250#加成<$STR(U32)>%血量/@炼体开始>
+MOV N$炼体材料 20
+MOV N$炼体元宝 1000000
+MOV N$炼体钻石 0
+MOV N$炼体金币 0
+MOV N$炼体成功率 55
+MOV N$炼体下一阶 20
+MOV N$人物图片位置 36
+GOTO @炼体界面
+break
+
+#if
+SMALL U32 30
+#act
+MOV S$标头显示 <炼体三阶段/FCOLOR=253><*逍遥*/FCOLOR=249>
+MOV S$阶段判断 <$STR(U32)>
+DEC S$阶段判断 1 1
+GOTO @炼体阶段显示
+MOV S$显示神力 1.<$STR(U32)>
+MOV S$点击标签 <激活逍遥|253#当前获得属性:^250#加成<$STR(U32)>%血量/@炼体开始>
+MOV N$炼体材料 20
+MOV N$炼体元宝 1500000
+MOV N$炼体钻石 100
+MOV N$炼体金币 0
+MOV N$炼体成功率 50
+MOV N$炼体下一阶 30
+MOV N$人物图片位置 42
+GOTO @炼体界面
+break
+
+#if
+SMALL U32 40
+#act
+MOV S$标头显示 <炼体四阶段/FCOLOR=253><*观想*/FCOLOR=249>
+MOV S$阶段判断 <$STR(U32)>
+DEC S$阶段判断 1 1
+GOTO @炼体阶段显示
+MOV S$显示神力 1.<$STR(U32)>
+MOV S$点击标签 <激活观想|253#当前获得属性:^250#加成<$STR(U32)>%血量/@炼体开始>
+MOV N$炼体材料 20
+MOV N$炼体元宝 2000000
+MOV N$炼体钻石 200
+MOV N$炼体金币 0
+MOV N$炼体成功率 45
+MOV N$炼体下一阶 40
+MOV N$人物图片位置 48
+GOTO @炼体界面
+break
+
+#if
+SMALL U32 50
+#act
+MOV S$标头显示 <炼体五阶段/FCOLOR=253><*观想*/FCOLOR=249>
+MOV S$阶段判断 <$STR(U32)>
+DEC S$阶段判断 1 1
+GOTO @炼体阶段显示
+MOV S$显示神力 1.<$STR(U32)>
+MOV S$点击标签 <激活观想|253#当前获得属性:^250#加成<$STR(U32)>%血量/@炼体开始>
+MOV N$炼体材料 20
+MOV N$炼体元宝 3000000
+MOV N$炼体钻石 0
+MOV N$炼体金币 3
+MOV N$炼体成功率 40
+MOV N$炼体下一阶 50
+MOV N$人物图片位置 54
+GOTO @炼体界面
+break
+
+#if
+EQUAL U32 50
+#act
+MOV S$标头显示 <炼体五阶段/FCOLOR=253><*观想*/FCOLOR=249>
+MOV S$阶段判断 <$STR(U32)>
+DEC S$阶段判断 1 1
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=250>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=250>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=250>
+MOV S$六阶 <阶段六星:☆2☆☆☆☆☆/FCOLOR=250>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$显示神力 1.<$STR(U32)>
+MOV S$点击标签 <激活观想|253#当前获得属性:^250#加成<$STR(U32)>%血量/@炼体开始>
+MOV N$炼体材料 20
+MOV N$炼体元宝 3000000
+MOV N$炼体钻石 0
+MOV N$炼体金币 30
+MOV N$人物图片位置 54
+GOTO @炼体界面
+break
+
+[@炼体界面]
+#if
+#act
+MOV N$炼体素材 33
+MOV N$对话框位置 63
+#if
+LARGE N$炼体钻石 0
+;LARGE N$炼体金币 0
+#say
+<PLAYIMG:<$STR(N$炼体素材)>:<$STR(N$人物图片位置)>:6:200:200:50:0:00>\ \
+\                                                 <$STR(S$标头显示)>\ \ \ \ \
+\                                                                                        <属性①:/FCOLOR=251><每星增加1%血量/FCOLOR=254>\
+\                                                                                           \
+\                                                                                        <属性②:/FCOLOR=251><每星增加0.1倍防御/FCOLOR=254>\ \
+\                                                                                             <炼体规则:/FCOLOR=253>\
+\                                                                                  <每阶段需材料→[炼体晶石+元宝]/FCOLOR=243>\
+\                                                                                  {升级成功加1星.失败降1星.成功几率<$STR(N$炼体成功率)>%/FCOLOR=70}\
+\                                                                                  <升级成功进入下阶段.失败不会降阶段/FCOLOR=251>\
+\ <$STR(S$一阶)>\
+\ <$STR(S$二阶)>                                                                             <当前所需材料:/FCOLOR=253>\
+\ <$STR(S$三阶)>                                                                         <炼体晶石:/FCOLOR=250><$STR(N$炼体材料)><个/FCOLOR=250>\
+\ <$STR(S$四阶)>                                                                       <费用元宝:/FCOLOR=250><$STR(N$炼体元宝)>\
+\ <$STR(S$五阶)>                                                                     <费用钻石:/FCOLOR=250><$STR(N$炼体钻石)> <费用金币:/FCOLOR=250><$STR(N$炼体金币)>\
+\ <$STR(S$六阶)>\
+\ <$STR(S$七阶)>\
+\ <$STR(S$八阶)>                                                                 *<查看炼体保底|251#炼体一阶段:保底200次.200次后必成功^250#炼体二阶段.保底200次.200次后必成功^254#炼体三阶段,保底200次,200次后必成功^253#炼体四阶段:为考虑后期耐玩性.不保底^249#炼体五阶段:为考虑后期耐玩性.不保底/@>*\
+\ <$STR(S$九阶)>\
+\ <$STR(S$十阶)>                     『<$STR(S$点击标签)>』                     \
+#elsesay
+<PLAYIMG:<$STR(N$炼体素材)>:<$STR(N$人物图片位置)>:6:200:200:50:0:00>\ \
+\                                                 <$STR(S$标头显示)>\ \ \ \ \
+\                                                                                        <属性①:/FCOLOR=251><每星增加1%血量/FCOLOR=254>\
+\                                                                                           \
+\                                                                                        <属性②:/FCOLOR=251><每星增加0.1倍防御/FCOLOR=254>\ \
+\                                                                                             <炼体规则:/FCOLOR=253>\
+\                                                                                  <每阶段需材料→[炼体晶石+元宝]/FCOLOR=243>\
+\                                                                                  {升级成功加1星.失败降1星.成功几率<$STR(N$炼体成功率)>%/FCOLOR=70}\
+\                                                                                  <升级成功进入下阶段.失败不会降阶段/FCOLOR=251>\
+\ <$STR(S$一阶)>\
+\ <$STR(S$二阶)>                                                                             <当前所需材料:/FCOLOR=253>\
+\ <$STR(S$三阶)>                                                                         <炼体晶石:/FCOLOR=250><$STR(N$炼体材料)><个/FCOLOR=250>\
+\ <$STR(S$四阶)>                                                                       <费用元宝:/FCOLOR=250><$STR(N$炼体元宝)> <费用钻石:/FCOLOR=250><$STR(N$炼体钻石)> <费用金币:/FCOLOR=250><$STR(N$炼体金币)>\
+\ <$STR(S$五阶)>\
+\ <$STR(S$六阶)>\
+\ <$STR(S$七阶)>\
+\ <$STR(S$八阶)>                                                                 *<查看炼体保底|251#炼体一阶段:保底200次.200次后必成功^250#炼体二阶段.保底200次.200次后必成功^254#炼体三阶段,保底200次,200次后必成功^253#炼体四阶段:为考虑后期耐玩性.不保底^249#炼体五阶段:为考虑后期耐玩性.不保底/@>*\
+\ <$STR(S$九阶)>\
+\ <$STR(S$十阶)>                     『<$STR(S$点击标签)>』                     <当前阶段升级失败了/FCOLOR=250>[<$STR(U37)>]<次/FCOLOR=250>\
+
+[@炼体开始]
+#if
+EQUAL U32 50
+#act
+MESSAGEBOX 你的炼体已经满级!
+break
+
+#if
+CHECKGAMEGOLD < <$STR(N$炼体元宝)>
+#act
+MESSAGEBOX 元宝不足,不能炼体!
+break
+
+#if
+small U32 40
+#act
+goto @炼体111
+break
+
+
+
+#if
+LARGE N$炼体钻石 0
+CHECKGAMEPOINT < <$STR(N$炼体钻石)>
+#act
+MESSAGEBOX 钻石不足,不能炼体!
+break
+
+#if
+LARGE N$炼体金币 0
+not CHECKGOLD <$STR(N$炼体金币)>
+#act
+MESSAGEBOX 金币不足,不能炼体!
+break
+
+#if
+CHECKITEM 炼体晶石 <$STR(N$炼体材料)>
+#act
+GAMEGOLD - <$STR(N$炼体元宝)>
+GAMEPOINT - <$STR(N$炼体钻石)>
+TAKE 金币 <$STR(N$炼体金币)>
+TAKE 炼体晶石 <$STR(N$炼体材料)>
+MOVR N$炼体几率 1 101
+#elseact
+MESSAGEBOX 炼体晶石不足,不能炼体!
+break
+
+#if
+EQUAL U37 199
+#act
+MOV U37 0
+MOV U32 <$STR(N$炼体下一阶)>
+#CALL [\BUFF\属性加载.txt] @属性加载
+GOTO @main
+break
+#if
+LARGE N$炼体成功率 <$STR(N$炼体几率)>
+#act
+INC U32 1
+GOTO @属性加载
+SENDMSG 7 恭喜你炼体成功!
+#elseact
+MOV N$炼体失败检测 1
+GOTO @炼体失败
+SENDMSG 7 很遗憾,本次炼体失败!
+#if
+NOT SMALL U32 <$STR(N$炼体下一阶)>
+#act
+MOV U37 0
+GOTO @main
+break
+#if
+SMALL U32 40
+#act
+INC U37 1
+GOTO @main
+break
+#elseact
+GOTO @main
+break
+
+[@炼体失败]
+#if
+EQUAL N$炼体失败检测 1
+#act
+#elseact
+break
+#or
+EQUAL U32 0
+EQUAL U32 10
+EQUAL U32 20
+EQUAL U32 30
+EQUAL U32 40
+EQUAL U32 50
+#act
+MOV N$炼体失败检测 0
+break
+#elseact
+DEC U32 1
+GOTO @属性加载
+MOV N$炼体失败检测 0
+break
+
+;------------------------
+
+[@炼体111]
+#if
+LARGE N$炼体钻石 0
+CHECKGAMEPOINT < <$STR(N$炼体钻石)>
+#act
+MESSAGEBOX 钻石不足,不能炼体!
+break
+
+
+
+#if
+CHECKITEM 炼体晶石 <$STR(N$炼体材料)>
+#act
+GAMEGOLD - <$STR(N$炼体元宝)>
+GAMEPOINT - <$STR(N$炼体钻石)>
+;TAKE 金币 <$STR(N$炼体金币)>
+TAKE 炼体晶石 <$STR(N$炼体材料)>
+MOVR N$炼体几率 1 101
+#elseact
+MESSAGEBOX 炼体晶石不足,不能炼体!
+break
+
+#if
+EQUAL U37 199
+#act
+MOV U37 0
+MOV U32 <$STR(N$炼体下一阶)>
+#CALL [\BUFF\属性加载.txt] @属性加载
+GOTO @main
+break
+#if
+LARGE N$炼体成功率 <$STR(N$炼体几率)>
+#act
+INC U32 1
+GOTO @属性加载
+SENDMSG 7 恭喜你炼体成功!
+#elseact
+MOV N$炼体失败检测 1
+GOTO @炼体失败
+SENDMSG 7 很遗憾,本次炼体失败!
+#if
+NOT SMALL U32 <$STR(N$炼体下一阶)>
+#act
+MOV U37 0
+GOTO @main
+break
+#if
+SMALL U32 40
+#act
+INC U37 1
+GOTO @main
+break
+#elseact
+GOTO @main
+break
+
+[@炼体失败]
+#if
+EQUAL N$炼体失败检测 1
+#act
+#elseact
+break
+#or
+EQUAL U32 0
+EQUAL U32 10
+EQUAL U32 20
+EQUAL U32 30
+EQUAL U32 40
+EQUAL U32 50
+#act
+MOV N$炼体失败检测 0
+break
+#elseact
+DEC U32 1
+GOTO @属性加载
+MOV N$炼体失败检测 0
+break
+
+
+
+[@炼体阶段显示]
+#if
+EQUAL S$阶段判断 0
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=247>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=247>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=247>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=247>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=247>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=247>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 1
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=247>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=247>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=247>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=247>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=247>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 2
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=247>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=247>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=247>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=247>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 3
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=250>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=247>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=247>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=247>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 4
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=250>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=250>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=247>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=247>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 5
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=250>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=250>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=250>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=247>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 6
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=250>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=250>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=250>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=250>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 7
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=250>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=250>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=250>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=250>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 8
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=250>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=250>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=250>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=250>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break
+#if
+EQUAL S$阶段判断 9
+#act
+MOV S$一阶 <阶段一星:☆/FCOLOR=250>
+MOV S$二阶 <阶段二星:☆☆/FCOLOR=250>
+MOV S$三阶 <阶段三星:☆☆☆/FCOLOR=250>
+MOV S$四阶 <阶段四星:☆☆☆☆/FCOLOR=250>
+MOV S$五阶 <阶段五星:☆☆☆☆☆/FCOLOR=250>
+MOV S$六阶 <阶段六星:☆☆☆☆☆☆/FCOLOR=250>
+MOV S$七阶 <阶段七星:☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$八阶 <阶段八星:☆☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$九阶 <阶段九星:☆☆☆☆☆☆☆☆☆/FCOLOR=250>
+MOV S$十阶 <阶段十星:☆☆☆☆☆☆☆☆☆☆/FCOLOR=247>
+break

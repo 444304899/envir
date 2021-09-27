@@ -1,0 +1,607 @@
+
+[@假人控制]
+{
+#ACT
+MOV N$编号 12
+;CloseBigDialogBox
+;CLOSEMERCHANTBIGDLG
+#SAY
+\ \
+\  <假人开局前相关设置/@假人控制>    <假人下图打怪相关设置/@假人下图打怪ABC>    <假人其它行动微调/@假人下图打怪ABC>    <刷新/@假人控制>    <关闭/@exit>       <×××关闭××/@exit>\
+<设置假人上线数/@@InPutInteger50> 当前设置假人上线数为：<$GLOBAL(假人_人数上限)>      当前假人数:<$STR(I88)> \
+<设置假人上线间隔/@@InPutInteger51(单位为秒)> 当前假人上线间隔为：<$GLOBAL(假人_上线间隔)> 秒   \
+<假人自动上线开关/@假人自动上线开关> 当前自动上线状态：<$GLOBAL(假人_自动上线开关)>   <手动点击假人上线/@点击假人上线>  → 点一次上线一个假人  \
+
+<假人全部下线/@假人全部下线> → 全服假人全部下线   <假人几率下线/@假人几率下线> → 可以慢点多点几次，请关闭自动上线，不然下线了还会自动上线\
+
+<假人活跃度最快设置|单位为秒建议30秒/@@InPutInteger52(单位为秒)> <假人活跃度最慢设置|单位为秒建议60秒/@@InPutInteger62(单位为秒)> 当前设置假人活跃度为：<$GLOBAL(假人_活动频率快)> - <$GLOBAL(假人_活动频率慢)> 随机其中一个值 越小越活跃    \  \
+<假人活跃度快速设置>  <疯狗跑酷模式/@疯狗跑酷模式>   <正常偏快模式/@正常模式A>    <正常模式/@正常模式B>      <缓慢模式/@缓慢模式>    \   \
+<点此设置现人物本地图为假人出生地|254#如果在安全区上线^254#点击时请站在安全区中间^254#假人上线自动随机9*9范围/@本地图>  当前假人出生地图号为：【  <$GLOBAL(假人_新手地图)>  】<X:><$GLOBAL(假人_新手地图X左)>-<$GLOBAL(假人_新手地图X右)> <Y:><$GLOBAL(假人_新手地图Y左)>-<$GLOBAL(假人_新手地图Y右)> 之内随机\ \
+
+<设置现人物本地图为假人回城活动范围|254#^254#点击时请站在安全区中间^254#假人回城自动随机当前9*9范围/@活动地图>  当前假人回城地图号为：【  <$GLOBAL(假人_盟重地图号)>  】<X:><$GLOBAL(假人_回城坐标X左)>-<$GLOBAL(假人_回城坐标X右)> <Y:><$GLOBAL(假人_回城坐标Y左)>-<$GLOBAL(假人_回城坐标Y右)> 之内随机回城走动\ \
+
+<假人全部停止/@假人全部停止> 此全部停止为不管在哪个地图都不动了包括正在打怪的---慎点   <假人全部活动|254#包括土城的不在安全区的假人都会自动挂机动起来/@假人全部活动> →   \
+
+<土城假人全部停止/@土城假人全部停止>     <土城假人几率停止/@土城假人几率停止>  <所有假人回土城/@假人回土城>   <假人几率回土城|254#假人回城不是一下全回，更真实。等待一下，多点点假人就回了/@假人几率回土城>  \
+\   \
+<所有假人下图打怪/@寒流假人下图打怪> → 假人延迟下图，不是一下全下图，更真实，等等再点，不然假人延迟没到，又接到延迟了。  \  \
+<指定假人名字下图/@@InPutString74> → 请先设置要下的地图号 <地图1>。 <地图2>。<地图3>。 <地图4>。 <地图5>。<地图6>。  \  \
+<所有假人加经验/@假人加经验> → 点一次全部假人增加  [<$GLOBAL(假人_手动加经验)>]  《<加经验数值|254#点击增加假人加经验的数值/@加>》 《<减经验数值/@减>》   \  \
+<所有假人加等级/@假人加等级> → 点一次全部假人增加 1 级。最高升级到设置的【<$GLOBAL(假人_能升最高等级)>】 <过滤掉落提示/@关掉落提示>  <开启掉落提示/@开掉落提示>
+
+[@假人下图打怪ABC]
+\ \
+\  <假人开局前相关设置/@假人控制>    <假人下图打怪相关设置/@假人下图打怪ABC>    <假人其它行动微调/@假人下图打怪ABC>    <刷新/@假人下图打怪ABC>    <关闭/@exit>       <×××关闭××/@exit>\ \
+\  <假人_背包剩几格回收/@@InPutInteger63(请输入10-40之间)>           当前为：<$GLOBAL(假人_背包剩几格回收)>     <说明|253#比如设置10，当假人包里格子小于10时就会回收清理/@空> \ \
+\  <假人_被人打血低百分之多少反击/@@InPutInteger64(请输入50-99之间)> 当前为：<$GLOBAL(假人_被人打血低百分之多少反击)>     <说明|253#此处设置是假人血量低于百分比的多少会还手/@空>   \ \
+\  <假人_下图几率/@@InPutInteger65(请输入1-100之间)>                 当前为：<$GLOBAL(假人_下图几率)>     <说明|253#此处设置100为百分百下图/@空>         \
+\  \
+\  <假人_土城走动几率/@@InPutInteger75(请输入1-100之间)>                 当前为：<$GLOBAL(假人_土城走动几率)>     <说明|253#此处设置越大假人走动越频繁/@空>         \
+\  \
+\  <假人_能升最高等级/@@InPutInteger66(设置假人能升到的最高等级)>             当前为：<$GLOBAL(假人_能升最高等级)>     <说明|253#假人升级超过此设置为默认为这此设置^254#比如设置60级^254#假人升级到61级的时候也会变成60级/@空>    \
+\ \
+\  <假人_血低百分之多少回城/@@InPutInteger74(设置假人的血低百分之多少回城，建议百分之20吧)> 当前为：<$GLOBAL(假人_血低百分之多少回城)>%  设置的越小，假人不死不回\
+\ \
+\  <假人_打怪回城时间为秒/@@InPutInteger75(设置假人下图打怪后多少秒回城，时间为秒)> 当前为：<$GLOBAL(假人_打怪回城时间为秒)> 〈秒/FCOLOR=69> <说明|253#假人下图打怪后如果不死的话按倒计时回城^253#也是假人在地图中待的最多时间/@空>
+\ \
+\  <假人_最低下图等级/@@InPutInteger73(设置假人的最低下图等级)>             当前为：<$GLOBAL(假人_最低下图等级)> 级   <说明|253#此处设置是假人的等级大于此设置才按下图几率下图^251#不设置假人1级就会下图打怪^253#如果设置太大假人等级不超过设置是不会下图的/@空> \
+\ \
+\  <假人_补伤害开关|251#补伤害意思为假人打怪PK多给点伤害^254#比如假人的攻击伤害为100点^254#补伤害最低设置100最高设置1000^254#假人打怪伤害为100加上^254#100-1000里的随机一个数/@补伤害开关> 状态：<$GLOBAL(假人_补伤害开关)>  <补伤害最低值/@@InPutInteger67>:<$GLOBAL(假人_补伤害最低值)>   <补伤害最高值/@@InPutInteger68>:<$GLOBAL(假人_补伤害最高值)> \
+\ \
+\  <假人_攻击吸血开关|251#吸血意思为假人打怪PK恢复自身血量^254#开启后值也会后面设置的范围类随机/@攻击吸血开关> 状态：<$GLOBAL(假人_攻击吸血开关)> <假人_攻击吸血最少值/@@InPutInteger69(设置假人_攻击吸血最少值)>:<$GLOBAL(假人_攻击吸血最少值)>    <假人_攻击吸血最高值/@@InPutInteger70(设置假人_攻击吸血最高值)>:<$GLOBAL(假人_攻击吸血最高值)> \
+\ \
+\  <假人_杀怪快速升级开关|251#吸血意思为假人打怪经验比正常高点^254#假人打怪慢^254#开启后假人升级变快/@快速升级开关> 状态：<$GLOBAL(假人_杀怪快速升级开关)>  <假人_杀怪补经验最低值/@@InPutInteger71(设置假人_杀怪补经验最低)>:<$GLOBAL(假人_杀怪补经验最低)>    <假人_杀怪补经验最高值/@@InPutInteger72(设置假人_杀怪补经验最高值)>:<$GLOBAL(假人_杀怪补经验最高)> \
+
+
+[@快速升级开关]
+#IF
+CHECKVAR GLOBAL 假人_杀怪快速升级开关 = 开启
+#ACT
+CALCVAR GLOBAL 假人_杀怪快速升级开关 = 关闭
+SAVEVAR GLOBAL 假人_杀怪快速升级开关
+GOTO @假人下图打怪ABC
+#ELSEACT
+CALCVAR GLOBAL 假人_杀怪快速升级开关 = 开启
+SAVEVAR GLOBAL 假人_杀怪快速升级开关
+GOTO @假人下图打怪ABC
+
+[@开掉落提示] ;GOM
+#ACT
+FILTERGLOBALMSG 0
+SENDMSG 6 开启全服掉落提示信息。
+
+[@关掉落提示] ; GEE 多个参数
+#ACT
+FILTERGLOBALMSG 1 1
+SENDMSG 6 关闭全服掉落提示信息。
+
+[@活动地图]
+#OR
+SMALL <$Y> 10
+SMALL <$X> 10
+#ACT
+MESSAGEBOX 此位置范围过小，请重新找个位置。
+#ELSEACT
+CALCVAR GLOBAL 假人_盟重地图号 = <$MAP>
+SAVEVAR GLOBAL 假人_盟重地图号
+MOV n$回城地图X左a <$X>
+MOV n$回城地图X右b <$X>
+DEC n$回城地图X左a 9
+INC n$回城地图X右b 9
+MOV n$回城地图Y左a <$Y>
+MOV n$回城地图Y右b <$Y>
+DEC n$回城地图Y左a 9
+INC n$回城地图Y右b 9
+CALCVAR GLOBAL 假人_回城坐标X左 = <$STR(n$回城地图X左a)>
+CALCVAR GLOBAL 假人_回城坐标X右 = <$STR(n$回城地图X右b)>
+CALCVAR GLOBAL 假人_回城坐标Y左 = <$STR(n$回城地图Y左a)>
+CALCVAR GLOBAL 假人_回城坐标Y右 = <$STR(n$回城地图Y右b)>
+SAVEVAR GLOBAL 假人_回城坐标X左
+SAVEVAR GLOBAL 假人_回城坐标X右
+SAVEVAR GLOBAL 假人_回城坐标Y左
+SAVEVAR GLOBAL 假人_回城坐标Y右
+SENDMSG 6 设置假人_活动地图成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+[@加]
+#ACT
+CALCVAR GLOBAL 假人_手动加经验 + 10000
+SAVEVAR GLOBAL 假人_手动加经验
+SENDMSG 7 设置假人_手动加经验成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+[@减]
+#IF
+CHECKVAR GLOBAL 假人_手动加经验 > 10000
+#ACT
+CALCVAR GLOBAL 假人_手动加经验 - 10000
+SAVEVAR GLOBAL 假人_手动加经验
+SENDMSG 7 设置假人_手动加经验成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+[@InPutInteger75]
+#IF
+LARGE N75 0
+#ACT
+CALCVAR GLOBAL 假人_土城走动几率 = <$STR(N75)>
+SAVEVAR GLOBAL 假人_土城走动几率
+SENDMSG 7 设置假人_土城走动几率成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+
+[@InPutString74]
+#IF
+ISADMIN
+#ACT
+S74.MAP <$MAP>
+
+
+[@InPutInteger74]
+#IF
+LARGE N74 0
+SMALL N74 80
+#ACT
+CALCVAR GLOBAL 假人_血低百分之多少回城 = <$STR(N74)>
+SAVEVAR GLOBAL 假人_血低百分之多少回城
+SENDMSG 7 设置假人_血低百分之多少回城成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+#ELSEACT
+MESSAGEBOX 设置1-80之间的数吧.建议20%吧
+BREAK
+
+[@InPutInteger73]
+#IF
+LARGE N73 0
+#ACT
+CALCVAR GLOBAL 假人_最低下图等级 = <$STR(N73)>
+SAVEVAR GLOBAL 假人_最低下图等级
+SENDMSG 7 设置假人_最低下图等级成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+
+[@InPutInteger71]
+#IF
+LARGE N71 0
+#ACT
+CALCVAR GLOBAL 假人_杀怪补经验最低 = <$STR(N71)>
+SAVEVAR GLOBAL 假人_杀怪补经验最低
+MOV N$补经验值 <$STR(N71)>
+INC N$补经验值 100
+CALCVAR GLOBAL 假人_杀怪补经验最高 = <$STR(N$补经验值)>
+SAVEVAR GLOBAL 假人_杀怪补经验最高
+SENDMSG 7 设置假人_杀怪补经验成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+
+[@InPutInteger72]
+#OR
+EQUAL N72 <$GLOBAL(假人_杀怪补经验最低)>
+SMALL N72 <$GLOBAL(假人_杀怪补经验最低)>
+#ACT
+MESSAGEBOX 最高的话，最少也得比最我低高点啊。。。小心后台报错，嫌死人。
+BREAK
+
+#IF
+#ACT
+CALCVAR GLOBAL 假人_杀怪补经验最高 = <$STR(N72)>
+SAVEVAR GLOBAL 假人_杀怪补经验最高
+SENDMSG 7 设置假人_杀怪补经验成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+
+[@InPutInteger66]
+#IF
+LARGE N66 30
+#ACT
+CALCVAR GLOBAL 假人_能升最高等级 = <$STR(N66)>
+SAVEVAR GLOBAL 假人_能升最高等级
+GOTO @假人下图打怪ABC
+#ELSEACT
+MESSAGEBOX 假人都1级可行？
+BREAK
+
+[@攻击吸血开关]
+#IF
+NOT CHECKVAR GLOBAL 假人_攻击吸血开关 = 开启
+#ACT
+CALCVAR GLOBAL 假人_攻击吸血开关 = 开启
+SAVEVAR GLOBAL 假人_攻击吸血开关
+SENDMSG 7 假人_攻击吸血开关=【开启】
+GOTO @假人下图打怪ABC
+#ELSEACT
+CALCVAR GLOBAL 假人_攻击吸血开关 = 关闭
+SAVEVAR GLOBAL 假人_攻击吸血开关
+SENDMSG 7 假人_攻击吸血开关=【关闭】
+GOTO @假人下图打怪ABC
+BREAK
+
+[@InPutInteger67]
+#IF
+LARGE N67 0
+#ACT
+CALCVAR GLOBAL 假人_补伤害最低值 = <$STR(N67)>
+SAVEVAR GLOBAL 假人_补伤害最低值
+MOV N$伤害值 <$STR(N67)>
+INC N$伤害值 100
+CALCVAR GLOBAL 假人_补伤害最高值 = <$STR(N$伤害值)>
+SAVEVAR GLOBAL 假人_补伤害最高值
+SENDMSG 7 设置假人假人_补伤害成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+
+[@InPutInteger68]
+#OR
+EQUAL N68 <$GLOBAL(假人_补伤害最低值)>
+SMALL N68 <$GLOBAL(假人_补伤害最低值)>
+#ACT
+MESSAGEBOX 最高的话，最少也得比最我低高点啊。。。小心后台报错，嫌死人。
+BREAK
+
+#IF
+#ACT
+CALCVAR GLOBAL 假人_补伤害最高值 = <$STR(N68)>
+SAVEVAR GLOBAL 假人_补伤害最高值
+SENDMSG 7 设置假人补伤害最高值成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+
+[@InPutInteger69]
+#IF
+LARGE N69 0
+#ACT
+CALCVAR GLOBAL 假人_攻击吸血最少值 = <$STR(N69)>
+SAVEVAR GLOBAL 假人_攻击吸血最少值
+MOV N$吸血值 <$STR(N69)>
+INC N$吸血值 100
+CALCVAR GLOBAL 假人_攻击吸血最高值 = <$STR(N$吸血值)>
+SAVEVAR GLOBAL 假人_攻击吸血最高值
+SENDMSG 7 设置假人攻击吸血成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+
+[@InPutInteger70]
+#OR
+EQUAL N70 <$GLOBAL(假人_攻击吸血最少值)>
+SMALL N70 <$GLOBAL(假人_攻击吸血最少值)>
+#ACT
+MESSAGEBOX 最多的值，得比最少值高点啊。。。小心后台报错，嫌死人。
+BREAK
+
+#IF
+#ACT
+CALCVAR GLOBAL 假人_攻击吸血最高值 = <$STR(N70)>
+SAVEVAR GLOBAL 假人_攻击吸血最高值
+SENDMSG 7 设置假人攻击吸血最高值成功！！！针对自己版本，可上下调整！
+GOTO @假人下图打怪ABC
+
+
+[@补伤害开关]
+#IF
+NOT CHECKVAR GLOBAL 假人_补伤害开关 = 开启
+#ACT
+CALCVAR GLOBAL 假人_补伤害开关 = 开启
+SAVEVAR GLOBAL 假人_补伤害开关
+SENDMSG 7 假人_补伤害开关=【开启】
+GOTO @假人下图打怪ABC
+#ELSEACT
+CALCVAR GLOBAL 假人_补伤害开关 = 关闭
+SAVEVAR GLOBAL 假人_补伤害开关
+SENDMSG 7 假人_补伤害开关=【关闭】
+GOTO @假人下图打怪ABC
+BREAK
+
+[@InPutInteger65]
+#IF
+LARGE N65 0
+SMALL N65 101
+#ACT
+CALCVAR GLOBAL 假人_下图几率 = <$STR(N65)>
+SAVEVAR GLOBAL 假人_下图几率
+SENDMSG 7 假人_下图几率=【<$STR(N65)>%】
+GOTO @假人下图打怪ABC
+#ELSEACT
+MESSAGEBOX 百分比的几率，100就是100%下图，请输入1-100之间的数。
+BREAK
+
+[@假人自动上线开关]
+#IF
+NOT CHECKVAR GLOBAL 假人_自动上线开关 = 开启
+#ACT
+CALCVAR GLOBAL 假人_自动上线开关 = 开启
+SAVEVAR GLOBAL 假人_自动上线开关
+SENDMSG 7 假人_自动上线开关=【开启】
+GOTO @假人控制
+#ELSEACT
+CALCVAR GLOBAL 假人_自动上线开关 = 关闭
+SAVEVAR GLOBAL 假人_自动上线开关
+SENDMSG 7 假人_自动上线开关=【关闭】
+GOTO @假人控制
+BREAK
+
+[@InPutInteger64]
+#IF
+LARGE N64 49
+SMALL N64 100
+#ACT
+CALCVAR GLOBAL 假人_被人打血低百分之多少反击 = <$STR(N64)>
+SAVEVAR GLOBAL 假人_被人打血低百分之多少反击
+SENDMSG 7 假人_被人打血低百分之【<$STR(N64)>】会反击！
+GOTO @假人下图打怪ABC
+#ELSEACT
+MESSAGEBOX 请输入50-99之间.
+BREAK
+
+
+[@InPutInteger63]
+#IF
+LARGE N63 9
+SMALL N63 40
+#ACT
+CALCVAR GLOBAL 假人_背包剩几格回收 = <$STR(N63)>
+SAVEVAR GLOBAL 假人_背包剩几格回收
+SENDMSG 7 假人_背包剩几格回收设置成功！
+GOTO @假人下图打怪ABC
+#ELSEACT
+MESSAGEBOX 请输入10-40之间，
+BREAK
+
+[@本地图]
+#OR
+SMALL <$Y> 10
+SMALL <$X> 10
+#ACT
+MESSAGEBOX 此位置范围过小，请重新找个位置。
+BREAK
+#IF
+LARGE <$X> 9
+#ACT
+CALCVAR GLOBAL 假人_新手地图 = <$MAP>
+SAVEVAR GLOBAL 假人_新手地图
+MOV n$新手地图X左a <$X>
+MOV n$新手地图X右b <$X>
+DEC n$新手地图X左a 9
+INC n$新手地图X右b 9
+MOV n$新手地图Y左a <$Y>
+MOV n$新手地图Y右b <$Y>
+DEC n$新手地图Y左a 9
+INC n$新手地图Y右b 9
+CALCVAR GLOBAL 假人_新手地图X左 = <$STR(n$新手地图X左a)>
+SAVEVAR GLOBAL 假人_新手地图X左
+CALCVAR GLOBAL 假人_新手地图X右 = <$STR(n$新手地图X右b)>
+SAVEVAR GLOBAL 假人_新手地图X右
+CALCVAR GLOBAL 假人_新手地图Y左 = <$STR(n$新手地图Y左a)>
+SAVEVAR GLOBAL 假人_新手地图Y左
+CALCVAR GLOBAL 假人_新手地图Y右 = <$STR(n$新手地图Y右b)>
+SAVEVAR GLOBAL 假人_新手地图Y右
+GOTO @假人控制
+SENDMSG 7 假人出生地设置为【<$MapTitle>】,地图号为【<$GLOBAL(假人_新手地图)>】的 <$X>:<$Y>的9x9范围类!!!
+
+
+[@InPutInteger52]
+#IF
+LARGE N52 0
+#ACT
+CALCVAR GLOBAL 假人_活动频率快 = <$STR(N52)>
+SAVEVAR GLOBAL 假人_活动频率快
+MOV N$慢 <$STR(N52)>
+INC N$慢 20
+CALCVAR GLOBAL 假人_活动频率慢 = <$STR(N$慢)>
+SAVEVAR GLOBAL 假人_活动频率慢
+SENDMSG 7 设置假人活跃度随机最慢多少秒一执行成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+[@InPutInteger62]
+#OR
+EQUAL N62 <$GLOBAL(活动频率快)>
+SMALL N62 <$GLOBAL(活动频率快)>
+#ACT
+MESSAGEBOX 最慢的话，最少也得比快的数值大点啊。。。小心后台报错，嫌死人。
+BREAK
+#IF
+#ACT
+CALCVAR GLOBAL 假人_活动频率慢 = <$STR(N62)>
+SAVEVAR GLOBAL 假人_活动频率慢
+SENDMSG 7 设置假人活跃度随机最慢多少秒一执行成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+[@疯狗跑酷模式]
+#ACT
+CALCVAR GLOBAL 假人_活动频率快 = 1
+SAVEVAR GLOBAL 假人_活动频率快
+CALCVAR GLOBAL 假人_活动频率慢 = 5
+SAVEVAR GLOBAL 假人_活动频率慢
+SENDMSG 7 假人疯狗跑酷模式开启成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+
+[@正常模式A]
+#ACT
+CALCVAR GLOBAL 假人_活动频率快 = 10
+SAVEVAR GLOBAL 假人_活动频率快
+CALCVAR GLOBAL 假人_活动频率慢 = 20
+SAVEVAR GLOBAL 假人_活动频率慢
+SENDMSG 7 假人正常偏快模式开启成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+
+[@正常模式B]
+#ACT
+CALCVAR GLOBAL 假人_活动频率快 = 30
+SAVEVAR GLOBAL 假人_活动频率快
+CALCVAR GLOBAL 假人_活动频率慢 = 60
+SAVEVAR GLOBAL 假人_活动频率慢
+SENDMSG 7 假人正常偏快模式开启成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+
+[@缓慢模式]
+#ACT
+CALCVAR GLOBAL 假人_活动频率快 = 60
+SAVEVAR GLOBAL 假人_活动频率快
+CALCVAR GLOBAL 假人_活动频率慢 = 120
+SAVEVAR GLOBAL 假人_活动频率慢
+SENDMSG 7 假人缓慢模式开启成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+
+
+
+[@关闭所有]
+#ACT
+MOV A495
+SENDMSG 7  所有假人下图打怪已关闭！！！！！
+
+[@寒流假人下图打怪]
+#ACT
+MOV A495 假人全开
+GMEXECUTE 开始提问 @寒流假人下图
+SENDMSG 7  假人最高延迟20秒才下图，如果有假人没下图打怪。等等再点。
+SENDMSG 7  假人最高延迟20秒才下图，如果有假人没下图打怪。等等再点。
+SENDMSG 7  假人最高延迟20秒才下图，如果有假人没下图打怪。等等再点。
+
+[@点击假人上线]
+#IF
+CHECKDUMMYCOUNT < <$GLOBAL(假人_人数上限)>
+#ACT
+INC I99 1
+MOVR I11 <$GLOBAL(假人_新手地图X左)> <$GLOBAL(假人_新手地图X右)>
+MOVR I12 <$GLOBAL(假人_新手地图Y左)> <$GLOBAL(假人_新手地图Y右)>
+DUMMYLOGON <$GLOBAL(假人_新手地图)> <$STR(I11)> <$STR(I12)> 1
+BREAK
+
+
+
+[@假人几率回土城]
+#ACT
+GMEXECUTE 开始提问 @寒流假人几率回城
+SENDMSG 7 假人几率回土城了！！！！！！！！感觉假人不够多，再点！！！！！！
+
+
+[@假人回土城]
+#ACT
+GMEXECUTE 开始提问 @寒流假人回土城
+SENDMSG 7 所有假人都回土城了。！！！！！！！！！！！！！！！
+
+[@土城假人几率停止]
+#ACT
+GMEXECUTE 开始提问 @土城假人几率停止
+SENDMSG 7 城假人几率停止，不想让假人动的多，等下，再点击看看！！
+
+[@土城假人全部停止]
+#ACT
+GMEXECUTE 开始提问 @土城寒流假人全部停止
+
+[@假人全部停止]
+#ACT
+GMEXECUTE 开始提问 @寒流假人全部停止
+
+[@假人全部活动]
+#ACT
+GMEXECUTE 开始提问 @寒流假人全部活动
+
+
+
+[@假人几率下线]
+#ACT
+GMEXECUTE 开始提问 @寒流假人几率下线
+GOTO @假人控制
+
+[@假人全部下线]
+#ACT
+GMEXECUTE 开始提问 @寒流假人全部下线
+GOTO @假人控制
+
+[@InPutInteger50]
+#ACT
+CALCVAR GLOBAL 假人_人数上限 = <$STR(N50)>
+SAVEVAR GLOBAL 假人_人数上限
+;LOADVAR GLOBAL 假人_人数上限 ..\QuestDiary\寒流新假人\全局数据Save.txt
+SENDMSG 7 设置假人上线数成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+
+
+[@InPutInteger51]
+#IF
+LARGE N51 0
+#ACT
+CALCVAR GLOBAL 假人_上线间隔 = <$STR(N51)>
+SAVEVAR GLOBAL 假人_上线间隔
+SENDMSG 设置假人上线间隔成功！！！针对自己版本，可上下调整！
+GOTO @假人控制
+
+[@假人加经验]
+#ACT
+GMEXECUTE 开始提问 @寒流假人加经验
+
+[@假人加等级]
+#ACT
+GMEXECUTE 开始提问 @寒流假人加等级
+MESSAGEBOX 所有假人都增加了1级！
+BREAK
+[@空]
+#ACT
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

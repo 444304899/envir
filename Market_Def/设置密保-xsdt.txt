@@ -1,0 +1,125 @@
+(@@InPutString @@InPutInteger )
+[@main]
+#IF
+equal <$STR(T1)>
+#ACT
+MOV S$机器码 设置二级密码后自动生成
+#IF
+equal <$STR(T0)>
+#ACT
+MOV S$二级密码 点击设置
+#IF
+not equal <$STR(T1)>
+#ACT
+MOV S$机器码 <$STR(T1)>
+#IF
+not equal <$STR(T0)>
+#ACT
+MOV S$二级密码 <$STR(T0)>
+
+
+
+
+#IF
+#ACT
+#SAY
+\ \ \ \
+<>              {<$STR(S$机器码)>/FCOLOR=151}\ \
+<>              {<$SERVERIP>/FCOLOR=151}\ \
+<>              {<$STR(S$二级密码)>/FCOLOR=250}\ \
+<Img:235:6:70:-38/@@InPutString72(请输入3-6个汉字的二级密码（请勿输入英文或数字）)> \
+
+
+
+
+[@InPutString72]
+#OR
+CheckContainsText <$STR(S72)> @
+CheckContainsText <$STR(S72)> ~
+CheckContainsText <$STR(S72)> [
+CheckContainsText <$STR(S72)> ]
+CheckContainsText <$STR(S72)> <
+CheckContainsText <$STR(S72)> >
+CheckContainsText <$STR(S72)> {
+CheckContainsText <$STR(S72)> }
+CheckContainsText <$STR(S72)> q
+CheckContainsText <$STR(S72)> w
+CheckContainsText <$STR(S72)> e
+CheckContainsText <$STR(S72)> r
+CheckContainsText <$STR(S72)> t
+CheckContainsText <$STR(S72)> y
+CheckContainsText <$STR(S72)> u
+CheckContainsText <$STR(S72)> i
+CheckContainsText <$STR(S72)> o
+CheckContainsText <$STR(S72)> p
+CheckContainsText <$STR(S72)> a
+CheckContainsText <$STR(S72)> s
+CheckContainsText <$STR(S72)> d
+CheckContainsText <$STR(S72)> f
+CheckContainsText <$STR(S72)> g
+CheckContainsText <$STR(S72)> h
+CheckContainsText <$STR(S72)> j
+CheckContainsText <$STR(S72)> k
+CheckContainsText <$STR(S72)> l
+CheckContainsText <$STR(S72)> z
+CheckContainsText <$STR(S72)> x
+CheckContainsText <$STR(S72)> c
+CheckContainsText <$STR(S72)> v
+CheckContainsText <$STR(S72)> b
+CheckContainsText <$STR(S72)> n
+CheckContainsText <$STR(S72)> m
+CheckContainsText <$STR(S72)> 0
+CheckContainsText <$STR(S72)> 1
+CheckContainsText <$STR(S72)> 2
+CheckContainsText <$STR(S72)> 3
+CheckContainsText <$STR(S72)> 4
+CheckContainsText <$STR(S72)> 5
+CheckContainsText <$STR(S72)> 6
+CheckContainsText <$STR(S72)> 7
+CheckContainsText <$STR(S72)> 8
+CheckContainsText <$STR(S72)> 9
+#ACT
+messagebox 输入错误???\\请输入3-6个汉字!!\\请勿输入英文!!
+BREAK
+
+#IF
+EQUAL S72
+#ACT
+MESSAGEBOX 对不起,输入有误,输入不能为空！！
+BREAK
+
+#IF
+CheckStringlength <$STR(S72)> < 5
+#ACT
+MESSAGEBOX 对不起,输入有误,输入必须大于三个汉字！！
+BREAK
+
+#IF
+NOT EQUAL T0
+#ACT
+messagebox 对不起，您已经设置过二级密码！
+break
+
+#IF
+CheckStringlength <$STR(S72)> > 5
+CheckStringlength <$STR(S72)> < 13
+EQUAL T0
+#ACT
+messagebox 您输入的二级密码为：<$STR(S72)>\\点击确认后生效！！   @playdie_确定二级密码
+
+
+[@playdie_确定二级密码]
+#IF
+CheckStringlength <$STR(S72)> > 5
+CheckStringlength <$STR(S72)> < 13
+EQUAL T0
+#ACT
+MOV T0 <$STR(S72)>
+MOV T1 <$USERMACHINEID>
+MESSAGEBOX 【设置密保成功，请牢记您的密保：[<$STR(S72)>]】
+give 回城石 1
+MOV S72
+#elseact
+messagebox 输入错误???\\请输入3-6个汉字!!\\请勿输入英文!!
+break
+

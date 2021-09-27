@@ -1,0 +1,413 @@
+[@main]
+
+
+#if
+#act
+SENDMSG 4 249 253 本服第三天拿沙，捐献越多沙巴克奖励越多，擒拿手是PK利器，神技在手沙城我有！！！！
+
+
+
+
+#if
+#act
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 0 A120 G20
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 1 A121 G21
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 2 A122 G22
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 3 A123 G23
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 4 A124 G24
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 5 A125 G25
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 6 A126 G26
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 7 A127 G27
+;GetListString ..\QuestDiary\大熊数据\捐款排行.txt 8 A128 G28
+
+
+
+
+#if
+NOT CHECKTEXTLIST ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt 已创建目录
+#act
+ForceDirectories ..\..\..\..\跨区文件夹\<$STR(A0)>
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt 已创建目录 0
+
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日0区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日1区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日2区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日3区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日4区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日5区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日6区.txt
+CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日7区.txt
+;CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日8区.txt
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日1区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日2区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日3区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日4区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日5区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日6区.txt 0 0
+AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日7区.txt 0 0
+;AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日8区.txt 0 0
+
+
+
+#IF
+#act
+GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日0区.txt n18 0
+GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日1区.txt N10 0
+GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日2区.txt N11 0
+GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日3区.txt N12 0
+GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日4区.txt N13 0
+GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日5区.txt N14 0
+GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日6区.txt N15 0
+GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日7区.txt N16 0
+;GetRandomText ..\..\..\..\跨区文件夹\<$STR(A0)>\今日8区.txt N17 0
+MOV N18 0
+INC N18 <$STR(n10)>
+INC N18 <$STR(n11)>
+INC N18 <$STR(n12)>
+INC N18 <$STR(n13)>
+INC N18 <$STR(n14)>
+INC N18 <$STR(n15)>
+INC N18 <$STR(n16)>
+INC N18 <$STR(n17)>
+
+
+MOV S$区数量1 <$STR(n10)>
+MOV S$区数量2 <$STR(n11)>
+MOV S$区数量3 <$STR(n12)>
+MOV S$区数量4 <$STR(n13)>
+MOV S$区数量5 <$STR(n14)>
+MOV S$区数量6 <$STR(n15)>
+MOV S$区数量7 <$STR(n16)>
+;SetStringBlank S$区数量1 6 1
+SetStringBlank S$区数量1 6 1
+;SetStringBlank S$区数量2 6 1
+SetStringBlank S$区数量2 6 1
+;SetStringBlank S$区数量3 6 1
+SetStringBlank S$区数量3 6 1
+;SetStringBlank S$区数量4 6 1
+SetStringBlank S$区数量4 6 1
+;SetStringBlank S$区数量5 6 1
+SetStringBlank S$区数量5 6 1
+;SetStringBlank S$区数量6 6 1
+SetStringBlank S$区数量6 6 1
+;SetStringBlank S$区数量7 6 1
+
+MOV S$总数量 <$STR(n18)>
+;SetStringBlank S$总数量 6 1
+SetStringBlank S$总数量 6 1
+MOV S$发放总数 <$STR(n18)>
+MUL S$发放总数 50
+DIV S$发放总数 100
+MOV S$胜利方 <$str(S$发放总数)>
+mul S$胜利方 70
+div S$胜利方 100
+MOV S$失败方 <$str(S$发放总数)>
+mul S$失败方 30
+div S$失败方 100
+;SetStringBlank S$发放总数 6 1
+SetStringBlank S$发放总数 6 1
+;SetStringBlank S$胜利方 6 1
+SetStringBlank S$胜利方 6 1
+;SetStringBlank S$失败方 6 1
+SetStringBlank S$失败方 6 1
+
+
+
+#if
+large S$合区信息 0
+#act
+MOV N$当前捐献区 0
+
+#if
+CheckContainsText <$SERVERNAME> 1区
+#act
+MOV N$当前捐献区 1
+
+#if
+CheckContainsText <$SERVERNAME> 2区
+#act
+MOV N$当前捐献区 2
+
+#if
+CheckContainsText <$SERVERNAME> 3区
+#act
+MOV N$当前捐献区 3
+
+#if
+CheckContainsText <$SERVERNAME> 4区
+#act
+MOV N$当前捐献区 4
+
+#if
+CheckContainsText <$SERVERNAME> 5区
+#act
+MOV N$当前捐献区 5
+
+#if
+CheckContainsText <$SERVERNAME> 6区
+#act
+MOV N$当前捐献区 6
+
+
+#if
+CheckContainsText <$SERVERNAME> 7区
+#act
+MOV N$当前捐献区 7
+
+#if
+CheckContainsText <$SERVERNAME> 8区
+#act
+MOV N$当前捐献区 8
+
+
+
+
+#if
+#act
+MOV S$职位人名1 <$STR(A120)>
+MOV S$职位人名2 <$STR(A121)>
+MOV S$职位人名3 <$STR(A122)>
+MOV S$职位人名4 <$STR(A123)>
+MOV S$职位人名5 <$STR(A124)>
+
+MOV S$捐献金额1 <$STR(G20)>
+MOV S$捐献金额2 <$STR(G21)>
+MOV S$捐献金额3 <$STR(G22)>
+MOV S$捐献金额4 <$STR(G23)>
+MOV S$捐献金额5 <$STR(G24)>
+
+;SetStringBlank S$职位人名1 14 1
+SetStringBlank S$职位人名1 14 1
+;SetStringBlank S$职位人名2 14 1
+SetStringBlank S$职位人名2 14 1
+;SetStringBlank S$职位人名3 14 1
+SetStringBlank S$职位人名3 14 1
+;SetStringBlank S$职位人名4 14 1
+SetStringBlank S$职位人名4 14 1
+;SetStringBlank S$职位人名5 14 1
+SetStringBlank S$职位人名5 14 1
+
+;SetStringBlank S$捐献金额1 14 1
+SetStringBlank S$捐献金额1 14 1
+;SetStringBlank S$捐献金额2 14 1
+SetStringBlank S$捐献金额2 14 1
+;SetStringBlank S$捐献金额3 14 1
+SetStringBlank S$捐献金额3 14 1
+;SetStringBlank S$捐献金额4 14 1
+SetStringBlank S$捐献金额4 14 1
+;SetStringBlank S$捐献金额5 14 1
+SetStringBlank S$捐献金额5 14 1
+
+
+#if
+#act
+#SAY
+\ \ \  \ \
+<>         <IMG:78:6:0:-3><[沙城捐献]:/FCOLOR=250><所有的捐献金额都会记录沙巴克奖池/FCOLOR=161>                   <你当前的金币:/FCOLOR=161> <[<$GOLDCOUNT>]/FCOLOR=253> \
+<>         <IMG:78:6:0:-3><[最低捐献]:/FCOLOR=250><累计捐献达到 200金币,即可获得属性加成/FCOLOR=161>         <捐献排名越高,获得的属性越强!/FCOLOR=70>  \
+<>         <IMG:170:6:-4:5> \
+<>         <IMG:70:6:0:-5><第一名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名1)>/FCOLOR=249><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额1)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第一名属性加成|-^250#增加 3 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 500% ^-^250#打怪伤害提升 + 100%^-^250#神力倍数增加 + 1.50^-^250#刀切割怪物1%/FCOLOR=151> \
+<>         <IMG:70:6:0:-5><第二名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名2)>/FCOLOR=251><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额2)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第二名属性加成|-^250#增加 2 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 300% ^-^250#打怪伤害提升 + 30%^-^250#神力倍数增加 + 1.30/FCOLOR=151>\
+<>         <IMG:70:6:0:-5><第三名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名3)>/FCOLOR=116><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额3)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第三名属性加成|-^250#增加 1 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 200% ^-^250#打怪伤害提升 + 15%^-^250#神力倍数增加 + 1.10/FCOLOR=151>\
+<>         <IMG:70:6:0:-5><第四名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名4)>/FCOLOR=244><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额4)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第四名属性加成|-^250#打怪爆率提升 + 100% ^-^250#打怪伤害提升 + 10%^-^250#神力倍数增加 + 1.05/FCOLOR=151>\
+<>         <IMG:70:6:0:-5><第五名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名5)>/FCOLOR=146><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额5)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第五名属性加成|-^250#打怪爆率提升 + 80% ^-^250#打怪伤害提升 + 5%^-^250#神力倍数增加 + 1.02/FCOLOR=151>\
+<>         <IMG:170:6:-4:5> \
+<>         <IMG:79:6:-2:-4><凡是累计捐献达到5000金币,获得第一名爆率和神力,封顶5000金币/FCOLOR=224>  <你当前累计捐献金额:/FCOLOR=70> <$HUMAN(职位捐款数量)>\
+<>         <IMG:79:6:-2:-4><增加打怪爆率100%,5%吸血,沙捐体力10%,刀刀切割+10000,隐身术.自动回收./FCOLOR=224><攻击速度+100%/FCOLOR=249> \
+<>         <IMG:79:6:-2:-4><获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> \
+<>         <IMG:170:6:-4:5> \
+<>                               <IMG:74:6:0:-2><百团大战今日一区累计金额:/FCOLOR=150>  <[<$STR(S$区数量1)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+<>                               <IMG:74:6:0:-2><百团大战今日二区累计金额:/FCOLOR=150>  <[<$STR(S$区数量2)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+<>                               <IMG:74:6:0:-2><百团大战今日三区累计金额:/FCOLOR=150>  <[<$STR(S$区数量3)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+<>                               <IMG:74:6:0:-2><百团大战今日四区累计金额:/FCOLOR=150>  <[<$STR(S$区数量3)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+<>                               <IMG:74:6:0:-2><百团大战今日五区累计金额:/FCOLOR=150>  <[<$STR(S$区数量5)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+<>                               <IMG:74:6:0:-2><百团大战今日六区累计金额:/FCOLOR=150>  <[<$STR(S$区数量6)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+<>                               <IMG:74:6:0:-2><百团大战今日七区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+
+<>            <【我要捐献】/@@InPutInteger20>       <IMG:74:6:0:-2><百团大战今日四区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>       <【奖励说明】
+|250#奖励说明：只限2个行会，行会值班自觉收人避免一边倒！
+^251#奖励说明：出现一边倒或只有一个行会或三个行会,取消奖励！
+^253#奖励说明：请城主带截图联系管理，建立微信群（转区系统有管理二维码）
+^254#奖励说明：奖励以微信红包形式发送，半小时之内找管理发放奖励！
+^254#奖励说明：第二次合区后双方10人以上才有现今奖励，只奖励胜利方>\
+;<>                               <IMG:74:6:0:-2><百团大战今日五区累计金额:/FCOLOR=150>  <[<$STR(S$区数量5)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;<>                 <IMG:74:6:0:-2><百团大战今日六区累计金额:/FCOLOR=150>  <[<$STR(S$区数量6)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;<>                  <IMG:74:6:0:-2><百团大战今日七区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>\   \
+<>                   <今日总捐献为:/FCOLOR=224> <[<$STR(S$总数量)>]/FCOLOR=251>                 <官方收取费用后发放：/FCOLOR=224>{[<$STR(S$发放总数)>]/FCOLOR=251}           \
+<>                   <胜利方奖励70%:/FCOLOR=224><[<$STR(S$胜利方)>]/FCOLOR=251>                 <失败方奖励30%：/FCOLOR=224>     {[<$STR(S$失败方)>]/FCOLOR=251}           \ \
+<>         <官方收取50%（管理费+平台提现+服务器） (提示：合区后所有捐献清零，玩家理性捐献！/FCOLOR=95> \
+
+
+
+[@InPutInteger20]
+
+
+
+
+
+#if
+large S$合区信息 0
+NOT CHECKTITLE 沙城捐献
+SMALL N20 150
+#act
+MESSAGEBOX [提示]：对不起，合区后第一次捐献最少150金币！
+break
+
+#if
+small S$合区信息 0
+NOT CHECKTITLE 沙城捐献
+LARGE N20 50000
+#act
+MESSAGEBOX [提示]：对不起，第一次捐献最多5000金币！
+break
+
+
+
+
+#if
+small S$合区信息 1
+NOT CHECKTITLE 沙城捐献
+SMALL N20 200
+#act
+MESSAGEBOX [提示]：对不起，第一次捐献最少200金币！
+break
+
+#if
+small S$合区信息 1
+NOT CHECKTITLE 沙城捐献
+LARGE N20 5000
+#act
+MESSAGEBOX [提示]：对不起，第一次捐献最多5000金币！
+break
+
+
+;#if
+;CHECKVAR HUMAN 职位捐款数量 > 4999
+;#act
+;messagebox 已捐献封顶
+;break
+
+#if
+SMALL N20 100
+#act
+MESSAGEBOX [提示]：对不起，捐献最少100金币！
+break
+
+
+#IF
+NOT CHECKGOLD <$STR(N20)>
+#ACT
+MESSAGEBOX 你的金币不足！！！
+BREAK
+
+
+
+
+#if
+CheckContainsText <$SERVERNAME> 测试
+CheckGold <$STR(N20)>
+#act
+TAKE 金币  <$STR(N20)>
+CONFERTITLE 沙城捐献
+ADDSKILL 隐身术 3
+inc G441 <$STR(N20)>
+CALCVAR HUMAN 职位捐款数量 + <$STR(N20)>
+SAVEVAR HUMAN 职位捐款数量
+SORTVARTOLIST 职位捐款数量 ..\QuestDiary\大熊数据\捐款数据.txt ..\QuestDiary\大熊数据\捐款排行.txt 0 1
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 0 A120 G20
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 1 A121 G21
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 2 A122 G22
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 3 A123 G23
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 4 A124 G24
+MESSAGEBOX 捐款成功!
+#CALL [\大熊功能\职位计算.txt] @开始计算
+goto @main
+BREAK
+
+
+
+
+
+
+#if
+large S$合区信息 0
+CheckGold ? <$STR(N20)>
+#act
+TAKE 金币  <$STR(N20)>
+CONFERTITLE 沙城捐献
+ADDSKILL 隐身术 3
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日<$STR(N$当前捐献区)>区.txt  0 <$STR(G441)> S99
+
+inc G441 <$STR(N20)>
+
+AddTextListEX ..\..\..\..\跨区文件夹\<$STR(A0)>\今日<$STR(N$当前捐献区)>区.txt <$STR(G441)> 0
+
+
+CALCVAR HUMAN 职位捐款数量 + <$STR(N20)>
+SAVEVAR HUMAN 职位捐款数量
+SORTVARTOLIST 职位捐款数量 ..\QuestDiary\大熊数据\捐款数据.txt ..\QuestDiary\大熊数据\捐款排行.txt 0 1
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 0 A120 G20
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 1 A121 G21
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 2 A122 G22
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 3 A123 G23
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 4 A124 G24
+MESSAGEBOX 捐款成功!
+Gmexecute 全服触发 @捐献等级刷新
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+goto @main
+BREAK
+
+
+
+
+
+
+
+
+#if
+CheckGold <$STR(N20)>
+#act
+TAKE 金币 <$STR(N20)>
+CONFERTITLE 沙城捐献
+ADDSKILL 隐身术 3
+GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日<$STR(N$当前捐献区)>区.txt 0 <$STR(G441)> S99
+
+
+inc G441 <$STR(N20)>
+
+
+
+AddTextListEX ..\..\..\..\跨区文件夹\<$STR(A0)>\今日<$STR(N$当前捐献区)>区.txt <$STR(G441)> 0
+
+
+
+CALCVAR HUMAN 职位捐款数量 + <$STR(N20)>
+SAVEVAR HUMAN 职位捐款数量
+SORTVARTOLIST 职位捐款数量 ..\QuestDiary\大熊数据\捐款数据.txt ..\QuestDiary\大熊数据\捐款排行.txt 0 1
+
+
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 0 A120 G20
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 1 A121 G21
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 2 A122 G22
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 3 A123 G23
+GetListString ..\QuestDiary\大熊数据\捐款排行.txt 4 A124 G24
+
+MESSAGEBOX 捐款成功!
+Gmexecute 全服触发 @捐献等级刷新
+#CALL [\大熊功能\职位计算.txt] @开始计算
+
+goto @main
+BREAK
+
+
+
+#if
+#act
+messagebox 操作失败:\\请检查\\1,金币是否足够
+break
+
+
+

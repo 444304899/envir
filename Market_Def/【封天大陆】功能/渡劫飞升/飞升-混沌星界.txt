@@ -1,0 +1,145 @@
+[@MAIN]
+
+#IF
+EQUAL U2 0
+#ACT
+#ELSEACT
+messagebox [提示]：这里已经不适合你了！
+break
+
+#IF
+#ACT
+MOV N$属性加成
+MOV N$血量加成
+MOV N$飞升几率
+MOV N$飞升等级
+MOV N$飞升降级
+MOV S$称号名称
+MOV S$材料名称
+MOV S$图片显示
+MOV S$打坐特效
+
+
+#IF
+EQUAL U2 0
+#ACT
+MOV N$属性加成 200
+MOV N$血量加成 3000
+MOV N$元素加成 20
+MOV N$雷劫伤害 60000000
+MOV N$飞升等级 30
+MOV N$飞升元宝 100000000
+MOV N$材料数量 3000
+MOV S$称号名称 一源道主
+MOV S$打坐特效 <PLAYIMG:28:840:6:200:110:70>
+MOV S$底部显示 前往渡劫台承受雷劫，获得一源道主称号
+GOTO @飞升1
+
+
+[@飞升1]
+#IF
+#ACT
+;CloseBigDialogBox
+#say
+<$STR(S$打坐特效)>\
+;<><ImgEx:36:9:10:11:475:0|140#按“ESC”即可关闭/@EXIT>\
+<>\ \  \
+<><ImgEx:13:416:416:416:485:-75|140#按“ESC”即可关闭/@EXIT>\
+<>                                                          <飞升称号:/FCOLOR=151>  {<$STR(S$称号名称)>/FCOLOR=250} \ \
+<>                                                          <属性增加:/FCOLOR=151>   {+ <$STR(N$属性加成)>/FCOLOR=254}   <PLAYIMG:61:447:10:200:0:-10>\
+<>                                                          <血量增加:/FCOLOR=151>   {+ <$STR(N$血量加成)>/FCOLOR=254}   <PLAYIMG:61:447:10:200:0:-10>\
+<>                                                          <暴率增加:/FCOLOR=151>   {+ <$STR(N$元素加成)>%/FCOLOR=254}   <PLAYIMG:61:447:10:200:0:-10>\
+;<>                                                          <忽视防御:/FCOLOR=151>   {+ <$STR(N$元素加成)>%/FCOLOR=254}   <PLAYIMG:61:447:10:200:0:-10>\
+<> \ \ \
+<IMGEX:29:90:91:90:210:168|151#所需费用：^254#    <$STR(N$飞升元宝)>元宝 ^-^151#突破说明：^87#<$STR(N$材料数量)>个云顶结晶   ^87# 飞升雷劫共：<$STR(N$雷劫伤害)>伤害^87#    转生等级要求：<$STR(N$飞升等级)>级 ^87#  转生失败扣除材料,货币。请提前准备好足够的渡劫丹 ^-^249#<$STR(S$底部显示)>/@老白修仙>       <IMGEX:37:92:93:92:150:198/@观礼>\
+
+
+
+
+[@观礼]
+#IF
+EQUAL A19
+#ACT
+messagebox 提示：\　\现在没人渡劫看啥？
+#ELSEACT
+MAP DJT
+BREAK
+
+[@老白修仙]
+#IF
+EQUAL U2 0
+#ACT
+#ELSEACT
+messagebox [无法飞升]：不符合要求！
+break
+
+#IF
+EQUAL A19
+#ACT
+#ELSEACT
+messagebox 提示：\　\现在渡劫之地【<$STR(A19)>】在渡劫，请排队吧！
+break
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV N$元宝检测 <$GAMEGOLD>
+
+#IF
+SMALL N$元宝检测 <$STR(N$飞升元宝)>
+#ACT
+MESSAGEBOX 提示：\　\你的元宝不足<$STR(N$飞升元宝)>个，无法突破！
+BREAK
+
+
+#IF
+CHECKRENEWLEVEL < <$STR(N$飞升等级)>
+#ACT
+messagebox [无法突破]：本次突破转生需要达到“<$STR(N$飞升等级)>”级！
+break
+
+
+#IF
+CHECKBAGSIZE 2
+#ACT
+movr N$成功率 101
+#ELSEACT
+messagebox 你背包太满了，请至少留出二格！
+break
+
+#IF
+checkitem 云顶结晶 <$STR(N$材料数量)>
+#ACT
+MOV A19 <$USERNAME>
+GAMEGOLD - <$STR(N$飞升元宝)>
+TAKE  云顶结晶 <$STR(N$材料数量)>
+MAPMOVE DJT 38 39
+GuildNoticeMsg 250 0 传闻：{[%s]|151:0:1}前往渡劫台挑战雷劫他能否突破{“<$STR(S$称号名称)>”|70:0:1}？？？
+SENDDELAYMSG 羽化飞升：雷劫将在%s后降临，请做好准备， 10 255 1 @降劫
+Gmexecute 开始提问 @观看渡劫
+#ELSEACT
+messagebox 提示：\　\你的云顶结晶不足<$STR(N$材料数量)>个，或你的元宝不足无法突破！
+break
+
+[@降劫]
+#ACT
+MOV U19 0
+SetOnTimer 99 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

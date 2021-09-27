@@ -1,0 +1,711 @@
+[@一级鉴定]
+{
+#IF
+#act
+mov N$属性位置颜色1 0
+mov N$是否为百分比1 0
+mov N$随机数值范围1 0
+mov N$随机属性位置1 0
+mov N$属性位置颜色2 0
+mov N$是否为百分比2 0
+mov N$随机数值范围2 0
+mov N$随机属性位置2 0
+mov N$属性位置颜色3 0
+mov N$是否为百分比3 0
+mov N$随机数值范围3 0
+mov N$随机属性位置3 0
+mov N$属性位置颜色4 0
+mov N$是否为百分比4 0
+mov N$随机数值范围4 0
+mov N$随机属性位置4 0
+mov N$属性位置颜色5 0
+mov N$是否为百分比5 0
+mov N$随机数值范围5 0
+mov N$随机属性位置5 0
+mov N$属性位置颜色6 0
+mov N$是否为百分比6 0
+mov N$随机数值范围6 0
+mov N$随机属性位置6 0
+mov N$属性位置颜色7 0
+mov N$是否为百分比7 0
+mov N$随机数值范围7 0
+mov N$随机属性位置7 0
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\随机位置.txt N$随机属性位置1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\随机位置.txt N$随机属性位置2
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\随机位置.txt N$随机属性位置3
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\随机位置.txt N$随机属性位置4
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\随机位置.txt N$随机属性位置5
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\随机位置.txt N$随机属性位置6
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\随机位置.txt N$随机属性位置7
+
+
+#IF
+EQUAL N$随机属性位置1 3
+#act
+mov N$属性位置颜色1 224
+mov N$是否为百分比1 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\攻击数值范围.txt N$随机数值范围1
+
+#IF
+EQUAL N$随机属性位置1 1
+#act
+mov N$属性位置颜色1 224
+mov N$是否为百分比1 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\防御数值范围.txt N$随机数值范围1
+
+
+#IF
+EQUAL N$随机属性位置1 6
+#act
+mov N$属性位置颜色1 224
+mov N$是否为百分比1 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\生命数值范围.txt N$随机数值范围1
+
+
+#IF
+EQUAL N$随机属性位置1 8
+#act
+mov N$属性位置颜色1 253
+mov N$是否为百分比1 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\打怪数值范围.txt N$随机数值范围1
+
+
+
+#IF
+EQUAL N$随机属性位置1 9
+#act
+mov N$属性位置颜色1 253
+mov N$是否为百分比1 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆率数值范围.txt N$随机数值范围1
+
+#IF
+EQUAL N$随机属性位置1 10
+#act
+mov N$属性位置颜色1 70
+mov N$是否为百分比1 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆伤数值范围.txt N$随机数值范围1
+
+
+#IF
+EQUAL N$随机属性位置1 11
+#act
+mov N$属性位置颜色1 70
+mov N$是否为百分比1 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\神力数值范围.txt N$随机数值范围1
+
+
+
+
+
+#IF
+EQUAL N$随机属性位置2 3
+#act
+mov N$属性位置颜色2 224
+mov N$是否为百分比2 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\攻击数值范围.txt N$随机数值范围2
+
+#IF
+EQUAL N$随机属性位置2 1
+#act
+mov N$属性位置颜色2 224
+mov N$是否为百分比2 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\防御数值范围.txt N$随机数值范围2
+
+
+
+#IF
+EQUAL N$随机属性位置2 6
+#act
+mov N$属性位置颜色2 224
+mov N$是否为百分比2 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\生命数值范围.txt N$随机数值范围2
+
+
+#IF
+EQUAL N$随机属性位置2 8
+#act
+mov N$属性位置颜色2 253
+mov N$是否为百分比2 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\打怪数值范围.txt N$随机数值范围2
+
+
+
+#IF
+EQUAL N$随机属性位置2 9
+#act
+mov N$属性位置颜色2 253
+mov N$是否为百分比2 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆率数值范围.txt N$随机数值范围2
+
+#IF
+EQUAL N$随机属性位置2 10
+#act
+mov N$属性位置颜色2 70
+mov N$是否为百分比2 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆伤数值范围.txt N$随机数值范围2
+
+
+#IF
+EQUAL N$随机属性位置2 11
+#act
+mov N$属性位置颜色2 70
+mov N$是否为百分比2 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\神力数值范围.txt N$随机数值范围2
+
+
+
+
+
+
+
+#IF
+EQUAL N$随机属性位置3 3
+#act
+mov N$属性位置颜色3 224
+mov N$是否为百分比3 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\攻击数值范围.txt N$随机数值范围3
+
+#IF
+EQUAL N$随机属性位置3 1
+#act
+mov N$属性位置颜色3 224
+mov N$是否为百分比3 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\防御数值范围.txt N$随机数值范围3
+
+
+#IF
+EQUAL N$随机属性位置3 6
+#act
+mov N$属性位置颜色3 224
+mov N$是否为百分比3 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\生命数值范围.txt N$随机数值范围3
+
+
+#IF
+EQUAL N$随机属性位置3 8
+#act
+mov N$属性位置颜色3 253
+mov N$是否为百分比3 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\打怪数值范围.txt N$随机数值范围3
+
+
+
+#IF
+EQUAL N$随机属性位置3 9
+#act
+mov N$属性位置颜色3 253
+mov N$是否为百分比3 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆率数值范围.txt N$随机数值范围3
+
+#IF
+EQUAL N$随机属性位置3 10
+#act
+mov N$属性位置颜色3 70
+mov N$是否为百分比3 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆伤数值范围.txt N$随机数值范围3
+
+
+#IF
+EQUAL N$随机属性位置3 11
+#act
+mov N$属性位置颜色3 70
+mov N$是否为百分比3 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\神力数值范围.txt N$随机数值范围3
+
+
+
+
+
+
+#IF
+EQUAL N$随机属性位置4 3
+#act
+mov N$属性位置颜色4 224
+mov N$是否为百分比4 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\攻击数值范围.txt N$随机数值范围4
+
+#IF
+EQUAL N$随机属性位置4 1
+#act
+mov N$属性位置颜色4 224
+mov N$是否为百分比4 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\防御数值范围.txt N$随机数值范围4
+
+
+#IF
+EQUAL N$随机属性位置4 6
+#act
+mov N$属性位置颜色4 224
+mov N$是否为百分比4 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\生命数值范围.txt N$随机数值范围4
+
+
+#IF
+EQUAL N$随机属性位置4 8
+#act
+mov N$属性位置颜色4 253
+mov N$是否为百分比4 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\打怪数值范围.txt N$随机数值范围4
+
+
+
+#IF
+EQUAL N$随机属性位置4 9
+#act
+mov N$属性位置颜色4 253
+mov N$是否为百分比4 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆率数值范围.txt N$随机数值范围4
+
+#IF
+EQUAL N$随机属性位置4 10
+#act
+mov N$属性位置颜色4 70
+mov N$是否为百分比4 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆伤数值范围.txt N$随机数值范围4
+
+
+#IF
+EQUAL N$随机属性位置4 11
+#act
+mov N$属性位置颜色4 70
+mov N$是否为百分比4 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\神力数值范围.txt N$随机数值范围4
+
+
+
+
+
+#IF
+EQUAL N$随机属性位置5 3
+#act
+mov N$属性位置颜色5 224
+mov N$是否为百分比5 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\攻击数值范围.txt N$随机数值范围5
+
+#IF
+EQUAL N$随机属性位置5 1
+#act
+mov N$属性位置颜色5 224
+mov N$是否为百分比5 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\防御数值范围.txt N$随机数值范围5
+
+
+#IF
+EQUAL N$随机属性位置5 6
+#act
+mov N$属性位置颜色5 224
+mov N$是否为百分比5 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\生命数值范围.txt N$随机数值范围5
+
+
+#IF
+EQUAL N$随机属性位置5 8
+#act
+mov N$属性位置颜色5 253
+mov N$是否为百分比5 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\打怪数值范围.txt N$随机数值范围5
+
+
+#IF
+EQUAL N$随机属性位置5 9
+#act
+mov N$属性位置颜色5 253
+mov N$是否为百分比5 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆率数值范围.txt N$随机数值范围5
+
+#IF
+EQUAL N$随机属性位置5 10
+#act
+mov N$属性位置颜色5 70
+mov N$是否为百分比5 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆伤数值范围.txt N$随机数值范围5
+
+
+#IF
+EQUAL N$随机属性位置5 11
+#act
+mov N$属性位置颜色5 70
+mov N$是否为百分比5 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\神力数值范围.txt N$随机数值范围5
+
+
+
+
+
+
+
+
+
+
+#IF
+EQUAL N$随机属性位置6 3
+#act
+mov N$属性位置颜色6 224
+mov N$是否为百分比6 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\攻击数值范围.txt N$随机数值范围6
+
+#IF
+EQUAL N$随机属性位置6 1
+#act
+mov N$属性位置颜色6 224
+mov N$是否为百分比6 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\防御数值范围.txt N$随机数值范围6
+
+
+#IF
+EQUAL N$随机属性位置6 6
+#act
+mov N$属性位置颜色6 224
+mov N$是否为百分比6 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\生命数值范围.txt N$随机数值范围6
+
+
+#IF
+EQUAL N$随机属性位置6 8
+#act
+mov N$属性位置颜色6 253
+mov N$是否为百分比6 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\打怪数值范围.txt N$随机数值范围6
+
+
+#IF
+EQUAL N$随机属性位置6 9
+#act
+mov N$属性位置颜色6 253
+mov N$是否为百分比6 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆率数值范围.txt N$随机数值范围6
+
+#IF
+EQUAL N$随机属性位置6 10
+#act
+mov N$属性位置颜色6 70
+mov N$是否为百分比6 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆伤数值范围.txt N$随机数值范围6
+
+
+#IF
+EQUAL N$随机属性位置6 11
+#act
+mov N$属性位置颜色6 70
+mov N$是否为百分比6 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\神力数值范围.txt N$随机数值范围6
+
+
+
+
+
+
+#IF
+EQUAL N$随机属性位置7 3
+#act
+mov N$属性位置颜色7 224
+mov N$是否为百分比7 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\攻击数值范围.txt N$随机数值范围7
+
+#IF
+EQUAL N$随机属性位置7 1
+#act
+mov N$属性位置颜色7 224
+mov N$是否为百分比7 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\防御数值范围.txt N$随机数值范围7
+
+
+#IF
+EQUAL N$随机属性位置7 6
+#act
+mov N$属性位置颜色7 224
+mov N$是否为百分比7 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\生命数值范围.txt N$随机数值范围7
+
+
+#IF
+EQUAL N$随机属性位置7 8
+#act
+mov N$属性位置颜色7 253
+mov N$是否为百分比7 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\打怪数值范围.txt N$随机数值范围7
+
+
+
+#IF
+EQUAL N$随机属性位置7 9
+#act
+mov N$属性位置颜色7 253
+mov N$是否为百分比7 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆率数值范围.txt N$随机数值范围7
+
+#IF
+EQUAL N$随机属性位置7 10
+#act
+mov N$属性位置颜色7 70
+mov N$是否为百分比7 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\爆伤数值范围.txt N$随机数值范围7
+
+
+#IF
+EQUAL N$随机属性位置7 11
+#act
+mov N$属性位置颜色7 70
+mov N$是否为百分比7 1
+GetRandomText ..\QuestDiary\喵喵专用鉴定系统\一级鉴定范围\神力数值范围.txt N$随机数值范围7
+
+
+
+
+
+
+
+
+
+
+
+
+
+#IF
+random 30
+#ACT
+CHANGECUSTOMITEMTEXT -1 [逆天·改命]
+CHANGECUSTOMITEMTEXTCOLOR -1 70
+CHANGECUSTOMITEMABIL -1 0 1 <$str(N$随机属性位置1)>
+CHANGECUSTOMITEMABIL -1 1 1 <$str(N$随机属性位置2)>
+CHANGECUSTOMITEMABIL -1 2 1 <$str(N$随机属性位置3)>
+CHANGECUSTOMITEMABIL -1 3 1 <$str(N$随机属性位置4)>
+CHANGECUSTOMITEMABIL -1 4 1 <$str(N$随机属性位置5)>
+CHANGECUSTOMITEMABIL -1 5 1 <$str(N$随机属性位置6)>
+CHANGECUSTOMITEMABIL -1 6 1 <$str(N$随机属性位置7)>
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 0 0 <$str(N$属性位置颜色1)>
+CHANGECUSTOMITEMABIL -1 1 0 <$str(N$属性位置颜色2)>
+CHANGECUSTOMITEMABIL -1 2 0 <$str(N$属性位置颜色3)>
+CHANGECUSTOMITEMABIL -1 3 0 <$str(N$属性位置颜色4)>
+CHANGECUSTOMITEMABIL -1 4 0 <$str(N$属性位置颜色5)>
+CHANGECUSTOMITEMABIL -1 5 0 <$str(N$属性位置颜色6)>
+CHANGECUSTOMITEMABIL -1 6 0 <$str(N$属性位置颜色7)>
+CHANGECUSTOMITEMABIL -1 0 3 <$str(N$是否为百分比1)>
+CHANGECUSTOMITEMABIL -1 1 3 <$str(N$是否为百分比2)>
+CHANGECUSTOMITEMABIL -1 2 3 <$str(N$是否为百分比3)>
+CHANGECUSTOMITEMABIL -1 3 3 <$str(N$是否为百分比4)>
+CHANGECUSTOMITEMABIL -1 4 3 <$str(N$是否为百分比5)>
+CHANGECUSTOMITEMABIL -1 5 3 <$str(N$是否为百分比6)>
+CHANGECUSTOMITEMABIL -1 6 3 <$str(N$是否为百分比7)>
+CHANGECUSTOMITEMVALUE -1 0 = <$str(N$随机数值范围1)>
+CHANGECUSTOMITEMVALUE -1 1 = <$str(N$随机数值范围2)>
+CHANGECUSTOMITEMVALUE -1 2 = <$str(N$随机数值范围3)>
+CHANGECUSTOMITEMVALUE -1 3 = <$str(N$随机数值范围4)>
+CHANGECUSTOMITEMVALUE -1 4 = <$str(N$随机数值范围5)>
+CHANGECUSTOMITEMVALUE -1 5 = <$str(N$随机数值范围6)>
+CHANGECUSTOMITEMVALUE -1 6 = <$str(N$随机数值范围7)>
+UpDateBoxItem 1
+;SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+#IF
+random 20
+#ACT
+CHANGECUSTOMITEMTEXT -1 [最上级]
+CHANGECUSTOMITEMTEXTCOLOR -1 253
+CHANGECUSTOMITEMABIL -1 0 1 <$str(N$随机属性位置1)>
+CHANGECUSTOMITEMABIL -1 1 1 <$str(N$随机属性位置2)>
+CHANGECUSTOMITEMABIL -1 2 1 <$str(N$随机属性位置3)>
+CHANGECUSTOMITEMABIL -1 3 1 <$str(N$随机属性位置4)>
+CHANGECUSTOMITEMABIL -1 4 1 <$str(N$随机属性位置5)>
+CHANGECUSTOMITEMABIL -1 5 1 <$str(N$随机属性位置6)>
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 0 0 <$str(N$属性位置颜色1)>
+CHANGECUSTOMITEMABIL -1 1 0 <$str(N$属性位置颜色2)>
+CHANGECUSTOMITEMABIL -1 2 0 <$str(N$属性位置颜色3)>
+CHANGECUSTOMITEMABIL -1 3 0 <$str(N$属性位置颜色4)>
+CHANGECUSTOMITEMABIL -1 4 0 <$str(N$属性位置颜色5)>
+CHANGECUSTOMITEMABIL -1 5 0 <$str(N$属性位置颜色6)>
+CHANGECUSTOMITEMABIL -1 0 3 <$str(N$是否为百分比1)>
+CHANGECUSTOMITEMABIL -1 1 3 <$str(N$是否为百分比2)>
+CHANGECUSTOMITEMABIL -1 2 3 <$str(N$是否为百分比3)>
+CHANGECUSTOMITEMABIL -1 3 3 <$str(N$是否为百分比4)>
+CHANGECUSTOMITEMABIL -1 4 3 <$str(N$是否为百分比5)>
+CHANGECUSTOMITEMABIL -1 5 3 <$str(N$是否为百分比6)>
+CHANGECUSTOMITEMVALUE -1 0 = <$str(N$随机数值范围1)>
+CHANGECUSTOMITEMVALUE -1 1 = <$str(N$随机数值范围2)>
+CHANGECUSTOMITEMVALUE -1 2 = <$str(N$随机数值范围3)>
+CHANGECUSTOMITEMVALUE -1 3 = <$str(N$随机数值范围4)>
+CHANGECUSTOMITEMVALUE -1 4 = <$str(N$随机数值范围5)>
+CHANGECUSTOMITEMVALUE -1 5 = <$str(N$随机数值范围6)>
+UpDateBoxItem 1
+;SENDUPGRADEITEM
+break
+
+
+
+
+
+#IF
+random 12
+#ACT
+CHANGECUSTOMITEMTEXT -1 [上级]
+CHANGECUSTOMITEMTEXTCOLOR -1 249
+CHANGECUSTOMITEMABIL -1 0 1 <$str(N$随机属性位置1)>
+CHANGECUSTOMITEMABIL -1 1 1 <$str(N$随机属性位置2)>
+CHANGECUSTOMITEMABIL -1 2 1 <$str(N$随机属性位置3)>
+CHANGECUSTOMITEMABIL -1 3 1 <$str(N$随机属性位置4)>
+CHANGECUSTOMITEMABIL -1 4 1 <$str(N$随机属性位置5)>
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 0 0 <$str(N$属性位置颜色1)>
+CHANGECUSTOMITEMABIL -1 1 0 <$str(N$属性位置颜色2)>
+CHANGECUSTOMITEMABIL -1 2 0 <$str(N$属性位置颜色3)>
+CHANGECUSTOMITEMABIL -1 3 0 <$str(N$属性位置颜色4)>
+CHANGECUSTOMITEMABIL -1 4 0 <$str(N$属性位置颜色5)>
+CHANGECUSTOMITEMABIL -1 0 3 <$str(N$是否为百分比1)>
+CHANGECUSTOMITEMABIL -1 1 3 <$str(N$是否为百分比2)>
+CHANGECUSTOMITEMABIL -1 2 3 <$str(N$是否为百分比3)>
+CHANGECUSTOMITEMABIL -1 3 3 <$str(N$是否为百分比4)>
+CHANGECUSTOMITEMABIL -1 4 3 <$str(N$是否为百分比5)>
+CHANGECUSTOMITEMVALUE -1 0 = <$str(N$随机数值范围1)>
+CHANGECUSTOMITEMVALUE -1 1 = <$str(N$随机数值范围2)>
+CHANGECUSTOMITEMVALUE -1 2 = <$str(N$随机数值范围3)>
+CHANGECUSTOMITEMVALUE -1 3 = <$str(N$随机数值范围4)>
+CHANGECUSTOMITEMVALUE -1 4 = <$str(N$随机数值范围5)>
+UpDateBoxItem 1
+;SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+#IF
+random 8
+#ACT
+CHANGECUSTOMITEMTEXT -1 [高级]
+CHANGECUSTOMITEMTEXTCOLOR -1 254
+CHANGECUSTOMITEMABIL -1 0 1 <$str(N$随机属性位置1)>
+CHANGECUSTOMITEMABIL -1 1 1 <$str(N$随机属性位置2)>
+CHANGECUSTOMITEMABIL -1 2 1 <$str(N$随机属性位置3)>
+CHANGECUSTOMITEMABIL -1 3 1 <$str(N$随机属性位置4)>
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 0 0 <$str(N$属性位置颜色1)>
+CHANGECUSTOMITEMABIL -1 1 0 <$str(N$属性位置颜色2)>
+CHANGECUSTOMITEMABIL -1 2 0 <$str(N$属性位置颜色3)>
+CHANGECUSTOMITEMABIL -1 3 0 <$str(N$属性位置颜色4)>
+CHANGECUSTOMITEMABIL -1 0 3 <$str(N$是否为百分比1)>
+CHANGECUSTOMITEMABIL -1 1 3 <$str(N$是否为百分比2)>
+CHANGECUSTOMITEMABIL -1 2 3 <$str(N$是否为百分比3)>
+CHANGECUSTOMITEMABIL -1 3 3 <$str(N$是否为百分比4)>
+CHANGECUSTOMITEMVALUE -1 0 = <$str(N$随机数值范围1)>
+CHANGECUSTOMITEMVALUE -1 1 = <$str(N$随机数值范围2)>
+CHANGECUSTOMITEMVALUE -1 2 = <$str(N$随机数值范围3)>
+CHANGECUSTOMITEMVALUE -1 3 = <$str(N$随机数值范围4)>
+UpDateBoxItem 1
+;SENDUPGRADEITEM
+break
+
+
+
+
+
+
+#IF
+random 5
+#ACT
+CHANGECUSTOMITEMTEXT -1 [中级]
+CHANGECUSTOMITEMTEXTCOLOR -1 224
+CHANGECUSTOMITEMABIL -1 0 1 <$str(N$随机属性位置1)>
+CHANGECUSTOMITEMABIL -1 1 1 <$str(N$随机属性位置2)>
+CHANGECUSTOMITEMABIL -1 2 1 <$str(N$随机属性位置3)>
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 0 0 <$str(N$属性位置颜色1)>
+CHANGECUSTOMITEMABIL -1 1 0 <$str(N$属性位置颜色2)>
+CHANGECUSTOMITEMABIL -1 2 0 <$str(N$属性位置颜色3)>
+CHANGECUSTOMITEMABIL -1 0 3 <$str(N$是否为百分比1)>
+CHANGECUSTOMITEMABIL -1 1 3 <$str(N$是否为百分比2)>
+CHANGECUSTOMITEMABIL -1 2 3 <$str(N$是否为百分比3)>
+CHANGECUSTOMITEMVALUE -1 0 = <$str(N$随机数值范围1)>
+CHANGECUSTOMITEMVALUE -1 1 = <$str(N$随机数值范围2)>
+CHANGECUSTOMITEMVALUE -1 2 = <$str(N$随机数值范围3)>
+UpDateBoxItem 1
+;SENDUPGRADEITEM
+break
+
+
+
+
+
+#IF
+random 3
+#ACT
+CHANGECUSTOMITEMTEXT -1 [下级]
+CHANGECUSTOMITEMTEXTCOLOR -1 247
+CHANGECUSTOMITEMABIL -1 0 1 <$str(N$随机属性位置1)>
+CHANGECUSTOMITEMABIL -1 1 1 <$str(N$随机属性位置2)>
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 0 0 <$str(N$属性位置颜色1)>
+CHANGECUSTOMITEMABIL -1 1 0 <$str(N$属性位置颜色2)>
+CHANGECUSTOMITEMABIL -1 0 3 <$str(N$是否为百分比1)>
+CHANGECUSTOMITEMABIL -1 1 3 <$str(N$是否为百分比2)>
+CHANGECUSTOMITEMVALUE -1 0 = <$str(N$随机数值范围1)>
+CHANGECUSTOMITEMVALUE -1 1 = <$str(N$随机数值范围2)>
+UpDateBoxItem 1
+;SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+
+
+
+
+#IF
+random 1
+#ACT
+CHANGECUSTOMITEMTEXT -1 [最下级]
+CHANGECUSTOMITEMTEXTCOLOR -1 247
+CHANGECUSTOMITEMABIL -1 0 1 <$str(N$随机属性位置1)>
+CHANGECUSTOMITEMABIL -1 0 2 0
+CHANGECUSTOMITEMABIL -1 0 0 <$str(N$属性位置颜色1)>
+CHANGECUSTOMITEMABIL -1 0 3 <$str(N$是否为百分比1)>
+CHANGECUSTOMITEMVALUE -1 0 = <$str(N$随机数值范围1)>
+UpDateBoxItem 1
+;SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+}

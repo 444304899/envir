@@ -1,0 +1,303 @@
+[@main]
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;messagebox 测试区禁止操作！
+;BREAK
+
+
+
+#IF
+CHECKGAMEGLORY > 499
+#Act
+MOV S$转区状态 <可以转区/FCOLOR=250>
+#ELSEACT
+MOV S$转区状态 <不可转区>
+
+#IF
+#Act
+#say
+\ \ \
+<>         <↓请大家花几分钟仔细阅读以下内容，胡乱操作导致出错无法正常领取转区冲值的一律后果自负↓/FCOLOR=31>\
+
+<> <※封※/AUTOCOLOR=251,168,191,70,245,249,253>  <１、/FCOLOR=158><账号真实充值点只要大于500即可获得20%的真实转区条件，可以转到任何新区/FCOLOR=191>        <※封※/AUTOCOLOR=251,168,191,70,245,249,253>\
+<> <※天※/AUTOCOLOR=251,168,191,70,245,249,253>  <２、/FCOLOR=158><禁止多个直冲账号转到同一个新区账号.以免出错.后果自负.务必想清楚/FCOLOR=224>             <※天※/AUTOCOLOR=251,168,191,70,245,249,253>\
+<> <※录※/AUTOCOLOR=251,168,191,70,245,249,253>  <３、/FCOLOR=158><直充账号转区需要当前账号注册时填写的生日、密保注册资料,注册账号时切记截图/FCOLOR=253>   <※录※/AUTOCOLOR=251,168,191,70,245,249,253>\
+<> <※新※/AUTOCOLOR=251,168,191,70,245,249,253>  <５、/FCOLOR=158><新区领取转区充值的唯一认证方式就是转区时填写的新区账号.请务必妥善保管牢记/FCOLOR=249>   <※新※/AUTOCOLOR=251,168,191,70,245,249,253>\
+<> <※转※/AUTOCOLOR=251,168,191,70,245,249,253>  <６、/FCOLOR=158><老区账号申请转区后，账号会处于封停状态，为避免资金损失,请先将装备转移好哦/FCOLOR=254>   <※转※/AUTOCOLOR=251,168,191,70,245,249,253>\
+<> <※区※/AUTOCOLOR=251,168,191,70,245,249,253>  <７、/FCOLOR=158><例如:你老区账号上有500真实充值，转区后任何新区都能领取100充值，老区清空！/FCOLOR=151>   <※区※/AUTOCOLOR=251,168,191,70,245,249,253>\ \
+<>                    <账号转区状态：/FCOLOR=249>  <$STR(S$转区状态)>  <当前账号可转区充值真实点为：/FCOLOR=227><$GAMEGLORY> <点/FCOLOR=254> \ \
+<>                        <╔---------------------------------------------╗/FCOLOR=246>  \
+<>                        <┆/FCOLOR=246>               <直冲帐号操作区/FCOLOR=116>                <┆/FCOLOR=246>\
+<>                        <┆/FCOLOR=246><提示：转新区账号只能领取一次转区充值,叠加无效/FCOLOR=249><┆/FCOLOR=246>\
+<>                        <╠---------------------------------------------╣/FCOLOR=246> \
+<>                        <┆/FCOLOR=246>                                             <┆/FCOLOR=246> \
+<>                        <┆/FCOLOR=246>       <我要进行转区/@直冲>      <（转区操作）/FCOLOR=224>        <┆/FCOLOR=246> \
+<>                        <┆/FCOLOR=246>                                             <┆/FCOLOR=246> \
+<>                        <┆/FCOLOR=246>       <领取转区数据/@直冲领取>      <（新区领取）/FCOLOR=224>        <┆/FCOLOR=246> \
+<>                        <┆/FCOLOR=246>                                             <┆/FCOLOR=246> \
+<>                        <╚---------------------------------------------╝/FCOLOR=246> \ \
+<> <★★★重要提醒：转区操作慎重，一旦转区成功，技术也无法解封你的账号，请提前回收或者转移装备★★★/AUTOCOLOR=251,168,191,70,245,249,253>\
+<> <★★★重要提醒：转区操作慎重，一旦转区成功，技术也无法解封你的账号，请提前回收或者转移装备★★★/AUTOCOLOR=251,168,191,70,245,249,253>\
+<> <★★★重要提醒：转区操作慎重，一旦转区成功，技术也无法解封你的账号，请提前回收或者转移装备★★★/AUTOCOLOR=251,168,191,70,245,249,253>\
+
+
+
+
+[@直冲]
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+#ACT
+MESSAGEBOX 测试区不开启转区功能！！！！！！！
+BREAK
+
+
+
+#IF
+CHECKGAMEGLORY < 499
+#Act
+MESSAGEBOX 检测到你目前的账号真实充值点数量不足500点，禁止该选项转区！
+BREAK
+
+#IF
+#act
+;MOV T10
+MOV N$账号手续费计算 <$GAMEGLORY>
+MUL N$账号手续费计算 20
+DIV N$账号手续费计算 100
+#SAY
+\ \ \  \ \
+
+<>        <☆☆☆☆☆☆☆☆←★★★★★★★★/FCOLOR=250><帐 号 转 区 系 统/FCOLOR=253><★★★★★★★★→☆☆☆☆☆☆☆☆☆☆/FCOLOR=250>\ \ \
+
+
+<>                  <输入以下资料验证无误后方可账号转区：/FCOLOR=242>  <您可以新区账号可领取/FCOLOR=254><$str(N$账号手续费计算)><真实点/FCOLOR=254>\ \
+
+
+<>                  <请输入生日/@@inputstring76(请输入注册生日：　　　　　　生日格式：1989/01/01)>    <当前的生日：/FCOLOR=242> <$STR(S76)>\
+<>                  <密保问题一/@@inputstring75(请输建号问题一：)>    <当前问题一：/FCOLOR=242> <$STR(S75)>\
+<>                  <密保答案一/@@inputstring74(请输建号答案一：)>    <当前答案一：/FCOLOR=242> <$STR(S74)>\
+<>                  <密保问题二/@@inputstring73(请输建号问题二：)>    <当前问题二：/FCOLOR=242> <$STR(S73)>\
+<>                  <密保答案二/@@inputstring72(请输建号答案二：)>    <当前答案二：/FCOLOR=242> <$STR(S72)>\
+<>                  <新区账号为/@@inputstring71(这里输入要转新区的账号4-10位数字母：)>    <新区账号为：/FCOLOR=242> <$STR(S71)>\ \
+
+<>                  {转区成功后，新区可领取：转区金额的10%，例如转500充值点.新区可领取50充值点/FCOLOR=149}\ \
+
+<>                  <确认账号转区/@确认账号转区>   <注：此操作将清空充值点，新区帐号无条件领取/FCOLOR=254>\ \
+<>                  <点击确认输入后，如果输入错误，会被直接踢下线>\
+<>                  <点击确认输入后，如果输入错误，会被直接踢下线>\
+<>                  <注：转区成功，此账号将自动封号处理！无法解封！请提前转移好贵重装备！>\
+<>                  <注：转区成功，此账号将自动封号处理！无法解封！请提前转移好贵重装备！>\
+<>                  <注：转区成功，此账号将自动封号处理！无法解封！请提前转移好贵重装备！>\
+<>                  <注：此功能请在确定要转区的情况下，“谨慎操作”！操作了又不想转区的，一律不予处理！！>\
+<>                  <注：此功能请在确定要转区的情况下，“谨慎操作”！操作了又不想转区的，一律不予处理！！>\
+
+
+
+[@gg1]
+#if
+#act
+sendmsg 7 <$BIRTHDAT>----<$QUIZ1>----<$ANSWER1>----<$QUIZ2>----<$ANSWER2>
+
+
+
+[@inputstring76]
+#IF
+CheckStringlength s76 > 0
+#act
+GOTO @直冲
+BREAK
+
+[@inputstring75]
+#IF
+CheckStringlength s75 > 0
+#act
+GOTO @直冲
+BREAK
+
+[@inputstring74]
+#IF
+CheckStringlength s74 > 0
+#act
+GOTO @直冲
+BREAK
+
+[@inputstring73]
+#IF
+CheckStringlength s73 > 0
+#act
+GOTO @直冲
+BREAK
+
+[@inputstring72]
+#IF
+CheckStringlength s72 > 0
+#act
+GOTO @直冲
+BREAK
+
+[@inputstring71]
+#IF
+EQUAL S71 <$USERACCOUNT>
+#ACT
+MOV S71
+MESSAGEBOX 新区账号禁止与当前账号相同！！！
+BREAK
+
+#IF
+CheckStringlength s71 > 0
+#act
+GOTO @直冲
+BREAK
+
+[@确认账号转区]
+#OR
+EQUAL S76
+EQUAL S75
+EQUAL S74
+EQUAL S73
+EQUAL S72
+EQUAL S71
+#ACT
+MESSAGEBOX 请填写完整，再点击转区选项！！！
+BREAK
+
+#IF
+EQUAL S76 <$BIRTHDAT>
+EQUAL S75 <$QUIZ1>
+EQUAL S74 <$ANSWER1>
+EQUAL S73 <$QUIZ2>
+EQUAL S72 <$ANSWER2>
+#ACT
+goto @验证通过
+BREAK
+#ELSEACT
+MESSAGEBOX 密保信息输入错误！                                           ;你已被踢下线！
+;KICK                                                       这里设置如果输入错误直接掉线
+BREAK
+
+[@验证通过]
+#IF
+CheckStringlength s71 > 3
+CheckStringlength s71 < 11
+#ACT
+MOV N$转区点数 <$str(N$账号手续费计算)>
+mov T10 N
+MOV S$直冲号回收数据 <$str(s71)>
+inc S$直冲号回收数据 :
+inc S$直冲号回收数据 <$str(N$转区点数)>
+GAMEGLORY - 99999999
+AddTextListEx ..\..\..\..\封天转区系统\封天转区数据\直冲号账号金额数据.txt <$str(S$直冲号回收数据)> 0
+AddTextListEx ..\..\..\..\封天转区系统\封天转区数据\直冲号新区账号.txt <$str(S71)> 0
+AddTextListEx ..\..\..\..\封天转区系统\封天转区数据\直冲号数据记录.txt <$DATETIME>服务器：【<$SERVERNAME>】玩家：【<$USERNAME>】老区账号：【<$USERACCOUNT>】金额：【<$str(N$转区点数)>】新区账号：【<$str(s71)>】 0
+MESSAGEBOX 恭喜你成功转区充值点：<$str(N$转区点数)>，新区账号为<$str(s71)>，请牢记！\号已被封停！
+;KICK
+map 转区牢房
+DELAYGOTO 1000 @小退
+BREAK
+#ELSEACT
+MESSAGEBOX 账号长度仅限4-10位！
+BREAK
+
+
+[@小退]
+#IF
+#ACT
+SENDMOVEMSG 0 253 255 350 1 玩家〖<$USERNAME>〗使用独家自助转区成功，兄弟们新区见！
+MESSAGEBOX 恭喜你成功转区充值点：<$str(N$转区点数)>，新区账号为<$str(s71)>，请牢记！\号已被封停！
+KICK
+
+
+
+
+[@直冲领取]
+#if
+#act
+GetStringPos  ..\..\..\..\封天转区系统\封天转区数据\直冲号新区账号.txt <$USERACCOUNT>
+
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+#ACT
+MESSAGEBOX 测试区不能执行,请正式开区在领取
+BREAK
+
+
+#IF
+EQUAL N0 9999999
+#ACT
+messagebox 该账号无转区记录或已经领取过
+BREAK
+#ELSEACT
+GetListString ..\..\..\..\封天转区系统\封天转区数据\直冲号账号金额数据.txt <$STR(N0)> S$新区账号 N$直冲号充值金额
+
+#if
+#act
+MOV N$账号手续费计算领取 <$str(N$直冲号充值金额)>
+MUL N$账号手续费计算领取 20
+DIV N$账号手续费计算领取 20
+
+MessageBox 当前账号可以免费领取充值<$str(N$账号手续费计算领取)> 充值点，只能领取一次。 @确定直冲号充值领取 @取消
+BREAK
+
+
+
+[@确定直冲号充值领取]
+#IF
+EQUAL T9 ling
+#act
+messagebox 此号已经领取过了，不能多次领取哦~
+BREAK
+
+#if
+LARGE N$账号手续费计算领取 0
+#ACT
+MOV T9 ling
+DelTextList  ..\..\..\..\封天转区系统\封天转区数据\直冲号新区账号.txt <$USERACCOUNT>
+DelTextList  ..\..\..\..\封天转区系统\封天转区数据\直冲号账号金额数据.txt <$USERACCOUNT>:<$str(N$直冲号充值金额)>
+
+
+;=====真实充值点=================
+MOV N$直冲号荣誉 <$str(N$账号手续费计算领取)>
+MUL N$直冲号荣誉 1
+GAMEGLORY + <$str(N$直冲号荣誉)>
+;=====充值积分点=================
+MOV N$直冲号积分 <$str(N$账号手续费计算领取)>
+MUL N$直冲号积分 1
+CreditPoint + <$str(N$直冲号积分)>
+;=====充值点卷数量=================
+MOV N$直冲号点卷 <$str(N$账号手续费计算领取)>
+MUL N$直冲号点卷 1000
+GAMEGIRD + <$str(N$直冲号点卷)>
+
+
+
+;MOV N$直冲号幻世币 <$str(N$账号手续费计算领取)>
+;MUL N$直冲号幻世币 300
+;GAMEDIAMOND + <$str(N$直冲号幻世币)>
+
+;MOV N$直冲号元宝 <$str(N$账号手续费计算领取)>
+;MUL N$直冲号元宝 30000
+;GAMEGOLD + <$str(N$直冲号元宝)>
+
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过账号转区获得<$str(N$直冲号荣誉)> 真实充值点,如果您也想获得,请赶快充值吧!
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过账号转区获得<$str(N$直冲号积分)>积分,如果您也想获得,请赶快充值吧!
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>通过账号转区获得<$str(N$直冲号点卷)>点卷,如果您也想获得,请赶快充值吧!
+BREAK
+#ELSEACT
+MESSAGEBOX 您没有转区数据，请确定你转区时设置的是本账号！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

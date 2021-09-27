@@ -1,0 +1,640 @@
+[@被攻击BUFF]
+{
+
+
+
+
+#if
+PGCheckhpPer < 20
+CHECKTITLE 狂暴之力
+ISONMAP SRDT
+CHECKCURRTARGETRACE = 0
+PGRandomEx 1 10
+#act
+PGRangeHarm <$X> <$Y> 8 1 1 3 0 1 1 1
+SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
+
+
+
+#if
+random 100
+checkitemw 三环·三圣 1
+#act
+MOV N$碉堡头颅低防  <$AC>
+MOV N$碉堡头颅高防 <$MAXAC>
+ChangeHumAbility 1 + <$str(N$碉堡头颅低防)> 3
+ChangeHumAbility 2 + <$str(N$碉堡头颅高防)> 3
+SENDMSG 7 防御翻倍，持续3秒！！
+
+
+#if
+PGCheckhpPer < 20
+checkitemw 雷鼎 1
+CHECKCURRTARGETRACE = 0
+PGRandomEx 1 50
+#act
+PGRangeHarm <$X> <$Y> 8 1 1 3 0 0 1 1
+SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
+
+
+#if
+PGCheckhpPer < 20
+checkitemw 一岁一枯荣 1
+CHECKCURRTARGETRACE = 0
+PGRandomEx 1 40
+#act
+PGRangeHarm <$X> <$Y> 8 1 1 3 0 0 1 1
+SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
+
+
+
+
+
+
+
+
+#if
+PGCheckhpPer < 20
+checkitemw 万森轮盘 1
+CHECKCURRTARGETRACE = 0
+PGRandomEx 1 50
+#act
+PGRangeHarm <$X> <$Y> 8 1 1 3 0 0 1 1
+SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
+
+
+#if
+PGCheckhpPer < 20
+checkitemw 纺锤之锚 1
+CHECKCURRTARGETRACE = 0
+PGRandomEx 1 50
+#act
+PGRangeHarm <$X> <$Y> 8 1 1 3 0 0 1 1
+SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
+
+
+
+
+#if
+CHECKCURRTARGETRACE = 0
+random 100
+CHECKITEMW 无轩之玄魄 1
+#act
+ChangeModeEx 19 3
+SendCenterMsg 254 0 《无轩之玄魄》触发,率触发护身!. 0 10
+
+
+
+#if
+random 100
+checkitemw 獒牙 1
+#act
+MOV N$碉堡头颅低防  <$AC>
+MOV N$碉堡头颅高防 <$MAXAC>
+ChangeHumAbility 1 + <$str(N$碉堡头颅低防)> 4
+ChangeHumAbility 2 + <$str(N$碉堡头颅高防)> 4
+SENDMSG 7 防御翻倍，持续3秒！！
+
+
+
+#if
+random 100
+checkitemw 自己才是靠山 1
+#act
+MOV N$碉堡头颅低防  <$AC>
+MOV N$碉堡头颅高防 <$MAXAC>
+ChangeHumAbility 1 + <$str(N$碉堡头颅低防)> 4
+ChangeHumAbility 2 + <$str(N$碉堡头颅高防)> 4
+SENDMSG 7 防御翻倍，持续3秒！！
+
+
+
+#if
+random 80
+checkitemw 囚封天之道 1
+#act
+MOV N$碉堡头颅低防  <$AC>
+MOV N$碉堡头颅高防 <$MAXAC>
+ChangeHumAbility 1 + <$str(N$碉堡头颅低防)> 4
+ChangeHumAbility 2 + <$str(N$碉堡头颅高防)> 4
+SENDMSG 7 防御翻倍，持续3秒！！
+
+
+
+#if
+random 200
+checkitemw 阳光战神的威严
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [阳光战神的威严]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[阳光战神的威严]BUFF触发,直接恢复自身20%血量. 0 5
+
+#if
+random 100
+checkitemw 阳光战神的威严[活动]
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [阳光战神的威严]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[阳光战神的威严]BUFF触发,直接恢复自身20%血量. 0 5
+
+
+
+
+
+#if
+random 200
+checkitemw 阳光战神的威严【超脱】
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [阳光战神的威严]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[阳光战神的威严]BUFF触发,直接恢复自身20%血量. 0 5
+
+
+
+
+
+#if
+random 200
+checkitemw 五龙铡
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [五龙铡]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[五龙铡]BUFF触发,直接恢复自身20%血量. 0 5
+
+#if
+random 200
+checkitemw 李主仙衣≮洪荒终≯
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [李主仙衣≮洪荒终≯]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[李主仙衣≮洪荒终≯]BUFF触发,直接恢复自身20%血量. 0 5
+
+#if
+random 200
+checkitemw 人.仙.鬼.怪.≮善恶兩分≯
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [人.仙.鬼.怪.≮善恶兩分≯]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[人.仙.鬼.怪.≮善恶兩分≯]BUFF触发,直接恢复自身20%血量. 0 5
+
+
+#if
+random 200
+checkitemw 孟姝皇袍
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [孟姝皇袍]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[孟姝皇袍]BUFF触发,直接恢复自身20%血量. 0 5
+
+
+#if
+random 200
+checkitemw 至尊青布衫
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [至尊青布衫]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[至尊青布衫]BUFF触发,直接恢复自身20%血量. 0 5
+
+#if
+random 200
+checkitemw 天尘●最强状态
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [天尘●最强状态]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[天尘●最强状态]BUFF触发,直接恢复自身20%血量. 0 5
+
+#if
+random 180
+checkitemw 罗衫叶叶绣重重
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [罗衫叶叶绣重重]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[罗衫叶叶绣重重]BUFF触发,直接恢复自身20%血量. 0 5
+
+#if
+random 160
+checkitemw 极过·极未·极逍遥
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [极过·极未·极逍遥]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[极过·极未·极逍遥]BUFF触发,直接恢复自身20%血量. 0 5
+
+#if
+random 140
+checkitemw 鸿蒙灵宝·【雷霄甲】
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [鸿蒙灵宝·【雷霄甲】]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[鸿蒙灵宝·【雷霄甲】]BUFF触发,直接恢复自身20%血量. 0 5
+
+
+
+
+#if
+random 200
+checkitemw 一纸因果·你欠我钱
+SMALL N$回血CD 1
+#ACT
+MOV N$回血CD 45
+PGAddHpPer + 20
+SendCenterMsg 70 0 [一纸因果·你欠我钱]BUFF触发,直接恢复自身20%血量 0 10
+<$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[一纸因果·你欠我钱]BUFF触发,直接恢复自身20%血量. 0 5
+
+
+
+
+#IF
+CHECKCURRTARGETRACE = 0
+#ACT
+ADDBUTTON 6 14 219 219 219 3 170 0 　战斗中
+MOV N$战斗中 5
+;MOV N$被攻击 5
+
+
+#IF
+PGCheckhpPer < 25
+equal N$“魔罗伞” 0
+checkitemw “魔罗伞” 1
+#ACT
+MOV N$“魔罗伞” 300
+MOVR N$飞行距离 1 3
+INC N$飞行X <$X> <$str(N$飞行距离)>
+INC N$飞行Y <$X> <$str(N$飞行距离)>
+mapmove <$Map> <$str(N$飞行X)> <$str(N$飞行Y)>
+
+
+
+
+#IF
+PGCheckhpPer < 25
+equal N$方父筑桥 0
+checkitemw 方父筑桥 1
+#ACT
+MOV N$方父筑桥 300
+MOVR N$飞行距离 1 3
+INC N$飞行X <$X> <$str(N$飞行距离)>
+INC N$飞行Y <$X> <$str(N$飞行距离)>
+mapmove <$Map> <$str(N$飞行X)> <$str(N$飞行Y)>
+
+
+#IF
+PGCheckhpPer < 25
+equal N$终有良人相伴 0
+checkitemw 终有良人相伴 1
+#ACT
+MOV N$终有良人相伴 300
+MOVR N$飞行距离 1 3
+INC N$飞行X <$X> <$str(N$飞行距离)>
+INC N$飞行Y <$X> <$str(N$飞行距离)>
+mapmove <$Map> <$str(N$飞行X)> <$str(N$飞行Y)>
+
+
+
+#IF
+PGCheckhpPer < 20
+equal N$终有良人相伴 0
+checkitemw 青灯古庙·伴一生 1
+#ACT
+MOV N$终有良人相伴 300
+MOVR N$飞行距离 1 3
+INC N$飞行X <$X> <$str(N$飞行距离)>
+INC N$飞行Y <$X> <$str(N$飞行距离)>
+mapmove <$Map> <$str(N$飞行X)> <$str(N$飞行Y)>
+
+
+
+
+
+
+#if
+random 200
+checkitemw “乾坤尺” 1
+#act
+PGAddHpPer + 1
+
+#if
+random 200
+checkitemw 碧海焚天 1
+#act
+PGAddHpPer + 2
+
+#if
+random 200
+checkitemw 九宫八卦 1
+#act
+PGAddHpPer + 3
+
+#if
+random 200
+checkitemw 不灭之握 1
+#act
+PGAddHpPer + 4
+
+#if
+random 200
+checkitemw 多罗妖力 1
+#act
+PGAddHpPer + 5
+
+#if
+random 200
+checkitemw 季子之血 1
+#act
+PGAddHpPer + 6
+
+#if
+random 200
+checkitemw 生命之玺 1
+#act
+PGAddHpPer + 7
+
+#if
+random 200
+checkitemw 神力玉玺 1
+#act
+PGAddHpPer + 8
+
+#if
+random 200
+checkitemw 万灵血玺 1
+#act
+PGAddHpPer + 9
+
+
+
+#if
+random 75
+checkitemw 咒 1
+#act
+PGAddHpPer - 2
+
+
+#if
+random 75
+CHECKCURRTARGETRACE = 0
+checkitemw 古神皮甲 1
+#act
+ChangeModeEx 1 1
+SendCenterMsg 254 0 《·古神皮甲·》触发,你进入无敌状态，持续1秒!. 0 5
+M.SendCenterMsg 254 0 对方《·古神皮甲·》触发,进入无敌状态，持续1秒!. 0 5
+#if
+random 75
+CHECKCURRTARGETRACE = 0
+checkitemw 九曲三相 1
+#act
+ChangeModeEx 1 1
+SendCenterMsg 254 0 《·古神皮甲·》触发,你进入无敌状态，持续1秒!. 0 5
+M.SendCenterMsg 254 0 对方《·古神皮甲·》触发,进入无敌状态，持续1秒!. 0 5
+
+
+
+#if
+random 75
+CHECKCURRTARGETRACE = 0
+checkitemw 【天ヶ魔】 1
+#act
+M.PGAddmpPer - 100
+SendCenterMsg 254 0 《·【天ヶ魔】·》触发,对方扣除所有魔法值!. 0 5
+M.SendCenterMsg 254 0 对方《·【天ヶ魔】·》触发,你被扣除所有魔法值!. 0 5
+
+#if
+random 75
+CHECKCURRTARGETRACE = 0
+checkitemw 白肆的祈祷※※ 1
+#act
+P.ChangeModeEx 9 1
+SendCenterMsg 254 0 《·白肆的祈祷※※·》触发,禁止对方攻击1秒!. 0 5
+M.SendCenterMsg 254 0 对方《·白肆的祈祷※※·》触发,你被禁止攻击1秒!. 0 5
+
+
+
+
+#if
+random 60
+CHECKCURRTARGETRACE = 0
+checkitemw 「赤炎·天照」 1
+equal N$赤炎天照 0
+#act
+mov N$赤炎天照 10
+PGAddHpPer - 5
+SendCenterMsg 254 0 《「赤炎·天照」》触发,灼伤了目标5%生命值!. 0 5
+M.SendCenterMsg 254 0 对方《「赤炎·天照」》触发,你被灼伤了5%生命值. 0 5
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】关注神器
+LARGE N$战神铠甲CD  7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 100 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少10%..
+DELAYGOTO 5000 @吸收还原
+
+
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】自由大陆
+LARGE N$战神铠甲CD  7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 200 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少20%..
+DELAYGOTO 5000 @吸收还原
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】召唤师峡谷
+LARGE N$战神铠甲CD  7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 250 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少25%..
+DELAYGOTO 5000 @吸收还原
+
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】峡谷之巅
+LARGE N$战神铠甲CD  7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 300 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少30%..
+DELAYGOTO 5000 @吸收还原
+
+
+
+
+#if
+Random 15
+CHECKITEMW 【超神器】创世★巅峰
+LARGE N$战神铠甲CD  7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 300 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少300%..
+DELAYGOTO 5000 @吸收还原
+
+
+#if
+Random 15
+CHECKITEMW 【超神器】原始大陆
+LARGE N$战神铠甲CD  7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 350 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少35%..
+DELAYGOTO 5000 @吸收还原
+
+
+#if
+Random 15
+CHECKITEMW 【超神器】山海经
+LARGE N$战神铠甲CD  7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 350 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少35%..
+DELAYGOTO 5000 @吸收还原
+
+
+
+#if
+Random 15
+CHECKITEMW 【超神器】传奇之路
+LARGE N$战神铠甲CD  7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 400 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少40%..
+DELAYGOTO 5000 @吸收还原
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】死亡领地
+LARGE N$战神铠甲CD 7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 400 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少40%..
+DELAYGOTO 5000 @吸收还原
+BREAK
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】佛本世界
+LARGE N$战神铠甲CD 7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 450 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少45%..
+DELAYGOTO 5000 @吸收还原
+BREAK
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】无限恐怖
+LARGE N$战神铠甲CD 7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 450 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少45%..
+DELAYGOTO 5000 @吸收还原
+BREAK
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】神话世界
+LARGE N$战神铠甲CD 7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 500 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少50%..
+DELAYGOTO 5000 @吸收还原
+BREAK
+
+
+
+#if
+Random 10
+CHECKITEMW 【超神器】云顶之奕
+LARGE N$战神铠甲CD 7
+#ACT
+MOV N$战神铠甲CD 0
+MOV N$战神铠甲标识 1
+SetSuckDamage = 1000000000 500 100
+PLAYEFFECT 14 410 10 5 70 1
+SENDMSG 6 [提示]战神铠甲触发：接下来的5秒内受到的伤害减少50%..
+DELAYGOTO 5000 @吸收还原
+BREAK
+
+
+
+[@吸收还原]
+#IF
+#ACT
+MOV N$战神铠甲标识 0
+SetSuckDamage = 0 100 100
+BREAK
+
+}
+
+
+

@@ -1,0 +1,14 @@
+[@main]
+#if
+checkitem 鸿.
+checkitem 蒙.
+checkitem 传.
+checkitem 送.
+not CheckMonMap D71650  1
+#act
+MAPMOVE  D5061
+SENDMSG 0 {百团大战:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.探索神秘世界！！|255:15}
+#elseact
+MESSAGEBOX 请先清理掉地图所有的怪！//你背包没有"鸿."蒙."传."送."四个字
+break
+

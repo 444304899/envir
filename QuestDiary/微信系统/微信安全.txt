@@ -1,0 +1,92 @@
+[@微信系统]
+{
+#IF
+#ACT
+VAR Integer HUMAN 微信结果
+VAR String HUMAN 微信账号
+SetOnTimer 2 2
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\微信系统\微信名单.txt <$USERACCOUNT>
+#ACT
+AddTextList ..\QuestDiary\微信系统\微信名单.txt <$USERACCOUNT>
+CreateFile ..\QuestDiary\微信系统\帐号储存\<$USERACCOUNT>.txt
+
+#IF
+NOT EQUAL T41
+EQUAL T42 <$MACHINEID>
+#ACT
+CLEARNAMELIST ..\QuestDiary\微信系统\帐号储存\<$USERACCOUNT>.txt
+AddTextList ..\QuestDiary\微信系统\帐号储存\<$USERACCOUNT>.txt <$USERACCOUNT>
+AddTextList ..\QuestDiary\微信系统\帐号储存\<$USERACCOUNT>.txt <$STR(T41)>
+AddTextList ..\QuestDiary\微信系统\帐号储存\<$USERACCOUNT>.txt <$MACHINEID>
+
+#IF
+EQUAL T41
+CHECKTEXTLIST ..\QuestDiary\微信系统\帐号储存\<$USERACCOUNT>.txt <$USERACCOUNT>
+#ACT
+GetListString ..\QuestDiary\微信系统\\帐号储存\<$USERACCOUNT>.txt 1 T41
+GetListString ..\QuestDiary\微信系统\\帐号储存\<$USERACCOUNT>.txt 2 T42
+
+
+#IF
+EQUAL T40
+#ACT
+movr n1 1 9999
+movr n2 1 9999
+MOV T40 <$YEAR><$MONTH><$DAY><$HOUR><$MINUTE><$SECOND><$STR(N1)><$STR(N2)>
+
+#IF
+NOT EQUAL T41
+EQUAL T42 <$MACHINEID>
+#ACT
+SENDMSG 7 账号信息验证成功,可以继续游戏.!
+MOV S$微信通过 验证通过
+AddTextList ..\QuestDiary\微信系统\微信记录.txt 更新绑定|<$Str(T40)>|<$Str(T41)>|<$USERACCOUNT>|<$SERVERNAME>|<$USERNAME>|<$MACHINEID>|<$GOLDCOUNT>|<$GAMEGOLD>|<$GAMEDIAMOND>|<$GAMEGIRD>|<$GAMEGLORY>|<$GAMEPOINT>
+BREAK
+
+#IF
+EQUAL T41
+#ACT
+SENDMSG 7 开始进行微信验证...!
+SENDMSG 7 开始进行微信验证...!
+SENDMSG 7 开始进行微信验证...!
+SENDMSG 7 开始进行微信验证...!
+MAPMOVE xsdt
+BREAK
+
+#IF
+NOT EQUAL T41
+NOT EQUAL T42 <$MACHINEID>
+#ACT
+SENDMSG 7 开始进行微信验证...!
+SENDMSG 7 开始进行微信验证...!
+SENDMSG 7 开始进行微信验证...!
+SENDMSG 7 开始进行微信验证...!
+MAPMOVE xsdt
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

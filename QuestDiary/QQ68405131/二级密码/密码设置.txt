@@ -1,0 +1,349 @@
+[@密码登陆]
+{
+#IF
+CHECKTEXTLIST ..\QuestDiary\QQ60405131\二级密码\禁止弹窗地图.txt <$MAP>
+#ACT
+BREAK
+#IF
+CheckStringlength T12 < 8
+#ACT
+SENDMSG 5 [提示]:你还没有设置二级密码,及时设置使你的帐号更安全！
+BREAK
+#IF
+EQUAL T13 IP
+EQUAL T11 <$IPADDR>
+#ACT
+SENDMSG 6 [提示]:IP验证通过！祝您游戏愉快！
+BREAK
+#IF
+EQUAL T13 机器码
+EQUAL T11 <$USERMACHINEID>
+#ACT
+SENDMSG 6 [提示]:机器码验证通过！祝您游戏愉快！
+BREAK
+#IF
+EQUAL T13 IP和机器码
+EQUAL T11 <$IPADDR>★<$USERMACHINEID>
+#ACT
+SENDMSG 6 [提示]:IP和机器码验证通过！祝您游戏愉快！
+BREAK
+#IF
+#ACT
+map MIMA
+goto @密码验证
+#CALL [QQ60405131\二级密码\密码设置.txt] @密码验证
+SENDMSG 5 [提示]:非法登录！请验证二级密码！
+BREAK
+}
+
+[@二级密码]
+{
+#IF
+CheckStringlength T12 < 8
+#ACT
+GOTO @二级密码未设置
+#ELSEACT
+GOTO @二级密码已设置
+
+[@二级密码未设置]
+#IF
+EQUAL N$密码模式 0
+#ACT
+MOV S$密码模式显示 IP或机器码
+MOV S$密码模式 <当前选择模式/FCOLOR=250>：<绑定IP和机器码/FCOLOR=70>　<绑定IP/@A>　<绑定机器码/@B>
+#IF
+EQUAL N$密码模式 1
+#ACT
+MOV S$密码模式显示 IP
+MOV S$密码模式 <当前选择模式/FCOLOR=250>：<绑定IP/FCOLOR=70>　<绑定机器码/@B>　<绑定IP和机器码/@C>
+#IF
+EQUAL N$密码模式 2
+#ACT
+MOV S$密码模式显示 机器码
+MOV S$密码模式 <当前选择模式/FCOLOR=250>：<绑定机器码/FCOLOR=70>　<绑定IP/@A>　<绑定IP和机器码/@C>
+#IF
+#SAY
+「<二级密码/AUTOCOLOR=254,251,168,191,250,70,245,249,253>」\
+\ \
+<·/FCOLOR=253><官方：/FCOLOR=254><为了保障玩家的帐号安全，避免帐号被盗或者被骗。/FCOLOR=243>\
+<·/FCOLOR=253><说明：/FCOLOR=254><设置二级密码后，上线<$STR(S$密码模式显示)>不一致必须验证二级密码！/FCOLOR=243>\
+<·/FCOLOR=253><慎重：/FCOLOR=254><请各位玩家不要泄露自己的帐号密码，注意自己我保护！/FCOLOR=250>\
+<·/FCOLOR=253><保护：/FCOLOR=254><被骗、被盗，本服一律不为任何玩家处理和找回装备！/FCOLOR=250>\
+<·/FCOLOR=254><友情提示/FCOLOR=21>：<不能纯数字，字母不分大小写，支持汉字输入。/FCOLOR=253>\
+\ \
+<·    <$STR(S$密码模式)>  <设置二级密码/@@InPutString5(请设置新密码[8-12位字母，不能纯数字，不分大小写]：)>\
+
+[@二级密码已设置]
+#IF
+EQUAL T13 IP和机器码
+#ACT
+MOV S$密码模式显示 IP或机器码
+MOV S$密码模式 <当前绑定模式/FCOLOR=250>：<绑定IP和机器码/FCOLOR=70>　<更换IP/@@InPutString6(更换绑定模式需验证密码：)>　<更换机器码/@@InPutString7(更换绑定模式需验证密码：)>
+#IF
+EQUAL T13 IP
+#ACT
+MOV S$密码模式显示 IP
+MOV S$密码模式 <当前绑定模式/FCOLOR=250>：<绑定IP/FCOLOR=70>　<更换机器码/@@InPutString7(更换绑定模式需验证密码：)>　<更换IP和机器码/@@InPutString8(更换绑定模式需验证密码：)>
+#IF
+EQUAL T13 机器码
+#ACT
+MOV S$密码模式显示 机器码
+MOV S$密码模式 <当前绑定模式/FCOLOR=250>：<绑定机器码/FCOLOR=70>　<更换IP/@@InPutString6(更换绑定模式需验证密码：)>　<更换IP和机器码/@@InPutString8(更换绑定模式需验证密码：)>
+#IF
+EQUAL N$确定修改密码 1
+#SAY
+「<二级密码/AUTOCOLOR=254,251,168,191,250,70,245,249,253>」\
+\ \
+<·/FCOLOR=253><官方：/FCOLOR=254><为了保障玩家的帐号安全，避免帐号被盗或者被骗。/FCOLOR=243>\
+<·/FCOLOR=253><说明：/FCOLOR=254><设置二级密码后，上线<$STR(S$密码模式显示)>不一致必须验证二级密码！/FCOLOR=243>\
+<·/FCOLOR=253><慎重：/FCOLOR=254><请各位玩家不要泄露自己的帐号密码，注意自己我保护！/FCOLOR=250>\
+<·/FCOLOR=253><保护：/FCOLOR=254><被骗、被盗，本服一律不为任何玩家处理和找回装备！/FCOLOR=250>\
+<·/FCOLOR=254><友情提示/FCOLOR=21>：<不能纯数字，字母不分大小写，支持汉字输入。/FCOLOR=253>\
+\ \
+<重新设置密码/@@InPutString5(请设置新密码[8-12位字母，不能纯数字，不分大小写]：)> <$STR(S$密码模式)>\
+#ELSESAY
+「<二级密码/AUTOCOLOR=254,251,168,191,250,70,245,249,253>」\
+\ \
+<·/FCOLOR=253><官方：/FCOLOR=254><为了保障玩家的帐号安全，避免帐号被盗或者被骗。/FCOLOR=243>\
+<·/FCOLOR=253><说明：/FCOLOR=254><设置二级密码后，上线<$STR(S$密码模式显示)>不一致必须验证二级密码！/FCOLOR=243>\
+<·/FCOLOR=253><慎重：/FCOLOR=254><请各位玩家不要泄露自己的帐号密码，注意自己我保护！/FCOLOR=250>\
+<·/FCOLOR=253><保护：/FCOLOR=254><被骗、被盗，本服一律不为任何玩家处理和找回装备！/FCOLOR=250>\
+<·/FCOLOR=254><友情提示/FCOLOR=21>：<不能纯数字，字母不分大小写，支持汉字输入。/FCOLOR=253>\
+\ \
+<修改二级密码/@@InPutString9(请先输入密码进行验证：)> <$STR(S$密码模式)>\
+
+[@A]
+#IF
+#ACT
+MOV N$密码模式 1
+GOTO @二级密码未设置
+[@B]
+#IF
+#ACT
+MOV N$密码模式 2
+GOTO @二级密码未设置
+[@C]
+#IF
+#ACT
+MOV N$密码模式 0
+GOTO @二级密码未设置
+
+[@InPutString6]
+#IF
+CheckContainsTextListEx ..\QuestDiary\QQ60405131\二级密码\密码限制字符.txt <$STR(S5)>
+#ACT
+MESSAGEBOX \提示：请不要输入敏感字符！
+BREAK
+#IF
+EQUAL S6 <$STR(T12)>
+#ACT
+MOV T11 <$IPADDR>
+MOV T13 IP
+MESSAGEBOX \　提示：更换绑定模式成功！\　\　当前绑定模式为：<$STR(T13)>！
+GOTO @二级密码已设置
+#ELSEACT
+MESSAGEBOX \　提示：密码错误！
+[@InPutString7]
+#IF
+CheckContainsTextListEx ..\QuestDiary\QQ60405131\二级密码\密码限制字符.txt <$STR(S5)>
+#ACT
+MESSAGEBOX \提示：请不要输入敏感字符！
+BREAK
+#IF
+EQUAL S7 <$STR(T12)>
+#ACT
+MOV T11 <$USERMACHINEID>
+MOV T13 机器码
+MESSAGEBOX \　提示：更换绑定模式成功！\　\　当前绑定模式为：<$STR(T13)>！
+GOTO @二级密码已设置
+#ELSEACT
+MESSAGEBOX \　提示：密码错误！
+[@InPutString8]
+#IF
+CheckContainsTextListEx ..\QuestDiary\QQ60405131\二级密码\密码限制字符.txt <$STR(S5)>
+#ACT
+MESSAGEBOX \提示：请不要输入敏感字符！
+BREAK
+#IF
+EQUAL S8 <$STR(T12)>
+#ACT
+MOV T11 <$IPADDR>★<$USERMACHINEID>
+MOV T13 IP和机器码
+MESSAGEBOX \　提示：更换绑定模式成功！\　\　当前绑定模式为：<$STR(T13)>！
+GOTO @二级密码已设置
+#ELSEACT
+MESSAGEBOX \　提示：密码错误！
+
+[@InPutString5]
+#IF
+CheckContainsTextListEx ..\QuestDiary\QQ60405131\二级密码\密码限制字符.txt <$STR(S5)>
+#ACT
+MESSAGEBOX \提示：请不要输入敏感字符！
+BREAK
+#IF
+LARGE S5 0
+#ACT
+MESSAGEBOX \　提示：请不要设置纯数字密码！
+BREAK
+#IF
+EQUAL S5 <$USERNAME>
+#ACT
+MESSAGEBOX \　提示：请不要用自己的名字设置密码！
+BREAK
+#IF
+CHECKTEXTLIST ..\QuestDiary\QQ60405131\二级密码\密码限制列表.txt <$STR(S5)>
+#ACT
+MESSAGEBOX \提示：请不要设置过于简单的密码！
+BREAK
+#IF
+CheckStringlength S5 > 7
+CheckStringlength S5 < 13
+#ACT
+MOV N$确定修改密码 0
+#ELSEACT
+MESSAGEBOX \　提示：密码设置失败，确认你输入的密码为8-12位！
+BREAK
+#IF
+EQUAL N$密码模式 0
+#ACT
+MOV T12 <$STR(S5)>
+MOV T11 <$IPADDR>★<$USERMACHINEID>
+MOV T13 IP和机器码
+MESSAGEBOX \　提示：密码设置成功！\　\　你设置的密码是：【<$STR(T12)>】请牢记！\　\　绑定模式为：<$STR(T13)>！
+;mapmove YD 193 71
+goto @去城里
+CLOSE
+BREAK
+#IF
+EQUAL N$密码模式 1
+#ACT
+MOV T12 <$STR(S5)>
+MOV T11 <$IPADDR>
+MOV T13 IP
+MESSAGEBOX \　提示：密码设置成功！\　\　你设置的密码是：【<$STR(T12)>】请牢记！\　\　绑定模式为：<$STR(T13)>！
+;mapmove YD 193 71
+goto @去城里
+CLOSE
+BREAK
+#IF
+EQUAL N$密码模式 2
+#ACT
+MOV T12 <$STR(S5)>
+MOV T11 <$USERMACHINEID>
+MOV T13 机器码
+MESSAGEBOX \　提示：密码设置成功！\　\　你设置的密码是：【<$STR(T12)>】请牢记！\　\　绑定模式为：<$STR(T13)>！
+;mapmove YD 193 71
+goto @去城里
+CLOSE
+BREAK
+
+[@InPutString9]
+#IF
+CheckContainsTextListEx ..\QuestDiary\QQ60405131\二级密码\密码限制字符.txt <$STR(S5)>
+#ACT
+MESSAGEBOX \提示：请不要输入敏感字符！
+BREAK
+#IF
+CheckStringlength T12 > 7
+#ELSEACT
+MESSAGEBOX \　提示：清除失败！你还没设置二级密码！
+BREAK
+#IF
+EQUAL S9 <$STR(T12)>
+#ACT
+MOV N$确定修改密码 1
+MESSAGEBOX \　验证成功！\　\　请点击【重新设置密码】进行修改！
+GOTO @二级密码已设置
+BREAK
+#ELSEACT
+MESSAGEBOX \　密码错误！清除失败！
+BREAK
+
+[@IsInFilterList]
+#If
+CheckLevelEx > 0
+#Act
+MessageBox 输入数据中包含了非法字符.请重新编辑
+Break
+}
+
+[@密码验证]
+{
+#IF
+EQUAL T13 IP和机器码
+#ACT
+MOV S$密码模式显示 IP或机器码
+#IF
+EQUAL T13 IP
+#ACT
+MOV S$密码模式显示 IP
+#IF
+EQUAL T13 机器码
+#ACT
+MOV S$密码模式显示 机器码
+#IF
+#SAY
+「<密码验证使者/AUTOCOLOR=254,251,168,191,250,70,245,249,253>」\
+\ \
+<·/FCOLOR=253><官方：/FCOLOR=254><为了保障玩家的帐号安全，避免帐号被盗或者被骗。/FCOLOR=243>\
+<·/FCOLOR=253><说明：/FCOLOR=254><设置二级密码后，上线<$STR(S$密码模式显示)>不一致必须验证二级密码！/FCOLOR=243>\
+<·/FCOLOR=253><慎重：/FCOLOR=254><请各位玩家不要泄露自己的帐号密码，注意自己我保护！/FCOLOR=250>\
+<·/FCOLOR=253><保护：/FCOLOR=254><被骗、被盗，本服一律不为任何玩家处理和找回装备！/FCOLOR=250>\
+<·/FCOLOR=254><友情提示/FCOLOR=21>：<不能纯数字，字母不分大小写，支持汉字输入。/FCOLOR=253>\
+\ \
+「<验证二级密码/@@InPutString5(请验证二级密码密码：)>」　<清除或更改密码请先验证！>　「<忘记密码/@返回城市>」\
+
+[@InPutString5]
+#IF
+CheckContainsTextListEx ..\QuestDiary\QQ60405131\二级密码\密码限制字符.txt <$STR(S5)>
+#ACT
+MESSAGEBOX \提示：请不要输入敏感字符！
+BREAK
+#If
+EQUAL S5 <$STR(T12)>
+#ELSEACT
+MESSAGEBOX \　提示：密码错误！
+BREAK
+#IF
+EQUAL T13 IP
+#ACT
+MOV T11 <$IPADDR>
+;mapmove YD 193 71
+goto @去城里
+SENDMSG 6 [提示]:当前IP已添加为安全IP！祝你游戏愉快！
+BREAK
+#IF
+EQUAL T13 机器码
+#ACT
+MOV T11 <$USERMACHINEID>
+;mapmove YD 193 71
+goto @去城里
+SENDMSG 6 [提示]:当前机器码已添加为安全机器码！祝你游戏愉快！
+BREAK
+#IF
+EQUAL T13 IP和机器码
+#ACT
+MOV T11 <$IPADDR>★<$USERMACHINEID>
+;mapmove YD 193 71
+goto @去城里
+SENDMSG 6 [提示]:当前IP和机器码已添加为安全IP和机器码！祝你游戏愉快！
+BREAK
+
+[@返回城市]
+#IF
+#ACT
+MESSAGEBOX \　忘记密码请联系管理员\　\　自备注册资料！
+
+[@IsInFilterList]
+#If
+CheckLevelEx > 0
+#Act
+MessageBox 输入数据中包含了非法字符.请重新编辑
+Break
+
+[@去城里]
+#IF
+SMALL G496 1
+#ACT
+mapmove YD 193 71
+}

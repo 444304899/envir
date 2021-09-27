@@ -1,0 +1,337 @@
+[@假人自动穿戴更好的装备]
+{
+
+#IF
+EQUAL <$CURRTEMNAME> 云顶结晶
+#ACT
+TAKE 云顶结晶 1
+INC n$家人使用 1
+
+#IF
+EQUAL <$CURRTEMNAME> 称号卷
+#ACT
+TAKE 称号卷 1
+INC U0 1
+
+
+
+#IF
+EQUAL <$CURRTEMNAME> 50元宝
+#ACT
+TAKE 50元宝 1
+GAMEGOLD + 50
+
+#IF
+EQUAL <$CURRTEMNAME> 100元宝
+#ACT
+TAKE 100元宝
+GAMEGOLD + 100
+
+#IF
+EQUAL <$CURRTEMNAME> 200元宝
+#ACT
+TAKE 200元宝 1
+GAMEGOLD + 200
+
+#IF
+EQUAL <$CURRTEMNAME> 500元宝
+#ACT
+TAKE 500元宝 1
+GAMEGOLD + 500
+
+#IF
+EQUAL <$CURRTEMNAME> 1000元宝
+#ACT
+TAKE 1000元宝 1
+GAMEGOLD + 1000
+
+#IF
+EQUAL <$CURRTEMNAME> 3000元宝
+#ACT
+TAKE 3000元宝 1
+GAMEGOLD + 3000
+
+#IF
+EQUAL <$CURRTEMNAME> 5000元宝
+#ACT
+TAKE 5000元宝 1
+GAMEGOLD + 5000
+
+#IF
+EQUAL <$CURRTEMNAME> 1w元宝
+#ACT
+TAKE 1w元宝 1
+GAMEGOLD + 10000
+
+#IF
+EQUAL <$CURRTEMNAME> 5w元宝
+#ACT
+TAKE 5w元宝 1
+GAMEGOLD + 50000
+
+#IF
+EQUAL <$CURRTEMNAME> 10w元宝
+#ACT
+TAKE 10w元宝 1
+GAMEGOLD + 100000
+
+#IF
+EQUAL <$CURRTEMNAME> 50w元宝
+#ACT
+TAKE 50w元宝 1
+GAMEGOLD + 500000
+
+#IF
+EQUAL <$CURRTEMNAME> 100w元宝
+#ACT
+TAKE 100w元宝 1
+GAMEGOLD + 1000000
+
+#IF
+EQUAL <$CURRTEMNAME> 500w元宝
+#ACT
+TAKE 500w元宝 1
+GAMEGOLD + 5000000
+
+#IF
+EQUAL <$CURRTEMNAME> 1000w元宝
+#ACT
+TAKE 1000w元宝 1
+GAMEGOLD + 10000000
+
+
+
+
+
+#IF
+equal <$CURRTEMSTDMODE> 100
+#ACT
+mov N$装备位置 30
+
+#IF
+equal <$CURRTEMSTDMODE> 101
+#ACT
+mov N$装备位置 31
+#IF
+equal <$CURRTEMSTDMODE> 102
+#ACT
+mov N$装备位置 32
+#IF
+equal <$CURRTEMSTDMODE> 103
+#ACT
+mov N$装备位置 33
+#IF
+equal <$CURRTEMSTDMODE> 104
+#ACT
+mov N$装备位置 34
+#IF
+equal <$CURRTEMSTDMODE> 105
+#ACT
+mov N$装备位置 35
+#IF
+equal <$CURRTEMSTDMODE> 106
+#ACT
+mov N$装备位置 36
+#IF
+equal <$CURRTEMSTDMODE> 107
+#ACT
+mov N$装备位置 37
+#IF
+equal <$CURRTEMSTDMODE> 108
+#ACT
+mov N$装备位置 38
+#IF
+equal <$CURRTEMSTDMODE> 109
+#ACT
+mov N$装备位置 39
+#IF
+equal <$CURRTEMSTDMODE> 110
+#ACT
+mov N$装备位置 40
+#IF
+equal <$CURRTEMSTDMODE> 111
+#ACT
+mov N$装备位置 41
+
+#OR
+equal <$CURRTEMSTDMODE> 68
+equal <$CURRTEMSTDMODE> 69
+#ACT
+mov N$装备位置 18
+
+#OR
+equal <$CURRTEMSTDMODE> 66
+equal <$CURRTEMSTDMODE> 67
+#ACT
+mov N$装备位置 17
+
+#if
+equal <$CURRTEMSTDMODE> 48
+#act
+mov N$装备位置 16
+
+#if
+equal <$CURRTEMSTDMODE> 28
+#act
+mov N$装备位置 15
+#if
+equal <$CURRTEMSTDMODE> 51
+#act
+mov N$装备位置 9
+
+
+#if
+equal <$CURRTEMSTDMODE> 65
+#act
+mov N$装备位置 14
+
+
+#if
+equal <$CURRTEMSTDMODE> 16
+#act
+mov N$装备位置 13
+
+#OR
+equal <$CURRTEMSTDMODE> 63
+equal <$CURRTEMSTDMODE> 53
+#act
+mov N$装备位置 12
+
+#if
+equal <$CURRTEMSTDMODE> 62
+#act
+mov N$装备位置 11
+
+#if
+equal <$CURRTEMSTDMODE> 64
+#act
+mov N$装备位置 10
+
+#OR
+equal <$CURRTEMSTDMODE> 22
+equal <$CURRTEMSTDMODE> 23
+#act
+mov N$装备位置 7
+
+#OR
+equal <$CURRTEMSTDMODE> 24
+equal <$CURRTEMSTDMODE> 26
+#act
+mov N$装备位置 5
+
+#if
+equal <$CURRTEMSTDMODE> 15
+#act
+mov N$装备位置 4
+
+#OR
+equal <$CURRTEMSTDMODE> 19
+equal <$CURRTEMSTDMODE> 20
+equal <$CURRTEMSTDMODE> 21
+#act
+mov N$装备位置 3
+
+#if
+equal <$CURRTEMSTDMODE> 30
+#act
+mov N$装备位置 2
+
+#OR
+equal <$CURRTEMSTDMODE> 5
+equal <$CURRTEMSTDMODE> 6
+#act
+mov N$装备位置 1
+
+#OR
+equal <$CURRTEMSTDMODE> 10
+equal <$CURRTEMSTDMODE> 11
+#act
+mov N$装备位置 0
+
+#if
+#act
+delaygoto 1 @位置判断
+
+;#if
+;#act
+;#CALL [\寒流新假人\假人穿戴后补属性.txt] @假人穿戴后补属性A
+
+
+[@位置判断]
+; GetUserItemName 不支持 生肖位置检测。。亲测。。。 所以直接替换
+#IF
+LARGE N$装备位置 18
+#act
+AutoTakeOnItem <$str(S$捡到的装备名称)> <$str(N$装备位置)>
+break
+
+#if
+checkjob Warr
+#act
+GetUserItemName <$str(N$装备位置)> 1
+GetStringPos ..\QuestDiary\寒流新假人\假人装备\战士装备佩带规则.txt <$str(S$捡到的装备名称)>
+mov N$捡起装备索引 <$str(N0)>
+GetStringPos ..\QuestDiary\寒流新假人\假人装备\战士装备佩带规则.txt <$str(s1)>
+mov N$身上装备索引 <$str(N0)>
+
+#if
+checkjob Wizard
+#act
+GetUserItemName <$str(N$装备位置)> 1
+GetStringPos ..\QuestDiary\寒流新假人\假人装备\法师装备佩带规则.txt <$str(S$捡到的装备名称)>
+mov N$捡起装备索引 <$str(N0)>
+GetStringPos ..\QuestDiary\寒流新假人\假人装备\法师装备佩带规则.txt <$str(s1)>
+mov N$身上装备索引 <$str(N0)>
+
+
+#if
+checkjob Taos
+#act
+GetUserItemName <$str(N$装备位置)> 1
+GetStringPos ..\QuestDiary\寒流新假人\假人装备\道士装备佩带规则.txt <$str(S$捡到的装备名称)>
+mov N$捡起装备索引 <$str(N0)>
+GetStringPos ..\QuestDiary\寒流新假人\假人装备\道士装备佩带规则.txt <$str(s1)>
+mov N$身上装备索引 <$str(N0)>
+
+#if
+not equal N$捡起装备索引 9999999
+not CHECKUSEITEM <$str(N$装备位置)>
+#act
+AutoTakeOnItem <$str(S$捡到的装备名称)> <$str(N$装备位置)>
+break
+
+#OR
+equal N$捡起装备索引 9999999
+equal N$身上装备索引 9999999
+#act
+TAKE <$str(S$捡到的装备名称)> 1
+break
+
+
+#if
+large N$捡起装备索引 <$str(N$身上装备索引)>
+#act
+AutoTakeOnItem <$str(S$捡到的装备名称)> <$str(N$装备位置)>
+break
+
+
+;下面是检测对比，另一个手镯和戒指的。
+#if
+not large N$捡起装备索引 <$str(N$身上装备索引)>
+equal N$装备位置 5
+#act
+inc N$装备位置 1
+delaygoto 1 @位置判断
+break
+
+
+#if
+not large N$捡起装备索引 <$str(N$身上装备索引)>
+equal N$装备位置 7
+#act
+inc N$装备位置 1
+delaygoto 1 @位置判断
+break
+
+
+}

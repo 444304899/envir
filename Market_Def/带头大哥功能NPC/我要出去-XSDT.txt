@@ -1,0 +1,19 @@
+[@main]
+#if
+
+equal T1
+#act
+messagebox 请先设置二级密码！
+BREAK
+#if
+small g496 1
+#act
+movr N$坐标x 131 150
+movr N$坐标y 86 100
+MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+;GiveStateItem  首充礼包 1 1 1 1 1 1 1 1
+GIVESTATEITEM 首充礼包 1 1 1 1 1 1 1 1 0
+DELSKILL 倚天辟地
+DELSKILL 十步一杀
+#elseact
+messagebox 剩余等待时间:<$str(g496)>！

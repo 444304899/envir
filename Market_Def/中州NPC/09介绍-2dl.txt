@@ -1,0 +1,16 @@
+[@main]
+#if
+#say
+\
+<> <《专属介绍》~/FCOLOR=58> \  \
+<>   <ItemShow:928:0:0:0:1>  <ItemShow:929:0:0:0:1>  <ItemShow:930:0:0:0:1>  <ItemShow:931:0:0:0:1>  <ItemShow:933:0:0:0:1>  <ItemShow:934:0:0:0:1>  <ItemShow:935:0:0:0:1>\ \ \ \
+<>   <ItemShow:936:0:0:-8:1>  <ItemShow:937:0:0:-8:1>  <ItemShow:938:0:0:-8:1>  <ItemShow:939:0:0:-8:1>  <ItemShow:940:0:0:-8:1>  <ItemShow:941:0:0:-8:1>  <ItemShow:942:0:0:-8:1>\ \ \
+<>                                                         <《下一页》/@main2>
+[@main2]
+#if
+#say
+\
+<> <《专属介绍》~/FCOLOR=58> \  \
+<>   <ItemShow:953:0:0:0:1>  <ItemShow:954:0:0:0:1>  <ItemShow:956:0:0:0:1>  <ItemShow:957:0:0:0:1>  <ItemShow:958:0:0:0:1>  <ItemShow:959:0:0:0:1>  <ItemShow:960:0:0:0:1>\ \ \ \
+<>   <ItemShow:961:0:0:-8:1>  <ItemShow:962:0:0:-8:1>  <ItemShow:963:0:0:-8:1>  <ItemShow:964:0:0:-8:1>  <ItemShow:965:0:0:-8:1>  <ItemShow:966:0:0:-8:1>  \ \ \
+<>                                                         <《上一页》/@main>

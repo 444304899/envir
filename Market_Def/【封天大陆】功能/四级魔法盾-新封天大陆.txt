@@ -1,0 +1,83 @@
+[@main]
+
+
+#if
+#act
+#say
+\ \ \
+
+
+<>                          <有此技能一打三？牛B到家/AUTOCOLOR=158>\
+<>                          <合成条件400张魔法盾书页/AUTOCOLOR=158>\
+<>                          <或者5000个金币购买/AUTOCOLOR=158>\
+<>                          <四级魔法盾绝对物超所值/AUTOCOLOR=158>\
+
+<>                      \
+
+<>                   <合成四级魔法盾/@传送1>       <购买四级魔法盾/@传送2> \ \
+<>                   <购买魔法盾书页|10金币一张/@传送3>       <购买魔法盾书页*10|100金币10张/@传送4>     \
+
+
+[@传送4]
+#if
+checkgold 100
+#act
+take 金币 100
+give 魔法盾书页 10
+MessageBox [提示]:获得:魔法盾书页张*10
+#elseact
+MESSAGEBOX 请检测是否有足够的金币,
+BREAK
+
+
+
+[@传送3]
+#if
+checkgold 10
+#act
+take 金币 10
+give 魔法盾书页 1
+MessageBox [提示]:获得:魔法盾书页张
+#elseact
+MESSAGEBOX 请检测是否有足够的金币,
+BREAK
+
+
+
+[@传送2]
+#if
+checkgold 5000
+CHECKSKILL 魔法盾 = 3
+#act
+take 金币 5000
+;SKILLLEVEL 魔法盾 = 4
+SKILLLEVEL 魔法盾 + 1
+MessageBox [提示]:获得技能:魔法盾四级
+#elseact
+MESSAGEBOX 请检测是否有足够的金币,是否学习魔法盾3级
+BREAK
+
+
+
+[@传送1]
+#if
+CHECKSKILL 魔法盾 = 3
+checkitem 魔法盾书页 400
+#act
+take 魔法盾书页 400
+;SKILLLEVEL 魔法盾 = 4
+SKILLLEVEL 魔法盾 + 1
+MessageBox [提示]:获得技能:魔法盾四级
+#elseact
+MESSAGEBOX 请检测是否有足够的材料,是否学习魔法盾3级！
+BREAK
+
+
+
+
+
+
+
+
+
+

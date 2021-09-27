@@ -1,0 +1,84 @@
+[@main]
+#if
+CheckBoxItemCount 0 1
+#act
+;ReturnBoxItem 0
+
+#if
+CheckBoxItemCount 1 1
+#act
+;ReturnBoxItem 1
+
+#if
+CheckBoxItemCount 2 1
+#act
+;ReturnBoxItem 2
+
+
+#IF
+#ACT
+#SAY
+\ \ \ \ \
+<>      <你来这里是提升专属能力的么？/FCOLOR=161> \
+<>      <在下方放入你需要升级的专属，我可以试着把你的专属提高/FCOLOR=161> \
+<>      <属性，但是需要一点手续费,准备好了就把专属放入进去吧。/FCOLOR=161> \
+<ITEMBOX:0:-1:0:165:18:40:40:*:254#只允许放入“专属”>          \ \  \ \ \ \ \ \ \ \ \
+<>          <10个/FCOLOR=250>                             <10000灵符/FCOLOR=250>              \   \ \ \ \
+
+<>                         <《开始调整》/@调整1>\ \
+
+<playimg:13:75:8:100:55:-352:0>
+
+[@ItemIntoBox0]
+#if
+CHECKTEXTLIST ..\QuestDiary\喵喵专用鉴定系统\专属列表.txt <$BOXITEM[0].NAME>
+#act
+#elseact
+messagebox 你放入的不是“专属”
+ReturnBoxItem 0
+UpDateBoxItem 0
+break
+
+
+
+
+[@调整1]
+#if
+#act
+SetUpgradeItem 0
+
+#IF
+EQUAL <$BOXITEM[0].NAME>
+#ACT
+MESSAGEBOX 请先放入装备再操作。
+BREAK
+
+#if
+CheckBoxItemCount 0 1
+#act
+#elseact
+messagebox 请先放入装备。
+break
+
+
+
+#IF
+checkitem 工匠石 10
+CHECKGAMEGIRD > 9999
+#ACT
+take 工匠石 10
+GAMEGIRD - 10000
+CHANGECUSTOMITEMVALUE -1 0 = 0
+CHANGECUSTOMITEMVALUE -1 1 = 0
+CHANGECUSTOMITEMVALUE -1 2 = 0
+CHANGECUSTOMITEMVALUE -1 3 = 0
+CHANGECUSTOMITEMVALUE -1 4 = 0
+CHANGECUSTOMITEMVALUE -1 5 = 0
+CHANGECUSTOMITEMVALUE -1 6 = 0
+#CALL[\喵喵专用鉴定系统\一级拾取鉴定.txt] @一级鉴定
+UpDateBoxItem 0
+goto @main
+MESSAGEBOX 装备调整成功！
+#elseact
+messagebox 请检查你是否符合条件。
+break

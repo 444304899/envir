@@ -1,0 +1,96 @@
+[@main]
+
+
+
+
+
+#if
+CHECKRENEWLEVEL > 34
+#act
+MESSAGEBOX 你已经达到了当前转生巅峰，无法继续提升！
+break
+
+
+#if
+#act
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\转生配置.ini 转生 <$RELEVEL> S$转生配置信息
+PGExtractString : <$STR(S$转生配置信息)> S$分割结果数组1
+mov S$转生材料1 <$STR(S$分割结果数组1_1)>
+mov S$转生材料2 <$STR(S$分割结果数组1_2)>
+mov S$奖励倍攻 <$STR(S$分割结果数组1_3)>
+mov S$需求金币 <$STR(S$分割结果数组1_4)>
+mov S$材料数量 <$STR(S$分割结果数组1_5)>
+mov S$材料数量2 <$STR(S$分割结果数组1_6)>
+
+
+
+#if
+#act
+#say
+\ \ \ \
+<>                                           \
+<>                       <当前转生为:/FCOLOR=255>< <$RELEVEL>/FCOLOR=70>\ \
+<>    <转生方式:/FCOLOR=70>\
+<>    <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料1)>*<$STR(S$材料数量)>/FCOLOR=250>\
+<>    <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料2)>*<$STR(S$材料数量2)>/FCOLOR=250>\
+<>    <当前转生需要元宝:/FCOLOR=103> < <$STR(S$需求金币)> /FCOLOR=151>\
+<>    <奖励人物转生倍攻:/FCOLOR=103> < <$STR(S$奖励倍攻)> /FCOLOR=254>             \
+<>                                        <《点击此处开始转生》/@转生a>  \
+<IMG:185:6:0:7> \
+<>    <转生要求/FCOLOR=250>\
+<>  \
+<>             <转生需要达到30转，/FCOLOR=103>\
+<>             <每次提升转生，额外增加自身等级+1/FCOLOR=103>\
+
+
+[@转生a]
+#if
+CHECKGAMEGOLD ? <$STR(S$需求金币)>
+checkitem <$STR(S$转生材料1)> <$STR(S$材料数量)>
+checkitem <$STR(S$转生材料2)> <$STR(S$材料数量2)>
+CHECKRENEWLEVEL < 35
+#act
+CHANGELEVEL + 1
+RENEWLEVEL 1
+GAMEGOLD - <$STR(S$需求金币)>
+take <$STR(S$转生材料1)> <$STR(S$材料数量)>
+take <$STR(S$转生材料2)> <$STR(S$材料数量2)>
+MESSAGEBOX 转生成功,当前转生等级为<$RELEVEL>..
+SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
+goto @main
+break
+
+
+
+#if
+#act
+MESSAGEBOX 转生失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+
+[@转生检测]
+#IF
+CHECKRENEWLEVEL = 10
+#ACT
+ADDSKILL 群体施毒术 3
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

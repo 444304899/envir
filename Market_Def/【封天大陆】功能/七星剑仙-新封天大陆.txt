@@ -1,0 +1,164 @@
+[@main]
+#if
+#act
+#SAY
+\ \
+<><超强·神器.New~/FCOLOR=58> \ \  \
+
+<>          <ItemShow:1724:0:0:-35:1>                          <ItemShow:1725:0:0:-20:1>    \  \ \
+
+<><进阶-七星剑仙的剑气【超脱】|250#七星剑仙的剑气*1^-^250#七星石·威*50^-^250#阳光石·圣*50^-^250#风灵石·天*50^-^250#无轩之散魄图纸*2^-^250#无轩之黄魄图纸*2^-^250#无轩之玄魄图纸*2^-^250#神祈之泪*9999^-^250#云顶结晶*9999^-^250#金币*2000/@武器合成1>        <进阶-阳光战神的威严【超脱】|250#阳光战神的威严*1^-^250#七星石·威*50^-^250#阳光石·圣*50^-^250#风灵石·天*50^-^250#无轩之散魄图纸*2^-^250#无轩之黄魄图纸*2^-^250#无轩之玄魄图纸*2^-^250#神祈之泪*9999^-^250#云顶结晶*9999^-^250#金币*2000/@衣服合成1>       \  \
+
+<>        <超强神器可兑换新区300充值/FCOLOR=250>    <超强·神器专属地图|250#进图要求:^-^250#佩戴:七星剑仙的剑气【超脱】^-^250#佩戴:阳光战神的威严【超脱】/@进图> \
+
+<> <购买【七星石·威*10】/@七星石>   <购买【阳光石·圣*10】/@阳光石>    <购买【风灵石·天*10】/@风灵石>  \
+<> <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g18)>／999颗/FCOLOR=70} \
+
+
+
+[@进图]
+#if
+checkitemw 阳光战神的威严【超脱】
+checkitemw 七星剑仙的剑气【超脱】
+#act
+MAPMOVE 神器专属地图
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+#elseact
+MESSAGEBOX 请检测是否佩戴神器！
+BREAK
+
+break
+
+[@衣服合成1]
+#if
+
+checkitem 阳光战神的威严 1
+checkitem 七星石·威 50
+checkitem 阳光石·圣 50
+checkitem 风灵石·天 50
+checkitem 无轩之散魄图纸 2
+checkitem 无轩之黄魄图纸 2
+checkitem 无轩之玄魄图纸 2
+checkitem 神祈之泪 9999
+checkitem 云顶结晶 9999
+checkgold 2000
+#act
+take  阳光战神的威严 1
+take  七星石·威 50
+take  阳光石·圣 50
+take  风灵石·天 50
+take  无轩之散魄图纸 2
+take  无轩之黄魄图纸 2
+take  无轩之玄魄图纸 2
+take  神祈之泪 9999
+take  云顶结晶 9999
+take 金币 2000
+;GiveStateItem 阳光战神的威严【超脱】  1 1 0 0 1 1 0 0
+GIVESTATEITEM 阳光战神的威严【超脱】 0 1 1 0 0 1 1 0 0
+MESSAGEBOX [提示]:获得物品:阳光战神的威严【超脱】
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@武器合成1]
+#if
+checkitem 七星剑仙的剑气 1
+checkitem 七星石·威 50
+checkitem 阳光石·圣 50
+checkitem 风灵石·天 50
+checkitem 无轩之散魄图纸 2
+checkitem 无轩之黄魄图纸 2
+checkitem 无轩之玄魄图纸 2
+checkitem 神祈之泪 9999
+checkitem 云顶结晶 9999
+checkgold 2000
+#act
+take  七星剑仙的剑气 1
+take  七星石·威 50
+take  阳光石·圣 50
+take  风灵石·天 50
+take  无轩之散魄图纸 2
+take  无轩之黄魄图纸 2
+take  无轩之玄魄图纸 2
+take  神祈之泪 9999
+take  云顶结晶 9999
+take 金币 2000
+;GiveStateItem 七星剑仙的剑气【超脱】  1 1 0 0 1 1 0 0
+GIVESTATEITEM 七星剑仙的剑气【超脱】 0 1 1 0 0 1 1 0 0
+MESSAGEBOX [提示]:获得物品:七星剑仙的剑气【超脱】
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@七星石]
+#if
+large g18 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 七星石·威 10
+INC G18 10
+GOTO @MAIN
+MESSAGEBOX [提示]:获得物品:[七星石·威*10]
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+[@阳光石]
+#if
+large g18 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 阳光石·圣 10
+INC G18 10
+GOTO @MAIN
+MESSAGEBOX [提示]:获得物品:[阳光石·圣*10]
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@风灵石]
+#if
+large g18 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 风灵石·天 10
+INC G18 10
+GOTO @MAIN
+MESSAGEBOX [提示]:获得物品:[风灵石·天*10]
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+
+
+
+
+
+
+

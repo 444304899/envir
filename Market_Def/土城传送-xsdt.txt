@@ -1,0 +1,16 @@
+[@main]
+#if
+#act
+#say
+你的二级密保设置好了吗？ \ \
+设置好之后才可以进入游戏哦 \ \
+
+<进入游戏/@出去>
+
+[@出去]
+#if
+NOT EQUAL T0
+#act
+mapmove 封妖城  67 63
+#ELSEACT
+MESSAGEBOX 你还没设置二级密码,请先设置好二级密码!

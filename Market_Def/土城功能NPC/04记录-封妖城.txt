@@ -1,0 +1,108 @@
+[@main]
+#if
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+MOV S61 <【当前开区状态】：/FCOLOR=250>　测试开放中
+#ELSEACT
+MOV S61 <【当前开区状态】：/FCOLOR=250>　正式开放中　　　　<领取测试区[限时奖励]数量/@兑换测试区>
+
+
+
+
+#IF
+#ACT
+ADDACCOUNTLIST ..\QuestDiary\测试区货币记录\测试区充值记录账号列表.txt
+CREATEFILE ..\QuestDiary\测试区货币记录\测试记录充值目录\<$USERACCOUNT>.txt
+
+
+
+
+
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\测试区货币记录\测试区充值记录账号列表.txt
+#ACT
+GETRANDOMTEXT ..\QuestDiary\测试区货币记录\测试记录充值目录\<$USERACCOUNT>.txt N$测试记录充值
+#ELSEACT
+MOV N$测试记录充值 0
+
+
+
+#if
+#ACT
+mov S$领取状态 未领取
+
+
+
+#if
+CHECKACCOUNTLIST ..\QuestDiary\测试区货币记录\测试区记录已领取列表.txt
+#ACT
+mov S$领取状态 已领取
+
+
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+#SAY
+\
+<><在测试区获得的[限时奖励]灵符,可以在正式区兑换相应[灵符]数量！/FCOLOR=7>\
+<>\
+<><记录说明：/FCOLOR=70><测试区会自动记录/FCOLOR=7><【限时奖励数据】，无需手动记录/FCOLOR=7>\
+<><兑换说明：/FCOLOR=70><在新区正式开区之后就可以在这领取你兑换的[首打装备灵符]数量/FCOLOR=7>\
+<><$STR(S61)>\
+<><1.注意：正式区兑换需要凭测试区相同账号才可兑换!切记!!!/FCOLOR=253>\
+<><2.注意：正式区兑换需要凭测试区相同账号才可兑换!切记!!!/FCOLOR=253>\
+
+<【兑换状态】：/FCOLOR=243>　<$STR(S$领取状态)>\
+<><当前首打装备限时数量：/FCOLOR=6><$CREDITPOINT>灵符
+
+
+
+
+
+
+
+
+
+
+[@兑换测试区]
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+MESSAGEBOX \提示：当前正在测试！
+BREAK
+
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\测试区货币记录\测试区记录已领取列表.txt
+#ACT
+MESSAGEBOX \提示：您已经领取过了！
+BREAK
+
+#IF
+EQUAL N$测试记录充值 0
+#ACT
+MESSAGEBOX \提示：您测试区没有获得记录！
+BREAK
+#ELSEACT
+ADDACCOUNTLIST ..\QuestDiary\测试区货币记录\测试区记录已领取列表.txt
+
+
+
+
+
+
+
+
+#IF
+LARGE N$测试记录充值 0
+#ACT
+mov N$记录充值数  <$STR(N$测试记录充值)>
+GAMEGIRD + <$STR(N$记录充值数)>
+CREDITPOINT - <$STR(N$测试记录充值)>
+DELACCOUNTLIST ..\QuestDiary\测试区货币记录\测试区充值记录账号列表.txt
+CLEARNAMELIST ..\QuestDiary\测试区货币记录\测试记录充值目录\<$USERACCOUNT>.txt
+GUILDNOTICEMSG 249 0 恭喜：玩家「<$USERNAME>」领取了测试区打到充值记录的【<$STR(N$记录充值数)>个灵符】
+GUILDNOTICEMSG 249 0 恭喜：玩家「<$USERNAME>」领取了测试区打到充值记录的【<$STR(N$记录充值数)>个灵符】
+GUILDNOTICEMSG 249 0 恭喜：玩家「<$USERNAME>」领取了测试区打到充值记录的【<$STR(N$记录充值数)>个灵符】
+GOTO @main
+BREAK

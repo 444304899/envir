@@ -1,0 +1,170 @@
+(@@InPutString @@InPutInteger )
+
+[@修改密保界面]
+{
+#IF
+#ACT
+MOV S$原始二级密码 点击输入原始的二级密码
+MOV S$新的二级密码1 点击输入新的二级密码
+MOV S$新的二级密码2 点击确认新的二级密码
+goto @修改界面
+
+[@修改界面]
+#IF
+#ACT
+#SAY
+\ \ \ \
+<>  <原始二级：/FCOLOR=161>   {<$STR(S$原始二级密码)>/FCOLOR=10}\ \
+<>  <新的二级：/FCOLOR=161>   {<$STR(S$新的二级密码1)>/FCOLOR=10}\ \
+<>  <新的二级：/FCOLOR=161>   {<$STR(S$新的二级密码2)>/FCOLOR=10}\ \
+<Img:235:6:70:-105/@@InPutString73(请输入原始的二级密码（请勿输入英文或数字）)> \ \
+<Img:235:6:70:-104/@@InPutString74(请输入新的二级密码（请勿输入英文或数字）)> \ \
+<Img:235:6:70:-102/@@InPutString75(请确认新的二级密码（请勿输入英文或数字）)> \ \
+
+<Img:237:6:100:-80/@确定修改二级密码>\
+
+[@InPutString75]
+#IF
+EQUAL S75
+#ACT
+MESSAGEBOX 对不起,输入有误,输入不能为空！！
+BREAK
+
+#IF
+EQUAL S75 <$STR(S74)>
+#ACT
+MOV S$新的二级密码2 <$STR(S75)>
+goto @修改界面
+BREAK
+#ELSEACT
+MOV S$新的二级密码2 新的二级密码两个不相同！
+MESSAGEBOX 对不起,输入有误,两个新的二级密码必须相同！！
+goto @修改界面
+BREAK
+
+
+[@InPutString74]
+#OR
+CheckContainsText <$STR(S74)> @
+CheckContainsText <$STR(S74)> ~
+CheckContainsText <$STR(S74)> [
+CheckContainsText <$STR(S74)> ]
+CheckContainsText <$STR(S74)> <
+CheckContainsText <$STR(S74)> >
+CheckContainsText <$STR(S74)> {
+CheckContainsText <$STR(S74)> }
+CheckContainsText <$STR(S74)> q
+CheckContainsText <$STR(S74)> w
+CheckContainsText <$STR(S74)> e
+CheckContainsText <$STR(S74)> r
+CheckContainsText <$STR(S74)> t
+CheckContainsText <$STR(S74)> y
+CheckContainsText <$STR(S74)> u
+CheckContainsText <$STR(S74)> i
+CheckContainsText <$STR(S74)> o
+CheckContainsText <$STR(S74)> p
+CheckContainsText <$STR(S74)> a
+CheckContainsText <$STR(S74)> s
+CheckContainsText <$STR(S74)> d
+CheckContainsText <$STR(S74)> f
+CheckContainsText <$STR(S74)> g
+CheckContainsText <$STR(S74)> h
+CheckContainsText <$STR(S74)> j
+CheckContainsText <$STR(S74)> k
+CheckContainsText <$STR(S74)> l
+CheckContainsText <$STR(S74)> z
+CheckContainsText <$STR(S74)> x
+CheckContainsText <$STR(S74)> c
+CheckContainsText <$STR(S74)> v
+CheckContainsText <$STR(S74)> b
+CheckContainsText <$STR(S74)> n
+CheckContainsText <$STR(S74)> m
+CheckContainsText <$STR(S74)> 0
+CheckContainsText <$STR(S74)> 1
+CheckContainsText <$STR(S74)> 2
+CheckContainsText <$STR(S74)> 3
+CheckContainsText <$STR(S74)> 4
+CheckContainsText <$STR(S74)> 5
+CheckContainsText <$STR(S74)> 6
+CheckContainsText <$STR(S74)> 7
+CheckContainsText <$STR(S74)> 8
+CheckContainsText <$STR(S74)> 9
+#ACT
+messagebox 输入错误???\\请输入3-6个汉字!!\\请勿输入英文!!
+BREAK
+
+#IF
+EQUAL S74
+#ACT
+MESSAGEBOX 对不起,输入有误,输入不能为空！！
+BREAK
+
+#IF
+CheckStringlength <$STR(S74)> < 5
+#ACT
+MESSAGEBOX 对不起,输入有误,输入必须大于三个汉字！！
+BREAK
+
+#IF
+CheckStringlength <$STR(S74)> > 5
+CheckStringlength <$STR(S74)> < 13
+#ACT
+MOV S$新的二级密码1 <$STR(S74)>
+goto @修改界面
+
+
+[@InPutString73]
+#IF
+EQUAL S73
+#ACT
+MESSAGEBOX 对不起,输入有误,输入不能为空！！
+BREAK
+
+#IF
+equal S73 <$STR(T0)>
+#ACT
+MOV S$原始二级密码 <$STR(T0)>
+goto @修改界面
+#ELSEACT
+MOV S$原始二级密码 原始二级密码错误
+MESSAGEBOX 对不起,输入有误,二级密码错误！！
+goto @修改界面
+BREAK
+
+
+[@确定修改二级密码]
+#OR
+EQUAL S$原始二级密码 点击输入原始的二级密码
+EQUAL S$原始二级密码
+#ACT
+MESSAGEBOX 对不起,原始密码不能为空！！
+BREAK
+
+#OR
+EQUAL S$新的二级密码1 点击输入新的二级密码
+EQUAL S$新的二级密码1
+#ACT
+MESSAGEBOX 对不起,第一个新的二级密码不能为空！！
+BREAK
+
+#OR
+EQUAL S$新的二级密码2 点击确认新的二级密码
+EQUAL S$新的二级密码2
+#ACT
+MESSAGEBOX 对不起,第二个新的二级密码不能为空！！
+BREAK
+
+#IF
+equal S$原始二级密码 <$STR(T0)>
+equal S74 <$STR(S75)>
+equal S75 <$STR(S74)>
+#ACT
+MOV T0 <$STR(S74)>
+MOV T1 <$USERMACHINEID>
+MESSAGEBOX 【修改二级密码成功，请牢记您的新二级密码：[<$STR(S74)>]】
+goto @main
+MOV S74
+#elseact
+messagebox 对不起,输入有误,两个新的二级密码必须相同！！
+break
+}

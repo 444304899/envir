@@ -1,0 +1,43 @@
+[@main]
+
+#IF
+#act
+#say
+<>                         <playimg:27:1154:157:40:180:70>\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \ \  \ \
+
+
+<>                                                   <[时装]·鳯求凰专署地图/AUTOCOLOR=150>\  \
+<>                                                   <此地图剑甲爆率高/AUTOCOLOR=150>\  \
+<>                                                   <12小时一只终极BOSS必出终极专署/AUTOCOLOR=150>\  \
+<>                                                   <牛鼻怪一个人可能干不死哦~~~/AUTOCOLOR=249>\   \
+
+<>                      \
+
+<>                                                         <鳯求凰专署地图/@传送1>    \
+
+
+[
+
+
+
+[@传送1]
+#if
+CHECKITEMW [时装]·鳯求凰 1
+#act
+MAPMOVE  鳯求凰
+SENDDELAYMSG 自动传回封妖城%s 3600 255 0 @给礼物
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+[@给礼物]
+#if
+#act
+MAPMOVE  封妖城 63 72
+
+
+
+
+
+
+

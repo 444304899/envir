@@ -1,0 +1,179 @@
+[@main]
+
+
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \
+
+<>                                              <IMG:0:6:0:0> <进入要求如下/AUTOCOLOR=245>   \  \
+
+<>                                      <IMG:0:6:0:0> <转生达到15转/AUTOCOLOR=135>  <等级250级/AUTOCOLOR=135>   \
+
+
+<>                              <IMG:0:6:0:0> <开启狂暴之力/AUTOCOLOR=191>  <佩戴【超神器】峡谷之巅或更高级超神器/AUTOCOLOR=249>  \
+<>                                       <超神器在屏幕上方“神器匠炉”免费晋升/AUTOCOLOR=249>  \
+
+
+<>                                              <IMG:242:40:10:25|/@传送1>
+
+
+[@传送1]
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】峡谷之巅
+#act
+
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】原始大陆
+#act
+
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】创世★巅峰
+#act
+
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】山海经
+#act
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】传奇之路
+#act
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+#ELSEACT
+;MESSAGEBOX 转生未达到15转，等级没有250级.没有开启狂暴之力.没有【超神器】山海经\ \ 本服承诺无收费地图，全靠打，爆率全开！！
+
+
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】死亡领地
+#act
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+#ELSEACT
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】佛本世界
+#act
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+#ELSEACT
+;MESSAGEBOX 转生未达到15转，等级没有250级.没有开启狂暴之力.没有【超神器】山海经\ \ 本服承诺无收费地图，全靠打，爆率全开！！
+
+
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】无限恐怖
+#act
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+#elseact
+;MESSAGEBOX 转生未达到15转，等级没有250级.没有开启狂暴之力.没有【超神器】山海经\ \ 本服承诺无收费地图，全靠打，爆率全开！！
+
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】神话世界
+#act
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+#elseact
+;MESSAGEBOX 转生未达到15转，等级没有250级.没有开启狂暴之力.没有【超神器】山海经\ \ 本服承诺无收费地图，全靠打，爆率全开！！
+
+
+#if
+CHECKLEVELEX > 249
+CHECKRENEWLEVEL > 14
+CHECKTITLE 狂暴之力
+checkitemw 【超神器】云顶之奕
+#act
+movr N$坐标x 27 35
+movr N$坐标y 28 34
+MAPMOVE 第二大陆 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+
+
+#ELSESAY
+;MESSAGEBOX 转生未达到15转，等级没有250级.没有开启狂暴之力.没有【超神器】山海经\ \ 本服承诺无收费地图，全靠打，爆率全开！！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

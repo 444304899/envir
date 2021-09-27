@@ -1,0 +1,229 @@
+[@main]
+;P36是记录金额
+;P37是需要充值的金额
+
+
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+#ACT
+messagebox \　　　测试区无法回收，请在正式开区后来操作！！！！
+break
+
+
+
+;#if
+;small <$GAMEDIAMOND> 300
+;#act
+;MESSAGEBOX [提示:]\\你的充值金额不足300,无法回收!
+;break
+
+
+#if
+#act
+MESSAGEBOX [提示:]\\账号回收前请确认好\\请先填写转区资料再进行账号回收!\\账号回收后人物还原新人登录状态!
+
+#if
+#act
+MOV N$本区充值金额 <$GAMEDIAMOND>
+MOV N$可回收金额 <$GAMEDIAMOND>
+MUL N$可回收金额 20
+DIV N$可回收金额 10
+
+#if
+small <$GAMEDIAMOND> 500
+#act
+MOV N$可回收金额 0
+
+
+#if
+#act
+#say
+\ \ \
+<>   <[账号保值介绍]/FCOLOR=70><IMG:91:6:-78:-2> \
+<>                                                                <你已在本区充值:/FCOLOR=161>{<$STR(N$本区充值金额)>/FCOLOR=250}  \
+<>                                                                 <  可回收钻石:/FCOLOR=161>{<$STR(N$可回收金额)>/FCOLOR=249}\ \
+<> {1.回收规则: 本区已充值/FCOLOR=161> <500元以上/FCOLOR=249>，<点击账号回收，验证完资料后，直接可回收/FCOLOR=161> <20%/FCOLOR=249} <对应钻石/FCOLOR=161> \ \ \
+
+<> {2.回收规则:/FCOLOR=161> <完成回收后，等级.称号.转生.觉醒.会员.成就.全部还原为零/FCOLOR=70}\ \ \
+
+<>                                    <《填写回收资料》/@填写资料>                \  \
+<>
+<> {3.注:/FCOLOR=161> <账号回收前慎重考虑!不可找回!不可找回!不可找回!回收账号变为新人登录初始状态！/FCOLOR=58}\ \
+
+
+
+
+
+[@填写资料]
+#if
+#act
+#say
+\ \ \
+<>  <[转区介绍]/FCOLOR=70><IMG:91:6:-78:-2>                                                    <你已在本区充值:/FCOLOR=161>{<$STR(N$本区充值金额)>/FCOLOR=250}\
+<>                                                                    <  可回收钻石:/FCOLOR=161>{<$STR(N$可回收金额)>/FCOLOR=249}\ \
+<>            <「点击输入注册的生日」/@@InPutString30>            <【填写输入注册的生日】/FCOLOR=151><$STR(S30)> \ \
+<>            <「点击输入第一个问题」/@@InPutString31>            <【填写输入第一个问题】/FCOLOR=151><$STR(S31)> \ \
+<>            <「点击输入第一个答案」/@@InPutString32>            <【填写输入第一个答案】/FCOLOR=151><$STR(S32)> \ \
+<>            <「点击输入第二个问题」/@@InPutString33>            <【填写输入第二个问题】/FCOLOR=151><$STR(S33)> \ \
+<>            <「点击输入第二个答案」/@@InPutString34>            <【填写输入第二个答案】/FCOLOR=151><$STR(S34)> \ \
+
+<>                                    <《确定回收》/@回收账号>
+
+[@InPutString30]
+#if
+equal S30 <$BIRTHDAT>
+#act
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入正确,请继续输入!
+#elseact
+MOV S30
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入错误,请重新输入!
+
+[@InPutString31]
+#if
+equal S31 <$QUIZ1>
+#act
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入正确,请继续输入!
+#elseact
+MOV S31
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入错误,请重新输入!
+
+[@InPutString32]
+#if
+equal S32 <$ANSWER1>
+#act
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入正确,请继续输入!
+#elseact
+MOV S32
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入错误,请重新输入!
+
+[@InPutString33]
+#if
+equal S33 <$QUIZ2>
+#act
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入正确,请继续输入!
+#elseact
+MOV S33
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入错误,请重新输入!
+
+[@InPutString34]
+#if
+equal S34 <$ANSWER2>
+#act
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入正确,请继续输入!
+#elseact
+MOV S34
+GOTO @填写资料
+MESSAGEBOX [提示:]\\输入错误,请重新输入!
+
+
+
+
+
+[@回收账号]
+#if
+large <$GAMEDIAMOND> 499
+#act
+#elseact
+MESSAGEBOX [提示:]\\你的充值金额不足300,无法回收!
+break
+
+#if
+equal S30 <$BIRTHDAT>
+equal S31 <$QUIZ1>
+equal S32 <$ANSWER1>
+equal S33 <$QUIZ2>
+equal S34 <$ANSWER2>
+#act
+#elseact
+MESSAGEBOX [提示:]\\你的资料输入不完全,或者错误!
+break
+
+
+#if
+#act
+MESSAGEBOX 你确定回收吗，一旦确定无法返回！ @确定 @取消
+
+
+[@确定]
+#if
+large <$GAMEDIAMOND> 499
+equal S30 <$BIRTHDAT>
+equal S31 <$QUIZ1>
+equal S32 <$ANSWER1>
+equal S33 <$QUIZ2>
+equal S34 <$ANSWER2>
+equal T14
+#ACT
+AddTextListEX ..\..\..\..\跨区文件夹\保值系统\保值文本.txt 机器码：<$MACHINEID>
+AddTextListEX ..\..\..\..\跨区文件夹\保值系统\保值文本.txt 回收时间：<$month>月<$day>日,<$HOUR>点<$MINUTE>分
+AddTextListEX ..\..\..\..\跨区文件夹\保值系统\保值文本.txt 回收金额：<$STR(N$可回收金额)>
+AddTextListEX ..\..\..\..\跨区文件夹\保值系统\保值文本.txt 回收分区：<$SERVERNAME>
+AddTextListEX ..\..\..\..\跨区文件夹\保值系统\保值文本.txt [<$USERNAME>]
+GAMEDIAMOND - <$STR(N$本区充值金额)>
+DEPRIVETITLE ALL
+RestRenewLevel
+CHANGELEVEL = 50
+set [101] 0
+mov T14 账号已回收：<$STR(N$可回收金额)>元,<$SERVERNAME>,<$month>月<$day>日,<$HOUR>点<$MINUTE>分
+MOV U21 0
+MOV U21 0
+MOV U25 0
+MOV U26 0
+MOV U27 0
+MOV U28 0
+MOV U29 0
+
+DELSKILL 半月弯刀
+DELSKILL 十步一杀
+DELSKILL 魔法盾
+
+set [339] 0
+set [304] 0
+set [305] 0
+set [307] 0
+set [309] 0
+set [310] 0
+set [313] 0
+set [314] 0
+set [315] 0
+set [316] 0
+set [317] 0
+set [318] 0
+set [319] 0
+set [336] 0
+set [337] 0
+set [338] 0
+set [321] 0
+set [322] 0
+set [323] 0
+set [324] 0
+set [325] 0
+set [326] 0
+set [327] 0
+set [328] 0
+set [329] 0
+set [330] 0
+set [331] 0
+set [332] 0
+set [333] 0
+set [334] 0
+
+GAMEPOINT + <$STR(N$可回收金额)>
+MOV N$可回收金额 0
+
+MESSAGEBOX 账号已回收,所有数据全部归零!
+LOGOUT
+
+
+
+
+

@@ -1,0 +1,395 @@
+
+
+
+
+[@神火系统]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \
+<>                                                                                                   <当前神火点:/FCOLOR=253><$STR(u13)>\
+<>                                                      <ItemShow:837:0:0:5:1>        <ItemShow:838:0:0:5:1>        <ItemShow:839:0:0:5:1>        <ItemShow:840:0:0:5:1> \ \ \ \
+<>                                                    <《点击兑换》|253#兑换需要神火点*4/@兑换1>   <《点击兑换》|253#兑换需要神火点*4/@兑换2>    <《点击兑换》|253#兑换需要神火点*4/@兑换3>    <《点击兑换》|253#兑换需要神火点*4/@兑换4> \ \
+<>                                                      <ItemShow:842:0:0:5:1>        <ItemShow:843:0:0:5:1>        <ItemShow:844:0:0:5:1>        <ItemShow:845:0:0:5:1> \ \ \ \
+<>                                                    <《点击兑换》|253#兑换需要神火点*10^253#上一级神火/@兑换5>   <《点击兑换》|253#兑换需要神火点*10^253#上一级神火/@兑换6>    <《点击兑换》|253#兑换需要神火点*10^253#上一级神火/@兑换7>    <《点击兑换》|253#兑换需要神火点*10^253#上一级神火/@兑换8> \  \
+<>                                                     <《神火点打怪自动获取，神火点可在此处兑换神火专属生肖装备》> \  \
+<>                                                                           <《下一页》/@第二页11> \ \ \
+
+
+
+[@第二页11]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \
+<>                                                                                                   <当前神火点:/FCOLOR=253><$STR(u13)>\
+<>                                                      <ItemShow:847:0:0:5:1>        <ItemShow:848:0:0:5:1>        <ItemShow:849:0:0:5:1>        <ItemShow:850:0:0:5:1> \ \ \ \
+<>                                                    <《点击兑换》|253#兑换需要神火点*30^253#上一级神火/@兑换9>   <《点击兑换》|253#兑换需要神火点*30^253#上一级神火/@兑换10>    <《点击兑换》|253#兑换需要神火点*30^253#上一级神火/@兑换11>    <《点击兑换》|253#兑换需要神火点*30^253#上一级神火/@兑换12> \ \
+<>                                                      <ItemShow:852:0:0:5:1>        <ItemShow:853:0:0:5:1>        <ItemShow:854:0:0:5:1>        <ItemShow:855:0:0:5:1> \ \ \ \
+<>                                                    <《点击兑换》|253#兑换需要神火点*80^253#上一级神火/@兑换13>   <《点击兑换》|253#兑换需要神火点*80^253#上一级神火/@兑换14>    <《点击兑换》|253#兑换需要神火点*80^253#上一级神火/@兑换15>    <《点击兑换》|253#兑换需要神火点*80^253#上一级神火/@兑换16> \ \
+<>                                                     <《神火点打怪自动获取，神火点可在此处兑换神火专属生肖装备》> \ \
+<>                                                                           <《下一页》/@第三页22> \ \ \
+
+
+[@第三页22]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \
+<>                                                                                                   <当前神火点:/FCOLOR=253><$STR(u13)>\
+<>                                                      <ItemShow:857:0:0:5:1>        <ItemShow:858:0:0:5:1>        <ItemShow:859:0:0:5:1>        <ItemShow:860:0:0:5:1> \ \ \ \
+<>                                                    <《点击兑换》|253#兑换需要神火点*200^253#上一级神火/@兑换17>   <《点击兑换》|253#兑换需要神火点*200^253#上一级神火/@兑换18>    <《点击兑换》|253#兑换需要神火点*200^253#上一级神火/@兑换19>    <《点击兑换》|253#兑换需要神火点*200^253#上一级神火/@兑换20> \ \
+<>                                                      <ItemShow:862:0:0:5:1>        <ItemShow:863:0:0:5:1>        <ItemShow:864:0:0:5:1>        <ItemShow:865:0:0:5:1> \ \ \ \
+<>                                                    <《点击兑换》|253#兑换需要神火点*500^253#上一级神火/@兑换21>   <《点击兑换》|253#兑换需要神火点*500^253#上一级神火/@兑换22>    <《点击兑换》|253#兑换需要神火点*500^253#上一级神火/@兑换23>    <《点击兑换》|253#兑换需要神火点*500^253#上一级神火/@兑换24> \ \
+<>                                                     <《神火点打怪自动获取，神火点可在此处兑换神火专属生肖装备》> \ \
+<>                                                                           <《第一页》/@神火系统> \ \ \
+
+
+[@兑换1]
+#if
+large u13 3
+#act
+DEC u13 4
+GIVE 神火·灵能冲击I 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，无法兑换
+break
+
+
+[@兑换2]
+#if
+large u13 3
+#act
+DEC u13 4
+GIVE 神火·灵能冲击II 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，无法兑换
+break
+
+[@兑换3]
+#if
+large u13 3
+#act
+DEC u13 4
+GIVE 神火·灵能冲击III 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，无法兑换
+break
+
+[@兑换4]
+#if
+large u13 3
+#act
+DEC u13 4
+GIVE 神火·灵能冲击IV 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，无法兑换
+break
+
+
+[@兑换5]
+#if
+large u13 9
+checkitem 神火·灵能冲击I 1
+#act
+take 神火·灵能冲击I 1
+DEC u13 10
+GIVE 神火·灵能击破I 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+[@兑换6]
+#if
+large u13 9
+checkitem 神火·灵能冲击II 1
+#act
+take 神火·灵能冲击II 1
+DEC u13 10
+GIVE 神火·灵能击破II 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+[@兑换7]
+#if
+large u13 9
+checkitem 神火·灵能冲击III 1
+#act
+take 神火·灵能冲击III 1
+DEC u13 10
+GIVE 神火·灵能击破III 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+[@兑换8]
+#if
+large u13 9
+checkitem 神火·灵能冲击IV 1
+#act
+take 神火·灵能冲击IV 1
+DEC u13 10
+GIVE 神火·灵能击破IV 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+[@兑换9]
+#if
+large u13 29
+checkitem 神火·灵能击破I 1
+#act
+take 神火·灵能击破I 1
+DEC u13 10
+DEC u13 30
+GIVE 神火·灵能极速I 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换10]
+#if
+large u13 29
+checkitem 神火·灵能击破II 1
+#act
+take 神火·灵能击破II 1
+DEC u13 30
+GIVE 神火·灵能极速II 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换11]
+#if
+large u13 29
+checkitem 神火·灵能击破III 1
+#act
+take 神火·灵能击破III 1
+DEC u13 30
+GIVE 神火·灵能极速III 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换12]
+#if
+large u13 29
+checkitem 神火·灵能击破IV 1
+#act
+take 神火·灵能击破IV 1
+DEC u13 30
+GIVE 神火·灵能极速IV 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换13]
+#if
+large u13 79
+checkitem 神火·灵能极速I 1
+#act
+take 神火·灵能极速I 1
+DEC u13 80
+GIVE 神火·灵能涌动I 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+[@兑换14]
+#if
+large u13 79
+checkitem 神火·灵能极速II 1
+#act
+take 神火·灵能极速II 1
+DEC u13 80
+GIVE 神火·灵能涌动II 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+[@兑换15]
+#if
+large u13 79
+checkitem 神火·灵能极速III 1
+#act
+take 神火·灵能极速III 1
+DEC u13 80
+GIVE 神火·灵能涌动III 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+[@兑换16]
+#if
+large u13 79
+checkitem 神火·灵能极速IV 1
+#act
+take 神火·灵能极速IV 1
+DEC u13 80
+GIVE 神火·灵能涌动IV 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换17]
+#if
+large u13 199
+checkitem 神火·灵能涌动I 1
+#act
+take 神火·灵能涌动I 1
+DEC u13 200
+GIVE 神火·灵能凝聚I 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换18]
+#if
+large u13 199
+checkitem 神火·灵能涌动II 1
+#act
+take 神火·灵能涌动II 1
+DEC u13 200
+GIVE 神火·灵能凝聚II 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换19]
+#if
+large u13 199
+checkitem 神火·灵能涌动III 1
+#act
+take 神火·灵能涌动III 1
+DEC u13 200
+GIVE 神火·灵能凝聚III 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换20]
+#if
+large u13 199
+checkitem 神火·灵能涌动IV 1
+#act
+take 神火·灵能涌动IV 1
+DEC u13 200
+GIVE 神火·灵能凝聚IV 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+
+
+[@兑换21]
+#if
+large u13 499
+checkitem 神火·灵能凝聚I 1
+#act
+take 神火·灵能凝聚I 1
+DEC u13 500
+GIVE 神火·灵体护身I 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换22]
+#if
+large u13 499
+checkitem 神火·灵能凝聚II 1
+#act
+take 神火·灵能凝聚II 1
+DEC u13 500
+GIVE 神火·灵体护身II 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换23]
+#if
+large u13 499
+checkitem 神火·灵能凝聚III 1
+#act
+take 神火·灵能凝聚III 1
+DEC u13 500
+GIVE 神火·灵体护身III 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换24]
+#if
+large u13 499
+checkitem 神火·灵能凝聚IV 1
+#act
+take 神火·灵能凝聚IV 1
+DEC u13 500
+GIVE 神火·灵体护身IV 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+}
+
+

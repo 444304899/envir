@@ -1,0 +1,2332 @@
+[@奖励大厅触发NAM]
+{
+
+#if
+#act
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+
+
+;#if
+;large S$合区信息 0
+;#act
+;MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+;break
+
+
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.1/FCOLOR=150}          {★★★魍魉★★★/FCOLOR=70}          { 5钻石/FCOLOR=150}       <$STR(G200)>/20     <点击回收|246#一次合区后取消该福利/@福利回收1> \ \
+
+<> {No.2/FCOLOR=150}            {魑魅々杀猪刀/FCOLOR=70}            { 5钻石/FCOLOR=150}       <$STR(G201)>/20     <点击回收|246#一次合区后取消该福利/@福利回收2> \ \
+
+<> {No.3/FCOLOR=150}              {寒冰卍神甲/FCOLOR=70}            { 5钻石/FCOLOR=150}       <$STR(G202)>/20     <点击回收|246#一次合区后取消该福利/@福利回收3> \ \
+
+<> {No.4/FCOLOR=150}              {日炎斗篷/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G203)>/20     <点击回收|246#一次合区后取消该福利/@福利回收4> \ \
+
+<> {No.5/FCOLOR=150}              {卑劣手杖/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G204)>/20     <点击回收|246#一次合区后取消该福利/@福利回收5> \ \
+
+<> {No.6/FCOLOR=150}              {抑制符咒/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G205)>/20     <点击回收|246#一次合区后取消该福利/@福利回收6> \ \
+
+<> {No.7/FCOLOR=150}              {窃法之刃/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G206)>/20     <点击回收|246#一次合区后取消该福利/@福利回收7> \ \
+
+<> {No.8/FCOLOR=150}              {亡灵手套/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G207)>/20     <点击回收|246#一次合区后取消该福利/@福利回收8> \ \
+
+<> {No.9/FCOLOR=150}             {适应性头盔/FCOLOR=70}             { 5钻石/FCOLOR=150}       <$STR(G208)>/20     <点击回收|246#一次合区后取消该福利/@福利回收9> \ \
+
+<> {No.10/FCOLOR=150}             {号令之旗/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G209)>/20     <点击回收|246#一次合区后取消该福利/@福利回收10>\ \
+
+
+<>                                    <上一页/@奖励大厅触发NAM>    <下一页/@第二页>   <1／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
+
+
+[@第二页]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+
+<> {No.11/FCOLOR=150}            {禁忌法相/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G210)>/20     <点击回收|246#一次合区后取消该福利/@福利回收11>      \ \
+
+<> {No.12/FCOLOR=150}            {疾风之靴/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G211)>/20     <点击回收|246#一次合区后取消该福利/@福利回收12>      \  \
+
+<> {No.13/FCOLOR=150}            {巨人腰带/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G212)>/20     <点击回收|246#一次合区后取消该福利/@福利回收13> \ \
+
+<> {No.14/FCOLOR=150}            {仙女护符/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G213)>/20     <点击回收|246#一次合区后取消该福利/@福利回收14> \ \
+
+<> {No.15/FCOLOR=150}            {恶魔的枷锁/FCOLOR=70}            { 5钻石/FCOLOR=150}        <$STR(G214)>/20     <点击回收|246#一次合区后取消该福利/@福利回收15> \ \
+
+<> {No.16/FCOLOR=150}            {冤魂的哭声/FCOLOR=70}            { 5钻石/FCOLOR=150}        <$STR(G215)>/20     <点击回收|246#一次合区后取消该福利/@福利回收16> \ \
+
+<> {No.17/FCOLOR=150}            {魅惑之心/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G216)>/20     <点击回收|246#一次合区后取消该福利/@福利回收17> \ \
+
+<> {No.18/FCOLOR=150}           {『毒灭万物』/FCOLOR=70}           { 5钻石/FCOLOR=150}        <$STR(G217)>/20     <点击回收|246#一次合区后取消该福利/@福利回收18> \ \
+
+<> {No.19/FCOLOR=150}            {王座之争/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G218)>/20     <点击回收|246#一次合区后取消该福利/@福利回收19> \ \
+
+<> {No.20/FCOLOR=150}            {永夜〝无光/FCOLOR=70}            { 5钻石/FCOLOR=150}        <$STR(G219)>/20     <点击回收|246#一次合区后取消该福利/@福利回收20> \ \
+
+
+<>                                    <上一页/@奖励大厅触发NAM>    <下一页/@第三页>   <2／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
+
+
+
+
+[@第三页]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+
+<> {No.21/FCOLOR=150}          {治疗＂守卫/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G220)>/20     <点击回收|246#一次合区后取消该福利/@福利回收21> \ \
+
+<> {No.22/FCOLOR=150}          {梦魇ぺ恒古/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G221)>/20     <点击回收|246#一次合区后取消该福利/@福利回收22> \ \
+
+<> {No.23/FCOLOR=150}          {天罡べ霸体/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G222)>/20     <点击回收|246#一次合区后取消该福利/@福利回收23> \ \
+
+<> {No.24/FCOLOR=150}          {冠军披风★/FCOLOR=70}              {  8钻石/FCOLOR=150}       <$STR(G223)>/20     <点击回收|246#一次合区后取消该福利/@福利回收24> \ \
+
+<> {No.25/FCOLOR=150}          {放逐之刃★/FCOLOR=70}              {  8钻石/FCOLOR=150}       <$STR(G224)>/20     <点击回收|246#一次合区后取消该福利/@福利回收25> \ \
+
+<> {No.26/FCOLOR=150}          {争战铠甲★/FCOLOR=70}              {  8钻石/FCOLOR=150}       <$STR(G225)>/20     <点击回收|246#一次合区后取消该福利/@福利回收26> \ \
+
+<> {No.27/FCOLOR=150}          {月华咒刃★/FCOLOR=70}              {  8钻石/FCOLOR=150}       <$STR(G226)>/20     <点击回收|246#一次合区后取消该福利/@福利回收27> \ \
+
+<> {No.28/FCOLOR=150}          {★破败王者之刃★/FCOLOR=70}        { 10钻石/FCOLOR=150}       <$STR(G227)>/20     <点击回收|246#一次合区后取消该福利/@福利回收28> \ \
+
+<> {No.29/FCOLOR=150}          {★石像鬼板甲★/FCOLOR=70}          { 10钻石/FCOLOR=150}       <$STR(G228)>/20     <点击回收|246#一次合区后取消该福利/@福利回收29> \ \
+
+<> {No.30/FCOLOR=150}          {铁血战旗¤星云刃/FCOLOR=70}        { 10钻石/FCOLOR=150}       <$STR(G229)>/20     <点击回收|246#一次合区后取消该福利/@福利回收30> \ \
+
+
+<>                                    <上一页/@第二页>    <下一页/@第四页>   <3／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
+
+
+
+
+
+[@第四页]
+
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+
+<> {No.31/FCOLOR=150}          {·兽武修真¤软金甲·/FCOLOR=70}    { 10钻石/FCOLOR=150}       <$STR(G230)>/20     <点击回收|246#一次合区后取消该福利/@福利回收31> \ \
+
+<> {No.32/FCOLOR=150}          {【屠ヶ龙】/FCOLOR=70}              { 10钻石/FCOLOR=150}       <$STR(G231)>/20     <点击回收|246#一次合区后取消该福利/@福利回收32> \ \
+
+<> {No.33/FCOLOR=150}          {【天ヶ魔】/FCOLOR=70}              { 10钻石/FCOLOR=150}       <$STR(G232)>/20     <点击回收|246#一次合区后取消该福利/@福利回收33> \ \
+
+<> {No.34/FCOLOR=150}          {●●盘古斧●●/FCOLOR=70}          { 10钻石/FCOLOR=150}       <$STR(G233)>/20     <点击回收|246#一次合区后取消该福利/@福利回收34> \ \
+
+<> {No.35/FCOLOR=150}          {●●鸿蒙●●/FCOLOR=70}            { 10钻石/FCOLOR=150}       <$STR(G234)>/20     <点击回收|246#一次合区后取消该福利/@福利回收35> \ \
+
+<> {No.36/FCOLOR=150}          {の沙城霸主的战刃/FCOLOR=70}        { 20钻石/FCOLOR=150}       <$STR(G235)>/15     <点击回收|246#一次合区后取消该福利/@福利回收36> \ \
+<>
+<> {No.37/FCOLOR=150}          {·白肆的祈祷※※/FCOLOR=70}        { 20钻石/FCOLOR=150}       <$STR(G236)>/15     <点击回收|246#一次合区后取消该福利/@福利回收37> \ \
+
+<> {No.38/FCOLOR=150}          {·紫府金剑·/FCOLOR=70}            { 20钻石/FCOLOR=150}       <$STR(G237)>/15     <点击回收|246#一次合区后取消该福利/@福利回收38> \ \
+
+<> {No.39/FCOLOR=150}          {·如意金箍棒·/FCOLOR=70}          { 20钻石/FCOLOR=150}       <$STR(G238)>/15     <点击回收|246#一次合区后取消该福利/@福利回收39> \ \
+
+<> {No.40/FCOLOR=150}          {·定海の神针·/FCOLOR=70}          { 20钻石/FCOLOR=150}       <$STR(G239)>/15     <点击回收|246#一次合区后取消该福利/@福利回收40>\ \
+
+
+<>                                    <上一页/@第三页>    <下一页/@第五页>   <4／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
+
+
+
+[@第五页]
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+
+<> {No.41/FCOLOR=150}          {咒 /FCOLOR=70}                     { 20钻石/FCOLOR=150}       <$STR(G240)>/15     <点击回收|246#一次合区后取消该福利/@福利回收41> \ \
+
+<> {No.42/FCOLOR=150}          {刑天の/FCOLOR=70}                  { 20钻石/FCOLOR=150}       <$STR(G241)>/15     <点击回收|246#一次合区后取消该福利/@福利回收42> \ \
+
+<> {No.43/FCOLOR=150}          {封神の/FCOLOR=70}                  { 20钻石/FCOLOR=150}       <$STR(G242)>/15     <点击回收|246#一次合区后取消该福利/@福利回收43> \ \
+
+<> {No.44/FCOLOR=150}          {创世の/FCOLOR=70}                  { 20钻石/FCOLOR=150}       <$STR(G243)>/15     <点击回收|246#一次合区后取消该福利/@福利回收44> \ \
+
+<> {No.45/FCOLOR=150}          {方天画戟の神兵/FCOLOR=70}          { 20钻石/FCOLOR=150}       <$STR(G244)>/15     <点击回收|246#一次合区后取消该福利/@福利回收45> \ \
+
+<> {No.46/FCOLOR=150}          {权利の剑/FCOLOR=70}                { 30钻石/FCOLOR=150}       <$STR(G245)>/10     <点击回收|246#一次合区后取消该福利/@福利回收46> \ \
+
+<> {No.47/FCOLOR=150}          {「赤炎·天照」/FCOLOR=70}          { 30钻石/FCOLOR=150}       <$STR(G246)>/10     <点击回收|246#一次合区后取消该福利/@福利回收47> \ \
+
+<> {No.48/FCOLOR=150}          {冥火钢牙·锯锋/FCOLOR=70}          { 30钻石/FCOLOR=150}       <$STR(G247)>/10     <点击回收|246#一次合区后取消该福利/@福利回收48> \ \
+
+<> {No.49/FCOLOR=150}          {◎黑鳞铠甲◎/FCOLOR=70}            { 50钻石/FCOLOR=150}       <$STR(G248)>/10     <点击回收|246#一次合区后取消该福利/@福利回收49> \ \
+
+<> {No.50/FCOLOR=150}          {风蚀之殇-残影/FCOLOR=70}           { 50钻石/FCOLOR=150}       <$STR(G249)>/10     <点击回收|246#一次合区后取消该福利/@福利回收50>  \ \
+
+
+<>                                    <上一页/@第四页>    <下一页/@第六页>   <5／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
+
+
+
+
+
+[@第六页]
+#if
+#act
+messagebox 已经是最后一页了！
+;OPENMERCHANTBIGDLG 13 387 1 4 0 -50 1 560 17
+;#say
+;<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+;<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+;<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+;<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+;<>\ \ \ \ \
+
+;<>                                    <上一页/@第五页>    <下一页/@第七页>   <6／9/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
+
+
+
+
+
+
+
+
+
+
+;===============
+[@福利回收50]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g249 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G249 0
+checkitem 风蚀之殇-残影  1
+#act
+take 风蚀之殇-残影   1
+GAMEPOINT + 50
+DEC G249 1
+INC G300 50
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『风蚀之殇-残影 』/FCOLOR=251>获得了50钻石。当前剩余名额还有<『<$STR(G249)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;;goto @第九页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@福利回收49]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g248 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G248 0
+checkitem ◎黑鳞铠甲◎  1
+#act
+take ◎黑鳞铠甲◎   1
+GAMEPOINT + 50
+DEC G248 1
+INC G300 50
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『◎黑鳞铠甲◎ 』/FCOLOR=251>获得了50钻石。当前剩余名额还有<『<$STR(G248)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第九页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+;===============
+[@福利回收48]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g247 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G247 0
+checkitem 冥火钢牙·锯锋  1
+#act
+take 冥火钢牙·锯锋   1
+GAMEPOINT + 30
+DEC G247 1
+INC G300 30
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『冥火钢牙·锯锋 』/FCOLOR=251>获得了30钻石。当前剩余名额还有<『<$STR(G247)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第八页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收47]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g246 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G246 0
+checkitem 「赤炎·天照」  1
+#act
+take 「赤炎·天照」   1
+GAMEPOINT + 30
+DEC G246 1
+INC G300 30
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『「赤炎·天照」 』/FCOLOR=251>获得了30钻石。当前剩余名额还有<『<$STR(G246)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第八页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收46]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g245 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G245 0
+checkitem 权利の剑  1
+#act
+take 权利の剑   1
+GAMEPOINT + 30
+DEC G245 1
+INC G300 30
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『权利の剑 』/FCOLOR=251>获得了30钻石。当前剩余名额还有<『<$STR(G245)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第八页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收45]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g244 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G244 0
+checkitem 方天画戟の神兵  1
+#act
+take 方天画戟の神兵   1
+GAMEPOINT + 20
+DEC G244 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『方天画戟の神兵 』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G244)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第八页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收44]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g243 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G243 0
+checkitem 创世の  1
+#act
+take 创世の   1
+GAMEPOINT + 20
+DEC G243 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『封神の 』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G243)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第八页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@福利回收43]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g242 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G242 0
+checkitem 封神の  1
+#act
+take 封神の   1
+GAMEPOINT + 20
+DEC G242 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『封神の 』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G242)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第八页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+;===============
+[@福利回收42]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g241 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G241 0
+checkitem 刑天の 1
+#act
+take 刑天の  1
+GAMEPOINT + 20
+DEC G241 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『刑天の』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G241)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第七页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@福利回收41]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g240 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G240 0
+checkitem 咒 1
+#act
+take 咒  1
+GAMEPOINT + 20
+DEC G240 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『咒』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G240)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;;goto @第七页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@福利回收40]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g239 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G239 0
+checkitem ·定海の神针·  1
+#act
+take ·定海の神针·  1
+GAMEPOINT + 20
+DEC G239 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·定海の神针·』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G239)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;;goto @第七页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@福利回收39]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g238 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G238 0
+checkitem ·如意金箍棒·  1
+#act
+take ·如意金箍棒·  1
+GAMEPOINT + 20
+DEC G238 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·如意金箍棒·』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G238)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第七页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@福利回收38]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g237 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G237 0
+checkitem ·紫府金剑·  1
+#act
+take ·紫府金剑·  1
+GAMEPOINT + 20
+DEC G237 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·紫府金剑』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G237)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第七页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+[@福利回收37]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g236 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G236 0
+checkitem 白肆的祈祷※※  1
+#act
+take 白肆的祈祷※※  1
+GAMEPOINT + 20
+DEC G236 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『白肆的祈祷※※』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G236)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第七页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+;===============
+
+[@福利回收36]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g235 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G235 0
+checkitem の沙城霸主的战刃  1
+#act
+take の沙城霸主的战刃  1
+GAMEPOINT + 20
+DEC G235 1
+INC G300 20
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『の沙城霸主的战刃』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G235)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第六页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收35]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g234 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G234 0
+checkitem ●●鸿蒙●●  1
+#act
+take ●●鸿蒙●●  1
+GAMEPOINT + 10
+DEC G234 1
+INC G300 10
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『●●鸿蒙●● 』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G234)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第六页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收34]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g233 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G233 0
+checkitem ●●盘古斧●● 1
+#act
+take ●●盘古斧●● 1
+GAMEPOINT + 10
+DEC G233 1
+INC G300 10
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『●●盘古斧●●』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G233)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第六页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收33]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g232 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G232 0
+checkitem 【天ヶ魔】 1
+#act
+take 【天ヶ魔】 1
+GAMEPOINT + 10
+DEC G232 1
+INC G300 10
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『【天ヶ魔】』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G232)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第六页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@福利回收32]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g231 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G231 0
+checkitem 【屠ヶ龙】 1
+#act
+take 【屠ヶ龙】 1
+GAMEPOINT + 10
+DEC G231 1
+INC G300 10
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『【屠ヶ龙】』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G231)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第六页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+;===============
+[@福利回收31]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g230 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G230 0
+checkitem ·兽武修真¤软金甲· 1
+#act
+take ·兽武修真¤软金甲· 1
+GAMEPOINT + 10
+DEC G230 1
+INC G300 10
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·兽武修真¤软金甲』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G230)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第六页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+;===============
+
+[@福利回收30]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g229 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G229 0
+checkitem ·铁血战旗¤星云刃· 1
+#act
+take ·铁血战旗¤星云刃· 1
+GAMEPOINT + 10
+DEC G229 1
+INC G300 10
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·铁血战旗¤星云刃』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G229)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+;===============
+[@福利回收29]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g228 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G228 0
+checkitem ★石像鬼板甲★ 1
+#act
+take ★石像鬼板甲★ 1
+GAMEPOINT + 10
+DEC G228 1
+INC G300 10
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『★石像鬼板甲★』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G228)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+;===============
+
+[@福利回收28]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g227 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G227 0
+checkitem ★破败王者之刃★ 1
+#act
+take ★破败王者之刃★ 1
+GAMEPOINT + 10
+DEC G227 1
+INC G300 10
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『★破败王者之刃★』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G227)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+;===============
+[@福利回收27]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g226 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G226 0
+checkitem 月华咒刃★ 1
+#act
+take 月华咒刃★ 1
+GAMEPOINT + 8
+DEC G226 1
+INC G300 8
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『月华咒刃★』/FCOLOR=251>获得了8钻石。当前剩余名额还有<『<$STR(G226)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+;===============
+
+[@福利回收26]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g225 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G225 0
+checkitem 争战铠甲★ 1
+#act
+take 争战铠甲★ 1
+GAMEPOINT + 8
+DEC G225 1
+INC G300 8
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『争战铠甲★』/FCOLOR=251>获得了8钻石。当前剩余名额还有<『<$STR(G225)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+;===============
+
+[@福利回收25]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g224 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+#if
+large G224 0
+checkitem 放逐之刃★ 1
+#act
+take 放逐之刃★ 1
+GAMEPOINT + 8
+DEC G224 1
+INC G300 8
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『放逐之刃★』/FCOLOR=251>获得了8钻石。当前剩余名额还有<『<$STR(G224)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收24]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g223 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G223 0
+checkitem 冠军披风★  1
+#act
+take 冠军披风★  1
+GAMEPOINT + 8
+DEC G223 1
+INC G300 8
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『冠军披风★ 』/FCOLOR=251>获得了8钻石。当前剩余名额还有<『<$STR(G223)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+[@福利回收1]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g200 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G200 0
+checkitem ★★★魍魉★★★ 1
+#act
+take ★★★魍魉★★★ 1
+GAMEPOINT + 5
+DEC G200 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『★★★魍魉★★★』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G200)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收2]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g201 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G201 0
+checkitem 魑魅々杀猪刀 1
+#act
+take 魑魅々杀猪刀 1
+GAMEPOINT + 5
+DEC G201 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『魑魅々杀猪刀』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G201)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收3]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g202 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G202 0
+checkitem 寒冰卍神甲 1
+#act
+take 寒冰卍神甲 1
+GAMEPOINT + 5
+DEC G202 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『寒冰卍神甲』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G202)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+[@福利回收4]
+
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g203 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G203 0
+checkitem 日炎斗篷 1
+#act
+take 日炎斗篷 1
+GAMEPOINT + 5
+DEC G203 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『日炎斗篷』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G203)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+[@福利回收5]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g204 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G204 0
+checkitem 卑劣手杖 1
+#act
+take 卑劣手杖 1
+GAMEPOINT + 5
+DEC G204 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『卑劣手杖』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G204)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+
+[@福利回收6]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g205 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G205 0
+checkitem 抑制符咒 1
+#act
+take 抑制符咒 1
+GAMEPOINT + 5
+DEC G205 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『抑制符咒』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G205)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+[@福利回收7]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g206 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G206 0
+checkitem 窃法之刃 1
+#act
+take 窃法之刃 1
+GAMEPOINT + 5
+DEC G206 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『抑制符咒』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G206)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+
+[@福利回收8]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g207 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G207 0
+checkitem 亡灵手套 1
+#act
+take 亡灵手套 1
+GAMEPOINT + 5
+DEC G207 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『亡灵手套』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G207)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+[@福利回收9]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g208 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G208 0
+checkitem 适应性头盔 1
+#act
+take 适应性头盔 1
+GAMEPOINT + 5
+DEC G208 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『适应性头盔』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G208)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @奖励大厅触发NAM
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+
+[@福利回收10]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g209 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G209 0
+checkitem 号令之旗 1
+#act
+take 号令之旗 1
+GAMEPOINT + 5
+DEC G209 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『号令之旗』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G209)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第二页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+[@福利回收11]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g210 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G210 0
+checkitem 禁忌法相 1
+#act
+take 禁忌法相 1
+GAMEPOINT + 5
+DEC G210 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『禁忌法相』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G210)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第二页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+
+[@福利回收12]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+
+#if
+equal g211 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G211 0
+checkitem 疾风之靴 1
+#act
+take 疾风之靴 1
+GAMEPOINT + 5
+DEC G211 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『疾风之靴』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G211)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第二页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+[@福利回收13]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g212 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G212 0
+checkitem 巨人腰带 1
+#act
+take 巨人腰带 1
+GAMEPOINT + 5
+DEC G212 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『巨人腰带』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G212)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第三页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+[@福利回收14]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g213 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G213 0
+checkitem 仙女护符 1
+#act
+take 仙女护符 1
+GAMEPOINT + 5
+DEC G213 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『仙女护符』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G213)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第三页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+
+[@福利回收15]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g214 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G214 0
+checkitem 恶魔的枷锁 1
+#act
+take 恶魔的枷锁 1
+GAMEPOINT + 5
+DEC G214 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『恶魔的枷锁』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G214)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第三页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收16]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g215 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G215 0
+checkitem 冤魂的哭声 1
+#act
+take 冤魂的哭声 1
+GAMEPOINT + 5
+DEC G215 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『冤魂的哭声』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G215)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第三页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+[@福利回收17]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g216 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G216 0
+checkitem 魅惑之心 1
+#act
+take 魅惑之心 1
+GAMEPOINT + 5
+DEC G216 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『魅惑之心』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G216)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第三页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+[@福利回收18]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g217 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G217 0
+checkitem 『毒灭万物』 1
+#act
+take 『毒灭万物』 1
+GAMEPOINT + 5
+DEC G217 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『毒灭万物』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G217)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;goto @第三页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+[@福利回收19]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g218 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G218 0
+checkitem 王座之争 1
+#act
+take 王座之争 1
+GAMEPOINT + 5
+DEC G218 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『王座之争』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G218)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+[@福利回收20]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g219 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G219 0
+checkitem 永夜〝无光 1
+#act
+take 永夜〝无光 1
+GAMEPOINT + 5
+DEC G219 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『永夜〝无光』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G219)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+[@福利回收21]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g220 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G220 0
+checkitem 治疗＂守卫 1
+#act
+take 治疗＂守卫 1
+GAMEPOINT + 5
+DEC G220 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『治疗＂守卫』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G220)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+[@福利回收22]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g221 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G221 0
+checkitem 梦魇ぺ恒古 1
+#act
+take 梦魇ぺ恒古 1
+GAMEPOINT + 5
+DEC G221 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『梦魇ぺ恒古』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G221)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+
+[@福利回收23]
+#if
+large S$合区信息 0
+#act
+MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+break
+#if
+equal g222 0
+#act
+MessageBox 该装备回收名额已满，无法再继续回收..
+break
+
+#if
+large G222 0
+checkitem 天罡べ霸体 1
+#act
+take 天罡べ霸体 1
+GAMEPOINT + 5
+DEC G222 1
+INC G300 5
+SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『天罡べ霸体』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G222)>个』/FCOLOR=250>！
+MessageBox 装备回收成功钻石获得增加..
+;;goto @第四页
+#ELSEACT
+MessageBox [提示]:请检查你背包内是否有对应装备!!!
+break
+
+
+
+;========================================================================限时奖励
+;========================================================================限时奖励
+
+
+
+
+[@限时奖励金币NAM]
+
+
+#if
+#act
+GetStringPos ..\QuestDiary\限时奖励\JMB奖励装备.txt ===结束===
+MOV N$首爆总行 <$Str(N0)>
+MOV N$首爆当页 1
+MOV N$首爆序号1 1
+MOV N$首爆序号2 2
+MOV N$首爆序号3 3
+MOV N$首爆序号4 4
+MOV N$首爆序号5 5
+MOV N$首爆序号6 6
+MOV N$首爆序号7 7
+MOV N$首爆序号8 8
+MOV N$首爆序号9 9
+MOV N$首爆序号10 10
+DIV N$首爆总页 N$首爆总行 31
+INC N$首爆总页 1
+mov N$首爆行号 0
+goto @金币首爆奖励界面
+
+[@金币首爆资料获取]
+#if
+#act
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名0	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆金额 S$JMB首爆金额0
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆名额 S$JMB首爆名额0
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆玩家 S$JMB首爆玩家0
+inc N$首爆行号 1
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名1	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆金额 S$JMB首爆金额1
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆名额 S$JMB首爆名额1
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆玩家 S$JMB首爆玩家1
+inc N$首爆行号 1
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名2	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆金额 S$JMB首爆金额2
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆名额 S$JMB首爆名额2
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆玩家 S$JMB首爆玩家2
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名3	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆金额 S$JMB首爆金额3
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆名额 S$JMB首爆名额3
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆玩家 S$JMB首爆玩家3
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名4	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆金额 S$JMB首爆金额4
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆名额 S$JMB首爆名额4
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆玩家 S$JMB首爆玩家4
+inc N$首爆行号 1
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名5	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆金额 S$JMB首爆金额5
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆名额 S$JMB首爆名额5
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆玩家 S$JMB首爆玩家5
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名6	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆金额 S$JMB首爆金额6
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆名额 S$JMB首爆名额6
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆玩家 S$JMB首爆玩家6
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名7	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆金额 S$JMB首爆金额7
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆名额 S$JMB首爆名额7
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆玩家 S$JMB首爆玩家7
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名8	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆金额 S$JMB首爆金额8
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆名额 S$JMB首爆名额8
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆玩家 S$JMB首爆玩家8
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名9	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆金额 S$JMB首爆金额9
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆名额 S$JMB首爆名额9
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆玩家 S$JMB首爆玩家9
+inc N$首爆行号 1
+
+
+
+
+
+
+[@金币首爆奖励界面]
+#if
+#act
+goto @金币首爆资料获取
+
+#if
+#act
+;SetStringBlank <$Str(S$首爆名0)> 19 1
+SetStringBlank S$首爆名0 19 1
+;SetStringBlank <$Str(S$首爆名1)> 19 1
+SetStringBlank S$首爆名1 19 1
+;SetStringBlank <$Str(S$首爆名2)> 19 1
+SetStringBlank S$首爆名2 19 1
+;SetStringBlank <$Str(S$首爆名3)> 19 1
+SetStringBlank S$首爆名3 19 1
+;SetStringBlank <$Str(S$首爆名4)> 19 1
+SetStringBlank S$首爆名4 19 1
+;SetStringBlank <$Str(S$首爆名5)> 19 1
+SetStringBlank S$首爆名5 19 1
+;SetStringBlank <$Str(S$首爆名6)> 19 1
+SetStringBlank S$首爆名6 19 1
+;SetStringBlank <$Str(S$首爆名7)> 19 1
+SetStringBlank S$首爆名7 19 1
+;SetStringBlank <$Str(S$首爆名8)> 19 1
+SetStringBlank S$首爆名8 19 1
+;SetStringBlank <$Str(S$首爆名9)> 19 1
+SetStringBlank S$首爆名9 19 1
+
+MOV S$首爆序号1 <$Str(N$首爆序号1)>
+MOV S$首爆序号2 <$Str(N$首爆序号2)>
+MOV S$首爆序号3 <$Str(N$首爆序号3)>
+MOV S$首爆序号4 <$Str(N$首爆序号4)>
+MOV S$首爆序号5 <$Str(N$首爆序号5)>
+MOV S$首爆序号6 <$Str(N$首爆序号6)>
+MOV S$首爆序号7 <$Str(N$首爆序号7)>
+MOV S$首爆序号8 <$Str(N$首爆序号8)>
+MOV S$首爆序号9 <$Str(N$首爆序号9)>
+MOV S$首爆序号10 <$Str(N$首爆序号10)>
+
+
+;SetStringBlank <$Str(S$首爆序号1)> 6 1
+SetStringBlank S$首爆序号1 6 1
+;SetStringBlank <$Str(S$首爆序号2)> 6 1
+SetStringBlank S$首爆序号2 6 1
+;SetStringBlank <$Str(S$首爆序号3)> 6 1
+SetStringBlank S$首爆序号3 6 1
+;SetStringBlank <$Str(S$首爆序号4)> 6 1
+SetStringBlank S$首爆序号4 6 1
+;SetStringBlank <$Str(S$首爆序号5)> 6 1
+SetStringBlank S$首爆序号5 6 1
+;SetStringBlank <$Str(S$首爆序号6)> 6 1
+SetStringBlank S$首爆序号6 6 1
+;SetStringBlank <$Str(S$首爆序号7)> 6 1
+SetStringBlank S$首爆序号7 6 1
+;SetStringBlank <$Str(S$首爆序号8)> 6 1
+SetStringBlank S$首爆序号8 6 1
+;SetStringBlank <$Str(S$首爆序号9)> 6 1
+SetStringBlank S$首爆序号9 6 1
+;SetStringBlank <$Str(S$首爆序号10)> 6 1
+SetStringBlank S$首爆序号10 6 1
+
+;SetStringBlank <$Str(S$JMB首爆玩家0)> 14 1
+SetStringBlank S$JMB首爆玩家0 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家1)> 14 1
+SetStringBlank S$JMB首爆玩家1 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家2)> 14 1
+SetStringBlank S$JMB首爆玩家2 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家3)> 14 1
+SetStringBlank S$JMB首爆玩家3 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家4)> 14 1
+SetStringBlank S$JMB首爆玩家4 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家5)> 14 1
+SetStringBlank S$JMB首爆玩家5 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家6)> 14 1
+SetStringBlank S$JMB首爆玩家6 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家7)> 14 1
+SetStringBlank S$JMB首爆玩家7 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家8)> 14 1
+SetStringBlank S$JMB首爆玩家8 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家9)> 14 1
+SetStringBlank S$JMB首爆玩家9 14 1
+;SetStringBlank <$Str(S$JMB首爆玩家10)> 14 1
+SetStringBlank S$JMB首爆玩家10 14 1
+
+
+
+
+
+#if
+equal S$首爆人0 未领取
+#act
+MOV 	N$首爆颜色0 147
+#elseact
+MOV 	N$首爆颜色0 147
+#if
+equal S$首爆人1 未领取
+#act
+MOV 	N$首爆颜色1 147
+#elseact
+MOV 	N$首爆颜色1 147
+#if
+equal S$首爆人2 未领取
+#act
+MOV 	N$首爆颜色2 147
+#elseact
+MOV 	N$首爆颜色2 147
+#if
+equal S$首爆人3 未领取
+#act
+MOV 	N$首爆颜色3 147
+#elseact
+MOV 	N$首爆颜色3 147
+#if
+equal S$首爆人4 未领取
+#act
+MOV 	N$首爆颜色4 147
+#elseact
+MOV 	N$首爆颜色4 147
+#if
+equal S$首爆人5 未领取
+#act
+MOV 	N$首爆颜色5 147
+#elseact
+MOV 	N$首爆颜色5 147
+
+#if
+equal S$首爆人6 未领取
+#act
+MOV 	N$首爆颜色6 147
+#elseact
+MOV 	N$首爆颜色6 147
+
+#if
+equal S$首爆人7 未领取
+#act
+MOV 	N$首爆颜色7 147
+#elseact
+MOV 	N$首爆颜色7 147
+
+#if
+equal S$首爆人8 未领取
+#act
+MOV 	N$首爆颜色8 147
+#elseact
+MOV 	N$首爆颜色8 147
+
+#if
+equal S$首爆人9 未领取
+#act
+MOV 	N$首爆颜色9 147
+#elseact
+MOV 	N$首爆颜色9 147
+
+
+
+
+
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+<> {No.<$str(S$首爆序号1)>/FCOLOR=150}    {<$STR(S$首爆名0)>/FCOLOR=253}         {<$str(S$JMB首爆金额0)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额0)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家0)>/FCOLOR=<$Str(N$首爆颜色0)>}  \ \
+
+<> {No.<$str(S$首爆序号2)>/FCOLOR=150}    {<$STR(S$首爆名1)>/FCOLOR=253}         {<$str(S$JMB首爆金额1)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额1)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家1)>/FCOLOR=<$Str(N$首爆颜色1)>}  \ \
+
+<> {No.<$str(S$首爆序号3)>/FCOLOR=150}    {<$STR(S$首爆名2)>/FCOLOR=253}         {<$str(S$JMB首爆金额2)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额2)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家2)>/FCOLOR=<$Str(N$首爆颜色2)>}  \ \
+
+<> {No.<$str(S$首爆序号4)>/FCOLOR=150}    {<$STR(S$首爆名3)>/FCOLOR=253}         {<$str(S$JMB首爆金额3)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额3)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色3)>}  \ \
+
+<> {No.<$str(S$首爆序号5)>/FCOLOR=150}    {<$STR(S$首爆名4)>/FCOLOR=253}         {<$str(S$JMB首爆金额4)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额4)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色4)>}  \ \
+
+<> {No.<$str(S$首爆序号6)>/FCOLOR=150}    {<$STR(S$首爆名5)>/FCOLOR=253}         {<$str(S$JMB首爆金额5)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额5)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家5)>/FCOLOR=<$Str(N$首爆颜色5)>}  \ \
+
+<> {No.<$str(S$首爆序号7)>/FCOLOR=150}    {<$STR(S$首爆名6)>/FCOLOR=253}         {<$str(S$JMB首爆金额6)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额6)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家6)>/FCOLOR=<$Str(N$首爆颜色6)>}  \ \
+
+<> {No.<$str(S$首爆序号8)>/FCOLOR=150}    {<$STR(S$首爆名7)>/FCOLOR=253}         {<$str(S$JMB首爆金额7)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额7)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家7)>/FCOLOR=<$Str(N$首爆颜色7)>}  \ \
+
+<> {No.<$str(S$首爆序号9)>/FCOLOR=150}    {<$STR(S$首爆名8)>/FCOLOR=253}         {<$str(S$JMB首爆金额8)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额8)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家8)>/FCOLOR=<$Str(N$首爆颜色8)>}  \ \
+
+<> {No.<$str(S$首爆序号10)>/FCOLOR=150}    {<$STR(S$首爆名9)>/FCOLOR=253}         {<$str(S$JMB首爆金额9)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额9)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家9)>/FCOLOR=<$Str(N$首爆颜色9)>}  \ \
+
+<>                                    <上一页/@金币首爆翻页减>    <下一页/@金币首爆翻页加>   <限时奖励打完为止/FCOLOR=151>
+
+
+
+
+
+
+
+[@金币首爆翻页减]
+#if
+large N$首爆行号 11
+#act
+dec N$首爆序号1 10
+dec N$首爆序号2 10
+dec N$首爆序号3 10
+dec N$首爆序号4 10
+dec N$首爆序号5 10
+dec N$首爆序号6 10
+dec N$首爆序号7 10
+dec N$首爆序号8 10
+dec N$首爆序号9 10
+dec N$首爆序号10 10
+DEC N$首爆当页 1
+dec N$首爆行号 20
+goto @金币首爆奖励界面
+#elseact
+messagebox 已经是第一页了！
+
+
+[@金币首爆翻页加]
+#if
+small N$首爆当页 31
+#act
+INC N$首爆序号1 10
+INC N$首爆序号2 10
+INC N$首爆序号3 10
+INC N$首爆序号4 10
+INC N$首爆序号5 10
+INC N$首爆序号6 10
+INC N$首爆序号7 10
+INC N$首爆序号8 10
+INC N$首爆序号9 10
+INC N$首爆序号10 10
+INC N$首爆当页 1
+goto @金币首爆奖励界面
+#elseact
+messagebox 已经是最后一页了！
+
+
+
+
+;========================================================================永久奖励
+;========================================================================永久奖励
+
+[@限时奖励人民币NAM]
+
+
+#if
+#act
+GetStringPos ..\QuestDiary\限时奖励\钻石奖励装备.txt ===结束===
+MOV N$首爆总行 <$Str(N0)>
+MOV N$首爆当页 1
+MOV N$首爆序号1 1
+MOV N$首爆序号2 2
+MOV N$首爆序号3 3
+MOV N$首爆序号4 4
+MOV N$首爆序号5 5
+MOV N$首爆序号6 6
+MOV N$首爆序号7 7
+MOV N$首爆序号8 8
+MOV N$首爆序号9 9
+MOV N$首爆序号10 10
+DIV N$首爆总页 N$首爆总行 16
+INC N$首爆总页 1
+mov N$首爆行号 0
+goto @首爆奖励界面
+
+[@首爆资料获取]
+#if
+#act
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名0	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆金额 S$钻石首爆金额0
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆名额 S$钻石首爆名额0
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆玩家 S$钻石首爆玩家0
+inc N$首爆行号 1
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名1	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆金额 S$钻石首爆金额1
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆名额 S$钻石首爆名额1
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆玩家 S$钻石首爆玩家1
+inc N$首爆行号 1
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名2	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆金额 S$钻石首爆金额2
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆名额 S$钻石首爆名额2
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆玩家 S$钻石首爆玩家2
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名3	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆金额 S$钻石首爆金额3
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆名额 S$钻石首爆名额3
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆玩家 S$钻石首爆玩家3
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名4	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆金额 S$钻石首爆金额4
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆名额 S$钻石首爆名额4
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆玩家 S$钻石首爆玩家4
+inc N$首爆行号 1
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名5	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆金额 S$钻石首爆金额5
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆名额 S$钻石首爆名额5
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆玩家 S$钻石首爆玩家5
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名6	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆金额 S$钻石首爆金额6
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆名额 S$钻石首爆名额6
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆玩家 S$钻石首爆玩家6
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名7	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆金额 S$钻石首爆金额7
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆名额 S$钻石首爆名额7
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆玩家 S$钻石首爆玩家7
+inc N$首爆行号 1
+
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名8	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆金额 S$钻石首爆金额8
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆名额 S$钻石首爆名额8
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆玩家 S$钻石首爆玩家8
+inc N$首爆行号 1
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名9	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆金额 S$钻石首爆金额9
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆名额 S$钻石首爆名额9
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆玩家 S$钻石首爆玩家9
+inc N$首爆行号 1
+
+GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名10	S$无用
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆金额 S$钻石首爆金额10
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆名额 S$钻石首爆名额10
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆玩家 S$钻石首爆玩家10
+
+
+
+
+[@首爆奖励界面]
+#if
+#act
+goto @首爆资料获取
+
+
+
+
+#if
+#act
+;SetStringBlank <$Str(S$首爆名0)> 19 1
+SetStringBlank S$首爆名0 19 1
+;SetStringBlank <$Str(S$首爆名1)> 19 1
+SetStringBlank S$首爆名1 19 1
+;SetStringBlank <$Str(S$首爆名2)> 19 1
+SetStringBlank S$首爆名2 19 1
+;SetStringBlank <$Str(S$首爆名3)> 19 1
+SetStringBlank S$首爆名3 19 1
+;SetStringBlank <$Str(S$首爆名4)> 19 1
+SetStringBlank S$首爆名4 19 1
+;SetStringBlank <$Str(S$首爆名5)> 19 1
+SetStringBlank S$首爆名5 19 1
+;SetStringBlank <$Str(S$首爆名6)> 19 1
+SetStringBlank S$首爆名6 19 1
+;SetStringBlank <$Str(S$首爆名7)> 19 1
+SetStringBlank S$首爆名7 19 1
+;SetStringBlank <$Str(S$首爆名8)> 19 1
+SetStringBlank S$首爆名8 19 1
+;SetStringBlank <$Str(S$首爆名9)> 19 1
+SetStringBlank S$首爆名9 19 1
+;SetStringBlank <$Str(S$首爆名10)> 19 1
+SetStringBlank S$首爆名10 19 1
+
+MOV S$首爆序号1 <$Str(N$首爆序号1)>
+MOV S$首爆序号2 <$Str(N$首爆序号2)>
+MOV S$首爆序号3 <$Str(N$首爆序号3)>
+MOV S$首爆序号4 <$Str(N$首爆序号4)>
+MOV S$首爆序号5 <$Str(N$首爆序号5)>
+MOV S$首爆序号6 <$Str(N$首爆序号6)>
+MOV S$首爆序号7 <$Str(N$首爆序号7)>
+MOV S$首爆序号8 <$Str(N$首爆序号8)>
+MOV S$首爆序号9 <$Str(N$首爆序号9)>
+MOV S$首爆序号10 <$Str(N$首爆序号10)>
+
+;SetStringBlank <$Str(S$首爆序号1)> 6 1
+SetStringBlank S$首爆序号1 6 1
+;SetStringBlank <$Str(S$首爆序号2)> 6 1
+SetStringBlank S$首爆序号2 6 1
+;SetStringBlank <$Str(S$首爆序号3)> 6 1
+SetStringBlank S$首爆序号3 6 1
+;SetStringBlank <$Str(S$首爆序号4)> 6 1
+SetStringBlank S$首爆序号4 6 1
+;SetStringBlank <$Str(S$首爆序号5)> 6 1
+SetStringBlank S$首爆序号5 6 1
+;SetStringBlank <$Str(S$首爆序号6)> 6 1
+SetStringBlank S$首爆序号6 6 1
+;SetStringBlank <$Str(S$首爆序号7)> 6 1
+SetStringBlank S$首爆序号7 6 1
+;SetStringBlank <$Str(S$首爆序号8)> 6 1
+SetStringBlank S$首爆序号8 6 1
+;SetStringBlank <$Str(S$首爆序号9)> 6 1
+SetStringBlank S$首爆序号9 6 1
+;SetStringBlank <$Str(S$首爆序号10)> 6 1
+SetStringBlank S$首爆序号10 6 1
+
+;SetStringBlank <$Str(S$钻石首爆玩家0)> 14 1
+SetStringBlank S$钻石首爆玩家0 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家1)> 14 1
+SetStringBlank S$钻石首爆玩家1 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家2)> 14 1
+SetStringBlank S$钻石首爆玩家2 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家3)> 14 1
+SetStringBlank S$钻石首爆玩家3 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家4)> 14 1
+SetStringBlank S$钻石首爆玩家4 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家5)> 14 1
+SetStringBlank S$钻石首爆玩家5 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家6)> 14 1
+SetStringBlank S$钻石首爆玩家6 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家7)> 14 1
+SetStringBlank S$钻石首爆玩家7 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家8)> 14 1
+SetStringBlank S$钻石首爆玩家8 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家9)> 14 1
+SetStringBlank S$钻石首爆玩家9 14 1
+;SetStringBlank <$Str(S$钻石首爆玩家10)> 14 1
+SetStringBlank S$钻石首爆玩家10 14 1
+
+
+
+#if
+equal S$首爆人0 未领取
+#act
+MOV 	N$首爆颜色0 147
+#elseact
+MOV 	N$首爆颜色0 147
+#if
+equal S$首爆人1 未领取
+#act
+MOV 	N$首爆颜色1 147
+#elseact
+MOV 	N$首爆颜色1 147
+#if
+equal S$首爆人2 未领取
+#act
+MOV 	N$首爆颜色2 147
+#elseact
+MOV 	N$首爆颜色2 147
+#if
+equal S$首爆人3 未领取
+#act
+MOV 	N$首爆颜色3 147
+#elseact
+MOV 	N$首爆颜色3 147
+#if
+equal S$首爆人4 未领取
+#act
+MOV 	N$首爆颜色4 147
+#elseact
+MOV 	N$首爆颜色4 147
+#if
+equal S$首爆人5 未领取
+#act
+MOV 	N$首爆颜色5 147
+#elseact
+MOV 	N$首爆颜色5 147
+
+#if
+equal S$首爆人6 未领取
+#act
+MOV 	N$首爆颜色6 147
+#elseact
+MOV 	N$首爆颜色6 147
+
+#if
+equal S$首爆人7 未领取
+#act
+MOV 	N$首爆颜色7 147
+#elseact
+MOV 	N$首爆颜色7 147
+
+
+#if
+equal S$首爆人8 未领取
+#act
+MOV 	N$首爆颜色8 147
+#elseact
+MOV 	N$首爆颜色8 147
+
+#if
+equal S$首爆人9 未领取
+#act
+MOV 	N$首爆颜色9 147
+#elseact
+MOV 	N$首爆颜色9 147
+
+#if
+equal S$首爆人10 未领取
+#act
+MOV 	N$首爆颜色10 147
+#elseact
+MOV 	N$首爆颜色10 147
+
+
+
+
+#if
+#act
+#say
+<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
+<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
+<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
+<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
+<>\ \ \ \ \
+
+<> {No.<$str(S$首爆序号1)>/FCOLOR=150}     {<$STR(S$首爆名0)>/FCOLOR=253}        {<$str(S$钻石首爆金额0)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额0)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家0)>/FCOLOR=<$Str(N$首爆颜色0)>}    \ \
+
+<> {No.<$str(S$首爆序号2)>/FCOLOR=150}     {<$STR(S$首爆名1)>/FCOLOR=253}        {<$str(S$钻石首爆金额1)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额1)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家1)>/FCOLOR=<$Str(N$首爆颜色1)>}    \ \
+
+<> {No.<$str(S$首爆序号3)>/FCOLOR=150}     {<$STR(S$首爆名2)>/FCOLOR=253}        {<$str(S$钻石首爆金额2)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额2)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家2)>/FCOLOR=<$Str(N$首爆颜色2)>}    \ \
+
+<> {No.<$str(S$首爆序号4)>/FCOLOR=150}     {<$STR(S$首爆名3)>/FCOLOR=253}        {<$str(S$钻石首爆金额3)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额3)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色3)>}    \ \
+
+<> {No.<$str(S$首爆序号5)>/FCOLOR=150}     {<$STR(S$首爆名4)>/FCOLOR=253}        {<$str(S$钻石首爆金额4)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额4)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色4)>}    \ \
+
+<> {No.<$str(S$首爆序号6)>/FCOLOR=150}     {<$STR(S$首爆名5)>/FCOLOR=253}        {<$str(S$钻石首爆金额5)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额5)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家5)>/FCOLOR=<$Str(N$首爆颜色5)>}    \ \
+
+<> {No.<$str(S$首爆序号7)>/FCOLOR=150}     {<$STR(S$首爆名6)>/FCOLOR=253}        {<$str(S$钻石首爆金额6)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额6)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家6)>/FCOLOR=<$Str(N$首爆颜色6)>}    \ \
+
+<> {No.<$str(S$首爆序号8)>/FCOLOR=150}     {<$STR(S$首爆名7)>/FCOLOR=253}        {<$str(S$钻石首爆金额7)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额7)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家7)>/FCOLOR=<$Str(N$首爆颜色7)>}    \ \
+
+<> {No.<$str(S$首爆序号9)>/FCOLOR=150}     {<$STR(S$首爆名8)>/FCOLOR=253}        {<$str(S$钻石首爆金额8)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额8)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家8)>/FCOLOR=<$Str(N$首爆颜色8)>}    \ \
+
+<> {No.<$str(S$首爆序号10)>/FCOLOR=150}     {<$STR(S$首爆名9)>/FCOLOR=253}        {<$str(S$钻石首爆金额9)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额9)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家9)>/FCOLOR=<$Str(N$首爆颜色9)>}    \ \
+
+<>                                    <上一页/@钻石首爆翻页减>    <下一页/@钻石首爆翻页加>   <钻石首爆打完为止/FCOLOR=151>
+
+
+
+
+
+
+
+
+
+[@钻石首爆翻页减]
+#if
+large N$首爆行号 11
+#act
+dec N$首爆序号1 10
+dec N$首爆序号2 10
+dec N$首爆序号3 10
+dec N$首爆序号4 10
+dec N$首爆序号5 10
+dec N$首爆序号6 10
+dec N$首爆序号7 10
+dec N$首爆序号8 10
+dec N$首爆序号9 10
+dec N$首爆序号10 10
+DEC N$首爆当页 1
+dec N$首爆行号 20
+goto @首爆奖励界面
+#elseact
+messagebox 已经是第一页了！
+
+
+[@钻石首爆翻页加]
+#if
+small N$首爆当页 16
+#act
+INC N$首爆序号1 10
+INC N$首爆序号2 10
+INC N$首爆序号3 10
+INC N$首爆序号4 10
+INC N$首爆序号5 10
+INC N$首爆序号6 10
+INC N$首爆序号7 10
+INC N$首爆序号8 10
+INC N$首爆序号9 10
+INC N$首爆序号10 10
+INC N$首爆当页 1
+goto @首爆奖励界面
+#elseact
+messagebox 已经是最后一页了！
+
+
+
+[@永久回收触发NAM]
+#if
+#act
+#CALL [\馒头制作\奖励大厅\永久回收.txt] @永久回收脚本
+
+
+
+
+
+
+
+}

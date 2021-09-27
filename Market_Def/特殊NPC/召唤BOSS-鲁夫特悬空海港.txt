@@ -1,0 +1,61 @@
+[@main]
+
+
+
+
+#if
+#act
+#say
+\ \
+
+
+
+<>          <收集完毕一定量/AUTOCOLOR=158><创世石碑/AUTOCOLOR=70> <。提交上来，将为你召唤出/AUTOCOLOR=158>\  \
+
+<>          \  \
+<>          <恐怖存在：/AUTOCOLOR=158> <boss魔王★★★/AUTOCOLOR=253>  <需提交20个创世石碑>  <我要召唤/@召唤3>\  \
+<>          \  \
+
+<>              <创世石碑/AUTOCOLOR=70><在游戏任何怪物身上皆可爆出！！/AUTOCOLOR=158>\
+
+
+[@召唤3]
+#if
+checkitem 创世石碑 20
+#act
+take 创世石碑 20
+MonGenEx <$map> <$x> <$y> 魔王★★★ 3 1 0 253
+SENDMOVEMSG 0 249 251 350 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★★★』，想要击杀的请从进入[<$MapTitle>]！！
+SENDMOVEMSG 0 249 251 300 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★★★』，想要击杀的请从进入[<$MapTitle>]！！
+SENDMOVEMSG 0 249 251 400 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★★★』，想要击杀的请从进入[<$MapTitle>]！！
+#elseact
+MESSAGEBOX [提示:]\\召唤失败,请检查你是否有创世石碑X15！
+break
+
+[@召唤2]
+#if
+
+checkitem 创世石碑 15
+#act
+take 创世石碑 15
+MonGenEx <$map> <$x> <$y> 魔王★★ 3 1 0 253
+SENDMOVEMSG 0 249 251 350 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★★』，想要击杀的请从进入[<$MapTitle>]！！
+SENDMOVEMSG 0 249 251 300 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★★』，想要击杀的请从进入[<$MapTitle>]！！
+SENDMOVEMSG 0 249 251 400 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★★』，想要击杀的请从进入[<$MapTitle>]！！
+#elseact
+MESSAGEBOX [提示:]\\召唤失败,请检查你是否有创世石碑X15！
+break
+
+[@召唤1]
+#if
+
+checkitem 创世石碑 10
+#act
+take 创世石碑 10
+MonGenEx <$map> <$x> <$y> 魔王★ 3 1 0 253
+SENDMOVEMSG 0 249 251 350 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★』，想要击杀的请从进入[<$MapTitle>]！！
+SENDMOVEMSG 0 249 251 300 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★』，想要击杀的请从进入[<$MapTitle>]！！
+SENDMOVEMSG 0 249 251 400 1 〖封印之石〗：恭喜玩家『<$USERNAME>』成功召唤了必爆专属『boss魔王★』，想要击杀的请从进入[<$MapTitle>]！！
+#elseact
+MESSAGEBOX [提示:]\\召唤失败,请检查你是否有创世石碑X10！
+break

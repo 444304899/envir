@@ -1,0 +1,106 @@
+[@main]
+#sct
+#say
+\ 　\ \
+
+<古神传承：/FCOLOR=249>{称号附带有几率可以Pk时三刀连斩/FCOLOR=250}\
+{敌人每刀掉血20%,无视无敌状态/FCOLOR=250} \ \
+[<如果你却某个字可以在我这里购买/@我要学习>]　\
+[<免费学习/@我要学习1>]　 集齐 "古" "神" "传" "承" 四个字可以免费合成\   \
+
+<古神传承可兑换新区200充值/FCOLOR=250>      <当前金币数量：/FCOLOR=154>〖{<$GOLDCOUNT>/FCOLOR=250}〗\
+\
+
+[@我要学习]
+#IF
+#act
+#say
+\ \ \  \
+<>               <本服承诺全靠打，无收费地图，爆率全开。/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\ \
+<>               <1000金币一个字哦/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\ \
+<>                 <古/@古>       <神/@神>        <传/@传>        <承/@承>   \
+<>
+
+
+[@承]
+#if
+CheckGold 1000
+#act
+Take 金币 1000
+give 承
+MESSAGEBOX [提示]:购买成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+[@传]
+#if
+CheckGold 1000
+#act
+Take 金币 1000
+give 传
+MESSAGEBOX [提示]:购买成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+
+[@神]
+#if
+CheckGold 1000
+#act
+Take 金币 1000
+give 神
+MESSAGEBOX [提示]:购买成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+
+
+[@古]
+#if
+CheckGold 1000
+#act
+Take 金币 1000
+give 古
+MESSAGEBOX [提示]:购买成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+
+
+
+
+
+
+[@我要学习1]
+#if
+CHECKTITLE 古神传承
+#act
+messagebox 你已经学习过了，想再花一次钱吗？
+break
+#if
+CHECKITEM 古 1
+CHECKITEM 神 1
+CHECKITEM 传 1
+CHECKITEM 承 1
+#act
+TAKE 古 1
+TAKE 神 1
+TAKE 传 1
+TAKE 承 1
+CONFERTITLE 古神传承
+SENDMOVEMSG 0 249 251 200 1 ≮古神传承≯：玩家『<$USERNAME>』获得了古神传承，此人极度危险！继续走下去等待他的将会是什么？
+SENDMOVEMSG 0 249 251 230 1 ≮古神传承≯：玩家『<$USERNAME>』获得了古神传承，此人极度危险！继续走下去等待他的将会是什么？
+break
+#elseact
+messagebox 条件不足！
+
+
+

@@ -1,0 +1,54 @@
+[@他人魂器]
+{
+
+#IF
+#ACT
+MOV S$魂器_1 <ItemShow:925:0:24:25:0>
+MOV S$魂器_2 <ItemShow:1253:0:108:7:0>
+MOV S$魂器_3 <ItemShow:1254:0:192:-5:0>
+MOV S$魂器_4 <ItemShow:1255:0:274:-23:0>
+
+
+#IF
+<$USERSTATENAME>.EQUAL T30 技术内裤
+#ACT
+MOV S$魂器_1 <ItemShow:1402:0:23:25:0>
+
+#IF
+<$USERSTATENAME>.EQUAL T31 能量脉冲
+#ACT
+MOV S$魂器_2 <ItemShow:1403:0:105:8:0>
+
+#IF
+<$USERSTATENAME>.EQUAL T32 我是先知
+#ACT
+MOV S$魂器_3 <ItemShow:1405:0:185:-5:0>
+
+#IF
+<$USERSTATENAME>.EQUAL T33 艾克塞之怒
+#ACT
+MOV S$魂器_4 <ItemShow:1404:0:273:-25:0>
+
+#IF
+CHECKLEVELEX > 0
+#SAY
+\ \
+<$STR(S$魂器_1)>\
+<$STR(S$魂器_2)>\
+<$STR(S$魂器_3)>\
+<$STR(S$魂器_4)>　\
+
+
+#ACT
+
+
+
+
+
+
+
+
+
+
+
+}

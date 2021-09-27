@@ -1,0 +1,98 @@
+[@main]
+#if
+#act
+MOV S$职位人名1 <$STR(A2)>
+MOV S$职位人名2 <$STR(A3)>
+MOV S$职位人名3 <$STR(A4)>
+MOV S$职位人名4 <$STR(A5)>
+MOV S$职位人名5 <$STR(A6)>
+
+;SetStringBlank S$职位人名1 12 1
+SetStringBlank S$职位人名1 12 1
+;SetStringBlank S$职位人名2 12 1
+SetStringBlank S$职位人名2 12 1
+;SetStringBlank S$职位人名3 12 1
+SetStringBlank S$职位人名3 12 1
+;SetStringBlank S$职位人名4 12 1
+SetStringBlank S$职位人名4 12 1
+;SetStringBlank S$职位人名5 12 1
+SetStringBlank S$职位人名5 12 1
+
+
+;MOV S$灵符捐献金额1 <$STR(G6)>
+;MOV S$灵符捐献金额2 <$STR(G7)>
+;MOV S$灵符捐献金额3 <$STR(G8)>
+;MOV S$灵符捐献金额4 <$STR(G9)>
+;MOV S$灵符捐献金额5 <$STR(G10)>
+
+;SetStringBlank S$灵符捐献金额1 12 1
+;SetStringBlank S$灵符捐献金额2 12 1
+;SetStringBlank S$灵符捐献金额3 12 1
+;SetStringBlank S$灵符捐献金额4 12 1
+;SetStringBlank S$灵符捐献金额5 12 1
+
+
+
+
+#IF
+#ACT
+#SAY
+\ \ \  \ \  \ \
+<>                            <亲爱的勇士你好,欢迎来《封天大陆》个人捐献/FCOLOR=7> \ \
+<>                         <[ 排名第一 ]     爆率加成500%  倍功1.20倍  /FCOLOR=70>                 \
+<>                         <[ 排名第二 ]     爆率加成400%  倍功1.10倍  /FCOLOR=253>                \
+<>                         <[ 排名第三 ]     爆率加成300%  倍功1.05倍  /FCOLOR=135>                \
+<>                         <[ 排名第四 ]     爆率加成200%    /FCOLOR=161>               \
+<>                         <[ 排名第五 ]     爆率加成100%    /FCOLOR=161>                \   \
+<>                           <[第一名]/FCOLOR=70>:   <$STR(S$职位人名1)>          <上缴金额/FCOLOR=146>:<$STR(G6)> \
+<>                           <[第二名]/FCOLOR=161>:   <$STR(S$职位人名2)>          <上缴金额/FCOLOR=146>:<$STR(G7)> \
+<>                           <[第三名]/FCOLOR=161>:   <$STR(S$职位人名3)>          <上缴金额/FCOLOR=146>:<$STR(G8)> \
+<>                           <[第四名]/FCOLOR=161>:   <$STR(S$职位人名4)>          <上缴金额/FCOLOR=146>:<$STR(G9)> \
+<>                           <[第五名]/FCOLOR=161>:   <$STR(S$职位人名5)>          <上缴金额/FCOLOR=146>:<$STR(G10)> \ \
+<>                    <注：此排行榜合区之后自动清空!!! /AUTOCOLOR=7>                    <上缴灵符/@@InPutInteger20> \ \
+
+
+;<>                                      <进入捐献排名第一专属地图/@第一专属地图>                    \
+
+
+[@第一专属地图]
+#if
+not equal A2 <$USERNAME>  ;第一名
+#act
+MESSAGEBOX [提示]：对不起，你不是第一名！
+break
+
+#IF
+equal A2 <$USERNAME>  ;第一名
+#act
+MAPMOVE 个人捐献第一地图
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+
+[@InPutInteger20]
+#if
+SMALL N20 1999
+#act
+MESSAGEBOX [提示]：对不起，每次最少捐献2000灵符！
+break
+
+#IF
+CHECKGAMEGIRD ? <$STR(N20)>
+#ACT
+CALCVAR HUMAN 职位捐款数量1 + <$STR(N20)>
+GAMEGIRD - <$STR(N20)>
+SAVEVAR HUMAN 职位捐款数量1
+SORTVARTOLIST 职位捐款数量1 ..\QuestDiary\大熊数据\灵符捐款数据.txt ..\QuestDiary\大熊数据\灵符捐款排行.txt 0 1
+GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 0 A2 G6
+GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 1 A3 G7
+GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 2 A4 G8
+GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 3 A5 G9
+GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 4 A6 G10
+goto @main
+MESSAGEBOX 捐款成功!
+#CALL [\大熊功能\职位计算.txt] @开始计算
+BREAK
+#ELSEACT
+MESSAGEBOX [提示]：对不起，您的灵符不足！

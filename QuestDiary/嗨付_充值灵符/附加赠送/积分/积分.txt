@@ -1,0 +1,513 @@
+[@领取积分]
+{
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\01.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\01.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\02.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\02.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\03.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\03.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\04.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\04.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\05.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\05.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\06.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\06.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\07.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\07.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\08.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\08.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\09.txt
+#ACT
+GAMEDIAMOND + 0
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\09.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分0。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\1.txt
+#ACT
+GAMEDIAMOND + 1
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\1.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分1。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\2.txt
+#ACT
+GAMEDIAMOND + 2
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\2.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分2。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\3.txt
+#ACT
+GAMEDIAMOND + 3
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\3.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分3。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\4.txt
+#ACT
+GAMEDIAMOND + 4
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\4.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分4。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\5.txt
+#ACT
+GAMEDIAMOND + 5
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\5.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分5。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\6.txt
+#ACT
+GAMEDIAMOND + 6
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\6.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分6。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\7.txt
+#ACT
+GAMEDIAMOND + 7
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\7.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分7。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\8.txt
+#ACT
+GAMEDIAMOND + 8
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\8.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分8。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\9.txt
+#ACT
+GAMEDIAMOND + 9
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\9.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分9。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\10.txt
+#ACT
+GAMEDIAMOND + 10
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\10.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分10。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\20.txt
+#ACT
+GAMEDIAMOND + 20
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\20.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分20。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\30.txt
+#ACT
+GAMEDIAMOND + 30
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\30.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分30。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\40.txt
+#ACT
+GAMEDIAMOND + 40
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\40.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分40。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\50.txt
+#ACT
+GAMEDIAMOND + 50
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\50.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分50。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\60.txt
+#ACT
+GAMEDIAMOND + 60
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\60.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分60。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\70.txt
+#ACT
+GAMEDIAMOND + 70
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\70.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分70。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\80.txt
+#ACT
+GAMEDIAMOND + 80
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\80.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分80。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\90.txt
+#ACT
+GAMEDIAMOND + 90
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\90.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分90。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\100.txt
+#ACT
+GAMEDIAMOND + 100
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\100.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分100。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\200.txt
+#ACT
+GAMEDIAMOND + 200
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\200.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分200。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\300.txt
+#ACT
+GAMEDIAMOND + 300
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\300.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分300。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\400.txt
+#ACT
+GAMEDIAMOND + 400
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\400.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分400。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\500.txt
+#ACT
+GAMEDIAMOND + 500
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\500.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分500。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\600.txt
+#ACT
+GAMEDIAMOND + 600
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\600.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分600。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\700.txt
+#ACT
+GAMEDIAMOND + 700
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\700.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分700。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\800.txt
+#ACT
+GAMEDIAMOND + 800
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\800.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分800。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\900.txt
+#ACT
+GAMEDIAMOND + 900
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\900.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分900。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\1000.txt
+#ACT
+GAMEDIAMOND + 1000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\1000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分1000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\2000.txt
+#ACT
+GAMEDIAMOND + 2000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\2000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分2000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\3000.txt
+#ACT
+GAMEDIAMOND + 3000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\3000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分3000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\4000.txt
+#ACT
+GAMEDIAMOND + 4000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\4000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分4000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\5000.txt
+#ACT
+GAMEDIAMOND + 5000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\5000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分5000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\6000.txt
+#ACT
+GAMEDIAMOND + 6000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\6000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分6000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\7000.txt
+#ACT
+GAMEDIAMOND + 7000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\7000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分7000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\8000.txt
+#ACT
+GAMEDIAMOND + 8000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\8000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分8000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\9000.txt
+#ACT
+GAMEDIAMOND + 9000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\9000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分9000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\10000.txt
+#ACT
+GAMEDIAMOND + 10000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\10000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分10000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\20000.txt
+#ACT
+GAMEDIAMOND + 20000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\20000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分20000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\30000.txt
+#ACT
+GAMEDIAMOND + 30000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\30000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分30000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\40000.txt
+#ACT
+GAMEDIAMOND + 40000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\40000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分40000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\50000.txt
+#ACT
+GAMEDIAMOND + 50000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\50000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分50000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\60000.txt
+#ACT
+GAMEDIAMOND + 60000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\60000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分60000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\70000.txt
+#ACT
+GAMEDIAMOND + 70000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\70000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分70000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\80000.txt
+#ACT
+GAMEDIAMOND + 80000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\80000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分80000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\90000.txt
+#ACT
+GAMEDIAMOND + 90000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\90000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分90000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\100000.txt
+#ACT
+GAMEDIAMOND + 100000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\100000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分100000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\200000.txt
+#ACT
+GAMEDIAMOND + 200000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\200000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分200000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\300000.txt
+#ACT
+GAMEDIAMOND + 300000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\300000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分300000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\400000.txt
+#ACT
+GAMEDIAMOND + 400000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\400000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分400000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\500000.txt
+#ACT
+GAMEDIAMOND + 500000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\500000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分500000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\600000.txt
+#ACT
+GAMEDIAMOND + 600000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\600000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分600000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\700000.txt
+#ACT
+GAMEDIAMOND + 700000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\700000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分700000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\800000.txt
+#ACT
+GAMEDIAMOND + 800000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\800000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分800000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\900000.txt
+#ACT
+GAMEDIAMOND + 900000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\900000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分900000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\1000000.txt
+#ACT
+GAMEDIAMOND + 1000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\1000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分1000000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\2000000.txt
+#ACT
+GAMEDIAMOND + 2000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\2000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分2000000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\3000000.txt
+#ACT
+GAMEDIAMOND + 3000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\3000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分3000000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\4000000.txt
+#ACT
+GAMEDIAMOND + 4000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\4000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分4000000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\5000000.txt
+#ACT
+GAMEDIAMOND + 5000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\5000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分5000000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\6000000.txt
+#ACT
+GAMEDIAMOND + 6000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\6000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分6000000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\7000000.txt
+#ACT
+GAMEDIAMOND + 7000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\7000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分7000000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\8000000.txt
+#ACT
+GAMEDIAMOND + 8000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\8000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分8000000。
+
+#IF
+CheckAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\9000000.txt
+#ACT
+GAMEDIAMOND + 9000000
+DelAccountList ..\QuestDiary\嗨付_充值灵符\附加赠送\积分\9000000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了积分9000000。
+
+
+#ELSESAY
+请查看自己的充值数量!\
+没有充值请按提示进行充值!\
+<退出/@exit>
+}
+

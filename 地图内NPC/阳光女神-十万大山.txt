@@ -1,0 +1,87 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \
+<><终极·衣服.New~/FCOLOR=58> \ \
+;<>  <你来这里是合成[七彩·祥云]的么？/FCOLOR=161> \
+;<>  <在下方选择你需要合成的[七彩·祥云]，但是需要一点手续费,准备好了吗？/FCOLOR=161> \ \
+
+<><合成-阳光战神的威严/@衣服合成1>       <合成条件：/FCOLOR=250><布拉巴斯王者统袍+十万妖魂兽甲/FCOLOR=70>    \
+<>                          <合成条件：/FCOLOR=250><“阳光石·圣”*500 颗/FCOLOR=250>    \
+<>                          <终极衣服可兑换新区150充值~/FCOLOR=58>\ \ \
+<><购买【阳光石·圣】/@衣服合成4>    <购买【阳光石·圣*10】/@衣服合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g17)>／999颗/FCOLOR=70} \
+<ItemShow:1479:0:0:-75:1>  \
+
+
+
+[@衣服合成1]
+#if
+checkitem 布拉巴斯王者统袍 1
+checkitem 十万妖魂兽甲 1
+checkitem 阳光石·圣 500
+#act
+take 布拉巴斯王者统袍 1
+take 十万妖魂兽甲 1
+take 阳光石·圣 500
+;GiveStateItem 阳光战神的威严  1 1 0 0 1 1 0 0
+GIVESTATEITEM 阳光战神的威严 0 1 1 0 0 1 1 0 0
+MESSAGEBOX [提示]:获得物品:阳光战神的威严
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@衣服合成4]
+#if
+large g17 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+
+#if
+checkgold 10
+#act
+take 金币 10
+GIVE 阳光石·圣 1
+INC G17 1
+goto @main
+MESSAGEBOX [提示]:获得物品:[阳光石·圣]
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@衣服合成5]
+#if
+large g17 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 阳光石·圣 10
+INC G17 10
+goto @main
+MESSAGEBOX [提示]:获得物品:[阳光石·圣*10]
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

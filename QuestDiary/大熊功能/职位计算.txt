@@ -1,0 +1,1186 @@
+
+
+[@开始计算]
+{
+#if
+#act
+MOV N$爆率显示 100
+MOV N$爆率加成 100
+MOV N$倍攻加成 100
+MOV N$转生加成 0
+MOV N$攻速加成 0
+
+
+
+
+#if
+checkitem 【布鲁斯·韦恩】 1
+#act
+INC N$爆率加成 50
+INC N$爆率显示 50
+
+
+#if
+checkitem 【披得】
+#act
+INC N$爆率加成 50
+INC N$爆率显示 50
+
+#if
+checkitem 【托尼】
+#act
+INC N$爆率加成 50
+INC N$爆率显示 50
+
+
+#if
+checkitem 【卡尔-艾尔】
+#act
+INC N$爆率加成 50
+INC N$爆率显示 50
+
+
+
+
+#if
+checkitemw 阳光战神的威严【超脱】 1
+checkitemw 七星剑仙的剑气【超脱】 1
+#act
+INC N$爆率加成 100
+INC N$爆率显示 200
+
+
+
+
+#if
+large N$爆率卷轴 1
+#act
+INC N$爆率加成 100
+INC N$爆率显示 200
+
+
+#if
+large N$爆率卷轴 1
+#act
+dec N$爆率卷轴 1
+
+#if
+large u31 0
+Checkitem 杀人书 1
+#act
+mov N$杀倍攻加成 <$Str(u31)>
+mov N$杀爆率加成 <$Str(u31)>
+mul N$杀爆率加成 10
+mul N$杀倍攻加成 3
+INC N$爆率加成 <$Str(N$杀爆率加成)>
+INC N$爆率显示 <$Str(N$杀爆率加成)>
+INC N$倍攻加成 <$Str(N$杀倍攻加成)>
+
+
+
+#if
+large u47 0
+#act
+mov N$杀倍攻加成 <$Str(u47)>
+mov N$杀爆率加成 <$Str(u47)>
+mul N$杀爆率加成 1
+INC N$爆率加成 <$Str(N$杀爆率加成)>
+INC N$爆率显示 <$Str(N$杀爆率加成)>
+
+
+
+
+
+
+
+
+
+
+#OR
+ISONMAP cmxkmj
+ISONMAP fygdmj
+ISONMAP d9shmj
+ISONMAP 33daymj
+ISONMAP xianxumj
+ISONMAP rufengjiemj
+ISONMAP kaoshanmj
+ISONMAP cmzdmj
+ISONMAP hhstmj
+ISONMAP xgzqmj
+ISONMAP xkchmj
+ISONMAP yzglmj
+ISONMAP yljsmj
+;ISONMAP 318级
+#act
+INC N$爆率加成 500
+INC N$爆率显示 1000
+
+#if
+ISONMAP 318级
+#act
+;INC N$爆率加成 10
+;INC N$爆率显示 500
+
+#if
+CHECKTEXTLIST ..\QuestDiary\通天塔地图.txt <$MAP>
+#act
+INC N$爆率加成 100
+INC N$爆率显示 100
+
+
+
+#if
+CHECKTITLE 一源道主
+#act
+;INC N$爆率加成 20
+INC N$爆率显示 20
+
+#if
+CHECKTITLE 二源道主
+#act
+;INC N$爆率加成 40
+INC N$爆率显示 40
+
+#if
+CHECKTITLE 三源道主
+#act
+;INC N$爆率加成 60
+INC N$爆率显示 60
+
+#if
+CHECKTITLE 四源道尊
+#act
+;INC N$爆率加成 80
+INC N$爆率显示 80
+
+#if
+CHECKTITLE 五源道尊
+#act
+INC N$爆率加成 10
+INC N$爆率显示 100
+
+#if
+CHECKTITLE 六源道尊
+#act
+INC N$爆率加成 20
+INC N$爆率显示 120
+
+#if
+CHECKTITLE 七源至尊
+#act
+INC N$爆率加成 30
+INC N$爆率显示 140
+
+#if
+CHECKTITLE 八源至尊
+#act
+INC N$爆率加成 40
+INC N$爆率显示 160
+
+#if
+CHECKTITLE 九源至尊
+#act
+INC N$爆率加成 50
+INC N$爆率显示 180
+
+
+#if
+CHECKTITLE 神境
+#act
+INC N$爆率加成 60
+INC N$爆率显示 200
+
+#if
+CHECKTITLE 妖境
+#act
+INC N$爆率加成 70
+INC N$爆率显示 220
+#if
+CHECKTITLE 魔境
+#act
+INC N$爆率加成 80
+INC N$爆率显示 240
+
+#if
+CHECKTITLE 仙境
+#act
+INC N$爆率加成 90
+INC N$爆率显示 260
+
+#if
+CHECKTITLE 灵境
+#act
+INC N$爆率加成 100
+INC N$爆率显示 280
+
+
+#if
+CHECKTITLE 超脱
+#act
+INC N$爆率加成 110
+INC N$爆率显示 300
+
+#if
+CHECKTITLE 化凡
+#act
+INC N$爆率加成 120
+INC N$爆率显示 350
+
+
+
+#if
+CHECKTITLE 五行之体·金[十阶]
+#act
+INC N$爆率加成 25
+INC N$爆率显示 50
+
+#if
+CHECKTITLE 五行之体·木[十阶]
+#act
+INC N$爆率加成 25
+INC N$爆率显示 50
+
+#if
+CHECKTITLE 五行之体·水[十阶]
+#act
+INC N$爆率加成 25
+INC N$爆率显示 50
+
+#if
+CHECKTITLE 五行之体·火[十阶]
+#act
+INC N$爆率加成 25
+INC N$爆率显示 50
+
+#if
+CHECKTITLE 五行之体·土[十阶]
+#act
+INC N$爆率加成 25
+INC N$爆率显示 50
+
+
+
+
+#if
+CHECKRENEWLEVEL > 0
+#act
+mul N$转生倍攻 1 <$RELEVEL>
+INC N$倍攻加成 <$STR(N$转生倍攻)>
+
+#if
+#act
+GETHUMCUSTOMITEMVALUE -1 9 <$STR(N$鉴定爆率)> N99
+INC N$爆率加成 <$STR(N$鉴定爆率)>
+INC N$爆率显示 <$STR(N$鉴定爆率)>
+
+#if
+#act
+GETHUMCUSTOMITEMVALUE -1 11 <$STR(N$鉴定神力)> N99
+INC N$爆率加成 <$STR(N$鉴定神力)>
+INC N$爆率显示 <$STR(N$鉴定神力)>
+
+
+#if
+CHECKITEMADDVALUE 3 1 = 9
+#act
+INC N$倍攻加成 5
+
+#if
+CHECKITEMADDVALUE 3 1 = 10
+#act
+INC N$倍攻加成 10
+
+
+#if
+equal <$GLOBAL(SRYX-杀人第2名)> <$USERNAME>
+#act
+INC N$爆率显示 100
+INC N$爆率加成 25
+
+
+#if
+CHECKVAR HUMAN 职位捐款数量 > 4999
+#act
+INC N$爆率显示 500
+INC N$爆率加成 150
+INC N$倍攻加成 50
+;ADDSKILL 全屏吸怪
+;ADDSKILL 擒龙手 3
+
+
+
+
+#if
+equal A120 <$USERNAME>
+#act
+INC N$爆率显示 500
+INC N$爆率加成 150
+INC N$倍攻加成 50
+;ADDSKILL 全屏吸怪
+ADDSKILL 擒龙手 3
+
+
+
+#if
+equal A121 <$USERNAME>
+#act
+INC N$爆率显示 300
+INC N$爆率加成 100
+INC N$倍攻加成 30
+;ADDSKILL 全屏吸怪
+ADDSKILL 擒龙手 3
+
+#if
+equal A122 <$USERNAME>
+#act
+INC N$爆率显示 200
+INC N$爆率加成 70
+INC N$倍攻加成 10
+;ADDSKILL 全屏吸怪
+ADDSKILL 擒龙手 3
+
+
+
+#if
+equal A123 <$USERNAME>
+#act
+INC N$爆率显示 100
+INC N$爆率加成 60
+INC N$倍攻加成 5
+;ADDSKILL 全屏吸怪
+
+
+#if
+equal A124 <$USERNAME>
+#act
+INC N$爆率显示 80
+INC N$爆率加成 30
+INC N$倍攻加成 2
+;ADDSKILL 全屏吸怪
+
+#if
+not equal A122 <$USERNAME>
+not equal A121 <$USERNAME>
+not equal A120 <$USERNAME>
+#act
+;DELSKILL 全屏吸怪
+
+
+;=======灵符捐献
+
+#if
+equal A2 <$USERNAME>  ;第一名
+#act
+INC N$爆率显示 500
+INC N$爆率加成 50
+INC N$倍攻加成 20
+
+
+#if
+equal A3 <$USERNAME>  ;第二名
+#act
+INC N$爆率显示 400
+INC N$爆率加成 40
+INC N$倍攻加成 10
+
+
+#if
+equal A4 <$USERNAME>  ;第三名
+#act
+INC N$爆率显示 300
+INC N$爆率加成 30
+INC N$倍攻加成 5
+
+
+#if
+equal A5 <$USERNAME>  ;第四名
+#act
+INC N$爆率显示 200
+INC N$爆率加成 20
+
+#if
+equal A6 <$USERNAME>  ;第五名
+#act
+INC N$爆率显示 100
+INC N$爆率加成 10
+
+;============================
+
+
+
+
+
+
+#if
+large U41 0
+#act
+INC N$爆率显示 100
+INC N$爆率加成 30
+
+#if
+large U40 0
+#act
+INC N$爆率显示 100
+INC N$爆率加成 30
+
+
+
+#IF
+EQUAL U45 1
+#ACT
+INC N$倍攻加成 20
+ChangeModeEx 16 65535
+
+
+
+#if
+CHECK [94] 1
+#act
+INC N$爆率显示 10
+INC N$爆率加成 10
+
+#if
+CHECK [95] 1
+#act
+INC N$爆率显示 20
+INC N$爆率加成 20
+
+#if
+CHECK [97] 1
+#act
+INC N$爆率显示 30
+INC N$爆率加成 30
+
+
+#if
+CHECK [99] 1
+#act
+INC N$爆率显示 40
+INC N$爆率加成 40
+
+
+#if
+CHECK [109] 1
+#act
+INC N$爆率加成 100
+INC N$爆率显示 100
+
+#if
+CHECK [229] 1
+#act
+INC N$爆率加成 300
+INC N$爆率显示 300
+
+
+
+
+#if
+CHECKGAMEDIAMOND > 199
+#act
+;INC N$爆率显示 10
+INC N$爆率加成 50
+
+#if
+CHECKGAMEDIAMOND > 499
+#act
+;INC N$爆率显示 100
+INC N$爆率加成 50
+
+#if
+CHECKGAMEDIAMOND > 999
+#act
+;INC N$爆率显示 100
+INC N$爆率加成 50
+
+
+#if
+CHECKGAMEDIAMOND > 1999
+#act
+INC N$爆率显示 200
+INC N$爆率加成 200
+
+
+#if
+CHECKGAMEDIAMOND > 4999
+#act
+INC N$爆率显示 300
+INC N$爆率加成 300
+
+
+#if
+CHECKGAMEDIAMOND > 9999
+#act
+INC N$爆率显示 500
+INC N$爆率加成 500
+
+#if
+CHECKGAMEDIAMOND	>	22221
+#act
+INC	N$爆率显示	2000
+INC	N$爆率加成	2000
+
+
+#if
+CHECKGAMEDIAMOND	>	33332
+#act
+INC	N$爆率显示	3000
+INC	N$爆率加成	3000
+
+#if
+CHECKGAMEDIAMOND	>	44443
+#act
+INC	N$爆率显示	4000
+INC	N$爆率加成	4000
+
+#if
+CHECKGAMEDIAMOND	>	55554
+#act
+INC	N$爆率显示	5000
+INC	N$爆率加成	5000
+
+#if
+CHECKGAMEDIAMOND	>	66665
+#act
+INC	N$爆率显示	6000
+INC	N$爆率加成	6000
+
+#if
+CHECKGAMEDIAMOND	>	77776
+#act
+INC	N$爆率显示	7000
+INC	N$爆率加成	7000
+
+#if
+CHECKGAMEDIAMOND	>	88887
+#act
+INC	N$爆率显示	8000
+INC	N$爆率加成	8000
+
+#if
+CHECKGAMEDIAMOND	>	99998
+#act
+INC	N$爆率显示	9000
+INC	N$爆率加成	9000
+INC N$倍攻加成 100
+m.PGAddHpPer - 2
+
+#if
+CHECKGAMEDIAMOND	>	7777776
+#act
+INC	N$爆率显示	10000
+INC	N$爆率加成	10000
+INC N$倍攻加成 100
+m.PGAddHpPer - 50
+
+#if
+CHECKGAMEDIAMOND	>	8888887
+#act
+INC	N$爆率显示	10000
+INC	N$爆率加成	10000
+INC N$倍攻加成 100
+m.PGAddHpPer - 50
+
+#if
+CHECKGAMEDIAMOND	>	9999998
+#act
+INC	N$爆率显示	5000000
+INC	N$爆率加成	5000000
+INC N$倍攻加成 100
+m.PGAddHpPer - 50
+
+
+
+
+
+
+#if
+checkitemw 狂沙之怒 1
+#act
+INC N$倍攻加成 20
+
+
+#if
+checkitemw ★炽天使之拥★ 1
+#act
+INC N$爆率加成 5
+INC N$爆率显示 20
+
+
+#if
+checkitemw ●●饕餮●● 1
+#act
+INC N$爆率加成 5
+INC N$爆率显示 20
+
+
+
+#if
+checkitemw 号令之旗 1
+#act
+INC N$爆率加成 5
+INC N$爆率显示 20
+
+#if
+checkitemw 禁忌法相 1
+#act
+INC N$爆率加成 5
+INC N$爆率显示 20
+
+
+#if
+EQUAL T30 技术内裤
+#act
+INC N$爆率加成 15
+INC N$爆率显示 30
+
+#if
+checkitem 红牛饮料
+#act
+INC N$爆率加成 5
+INC N$爆率显示 20
+
+
+#if
+CHECKUSEITEM 3
+CHECKITEMADDVALUE 3 1 = 11
+#act
+INC N$倍攻加成 130
+
+
+#if
+checkitemw 魔王镜 1
+#act
+INC N$倍攻加成 6
+
+#if
+checkitemw ●●盘古斧●● 1
+#act
+INC N$倍攻加成 30
+
+
+#if
+checkitemw 【沃玛头盔】 1
+#act
+INC N$倍攻加成 5
+
+#if
+checkitemw 【祖玛头像】 1
+#act
+INC N$倍攻加成 10
+
+#if
+checkitemw ●●十方俱灭●● 1
+#act
+INC N$倍攻加成 10
+
+#if
+checkitemw 放逐之刃★ 1
+#act
+INC N$倍攻加成 10
+
+#if
+checkitemw 多兰之戒★ 1
+checkitemw 多兰之盾★ 1
+#act
+INC N$倍攻加成 5
+
+
+#if
+checkitemw “聚宝金盆” 1
+#act
+INC N$爆率加成 18
+INC N$爆率显示 50
+
+
+#if
+checkitemw ●●黑洞●● 1
+#act
+INC N$爆率加成 12
+INC N$爆率显示 30
+
+#if
+checkitemw 恶魔铃铛 1
+#act
+INC N$倍攻加成 10
+
+#if
+checkitemw ★范达姆の镯★ 1
+#act
+INC N$倍攻加成 4
+
+#if
+checkitemw 天魔紊乱履 1
+#act
+INC N$倍攻加成 20
+
+#if
+checkitemw 刑罚戮默 1
+#act
+INC N$倍攻加成 20
+
+#if
+checkitemw 希利斯的长靴 1
+#act
+INC N$倍攻加成 20
+
+#if
+checkitemw 白泽的第三条腿 1
+#act
+INC N$倍攻加成 20
+
+#if
+checkitemw 鸿蒙仙绫 1
+#act
+INC N$倍攻加成 20
+
+#if
+checkitemw 九转轮回 1
+#act
+INC N$倍攻加成 22
+
+#if
+checkitemw 千层绣花毡 1
+#act
+INC N$倍攻加成 23
+
+#if
+checkitemw 方父筑桥 1
+#act
+INC N$倍攻加成 25
+
+#if
+checkitemw 古神七踏 1
+#act
+INC N$倍攻加成 27
+
+#if
+checkitemw 一指·篡天运 1
+#act
+INC N$倍攻加成 30
+
+#if
+checkitemw 终有良人相伴 1
+#act
+INC N$倍攻加成 32
+
+
+#if
+checkitemw 熏风履 1
+#act
+INC N$倍攻加成 34
+
+#if
+checkitemw 玄华之悲苦 1
+#act
+INC N$倍攻加成 36
+
+#if
+checkitemw 青灯古庙·伴一生 1
+#act
+INC N$倍攻加成 38
+
+
+
+
+
+
+
+
+#if
+checkitemw 悟道石[完美] 1
+#act
+INC N$倍攻加成 20
+INC N$爆率加成 50
+INC N$爆率显示 100
+
+
+
+#if
+checkitemw 悟道石【至尊】 1
+#act
+INC N$倍攻加成 50
+INC N$爆率加成 100
+INC N$爆率显示 200
+
+
+#if
+CHECKTITLE 沙城捐献
+#act
+INC N$爆率加成 20
+INC N$爆率显示 50
+INC N$攻速加成 1
+
+#if
+CHECKTITLE 杀戮之王
+#act
+INC N$爆率加成 50
+INC N$爆率显示 200
+
+#if
+CHECKTITLE 新的征程
+#act
+INC N$爆率加成 5
+INC N$爆率显示 10
+
+#if
+CHECKTITLE 冰河踏破者
+#act
+INC N$爆率加成 10
+INC N$爆率显示 20
+
+#if
+CHECKTITLE 星界旅行者
+#act
+INC N$爆率加成 15
+INC N$爆率显示 30
+
+#if
+CHECKTITLE 暮光征服者
+#act
+INC N$爆率加成 20
+INC N$爆率显示 40
+
+#if
+CHECKTITLE 灭世终结者
+#act
+INC N$爆率加成 25
+INC N$爆率显示 50
+
+
+#if
+CHECKTITLE 灰烬审判军
+#act
+INC N$爆率加成 30
+INC N$爆率显示 60
+
+#if
+CHECKTITLE 黑曜石杀手
+#act
+INC N$爆率加成 35
+INC N$爆率显示 70
+
+#if
+CHECKTITLE 魔法追寻者
+#act
+INC N$爆率加成 40
+INC N$爆率显示 80
+
+
+
+
+#if
+CHECKTITLE 海加尔的复仇
+#act
+INC N$爆率加成 45
+INC N$爆率显示 90
+
+
+
+
+#if
+CHECKTITLE 地狱咆哮终结者
+#act
+INC N$爆率加成 50
+INC N$爆率显示 100
+
+
+
+#if
+CHECKTITLE 奥格瑞玛解放者
+#act
+INC N$爆率加成 55
+INC N$爆率显示 110
+
+#if
+CHECKTITLE 奥格瑞玛征服者
+#act
+INC N$爆率加成 60
+INC N$爆率显示 120
+
+#if
+CHECKTITLE 破碎世界的守护者
+#act
+INC N$爆率加成 65
+INC N$爆率显示 130
+
+#if
+CHECKTITLE 艾泽拉斯的救世主
+#act
+INC N$爆率加成 70
+INC N$爆率显示 140
+
+#if
+CHECKTITLE 觉醒·热血之魂
+#act
+INC N$爆率加成 75
+INC N$爆率显示 150
+
+#if
+CHECKTITLE 集结·战斗号角
+#act
+INC N$爆率加成 80
+INC N$爆率显示 160
+
+
+
+
+#if
+CHECKTITLE 暴走·极限突破
+#act
+INC N$爆率加成 90
+INC N$爆率显示 180
+
+#if
+CHECKTITLE 天启·信仰之歌
+#act
+INC N$爆率加成 100
+INC N$爆率显示 200
+
+#if
+CHECKTITLE 进化之光·混沌开天
+#act
+INC N$爆率加成 110
+INC N$爆率显示 220
+
+#if
+CHECKTITLE 战鼓震天·异界战歌
+#act
+INC N$爆率加成 120
+INC N$爆率显示 240
+
+
+#if
+CHECKTITLE 毕方之炎·夜空魅影
+#act
+INC N$爆率加成 130
+INC N$爆率显示 260
+
+#if
+CHECKTITLE 勇士的荣耀·最终幻想
+#act
+INC N$爆率加成 150
+INC N$爆率显示 300
+
+
+
+#if
+CHECKTITLE 五行之子
+#act
+;INC N$爆率加成 300
+;INC N$爆率显示 300
+
+
+
+
+
+
+#if
+CHECKTITLE 神魔·小成
+#act
+INC N$爆率加成 15
+INC N$爆率显示 30
+INC N$攻速加成 2
+
+#if
+CHECKTITLE 神魔·大成
+#act
+INC N$爆率加成 30
+INC N$爆率显示 60
+INC N$攻速加成 3
+
+#if
+CHECKTITLE 神魔·完满
+#act
+INC N$爆率加成 100
+INC N$爆率显示 200
+INC N$攻速加成 4
+
+
+
+
+
+
+#if
+large N$水晶肠 1
+#act
+INC N$爆率加成 44
+INC N$爆率显示 88
+
+
+
+
+#IF
+CHECKTITLE 五行之体·混沌[一阶]
+#act
+;INC N$爆率加成 30
+;INC N$爆率显示 200
+
+
+#IF
+CHECKTITLE 五行之体·混沌[二阶]
+#act
+;INC N$爆率加成 60
+;INC N$爆率显示 300
+
+#IF
+CHECKTITLE 五行之体·混沌[三阶]
+#act
+;INC N$爆率加成 90
+;INC N$爆率显示 400
+
+#IF
+CHECKTITLE 五行之体·混沌[四阶]
+#act
+;INC N$爆率加成 120
+;INC N$爆率显示 500
+
+#IF
+CHECKTITLE 五行之体·混沌[五阶]
+#act
+;INC N$爆率加成 150
+;INC N$爆率显示 600
+
+#IF
+CHECKTITLE 王之守护·炎
+#act
+INC N$爆率加成 10
+INC N$爆率显示 20
+
+
+#IF
+CHECKTITLE 王之守护·冰
+#act
+INC N$爆率加成 10
+INC N$爆率显示 20
+
+
+#IF
+CHECKTITLE 王之守护·光
+#act
+INC N$爆率加成 10
+INC N$爆率显示 20
+
+#IF
+CHECKTITLE 王之守护·风
+#act
+INC N$爆率加成 10
+INC N$爆率显示 20
+
+#IF
+CHECKTITLE 王之守护·守护
+#act
+INC N$爆率加成 10
+INC N$爆率显示 20
+
+#IF
+CHECKTITLE 英勇的冒险家
+#act
+INC N$爆率加成 20
+INC N$爆率显示 50
+
+
+
+#if
+CheckContainsText <$SERVERNAME> 测试区
+#act
+INC N$爆率加成 1200
+INC N$爆率显示 100
+
+#if
+CheckContainsText <$SERVERNAME> 1区
+#act
+INC N$爆率加成 1000
+INC N$爆率显示 100
+
+#if
+CheckContainsText <$SERVERNAME> 2区
+#act
+INC N$爆率加成 1050
+INC N$爆率显示 150
+
+#if
+CheckContainsText <$SERVERNAME> 3区
+#act
+INC N$爆率加成 1100
+INC N$爆率显示 200
+
+#if
+CheckContainsText <$SERVERNAME> 4区
+#act
+INC N$爆率加成 1150
+INC N$爆率显示 250
+
+#if
+CheckContainsText <$SERVERNAME> 5区
+#act
+INC N$爆率加成 1200
+INC N$爆率显示 300
+
+#if
+CheckContainsText <$SERVERNAME> 总区
+#act
+;INC N$爆率加成 1200
+INC N$爆率显示 200
+
+
+
+
+
+#if
+check [101] 1
+#act
+SetIcon 0 13 0 -28 6 15 0 200 0
+INC N$爆率加成 50
+INC N$爆率显示 100
+;ChangeModeEx 14 65535
+
+
+
+#IF
+CHECKNAMELIST ..\QuestDiary\土豪\名单.txt
+#ACT
+INC N$爆率加成 1000
+INC N$爆率显示 100
+
+
+#if
+CHECKTITLE 狂暴之力
+#act
+SETICON 5 0 311 0 -65 18 0 200 0
+;SETICON 1 0 300 -5 -80  10 0 150 0
+INC N$倍攻加成 12
+INC N$爆率加成 25
+INC N$爆率显示 50
+
+#if
+NOT CHECKTITLE 杀戮之王
+NOT equal a120 <$username>
+#act
+SETICON 4 -1
+#if
+CHECKTITLE 杀戮之王
+#act
+SETICON 4 19 120 0 -105 10 0 100 0
+#if
+equal a120 <$username>
+#act
+SETICON 4 19 100 -5 -85 12 0 100 0
+
+#if
+#act
+INC N$爆率加成 <$STR(N$临时真爆率)>
+INC N$爆率显示 <$STR(N$临时爆率)>
+
+
+
+#if
+CHECKLEVELEX > 0
+#act
+;KILLMONBURSTRATE 20140220 20140221 <$STR(N$爆率加成)> 20140223 20140224 20140225 20140226 65535 20140227 20140228
+KILLMONBURSTRATE <$STR(N$爆率加成)> 65535
+POWERRATE <$STR(N$倍攻加成)> 65535
+CHANGESPEED 2 <$STR(N$攻速加成)>
+
+
+
+}

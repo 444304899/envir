@@ -1,0 +1,161 @@
+[@Main]
+#if
+equal g495 0
+#act
+;mov s$活动举行 正在举行
+#ELSEACT
+MessageBox 活动结束后再来领取!!!
+BREAK
+
+#IF
+#ACT
+MOV S$第一名 <$GLOBAL(SRYX-杀人第1名)>
+;SetStringBlank S$第一名 14 1
+SetStringBlank S$第一名 14 1
+MOV S$第二名 <$GLOBAL(SRYX-杀人第2名)>
+;SetStringBlank S$第二名 14 1
+SetStringBlank S$第二名 14 1
+MOV S$第三名 <$GLOBAL(SRYX-杀人第3名)>
+;SetStringBlank S$第三名 14 1
+SetStringBlank S$第三名 14 1
+
+MOV S$第一数 <$GLOBAL(SRYX-杀人第1数)>
+;SetStringBlank S$第一数 3 1
+SetStringBlank S$第一数 3 1
+MOV S$第二数 <$GLOBAL(SRYX-杀人第2数)>
+;SetStringBlank S$第二数 3 1
+SetStringBlank S$第二数 3 1
+MOV S$第三数 <$GLOBAL(SRYX-杀人第3数)>
+;SetStringBlank S$第三数 3 1
+SetStringBlank S$第三数 3 1
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+
+<>                                                                        <[杀人活动奖励领取]/FCOLOR=70>\ \
+
+<>                                                          <查看活动排名奖励
+|253#杀人数第一获得：[称号]杀戮之王+赞助会员+500钻石
+^253#杀人数第二获得：赞助会员+500钻石
+^253#杀人数第三获得：500钻石奖励
+^253#杀人数满20获得：200钻石奖励
+^251#当前第一名获得者：【<$str(S$第一名)>】　当前第一名杀人数：【<$str(S$第一数)>】
+^251#当前第二名获得者：【<$str(S$第二名)>】　当前第二名杀人数：【<$str(S$第二数)>】
+^251#当前第三名获得者：【<$str(S$第三名)>】　当前第三名杀人数：【<$str(S$第三数)>】>\ \
+
+\
+<>                                                     <奖励在封妖城小安全区领取!!/AUTOCOLOR=254,251,168,191,250,70,245,249,253>         <奖励在封妖城小安全区领取!!/AUTOCOLOR=254,251,168,191,250,70,245,249,253>  \  \
+<>
+<>                                                     <奖励在封妖城小安全区领取!!/AUTOCOLOR=254,251,168,191,250,70,245,249,253>         <奖励在封妖城小安全区领取!!/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \ \  \
+<>                                                        <查看:[称号]杀戮之王|222# 1.爆率加成+200%^255# 2.全属性300-300^255# 3.HPMP+8888^253# 4.属性可叠加百分比>            <《提取第一名称号》|249#[称号]杀戮之王建议售价1000金币^253#全区唯一称号^253#/@交易> \
+
+<>                                                        <Img:174:6:0:-30>\
+
+[@奖励1]
+#if
+#act
+MessageBox 奖励请到封妖城领取！
+BREAK
+
+
+
+
+
+
+[@奖励2]
+#if
+CHECK [201] 1
+#act
+MessageBox 只能领取一次！
+BREAK
+
+
+#if
+CHECKVAR GLOBAL SRYX-杀人第2名 = <$USERNAME>
+#act
+ADDSKILL 魔法盾
+ADDSKILL 十步一杀
+set [101] 1
+SETONTIMER 36 1
+#CALL [\大熊功能\职位计算.txt] @开始计算
+#CALL [\大熊功能\职位计算.txt] @开始计算
+GAMEPOINT + 500
+set [201] 1
+SENDMOVEMSG 0 253 255 150 1 ≮系统公告≯：杀人第二玩家[<$USERNAME>]成为百团大战赞助玩家，本服38元满赞助，无其他隐藏消费！
+SENDMOVEMSG 0 249 251 350 1 ≮系统公告≯：杀人第二玩家[<$USERNAME>]成为百团大战赞助玩家，本服38元满赞助，无其他隐藏消费！
+MessageBox 购买成功：\　\恭喜您成为百团大战赞助玩家！
+#elseact
+MESSAGEBOX 请查看清楚自己的排名！
+BREAK
+
+
+
+[@奖励3]
+#if
+CHECK [202] 1
+#act
+MessageBox 只能领取一次！
+BREAK
+
+#if
+CHECKVAR GLOBAL SRYX-杀人第3名 = <$USERNAME>
+#act
+GAMEPOINT + 500
+set [202] 1
+SENDMOVEMSG 0 253 255 150 1 ≮系统公告≯：杀人第三玩家[<$USERNAME>]获得杀人奖励：[500钻石]！
+#elseact
+MESSAGEBOX 请查看清楚自己的排名！
+BREAK
+
+
+
+
+[@奖励4]
+#if
+CHECK [203] 1
+#act
+MessageBox 只能领取一次！
+BREAK
+
+#if
+CHECKVAR  HUMAN SRYX-个人杀人 > 19
+#act
+GAMEPOINT + 200
+set [203] 1
+SENDMOVEMSG 0 253 255 150 1 ≮系统公告≯：杀人20玩家[<$USERNAME>]获得杀人奖励：[200钻石]！
+#elseact
+MESSAGEBOX 请查看清楚自己的杀人数量！
+BREAK
+
+
+[@交易]
+#if
+CheckGold  100
+CHECKTITLE 杀戮之王
+#act
+DEPRIVETITLE 杀戮之王
+SETICON 4 -1
+give 杀戮之王称号卷 1
+TAKE 金币 100
+MessageBox 提取成功：\　\恭喜您提取杀戮之王称号卷！
+#elseact
+MESSAGEBOX 请确认你是否有杀戮之王称号和10金币
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

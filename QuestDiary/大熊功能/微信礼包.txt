@@ -1,0 +1,34 @@
+(@@InPutInteger)
+
+[@微信界面]
+{
+#if
+#act
+#say
+\ \ \ \
+<><IMG:0:6:0:-3><[微信礼包]/FCOLOR=70>\ \ \ \
+<>                            <IMG:0:6:0:-3><QQ群奖励:/FCOLOR=158> <【刀刀切割+500】/FCOLOR=250> \ \
+<>                            <IMG:0:6:0:-3><QQ群奖励:/FCOLOR=158> <【切割神器·[一阶] 】/FCOLOR=250> \ \
+
+\ \
+<>                                <输入激活码/@@InPutString69>  \ \ \
+<IMG:311:6:10:-150>
+
+
+
+
+[@InPutString69]
+#if
+check [67] 0
+EQUAL S69 zyhx888
+#act
+set [67] 1
+;GiveStateItem 切割神器·[一阶] 1 1 0 0 1 1 1 1
+GIVESTATEITEM 切割神器·[一阶] 1 1 1 0 0 1 1 1 0
+SENDMSG 0 微信礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+SENDMSG 0 微信礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+SENDMSG 0 微信礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
+MESSAGEBOX [提示]：恭喜你领取成功！
+#ELSEACT
+MESSAGEBOX [提示]：对不起，激活码错误\\[提示]：或者你已经领过了该礼包！
+}

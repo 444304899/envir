@@ -1,0 +1,232 @@
+[@main]
+
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \
+<>                                                              <本服承诺全靠打，无收费地图，爆率全开。/AUTOCOLOR=253,249,70,191,250,168,245,251,254>\
+<>                                                                      <多余的材料可以利用起来/AUTOCOLOR=191,245,168,254,250,70,251,249,253>\ \
+
+<>                                              < ①:云顶结晶*9999兑换200爆率卷卷轴（限时1小时）/AUTOCOLOR=250>                     <兑换/@兑换1>\ \
+
+<>                                              < ②:称号卷*9999+26转地图全套装备+500金币兑换“古神传承”其中一字/AUTOCOLOR=250>     <兑换|251#五股烈焰吞天魔剑^-^251#古神皮甲^-^251#连臂^-^251#汤山^-^251#九星古神头骨^-^251#天魔紊乱履^-^251#切割命运之轮^-^251#碧海焚天^-^251#魂·魄^-^251#悸哭戾气/@兑换2>  \ \
+
+<>                                              < ③:称号卷*9999+27转地图全套装备+500金币兑换“踏天之力”其中一字 /AUTOCOLOR=250>    <兑换|251#九曲天刀^-^251#九曲三相^-^251#呼风^-^251#唤雨^-^251#金天黑地^-^251#十亿尊魂幡^-^251#碧海焚天^-^251#魂·魄^-^251#悸哭戾气/@兑换3> \  \
+
+<>                                              < ④:时装羽毛*9999+28转地图全套装备可兑换5个风灵石·天/AUTOCOLOR=250>               <兑换|251#★切割[凡]^-^251#纺锤之锚^-^251#希利斯的长靴^-^251#风暴之声^-^251#不灭之握^-^251#尾王印记^-^251#布拉巴斯王者统袍/@兑换4> \  \
+
+<>                                              < ⑤:时装羽毛*9999+玛法地图全套装备可兑换5个风灵石·天/AUTOCOLOR=250>               <兑换|251#情天神镯^-^251#神话魔镯^-^251#红莲龙牙链^-^251#不动冥王盔^-^251#神戒^-^251#魔戒^-^251#神器·冰魄/@兑换5> \  \
+
+<>                                              < ⑥:神祈之泪*9999+十万地图全套装备可兑换5个阳光石·圣/AUTOCOLOR=250>               <兑换|251#白泽的第三条腿^-^251#不死鸟之眼^-^251#白帝神骨^-^251#多罗妖力^-^251#十万妖魂兽甲^-^251#★★★究魄★★★^-^251#遗鱼鳞片/@兑换6> \ \
+
+<>                                              < ⑦:神祈之泪*9999+混沌地图全套装备可兑换5个七星石·威/AUTOCOLOR=250>               <兑换|251#仙人指路^-^251#九天仙绫^-^251#太古的岁月^-^251#九天神雷^-^251#轮回^-^251#永恒的空间^-^251#火焰·赫斯提亚^-^251#阿耳忒弥斯神袍/@兑换7> \ \
+
+
+
+
+
+
+
+[@兑换1]
+#IF
+checkitem 云顶结晶 9999
+#act
+take 云顶结晶 9999
+give 爆率卷轴
+MESSAGEBOX [提示]:兑换成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+
+[@兑换2]
+#if
+CheckGold 500
+checkitem 五股烈焰吞天魔剑 1
+checkitem 古神皮甲 1
+checkitem 连臂 1
+checkitem 汤山 1
+checkitem 九星古神头骨 1
+checkitem 天魔紊乱履 1
+checkitem 切割命运之轮 1
+checkitem 碧海焚天 1
+checkitem 魂·魄 1
+checkitem 悸哭戾气 1
+checkitem 称号卷 9999
+#act
+Take 金币 500
+take 五股烈焰吞天魔剑 1
+take 古神皮甲 1
+take 连臂 1
+take 汤山 1
+take 九星古神头骨 1
+take 天魔紊乱履 1
+take 切割命运之轮 1
+take 碧海焚天 1
+take 魂·魄 1
+take 悸哭戾气 1
+take 称号卷 9999
+give 承
+MESSAGEBOX [提示]:合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+
+
+
+[@兑换3]
+
+#if
+CheckGold 500
+checkitem  称号卷 9999
+checkitem 九曲天刀 1
+checkitem 九曲三相 1
+checkitem 呼风 1
+checkitem 唤雨 1
+checkitem 金天黑地 1
+checkitem 十亿尊魂幡 1
+checkitem 碧海焚天 1
+checkitem 魂·魄 1
+checkitem 悸哭戾气 1
+#act
+Take 金币 500
+take 九曲天刀 1
+take 九曲三相 1
+take 呼风 1
+take 唤雨 1
+take 金天黑地 1
+take 十亿尊魂幡 1
+take 碧海焚天 1
+take 魂·魄 1
+take 悸哭戾气 1
+take 称号卷 9999
+give 力
+MESSAGEBOX [提示]:合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+
+
+
+
+
+
+[@兑换4]
+#if
+checkitem ★切割[凡] 1
+checkitem 纺锤之锚 1
+checkitem 希利斯的长靴 1
+checkitem 风暴之声 1
+checkitem 不灭之握 1
+checkitem 尾王印记 1
+checkitem 布拉巴斯王者统袍 1
+checkitem 时装羽毛 9999
+#act
+take  ★切割[凡] 1
+take  纺锤之锚 1
+take  希利斯的长靴 1
+take  风暴之声 1
+take  不灭之握 1
+take  尾王印记 1
+take  布拉巴斯王者统袍 1
+take 时装羽毛 9999
+give 风灵石·天 5
+MESSAGEBOX [提示]:风灵石·天合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+[@兑换5]
+#if
+checkitem 时装羽毛 9999
+checkitem 情天神镯 1
+checkitem 神话魔镯 1
+checkitem 红莲龙牙链 1
+checkitem 不动冥王盔 1
+checkitem 神戒 1
+checkitem 魔戒 1
+checkitem 神器·冰魄 1
+#act
+take 情天神镯 1
+take 神话魔镯 1
+take 红莲龙牙链 1
+take 不动冥王盔 1
+take 神戒 1
+take 魔戒 1
+take 神器·冰魄 1
+take 时装羽毛 9999
+give 风灵石·天 5
+MESSAGEBOX [提示]:风灵石·天合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+[@兑换6]
+#if
+checkitem 神祈之泪 9999
+checkitem 白泽的第三条腿 1
+checkitem 不死鸟之眼 1
+checkitem 白帝神骨 1
+checkitem 多罗妖力 1
+checkitem 十万妖魂兽甲 1
+checkitem ★★★究魄★★★ 1
+checkitem 遗鱼鳞片 1
+#act
+take 白泽的第三条腿 1
+take 不死鸟之眼 1
+take 白帝神骨 1
+take 多罗妖力 1
+take 十万妖魂兽甲 1
+take ★★★究魄★★★ 1
+take 遗鱼鳞片 1
+take 神祈之泪 9999
+give 阳光石·圣 5
+MESSAGEBOX [提示]:阳光石·圣合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+[@兑换7]
+#if
+checkitem 仙人指路 1
+checkitem 九天仙绫 1
+checkitem 太古的岁月 1
+checkitem 九天神雷 1
+checkitem 轮回 1
+checkitem 永恒的空间 1
+checkitem 火焰·赫斯提亚 1
+checkitem 阿耳忒弥斯神袍 1
+checkitem 神祈之泪 9999
+#act
+take 仙人指路 1
+take 九天仙绫 1
+take 太古的岁月 1
+take 九天神雷 1
+take 轮回 1
+take 永恒的空间 1
+take 火焰·赫斯提亚 1
+take 阿耳忒弥斯神袍 1
+take 神祈之泪 9999
+give 七星石·威 5
+MESSAGEBOX [提示]:七星石·威合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK

@@ -1,0 +1,230 @@
+[@main]
+
+#OR
+CHECKITEMW 「九天·祥云」★★★ 1
+ChecKitem 「九天·祥云」★★★
+#ACT
+MESSAGEBOX 你已经有顶级「九天·祥云」★★★~
+BREAK
+
+#IF
+NOT CHECKITEMW 「九天·祥云」★ 1
+NOT ChecKitem 「九天·祥云」★
+NOT CHECKITEMW 「九天·祥云」★★ 1
+NOT ChecKitem 「九天·祥云」★★
+NOT CHECKITEMW 「九天·祥云」★★★ 1
+NOT ChecKitem 「九天·祥云」★★★
+
+
+#ACT
+GOTO @初级
+BREAK
+#ELSEACT
+GOTO @检测1
+BREAK
+
+
+[@检测1]
+#OR
+CHECKITEMW 「九天·祥云」★ 1
+ChecKitem 「九天·祥云」★
+#ACT
+GOTO @下一页_1
+BREAK
+#ELSEACT
+GOTO @检测2
+BREAK
+
+
+
+[@检测2]
+#OR
+CHECKITEMW 「九天·祥云」★★ 1
+ChecKitem 「九天·祥云」★★
+#ACT
+GOTO @下一页_2
+BREAK
+#ELSEACT
+GOTO @检测3
+BREAK
+
+
+[@检测3]
+#OR
+CHECKITEMW 「九天·祥云」★★★ 1
+ChecKitem 「九天·祥云」★★★
+#ACT
+GOTO @下一页_3
+BREAK
+#ELSEACT
+GOTO @检测4
+BREAK
+
+
+
+
+
+
+[@初级]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[「九天·祥云」★/FCOLOR=70}\
+<PlayImg:17:1050:12:100:140:50>\
+<Itemshow:708:0:593:90>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：神级魂环·SSS*1^250#合成条件②：时装羽毛*1500^250#合成条件③：钻石*500/@1级切割>
+<ImgEx:41:180:181:182:126:309>
+<ImgEx:41:183:184:185:123:309/@下一页_1>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+
+<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+
+
+
+[@下一页_1]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[「九天·祥云」★★/FCOLOR=70}\
+<PlayImg:17:1070:12:100:140:50>\
+<Itemshow:709:0:593:90>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：「九天·祥云」★*1^250#合成条件②：时装羽毛*2000^250#合成条件③：钻石 *1000/@2级切割>
+<ImgEx:41:180:181:182:126:309/@main>
+<ImgEx:41:183:184:185:123:309/@下一页_2>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+
+<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+
+
+
+[@下一页_2]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[「九天·祥云」★★★/FCOLOR=70}\
+<PlayImg:17:1090:12:100:140:50>\
+<Itemshow:710:0:590:90>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：「九天·祥云」★★*1^250#合成条件②：时装羽毛*3000^250#合成条件③：风灵石·天*200/@3级切割>
+<ImgEx:41:180:181:182:126:309/@main>
+<ImgEx:41:183:184:185:123:309/@下一页_3>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+
+<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+
+
+
+
+
+
+
+[@下一页_3]
+#IF
+#ACT
+MESSAGEBOX 勇士你好,我这里已无法为你提供服务,更高级时装请前往封天画卷寻找!!
+BREAK
+
+
+
+[@1级切割]
+#if
+checkitem 神级魂环·SSS 1
+checkitem 时装羽毛 1500
+checkGAMEPOINT > 499
+#act
+take 神级魂环·SSS 1
+take 时装羽毛 1500
+GAMEPOINT - 500
+
+;GiveStateItem 「九天·祥云」★ 1 1 0 0 0 1 0 1
+GIVESTATEITEM 「九天·祥云」★ 1 1 1 0 0 0 1 0 0
+SENDMOVEMSG 0 253 255 150 1 <【七彩祥云】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功锻造了[/FCOLOR=161><「九天·祥云」★/FCOLOR=250><]打怪必备切割神器，PK更牛比！！！/FCOLOR=161>
+MESSAGEBOX [提示]:获得物品:「九天·祥云」★
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@2级切割]
+#if
+checkitem 「九天·祥云」★ 1
+checkitem 时装羽毛 2000
+checkGAMEPOINT > 999
+#act
+take 「九天·祥云」★ 1
+take 时装羽毛 2000
+GAMEPOINT - 1000
+;GiveStateItem 「九天·祥云」★★ 1 1 0 0 0 1 0 1
+GIVESTATEITEM 「九天·祥云」★★ 1 1 1 0 0 0 1 0 0
+SENDMOVEMSG 0 253 255 150 1 <【七彩祥云】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功锻造了[/FCOLOR=161><「九天·祥云」★★/FCOLOR=250><]打怪必备切割神器，PK更牛比！！！/FCOLOR=161>
+
+
+MESSAGEBOX [提示]:获得物品:「九天·祥云」★★
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@3级切割]
+#if
+checkitem 「九天·祥云」★★ 1
+checkitem 时装羽毛 3000
+checkitem 风灵石·天 200
+#act
+take 「九天·祥云」★★ 1
+take 时装羽毛 3000
+take 风灵石·天 200
+;GiveStateItem  「九天·祥云」★★★ 1 1 0 0 0 1 0 1
+GIVESTATEITEM 「九天·祥云」★★★ 1 1 1 0 0 0 1 0 0
+SENDMOVEMSG 0 253 255 130 1 <【七彩祥云】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功锻造了[/FCOLOR=161><「九天·祥云」★★★/FCOLOR=250><]打怪必备切割神器，PK更牛比！！！/FCOLOR=161>
+
+MESSAGEBOX [提示]:获得物品:「九天·祥云」★★★
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@时装合成4]
+#if
+large g16 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+#if
+checkgold 10
+#act
+take 金币 10
+GIVE 风灵石·天 1
+INC G16 1
+MESSAGEBOX [提示]:获得物品:[风灵石·天]
+GOTO @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@时装合成5]
+#if
+large g16 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 风灵石·天 10
+INC G16 10
+MESSAGEBOX [提示]:获得物品:[风灵石·天*10]
+GOTO @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+

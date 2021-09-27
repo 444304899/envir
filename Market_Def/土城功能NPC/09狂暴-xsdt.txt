@@ -1,0 +1,5 @@
+[@main]
+#if
+#act
+#CALL [\大熊功能\狂暴.txt] @开启狂暴
+break

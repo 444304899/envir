@@ -1,0 +1,16 @@
+[@钻石]
+{
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ELSEACT
+BREAK
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\测试区记录\钻石记录账号.txt
+#ACT
+GETRANDOMTEXT ..\QuestDiary\测试区记录\钻石记录\<$USERACCOUNT>.txt N$钻石记录
+INC N$钻石记录 <$STR(N$加钻石)>
+CLEARNAMELIST ..\QuestDiary\测试区记录\钻石记录\<$USERACCOUNT>.txt
+ADDTEXTLIST ..\QuestDiary\测试区记录\钻石记录\<$USERACCOUNT>.txt <$STR(N$钻石记录)>
+SENDMSG 7 测试区成功记录[<$STR(N$加钻石)>钻石]，当前共记录[<$STR(N$钻石记录)>钻石]
+BREAK
+}

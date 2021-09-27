@@ -1,0 +1,30 @@
+[@Main]
+#IF
+#ACT
+#SAY
+\
+<上台比武，谁赢了，谁就获得所压钻石。/FCOLOR=250>\
+<比武中不允许使用回城，随机以及任何作弊行为，比武时间：必须在5分钟内。/FCOLOR=250>\
+<如果5分钟内不分胜负，所压的钻石，将会被系统没收！/FCOLOR=254>\
+<提示：本服独家设计，体验真正的打擂模式！/FCOLOR=253>\
+<ＰＳ 双方同时死亡判定夺擂失败-所压的钻石 将会被系统没收！/FCOLOR=249>\
+<继续观战/@ext>　　　　　　　 <点击回城/@回城>\　\
+<温馨提示:/FCOLOR=255><比赛结束后获胜者请在服务员处领取,退出视为放弃！/FCOLOR=242>　\
+
+[@回城]
+#IF
+NOT checkvar GLOBAL 挑战邀请姓名 = <$USERNAME>
+NOT checkvar GLOBAL 挑战发起姓名 = <$USERNAME>
+NOT checkvar GLOBAL 挑战邀请姓名2 = <$USERNAME>
+NOT checkvar GLOBAL 挑战发起姓名2 = <$USERNAME>
+NOT checkvar GLOBAL 挑战邀请姓名3 = <$USERNAME>
+NOT checkvar GLOBAL 挑战发起姓名3 = <$USERNAME>
+NOT checkvar GLOBAL 挑战邀请姓名4 = <$USERNAME>
+NOT checkvar GLOBAL 挑战发起姓名4 = <$USERNAME>
+#ACT
+MOVR P8 18
+INC  P8 321
+MOVR P7 17
+INC  P7 322
+mapmove 3 <$STR(P8)> <$STR(P7)>
+SetHumAttackMode 0 1

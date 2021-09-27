@@ -1,0 +1,120 @@
+[@main]
+#if
+#act
+MOV N$觉醒等级 0
+MOV N$元素值1 0
+MOV N$元素值2 0
+MOV N$元素值3 0
+MOV N$伤害值 0
+
+
+
+
+
+#if
+#act
+#SAY
+\ \ \ \
+<>   <[装备觉醒]|^253#武器最高觉醒元素为15点^253#衣服最高觉醒元素为14点/FCOLOR=253><IMG:91:6:-76:-2> \ \ \
+<>     <请在下方物品框中放入你要觉醒的衣服武器.../FCOLOR=7> \ \ \
+<>     <ITEMBOX:0:12:47:25:-10:40:40:5,10:请放入你要觉醒的装备>\
+<>                              <开始觉醒|246#每次觉醒需要 5w灵符^-^246#每次觉醒需要“云顶结晶”*200^-^246#每次觉醒需要“工匠石”*20/@洗>
+
+
+
+
+
+
+[@ItemIntoBox0]
+#if
+#act
+#SAY
+\ \ \ \
+<>   <[装备觉醒]/FCOLOR=253><IMG:91:6:-78:-4><IMG:7:6:-169:0> \ \ \
+<>     <请在下方物品框中放入你要觉醒的衣服武器.../FCOLOR=7> \ \ \
+<>     <ITEMBOX:0:6:239:25:-10:40:40:5,10:请放入你要觉醒的装备>\
+<>                              <开始觉醒|246#每次觉醒需要 5w灵符^-^246#每次觉醒需要“云顶结晶”*200^-^246#每次觉醒需要“工匠石”*20/@洗>
+
+
+
+[@洗]
+#if
+checkitem 云顶结晶 200
+checkitem 工匠石 20
+CHECKGAMEGIRD > 49999
+#act
+take 工匠石 20
+take 云顶结晶 200
+GAMEGIRD - 50000
+#ELSEACT
+MESSAGEBOX 对不起，您的元宝,材料不足。
+break
+
+
+
+
+#if
+CHECKLEVELEX > 0
+#ACT
+SetUpgradeItem 0
+#ELSEACT
+MESSAGEBOX 请在物品框中放入需要觉醒的装备。
+break
+
+
+#if
+EQUAL <$BOXITEM[0].STDMODE> 5
+#ACT
+MOV S$鉴定分类 武器
+
+#if
+EQUAL <$BOXITEM[0].STDMODE> 10
+#ACT
+MOV S$鉴定分类 衣服
+
+
+
+
+
+
+#if
+
+EQUAL S$鉴定分类 武器
+#act
+MOVR N$伤害值 1 40
+MOVR N$元素值1 1 15
+MOVR N$元素值2 1 15
+CHANGECUSTOMITEMABIL -1 8 0 250
+CHANGECUSTOMITEMABIL -1 8 1 8
+CHANGECUSTOMITEMABIL -1 8 2 4
+CHANGECUSTOMITEMABIL -1 8 3 1
+CHANGECUSTOMITEMVALUE -1 8 = <$STR(n$伤害值)>
+SetNewItemValue -1 0 = <$STR(n$元素值1)>
+SetNewItemValue -1 1 = <$STR(n$元素值2)>
+UpDateBoxItem 0
+;SENDUPGRADEITEM
+goto @main
+messagebox 【<$BOXITEM[0].NAME>】觉醒成功！
+
+
+
+
+
+
+#if
+EQUAL S$鉴定分类 衣服
+#act
+MOVR N$伤害值 1 40
+MOVR N$元素值1 1 14
+MOVR N$元素值2 1 14
+CHANGECUSTOMITEMABIL -1 8 0 250
+CHANGECUSTOMITEMABIL -1 8 1 8
+CHANGECUSTOMITEMABIL -1 8 2 8
+CHANGECUSTOMITEMABIL -1 8 3 1
+CHANGECUSTOMITEMVALUE -1 8 = <$STR(n$伤害值)>
+SetNewItemValue -1 2 = <$STR(n$元素值1)>
+SetNewItemValue -1 3 = <$STR(n$元素值2)>
+UpDateBoxItem 0
+;SENDUPGRADEITEM
+goto @main
+messagebox 【<$BOXITEM[0].NAME>】觉醒成功！

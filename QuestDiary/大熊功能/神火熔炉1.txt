@@ -1,0 +1,150 @@
+
+
+[@神火系统]
+#if
+#act
+#SAY
+\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<>                                                                                                   <当前神火点:/FCOLOR=253><$STR(u13)>\
+<>                                                       <ItemShow:1508:0:0:5:1>        <ItemShow:1509:0:0:5:1>        <ItemShow:1510:0:0:5:1>        <ItemShow:1511:0:0:5:1> \ \ \ \
+<>                                                     <《点击兑换》|253#兑换需要神火点*1000/@兑换1>   <《点击兑换》|253#兑换需要神火点*1000/@兑换2>   <《点击兑换》|253#兑换需要神火点*1000/@兑换3>   <《点击兑换》|253#兑换需要神火点*1000/@兑换4> \ \ \
+<>                                                       <ItemShow:1513:0:0:5:1>        <ItemShow:1514:0:0:5:1>        <ItemShow:1515:0:0:5:1>        <ItemShow:1516:0:0:5:1> \ \ \ \
+<>                                                     <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换5>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换6>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换7>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换8> \ \ \
+
+
+
+
+
+[@兑换1]
+#if
+large u13 999
+checkitem 神火·灵体护身I 1
+#act
+take 神火·灵体护身I 1
+DEC u13 1000
+GIVE 异火焚仙I 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换2]
+#if
+large u13 999
+checkitem 神火·灵体护身II 1
+#act
+take 神火·灵体护身II 1
+DEC u13 1000
+GIVE 异火焚仙II 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换3]
+#if
+large u13 999
+checkitem 神火·灵体护身III 1
+#act
+take 神火·灵体护身III 1
+DEC u13 1000
+GIVE 异火焚仙III 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换4]
+#if
+large u13 999
+checkitem 神火·灵体护身IV 1
+#act
+take 神火·灵体护身IV 1
+DEC u13 1000
+GIVE 异火焚仙IV 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+;----------------------------
+
+[@兑换5]
+#if
+large u13 1999
+checkitem 异火焚仙I 1
+#act
+take 异火焚仙I 1
+DEC u13 2000
+GIVE 魂灯紫炎I 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换6]
+#if
+large u13 1999
+checkitem 异火焚仙II 1
+#act
+take 异火焚仙II 1
+DEC u13 2000
+GIVE 魂灯紫炎II 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换7]
+#if
+large u13 1999
+checkitem 异火焚仙III 1
+#act
+take 异火焚仙III 1
+DEC u13 1000
+GIVE 魂灯紫炎III 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换8]
+#if
+large u13 1999
+checkitem 异火焚仙IV 1
+#act
+take 异火焚仙IV 1
+DEC u13 2000
+GIVE 魂灯紫炎IV 1
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+
+
+
+
+
+
+
+
+}
+
+

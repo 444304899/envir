@@ -1,0 +1,54 @@
+[@main]
+#if
+#act
+#SAY
+\ \ \  \ \  \   \     \
+<>                 <激活冰与火【超脱】.New~/FCOLOR=58> \    \
+
+<>                 <冰与火【超脱】是一件强大的神器,若你给我足够的材料我就可以帮你打造!!/FCOLOR=146> \
+<>                 <ItemShow:909:388:50:10:1><ItemShow:910:388:80:10:1><ItemShow:913:1:110:10:1><ItemShow:1525:1:140:10:1><ItemShow:98:29997:160:10:1>\  \   \  \  \
+
+<>                 <冰与火【超脱】/@冰火升级2> <·√/FCOLOR=58> <注意:/FCOLOR=116> <终极勋章附带牛逼属性,防止盗版不做过多展示/FCOLOR=249>\
+<>                 <Img:174:6:40:7>\
+<>                 <激活终极称号.New~/FCOLOR=58> \   \
+<>                 <你同时拥有《封天之主称号》《超脱称号》《35转》就可以激活隐藏的成就/FCOLOR=146> \
+<>                 <《激活称号》|250#化凡称号/@升级1> <·√/FCOLOR=146> <寓意超脱天地之外，无拘无束，念之及，心想事成/FCOLOR=151>\
+
+
+
+[@升级1]
+#if
+CHECKTITLE 封天之主
+CHECKTITLE 超脱
+CHECKRENEWLEVEL = 35
+#act
+DEPRIVETITLE 封天之主
+DEPRIVETITLE 超脱
+CONFERTITLE 化凡
+MESSAGEBOX [提示]:《化凡》激活终极称号成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+[@冰火升级2]
+#if
+checkitem 冰与火之歌 1
+checkitem 冰与火【洗灵】 1
+checkitem 冰の书 388
+checkitem 火の书 388
+checkitem 神祈之泪 29997
+#act
+take 冰の书 388
+take 火の书 388
+take 神祈之泪 29997
+take 冰与火【洗灵】 1
+take 冰与火之歌 1
+give 冰与火【超脱】 1
+MESSAGEBOX [提示]:《冰与火【超脱】》合成成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+

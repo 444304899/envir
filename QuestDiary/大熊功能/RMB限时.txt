@@ -1,0 +1,347 @@
+[@钻石1]
+{
+#if
+CheckContainsText <$SERVERNAME> 总
+#act
+GetStringPos ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt 　:
+MOV N$首爆总行 <$Str(N0)>
+MOV N$首爆当页 1
+MOV N$首爆序号1 1
+MOV N$首爆序号2 2
+MOV N$首爆序号3 3
+MOV N$首爆序号4 4
+MOV N$首爆序号5 5
+MOV N$首爆序号6 6
+MOV N$首爆序号7 7
+DIV N$首爆总页 N$首爆总行 23
+INC N$首爆总页 1
+mov N$首爆行号 0
+goto @首爆奖励界面
+
+#if
+#act
+GetStringPos ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt 　:
+MOV N$首爆总行 <$Str(N0)>
+MOV N$首爆当页 1
+MOV N$首爆序号1 1
+MOV N$首爆序号2 2
+MOV N$首爆序号3 3
+MOV N$首爆序号4 4
+MOV N$首爆序号5 5
+MOV N$首爆序号6 6
+MOV N$首爆序号7 7
+DIV N$首爆总页 N$首爆总行 23
+INC N$首爆总页 1
+mov N$首爆行号 0
+goto @首爆奖励界面
+
+[@首爆资料获取]
+#if
+CheckContainsText <$SERVERNAME> 总
+#act
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$首爆名0	S$无用
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆金0
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆人0
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$首爆名1	S$无用
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆金1
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆人1
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$首爆名2	S$无用
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆金2
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆人2
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$首爆名3	S$无用
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆金3
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆人3
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$首爆名4	S$无用
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆金4
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆人4
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$首爆名5	S$无用
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆金5
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆人5
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$首爆名6	S$无用
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆金6
+inc N$首爆行号 1
+GetListString ..\..\..\..\跨区文件夹\<$Str(A0)>\永久限时.txt <$Str(N$首爆行号)>	S$无用		S$首爆人6
+inc N$首爆行号 1
+BREAK
+
+
+
+
+
+
+#if
+#act
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$首爆名0	S$无用
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆金0
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆人0
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$首爆名1	S$无用
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆金1
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆人1
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$首爆名2	S$无用
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆金2
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆人2
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$首爆名3	S$无用
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆金3
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆人3
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$首爆名4	S$无用
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆金4
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆人4
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$首爆名5	S$无用
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆金5
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆人5
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$首爆名6	S$无用
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆金6
+inc N$首爆行号 1
+GetListString ..\QuestDiary\限时奖励\首爆奖励数据.txt <$Str(N$首爆行号)>	S$无用		S$首爆人6
+inc N$首爆行号 1
+
+
+
+
+[@首爆奖励界面]
+#if
+#act
+goto @首爆资料获取
+
+
+#if
+#act
+;SetStringBlank <$Str(S$首爆名0)> 19 1
+SetStringBlank S$首爆名0 19 1
+;SetStringBlank <$Str(S$首爆名1)> 19 1
+SetStringBlank S$首爆名1 19 1
+;SetStringBlank <$Str(S$首爆名2)> 19 1
+SetStringBlank S$首爆名2 19 1
+;SetStringBlank <$Str(S$首爆名3)> 19 1
+SetStringBlank S$首爆名3 19 1
+;SetStringBlank <$Str(S$首爆名4)> 19 1
+SetStringBlank S$首爆名4 19 1
+;SetStringBlank <$Str(S$首爆名5)> 19 1
+SetStringBlank S$首爆名5 19 1
+;SetStringBlank <$Str(S$首爆名6)> 19 1
+SetStringBlank S$首爆名6 19 1
+;SetStringBlank <$Str(S$首爆金0)> 10 1
+SetStringBlank S$首爆金0 10 1
+;SetStringBlank <$Str(S$首爆金1)> 10 1
+SetStringBlank S$首爆金1 10 1
+;SetStringBlank <$Str(S$首爆金2)> 10 1
+SetStringBlank S$首爆金2 10 1
+;SetStringBlank <$Str(S$首爆金3)> 10 1
+SetStringBlank S$首爆金3 10 1
+;SetStringBlank <$Str(S$首爆金4)> 10 1
+SetStringBlank S$首爆金4 10 1
+;SetStringBlank <$Str(S$首爆金5)> 10 1
+SetStringBlank S$首爆金5 10 1
+;SetStringBlank <$Str(S$首爆金6)> 10 1
+SetStringBlank S$首爆金6 10 1
+MOV S$首爆序号1 <$Str(N$首爆序号1)>
+MOV S$首爆序号2 <$Str(N$首爆序号2)>
+MOV S$首爆序号3 <$Str(N$首爆序号3)>
+MOV S$首爆序号4 <$Str(N$首爆序号4)>
+MOV S$首爆序号5 <$Str(N$首爆序号5)>
+MOV S$首爆序号6 <$Str(N$首爆序号6)>
+MOV S$首爆序号7 <$Str(N$首爆序号7)>
+;SetStringBlank <$Str(S$首爆序号1)> 2 1
+SetStringBlank S$首爆序号1 2 1
+;SetStringBlank <$Str(S$首爆序号2)> 2 1
+SetStringBlank S$首爆序号2 2 1
+;SetStringBlank <$Str(S$首爆序号3)> 2 1
+SetStringBlank S$首爆序号3 2 1
+;SetStringBlank <$Str(S$首爆序号4)> 2 1
+SetStringBlank S$首爆序号4 2 1
+;SetStringBlank <$Str(S$首爆序号5)> 2 1
+SetStringBlank S$首爆序号5 2 1
+;SetStringBlank <$Str(S$首爆序号6)> 2 1
+SetStringBlank S$首爆序号6 2 1
+;SetStringBlank <$Str(S$首爆序号7)> 2 1
+SetStringBlank S$首爆序号7 2 1
+;SetStringBlank <$Str(S$首爆人1)> 5 1
+SetStringBlank S$首爆人1 5 1
+;SetStringBlank <$Str(S$首爆人2)> 5 1
+SetStringBlank S$首爆人2 5 1
+;SetStringBlank <$Str(S$首爆人3)> 5 1
+SetStringBlank S$首爆人3 5 1
+;SetStringBlank <$Str(S$首爆人4)> 5 1
+SetStringBlank S$首爆人4 5 1
+;SetStringBlank <$Str(S$首爆人5)> 5 1
+SetStringBlank S$首爆人5 5 1
+;SetStringBlank <$Str(S$首爆人6)> 5 1
+SetStringBlank S$首爆人6 5 1
+;SetStringBlank <$Str(S$首爆人7)> 5 1
+SetStringBlank S$首爆人7 5 1
+
+
+
+#if
+equal S$首爆人0 未领取
+#act
+MOV 	N$首爆颜色0 147
+#elseact
+MOV 	N$首爆颜色0 147
+#if
+equal S$首爆人1 未领取
+#act
+MOV 	N$首爆颜色1 147
+#elseact
+MOV 	N$首爆颜色1 147
+#if
+equal S$首爆人2 未领取
+#act
+MOV 	N$首爆颜色2 147
+#elseact
+MOV 	N$首爆颜色2 147
+#if
+equal S$首爆人3 未领取
+#act
+MOV 	N$首爆颜色3 147
+#elseact
+MOV 	N$首爆颜色3 147
+#if
+equal S$首爆人4 未领取
+#act
+MOV 	N$首爆颜色4 147
+#elseact
+MOV 	N$首爆颜色4 147
+#if
+equal S$首爆人5 未领取
+#act
+MOV 	N$首爆颜色5 147
+#elseact
+MOV 	N$首爆颜色5 147
+#if
+equal S$首爆人6 未领取
+#act
+MOV 	N$首爆颜色6 147
+#elseact
+MOV 	N$首爆颜色6 147
+#if
+equal S$首爆人7 未领取
+#act
+MOV 	N$首爆颜色7 147
+#elseact
+MOV 	N$首爆颜色7 147
+#if
+equal S$首爆人8 未领取
+#act
+MOV 	N$首爆颜色8 147
+#elseact
+MOV 	N$首爆颜色8 147
+#if
+equal S$首爆人9 未领取
+#act
+MOV 	N$首爆颜色9 147
+#elseact
+MOV 	N$首爆颜色9 147
+
+
+
+#IF
+#say
+\ \ \  \  \ \
+<>                  {No.<$str(S$首爆序号1)>/FCOLOR=150}       {<$STR(S$首爆名0)>/FCOLOR=250}{<$str(S$首爆金0)>/FCOLOR=150}          {<$STR(S$首爆人0)>/FCOLOR=<$Str(N$首爆颜色0)>}\
+<><Img:185:6:94:5>\
+<>                  {No.<$str(S$首爆序号2)>/FCOLOR=150}       {<$STR(S$首爆名1)>/FCOLOR=250}{<$str(S$首爆金1)>/FCOLOR=150}          {<$STR(S$首爆人1)>/FCOLOR=<$Str(N$首爆颜色1)>}\
+<><Img:185:6:94:5>\
+<>                  {No.<$str(S$首爆序号3)>/FCOLOR=150}       {<$STR(S$首爆名2)>/FCOLOR=250}{<$str(S$首爆金2)>/FCOLOR=150}          {<$STR(S$首爆人2)>/FCOLOR=<$Str(N$首爆颜色2)>}\
+<><Img:185:6:94:5>\
+<>                  {No.<$str(S$首爆序号4)>/FCOLOR=150}       {<$STR(S$首爆名3)>/FCOLOR=250}{<$str(S$首爆金3)>/FCOLOR=150}          {<$STR(S$首爆人3)>/FCOLOR=<$Str(N$首爆颜色3)>}\
+<><Img:185:6:94:5>\
+<>                  {No.<$str(S$首爆序号5)>/FCOLOR=150}       {<$STR(S$首爆名4)>/FCOLOR=250}{<$str(S$首爆金4)>/FCOLOR=150}          {<$STR(S$首爆人4)>/FCOLOR=<$Str(N$首爆颜色4)>}\
+<><Img:185:6:94:5>\
+<>                  {No.<$str(S$首爆序号6)>/FCOLOR=150}       {<$STR(S$首爆名5)>/FCOLOR=250}{<$str(S$首爆金5)>/FCOLOR=150}          {<$STR(S$首爆人5)>/FCOLOR=<$Str(N$首爆颜色5)>}\
+<><Img:185:6:94:5>\
+<>                  {No.<$str(S$首爆序号7)>/FCOLOR=150}       {<$STR(S$首爆名6)>/FCOLOR=250}{<$str(S$首爆金6)>/FCOLOR=150}          {<$STR(S$首爆人6)>/FCOLOR=<$Str(N$首爆颜色6)>}\ \
+<><ImgEX:6:186:187:188:210:-5/@首爆翻页减>                <ImgEX:6:189:190:191:207:-5/@首爆翻页加>\
+<><Img:177:6:0:-270/@元宝123> \ \
+<><Img:178:6:0:-250/@钻石1> \ \
+<><Img:179:6:0:-230/@永久回收> \ \
+#ACT
+BREAK
+
+
+[@元宝123]
+#if
+#act
+#CALL [\大熊功能\元宝限时.txt] @元宝1
+
+
+[@永久回收]
+#if
+#act
+messagebox 请前往主城查看！
+
+
+
+[@首爆翻页减]
+#if
+large N$首爆行号 41
+#act
+dec N$首爆序号1 7
+dec N$首爆序号2 7
+dec N$首爆序号3 7
+dec N$首爆序号4 7
+dec N$首爆序号5 7
+dec N$首爆序号6 7
+dec N$首爆序号7 7
+DEC N$首爆当页 1
+dec N$首爆行号 42
+goto @首爆奖励界面
+#elseact
+messagebox 已经是第一页了！
+
+
+[@首爆翻页加]
+#if
+small N$首爆当页 24
+#act
+INC N$首爆序号1 7
+INC N$首爆序号2 7
+INC N$首爆序号3 7
+INC N$首爆序号4 7
+INC N$首爆序号5 7
+INC N$首爆序号6 7
+INC N$首爆序号7 7
+INC N$首爆当页 1
+goto @首爆奖励界面
+#elseact
+messagebox 已经是最后一页了！
+
+}

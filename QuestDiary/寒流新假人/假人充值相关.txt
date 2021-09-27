@@ -1,0 +1,33 @@
+[@ºŸ»À≥‰÷µ]
+{
+
+#IF
+RANDOM 20
+
+#ACT
+
+
+
+
+
+
+
+
+
+#IF
+RANDOM 50
+
+#ACT
+
+
+
+
+
+
+#IF
+RANDOM 100
+
+#ACT
+
+
+}

@@ -1,0 +1,74 @@
+[@首爆奖励JMB]
+{
+
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\限时奖励\JMB奖励参数.txt [<$CURRTEMNAME>]
+#ELSEACT
+BREAK
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\限时奖励\金币首爆数据\<$CURRTEMNAME>.txt <$USERNAME>
+#ACT
+CHANGEITEMADDVALUE -1 12 = 1
+CHANGEITEMADDVALUE -1 9 = 1
+BREAK
+
+
+#if
+CHECKITEMADDVALUE -1 9 < 1
+#ELSEACT
+BREAK
+
+#IF
+;large S$合区信息 0
+CHECKTEXTLIST ..\QuestDiary\限时奖励\JMB奖励参数.txt [<$CURRTEMNAME>]
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$CURRTEMNAME> JMB首爆金额 S$JMB首爆金额
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$CURRTEMNAME> JMB首爆名额 S$JMB首爆名额
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$CURRTEMNAME> JMB首爆玩家 S$JMB首爆玩家
+MOV N$JMB首爆名额 <$STR(S$JMB首爆名额)>
+
+#IF
+EQUAL N$JMB首爆名额 0
+#ACT
+BREAK
+
+#IF
+EQUAL S$JMB首爆玩家 未领取.
+#ACT
+CreateFile ..\QuestDiary\限时奖励\金币首爆数据\<$CURRTEMNAME>.txt
+CLEARNAMELIST ..\QuestDiary\限时奖励\金币首爆数据\<$CURRTEMNAME>.txt
+
+
+
+
+#if
+LARGE N$JMB首爆名额 0
+CHECKITEMADDVALUE -1 9 < 1
+CHECKTEXTLIST ..\QuestDiary\限时奖励\JMB奖励参数.txt [<$CURRTEMNAME>]
+#act
+CHANGEITEMADDVALUE -1 12 = 1
+CHANGEITEMADDVALUE -1 9 = 1
+DEC N$JMB首爆名额 1
+MOV S$JMB首爆名额 <$STR(N$JMB首爆名额)>
+ADDTEXTLISTEX ..\QuestDiary\限时奖励\金币首爆数据\<$CURRTEMNAME>.txt <$USERNAME>
+PGWriteConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$CURRTEMNAME> JMB首爆名额 S$JMB首爆名额
+PGWriteConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$CURRTEMNAME> JMB首爆玩家 <$USERNAME>
+GIVE 金币 <$Str(S$JMB首爆金额)>
+SENDMOVEMSG 0 253 255 100 1 <恭喜玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]在[/FCOLOR=161>{<$MapTitle>,<$X>,<$Y>/FCOLOR=250}<]处打到一个[/FCOLOR=161>{<$CURRTEMNAME>/FCOLOR=70}<]获得<$STR(S$JMB首爆金额)>金币现金奖励,剩余名额<$STR(N$JMB首爆名额)>名/FCOLOR=161>
+MESSAGEBOX  恭喜你获得限时奖励物品【<$CURRTEMNAME>】，获得<$STR(S$JMB首爆金额)>金币现金奖励！！
+MOV S$JMB首爆金额
+MOV S$JMB首爆名额
+MOV N$JMB首爆名额
+break
+
+
+
+
+
+
+
+}

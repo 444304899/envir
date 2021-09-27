@@ -1,0 +1,1220 @@
+
+[@行会系统_脚本]
+{
+#IF
+#ACT
+Goto @查看_攻城统计
+
+[@行会_自助收人]
+#IF
+#ACT
+GetListString ..\QuestDiary\B03_行会系统\行会系统_入会条件.txt 0 S$入会标准_小号
+GetListString ..\QuestDiary\B03_行会系统\行会系统_入会条件.txt 1 S$入会标准_大号
+Mov N$红方_差距 <$Str($(红方_人数))>
+Dec N$红方_差距 <$Str($(蓝方_人数))>
+Mov N$蓝方_差距 <$Str($(蓝方_人数))>
+Dec N$蓝方_差距 <$Str($(红方_人数))>
+#SAY
+<IMGEX:20:17:18:19:498:-14/@Exit>\
+<本服禁止创建行会，合区后系统会自动生成2个行会(红方、蓝方)，一台电脑只能一个角色加入行会/FCOLOR=239>\
+<[提示]：/FCOLOR=249><20点关闭行会收人，入会后禁止退会，一旦退出，不能再加入行会/FCOLOR=254>\
+<（系统自动识别，不听劝者，后果自负！）/FCOLOR=70>\
+<[提示]：/FCOLOR=249><20点关闭行会收人，入会后禁止退会，一旦退出，不能再加入行会/FCOLOR=254>\
+<（系统自动识别，不听劝者，后果自负！）/FCOLOR=70>\
+<　--------------------------------------------------------------------------------------/FCOLOR=13>\
+<攻城行会 → 红方/FCOLOR=249>　<行会统计人数：/FCOLOR=249>{[<$Str($(红方_人数))>人]/FCOLOR=249}　　<【/FCOLOR=22> <点击加入红方行会/@加入行会_红方> <】/FCOLOR=22>　　{双方差距人数：<$Str(N$红方_差距)>/FCOLOR=250}\　\
+<攻城行会 → 蓝方/FCOLOR=254>　<行会统计人数：/FCOLOR=254>{[<$Str($(蓝方_人数))>人]/FCOLOR=254}　　<【/FCOLOR=22> <点击加入蓝方行会/@加入行会_蓝方> <】/FCOLOR=22>　　{双方差距人数：<$Str(N$蓝方_差距)>/FCOLOR=250}\
+<　--------------------------------------------------------------------------------------/FCOLOR=13>\
+<[注意]：/FCOLOR=249><双方统计人数差距不能超过5次，为了游戏公平，攻城分为大小号，具体说明如下：/FCOLOR=239>\　\
+<入会规则：/FCOLOR=249>{<$Str(S$入会标准_小号)>（满足条件在上面点击加入行会即可激活小号身份）/FCOLOR=70}\
+{小号入会后，行会统计人数+1，攻城结束后可领取1份红包奖励（领取规则请查看NPC：沙城奖励）/FCOLOR=70}\
+<【/FCOLOR=22> <小号提升为大号/@账号_提升> <】/FCOLOR=22>\
+<激活大号条件：/FCOLOR=249>{<$Str(S$入会标准_大号)> （入会后行会人数+2，攻城结束后可领取2份红包奖励）/FCOLOR=222}\
+<满足条件点击加入行会自动激活大号身份，记录为大号后/FCOLOR=222><人物全身变为粉色/FCOLOR=253>\
+<小号入会后如满足条件，可在20点前提升为大号/FCOLOR=222><(差距大于5人禁止提升)/FCOLOR=249>\
+<攻城期间，系统每5分钟检测一次，不满足大号条件警告1次，警告6次取消大号资格/FCOLOR=222>\
+<大号福利高，相应要求也高，建议多准备点终极装备，爆了可以立即补上！/FCOLOR=222>\
+<如果领取奖励前，被取消大号资格，就只能领取1份红包奖励!!!/FCOLOR=249>\
+<　--------------------------------------------------------------------------------------/FCOLOR=13>\
+<本服沙城奖励红包在游戏内自助领取→奖励发放以攻城统计为准!!!/FCOLOR=19>　　<【/FCOLOR=22> <查看[攻城统计]/@查看_攻城统计> <】/FCOLOR=22>\
+<本服沙城奖励红包在游戏内自助领取→奖励发放以攻城统计为准!!!/FCOLOR=19>　　<【/FCOLOR=22> <查看[攻城统计]/@查看_攻城统计> <】/FCOLOR=22>\
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@查看_杀人榜单]
+#IF
+Not HAVEGUILD
+#ACT
+MessageBox \[提示]：\　\　　　　你没有加入任何行会；\　\　　　　暂时无法查看[杀人排行榜]...
+Break
+#IF
+#ACT
+Goto @杀人榜单_界面加载
+#SAY
+<IMGEX:20:17:18:19:498:-14/@Exit>\
+<><[编 号]　[玩家名字]　　 [所属行会]　　[杀人数量]　　[被杀次数]　　[皇宫存活]　　[个人活跃]/FCOLOR=70>\
+<-------------------------------------------------------------------------------------------/FCOLOR=13>\
+<> <No.01/FCOLOR=249>　　{<$str(S$显_第一名)>　 <$str(S$显_第一会)>　 <$str(S$显_第一数)>　　　　 <$str(S$显_第一死)>　　　　 <$str(S$显_第一时)>　　　　<$str(S$显_第一跃)>/FCOLOR=249}\　\
+<> <No.02/FCOLOR=251>　　{<$str(S$显_第二名)>　 <$str(S$显_第二会)>　 <$str(S$显_第二数)>　　　　 <$str(S$显_第二死)>　　　　 <$str(S$显_第二时)>　　　　<$str(S$显_第二跃)>/FCOLOR=251}\　\
+<> <No.03/FCOLOR=253>　　{<$str(S$显_第三名)>　 <$str(S$显_第三会)>　 <$str(S$显_第三数)>　　　　 <$str(S$显_第三死)>　　　　 <$str(S$显_第三时)>　　　　<$str(S$显_第三跃)>/FCOLOR=253}\　\
+<> <No.04/FCOLOR=250>　　{<$str(S$显_第四名)>　 <$str(S$显_第四会)>　 <$str(S$显_第四数)>　　　　 <$str(S$显_第四死)>　　　　 <$str(S$显_第四时)>　　　　<$str(S$显_第四跃)>/FCOLOR=250}\　\
+<> <No.05/FCOLOR=146>　　{<$str(S$显_第五名)>　 <$str(S$显_第五会)>　 <$str(S$显_第五数)>　　　　 <$str(S$显_第五死)>　　　　 <$str(S$显_第五时)>　　　　<$str(S$显_第五跃)>/FCOLOR=146}\　\
+<> <No.06/FCOLOR=70>　　{<$str(S$显_第六名)>　 <$str(S$显_第六会)>　 <$str(S$显_第六数)>　　　　 <$str(S$显_第六死)>　　　 　<$str(S$显_第六时)>　　　　<$str(S$显_第六跃)>/FCOLOR=19}\　\
+<> <No.07/FCOLOR=70>　　{<$str(S$显_第七名)>　 <$str(S$显_第七会)>　 <$str(S$显_第七数)>　　　　 <$str(S$显_第七死)>　　　　 <$str(S$显_第七时)>　　　　<$str(S$显_第七跃)>/FCOLOR=19}\　\
+<> <No.08/FCOLOR=70>　　{<$str(S$显_第八名)>　 <$str(S$显_第八会)>　 <$str(S$显_第八数)>　　　　 <$str(S$显_第八死)>　　　 　<$str(S$显_第八时)>　　　　<$str(S$显_第八跃)>/FCOLOR=19}\　\
+<> <No.09/FCOLOR=70>　　{<$str(S$显_第九名)>　 <$str(S$显_第九会)>　 <$str(S$显_第九数)>　　　　 <$str(S$显_第九死)>　　　　 <$str(S$显_第九时)>　　　　<$str(S$显_第九跃)>/FCOLOR=19}\　\
+<> <No.10/FCOLOR=70>　　{<$str(S$显_第十名)>　 <$str(S$显_第十会)>　 <$str(S$显_第十数)>　　　　 <$str(S$显_第十死)>　　　 　<$str(S$显_第十时)>　　　　<$str(S$显_第十跃)>/FCOLOR=19}\
+<-------------------------------------------------------------------------------------------/FCOLOR=13>\
+{《<$USERNAME>》/FCOLOR=254}{隶属/FCOLOR=150}{<$GUILDNAME>/FCOLOR=22}  {当前击杀：/FCOLOR=150}{<$str(S$显_自身杀人)>/FCOLOR=253}{，被杀：/FCOLOR=150}{<$str(S$显_自身被杀)>/FCOLOR=253}<，皇宫存活：/FCOLOR=150>{<$str(S$显_自身存活)>/FCOLOR=254}<，活跃：/FCOLOR=150>{<$str(S$显_自身活跃)>/FCOLOR=250}\
+<【/FCOLOR=22> <返回/@查看_攻城统计> <】/FCOLOR=22>
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@查看_攻城统计]
+#IF
+#ACT
+Goto @攻城统计_界面加载
+#SAY
+<IMGEX:20:17:18:19:498:-14/@Exit>\
+<攻城行会→红方/FCOLOR=249>　　　　　　　　　　　　　　　　　　<攻城行会→蓝方/FCOLOR=254>\
+{行会统计人数：[<$Str(S$显示_红方人数)>人]　总活跃：[<$Str(S$显示_红方活跃)>点]/FCOLOR=249}　　┃　　{行会统计人数：[<$Str(S$显示_蓝方人数)>人]　总活跃：[<$Str(S$显示_蓝方活跃)>点]/FCOLOR=254}\
+{攻城有效人数：[<$Str(S$显示_红方有效)>人]　总斩杀：[<$Str(S$显示_红方斩杀)>人]/FCOLOR=249}　　┃　　{攻城有效人数：[<$Str(S$显示_蓝方有效)>人]　总斩杀：[<$Str(S$显示_蓝方斩杀)>人]/FCOLOR=254}\
+<-------------------------------------------------------------------------------------------/FCOLOR=13>\
+<沙城归属：/FCOLOR=242><$Str(S$沙城_归属)>　　<你当前为：/FCOLOR=242><$Str(S$个人_有效)>　 <你当前个人活跃：/FCOLOR=242>{[<$Str(S$显示_个人活跃)>点]/FCOLOR=251}\
+<-------------------------------------------------------------------------------------------/FCOLOR=13>\
+<沙城 总奖池：/FCOLOR=218>{[<$Str(S$显示_总奖池)>钻石]/FCOLOR=253}<，扣除20%管理费，10%杀人榜奖励，剩余70%/FCOLOR=218>{[<$Str(S$显示_发放金)>钻石]/FCOLOR=253}<作为沙城奖励发放/FCOLOR=218>\　\
+<胜利方(60%)：/FCOLOR=19>{[<$Str(S$显示_胜方奖金)>钻石]/FCOLOR=249}　<有效人数：/FCOLOR=19>{[<$Str(S$显示_胜方有效)>人]/FCOLOR=249}　<每份奖励：/FCOLOR=19>{[<$Str(S$胜方_单份奖金)>钻石]/FCOLOR=249}\
+<【/FCOLOR=22> <领取胜利方攻城奖励/@领取_胜方奖金> <】/FCOLOR=22>　　　　　<【/FCOLOR=22> <大号领取额外奖励/@领取_胜方大号> <】/FCOLOR=22>\
+<-------------------------------------------------------------------------------------------/FCOLOR=13>\
+<失败方(40%)：/FCOLOR=19>{[<$Str(S$显示_败方奖金)>钻石]/FCOLOR=254}　<有效人数：/FCOLOR=19>{[<$Str(S$显示_败方有效)>人]/FCOLOR=254}　<每份奖励：/FCOLOR=19>{[<$Str(S$败方_单份奖金)>钻石]/FCOLOR=254}\
+<【/FCOLOR=22> <领取失败方攻城奖励/@领取_败方奖金> <】/FCOLOR=22>　　　　　<【/FCOLOR=22> <大号领取额外奖励/@领取_败方大号> <】/FCOLOR=22>\
+<如果失败方不参与攻沙，则取消失败方奖励，胜利方按统计人数正常发放！/FCOLOR=218>\
+<每个成为有效攻城人员的小号，可领取一份攻城奖励，大号可领取两份/FCOLOR=218><(条件请在自助收人页面查看)/FCOLOR=22>\
+<《一台电脑只能领取一个角色的攻城奖励》/FCOLOR=218><领取时间：22:01-22:30 错过时间无法领奖，本服概不负责!/FCOLOR=253>\
+<-------------------------------------------------------------------------------------------/FCOLOR=13>\
+<攻城期间，在沙巴克皇宫杀人数最多者，可领取沙城总奖池的10%/FCOLOR=242>{[<$Str(S$杀人王_奖金)>钻石]/FCOLOR=250}<作为奖励.!/FCOLOR=242>\
+<【/FCOLOR=22> <查看杀人排行榜/@查看_杀人榜单> <】/FCOLOR=22>\
+<当前杀人榜第一名：/FCOLOR=70>{<$Str(S$显示_杀人王)>/FCOLOR=250}　　<【/FCOLOR=22> <领取[杀人榜第一名]奖励/@领取_杀人奖金> <】/FCOLOR=22>　　<领取状态：/FCOLOR=70><$Str(S$杀人奖金_状态)>\
+<-------------------------------------------------------------------------------------------/FCOLOR=13>\
+<只要参与并成为有效攻城人数，攻城结束可自助领取奖励红包，再也不用担心攻城结束就被踢出行会了！/FCOLOR=146>\
+<只要达到入会要求即可自助加入行会(系统自动收人)，有效规避合区后没人收的烦恼！/FCOLOR=146>\
+<【/FCOLOR=22> <进入[行会自助收人]页面/@行会_自助收人> <】/FCOLOR=22>
+<【/FCOLOR=22> <查看[攻城活跃规则]/@攻城_规则界面> <】/FCOLOR=22>
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@攻城_规则界面]
+#IF
+#ACT
+#SAY
+<IMGEX:20:17:18:19:498:-14/@Exit>\
+<为有效防止各种挂水混奖励的水军，特推出活跃检测系统/FCOLOR=70>\　\
+<【活跃系统】说明：/FCOLOR=249>\
+<01.活跃区域/FCOLOR=250>　<①沙巴克复活点区域、②皇宫楼梯口、③攻城集结区域、④沙巴克皇宫/FCOLOR=150>\　\
+<02.活跃机制/FCOLOR=250>　<20-21点间，沙巴克皇宫内任何行动不产生及增加活跃值/FCOLOR=22>\
+<21:30准时开放活跃区域③：攻城集结区域/FCOLOR=239>\
+<活跃区域①②③内，击杀敌方个人活跃+2，被击杀个人活跃+1/FCOLOR=239>\
+<沙巴克皇宫内，击杀敌方个人活跃+3，被击杀个人活跃+1/FCOLOR=239>\
+<21:30之后，于皇宫内每存活10秒，个人活跃+1/FCOLOR=239>\　\
+<02.活跃监测/FCOLOR=250>　<攻城期间，个人活跃达到30点，自动成为/FCOLOR=9><攻城有效人员/FCOLOR=254>\
+<攻城战役结束后，/FCOLOR=9><攻城有效人员/FCOLOR=254><方有资格领取/FCOLOR=9><攻城奖励钻石/FCOLOR=249>\
+<【/FCOLOR=22> <返回/@查看_攻城统计> <】/FCOLOR=22>
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;━【以下是加入杀人榜单加载脚本】━━━━━━━━━━━━━━━━━━━━━━━━
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@杀人榜单_界面加载]
+#ACT
+SortHumVarToListEx 攻城斩杀 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt 1 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 1
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 0 S$杀人_第一名 N$杀人_第一数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 1 S$杀人_第二名 N$杀人_第二数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 2 S$杀人_第三名 N$杀人_第三数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 3 S$杀人_第四名 N$杀人_第四数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 4 S$杀人_第五名 N$杀人_第五数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 5 S$杀人_第六名 N$杀人_第六数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 6 S$杀人_第七名 N$杀人_第七数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 7 S$杀人_第八名 N$杀人_第八数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 8 S$杀人_第九名 N$杀人_第九数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 9 S$杀人_第十名 N$杀人_第十数
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#IF
+Large N$杀人_第一数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第一名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第一会
+DEC <$str(S$杀人_第一会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第一名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第一跃
+DEC S$杀人_第一跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第一名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第一死
+DEC S$杀人_第一死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第一时
+DEC S$杀人_第一时 攻城计时=
+MOV S$显_第一时 <$str(S$杀人_第一时)>秒
+MOV S$显_第一死 <$str(S$杀人_第一死)>次
+MOV S$显_第一名 <$str(S$杀人_第一名)>
+MOV S$显_第一数 <$str(N$杀人_第一数)>人
+MOV S$显_第一会 <$str(S$杀人_第一会)>
+MOV S$显_第一跃 <$str(S$杀人_第一跃)>点
+#ELSEACT
+MOV S$显_第一名
+MOV S$显_第一数
+MOV S$显_第一会
+MOV S$显_第一跃
+MOV S$显_第一死
+MOV S$显_第一时
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第二数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第二名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第二会
+DEC <$str(S$杀人_第二会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第二名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第二跃
+DEC S$杀人_第二跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第二名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第二死
+DEC S$杀人_第二死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第二时
+DEC S$杀人_第二时 攻城计时=
+MOV S$显_第二时 <$str(S$杀人_第二时)>秒
+MOV S$显_第二死 <$str(S$杀人_第二死)>次
+MOV S$显_第二名 <$str(S$杀人_第二名)>
+MOV S$显_第二数 <$str(N$杀人_第二数)>人
+MOV S$显_第二会 <$str(S$杀人_第二会)>
+MOV S$显_第二跃 <$str(S$杀人_第二跃)>点
+#ELSEACT
+MOV S$显_第二名
+MOV S$显_第二数
+MOV S$显_第二会
+MOV S$显_第二跃
+MOV S$显_第二死
+MOV S$显_第一二
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第三数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第三名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第三会
+DEC <$str(S$杀人_第三会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第三名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第三跃
+DEC <$str(S$杀人_第三跃)> 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第三名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第三死
+DEC S$杀人_第三死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第三时
+DEC S$杀人_第三时 攻城计时=
+MOV S$显_第三时 <$str(S$杀人_第三时)>秒
+MOV S$显_第三死 <$str(S$杀人_第三死)>次
+MOV S$显_第三名 <$str(S$杀人_第三名)>
+MOV S$显_第三数 <$str(N$杀人_第三数)>人
+MOV S$显_第三会 <$str(S$杀人_第三会)>
+MOV S$显_第三跃 <$str(S$杀人_第三跃)>点
+#ELSEACT
+MOV S$显_第三名
+MOV S$显_第三数
+MOV S$显_第三会
+MOV S$显_第三跃
+MOV S$显_第三死
+MOV S$显_第三时
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第四数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第四名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第四会
+DEC <$str(S$杀人_第四会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第四名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第四跃
+DEC S$杀人_第四跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第四名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第四死
+DEC S$杀人_第四死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第四时
+DEC S$杀人_第四时 攻城计时=
+MOV S$显_第四时 <$str(S$杀人_第四时)>秒
+MOV S$显_第四死 <$str(S$杀人_第四死)>次
+MOV S$显_第四名 <$str(S$杀人_第四名)>
+MOV S$显_第四数 <$str(N$杀人_第四数)>人
+MOV S$显_第四会 <$str(S$杀人_第四会)>
+MOV S$显_第四跃 <$str(S$杀人_第四跃)>点
+#ELSEACT
+MOV S$显_第四名
+MOV S$显_第四数
+MOV S$显_第四会
+MOV S$显_第四跃
+MOV S$显_第四死
+MOV S$显_第四时
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第五数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第五名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第五会
+DEC <$str(S$杀人_第五会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第五名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第五跃
+DEC S$杀人_第五跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第五名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第五死
+DEC S$杀人_第五死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第五时
+DEC S$杀人_第五时 攻城计时=
+MOV S$显_第五时 <$str(S$杀人_第五时)>秒
+MOV S$显_第五死 <$str(S$杀人_第五死)>次
+MOV S$显_第五名 <$str(S$杀人_第五名)>
+MOV S$显_第五数 <$str(N$杀人_第五数)>人
+MOV S$显_第五会 <$str(S$杀人_第五会)>
+MOV S$显_第五跃 <$str(S$杀人_第五跃)>点
+#ELSEACT
+MOV S$显_第五名
+MOV S$显_第五数
+MOV S$显_第五会
+MOV S$显_第五跃
+MOV S$显_第五死
+MOV S$显_第五时
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第六数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第六名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第六会
+DEC <$str(S$杀人_第六会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第六名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第六跃
+DEC S$杀人_第六跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第六名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第六死
+DEC S$杀人_第六死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第六时
+DEC S$杀人_第六时 攻城计时=
+MOV S$显_第六时 <$str(S$杀人_第六时)>秒
+MOV S$显_第六死 <$str(S$杀人_第六死)>次
+MOV S$显_第六名 <$str(S$杀人_第六名)>
+MOV S$显_第六数 <$str(N$杀人_第六数)>人
+MOV S$显_第六会 <$str(S$杀人_第六会)>
+MOV S$显_第六跃 <$str(S$杀人_第六跃)>点
+#ELSEACT
+MOV S$显_第六名
+MOV S$显_第六数
+MOV S$显_第六会
+MOV S$显_第六跃
+MOV S$显_第六死
+MOV S$显_第六时
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第七数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第七名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第七会
+DEC <$str(S$杀人_第七会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第七名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第七跃
+DEC S$杀人_第七跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第七名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第七死
+DEC S$杀人_第七死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第七时
+DEC S$杀人_第七时 攻城计时=
+MOV S$显_第七时 <$str(S$杀人_第七时)>秒
+MOV S$显_第七死 <$str(S$杀人_第七死)>次
+MOV S$显_第七名 <$str(S$杀人_第七名)>
+MOV S$显_第七数 <$str(N$杀人_第七数)>人
+MOV S$显_第七会 <$str(S$杀人_第七会)>
+MOV S$显_第七跃 <$str(S$杀人_第七跃)>点
+#ELSEACT
+MOV S$显_第七名
+MOV S$显_第七数
+MOV S$显_第七会
+MOV S$显_第七跃
+MOV S$显_第七死
+MOV S$显_第七时
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第八数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第八名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第八会
+DEC <$str(S$杀人_第八会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第八名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第八跃
+DEC S$杀人_第八跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第八名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第八死
+DEC S$杀人_第八死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第八时
+DEC S$杀人_第八时 攻城计时=
+MOV S$显_第八时 <$str(S$杀人_第八时)>秒
+MOV S$显_第八死 <$str(S$杀人_第八死)>次
+MOV S$显_第八名 <$str(S$杀人_第八名)>
+MOV S$显_第八数 <$str(N$杀人_第八数)>人
+MOV S$显_第八会 <$str(S$杀人_第八会)>
+MOV S$显_第八跃 <$str(S$杀人_第八跃)>点
+#ELSEACT
+MOV S$显_第八名
+MOV S$显_第八数
+MOV S$显_第八会
+MOV S$显_第八跃
+MOV S$显_第八死
+MOV S$显_第八时
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第九数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第九名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第九会
+DEC <$str(S$杀人_第九会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第九名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第九跃
+DEC S$杀人_第九跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第九名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第九死
+DEC S$杀人_第九死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第九时
+DEC S$杀人_第九时 攻城计时=
+MOV S$显_第九时 <$str(S$杀人_第九时)>秒
+MOV S$显_第九死 <$str(S$杀人_第九死)>次
+MOV S$显_第九名 <$str(S$杀人_第九名)>
+MOV S$显_第九数 <$str(N$杀人_第九数)>人
+MOV S$显_第九会 <$str(S$杀人_第九会)>
+MOV S$显_第九跃 <$str(S$杀人_第九跃)>点
+#ELSEACT
+MOV S$显_第九名
+MOV S$显_第九数
+MOV S$显_第九会
+MOV S$显_第九跃
+MOV S$显_第九死
+MOV S$显_第九时
+;━━━━━━━━━━━
+#IF
+Large N$杀人_第十数 0
+#ACT
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第十名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第十会
+DEC <$str(S$杀人_第十会)> 行会=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第十名)>]
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第十跃
+DEC S$杀人_第十跃 个人活跃=
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第十名)>]
+INC N0 2
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第十死
+DEC S$杀人_第十死 攻城被杀=
+INC N0 1
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第十时
+DEC S$杀人_第十时 攻城计时=
+MOV S$显_第十时 <$str(S$杀人_第十时)>秒
+MOV S$显_第十死 <$str(S$杀人_第十死)>次
+MOV S$显_第十名 <$str(S$杀人_第十名)>
+MOV S$显_第十数 <$str(N$杀人_第十数)>人
+MOV S$显_第十会 <$str(S$杀人_第十会)>
+MOV S$显_第十跃 <$str(S$杀人_第十跃)>点
+#ELSEACT
+MOV S$显_第十名
+MOV S$显_第十数
+MOV S$显_第十会
+MOV S$显_第十跃
+MOV S$显_第十死
+MOV S$显_第十时
+;━━━━━━━━━━━
+#IF
+#ACT
+Mov S$显_自身活跃 <$HUMAN(个人活跃)>点
+Mov S$显_自身杀人 <$HUMAN(攻城斩杀)>人
+Mov S$显_自身被杀 <$HUMAN(攻城被杀)>次
+Mov S$显_自身存活 <$HUMAN(攻城计时)>秒
+;SetStringBlank <$str(S$显_第一名)> 14 1
+SetStringBlank S$显_第一名 14 1
+;SetStringBlank <$str(S$显_第二名)> 14 1
+SetStringBlank S$显_第二名 14 1
+;SetStringBlank <$str(S$显_第三名)> 14 1
+SetStringBlank S$显_第三名 14 1
+;SetStringBlank <$str(S$显_第四名)> 14 1
+SetStringBlank S$显_第四名 14 1
+;SetStringBlank <$str(S$显_第五名)> 14 1
+SetStringBlank S$显_第五名 14 1
+;SetStringBlank <$str(S$显_第六名)> 14 1
+SetStringBlank S$显_第六名 14 1
+;SetStringBlank <$str(S$显_第七名)> 14 1
+SetStringBlank S$显_第七名 14 1
+;SetStringBlank <$str(S$显_第八名)> 14 1
+SetStringBlank S$显_第八名 14 1
+;SetStringBlank <$str(S$显_第九名)> 14 1
+SetStringBlank S$显_第九名 14 1
+;SetStringBlank <$str(S$显_第十名)> 14 1
+SetStringBlank S$显_第十名 14 1
+;SetStringBlank <$str(S$显_第一会)> 10 1
+SetStringBlank S$显_第一会 10 1
+;SetStringBlank <$str(S$显_第二会)> 10 1
+SetStringBlank S$显_第二会 10 1
+;SetStringBlank <$str(S$显_第三会)> 10 1
+SetStringBlank S$显_第三会 10 1
+;SetStringBlank <$str(S$显_第四会)> 10 1
+SetStringBlank S$显_第四会 10 1
+;SetStringBlank <$str(S$显_第五会)> 10 1
+SetStringBlank S$显_第五会 10 1
+;SetStringBlank <$str(S$显_第六会)> 10 1
+SetStringBlank S$显_第六会 10 1
+;SetStringBlank <$str(S$显_第七会)> 10 1
+SetStringBlank S$显_第七会 10 1
+;SetStringBlank <$str(S$显_第八会)> 10 1
+SetStringBlank S$显_第八会 10 1
+;SetStringBlank <$str(S$显_第九会)> 10 1
+SetStringBlank S$显_第九会 10 1
+;SetStringBlank <$str(S$显_第十会)> 10 1
+SetStringBlank S$显_第十会 10 1
+;SetStringBlank <$str(S$显_第一数)> 5 0
+SetStringBlank S$显_第一数 5 0
+;SetStringBlank <$str(S$显_第二数)> 5 0
+SetStringBlank S$显_第二数 5 0
+;SetStringBlank <$str(S$显_第三数)> 5 0
+SetStringBlank S$显_第三数 5 0
+;SetStringBlank <$str(S$显_第四数)> 5 0
+SetStringBlank S$显_第四数 5 0
+;SetStringBlank <$str(S$显_第五数)> 5 0
+SetStringBlank S$显_第五数 5 0
+;SetStringBlank <$str(S$显_第六数)> 5 0
+SetStringBlank S$显_第六数 5 0
+;SetStringBlank <$str(S$显_第七数)> 5 0
+SetStringBlank S$显_第七数 5 0
+;SetStringBlank <$str(S$显_第八数)> 5 0
+SetStringBlank S$显_第八数 5 0
+;SetStringBlank <$str(S$显_第九数)> 5 0
+SetStringBlank S$显_第九数 5 0
+;SetStringBlank <$str(S$显_第十数)> 5 0
+SetStringBlank S$显_第十数 5 0
+;SetStringBlank <$str(S$显_第一跃)> 5 0
+SetStringBlank S$显_第一跃 5 0
+;SetStringBlank <$str(S$显_第二跃)> 5 0
+SetStringBlank S$显_第二跃 5 0
+;SetStringBlank <$str(S$显_第三跃)> 5 0
+SetStringBlank S$显_第三跃 5 0
+;SetStringBlank <$str(S$显_第四跃)> 5 0
+SetStringBlank S$显_第四跃 5 0
+;SetStringBlank <$str(S$显_第五跃)> 5 0
+SetStringBlank S$显_第五跃 5 0
+;SetStringBlank <$str(S$显_第六跃)> 5 0
+SetStringBlank S$显_第六跃 5 0
+;SetStringBlank <$str(S$显_第七跃)> 5 0
+SetStringBlank S$显_第七跃 5 0
+;SetStringBlank <$str(S$显_第八跃)> 5 0
+SetStringBlank S$显_第八跃 5 0
+;SetStringBlank <$str(S$显_第九跃)> 5 0
+SetStringBlank S$显_第九跃 5 0
+;SetStringBlank <$str(S$显_第十跃)> 5 0
+SetStringBlank S$显_第十跃 5 0
+;SetStringBlank <$str(S$显_第一死)> 5 0
+SetStringBlank S$显_第一死 5 0
+;SetStringBlank <$str(S$显_第二死)> 5 0
+SetStringBlank S$显_第二死 5 0
+;SetStringBlank <$str(S$显_第三死)> 5 0
+SetStringBlank S$显_第三死 5 0
+;SetStringBlank <$str(S$显_第四死)> 5 0
+SetStringBlank S$显_第四死 5 0
+;SetStringBlank <$str(S$显_第五死)> 5 0
+SetStringBlank S$显_第五死 5 0
+;SetStringBlank <$str(S$显_第六死)> 5 0
+SetStringBlank S$显_第六死 5 0
+;SetStringBlank <$str(S$显_第七死)> 5 0
+SetStringBlank S$显_第七死 5 0
+;SetStringBlank <$str(S$显_第八死)> 5 0
+SetStringBlank S$显_第八死 5 0
+;SetStringBlank <$str(S$显_第九死)> 5 0
+SetStringBlank S$显_第九死 5 0
+;SetStringBlank <$str(S$显_第十死)> 5 0
+SetStringBlank S$显_第十死 5 0
+;SetStringBlank <$str(S$显_第一时)> 6 0
+SetStringBlank S$显_第一时 6 0
+;SetStringBlank <$str(S$显_第二时)> 6 0
+SetStringBlank S$显_第二时 6 0
+;SetStringBlank <$str(S$显_第三时)> 6 0
+SetStringBlank S$显_第三时 6 0
+;SetStringBlank <$str(S$显_第四时)> 6 0
+SetStringBlank S$显_第四时 6 0
+;SetStringBlank <$str(S$显_第五时)> 6 0
+SetStringBlank S$显_第五时 6 0
+;SetStringBlank <$str(S$显_第六时)> 6 0
+SetStringBlank S$显_第六时 6 0
+;SetStringBlank <$str(S$显_第七时)> 6 0
+SetStringBlank S$显_第七时 6 0
+;SetStringBlank <$str(S$显_第八时)> 6 0
+SetStringBlank S$显_第八时 6 0
+;SetStringBlank <$str(S$显_第九时)> 6 0
+SetStringBlank S$显_第九时 6 0
+;SetStringBlank <$str(S$显_第十时)> 6 0
+SetStringBlank S$显_第十时 6 0
+;SetStringBlank <$str(S$显_自身活跃)> 5 0
+SetStringBlank S$显_自身活跃 5 0
+;SetStringBlank <$str(S$显_自身杀人)> 5 0
+SetStringBlank S$显_自身杀人 5 0
+;SetStringBlank <$str(S$显_自身被杀)> 5 0
+SetStringBlank S$显_自身被杀 5 0
+;SetStringBlank <$str(S$显_自身存活)> 6 0
+SetStringBlank S$显_自身存活 6 0
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;━【以下是加入攻城奖励领取脚本】━━━━━━━━━━━━━━━━━━━━━━━━
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@领取_杀人奖金]
+#IF
+NOT Equal $(攻城_进度) 4
+#ACT
+MessageBox \[提示]：\　\　　　　攻城战役尚未开始或结束，亦或已过期\　\　　　　请在攻城结束后20分钟内前来领取...
+Break
+#IF
+#ACT
+GetListString ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt 0 S$领取名_状态
+#IF
+NOT CheckContainsText S$领取名_状态 <$USERNAME>
+#ACT
+MessageBox \[提示]：\　\　　　　你不是攻城期间的杀人王...
+Break
+#IF
+CheckContainsText S$领取名_状态 已领取
+#ACT
+MessageBox \[提示]：\　\　　　　奖励已领取...
+Break
+#IF
+Equal $(攻城_进度) 4
+CheckContainsText S$领取名_状态 <$USERNAME>[未领取]
+#ACT
+GAMEPOINT + <$Str(N$杀人王)>
+DelTextList ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt <$USERNAME>[未领取]
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt <$USERNAME>[已领取]
+SENDMOVEMSG 1 249 0 100 1 〖系统〗：恭喜{《<$USERNAME>》/FCOLOR=253}荣膺沙城战役中的{‘杀人王’/FCOLOR=253}，获得奖励：{<$Str(N$杀人王)>钻石/FCOLOR=251}...
+SENDMOVEMSG 1 249 0 130 1 〖系统〗：恭喜{《<$USERNAME>》/FCOLOR=253}荣膺沙城战役中的{‘杀人王’/FCOLOR=253}，获得奖励：{<$Str(N$杀人王)>钻石/FCOLOR=251}...
+SENDMOVEMSG 1 249 0 160 1 〖系统〗：恭喜{《<$USERNAME>》/FCOLOR=253}荣膺沙城战役中的{‘杀人王’/FCOLOR=253}，获得奖励：{<$Str(N$杀人王)>钻石/FCOLOR=251}...
+SendCenterMsg 253 251 〖系统〗：恭喜《<$USERNAME>》荣膺沙城战役中的‘杀人王’，获得奖励：<$Str(N$杀人王)>钻石... 1 10
+SendCenterMsg 253 251 〖系统〗：恭喜《<$USERNAME>》荣膺沙城战役中的‘杀人王’，获得奖励：<$Str(N$杀人王)>钻石... 1 10
+SendCenterMsg 253 251 〖系统〗：恭喜《<$USERNAME>》荣膺沙城战役中的‘杀人王’，获得奖励：<$Str(N$杀人王)>钻石... 1 10
+Goto @查看_攻城统计
+BREAK
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@领取_败方奖金]
+#IF
+NOT Equal $(攻城_进度) 4
+#ACT
+MessageBox \[提示]：\　\　　　　攻城战役尚未开始或结束，亦或已过期\　\　　　　请在攻城结束后20分钟内前来领取...
+Break
+#IF
+Not HAVEGUILD
+#ACT
+MessageBox \[提示]：\　\　　　　你没有加入任何行会...
+Break
+#IF
+Equal <$GUILDNAME> <$OWNERGUILD>
+#ACT
+MessageBox \[提示]：\　\　　　　你是获胜方行会人员；\　\　　　　不要瞎胡闹...
+Break
+#IF
+EQUAL <$HUMAN(领奖标识)> 1
+#ACT
+MessageBox \[提示]：\　\　　　　请不要重复领取...
+Break
+#IF
+Small <$HUMAN(个人活跃)> 30
+#ACT
+MessageBox \[提示]：\　\　　　　很遗憾，你的活跃度不达标!!!\　\　　　　未能获得领取奖励资格...
+Break
+#IF
+Not Small <$HUMAN(个人活跃)> 30
+Not Equal <$GUILDNAME> <$OWNERGUILD>
+Equal <$HUMAN(领奖标识)> 0
+Equal $(攻城_进度) 4
+HAVEGUILD
+#ACT
+GAMEPOINT + <$Str(N$败方单份)>
+CALCVAR HUMAN 领奖标识 = 1
+SAVEVAR HUMAN 领奖标识
+SENDMSG 5 [系统]：恭喜你，成功领取攻城战役失败行会奖励，获得奖励：<$Str(N$败方单份)>钻石...
+SENDMSG 6 [系统]：恭喜你，成功领取攻城战役失败行会奖励，获得奖励：<$Str(N$败方单份)>钻石...
+SENDMSG 7 [系统]：恭喜你，成功领取攻城战役失败行会奖励，获得奖励：<$Str(N$败方单份)>钻石...
+SENDMSG 6 [系统]：恭喜你，成功领取攻城战役失败行会奖励，获得奖励：<$Str(N$败方单份)>钻石...
+SENDMSG 5 [系统]：恭喜你，成功领取攻城战役失败行会奖励，获得奖励：<$Str(N$败方单份)>钻石...
+Goto @查看_攻城统计
+BREAK
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@领取_败方大号]
+#IF
+NOT Equal $(攻城_进度) 4
+#ACT
+MessageBox \[提示]：\　\　　　　攻城战役尚未开始或结束，亦或已过期\　\　　　　请在攻城结束后20分钟内前来领取...
+Break
+#IF
+Not HAVEGUILD
+#ACT
+MessageBox \[提示]：\　\　　　　你没有加入任何行会...
+Break
+#IF
+Equal <$GUILDNAME> <$OWNERGUILD>
+#ACT
+MessageBox \[提示]：\　\　　　　你是获胜方行会人员；\　\　　　　不要瞎胡闹...
+Break
+#IF
+EQUAL <$HUMAN(领奖标识)> 0
+#ACT
+MessageBox \[提示]：\　\　　　　请先点击‘领取胜利方攻城奖励’后再来找我...
+Break
+#IF
+EQUAL <$HUMAN(领奖标识)> 2
+#ACT
+MessageBox \[提示]：\　\　　　　请不要重复领取...
+Break
+#IF
+Small <$HUMAN(个人活跃)> 30
+#ACT
+MessageBox \[提示]：\　\　　　　很遗憾，你的活跃度不达标!!!\　\　　　　未能获得领取奖励资格...
+Break
+#IF
+Not EQUAL $(个人_有效) 2
+#ACT
+MessageBox \[提示]：\　\　　　　没有获得‘大号额外奖励’资格...
+Break
+#IF
+Not Equal <$HUMAN(账号标识)> 2
+#ACT
+MessageBox \[提示]：\　\　　　　你不是‘大号’...
+#IF
+not Small <$HUMAN(个人活跃)> 30
+Not Equal <$GUILDNAME> <$OWNERGUILD>
+EQUAL $(个人_有效) 2
+Equal <$HUMAN(领奖标识)> 1
+Equal <$HUMAN(账号标识)> 2
+Equal $(攻城_进度) 4
+HAVEGUILD
+#ACT
+GAMEPOINT + <$Str(N$败方单份)>
+CALCVAR HUMAN 领奖标识 = 2
+SAVEVAR HUMAN 领奖标识
+SendCenterMsg 249 0 《<$USERNAME>》领取失败行会大号额外奖励，获得奖励：<$Str(N$败方单份)>钻石... 1 8
+MessageBox \[提示]：恭喜你!!!\　\　　　　成功领取失败行会大号额外奖励；\　\　　　　获得奖励：<$Str(N$败方单份)>钻石...
+Goto @查看_攻城统计
+BREAK
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@领取_胜方奖金]
+#IF
+NOT Equal $(攻城_进度) 4
+#ACT
+MessageBox \[提示]：\　\　　　　攻城战役尚未开始或结束，亦或已过期\　\　　　　请在攻城结束后20分钟内前来领取...
+Break
+#IF
+Not HAVEGUILD
+#ACT
+MessageBox \[提示]：\　\　　　　你没有加入任何行会...
+Break
+#IF
+Not Equal <$GUILDNAME> <$OWNERGUILD>
+#ACT
+MessageBox \[提示]：\　\　　　　你不是获胜方行会人员...
+Break
+#IF
+EQUAL <$HUMAN(领奖标识)> 1
+#ACT
+MessageBox \[提示]：\　\　　　　请不要重复领取...
+Break
+#IF
+Small <$HUMAN(个人活跃)> 30
+#ACT
+MessageBox \[提示]：\　\　　　　很遗憾，你的活跃度不达标!!!\　\　　　　未能获得领取奖励资格...
+Break
+#IF
+not Small <$HUMAN(个人活跃)> 30
+Equal <$GUILDNAME> <$OWNERGUILD>
+Equal <$HUMAN(领奖标识)> 0
+Equal $(攻城_进度) 4
+HAVEGUILD
+#ACT
+GAMEPOINT + <$Str(N$胜方单份)>
+CALCVAR HUMAN 领奖标识 = 1
+SAVEVAR HUMAN 领奖标识
+SENDMSG 5 [系统]：恭喜你，成功领取攻城战役胜利行会奖励，获得奖励：<$Str(N$胜方单份)>钻石...
+SENDMSG 6 [系统]：恭喜你，成功领取攻城战役胜利行会奖励，获得奖励：<$Str(N$胜方单份)>钻石...
+SENDMSG 7 [系统]：恭喜你，成功领取攻城战役胜利行会奖励，获得奖励：<$Str(N$胜方单份)>钻石...
+SENDMSG 6 [系统]：恭喜你，成功领取攻城战役胜利行会奖励，获得奖励：<$Str(N$胜方单份)>钻石...
+SENDMSG 5 [系统]：恭喜你，成功领取攻城战役胜利行会奖励，获得奖励：<$Str(N$胜方单份)>钻石...
+Goto @查看_攻城统计
+BREAK
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@领取_胜方大号]
+#IF
+NOT Equal $(攻城_进度) 4
+#ACT
+MessageBox \[提示]：\　\　　　　攻城战役尚未开始或结束，亦或已过期\　\　　　　请在攻城结束后20分钟内前来领取...
+Break
+#IF
+Not HAVEGUILD
+#ACT
+MessageBox \[提示]：\　\　　　　你没有加入任何行会...
+Break
+#IF
+Not Equal <$GUILDNAME> <$OWNERGUILD>
+#ACT
+MessageBox \[提示]：\　\　　　　你不是获胜方行会人员...
+Break
+#IF
+EQUAL <$HUMAN(领奖标识)> 0
+#ACT
+MessageBox \[提示]：\　\　　　　请先点击‘领取胜利方攻城奖励’后再来找我...
+Break
+#IF
+EQUAL <$HUMAN(领奖标识)> 2
+#ACT
+MessageBox \[提示]：\　\　　　　请不要重复领取...
+Break
+#IF
+Small <$HUMAN(个人活跃)> 30
+#ACT
+MessageBox \[提示]：\　\　　　　很遗憾，你的活跃度不达标!!!\　\　　　　未能获得领取奖励资格...
+Break
+#IF
+Not EQUAL $(个人_有效) 2
+#ACT
+MessageBox \[提示]：\　\　　　　没有获得‘大号额外奖励’资格...
+Break
+#IF
+Not Equal <$HUMAN(账号标识)> 2
+#ACT
+MessageBox \[提示]：\　\　　　　你不是‘大号’...
+Break
+#IF
+not Small <$HUMAN(个人活跃)> 30
+EQUAL $(个人_有效) 2
+Equal <$GUILDNAME> <$OWNERGUILD>
+Equal <$HUMAN(领奖标识)> 1
+Equal <$HUMAN(账号标识)> 2
+Equal $(攻城_进度) 4
+HAVEGUILD
+#ACT
+GAMEPOINT + <$Str(N$胜方单份)>
+CALCVAR HUMAN 领奖标识 = 2
+SAVEVAR HUMAN 领奖标识
+SendCenterMsg 249 0 《<$USERNAME>》领取胜利行会大号额外奖励，获得奖励：<$Str(N$胜方单份)>钻石... 1 8
+MessageBox \[提示]：恭喜你!!!\　\　　　　成功领取胜利行会大号额外奖励；\　\　　　　获得奖励：<$Str(N$胜方单份)>钻石...
+Goto @查看_攻城统计
+BREAK
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;━【以下是加入攻城统计加载脚本】━━━━━━━━━━━━━━━━━━━━━━━━
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@攻城统计_界面加载]
+#IF
+Not Equal <$OWNERGUILD> 红方
+Not Equal <$OWNERGUILD> 蓝方
+#ACT
+Mov S$沙城_归属 <暂无行会占领/FCOLOR=249>
+#ElseAct
+Mov S$沙城_归属 {<$OWNERGUILD>/FCOLOR=253}
+#IF
+Small <$HUMAN(个人活跃)> 30
+#ACT
+Mov S$个人_有效 <无效攻城人员(无资格领取奖励)/FCOLOR=70>
+#ElseAct
+Mov S$个人_有效 {有效攻城人员(可领取奖励红包)/FCOLOR=250}
+#IF
+#ACT
+Mov S$显示_红方人数 <$Str($(红方_人数))>
+Mov S$显示_红方有效 <$Str($(红方_有效))>
+Mov S$显示_红方活跃 <$Str($(红方_活跃))>
+Mov S$显示_红方斩杀 <$Str($(红方_斩杀))>
+Mov S$显示_蓝方人数 <$Str($(蓝方_人数))>
+Mov S$显示_蓝方有效 <$Str($(蓝方_活跃))>
+Mov S$显示_蓝方活跃 <$Str($(蓝方_活跃))>
+Mov S$显示_蓝方斩杀 <$Str($(蓝方_斩杀))>
+Mov S$显示_个人活跃 <$HUMAN(个人活跃)>
+;SetStringBlank <$Str(S$显示_红方人数)> 3 0
+SetStringBlank S$显示_红方人数 3 0
+;SetStringBlank <$Str(S$显示_红方有效)> 3 0
+SetStringBlank S$显示_红方有效 3 0
+;SetStringBlank <$Str(S$显示_红方活跃)> 5 0
+SetStringBlank S$显示_红方活跃 5 0
+;SetStringBlank <$Str(S$显示_红方斩杀)> 5 0
+SetStringBlank S$显示_红方斩杀 5 0
+;SetStringBlank <$Str(S$显示_蓝方人数)> 3 0
+SetStringBlank S$显示_蓝方人数 3 0
+;SetStringBlank <$Str(S$显示_蓝方有效)> 3 0
+SetStringBlank S$显示_蓝方有效 3 0
+;SetStringBlank <$Str(S$显示_蓝方活跃)> 5 0
+SetStringBlank S$显示_蓝方活跃 5 0
+;SetStringBlank <$Str(S$显示_蓝方斩杀)> 5 0
+SetStringBlank S$显示_蓝方斩杀 5 0
+;SetStringBlank <$Str(S$显示_个人活跃)> 3 0
+SetStringBlank S$显示_个人活跃 3 0
+;==============================================================================奖励计算
+GetRandomText ..\..\..\..\剑如歌_制作\捐献文本\<$STR(A499)>\一区.txt N$一区金额 0
+GetRandomText ..\..\..\..\剑如歌_制作\捐献文本\<$STR(A499)>\二区.txt N$二区金额 0
+GetRandomText ..\..\..\..\剑如歌_制作\捐献文本\<$STR(A499)>\三区.txt N$三区金额 0
+GetRandomText ..\..\..\..\剑如歌_制作\捐献文本\<$STR(A499)>\四区.txt N$四区金额 0
+GetRandomText ..\..\..\..\剑如歌_制作\捐献文本\<$STR(A499)>\五区.txt N$五区金额 0
+GetRandomText ..\..\..\..\剑如歌_制作\捐献文本\<$STR(A499)>\六区.txt N$六区金额 0
+Mov N$总奖池 <$STR(N$一区金额)>
+Inc N$总奖池 <$STR(N$二区金额)>
+Inc N$总奖池 <$STR(N$三区金额)>
+Inc N$总奖池 <$STR(N$四区金额)>
+Inc N$总奖池 <$STR(N$五区金额)>
+Inc N$总奖池 <$STR(N$六区金额)>
+;===============================管理费
+Mul N$管理费 <$STR(N$总奖池)> 2
+Div N$管理费 10
+;===============================杀人王
+Div N$杀人王 <$STR(N$总奖池)> 10
+;===============================沙奖金
+Mov N$沙奖金 <$STR(N$总奖池)>
+Dec N$沙奖金 <$STR(N$管理费)>
+Dec N$沙奖金 <$STR(N$杀人王)>
+;===============================胜利方
+Mul N$胜利方 <$STR(N$沙奖金)> 6
+Div N$胜利方 10
+;===============================失败方
+Mov N$失败方 <$STR(N$沙奖金)>
+Dec N$失败方 <$STR(N$胜利方)>
+;===============================显示赋值
+Mov S$显示_总奖池 <$STR(N$总奖池)>
+Mov S$显示_发放金 <$STR(N$沙奖金)>
+Mov S$显示_胜方奖金 <$STR(N$胜利方)>
+Mov S$显示_败方奖金 <$STR(N$失败方)>
+Mov S$杀人王_奖金 <$STR(N$杀人王)>
+;SetStringBlank <$Str(S$显示_总奖池)> 5 0
+SetStringBlank S$显示_总奖池 5 0
+;SetStringBlank <$Str(S$显示_发放金)> 5 0
+SetStringBlank S$显示_发放金 5 0
+;SetStringBlank <$Str(S$显示_胜方奖金)> 5 0
+SetStringBlank S$显示_胜方奖金 5 0
+;SetStringBlank <$Str(S$显示_败方奖金)> 5 0
+SetStringBlank S$显示_败方奖金 5 0
+;SetStringBlank <$Str(S$杀人王_奖金)> 4 0
+SetStringBlank S$杀人王_奖金 4 0
+;=============================================胜败双方计算
+#IF
+Not Equal <$OWNERGUILD> 红方
+Not Equal <$OWNERGUILD> 蓝方
+#ACT
+Mov N$胜方有效 0
+Mov N$胜方单份 0
+Mov N$败方有效 0
+Mov N$败方单份 0
+#IF
+Equal <$OWNERGUILD> 红方
+#ACT
+Mov N$胜方有效 <$STR($(红方_有效))>
+Div N$胜方单份 <$STR(N$胜利方)> <$STR(N$胜方有效)>
+Mov N$败方有效 <$STR($(蓝方_有效))>
+Div N$败方单份 <$STR(N$失败方)> <$STR(N$败方有效)>
+#IF
+Equal <$OWNERGUILD> 蓝方
+#ACT
+Mov N$胜方有效 <$STR($(蓝方_有效))>
+Div N$胜方单份 <$STR(N$胜利方)> <$STR(N$胜方有效)>
+Mov N$败方有效 <$STR($(红方_有效))>
+Div N$败方单份 <$STR(N$失败方)> <$STR(N$败方有效)>
+;=============================================杀人王读取
+#IF
+#ACT
+SortHumVarToListEx 攻城斩杀 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt 1 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 1
+AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
+GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 0 S$杀人王_名 N$杀人王_数
+GetListString ..\QuestDiary\B03_行会系统\行会系统_奖金计算.txt 4 S$领取名_状态 N$领取_奖金
+#IF
+Large N$杀人王_数 0
+#ACT
+Mov S$显示_杀人王 <$Str(S$杀人王_名)>
+#ELSEACT
+Mov S$显示_杀人王 暂未有人上榜...
+#IF
+CheckContainsText S$领取名_状态 未领取
+#ACT
+Mov S$杀人奖金_状态 <等待领取…/FCOLOR=250>
+#ELSEACT
+Mov S$杀人奖金_状态 <奖金已领取/FCOLOR=253>
+#IF
+#ACT
+Mov S$显示_胜方有效 <$STR(N$胜方有效)>
+Mov S$胜方_单份奖金 <$STR(N$胜方单份)>
+Mov S$显示_败方有效 <$STR(N$败方有效)>
+Mov S$败方_单份奖金 <$STR(N$败方单份)>
+;SetStringBlank <$Str(S$显示_杀人王)> 14 1
+SetStringBlank S$显示_杀人王 14 1
+;SetStringBlank <$Str(S$显示_胜方有效)> 3 0
+SetStringBlank S$显示_胜方有效 3 0
+;SetStringBlank <$Str(S$胜方_单份奖金)> 4 0
+SetStringBlank S$胜方_单份奖金 4 0
+;SetStringBlank <$Str(S$显示_败方有效)> 3 0
+SetStringBlank S$显示_败方有效 3 0
+;SetStringBlank <$Str(S$败方_单份奖金)> 4 0
+SetStringBlank S$败方_单份奖金 4 0
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;━【以下是加入行会界面触发脚本】━━━━━━━━━━━━━━━━━━━━━━━━
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@加入行会_蓝方]
+#IF
+CHECKTEXTLIST ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt 机器码=<$MACHINEID>
+#ACT
+MessageBox \[提示]：该电脑已有加入行会的账号或角色；\　\　　　　一台电脑仅限一个角色加入行会，参与攻城...
+Break
+#IF
+Not CHECKTITLE 沙城捐献
+#ACT
+MessageBox \[提示]：没有资格!\　\　　　　请先进行沙城捐献...
+Break
+#IF
+CHECKLEVELEX < 500
+#ACT
+MessageBox \[提示]：没有资格!\　\　　　　等级尚未达标，请先提升你的实力...
+Break
+#IF
+;满雄霸记录标识
+Equal $(雄霸_标识) 1
+#ACT
+MessageBox \[提示]：没有资格!\　\　　　　你没有满雄霸...
+Break
+#IF
+Equal $(入会_开关) 0
+#ACT
+MessageBox \[提示]：来晚了!\　\　　　　加入行会窗口已关闭...
+Break
+#IF
+HAVEGUILD
+#ACT
+MessageBox \[提示]：？？？\　\　　　　你已加入行会，捣什么乱...
+Break
+#IF
+large N$蓝方_差距 4
+#ACT
+MessageBox \[提示]：行会实力控制，当前人数差距过大，\　\　　　　请加入红方行会...
+Break
+#IF
+Not Equal <$HUMAN(入会标识)> 0
+#ACT
+MessageBox \[提示]：加入失败!\　\　　　　叛逃者无法重新加入行会...
+Break
+#IF
+Equal $(入会_开关) 1
+Small N$蓝方_差距 5
+Equal <$HUMAN(入会标识)> 0
+#ACT
+AddGuildMember 蓝方 <$USERNAME>
+Goto @蓝方账号_检测
+CALCVAR HUMAN 入会标识 = 2
+SAVEVAR HUMAN 入会标识
+AddTextListEx ..\QuestDiary\B03_行会系统\行会成员活跃数据中心\蓝方成员活跃数据中心\成员名称记录列表.txt <$USERNAME> 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt 机器码=<$MACHINEID> 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt 行会=蓝方 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$USERNAME>] 0
+SendCenterMsg 253 0 玩家《<$USERNAME>》成功加入【蓝方】行会，当前【蓝方】行会总人数：<$Str($(蓝方_人数))> 1 3
+Goto @MAIN
+Break
+[@蓝方账号_检测]
+#IF
+;QFunction-0内套装触发脚本
+;终极套装，给予个人变量标识
+Equal $(终极_标识) 1
+#ACT
+CALCVAR HUMAN 账号标识 = 2
+SAVEVAR HUMAN 账号标识
+Inc $(蓝方_人数) 2
+#IF
+Equal $(终极_标识) 0
+#ACT
+CALCVAR HUMAN 账号标识 = 1
+SAVEVAR HUMAN 账号标识
+Inc $(蓝方_人数) 1
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@加入行会_红方]
+#IF
+CHECKTEXTLIST ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt 机器码=<$MACHINEID>
+#ACT
+MessageBox \[提示]：该电脑已有加入行会的账号或角色；\　\　　　　一台电脑仅限一个角色加入行会，参与攻城...
+Break
+#IF
+Not CHECKTITLE 沙城捐献
+#ACT
+MessageBox \[提示]：没有资格!\　\　　　　请先进行沙城捐献...
+Break
+#IF
+CHECKLEVELEX < 500
+#ACT
+MessageBox \[提示]：没有资格!\　\　　　　等级尚未达标，请先提升你的实力...
+Break
+#IF
+;满雄霸记录标识
+Equal $(雄霸_标识) 1
+#ACT
+MessageBox \[提示]：没有资格!\　\　　　　你没有满雄霸...
+Break
+#IF
+Equal $(入会_开关) 0
+#ACT
+MessageBox \[提示]：来晚了!\　\　　　　加入行会窗口已关闭...
+Break
+#IF
+HAVEGUILD
+#ACT
+MessageBox \[提示]：？？？\　\　　　　你已加入行会，捣什么乱...
+Break
+#IF
+large N$红方_差距 4
+#ACT
+MessageBox \[提示]：行会实力控制，当前人数差距过大，\　\　　　　请加入蓝方行会...
+Break
+#IF
+Not Equal <$HUMAN(入会标识)> 0
+#ACT
+MessageBox \[提示]：加入失败!\　\　　　　叛逃者无法重新加入行会...
+Break
+#IF
+Equal $(入会_开关) 1
+Small N$红方_差距 5
+Equal <$HUMAN(入会标识)> 0
+#ACT
+AddGuildMember 红方 <$USERNAME>
+Goto @红方账号_检测
+CALCVAR HUMAN 入会标识 = 1
+SAVEVAR HUMAN 入会标识
+AddTextListEx ..\QuestDiary\B03_行会系统\行会成员活跃数据中心\红方成员活跃数据中心\成员名称记录列表.txt <$USERNAME> 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt 机器码=<$MACHINEID> 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt 行会=红方 0
+AddTextListEx ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$USERNAME>] 0
+SendCenterMsg 253 0 玩家《<$USERNAME>》成功加入【红方】行会，当前【红方】行会总人数：<$Str($(红方_人数))> 1 3
+Goto @MAIN
+Break
+[@红方账号_检测]
+#IF
+;QFunction-0内穿戴触发脚本，穿脱时检测是否拥有终极套装备
+;如果是终极套，给予个人变量标识
+Equal $(终极_标识) 1
+#ACT
+CALCVAR HUMAN 账号标识 = 2
+SAVEVAR HUMAN 账号标识
+Inc $(红方_人数) 2
+#IF
+Equal $(终极_标识) 0
+#ACT
+CALCVAR HUMAN 账号标识 = 1
+SAVEVAR HUMAN 账号标识
+Inc $(红方_人数) 1
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@账号_提升]
+#IF
+Not HAVEGUILD
+#ACT
+MessageBox \[提示]：？？？\　\　　　　请先加入行会...
+Break
+#IF
+Equal <$HUMAN(入会标识)>
+#ACT
+MessageBox \[提示]：\　\　　　　请先通过自助加入行会功能加入行会...
+Break
+#IF
+Equal $(入会_开关) 0
+#ACT
+MessageBox \[提示]：来晚了!\　\　　　　加入行会窗口已关闭...
+Break
+#IF
+Equal <$HUMAN(账号标识)> 2
+#ACT
+MessageBox \[提示]：？？？\　\　　　　你已是大号级别，攻城结束可领取2份奖励红包...
+Break
+#IF
+Equal $(终极_标识) 0
+#ACT
+MessageBox \[提示]：？？？\　\　　　　尚未达标，请先提升自己的实力...
+Break
+#IF
+Equal <$GUILDNAME> 红方
+#ACT
+Goto @红方提升
+Break
+#IF
+Equal <$GUILDNAME> 蓝方
+#ACT
+Goto @蓝方提升
+Break
+[@红方提升]
+#IF
+large N$红方_差距 4
+#ACT
+MessageBox \[提示]：行会实力控制，当前人数差距过大，\　\　　　　暂时无法提升...
+Break
+#IF
+Equal <$HUMAN(账号标识)> 1
+Small N$红方_差距 5
+Equal $(终极_标识) 1
+#ACT
+CALCVAR HUMAN 账号标识 = 2
+SAVEVAR HUMAN 账号标识
+Inc $(红方_人数) 1
+MessageBox \[提示]：提升成功!\　\　　　　成功提升为大号级别，攻城结束可领取2份奖励红包...
+[@蓝方提升]
+#IF
+large N$蓝方_差距 4
+#ACT
+MessageBox \[提示]：行会实力控制，当前人数差距过大，\　\　　　　暂时无法提升...
+Break
+#IF
+Equal <$HUMAN(账号标识)> 1
+Small N$蓝方_差距 5
+Equal $(终极_标识) 1
+#ACT
+CALCVAR HUMAN 账号标识 = 2
+SAVEVAR HUMAN 账号标识
+Inc $(蓝方_人数) 1
+MessageBox \[提示]：提升成功!\　\　　　　成功提升为大号级别，攻城结束可领取2份奖励红包...
+Break
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[@行会系统常量加载]
+#CALL [\B03_行会系统\行会系统_常量设置.ini] @行会系统常量
+}

@@ -1,0 +1,171 @@
+[@main]
+
+#OR
+CHECKITEMW ★★「九天★祥云」★★ 1
+ChecKitem ★★「九天★祥云」★★
+#ACT
+MESSAGEBOX 你已经有顶级★★「九天★祥云」★★~
+BREAK
+
+#IF
+NOT CHECKITEMW ★★「九天·祥云」★★ 1
+NOT ChecKitem ★★「九天·祥云」★★
+
+NOT CHECKITEMW ★★「九天★祥云」★★ 1
+NOT ChecKitem ★★「九天★祥云」★★
+
+
+#ACT
+GOTO @初级
+BREAK
+#ELSEACT
+GOTO @检测1
+BREAK
+
+
+[@检测1]
+#OR
+CHECKITEMW ★★「九天·祥云」★★ 1
+ChecKitem ★★「九天·祥云」★★
+#ACT
+GOTO @下一页_1
+BREAK
+#ELSEACT
+GOTO @检测2
+BREAK
+
+
+
+[@检测2]
+#OR
+CHECKITEMW ★★「九天★祥云」★★ 1
+ChecKitem ★★「九天★祥云」★★
+#ACT
+GOTO @下一页_2
+BREAK
+#ELSEACT
+GOTO @检测3
+BREAK
+
+
+
+
+
+[@初级]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[★★「九天·祥云」★★/FCOLOR=70}\
+<PlayImg:27:231:12:100:130:75>\
+<Itemshow:1588:0:595:100>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：「九天·祥云」★★★*1^250#合成条件②：时装羽毛*5000^250#合成条件③：风灵石·天*300^250#合成条件④：钻石*2000/@1级切割>
+<ImgEx:41:180:181:182:126:309>
+<ImgEx:41:183:184:185:123:309/@下一页_1>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+
+<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+
+
+
+[@下一页_1]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[★★「九天★祥云」★★/FCOLOR=70}\
+<PlayImg:27:243:8:100:160:90>\
+<Itemshow:1589:0:600:100>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：★★「九天·祥云」★★*1^250#合成条件②：时装羽毛*10000^250#合成条件③：风灵石·天*400^250#合成条件④：钻石*3000/@2级切割>
+<ImgEx:41:180:181:182:126:309/@main>
+<ImgEx:41:183:184:185:123:309/@下一页_2>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+
+<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+
+
+
+
+
+
+
+[@1级切割]
+#if
+checkGAMEPOINT > 1999
+checkitem 「九天·祥云」★★★ 1
+checkitem 时装羽毛 5000
+checkitem 风灵石·天 300
+#act
+take 风灵石·天 300
+take 「九天·祥云」★★★ 1
+take 时装羽毛 5000
+;GiveStateItem ★★「九天·祥云」★★  1 1 1 0 0 1 1 1
+GIVESTATEITEM ★★「九天·祥云」★★ 1 1 1 1 0 0 1 1 0
+GAMEPOINT - 2000
+MESSAGEBOX [提示]:获得物品:★★「九天·祥云」★★
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+[@2级切割]
+#if
+checkGAMEPOINT > 2999
+checkitem ★★「九天·祥云」★★ 1
+checkitem 时装羽毛 10000
+checkitem 风灵石·天 400
+#act
+take 风灵石·天 400
+take ★★「九天·祥云」★★ 1
+take 时装羽毛 10000
+;GiveStateItem ★★「九天★祥云」★★  1 1 1 0 0 1 1 1
+GIVESTATEITEM ★★「九天★祥云」★★ 1 1 1 1 0 0 1 1 0
+GAMEPOINT - 3000
+MESSAGEBOX [提示]:获得物品:★★「九天★祥云」★★
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@时装合成4]
+#if
+large g16 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+#if
+checkgold 10
+#act
+take 金币 10
+GIVE 风灵石·天 1
+INC G16 1
+MESSAGEBOX [提示]:获得物品:[风灵石·天]
+GOTO @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@时装合成5]
+#if
+large g16 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 风灵石·天 10
+INC G16 10
+MESSAGEBOX [提示]:获得物品:[风灵石·天*10]
+GOTO @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+

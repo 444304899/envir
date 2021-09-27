@@ -1,0 +1,386 @@
+[@领取荣誉点]
+{
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\01.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\01.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\1.txt
+#ACT
+GAMEGLORY +  1
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\1.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了1荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\02.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\02.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\2.txt
+#ACT
+GAMEGLORY +  2
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\2.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了2荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\03.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\03.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\3.txt
+#ACT
+GAMEGLORY +  3
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\3.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了3荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\04.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\04.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\4.txt
+#ACT
+GAMEGLORY +  4
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\4.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了4荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\05.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\05.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\5.txt
+#ACT
+GAMEGLORY +  5
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\5.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了5荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\06.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\06.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\6.txt
+#ACT
+GAMEGLORY +  6
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\6.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了6荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\07.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\07.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\7.txt
+#ACT
+GAMEGLORY +  7
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\7.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了7荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\08.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\08.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\8.txt
+#ACT
+GAMEGLORY +  8
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\8.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了8荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\09.txt
+#ACT
+GAMEGLORY +  0
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\09.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了0荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\9.txt
+#ACT
+GAMEGLORY +  9
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\9.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了9荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\10.txt
+#ACT
+GAMEGLORY +  10
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\10.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了10荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\20.txt
+#ACT
+GAMEGLORY +  20
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\20.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了20荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\30.txt
+#ACT
+GAMEGLORY +  30
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\30.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了30荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\40.txt
+#ACT
+GAMEGLORY +  40
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\40.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了40荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\50.txt
+#ACT
+GAMEGLORY +  50
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\50.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了50荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\60.txt
+#ACT
+GAMEGLORY +  60
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\60.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了60荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\70.txt
+#ACT
+GAMEGLORY +  70
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\70.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了70荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\80.txt
+#ACT
+GAMEGLORY +  80
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\80.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了80荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\90.txt
+#ACT
+GAMEGLORY +  90
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\90.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了90荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\100.txt
+#ACT
+GAMEGLORY +  100
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\100.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了100荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\200.txt
+#ACT
+GAMEGLORY +  200
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\200.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了200荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\300.txt
+#ACT
+GAMEGLORY +  300
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\300.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了300荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\400.txt
+#ACT
+GAMEGLORY +  400
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\400.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了400荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\500.txt
+#ACT
+GAMEGLORY +  500
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\500.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了500荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\600.txt
+#ACT
+GAMEGLORY +  600
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\600.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了600荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\700.txt
+#ACT
+GAMEGLORY +  700
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\700.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了700荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\800.txt
+#ACT
+GAMEGLORY +  800
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\800.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了800荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\900.txt
+#ACT
+GAMEGLORY +  900
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\900.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了900荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\1000.txt
+#ACT
+GAMEGLORY +  1000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\1000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了1000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\2000.txt
+#ACT
+GAMEGLORY +  2000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\2000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了2000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\3000.txt
+#ACT
+GAMEGLORY +  3000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\3000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了3000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\4000.txt
+#ACT
+GAMEGLORY +  4000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\4000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了4000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\5000.txt
+#ACT
+GAMEGLORY +  5000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\5000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了5000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\6000.txt
+#ACT
+GAMEGLORY +  6000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\6000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了6000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\7000.txt
+#ACT
+GAMEGLORY +  7000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\7000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了7000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\8000.txt
+#ACT
+GAMEGLORY +  8000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\8000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了8000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\9000.txt
+#ACT
+GAMEGLORY +  9000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\9000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了9000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\10000.txt
+#ACT
+GAMEGLORY +  10000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\10000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了10000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\20000.txt
+#ACT
+GAMEGLORY +  20000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\20000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了20000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\30000.txt
+#ACT
+GAMEGLORY +  30000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\30000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了30000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\40000.txt
+#ACT
+GAMEGLORY +  40000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\40000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了40000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\50000.txt
+#ACT
+GAMEGLORY +  50000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\50000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了50000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\60000.txt
+#ACT
+GAMEGLORY +  60000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\60000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了60000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\70000.txt
+#ACT
+GAMEGLORY +  70000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\70000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了70000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\80000.txt
+#ACT
+GAMEGLORY +  80000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\80000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了80000荣誉点。
+
+#IF
+CheckAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\90000.txt
+#ACT
+GAMEGLORY +  90000
+DelAccountList ..\QuestDiary\92cz钻石\附加赠送\荣誉点\90000.txt
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>通过在线充值额外获得了90000荣誉点。
+
+#ELSESAY
+\　\ \
+<>       请查看自己的充值数量!\
+<>       没有充值请按提示进行充值!\
+<>       <退出/@exit>
+}

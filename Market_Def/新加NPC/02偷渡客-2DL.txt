@@ -1,0 +1,48 @@
+[@main]
+#if
+#act
+#say
+\
+<><[偷渡客]/AUTOCOLOR=254>\
+<IMG:166:6:0:5> \
+<> <什么？你错过了去克洛诺斯海岛的航班？行吧，我可以帮你但是我需要收取一点/AUTOCOLOR=150>\
+<> <费用，并且我每次只可以帮一个人过去，你考虑清楚了再来找我！/AUTOCOLOR=150>\
+<> <注:克洛诺斯海岛极其危险，请考虑清楚！/AUTOCOLOR=150>\
+<IMG:166:6:0:5> \
+<><进入条件:/AUTOCOLOR=250>  <攻击力达到40000/AUTOCOLOR=161>            <进入费用:/AUTOCOLOR=250>  <1000*灵符/AUTOCOLOR=70>   \
+<><进入条件:/AUTOCOLOR=250>  <觉醒达到5次/AUTOCOLOR=161>                   \
+<><进入条件:/AUTOCOLOR=250>  <转生达到15转/AUTOCOLOR=161>  \
+<>                                                        <《我要去海岛》/@传送> \
+
+
+[@传送]
+#if
+large <$MAXDC> 39999
+large U21 4
+CHECKRENEWLEVEL > 14
+CHECKGAMEGIRD ? 1000
+#act
+GAMEGIRD - 1000
+MAPMOVE 克洛诺斯海岛 290 339
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

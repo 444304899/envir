@@ -1,0 +1,53 @@
+[@基础按钮QM]
+{
+ #IF
+ Equal <$CLIENTFLAG> 2
+ #ACT
+ MOV S$主界面按钮 <Button|id=333|x=328|y=-65|pimg=private/main/Button_3/1900012059.png|mimg=private/main/Button_3/1900012058.png|color=255|nimg=private/main/Button_3/1900012058.png|link=@商城>
+ ADDBUTTON 103 7 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=435|y=-65|pimg=private/main/Button_3/1900012055.png|mimg=private/main/Button_3/1900012054.png|color=255|nimg=private/main/Button_3/1900012054.png|link=@排行榜>
+ ADDBUTTON 103 8 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=-130|y=-445|mimg=private/main/bottom/1900013010.png|color=255|nimg=private/main/bottom/1900013010.png|link=@角色>
+ ADDBUTTON 104 4 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|id=333|x=-63|y=-445|mimg=private/main/bottom/1900013011.png|color=255|nimg=private/main/bottom/1900013011.png|link=@背包>
+ ADDBUTTON 104 5 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=22|y=30|mimg=private/main/bottom/1900013012.png|color=255|nimg=private/main/bottom/1900013012.png|link=@技能>
+ ADDBUTTON 109 1 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=92|y=30|mimg=private/main/bottom/1900013014.png|color=255|nimg=private/main/bottom/1900013014.png|link=@组队>
+ ADDBUTTON 109 2 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=162|y=30|mimg=private/main/bottom/1900013013.png|color=255|nimg=private/main/bottom/1900013013.png|link=@行会>
+ ADDBUTTON 109 3 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=22|y=100|mimg=private/main/bottom/1900012586.png|color=255|nimg=private/main/bottom/1900012586.png|link=@拍卖行>
+ ADDBUTTON 109 4 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=22|y=170|mimg=private/main/bottom/1900013016.png|color=255|nimg=private/main/bottom/1900013016.png|link=@摆摊>
+ ADDBUTTON 109 11 <$STR(S$主界面按钮)>
+ 
+ 
+ #IF
+ EQUAL <$DEALFTF> 1
+ #act
+ MOV S$主界面按钮 <Button|x=92|y=100|mimg=private/main/bottom/1900013015.png|color=255|nimg=private/main/bottom/1900013015.png|link=@交易>
+ ADDBUTTON 109 5 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=162|y=100|mimg=private/main/bottom/1900013017.png|color=255|nimg=private/main/bottom/1900013017.png|link=@设置>
+ ADDBUTTON 109 6 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=162|y=170|mimg=private/main/bottom/1900013018.png|color=255|nimg=private/main/bottom/1900013018.png|link=@退出>
+ ADDBUTTON 109 7 <$STR(S$主界面按钮)>
+ #IF
+ EQUAL <$DEALFTF> 0
+ #act
+ MOV S$主界面按钮 <Button|x=92|y=100|mimg=private/main/bottom/1900013017.png|color=255|nimg=private/main/bottom/1900013017.png|link=@设置>
+ ADDBUTTON 109 5 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=162|y=100|mimg=private/main/bottom/1900013018.png|color=255|nimg=private/main/bottom/1900013018.png|link=@退出>
+ ADDBUTTON 109 6 <$STR(S$主界面按钮)>
+ #IF
+ Equal <$CLIENTFLAG> 1
+ #act
+ MOV S$主界面按钮 <Button|x=-200|y=-187|pimg=private/main-win32/000195.png|mimg=private/main-win32/000194.png|color=255|nimg=private/main-win32/000194.png|link=@拍卖行>
+ ADDBUTTON 104 9 <$STR(S$主界面按钮)>
+ MOV S$主界面按钮 <Button|x=-235|y=-186|pimg=custom/996/000195.png|mimg=custom/996/000194.png|color=255|nimg=custom/996/000194.png|link=@摆摊>
+ ADDBUTTON 104 10 <$STR(S$主界面按钮)>
+
+
+
+
+}

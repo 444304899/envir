@@ -1,0 +1,79 @@
+[@拾取自动奖励]
+{
+
+
+
+
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\限时奖励\灵符奖励数据.txt <$CURRTEMNAME>:
+#ACT
+GetStringPos  ..\QuestDiary\限时奖励\灵符奖励数据.txt <$CURRTEMNAME>:
+INC N0 1
+GetListString ..\QuestDiary\限时奖励\灵符奖励数据.txt <$Str(N0)>	S$无用	S$首爆金额
+INC N0 1
+GetListString ..\QuestDiary\限时奖励\灵符奖励数据.txt <$Str(N0)>	S$无用	S$首爆名额
+
+
+
+
+
+#if
+checkcontainstext <$Str(S$首爆名额)> 未领取
+#act
+DEC S$首爆金额 灵符
+CHANGEITEMADDVALUE -1  12 = 1
+MOV N$首爆名额 <$Str(S$首爆名额)>
+DelTextList   ..\QuestDiary\限时奖励\灵符奖励数据.txt <$CURRTEMNAME>:未领取
+GAMEGIRD + <$Str(S$首爆金额)>
+mov S$测试记录 <$Str(S$首爆金额)>
+DEC N$首爆名额 1
+AddTextListEx ..\QuestDiary\限时奖励\灵符奖励数据.txt <$CURRTEMNAME>:[<$USERNAME>] <$Str(N0)>
+SENDMOVEMSG 0 253 255 100 1 <恭喜玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]在[/FCOLOR=161>{<$MapTitle>,<$X>,<$Y>/FCOLOR=250}<]处打到一个[/FCOLOR=161>{<$CURRTEMNAME>/FCOLOR=70}<]获得<$STR(S$首爆金额)>个灵符奖励/FCOLOR=161>
+MOV S$首爆金额
+MOV S$首爆名额
+MOV N$首爆名额
+MOV N0 0
+
+
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+CREDITPOINT + <$Str(S$测试记录)>
+
+
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+GOTO @测试区存档
+
+
+
+[@测试区存档]
+
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+ADDACCOUNTLIST ..\QuestDiary\测试区货币记录\测试区充值记录账号列表.txt
+CREATEFILE ..\QuestDiary\测试区货币记录\测试记录充值目录\<$USERACCOUNT>.txt
+#ELSEACT
+BREAK
+
+
+#IF
+large S$测试记录 0
+CHECKACCOUNTLIST ..\QuestDiary\测试区货币记录\测试区充值记录账号列表.txt
+#ACT
+GETRANDOMTEXT ..\QuestDiary\测试区货币记录\测试记录充值目录\<$USERACCOUNT>.txt N$测试区记录充值
+CLEARNAMELIST ..\QuestDiary\测试区货币记录\测试记录充值目录\<$USERACCOUNT>.txt
+ADDTEXTLISTEX ..\QuestDiary\测试区货币记录\测试记录充值目录\<$USERACCOUNT>.txt <$CREDITPOINT>
+SENDMSG 6 测试区成功记录[<$Str(S$测试记录)>灵符]，当前共记录[<$CREDITPOINT>灵符]
+mov S$测试记录 0
+BREAK
+
+
+
+
+
+}

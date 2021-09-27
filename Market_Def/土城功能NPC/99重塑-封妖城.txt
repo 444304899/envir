@@ -1,0 +1,77 @@
+
+
+
+
+[@main]
+
+
+#if
+CheckBoxItemCount 0 1
+#act
+ReturnBoxItem 0
+
+#if
+#act
+#say
+\ \ \  \ \ \ \
+<> <ITEMBOX:0:6:19:100:-10:40:40:15,19,22,26,64,62:请放入你要鉴定的装备>\
+<>     <IMG:291:6:65:68|246#每次鉴定需要50000元宝^-^246#每次重洗需要“云顶结晶”*10/@洗>
+
+
+
+
+
+
+[@ItemIntoBox0]
+#if
+CHECKLEVELEX > 0
+#ACT
+SetUpgradeItem 0
+
+#if
+CHECKTEXTLIST ..\QuestDiary\喵喵专用鉴定系统\专属列表.txt <$BOXITEM[0].NAME>
+#act
+messagebox 你放入的装备太强大了,我无法进行鉴定,请前去风之大陆卧龙亭鉴定!
+close
+break
+
+
+#if
+#act
+#say
+\ \ \  \ \ \ \
+<> <ITEMBOX:0:6:19:100:-10:40:40:15,19,22,26,64,62:请放入你要鉴定的装备>\
+<>     <IMG:291:6:65:68|246#每次鉴定需要50000元宝^-^246#每次重洗需要“云顶结晶”*10/@洗>
+
+
+
+[@洗]
+#if
+checkitem 云顶结晶 10
+CHECKGAMEGOLD ? 50000
+#act
+take 云顶结晶 10
+GAMEGOLD - 50000
+#ELSEACT
+MESSAGEBOX 对不起，您的元宝,材料不足。
+break
+
+
+#if
+#act
+CHANGECUSTOMITEMVALUE -1 0 = 0
+CHANGECUSTOMITEMVALUE -1 1 = 0
+CHANGECUSTOMITEMVALUE -1 2 = 0
+CHANGECUSTOMITEMVALUE -1 3 = 0
+CHANGECUSTOMITEMVALUE -1 4 = 0
+CHANGECUSTOMITEMVALUE -1 5 = 0
+CHANGECUSTOMITEMVALUE -1 6 = 0
+#CALL[\喵喵专用鉴定系统\一级拾取鉴定.txt] @一级鉴定
+UpDateBoxItem 0
+;SENDUPGRADEITEM
+messagebox 【<$BOXITEM[0].NAME>】重新洗炼成功！
+goto @main
+
+
+
+

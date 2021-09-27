@@ -1,0 +1,115 @@
+[@main]
+
+
+#if
+equal T6
+#act
+mov S$提升次数1 0
+#elseact
+mov S$提升次数1 <$STR(T6)>
+
+#if
+equal t7
+#act
+mov S$提升次数2 0
+#elseact
+mov S$提升次数2 <$STR(t7)>
+
+#if
+equal t8
+#act
+mov S$提升次数3 0
+#elseact
+mov S$提升次数3 <$STR(t8)>
+
+#if
+#act
+;SetStringBlank <$STR(S$提升次数1)> 3 0
+;SetStringBlank <$STR(S$提升次数2)> 3 0
+;SetStringBlank <$STR(S$提升次数3)> 3 0
+
+
+
+
+#IF
+#act
+#say
+\  \  \
+<>       <因本服奖励丰富，玩家反映后期钻石无处使用/FCOLOR=95>  \
+<>  <如果你的钻石多的没地方去了，可在哥这购买永久属性。/FCOLOR=95>  \
+<>                <杀人越货，不二之选。/FCOLOR=95>  \   \
+
+<【500钻石 永久提升 1%攻击力】/FCOLOR=250> {【<$STR(S$提升次数1)>／10次】/FCOLOR=150}  <我要提升/@提升1>\   \
+<【500钻石 永久提升 1%生命值】/FCOLOR=250> {【<$STR(S$提升次数2)>／10次】/FCOLOR=150}  <我要提升/@提升2>\   \
+<【500钻石 永久提升 1%防御力】/FCOLOR=250> {【<$STR(S$提升次数3)>／10次】/FCOLOR=150}  <我要提升/@提升3>\   \
+
+
+[@提升1]
+#if
+#act
+MOV N$提升次数1 <$STR(T6)>
+#if
+large N$提升次数1 9
+#act
+MessageBox 提升失败\\最高可提升10次\\
+BREAK
+#IF
+CHECKGAMEPOINT > 499
+#ACT
+GAMEPOINT - 500
+MOV N$提升次数1 <$STR(T6)>
+INC N$提升次数1 1
+MOV T6 <$STR(N$提升次数1)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+MessageBox 提升成功！！
+GOTO @MAIN
+BREAK
+#ELSEACT
+MessageBox 提升失败\\你的钻石数不够\\
+[@提升2]
+#if
+#act
+MOV N$提升次数2 <$STR(t7)>
+#if
+large N$提升次数2 9
+#act
+MessageBox 提升失败\\最高可提升10次\\
+BREAK
+#IF
+CHECKGAMEPOINT > 499
+#ACT
+GAMEPOINT - 500
+MOV N$提升次数2 <$STR(t7)>
+INC N$提升次数2 1
+MOV T7 <$STR(N$提升次数2)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+MessageBox 提升成功！！
+GOTO @MAIN
+BREAK
+#ELSEACT
+MessageBox 提升失败\\你的钻石数不够\\
+[@提升3]
+#if
+#act
+MOV N$提升次数3 <$STR(t8)>
+#if
+large N$提升次数3 9
+#act
+MessageBox 提升失败\\最高可提升10次\\
+BREAK
+#IF
+CHECKGAMEPOINT > 499
+#ACT
+GAMEPOINT - 500
+MOV N$提升次数3 <$STR(t8)>
+INC N$提升次数3 1
+MOV T8 <$STR(N$提升次数3)>
+#CALL [\BUFF\五行属性.txt] @五行属性计算
+MessageBox 提升成功！！
+GOTO @MAIN
+BREAK
+#ELSEACT
+MessageBox 提升失败\\你的钻石数不够\\
+
+
+

@@ -1,0 +1,460 @@
+[@main]
+
+
+
+#if
+#act
+MOV S$当前阶段1 金·零阶
+MOV S$当前阶段2 木·零阶
+MOV S$当前阶段3 水·零阶
+MOV S$当前阶段4 火·零阶
+MOV S$当前阶段5 土·零阶
+MOV S$当前阶段6 混沌·零阶
+MOV N$金等级 0
+MOV N$木等级 0
+MOV N$水等级 0
+MOV N$火等级 0
+MOV N$土等级 0
+
+
+#if
+CHECKTITLE 五行之体·金[一阶]
+#act
+MOV S$当前阶段1 金·一阶
+MOV N$金等级 1
+
+#if
+CHECKTITLE 五行之体·金[二阶]
+#act
+MOV S$当前阶段1 金·二阶
+MOV N$金等级 2
+
+#if
+CHECKTITLE 五行之体·金[三阶]
+#act
+MOV S$当前阶段1 金·三阶
+MOV N$金等级 3
+
+#if
+CHECKTITLE 五行之体·金[四阶]
+#act
+MOV S$当前阶段1 金·四阶
+MOV N$金等级 4
+
+#if
+CHECKTITLE 五行之体·金[五阶]
+#act
+MOV S$当前阶段1 金·五阶
+MOV N$金等级 5
+
+#if
+CHECKTITLE 五行之体·金[六阶]
+#act
+MOV S$当前阶段1 金·六阶
+MOV N$金等级 6
+
+#if
+CHECKTITLE 五行之体·金[七阶]
+#act
+MOV S$当前阶段1 金·七阶
+MOV N$金等级 7
+
+#if
+CHECKTITLE 五行之体·金[八阶]
+#act
+MOV S$当前阶段1 金·八阶
+MOV N$金等级 8
+
+#if
+CHECKTITLE 五行之体·金[九阶]
+#act
+MOV S$当前阶段1 金·九阶
+MOV N$金等级 9
+
+#if
+CHECKTITLE 五行之体·金[十阶]
+#act
+MOV S$当前阶段1 金·十阶
+MOV N$金等级 10
+
+#if
+CHECKTITLE 五行之体·木[一阶]
+#act
+MOV S$当前阶段2 木·一阶
+MOV N$木等级 1
+
+#if
+CHECKTITLE 五行之体·木[二阶]
+#act
+MOV S$当前阶段2 木·二阶
+MOV N$木等级 2
+
+#if
+CHECKTITLE 五行之体·木[三阶]
+#act
+MOV S$当前阶段2 木·三阶
+MOV N$木等级 3
+
+#if
+CHECKTITLE 五行之体·木[四阶]
+#act
+MOV S$当前阶段2 木·四阶
+MOV N$木等级 4
+
+#if
+CHECKTITLE 五行之体·木[五阶]
+#act
+MOV S$当前阶段2 木·五阶
+MOV N$木等级 5
+
+#if
+CHECKTITLE 五行之体·木[六阶]
+#act
+MOV S$当前阶段2 木·六阶
+MOV N$木等级 6
+
+#if
+CHECKTITLE 五行之体·木[七阶]
+#act
+MOV S$当前阶段2 木·七阶
+MOV N$木等级 7
+
+#if
+CHECKTITLE 五行之体·木[八阶]
+#act
+MOV S$当前阶段2 木·八阶
+MOV N$木等级 8
+
+#if
+CHECKTITLE 五行之体·木[九阶]
+#act
+MOV S$当前阶段2 木·九阶
+MOV N$木等级 9
+
+#if
+CHECKTITLE 五行之体·木[十阶]
+#act
+MOV S$当前阶段2 木·十阶
+MOV N$木等级 10
+
+#if
+CHECKTITLE 五行之体·水[一阶]
+#act
+MOV S$当前阶段3 水·一阶
+MOV N$水等级 1
+
+#if
+CHECKTITLE 五行之体·水[二阶]
+#act
+MOV S$当前阶段3 水·二阶
+MOV N$水等级 2
+
+#if
+CHECKTITLE 五行之体·水[三阶]
+#act
+MOV S$当前阶段3 水·三阶
+MOV N$水等级 3
+
+
+#if
+CHECKTITLE 五行之体·水[四阶]
+#act
+MOV S$当前阶段3 水·四阶
+MOV N$水等级 4
+
+#if
+CHECKTITLE 五行之体·水[五阶]
+#act
+MOV S$当前阶段3 水·五阶
+MOV N$水等级 5
+
+#if
+CHECKTITLE 五行之体·水[六阶]
+#act
+MOV S$当前阶段3 水·六阶
+MOV N$水等级 6
+
+#if
+CHECKTITLE 五行之体·水[七阶]
+#act
+MOV S$当前阶段3 水·七阶
+MOV N$水等级 7
+
+#if
+CHECKTITLE 五行之体·水[八阶]
+#act
+MOV S$当前阶段3 水·八阶
+MOV N$水等级 8
+
+#if
+CHECKTITLE 五行之体·水[九阶]
+#act
+MOV S$当前阶段3 水·九阶
+MOV N$水等级 9
+
+#if
+CHECKTITLE 五行之体·水[十阶]
+#act
+MOV S$当前阶段3 水·十阶
+MOV N$水等级 10
+
+#if
+CHECKTITLE 五行之体·火[一阶]
+#act
+MOV S$当前阶段4 火·一阶
+MOV N$火等级 1
+
+#if
+CHECKTITLE 五行之体·火[二阶]
+#act
+MOV S$当前阶段4 火·二阶
+MOV N$火等级 2
+
+#if
+CHECKTITLE 五行之体·火[三阶]
+#act
+MOV S$当前阶段4 火·三阶
+MOV N$火等级 3
+
+#if
+CHECKTITLE 五行之体·火[四阶]
+#act
+MOV S$当前阶段4 火·四阶
+MOV N$火等级 4
+
+#if
+CHECKTITLE 五行之体·火[五阶]
+#act
+MOV S$当前阶段4 火·五阶
+MOV N$火等级 5
+
+#if
+CHECKTITLE 五行之体·火[六阶]
+#act
+MOV S$当前阶段4 火·六阶
+MOV N$火等级 6
+
+#if
+CHECKTITLE 五行之体·火[七阶]
+#act
+MOV S$当前阶段4 火·七阶
+MOV N$火等级 7
+
+#if
+CHECKTITLE 五行之体·火[八阶]
+#act
+MOV S$当前阶段4 火·八阶
+MOV N$火等级 8
+
+#if
+CHECKTITLE 五行之体·火[九阶]
+#act
+MOV S$当前阶段4 火·九阶
+MOV N$火等级 9
+
+#if
+CHECKTITLE 五行之体·火[十阶]
+#act
+MOV S$当前阶段4 火·十阶
+MOV N$火等级 10
+
+#if
+CHECKTITLE 五行之体·土[一阶]
+#act
+MOV S$当前阶段5 土·一阶
+MOV N$土等级 1
+
+#if
+CHECKTITLE 五行之体·土[二阶]
+#act
+MOV S$当前阶段5 土·二阶
+MOV N$土等级 2
+
+#if
+CHECKTITLE 五行之体·土[三阶]
+#act
+MOV S$当前阶段5 土·三阶
+MOV N$土等级 3
+
+#if
+CHECKTITLE 五行之体·土[四阶]
+#act
+MOV S$当前阶段5 土·四阶
+MOV N$土等级 4
+
+#if
+CHECKTITLE 五行之体·土[五阶]
+#act
+MOV S$当前阶段5 土·五阶
+MOV N$土等级 5
+
+#if
+CHECKTITLE 五行之体·土[六阶]
+#act
+MOV S$当前阶段5 土·六阶
+MOV N$土等级 6
+
+#if
+CHECKTITLE 五行之体·土[七阶]
+#act
+MOV S$当前阶段5 土·七阶
+MOV N$土等级 7
+
+#if
+CHECKTITLE 五行之体·土[八阶]
+#act
+MOV S$当前阶段5 土·八阶
+MOV N$土等级 8
+
+#if
+CHECKTITLE 五行之体·土[九阶]
+#act
+MOV S$当前阶段5 土·九阶
+MOV N$土等级 9
+
+#if
+CHECKTITLE 五行之体·土[十阶]
+#act
+MOV S$当前阶段5 土·十阶
+MOV N$土等级 10
+
+
+
+
+
+#if
+#act
+#say
+\ \ \  \ \
+<>                                           <[混沌灵根]:/FCOLOR=70>\ \
+<>                                           <五行灵根每达到2.4.6.8.10阶时可以在这里/FCOLOR=161>\
+<>                                           <免费提升一级混沌灵根，最高可提升到五级/FCOLOR=161>\
+<>                                           \
+<>                                           <领取成就称号：/FCOLOR=250>   <【五行之子】|253#领取条件：^-^254#需要五行灵根都达到10阶^-^253#称号属性：^-^254#人物属性+100^-^254#人物爆率+100%/@五行之子>\
+<><IMG:255:6:255:3>\
+<>                                             <[混沌灵根]:/FCOLOR=253><IMG:79:6:-82:-4>         <[混沌灵根属性]|253#每一级提升：^-^254#   200-200全属性^254#   血量1000^254#   人物爆率+100%^250#   打怪伤害+20%/FCOLOR=150>\ \
+<>                                                    <IMG:77:6:-2:-2><混沌灵根:/FCOLOR=150>  {<$STR(S$当前阶段6)>/FCOLOR=70}\
+<>                                                    <IMG:77:6:-2:-2><金·灵根:/FCOLOR=150>  {<$STR(S$当前阶段1)>/FCOLOR=250}\
+<>                                                    <IMG:77:6:-2:-2><木·灵根:/FCOLOR=150>  {<$STR(S$当前阶段2)>/FCOLOR=250}\
+<>                                                    <IMG:77:6:-2:-2><水·灵根:/FCOLOR=150>  {<$STR(S$当前阶段3)>/FCOLOR=250}\
+<>                                                    <IMG:77:6:-2:-2><火·灵根:/FCOLOR=150>  {<$STR(S$当前阶段4)>/FCOLOR=250}\
+<>                                                    <IMG:77:6:-2:-2><土·灵根:/FCOLOR=150>  {<$STR(S$当前阶段5)>/FCOLOR=250}\
+
+<>                                                          <IMG:256:6:-2:7/@升级> \ \
+<PlayImg:5:770:10:100:-48:-220:0>
+
+[@五行之子]
+
+#if
+CHECKTITLE 五行之子
+#act
+MESSAGEBOX 你已经完成了该成就称号，无法再次领取..
+break
+
+
+#if
+CHECKTITLE 五行之体·土[十阶]
+CHECKTITLE 五行之体·金[十阶]
+CHECKTITLE 五行之体·木[十阶]
+CHECKTITLE 五行之体·水[十阶]
+CHECKTITLE 五行之体·火[十阶]
+#act
+CONFERTITLE 五行之子
+SENDMSG 6 {五行阵法之地:|251:15}{『<$USERNAME>』|255:15}{成功完成了五行成就称号，获得了称号：|249:15}{【五行之子】|250:15}
+MESSAGEBOX 恭喜你成功获得了成就称号..
+break
+
+#if
+#act
+MESSAGEBOX 请查看你是否满足了领取要求..
+break
+
+
+
+
+[@升级]
+#if
+#act
+DEPRIVETITLE 五行之体·混沌[一阶]
+DEPRIVETITLE 五行之体·混沌[二阶]
+DEPRIVETITLE 五行之体·混沌[三阶]
+DEPRIVETITLE 五行之体·混沌[四阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+
+#if
+equal N$金等级 10
+equal N$木等级 10
+equal N$水等级 10
+equal N$火等级 10
+equal N$土等级 10
+#act
+CONFERTITLE 五行之体·混沌[五阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[五阶]..
+break
+
+
+#if
+large N$金等级 7
+large N$木等级 7
+large N$水等级 7
+large N$火等级 7
+large N$土等级 7
+#act
+DEPRIVETITLE 五行之体·混沌[一阶]
+DEPRIVETITLE 五行之体·混沌[二阶]
+DEPRIVETITLE 五行之体·混沌[三阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之体·混沌[四阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[四阶]..
+break
+
+#if
+large N$金等级 5
+large N$木等级 5
+large N$水等级 5
+large N$火等级 5
+large N$土等级 5
+#act
+DEPRIVETITLE 五行之体·混沌[一阶]
+DEPRIVETITLE 五行之体·混沌[二阶]
+DEPRIVETITLE 五行之体·混沌[四阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之体·混沌[三阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[三阶]..
+break
+
+#if
+large N$金等级 3
+large N$木等级 3
+large N$水等级 3
+large N$火等级 3
+large N$土等级 3
+#act
+DEPRIVETITLE 五行之体·混沌[一阶]
+DEPRIVETITLE 五行之体·混沌[三阶]
+DEPRIVETITLE 五行之体·混沌[四阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之体·混沌[二阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[二阶]..
+break
+
+
+#if
+large N$金等级 1
+large N$木等级 1
+large N$水等级 1
+large N$火等级 1
+large N$土等级 1
+#act
+DEPRIVETITLE 五行之体·混沌[二阶]
+DEPRIVETITLE 五行之体·混沌[三阶]
+DEPRIVETITLE 五行之体·混沌[四阶]
+DEPRIVETITLE 五行之体·混沌[五阶]
+CONFERTITLE 五行之体·混沌[一阶]
+MESSAGEBOX 混沌之体升级成功,当前称号为:五行之体·混沌[一阶]..
+break
+
+#if
+#act
+MESSAGEBOX 你的条件不符，无法升级混沌之体。
+break

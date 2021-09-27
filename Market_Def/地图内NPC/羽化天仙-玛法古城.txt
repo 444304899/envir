@@ -1,0 +1,173 @@
+[@main]
+
+#OR
+CHECKITEMW [时装]·黑崎一护 1
+ChecKitem [时装]·黑崎一护
+#ACT
+MESSAGEBOX 你已经有顶级[时装]·黑崎一护了~
+BREAK
+
+#IF
+NOT CHECKITEMW [时装]·快乐风男 1
+NOT ChecKitem [时装]·快乐风男
+NOT CHECKITEMW [时装]·黑崎一护 1
+NOT ChecKitem [时装]·黑崎一护
+
+
+#ACT
+GOTO @初级
+BREAK
+#ELSEACT
+GOTO @检测1
+BREAK
+
+
+[@检测1]
+#OR
+CHECKITEMW [时装]·快乐风男 1
+ChecKitem [时装]·快乐风男
+#ACT
+GOTO @下一页_1
+BREAK
+#ELSEACT
+GOTO @检测2
+BREAK
+
+
+
+[@检测2]
+#OR
+CHECKITEMW [时装]·黑崎一护 1
+ChecKitem [时装]·黑崎一护
+#ACT
+GOTO @下一页_2
+BREAK
+#ELSEACT
+GOTO @检测3
+BREAK
+
+
+
+
+
+
+[@初级]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·快乐风男/FCOLOR=70}\
+<PlayImg:22:620:99:50:-85:-105>\
+<Itemshow:697:0:610:105>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·孙の悟饭*1^250#合成条件②：时装羽毛*3000^250#③：钻石*1500/@1级切割>
+<ImgEx:41:180:181:182:126:309>
+<ImgEx:41:183:184:185:123:309/@下一页_1>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+
+<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+
+
+
+[@下一页_1]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·黑崎一护/FCOLOR=70}\
+<PlayImg:22:760:49:100:-25:-120>\
+<Itemshow:698:0:600:105>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·快乐风男^250#合成条件②：时装羽毛*5000^250#③：风灵石·天 *200/@2级切割>
+<ImgEx:41:180:181:182:126:309/@main>
+<ImgEx:41:183:184:185:123:309/@下一页_2>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+
+<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+
+
+
+[@下一页_2]
+#IF
+#ACT
+MESSAGEBOX 勇士你好,我这里已无法为你提供服务,更高级时装请前往封天画卷寻找!!
+BREAK
+
+
+
+[@1级切割]
+#if
+checkGAMEPOINT > 1499
+checkitem [时装]·孙の悟饭 1
+checkitem 时装羽毛 3000
+#act
+take [时装]·孙の悟饭 1
+take 时装羽毛 3000
+GAMEPOINT - 1500
+;GiveStateItem [时装]·快乐风男 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·快乐风男 1 1 1 0 0 1 1 1 0
+GOTO @下一页_1
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了『[时装]·快乐风男』！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+[@2级切割]
+#if
+checkitem [时装]·快乐风男 1
+checkitem 时装羽毛 5000
+checkitem 风灵石·天 200
+#act
+take 风灵石·天 200
+take [时装]·快乐风男 1
+take 时装羽毛 5000
+;GiveStateItem [时装]·黑崎一护 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·黑崎一护 1 1 1 0 0 1 1 1 0
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了『[时装]·黑崎一护』！！
+#elseact
+MESSAGEBOX [提示]:请检测是否有足够的材料！
+BREAK
+
+[@时装合成4]
+#if
+large g16 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+#if
+checkgold 10
+#act
+take 金币 10
+GIVE 风灵石·天 1
+INC G16 1
+MESSAGEBOX [提示]:获得物品:[风灵石·天]
+GOTO @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@时装合成5]
+#if
+large g16 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 风灵石·天 10
+INC G16 10
+MESSAGEBOX [提示]:获得物品:[风灵石·天*10]
+GOTO @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+

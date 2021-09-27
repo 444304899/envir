@@ -1,0 +1,102 @@
+[@main]
+
+#IF
+#Act
+GOTO @云顶塔地图配置
+#say
+\ \ \ \ \ \ \ \ \ \
+<>                                                  <通天塔刷新各大陆专属怪物,各大陆守护者BOSS/FCOLOR=7> \ \
+<>                                                  <守护者BOSS会爆出各大陆的所有专属装备！/FCOLOR=7> \ \
+<>                                                  <顶层封印着神秘必爆BOSS/FCOLOR=7> <(远古)锤王·波罗丁> \ \
+<>                                                  <前往通天塔需要称号达到:/FCOLOR=7><魔法追寻者/FCOLOR=250><,或以上/FCOLOR=7>\ \
+<>                                                  <捐献第一无须要求!妖塔为高爆率地图!/FCOLOR=222>\ \
+<>                                                                 <《开始探索》|250#共12层，顶层刷新(远古)锤王·波罗丁/@进图>\
+<><ItemShow:1734:0:5:-72:1> <ItemShow:1738:0:5:-72:1> <ItemShow:1739:0:5:-72:1> <ItemShow:1591:0:5:-72:1> <ItemShow:1592:0:5:-72:1> <ItemShow:1593:0:5:-72:1> \  \
+<>      \
+
+[@云顶塔地图配置]
+
+#IF
+#Act
+Getliststring ..\QuestDiary\馒头制作\地图产出\云顶塔.txt 0 S$云顶塔显示0 S$无无0
+Getliststring ..\QuestDiary\馒头制作\地图产出\云顶塔.txt 1 S$云顶塔显示1 S$无无1
+Getliststring ..\QuestDiary\馒头制作\地图产出\云顶塔.txt 2 S$云顶塔显示2 S$无无2
+Getliststring ..\QuestDiary\馒头制作\地图产出\云顶塔.txt 3 S$云顶塔显示3 S$无无3
+Getliststring ..\QuestDiary\馒头制作\地图产出\云顶塔.txt 4 S$云顶塔显示4 S$无无4
+Getliststring ..\QuestDiary\馒头制作\地图产出\云顶塔.txt 5 S$云顶塔显示5 S$无无5
+
+
+#IF
+Equal S$云顶塔显示0
+#Act
+mov S$云顶塔显示0 暂无产出数据
+
+#IF
+Equal S$云顶塔显示1
+#Act
+mov S$云顶塔显示1 暂无产出数据
+
+#IF
+Equal S$云顶塔显示2
+#Act
+mov S$云顶塔显示2 暂无产出数据
+
+#IF
+Equal S$云顶塔显示3
+#Act
+mov S$云顶塔显示3 暂无产出数据
+
+#IF
+Equal S$云顶塔显示4
+#Act
+mov S$云顶塔显示4 暂无产出数据
+
+#IF
+Equal S$云顶塔显示5
+#Act
+mov S$云顶塔显示5 暂无产出数据
+
+#IF
+Equal S$云顶塔显示6
+#Act
+mov S$云顶塔显示6 暂无产出数据
+
+
+
+
+
+[@进图]
+#or
+equal A120 <$USERNAME>
+CHECKTITLE 魔法追寻者
+CHECKTITLE 海加尔的复仇
+CHECKTITLE 地狱咆哮终结者
+CHECKTITLE 奥格瑞玛解放者
+CHECKTITLE 奥格瑞玛征服者
+CHECKTITLE 破碎世界的守护者
+CHECKTITLE 艾泽拉斯的救世主
+CHECKTITLE 觉醒·热血之魂
+CHECKTITLE 集结·战斗号角
+CHECKTITLE 暴走·极限突破
+CHECKTITLE 天启·信仰之歌
+CHECKTITLE 进化之光·混沌开天
+CHECKTITLE 战鼓震天·异界战歌
+CHECKTITLE 毕方之炎·夜空魅影
+CHECKTITLE 勇士的荣耀·最终幻想
+#act
+MAPmove 封天塔一层 37 77
+#CALL [\大熊功能\职位计算.txt] @开始计算
+SendCenterMsg 70 0 〖通天塔〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+break
+
+
+
+
+
+#if
+#act
+MESSAGEBOX 进入此地图需要称号达到“魔法追寻者”请检查你是否已经晋升!
+break
+
+
+

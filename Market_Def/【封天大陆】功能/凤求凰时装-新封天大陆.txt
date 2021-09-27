@@ -1,0 +1,137 @@
+[@main]
+
+
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·鳯求凰/FCOLOR=70}\
+<PlayImg:27:1154:157:40:-100:-75>\
+<Itemshow:1594:0:610:102>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:230|250#  合成条件:^-^251# 1.★★「九天★祥云」★★^-^251# 2.[时装]·橘右京]^-^251# 3.风灵石·天*3000^-^251# 4.钻石5000/@3级切割2>
+<ImgEx:41:180:181:182:126:309/@下一页_1>
+<ImgEx:41:183:184:185:123:309/@main>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \  \
+<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}   \
+<ImgEx:41:187:188:189:590:-90|250#  合成条件:^-^251# 30000金币直接购买/@3级切割1>  \
+
+<playimg:13:474:20:100:150:-350>\
+
+
+
+
+
+[@1级切割]
+#if
+checkGAMEPOINT > 1999
+checkitem [时装]·黑崎一护 1
+checkitem 时装羽毛 5000
+checkitem 风灵石·天 300
+#act
+take [时装]·黑崎一护 1
+take 时装羽毛 5000
+GAMEPOINT - 2000
+take 风灵石·天 300
+;GiveStateItem [时装]·更木剑八 1 1 1 0 0 1 1 1
+GIVESTATEITEM [时装]·更木剑八 1 1 1 1 0 0 1 1 0
+MESSAGEBOX [提示]:获得物品:[时装]·更木剑八
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@2级切割]
+#if
+checkGAMEPOINT > 2999
+checkitem [时装]·更木剑八 1
+checkitem 时装羽毛 5000
+checkitem 风灵石·天 400
+#act
+take 风灵石·天 400
+take [时装]·更木剑八 1
+take 时装羽毛 5000
+;GiveStateItem [时装]·橘右京 1 1 1 0 0 1 1 1
+GIVESTATEITEM [时装]·橘右京 1 1 1 1 0 0 1 1 0
+GAMEPOINT - 3000
+MESSAGEBOX [提示]:获得物品:[时装]·橘右京
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+[@3级切割1]
+#if
+CheckGold 30000
+#act
+TAKE 金币  30000
+;GiveStateItem [时装]·鳯求凰 1 1 1 0 0 1 1 1
+GIVESTATEITEM [时装]·鳯求凰 1 1 1 1 0 0 1 1 0
+MESSAGEBOX [提示]:获得物品:[时装]·鳯求凰
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@3级切割2]
+#if
+checkGAMEPOINT > 4999
+checkitem ★★「九天★祥云」★★ 1
+checkitem ★★ [时装]·橘右京 1
+checkitem 风灵石·天 3000
+#act
+take 风灵石·天 3000
+take ★★「九天★祥云」★★ 1
+take [时装]·橘右京] 1
+GAMEPOINT - 3000
+;GiveStateItem [时装]·鳯求凰 1 1 1 0 0 1 1 1
+GIVESTATEITEM [时装]·鳯求凰 1 1 1 1 0 0 1 1 0
+MESSAGEBOX [提示]:获得物品:[时装]·鳯求凰
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@时装合成4]
+#if
+large g16 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+#if
+checkgold 10
+#act
+take 金币 10
+GIVE 风灵石·天 1
+INC G16 1
+MESSAGEBOX [提示]:获得物品:[风灵石·天]
+GOTO @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+[@时装合成5]
+#if
+large g16 998
+#act
+MESSAGEBOX [提示]:已经购买了999颗！无法购买
+break
+#if
+checkgold 100
+#act
+take 金币 100
+GIVE 风灵石·天 10
+INC G16 10
+MESSAGEBOX [提示]:获得物品:[风灵石·天*10]
+GOTO @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料！
+BREAK
+
+
+
+
+

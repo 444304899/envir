@@ -1,0 +1,328 @@
+[@1自由]
+{
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组1
+mov S$打怪数量 <$STR(S$分割结果数组1_1)>
+mov S$进阶数量 <$STR(S$分割结果数组1_2)>
+
+#if
+checkitemw 切割[凡]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到100点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[凡]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[凡] 1
+give 切割[仙] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[仙]】 0 5
+#elseact
+messagebox 切割[凡]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+[@2召唤]
+{
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组2
+mov S$打怪数量 <$STR(S$分割结果数组2_1)>
+mov S$进阶数量 <$STR(S$分割结果数组2_2)>
+
+#if
+checkitemw 切割[仙]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到100点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[仙]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[仙] 1
+give 切割[魔] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[魔]】 0 5
+#elseact
+messagebox 切割[魔]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+[@3峡谷]
+{
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组3
+mov S$打怪数量 <$STR(S$分割结果数组3_1)>
+mov S$进阶数量 <$STR(S$分割结果数组3_2)>
+
+#if
+checkitemw 切割[魔]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到100点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[魔]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[魔] 1
+give 切割[佛] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[佛]】 0 5
+#elseact
+messagebox 切割[佛]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+[@4创世]
+{
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组4
+mov S$打怪数量 <$STR(S$分割结果数组4_1)>
+mov S$进阶数量 <$STR(S$分割结果数组4_2)>
+
+#if
+checkitemw 切割[佛]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到100点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[佛]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[佛] 1
+give 切割[妖] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[妖]】 0 5
+#elseact
+messagebox 切割[妖]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+
+[@5原始]
+{
+
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组5
+mov S$打怪数量 <$STR(S$分割结果数组5_1)>
+mov S$进阶数量 <$STR(S$分割结果数组5_2)>
+
+#if
+checkitemw 切割[妖]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到100点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[妖]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[妖] 1
+give 切割[冥] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[冥]】 0 5
+#elseact
+messagebox 切割[冥]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+
+[@6山海]
+{
+
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组6
+mov S$打怪数量 <$STR(S$分割结果数组6_1)>
+mov S$进阶数量 <$STR(S$分割结果数组6_2)>
+
+#if
+checkitemw 切割[冥]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到200点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[冥]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[冥] 1
+give 切割[神] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[神]】 0 5
+#elseact
+messagebox 切割[神]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+[@7传奇]
+{
+
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组7
+mov S$打怪数量 <$STR(S$分割结果数组7_1)>
+mov S$进阶数量 <$STR(S$分割结果数组7_2)>
+
+#if
+checkitemw 切割[神]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到200点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[神]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[神] 1
+give 切割[天] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[天]】 0 5
+#elseact
+messagebox 切割[天]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+
+[@8死亡]
+{
+
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组8
+mov S$打怪数量 <$STR(S$分割结果数组8_1)>
+mov S$进阶数量 <$STR(S$分割结果数组8_2)>
+
+#if
+checkitemw 切割[天]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到200点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[天]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[天] 1
+give 切割[道] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[道]】 0 5
+#elseact
+messagebox 切割[道]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+[@9佛本]
+{
+
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组9
+mov S$打怪数量 <$STR(S$分割结果数组9_1)>
+mov S$进阶数量 <$STR(S$分割结果数组9_2)>
+
+#if
+checkitemw 切割[道]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到200点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[道]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[道] 1
+give 切割[玄] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[玄]】 0 5
+#elseact
+messagebox 切割[玄]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}
+
+[@10无限]
+{
+
+#IF
+#ACT
+PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\馒头制作\镜灵进阶\进阶配置.ini 进阶配置 <$KILLMONNAME> S$进阶条件
+PGExtractString ` <$STR(S$进阶条件)> S$分割结果数组10
+mov S$打怪数量 <$STR(S$分割结果数组10_1)>
+mov S$进阶数量 <$STR(S$分割结果数组10_2)>
+
+#if
+checkitemw 切割[玄]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 < <$STR(S$进阶数量)>
+#act
+CHANGECUSTOMITEMPROGRESSBARVALUE 13 0 0 + <$STR(S$打怪数量)>
+SENDMSG 7 [系统]切割值+<$STR(S$打怪数量)>.达到200点进阶下一阶！！
+BREAK
+
+#if
+checkitemw 切割[玄]
+CHECKCUSTOMITEMPROGRESSBARVALUE 13 0 0 = <$STR(S$进阶数量)>
+CHECKBAGSIZE 3
+#act
+TakeEx 13
+take 切割[玄] 1
+give 切割[奕] 1
+SendCenterMsg 0 253 恭喜<$USERNAME>成功晋升【切割[奕]】 0 5
+#elseact
+messagebox 切割[玄]杀怪值升级已满,背包没有3个空位，无法晋升.！
+BREAK
+
+}

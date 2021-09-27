@@ -1,0 +1,5 @@
+[@main]
+#if
+#act
+#CALL [\大熊功能\神火熔炉.txt] @神火系统
+BREAK

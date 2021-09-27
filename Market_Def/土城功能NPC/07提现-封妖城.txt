@@ -1,0 +1,547 @@
+[@main]
+
+
+
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;messagebox [提示]测试区无法提现..
+;BREAK
+
+#IF
+EQUAL N$页码 0
+#ACT
+MOV N$序号1 0
+MOV N$序号2 1
+MOV N$序号3 2
+MOV N$序号4 3
+MOV N$序号5 4
+MOV N$序号6 5
+MOV N$序号7 6
+MOV N$序号8 7
+MOV N$序号9 8
+MOV N$序号10 9
+
+
+#IF
+#ACT
+MOV S$提现数据1
+MOV S$提现数据2
+MOV S$提现数据3
+MOV S$提现数据4
+MOV S$提现数据5
+MOV S$提现数据6
+MOV S$提现数据7
+MOV S$提现数据8
+MOV S$提现数据9
+MOV S$提现数据10
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号1)> S$提现数据1
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号2)> S$提现数据2
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号3)> S$提现数据3
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号4)> S$提现数据4
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号5)> S$提现数据5
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号6)> S$提现数据6
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号7)> S$提现数据7
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号8)> S$提现数据8
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号9)> S$提现数据9
+getliststring ..\..\..\..\..\提现记录\现金提现记录.txt <$str(N$序号10)> S$提现数据10
+
+
+MOV S$名称1
+MOV S$金额1
+MOV S$时间1
+MOV S$状态1
+MOV S$名称2
+MOV S$金额2
+MOV S$时间2
+MOV S$状态2
+MOV S$名称3
+MOV S$金额3
+MOV S$时间3
+MOV S$状态3
+MOV S$名称4
+MOV S$金额4
+MOV S$时间4
+MOV S$状态4
+MOV S$名称5
+MOV S$金额5
+MOV S$时间5
+MOV S$状态5
+MOV S$名称6
+MOV S$金额6
+MOV S$时间6
+MOV S$状态6
+MOV S$名称7
+MOV S$金额7
+MOV S$时间7
+MOV S$状态7
+MOV S$名称8
+MOV S$金额8
+MOV S$时间8
+MOV S$状态8
+MOV S$名称9
+MOV S$金额9
+MOV S$时间9
+MOV S$状态9
+MOV S$名称10
+MOV S$金额10
+MOV S$时间10
+MOV S$状态10
+
+
+
+#IF
+NOT EQUAL S$提现数据1
+#ACT
+PGExtractString : <$STR(S$提现数据1)> S$分割结果数组1
+mov S$名称1 <$STR(S$分割结果数组1_1)>
+mov S$金额1 <$STR(S$分割结果数组1_2)>
+mov S$时间1 <$STR(S$分割结果数组1_3)>
+mov S$状态1 <$STR(S$分割结果数组1_4)>
+
+
+#IF
+NOT EQUAL S$提现数据2
+#ACT
+PGExtractString : <$STR(S$提现数据2)> S$分割结果数组2
+mov S$名称2 <$STR(S$分割结果数组2_1)>
+mov S$金额2 <$STR(S$分割结果数组2_2)>
+mov S$时间2 <$STR(S$分割结果数组2_3)>
+mov S$状态2 <$STR(S$分割结果数组2_4)>
+
+
+#IF
+NOT EQUAL S$提现数据3
+#ACT
+PGExtractString : <$STR(S$提现数据3)> S$分割结果数组3
+mov S$名称3 <$STR(S$分割结果数组3_1)>
+mov S$金额3 <$STR(S$分割结果数组3_2)>
+mov S$时间3 <$STR(S$分割结果数组3_3)>
+mov S$状态3 <$STR(S$分割结果数组3_4)>
+
+
+#IF
+NOT EQUAL S$提现数据4
+#ACT
+PGExtractString : <$STR(S$提现数据4)> S$分割结果数组4
+mov S$名称4 <$STR(S$分割结果数组4_1)>
+mov S$金额4 <$STR(S$分割结果数组4_2)>
+mov S$时间4 <$STR(S$分割结果数组4_3)>
+mov S$状态4 <$STR(S$分割结果数组4_4)>
+
+
+#IF
+NOT EQUAL S$提现数据5
+#ACT
+PGExtractString : <$STR(S$提现数据5)> S$分割结果数组5
+mov S$名称5 <$STR(S$分割结果数组5_1)>
+mov S$金额5 <$STR(S$分割结果数组5_2)>
+mov S$时间5 <$STR(S$分割结果数组5_3)>
+mov S$状态5 <$STR(S$分割结果数组5_4)>
+
+
+#IF
+NOT EQUAL S$提现数据6
+#ACT
+PGExtractString : <$STR(S$提现数据6)> S$分割结果数组6
+mov S$名称6 <$STR(S$分割结果数组6_1)>
+mov S$金额6 <$STR(S$分割结果数组6_2)>
+mov S$时间6 <$STR(S$分割结果数组6_3)>
+mov S$状态6 <$STR(S$分割结果数组6_4)>
+
+
+#IF
+NOT EQUAL S$提现数据7
+#ACT
+PGExtractString : <$STR(S$提现数据7)> S$分割结果数组7
+mov S$名称7 <$STR(S$分割结果数组7_1)>
+mov S$金额7 <$STR(S$分割结果数组7_2)>
+mov S$时间7 <$STR(S$分割结果数组7_3)>
+mov S$状态7 <$STR(S$分割结果数组7_4)>
+
+
+#IF
+NOT EQUAL S$提现数据8
+#ACT
+PGExtractString : <$STR(S$提现数据8)> S$分割结果数组8
+mov S$名称8 <$STR(S$分割结果数组8_1)>
+mov S$金额8 <$STR(S$分割结果数组8_2)>
+mov S$时间8 <$STR(S$分割结果数组8_3)>
+mov S$状态8 <$STR(S$分割结果数组8_4)>
+
+#IF
+NOT EQUAL S$提现数据9
+#ACT
+PGExtractString : <$STR(S$提现数据9)> S$分割结果数组9
+mov S$名称9 <$STR(S$分割结果数组9_1)>
+mov S$金额9 <$STR(S$分割结果数组9_2)>
+mov S$时间9 <$STR(S$分割结果数组9_3)>
+mov S$状态9 <$STR(S$分割结果数组9_4)>
+
+
+#IF
+NOT EQUAL S$提现数据10
+#ACT
+PGExtractString : <$STR(S$提现数据10)> S$分割结果数组10
+mov S$名称10 <$STR(S$分割结果数组10_1)>
+mov S$金额10 <$STR(S$分割结果数组10_2)>
+mov S$时间10 <$STR(S$分割结果数组10_3)>
+mov S$状态10 <$STR(S$分割结果数组10_4)>
+
+
+
+
+
+
+
+#IF
+#ACT
+MOV S$收款姓名显示 <$STR(S$收款姓名)>
+MOV S$收款帐号显示 <$str(S$收款帐号)>
+
+MOV S$序号1 ON.<$STR(N$序号1)>
+MOV S$序号2 ON.<$STR(N$序号2)>
+MOV S$序号3 ON.<$STR(N$序号3)>
+MOV S$序号4 ON.<$STR(N$序号4)>
+MOV S$序号5 ON.<$STR(N$序号5)>
+MOV S$序号6 ON.<$STR(N$序号6)>
+MOV S$序号7 ON.<$STR(N$序号7)>
+MOV S$序号8 ON.<$STR(N$序号8)>
+MOV S$序号9 ON.<$STR(N$序号9)>
+MOV S$序号10 ON.<$STR(N$序号10)>
+
+
+
+;setstringblank S$收款姓名显示 16 1
+setstringblank S$收款姓名显示 16 1
+;setstringblank S$收款帐号显示 16 1
+setstringblank S$收款帐号显示 16 1
+
+
+;setstringblank S$序号10 3 1
+setstringblank S$序号10 3 1
+;setstringblank S$名称10 16 1
+setstringblank S$名称10 16 1
+;setstringblank S$金额10 6 0
+setstringblank S$金额10 6 0
+;setstringblank S$时间10 24 1
+setstringblank S$时间10 24 1
+
+
+;setstringblank S$序号9 3 1
+setstringblank S$序号9 3 1
+;setstringblank S$名称9 16 1
+setstringblank S$名称9 16 1
+;setstringblank S$金额9 6 0
+setstringblank S$金额9 6 0
+;setstringblank S$时间9 24 1
+setstringblank S$时间9 24 1
+
+
+;setstringblank S$序号8 3 1
+setstringblank S$序号8 3 1
+;setstringblank S$名称8 16 1
+setstringblank S$名称8 16 1
+;setstringblank S$金额8 6 0
+setstringblank S$金额8 6 0
+;setstringblank S$时间8 24 1
+setstringblank S$时间8 24 1
+
+;setstringblank S$序号7 3 1
+setstringblank S$序号7 3 1
+;setstringblank S$名称7 16 1
+setstringblank S$名称7 16 1
+;setstringblank S$金额7 6 0
+setstringblank S$金额7 6 0
+;setstringblank S$时间7 24 1
+setstringblank S$时间7 24 1
+
+;setstringblank S$序号6 3 1
+setstringblank S$序号6 3 1
+;setstringblank S$名称6 16 1
+setstringblank S$名称6 16 1
+;setstringblank S$金额6 6 0
+setstringblank S$金额6 6 0
+;setstringblank S$时间6 24 1
+setstringblank S$时间6 24 1
+
+
+;setstringblank S$序号5 3 1
+setstringblank S$序号5 3 1
+;setstringblank S$名称5 16 1
+setstringblank S$名称5 16 1
+;setstringblank S$金额5 6 0
+setstringblank S$金额5 6 0
+;setstringblank S$时间5 24 1
+setstringblank S$时间5 24 1
+
+
+;setstringblank S$序号4 3 1
+setstringblank S$序号4 3 1
+;setstringblank S$名称4 16 1
+setstringblank S$名称4 16 1
+;setstringblank S$金额4 6 0
+setstringblank S$金额4 6 0
+;setstringblank S$时间4 24 1
+setstringblank S$时间4 24 1
+
+
+;setstringblank S$序号3 3 1
+setstringblank S$序号3 3 1
+;setstringblank S$名称3 16 1
+setstringblank S$名称3 16 1
+;setstringblank S$金额3 6 0
+setstringblank S$金额3 6 0
+;setstringblank S$时间3 24 1
+setstringblank S$时间3 24 1
+
+
+;setstringblank S$序号2 3 1
+setstringblank S$序号2 3 1
+;setstringblank S$名称2 16 1
+setstringblank S$名称2 16 1
+;setstringblank S$金额2 6 0
+setstringblank S$金额2 6 0
+;setstringblank S$时间2 24 1
+setstringblank S$时间2 24 1
+
+
+;setstringblank S$序号1 3 1
+setstringblank S$序号1 3 1
+;setstringblank S$名称1 16 1
+setstringblank S$名称1 16 1
+;setstringblank S$金额1 6 0
+setstringblank S$金额1 6 0
+;setstringblank S$时间1 24 1
+setstringblank S$时间1 24 1
+
+
+#SAY
+<>\ \ \
+{<$STR(S$序号1)>/FCOLOR=103}{      <$str(S$名称1)>/FCOLOR=250}       {<$str(S$金额1)>/FCOLOR=70}        {     <$str(S$时间1)>/FCOLOR=146}     {     <$str(S$状态1)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号2)>/FCOLOR=103}{      <$str(S$名称2)>/FCOLOR=250}       {<$str(S$金额2)>/FCOLOR=70}        {     <$str(S$时间2)>/FCOLOR=146}     {     <$str(S$状态2)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号3)>/FCOLOR=103}{      <$str(S$名称3)>/FCOLOR=250}       {<$str(S$金额3)>/FCOLOR=70}        {     <$str(S$时间3)>/FCOLOR=146}     {     <$str(S$状态3)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号4)>/FCOLOR=103}{      <$str(S$名称4)>/FCOLOR=250}       {<$str(S$金额4)>/FCOLOR=70}        {     <$str(S$时间4)>/FCOLOR=146}     {     <$str(S$状态4)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号5)>/FCOLOR=103}{      <$str(S$名称5)>/FCOLOR=250}       {<$str(S$金额5)>/FCOLOR=70}        {     <$str(S$时间5)>/FCOLOR=146}     {     <$str(S$状态5)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号6)>/FCOLOR=103}{      <$str(S$名称6)>/FCOLOR=250}       {<$str(S$金额6)>/FCOLOR=70}        {     <$str(S$时间6)>/FCOLOR=146}     {     <$str(S$状态6)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号7)>/FCOLOR=103}{      <$str(S$名称7)>/FCOLOR=250}       {<$str(S$金额7)>/FCOLOR=70}        {     <$str(S$时间7)>/FCOLOR=146}     {     <$str(S$状态7)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号8)>/FCOLOR=103}{      <$str(S$名称8)>/FCOLOR=250}       {<$str(S$金额8)>/FCOLOR=70}        {     <$str(S$时间8)>/FCOLOR=146}     {     <$str(S$状态8)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号9)>/FCOLOR=103}{      <$str(S$名称9)>/FCOLOR=250}       {<$str(S$金额9)>/FCOLOR=70}        {     <$str(S$时间9)>/FCOLOR=146}     {     <$str(S$状态9)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+{<$STR(S$序号10)>/FCOLOR=103}{      <$str(S$名称10)>/FCOLOR=250}       {<$str(S$金额10)>/FCOLOR=70}        {     <$str(S$时间10)>/FCOLOR=146}     {     <$str(S$状态10)>/FCOLOR=254}\
+<><IMG:703:13:-22:0>\
+\
+
+<ImgEX:6:186:187:188:180:-5/@提现上一页><ImgEX:6:189:190:191:247:-5/@提现下一页> 　                           {第<$STR(N$页码)>页/FCOLOR=103}             <当前拥有金币：/FCOLOR=103>{<$GOLDCOUNT>/FCOLOR=103}  \
+<><IMG:703:13:-22:0>\
+<点击设置/@@inputstring47(请输入您的支付宝帐号, @ 字符无法输入请用 # 代替:)> <支付宝账号：/FCOLOR=161><$str(S$收款帐号显示)>\
+
+
+
+<点击设置/@@inputstring48(请输入您的支付宝收款人真实姓名:)> <支付宝姓名：/FCOLOR=161><$str(S$收款姓名显示)>     \
+
+
+<点击设置/@@inputstring50(请输入您的支付宝收款人真实姓名:)> <联系QQ：/FCOLOR=161><$str(S$联系QQ)>　　　　　<Imgex:13:704:705:706:120:-30|103#提现说明：满500金币即可提现，提现手续费10%^-^250#结算说明：每天11点-晚上24点，打款一次！^-^250#温馨提示：如果看到提现显示已结算但未收到钱，请别着急，财务正在出款中！/@@InPutInteger49(请输入您需要提现的金额:)>
+\
+
+
+
+
+[@提现上一页]
+#IF
+EQUAl N$页码 0
+#ACT
+MESSAGEBOX [提示]已经是第一页了..
+BREAK
+
+#IF
+#ACT
+DEC N$页码 1
+DEC N$序号1 10
+DEC N$序号2 10
+DEC N$序号3 10
+DEC N$序号4 10
+DEC N$序号5 10
+DEC N$序号6 10
+DEC N$序号7 10
+DEC N$序号8 10
+DEC N$序号9 10
+DEC N$序号10 10
+GOTO @main
+BREAK
+
+
+
+[@提现下一页]
+#IF
+#ACT
+INC N$页码 1
+INC N$序号1 10
+INC N$序号2 10
+INC N$序号3 10
+INC N$序号4 10
+INC N$序号5 10
+INC N$序号6 10
+INC N$序号7 10
+INC N$序号8 10
+INC N$序号9 10
+INC N$序号10 10
+GOTO @main
+BREAK
+
+
+
+
+
+[@InPutInteger49]
+
+
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+#ACT
+messagebox \　　　测试区状态，无法提现钻石！！！
+break
+
+#or
+equal S$收款姓名
+equal S$收款帐号
+equal S$联系QQ
+#Act
+messagebox 请填写收款支付宝账号与姓名.联系QQ！
+break
+
+#OR
+LARGE N49 100000
+EQUAL N49 499
+#ACT
+MESSAGEBOX 请输入正确的数字500-100000之间
+break
+
+#IF
+SMALL N49 499
+#ACT
+MESSAGEBOX 至少提现500金币
+break
+
+
+#IF
+NOT CHECKGOLD <$str(N49)>
+#Act
+messagebox 您没有足够的金币
+break
+#elseact
+MOV N$提现检测 <$STR(N49)>
+
+#IF
+SMALL <$second> 10
+#ACT
+MOV S$秒 0<$second>
+#elseact
+MOV S$秒 <$second>
+
+#IF
+SMALL <$hour> 10
+#ACT
+MOV S$时 0<$hour>
+#elseact
+MOV S$时 <$hour>
+
+#IF
+SMALL <$minute> 10
+#ACT
+MOV S$分 0<$minute>
+#elseact
+MOV S$分 <$minute>
+
+#IF
+CHECKGOLD <$STR(N$提现检测)>
+#ACT
+MOV N$提现金额 <$STR(N49)>
+TAKE 金币 <$STR(N$提现金额)>
+MOV S$服务器 <$SERVERNAME>
+MUL n$提现金额 9
+DIV n$提现金额 100
+
+
+AddTextListEX ..\..\..\..\..\提现记录\现金提现记录.txt <$username>:<$STR(N$提现金额)>元:<$year>年<$month>月<$day>日,<$str(S$时)>,<$str(S$分)>,<$str(S$秒)>:结算中...
+
+
+AddTextListEX ..\..\..\..\提现记录\自动提交.txt <$DATETIME>|<$SERVERNAME>|<$USERNAME>|<$USERACCOUNT>|<$STR(N$提现金额)>|<$str(S$收款帐号)>|<$str(S$收款姓名)>|<$str(S$联系QQ)>|<$STR(N49)>金币
+AddTextListEX ..\..\..\..\提现记录\提现数据_备份.txt <$DATETIME>|<$SERVERNAME>|<$USERNAME>|<$USERACCOUNT>|<$STR(N$提现金额)>|<$str(S$收款帐号)>|<$str(S$收款姓名)>|<$str(S$联系QQ)>|<$STR(N49)>金币
+
+
+
+MOV N$提现金额 0
+MESSAGEBOX 提现成功..\　\请等待打款
+goto @main
+
+
+
+
+
+[@inputstring50]
+#OR
+CheckStringlength <$STR(S50)> > 16
+CheckStringlength <$STR(S50)> < 4
+#ACT
+MESSAGEBOX 请输入正确的QQ联系方式
+break
+#elseact
+MOV S$联系QQ <$STR(S50)>
+goto @main
+
+
+
+
+[@inputstring47]
+#OR
+CheckStringlength <$STR(S47)> > 16
+CheckStringlength <$STR(S47)> < 4
+#ACT
+MESSAGEBOX 请输入正确的支付宝收款人帐号
+break
+#elseact
+MOV S$收款帐号 <$STR(S47)>
+goto @main
+
+[@inputstring48]
+#OR
+CheckStringlength <$STR(S48)> > 16
+CheckStringlength <$STR(S48)> < 4
+#ACT
+MESSAGEBOX 请输入正确的支付宝收款人姓名
+break
+#elseact
+MOV S$收款姓名 <$STR(S48)>
+goto @main
+
+
+[@色号]
+#IF
+LARGE P1 20
+#ACT
+Break
+
+#IF
+EQUAL S$状态<$str(P1)> 结算中...
+#Act
+MOV S$色号<$str(P1)> 249
+#elseact
+MOV S$色号<$str(P1)> 250
+
+#IF
+#ACT
+INC P1 1
+GOTO @色号
+
+
+
+

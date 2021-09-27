@@ -1,0 +1,783 @@
+[@main]
+#OR
+CHECKITEMW [时装]·孙の悟饭 1
+ChecKitem [时装]·孙の悟饭
+#ACT
+MESSAGEBOX 你已经有顶级[[时装]·孙の悟饭]了~
+BREAK
+
+#IF
+NOT CHECKITEMW [时装]·紫炎の神光 1
+NOT ChecKitem [时装]·紫炎の神光
+
+NOT CHECKITEMW [时装]·黑炎の怒火 1
+NOT ChecKitem [时装]·黑炎の怒火
+
+NOT CHECKITEMW [时装]·红炎の血腥 1
+NOT ChecKitem [时装]·红炎の血腥
+
+NOT CHECKITEMW [时装]·蓝炎の沉辉 1
+NOT ChecKitem [时装]·蓝炎の沉辉
+
+NOT CHECKITEMW [时装]·暗炎の影杀 1
+NOT ChecKitem [时装]·暗炎の影杀
+
+NOT CHECKITEMW [时装]·燃炎の飞焰 1
+NOT ChecKitem [时装]·燃炎の飞焰
+
+NOT CHECKITEMW [时装]·紫炎の破军 1
+NOT ChecKitem [时装]·紫炎の破军
+
+NOT CHECKITEMW [时装]·狂の圣战 1
+NOT ChecKitem [时装]·狂の圣战
+
+NOT CHECKITEMW [时装]·巫の妖王 1
+NOT ChecKitem [时装]·巫の妖王
+
+NOT CHECKITEMW [时装]·魂の幽冥 1
+NOT ChecKitem [时装]·魂の幽冥
+
+NOT CHECKITEMW [时装]·义の青龙 1
+NOT ChecKitem [时装]·义の青龙
+
+NOT CHECKITEMW [时装]·忍の鬼鲛 1
+NOT ChecKitem [时装]·忍の鬼鲛
+
+NOT CHECKITEMW [时装]·冥の王 1
+NOT ChecKitem [时装]·冥の王
+
+NOT CHECKITEMW [时装]·魑の魅 1
+NOT ChecKitem [时装]·魑の魅
+
+NOT CHECKITEMW [时装]·冰の火 1
+NOT ChecKitem [时装]·冰の火
+
+NOT CHECKITEMW [时装]·孙の悟饭 1
+NOT ChecKitem [时装]·孙の悟饭
+
+#ACT
+GOTO @初级
+BREAK
+#ELSEACT
+GOTO @检测1
+BREAK
+
+
+[@检测1]
+#OR
+CHECKITEMW [时装]·紫炎の神光 1
+ChecKitem [时装]·紫炎の神光
+#ACT
+GOTO @下一页_1
+BREAK
+#ELSEACT
+GOTO @检测2
+BREAK
+
+
+
+[@检测2]
+#OR
+CHECKITEMW [时装]·黑炎の怒火 1
+ChecKitem [时装]·黑炎の怒火
+#ACT
+GOTO @下一页_2
+BREAK
+#ELSEACT
+GOTO @检测3
+BREAK
+
+[@检测3]
+#OR
+CHECKITEMW [时装]·红炎の血腥 1
+ChecKitem [时装]·红炎の血腥
+#ACT
+GOTO @下一页_3
+BREAK
+#ELSEACT
+GOTO @检测4
+BREAK
+
+[@检测4]
+#OR
+CHECKITEMW [时装]·蓝炎の沉辉 1
+ChecKitem [时装]·蓝炎の沉辉
+#ACT
+GOTO @下一页_4
+BREAK
+#ELSEACT
+GOTO @检测5
+BREAK
+
+[@检测5]
+#OR
+CHECKITEMW [时装]·暗炎の影杀 1
+ChecKitem [时装]·暗炎の影杀
+#ACT
+GOTO @下一页_5
+BREAK
+#ELSEACT
+GOTO @检测6
+BREAK
+
+[@检测6]
+#OR
+CHECKITEMW [时装]·燃炎の飞焰 1
+ChecKitem [时装]·燃炎の飞焰
+#ACT
+GOTO @下一页_6
+BREAK
+#ELSEACT
+GOTO @检测7
+BREAK
+
+[@检测7]
+#OR
+CHECKITEMW [时装]·紫炎の破军 1
+ChecKitem [时装]·紫炎の破军
+#ACT
+GOTO @下一页_7
+BREAK
+#ELSEACT
+GOTO @检测8
+BREAK
+
+[@检测8]
+#OR
+CHECKITEMW [时装]·狂の圣战 1
+ChecKitem [时装]·狂の圣战
+#ACT
+GOTO @下一页_8
+BREAK
+#ELSEACT
+GOTO @检测9
+BREAK
+
+[@检测9]
+#OR
+CHECKITEMW [时装]·巫の妖王 1
+ChecKitem [时装]·巫の妖王
+#ACT
+GOTO @下一页_9
+BREAK
+#ELSEACT
+GOTO @检测10
+BREAK
+
+
+[@检测10]
+#OR
+CHECKITEMW [时装]·魂の幽冥 1
+ChecKitem [时装]·魂の幽冥
+#ACT
+GOTO @下一页_10
+BREAK
+#ELSEACT
+GOTO @检测11
+BREAK
+
+
+[@检测11]
+#OR
+CHECKITEMW [时装]·义の青龙 1
+ChecKitem [时装]·义の青龙
+#ACT
+GOTO @下一页_11
+BREAK
+#ELSEACT
+GOTO @检测12
+BREAK
+
+[@检测12]
+#OR
+CHECKITEMW [时装]·忍の鬼鲛 1
+ChecKitem [时装]·忍の鬼鲛
+#ACT
+GOTO @下一页_12
+BREAK
+#ELSEACT
+GOTO @检测13
+BREAK
+
+[@检测13]
+#OR
+CHECKITEMW [时装]·冥の王 1
+ChecKitem [时装]·冥の王
+#ACT
+GOTO @下一页_13
+BREAK
+#ELSEACT
+GOTO @检测14
+BREAK
+
+[@检测14]
+#OR
+CHECKITEMW [时装]·魑の魅 1
+ChecKitem [时装]·魑の魅
+#ACT
+GOTO @下一页_14
+BREAK
+#ELSEACT
+GOTO @检测15
+BREAK
+
+[@检测15]
+#OR
+CHECKITEMW [时装]·冰の火 1
+ChecKitem [时装]·冰の火
+#ACT
+GOTO @下一页_15
+BREAK
+#ELSEACT
+GOTO @检测16
+BREAK
+
+
+[@检测16]
+#OR
+CHECKITEMW [时装]·孙の悟饭 1
+ChecKitem [时装]·孙の悟饭
+#ACT
+GOTO @下一页_16
+BREAK
+;#ELSEACT
+;GOTO @检测16
+;BREAK
+
+
+
+
+
+
+
+
+
+[@初级]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·紫炎の神光/FCOLOR=70}\
+<PlayImg:27:1540:8:100:-75:-25>\
+<Itemshow:681:0:610:105>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件：1.时装羽毛*10/@1级切割>
+<ImgEx:41:180:181:182:126:309>
+<ImgEx:41:183:184:185:123:309/@下一页_1>\
+
+
+[@下一页_1]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·黑炎の怒火/FCOLOR=70}\
+<PlayImg:27:1530:8:100:-95:-30>\
+<Itemshow:682:0:610:105>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·紫炎の神光*1^250#合成条件②：时装羽毛*20/@2级切割>
+<ImgEx:41:180:181:182:126:309/@初级>
+<ImgEx:41:183:184:185:123:309/@下一页_2>\
+
+
+[@下一页_2]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·红炎の血腥/FCOLOR=70}\
+<PlayImg:27:1520:8:100:-90:-40>\
+<Itemshow:683:0:610:110>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·黑炎の怒火*1^250#合成条件②：时装羽毛*40/@3级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_1>
+<ImgEx:41:183:184:185:123:309/@下一页_3>\
+
+[@下一页_3]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·蓝炎の沉辉/FCOLOR=70}\
+<PlayImg:27:1510:8:100:-85:-35>\
+<Itemshow:684:0:610:110>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·红炎の血腥*1^250#合成条件②：时装羽毛*60/@4级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_2>
+<ImgEx:41:183:184:185:123:309/@下一页_4>\
+
+[@下一页_4]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·暗炎の影杀/FCOLOR=70}\
+<PlayImg:27:1500:8:100:-90:-40>\
+<Itemshow:685:0:610:110>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·蓝炎の沉辉*1^250#合成条件②：时装羽毛*80/@5级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_3>
+<ImgEx:41:183:184:185:123:309/@下一页_5>\
+
+
+[@下一页_5]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·燃炎の飞焰/FCOLOR=70}\
+<PlayImg:27:1490:8:100:-95:-45>\
+<Itemshow:686:0:610:110>\
+
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·暗炎の影杀*1^250#合成条件②：时装羽毛*100/@6级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_4>
+<ImgEx:41:183:184:185:123:309/@下一页_6>\
+
+[@下一页_6]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·紫炎の破军/FCOLOR=70}\
+<PlayImg:27:1480:8:100:-90:-40>\
+<Itemshow:687:0:610:105>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·燃炎の飞焰*1^250#合成条件②：时装羽毛*150^250#③：元宝*500000/@7级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_5>
+<ImgEx:41:183:184:185:123:309/@下一页_7>\
+
+
+[@下一页_7]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·狂の圣战/FCOLOR=70}\
+<PlayImg:27:1470:8:100:-85:-40>\
+<Itemshow:688:0:610:105>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·紫炎の破军*1^250#合成条件②：时装羽毛*200^250#③：元宝*1000000/@8级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_6>
+<ImgEx:41:183:184:185:123:309/@下一页_8>\
+
+[@下一页_8]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·巫の妖王/FCOLOR=70}\
+<PlayImg:27:1550:8:100:-15:-95>\
+<Itemshow:689:0:605:100>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·狂の圣战*1^250#合成条件②：时装羽毛*250^250#③：元宝*2000000/@9级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_7>
+<ImgEx:41:183:184:185:123:309/@下一页_9>\
+
+
+
+
+[@下一页_9]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·魂の幽冥/FCOLOR=70}\
+<PlayImg:27:1560:8:100:5:-165>\
+<Itemshow:690:0:605:100>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·巫の妖王*1^250#合成条件②：时装羽毛*300^250#③：元宝*3000000/@10级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_8>
+<ImgEx:41:183:184:185:123:309/@下一页_10>\
+
+
+[@下一页_10]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·义の青龙/FCOLOR=70}\
+<PlayImg:27:1570:8:100:-35:-120>\
+<Itemshow:691:0:605:100>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·魂の幽冥*1^250#合成条件②：神时装羽毛 * 350^250#合成条件③：元宝*4000000/@11级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_9>
+<ImgEx:41:183:184:185:123:309/@下一页_11>\
+
+
+
+
+[@下一页_11]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·忍の鬼鲛/FCOLOR=70}\
+<PlayImg:27:1580:8:100:-40:-120>\
+<Itemshow:692:0:605:100>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·义の青龙*1^250#合成条件②：时装羽毛 *400^250#合成条件③：元宝*5000000/@12级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_10>
+<ImgEx:41:183:184:185:123:309/@下一页_12>\
+
+
+
+[@下一页_12]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·冥の王/FCOLOR=70}\
+<PlayImg:27:1590:8:100:-25:-100>\
+<Itemshow:693:0:605:100>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·忍の鬼鲛*1^250#合成条件②：时装羽毛 *500^250#合成条件③：元宝*6000000/@13级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_11>
+<ImgEx:41:183:184:185:123:309/@下一页_13>\
+
+
+[@下一页_13]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·魑の魅/FCOLOR=70}\
+<PlayImg:27:1610:8:100:130:20>\
+<Itemshow:694:0:605:110>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·冥の王*1^250#合成条件②：时装羽毛 *600^250#合成条件③：元宝*7000000/@14级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_12>
+<ImgEx:41:183:184:185:123:309/@下一页_14>\
+
+
+[@下一页_14]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·冰の火/FCOLOR=70}\
+<PlayImg:27:1620:9:100:150:95>\
+<Itemshow:695:0:610:110>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·魑の魅*1^250#合成条件②：时装羽毛 *800^250#合成条件③：元宝*8000000/@15级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_13>
+<ImgEx:41:183:184:185:123:309/@下一页_15>\
+
+
+[@下一页_15]
+#IF
+#ACT
+#SAY
+\ \ \ \
+;　　　　　　　　    {[时装]·孙の悟饭/FCOLOR=70}\
+<PlayImg:27:1630:22:100:60:-200>\
+<Itemshow:696:0:605:102>\
+<playimg:13:725:10:100:578:60:0>\ \
+<ImgEx:41:187:188:189:590:250|250#合成条件①：[时装]·冰の火*1^250#合成条件②：时装羽毛 *1000^250#合成条件③：元宝*30000000/@16级切割>
+<ImgEx:41:180:181:182:126:309/@下一页_14>
+<ImgEx:41:183:184:185:123:309/@下一页_16>\
+
+
+[@下一页_16]
+#IF
+#ACT
+MESSAGEBOX 勇士你好,我这里已无法为你提供服务,更高级时装请前往仙罡大陆寻找!!
+BREAK
+
+
+
+
+;---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+[@16级切割]
+#if
+checkitem 时装羽毛 1000
+checkitem [时装]·冰の火 1
+CHECKGAMEGOLD ? 30000000
+#act
+take 时装羽毛 1000
+take [时装]·冰の火 1
+GAMEGOLD - 30000000
+;GiveStateItem [时装]·孙の悟饭 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·孙の悟饭 1 1 1 0 0 1 1 1 0
+;GOTO @下一页_16
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·孙の悟饭！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+
+[@15级切割]
+#if
+checkitem 时装羽毛 800
+checkitem [时装]·魑の魅 1
+CHECKGAMEGOLD ? 8000000
+#act
+take 时装羽毛 800
+take [时装]·魑の魅 1
+GAMEGOLD - 8000000
+;GiveStateItem [时装]·冰の火 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·冰の火 1 1 1 0 0 1 1 1 0
+GOTO @下一页_15
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切[时装]·冰の火！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+[@14级切割]
+#if
+checkitem 时装羽毛 600
+checkitem [时装]·冥の王 1
+CHECKGAMEGOLD ? 7000000
+#act
+take 时装羽毛 600
+take [时装]·冥の王 1
+GAMEGOLD - 7000000
+;GiveStateItem [时装]·魑の魅 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·魑の魅 1 1 1 0 0 1 1 1 0
+GOTO @下一页_14
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·魑の魅！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+[@13级切割]
+#if
+checkitem 时装羽毛 500
+checkitem [时装]·忍の鬼鲛 1
+CHECKGAMEGOLD ? 6000000
+#act
+take 时装羽毛 500
+take [时装]·忍の鬼鲛 1
+GAMEGOLD - 6000000
+;GiveStateItem [时装]·冥の王 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·冥の王 1 1 1 0 0 1 1 1 0
+GOTO @下一页_13
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·冥の王！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+[@12级切割]
+#if
+checkitem 时装羽毛 400
+checkitem [时装]·义の青龙 1
+CHECKGAMEGOLD ? 5000000
+#act
+take 时装羽毛 400
+take [时装]·义の青龙 1
+GAMEGOLD - 5000000
+;GiveStateItem [时装]·忍の鬼鲛 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·忍の鬼鲛 1 1 1 0 0 1 1 1 0
+GOTO @下一页_12
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·忍の鬼鲛！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+[@11级切割]
+#if
+checkitem 时装羽毛 350
+checkitem [时装]·魂の幽冥 1
+CHECKGAMEGOLD ? 4000000
+#act
+take 时装羽毛 350
+take [时装]·魂の幽冥 1
+GAMEGOLD - 4000000
+;GiveStateItem [时装]·义の青龙 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·义の青龙 1 1 1 0 0 1 1 1 0
+GOTO @下一页_11
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·义の青龙！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+[@10级切割]
+#if
+checkitem 时装羽毛 300
+checkitem [时装]·巫の妖王 1
+CHECKGAMEGOLD ? 3000000
+#act
+take 时装羽毛 300
+take [时装]·巫の妖王 1
+GAMEGOLD - 3000000
+;GiveStateItem [时装]·魂の幽冥 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·魂の幽冥 1 1 1 0 0 1 1 1 0
+GOTO @下一页_10
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·魂の幽冥！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+[@9级切割]
+#if
+checkitem 时装羽毛 250
+checkitem [时装]·狂の圣战 1
+CHECKGAMEGOLD ? 2000000
+#act
+take 时装羽毛 250
+take [时装]·狂の圣战 1
+GAMEGOLD - 2000000
+;GiveStateItem [时装]·巫の妖王 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·巫の妖王 1 1 1 0 0 1 1 1 0
+GOTO @下一页_9
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·巫の妖王！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+[@8级切割]
+#if
+checkitem 时装羽毛 200
+checkitem [时装]·紫炎の破军 1
+CHECKGAMEGOLD ? 1000000
+#act
+take 时装羽毛 200
+take [时装]·紫炎の破军 1
+GAMEGOLD - 1000000
+;GiveStateItem [时装]·狂の圣战 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·狂の圣战 1 1 1 0 0 1 1 1 0
+GOTO @下一页_8
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·狂の圣战！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+[@7级切割]
+#if
+checkitem 时装羽毛 150
+checkitem [时装]·燃炎の飞焰 1
+CHECKGAMEGOLD ? 500000
+#act
+take 时装羽毛 150
+take [时装]·燃炎の飞焰 1
+GAMEGOLD - 500000
+;GiveStateItem [时装]·紫炎の破军 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·紫炎の破军 1 1 1 0 0 1 1 1 0
+GOTO @下一页_7
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·紫炎の破军！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+[@6级切割]
+#if
+checkitem 时装羽毛 100
+checkitem [时装]·暗炎の影杀 1
+#ACT
+take 时装羽毛 100
+take [时装]·暗炎の影杀 1
+;GiveStateItem [时装]·燃炎の飞焰 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·燃炎の飞焰 1 1 1 0 0 1 1 1 0
+GOTO @下一页_6
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·燃炎の飞焰！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+[@5级切割]
+#if
+checkitem 时装羽毛 80
+checkitem [时装]·蓝炎の沉辉 1
+#ACT
+take 时装羽毛 80
+take [时装]·蓝炎の沉辉 1
+;GiveStateItem [时装]·暗炎の影杀 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·暗炎の影杀 1 1 1 0 0 1 1 1 0
+GOTO @下一页_5
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·暗炎の影杀！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+[@4级切割]
+#if
+checkitem 时装羽毛 60
+checkitem [时装]·红炎の血腥 1
+#ACT
+take 时装羽毛 60
+take [时装]·红炎の血腥 1
+;GiveStateItem [时装]·蓝炎の沉辉 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·蓝炎の沉辉 1 1 1 0 0 1 1 1 0
+GOTO @下一页_4
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·蓝炎の沉辉！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+[@3级切割]
+#if
+checkitem 时装羽毛 40
+checkitem [时装]·黑炎の怒火 1
+#ACT
+take 时装羽毛 40
+take [时装]·黑炎の怒火 1
+;GiveStateItem [时装]·红炎の血腥 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·红炎の血腥 1 1 1 0 0 1 1 1 0
+GOTO @下一页_3
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·红炎の血腥！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+[@2级切割]
+#if
+checkitem 时装羽毛 20
+checkitem [时装]·紫炎の神光 1
+#ACT
+take 时装羽毛 20
+take [时装]·紫炎の神光 1
+;GiveStateItem [时装]·黑炎の怒火 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·黑炎の怒火 1 1 1 0 0 1 1 1 0
+GOTO @下一页_2
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了[时装]·黑炎の怒火！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+
+
+
+[@1级切割]
+#if
+checkitem 时装羽毛 10
+#ACT
+take 时装羽毛 10
+;GiveStateItem [时装]·紫炎の神光 1 1 0 0 1 1 1 1
+GIVESTATEITEM [时装]·紫炎の神光 1 1 1 0 0 1 1 1 0
+GOTO @下一页_1
+GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了『[时装]·紫炎の神光』！！
+#ELSEACT
+MessageBox [提示]:请检查您的材料是否足够!!!
+BREAK
+

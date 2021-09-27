@@ -1,0 +1,3 @@
+(@@InPutString @@InPutInteger )
+[@main]
+#CALL [\挑战擂台配置\挑战擂台脚本3.txt] @挑战擂台脚本NPC3

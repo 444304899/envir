@@ -1,0 +1,1406 @@
+[@main]
+#IF
+#ACT
+#SAY
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+<>                                                       <勋章洗炼：/FCOLOR=150><装备洗炼随机给予1-3条封印BUFF/FCOLOR=250> \
+<>                                                       <洗炼条件：/FCOLOR=150><需要花费288钻石/FCOLOR=254> \
+<>                                                       <解封BUFF：/FCOLOR=150><将[九天碧落战盾]上封印BUFF解除，获得BUFF属性！/FCOLOR=253> \
+<>                                                       <[鼠标移至此处查看BUFF介绍] |251#　　　　　　　[特色神秘BUFF介绍]^
+
+^　^250#绿色BUFF
+^250#初级伤害：人物攻击伤害提升5%
+^250#初级打宝：人物打怪爆率提升10%
+^250#初级斩杀：有几率瞬间打掉对手10%血量
+^250#复苏之风：被攻击有几率恢复5%血量
+^250#鬼魅重重：有几率让对手2秒内丢失视野
+^250#泰坦之力：人物攻魔道(+500点)
+^250#毁灭之力：有几率使对手攻击倍数消失5秒
+^　^251#黄色BUFF
+^251#修罗之力：人物攻魔道(+1000点)
+^251#高级伤害：人物攻击伤害提升10%
+^251#高级打宝：人物打怪爆率提升20%
+^251#高级斩杀：有几率瞬间打掉对手20%血量
+^251#荆棘之伤：被攻击时有10%几率反弹双倍伤害
+^251#刺客诡道：被攻击时有几率隐身(1)秒
+^251#苍云虚弱：有几率降低对手攻击速度和移动速度
+^　^249#红色BUFF
+^249#寒刀之力：人物攻魔道(+1500点)
+^249#超级伤害：攻击伤害额外增加20%
+^249#超级打宝：人物打怪爆率提升40%
+^249#超级斩杀：有几率瞬间打掉对手30%血量
+^249#无尽束缚：有几率禁锢对手3秒(禁止小退 传送)
+^249#无敌模式：血量低于30%触发无敌一秒(CD时间180秒)
+^250#保底洗练：15次必出一条红色BUFF属性/@>\
+
+<>                                                   <--------------------------------------------------------------/FCOLOR=95>\ \
+
+<>                                                               <[洗 炼 冰与火【超脱】]|250#　　　　【重洗说明】^　^253#重洗后所有BUFF全部消失！^253#随机给予1-3条[未解封]BUFF^　^251#条件：每次重洗需[288点]钻石/@重洗BUFF>   <（先洗炼出封印BUFF才可解封）/FCOLOR=250>  \ \ \
+
+<>                                                               <[解 封→BUFF]/@第一道>            <→ [解封第四条BUFF]←/@第四道> \  \ \
+
+<>                                                               <[清 除↓BUFF]/FCOLOR=249>  <（可清除不满意的BUFF，费用2888钻石）/FCOLOR=253> \  \ \
+
+
+<>                                                  　 <[清除第一条]/@抹去第一道>    <[清除第二条]/@抹去第二道>   <[清除第三条]/@抹去第三道>   <[清除第四条]/@抹去第四道>
+
+<> <ITEMBOX:0:-1:0:-375:-123:40:40:*::250#请放入冰与火【超脱】>    \
+<>  <playimg:13:725:10:100:250:-170:0>
+
+;=============================================================================
+[@ItemIntoBox0]
+#if
+CHECKTEXTLIST ..\QuestDiary\BUFF触发\允许斗笠.txt <$BOXITEM[0].NAME>
+#ELSEACT
+UNALLOWITEMINTOBOX
+MESSAGEBOX [提示]:清放入冰与火【超脱】
+BREAK
+;=============================================================================
+[@第一道]
+#if
+#ACT
+SetUpgradeItem 0
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S25
+MOV S26
+MOV S27
+#ELSEACT
+MESSAGEBOX 提　示：你自定义框没有放入冰与火【超脱】，无法抹去！
+BREAK
+
+#IF
+CHECKDRILLHOLE -1 0
+#ELSEACT
+MESSAGEBOX 提　示：您的装备没有封印『神秘属性①』无法解封！
+BREAK
+
+
+
+#IF
+CHECKSOCKETABLEITEM -1 0 S24 S25
+#ACT
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 0
+CheckContainsText <$STR(S25)> 神秘属性
+equal U8 15
+#ACT
+MOV S$斗笠魔法
+MOV N$斗笠变量 0
+goto @必给一道
+
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 0
+CheckContainsText <$STR(S25)> 神秘属性
+#ACT
+MOV S$斗笠魔法
+MOV N$斗笠变量 0
+MOVR N$成功率 1 101
+MOVR N$斗笠几率 1 882
+#ELSEACT
+goto @第二道
+BREAK
+;----------------------------- 绿色BUFF
+#IF
+LARGE N$斗笠几率 0
+SMALL N$斗笠几率 101
+#ACT
+MOV N$斗笠变量 1290
+MOV S$斗笠魔法 初级伤害
+
+#IF
+LARGE N$斗笠几率 100
+SMALL N$斗笠几率 201
+#ACT
+MOV N$斗笠变量 1291
+MOV S$斗笠魔法 初级打宝
+
+#IF
+LARGE N$斗笠几率 200
+SMALL N$斗笠几率 301
+#ACT
+MOV N$斗笠变量 1292
+MOV S$斗笠魔法 初级斩杀
+
+#IF
+LARGE N$斗笠几率 300
+SMALL N$斗笠几率 401
+#ACT
+MOV N$斗笠变量 1293
+MOV S$斗笠魔法 复苏之风
+
+
+#IF
+LARGE N$斗笠几率 400
+SMALL N$斗笠几率 501
+#ACT
+MOV N$斗笠变量 1294
+MOV S$斗笠魔法 鬼魅重重
+
+#IF
+LARGE N$斗笠几率 500
+SMALL N$斗笠几率 601
+#ACT
+MOV N$斗笠变量 1295
+MOV S$斗笠魔法 泰坦之力
+
+#IF
+LARGE N$斗笠几率 600
+SMALL N$斗笠几率 701
+#ACT
+MOV N$斗笠变量 1296
+MOV S$斗笠魔法 毁灭之力
+
+;----------------------------- 黄色BUFF
+
+#IF
+LARGE N$斗笠几率 700
+SMALL N$斗笠几率 726
+#ACT
+MOV N$斗笠变量 1297
+MOV S$斗笠魔法 修罗之力
+
+
+#IF
+LARGE N$斗笠几率 725
+SMALL N$斗笠几率 751
+#ACT
+MOV N$斗笠变量 1298
+MOV S$斗笠魔法 高级伤害
+
+
+#IF
+LARGE N$斗笠几率 750
+SMALL N$斗笠几率 776
+#ACT
+MOV N$斗笠变量 1299
+MOV S$斗笠魔法 高级打宝
+
+#IF
+LARGE N$斗笠几率 775
+SMALL N$斗笠几率 801
+#ACT
+MOV N$斗笠变量 1300
+MOV S$斗笠魔法 高级斩杀
+
+#IF
+LARGE N$斗笠几率 800
+SMALL N$斗笠几率 826
+#ACT
+MOV N$斗笠变量 1301
+MOV S$斗笠魔法 荆棘之伤
+
+#IF
+LARGE N$斗笠几率 825
+SMALL N$斗笠几率 851
+#ACT
+MOV N$斗笠变量 1302
+MOV S$斗笠魔法 刺客诡道
+
+#IF
+LARGE N$斗笠几率 850
+SMALL N$斗笠几率 876
+#ACT
+MOV N$斗笠变量 1303
+MOV S$斗笠魔法 苍云虚弱
+
+;----------------------------- 红色BUFF
+
+#IF
+EQUAL N$斗笠几率 876
+#ACT
+MOV N$斗笠变量 1304
+MOV S$斗笠魔法 寒刀之力
+
+#IF
+EQUAL N$斗笠几率 877
+#ACT
+MOV N$斗笠变量 1305
+MOV S$斗笠魔法 超级伤害
+
+
+#IF
+EQUAL N$斗笠几率 878
+#ACT
+MOV N$斗笠变量 1306
+MOV S$斗笠魔法 超级打宝
+
+
+#IF
+EQUAL N$斗笠几率 879
+#ACT
+MOV N$斗笠变量 1307
+MOV S$斗笠魔法 超级斩杀
+
+#IF
+EQUAL N$斗笠几率 880
+#ACT
+MOV N$斗笠变量 1308
+MOV S$斗笠魔法 无尽束缚
+
+#IF
+EQUAL N$斗笠几率 881
+#ACT
+MOV N$斗笠变量 1309
+MOV S$斗笠魔法 无敌模式
+;----------------------------- 执行BUFF
+#IF
+CHECKSOCKETABLEITEM -1 0 S24 S25
+CHECKSOCKETABLEITEM -1 1 S24 S26
+CHECKSOCKETABLEITEM -1 2 S24 S27
+#ACT
+
+#IF
+CheckContainsText <$STR(S26)> 斩杀
+CheckContainsText <$STR(S$斗笠魔法)> 斩杀
+#ACT
+GOTO @第一道
+BREAK
+
+#IF
+CheckContainsText <$STR(S27)> 斩杀
+CheckContainsText <$STR(S$斗笠魔法)> 斩杀
+#ACT
+GOTO @第一道
+BREAK
+
+#OR
+EQUAL <$STR(S26)> <$STR(S$斗笠魔法)>
+EQUAL <$STR(S27)> <$STR(S$斗笠魔法)>
+#ACT
+GOTO @第一道
+BREAK
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 0
+CheckContainsText <$STR(S25)> 神秘属性
+LARGE N$成功率 0
+
+#ACT
+
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+INC U8 1
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+SendCenterMsg 252 242 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性①】获得『<$STR(S$斗笠魔法)>BUFF』 1 1
+GuildNoticeMsg 252 70 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性①】获得『<$STR(S$斗笠魔法)>BUFF』
+BREAK
+;=======================================================================================
+[@第二道]
+#if
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S25
+MOV S26
+MOV S27
+#ELSEACT
+MESSAGEBOX 提　示：你自定义框没有放入冰与火【超脱】，无法抹去！
+BREAK
+
+#IF
+CHECKDRILLHOLE -1 1
+#ELSEACT
+MESSAGEBOX 提　示：您的装备没有封印『神秘属性②』无法解封！
+BREAK
+
+#IF
+CHECKSOCKETABLEITEM -1 1 S24 S26
+#ACT
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 1
+CheckContainsText <$STR(S26)> 神秘属性
+equal U8 15
+#ACT
+MOV S$斗笠魔法
+MOV N$斗笠变量 0
+goto @必给二道
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 1
+CheckContainsText <$STR(S26)> 神秘属性
+#ACT
+MOV S$斗笠魔法
+MOV N$斗笠变量 0
+MOVR N$成功率 1 101
+MOVR N$斗笠几率 1 882
+#ELSEACT
+goto @第三道
+BREAK
+;----------------------------- 绿色BUFF
+
+#IF
+LARGE N$斗笠几率 0
+SMALL N$斗笠几率 101
+#ACT
+MOV N$斗笠变量 1290
+MOV S$斗笠魔法 初级伤害
+
+#IF
+LARGE N$斗笠几率 100
+SMALL N$斗笠几率 201
+#ACT
+MOV N$斗笠变量 1291
+MOV S$斗笠魔法 初级打宝
+
+#IF
+LARGE N$斗笠几率 200
+SMALL N$斗笠几率 301
+#ACT
+MOV N$斗笠变量 1292
+MOV S$斗笠魔法 初级斩杀
+
+#IF
+LARGE N$斗笠几率 300
+SMALL N$斗笠几率 401
+#ACT
+MOV N$斗笠变量 1293
+MOV S$斗笠魔法 复苏之风
+
+
+#IF
+LARGE N$斗笠几率 400
+SMALL N$斗笠几率 501
+#ACT
+MOV N$斗笠变量 1294
+MOV S$斗笠魔法 鬼魅重重
+
+#IF
+LARGE N$斗笠几率 500
+SMALL N$斗笠几率 601
+#ACT
+MOV N$斗笠变量 1295
+MOV S$斗笠魔法 泰坦之力
+
+#IF
+LARGE N$斗笠几率 600
+SMALL N$斗笠几率 701
+#ACT
+MOV N$斗笠变量 1296
+MOV S$斗笠魔法 毁灭之力
+
+;----------------------------- 黄色BUFF
+
+#IF
+LARGE N$斗笠几率 700
+SMALL N$斗笠几率 726
+#ACT
+MOV N$斗笠变量 1297
+MOV S$斗笠魔法 修罗之力
+
+
+#IF
+LARGE N$斗笠几率 725
+SMALL N$斗笠几率 751
+#ACT
+MOV N$斗笠变量 1298
+MOV S$斗笠魔法 高级伤害
+
+
+#IF
+LARGE N$斗笠几率 750
+SMALL N$斗笠几率 776
+#ACT
+MOV N$斗笠变量 1299
+MOV S$斗笠魔法 高级打宝
+
+#IF
+LARGE N$斗笠几率 775
+SMALL N$斗笠几率 801
+#ACT
+MOV N$斗笠变量 1300
+MOV S$斗笠魔法 高级斩杀
+
+#IF
+LARGE N$斗笠几率 800
+SMALL N$斗笠几率 826
+#ACT
+MOV N$斗笠变量 1301
+MOV S$斗笠魔法 荆棘之伤
+
+#IF
+LARGE N$斗笠几率 825
+SMALL N$斗笠几率 851
+#ACT
+MOV N$斗笠变量 1302
+MOV S$斗笠魔法 刺客诡道
+
+#IF
+LARGE N$斗笠几率 850
+SMALL N$斗笠几率 876
+#ACT
+MOV N$斗笠变量 1303
+MOV S$斗笠魔法 苍云虚弱
+
+;----------------------------- 红色BUFF
+
+#IF
+EQUAL N$斗笠几率 876
+#ACT
+MOV N$斗笠变量 1304
+MOV S$斗笠魔法 寒刀之力
+
+#IF
+EQUAL N$斗笠几率 877
+#ACT
+MOV N$斗笠变量 1305
+MOV S$斗笠魔法 超级伤害
+
+
+#IF
+EQUAL N$斗笠几率 878
+#ACT
+MOV N$斗笠变量 1306
+MOV S$斗笠魔法 超级打宝
+
+
+#IF
+EQUAL N$斗笠几率 879
+#ACT
+MOV N$斗笠变量 1307
+MOV S$斗笠魔法 超级斩杀
+
+#IF
+EQUAL N$斗笠几率 880
+#ACT
+MOV N$斗笠变量 1308
+MOV S$斗笠魔法 无尽束缚
+
+#IF
+EQUAL N$斗笠几率 881
+#ACT
+MOV N$斗笠变量 1309
+MOV S$斗笠魔法 无敌模式
+
+;----------------------------- 执行BUFF
+#IF
+CHECKSOCKETABLEITEM -1 0 S24 S25
+CHECKSOCKETABLEITEM -1 1 S24 S26
+CHECKSOCKETABLEITEM -1 2 S24 S27
+#ACT
+
+#IF
+CheckContainsText <$STR(S25)> 斩杀
+CheckContainsText <$STR(S$斗笠魔法)> 斩杀
+#ACT
+GOTO @第二道
+BREAK
+
+#IF
+CheckContainsText <$STR(S27)> 斩杀
+CheckContainsText <$STR(S$斗笠魔法)> 斩杀
+#ACT
+GOTO @第二道
+BREAK
+
+#OR
+EQUAL <$STR(S25)> <$STR(S$斗笠魔法)>
+EQUAL <$STR(S27)> <$STR(S$斗笠魔法)>
+#ACT
+GOTO @第二道
+BREAK
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 1
+CheckContainsText <$STR(S26)> 神秘属性
+LARGE N$成功率 0
+
+#ACT
+
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+INC U8 1
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+SendCenterMsg 252 242 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性②】获得『<$STR(S$斗笠魔法)>BUFF』 1 1
+GuildNoticeMsg 252 70 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性②】获得『<$STR(S$斗笠魔法)>BUFF』
+BREAK
+;=======================================================================================
+[@第三道]
+#if
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S25
+MOV S26
+MOV S27
+#ELSEACT
+MESSAGEBOX 提　示：你自定义框没有放入冰与火【超脱】，无法抹去！
+BREAK
+
+#IF
+CHECKDRILLHOLE -1 2
+#ELSEACT
+MESSAGEBOX 提　示：您的装备没有封印『神秘属性③』无法解封！
+BREAK
+
+
+#IF
+CHECKSOCKETABLEITEM -1 2 S24 S27
+#ACT
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 2
+CheckContainsText <$STR(S27)> 神秘属性
+equal U8 15
+#ACT
+MOV S$斗笠魔法
+MOV N$斗笠变量 0
+goto @必给三道
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 2
+CheckContainsText <$STR(S27)> 神秘属性
+#ACT
+MOV S$斗笠魔法
+MOV N$斗笠变量 0
+MOVR N$成功率 1 101
+MOVR N$斗笠几率 1 882
+#ELSEACT
+MESSAGEBOX 提　示：您的装备『神秘属性③』已解封！
+BREAK
+;----------------------------- 绿色BUFF
+
+#IF
+LARGE N$斗笠几率 0
+SMALL N$斗笠几率 101
+#ACT
+MOV N$斗笠变量 1290
+MOV S$斗笠魔法 初级伤害
+
+#IF
+LARGE N$斗笠几率 100
+SMALL N$斗笠几率 201
+#ACT
+MOV N$斗笠变量 1291
+MOV S$斗笠魔法 初级打宝
+
+#IF
+LARGE N$斗笠几率 200
+SMALL N$斗笠几率 301
+#ACT
+MOV N$斗笠变量 1292
+MOV S$斗笠魔法 初级斩杀
+
+#IF
+LARGE N$斗笠几率 300
+SMALL N$斗笠几率 401
+#ACT
+MOV N$斗笠变量 1293
+MOV S$斗笠魔法 复苏之风
+
+
+#IF
+LARGE N$斗笠几率 400
+SMALL N$斗笠几率 501
+#ACT
+MOV N$斗笠变量 1294
+MOV S$斗笠魔法 鬼魅重重
+
+#IF
+LARGE N$斗笠几率 500
+SMALL N$斗笠几率 601
+#ACT
+MOV N$斗笠变量 1295
+MOV S$斗笠魔法 泰坦之力
+
+#IF
+LARGE N$斗笠几率 600
+SMALL N$斗笠几率 701
+#ACT
+MOV N$斗笠变量 1296
+MOV S$斗笠魔法 毁灭之力
+
+;----------------------------- 黄色BUFF
+
+#IF
+LARGE N$斗笠几率 700
+SMALL N$斗笠几率 726
+#ACT
+MOV N$斗笠变量 1297
+MOV S$斗笠魔法 修罗之力
+
+
+#IF
+LARGE N$斗笠几率 725
+SMALL N$斗笠几率 751
+#ACT
+MOV N$斗笠变量 1298
+MOV S$斗笠魔法 高级伤害
+
+
+#IF
+LARGE N$斗笠几率 750
+SMALL N$斗笠几率 776
+#ACT
+MOV N$斗笠变量 1299
+MOV S$斗笠魔法 高级打宝
+
+#IF
+LARGE N$斗笠几率 775
+SMALL N$斗笠几率 801
+#ACT
+MOV N$斗笠变量 1300
+MOV S$斗笠魔法 高级斩杀
+
+#IF
+LARGE N$斗笠几率 800
+SMALL N$斗笠几率 826
+#ACT
+MOV N$斗笠变量 1301
+MOV S$斗笠魔法 荆棘之伤
+
+#IF
+LARGE N$斗笠几率 825
+SMALL N$斗笠几率 851
+#ACT
+MOV N$斗笠变量 1302
+MOV S$斗笠魔法 刺客诡道
+
+#IF
+LARGE N$斗笠几率 850
+SMALL N$斗笠几率 876
+#ACT
+MOV N$斗笠变量 1303
+MOV S$斗笠魔法 苍云虚弱
+
+;----------------------------- 红色BUFF
+
+#IF
+EQUAL N$斗笠几率 876
+#ACT
+MOV N$斗笠变量 1304
+MOV S$斗笠魔法 寒刀之力
+
+#IF
+EQUAL N$斗笠几率 877
+#ACT
+MOV N$斗笠变量 1305
+MOV S$斗笠魔法 超级伤害
+
+
+#IF
+EQUAL N$斗笠几率 878
+#ACT
+MOV N$斗笠变量 1306
+MOV S$斗笠魔法 超级打宝
+
+
+#IF
+EQUAL N$斗笠几率 879
+#ACT
+MOV N$斗笠变量 1307
+MOV S$斗笠魔法 超级斩杀
+
+#IF
+EQUAL N$斗笠几率 880
+#ACT
+MOV N$斗笠变量 1308
+MOV S$斗笠魔法 无尽束缚
+
+#IF
+EQUAL N$斗笠几率 881
+#ACT
+MOV N$斗笠变量 1309
+MOV S$斗笠魔法 无敌模式
+
+;----------------------------- 执行BUFF
+#IF
+CHECKSOCKETABLEITEM -1 0 S24 S25
+CHECKSOCKETABLEITEM -1 1 S24 S26
+CHECKSOCKETABLEITEM -1 2 S24 S27
+#ACT
+
+#IF
+CheckContainsText <$STR(S25)> 斩杀
+CheckContainsText <$STR(S$斗笠魔法)> 斩杀
+#ACT
+GOTO @第三道
+BREAK
+
+#IF
+CheckContainsText <$STR(S26)> 斩杀
+CheckContainsText <$STR(S$斗笠魔法)> 斩杀
+#ACT
+GOTO @第三道
+BREAK
+
+#OR
+EQUAL <$STR(S25)> <$STR(S$斗笠魔法)>
+EQUAL <$STR(S26)> <$STR(S$斗笠魔法)>
+#ACT
+GOTO @第三道
+BREAK
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 2
+CheckContainsText <$STR(S27)> 神秘属性
+LARGE N$成功率 0
+
+#ACT
+
+SOCKETABLEITEM 88 88 88 88 -1 2 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 2 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+INC U8 1
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+SendCenterMsg 252 242 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性③】获得『<$STR(S$斗笠魔法)>BUFF』 1 1
+GuildNoticeMsg 252 70 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性③】获得『<$STR(S$斗笠魔法)>BUFF』
+BREAK
+;-----------------------------------------
+[@第四道]
+#if
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV <$STR(N$开红条件)> 0
+
+#IF
+CHECKSOCKETABLEITEM -1 0 N29 S25
+CHECKSOCKETABLEITEM -1 1 N30 S26
+CHECKSOCKETABLEITEM -1 2 N31 S27
+#act
+
+#if
+large <$STR(N29)> 1303
+#act
+INC N$开红条件 1
+#if
+large <$STR(N30)> 1303
+#act
+INC N$开红条件 1
+#if
+large <$STR(N31)> 1303
+#act
+INC N$开红条件 1
+
+#IF
+equal N$开红条件 3
+#ACT
+goto @检测前三道
+#ELSEACT
+MESSAGEBOX 提　示：您的装备没有达到3红，无法解开第四道BUFF！
+BREAK
+
+
+[@检测前三道]
+#if
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S25
+MOV S26
+MOV S27
+#ELSEACT
+MESSAGEBOX 提　示：你自定义框没有放入冰与火【超脱】，无法抹去！
+BREAK
+
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 3
+CheckContainsText <$STR(S28)> 神秘属性
+equal U8 15
+#ACT
+MOV S$斗笠魔法
+MOV N$斗笠变量 0
+goto @必给四道
+
+
+#IF
+CHECKSOCKETABLEITEM -1 3 S24 S28
+#ACT
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+NOT CHECKDRILLHOLE -1 3
+#ACT
+DRILLHOLE 88 88 -1 88 88 3 88 1 88 88
+SOCKETABLEITEM 88 88 88 88 -1 3 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+MOV S$斗笠魔法
+MOV N$斗笠变量 0
+MOVR N$成功率 1 101
+MOVR N$斗笠几率 1 882
+#ELSEACT
+MESSAGEBOX 提　示：您的装备『神秘属性④』已解封！
+BREAK
+;----------------------------- 绿色BUFF
+
+#IF
+LARGE N$斗笠几率 0
+SMALL N$斗笠几率 101
+#ACT
+MOV N$斗笠变量 1290
+MOV S$斗笠魔法 初级伤害
+
+#IF
+LARGE N$斗笠几率 100
+SMALL N$斗笠几率 201
+#ACT
+MOV N$斗笠变量 1291
+MOV S$斗笠魔法 初级打宝
+
+#IF
+LARGE N$斗笠几率 200
+SMALL N$斗笠几率 301
+#ACT
+MOV N$斗笠变量 1292
+MOV S$斗笠魔法 初级斩杀
+
+#IF
+LARGE N$斗笠几率 300
+SMALL N$斗笠几率 401
+#ACT
+MOV N$斗笠变量 1293
+MOV S$斗笠魔法 复苏之风
+
+
+#IF
+LARGE N$斗笠几率 400
+SMALL N$斗笠几率 501
+#ACT
+MOV N$斗笠变量 1294
+MOV S$斗笠魔法 鬼魅重重
+
+#IF
+LARGE N$斗笠几率 500
+SMALL N$斗笠几率 601
+#ACT
+MOV N$斗笠变量 1295
+MOV S$斗笠魔法 泰坦之力
+
+#IF
+LARGE N$斗笠几率 600
+SMALL N$斗笠几率 701
+#ACT
+MOV N$斗笠变量 1296
+MOV S$斗笠魔法 毁灭之力
+
+;----------------------------- 黄色BUFF
+
+#IF
+LARGE N$斗笠几率 700
+SMALL N$斗笠几率 726
+#ACT
+MOV N$斗笠变量 1297
+MOV S$斗笠魔法 修罗之力
+
+
+#IF
+LARGE N$斗笠几率 725
+SMALL N$斗笠几率 751
+#ACT
+MOV N$斗笠变量 1298
+MOV S$斗笠魔法 高级伤害
+
+
+#IF
+LARGE N$斗笠几率 750
+SMALL N$斗笠几率 776
+#ACT
+MOV N$斗笠变量 1299
+MOV S$斗笠魔法 高级打宝
+
+#IF
+LARGE N$斗笠几率 775
+SMALL N$斗笠几率 801
+#ACT
+MOV N$斗笠变量 1300
+MOV S$斗笠魔法 高级斩杀
+
+#IF
+LARGE N$斗笠几率 800
+SMALL N$斗笠几率 826
+#ACT
+MOV N$斗笠变量 1301
+MOV S$斗笠魔法 荆棘之伤
+
+#IF
+LARGE N$斗笠几率 825
+SMALL N$斗笠几率 851
+#ACT
+MOV N$斗笠变量 1302
+MOV S$斗笠魔法 刺客诡道
+
+#IF
+LARGE N$斗笠几率 850
+SMALL N$斗笠几率 876
+#ACT
+MOV N$斗笠变量 1303
+MOV S$斗笠魔法 苍云虚弱
+
+;----------------------------- 红色BUFF
+
+#IF
+EQUAL N$斗笠几率 876
+#ACT
+MOV N$斗笠变量 1304
+MOV S$斗笠魔法 寒刀之力
+
+#IF
+EQUAL N$斗笠几率 877
+#ACT
+MOV N$斗笠变量 1305
+MOV S$斗笠魔法 超级伤害
+
+
+#IF
+EQUAL N$斗笠几率 878
+#ACT
+MOV N$斗笠变量 1306
+MOV S$斗笠魔法 超级打宝
+
+
+#IF
+EQUAL N$斗笠几率 879
+#ACT
+MOV N$斗笠变量 1307
+MOV S$斗笠魔法 超级斩杀
+
+#IF
+EQUAL N$斗笠几率 880
+#ACT
+MOV N$斗笠变量 1308
+MOV S$斗笠魔法 无尽束缚
+
+#IF
+EQUAL N$斗笠几率 881
+#ACT
+MOV N$斗笠变量 1309
+MOV S$斗笠魔法 无敌模式
+;----------------------------- 执行BUFF
+#IF
+CHECKSOCKETABLEITEM -1 0 S24 S25
+CHECKSOCKETABLEITEM -1 1 S24 S26
+CHECKSOCKETABLEITEM -1 3 S24 S27
+#ACT
+
+#IF
+CheckContainsText <$STR(S25)> 斩杀
+CheckContainsText <$STR(S$斗笠魔法)> 斩杀
+#ACT
+GOTO @第四道
+BREAK
+
+#IF
+CheckContainsText <$STR(S26)> 斩杀
+CheckContainsText <$STR(S$斗笠魔法)> 斩杀
+#ACT
+GOTO @第四道
+BREAK
+
+#OR
+EQUAL <$STR(S25)> <$STR(S$斗笠魔法)>
+EQUAL <$STR(S26)> <$STR(S$斗笠魔法)>
+#ACT
+GOTO @第四道
+BREAK
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 3
+LARGE N$成功率 0
+#ACT
+SOCKETABLEITEM 88 88 88 88 -1 3 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 3 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+INC U8 1
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+SendCenterMsg 252 342 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性④】获得『<$STR(S$斗笠魔法)>BUFF』 1 1
+GuildNoticeMsg 252 70 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性④】获得『<$STR(S$斗笠魔法)>BUFF』
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;===============================================================================
+
+[@重洗BUFF]
+#IF
+CHECKGamePoint < 288
+#ACT
+MESSAGEBOX 提　示：你没有[288点]钻石，无法重洗BUFF！
+BREAK
+
+#if
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S25
+MOV S26
+MOV S27
+MOVR N$魔法斗笠几率 1 101
+#ELSEACT
+MESSAGEBOX 提　示：你自定义框没有放入冰与火【超脱】，无法抹去！
+BREAK
+
+#IF
+CHECKSOCKETABLEITEM -1 0 S24 S25
+CHECKSOCKETABLEITEM -1 1 S24 S26
+CHECKSOCKETABLEITEM -1 2 S24 S27
+#ACT
+
+#IF
+CheckContainsText <$STR(S25)> 神秘属性
+CheckContainsText <$STR(S26)> 神秘属性
+CheckContainsText <$STR(S27)> 神秘属性
+#ACT
+MESSAGEBOX 提　示：您的装备，已拥有三条未解封的神秘BUFF
+BREAK
+
+;-----------------------------------------------------
+#IF
+SMALL N$魔法斗笠几率 51
+CHECKGamePoint > 287
+#ACT
+GamePoint - 288
+DRILLHOLE 88 88 -1 88 88 0 88 1 88 88
+DRILLHOLE 88 88 -1 88 88 1 88 0 88 88
+DRILLHOLE 88 88 -1 88 88 2 88 0 88 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 1287 88
+;SENDUPGRADEITEM
+MESSAGEBOX 提　示：您将〖冰与火【超脱】〗成功洗练出①条神秘BUFF
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+BREAK
+
+#IF
+LARGE N$魔法斗笠几率 50
+SMALL N$魔法斗笠几率 81
+CHECKGamePoint > 87
+#ACT
+GamePoint - 88
+DRILLHOLE 88 88 -1 88 88 0 88 1 88 88
+DRILLHOLE 88 88 -1 88 88 1 88 1 88 88
+DRILLHOLE 88 88 -1 88 88 2 88 0 88 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 1287 88
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 1288 88
+;SENDUPGRADEITEM
+MESSAGEBOX 提　示：您将〖冰与火【超脱】〗成功洗练出②条神秘BUFF
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+
+
+BREAK
+
+#IF
+LARGE N$魔法斗笠几率 80
+CHECKGamePoint > 287
+#ACT
+GamePoint - 288
+DRILLHOLE 88 88 -1 88 88 0 88 1 88 88
+DRILLHOLE 88 88 -1 88 88 1 88 1 88 88
+DRILLHOLE 88 88 -1 88 88 2 88 1 88 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 2 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 1287 88
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 1288 88
+SOCKETABLEITEM 88 88 88 88 -1 2 88 88 1289 88
+;SENDUPGRADEITEM
+MESSAGEBOX 提　示：您将〖冰与火【超脱】〗成功洗练出③条神秘BUFF
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+
+BREAK
+;===============================================================================
+
+
+
+
+
+
+
+
+
+[@抹去第一道]
+#if
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S25
+#ELSEACT
+MESSAGEBOX 提　示：你自定义框没有放入冰与火【超脱】，无法抹去！
+BREAK
+
+#IF
+CHECKDRILLHOLE -1 0
+#ELSEACT
+MESSAGEBOX 提　示：您的装备没有『神秘BUFF①』无法抹去！
+BREAK
+
+#IF
+CHECKSOCKETABLEITEM -1 0 S24 S25
+#ACT
+
+#IF
+CheckContainsText <$STR(S25)> 神秘属性
+#ACT
+MESSAGEBOX 提　示：『神秘属性①』状态：封印中　无需抹去！
+BREAK
+
+#IF
+CHECKGamePoint > 2888
+#ACT
+GamePoint - 2888
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 1287 88
+UpDateBoxItem 0
+MESSAGEBOX 提　示：您已成功将〖神秘BUFF①〗抹去！
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+
+
+BREAK
+#ELSEACT
+MESSAGEBOX 提　示：您没有[2888点]钻石无法抹去BUFF
+BREAK
+;---------------------------------------
+[@抹去第二道]
+#if
+#ACT
+SetUpgradeItem 0
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S26
+#ELSEACT
+MESSAGEBOX 提　示：您没有佩戴任何斗笠，无法抹去！
+BREAK
+
+#IF
+CHECKDRILLHOLE -1 1
+#ELSEACT
+MESSAGEBOX 提　示：您的装备没有『神秘BUFF②』无法抹去！
+BREAK
+
+#IF
+CHECKSOCKETABLEITEM -1 1 S24 S26
+#ACT
+
+#IF
+CheckContainsText <$STR(S26)> 神秘属性
+#ACT
+MESSAGEBOX 提　示：『神秘属性②』状态：封印中　无需抹去！
+BREAK
+
+
+#IF
+CHECKGamePoint > 2887
+#ACT
+GamePoint - 2888
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 1288 88
+UpDateBoxItem 0
+MESSAGEBOX 提　示：您已成功将〖神秘BUFF②〗抹去！
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+
+
+BREAK
+#ELSEACT
+MESSAGEBOX 提　示：您没有[2888点]钻石无法抹去BUFF
+BREAK
+;---------------------------------------
+[@抹去第三道]
+#if
+#ACT
+SetUpgradeItem 0
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S27
+#ELSEACT
+MESSAGEBOX 提　示：你自定义框没有放入冰与火【超脱】，无法抹去！
+BREAK
+
+#IF
+CHECKDRILLHOLE -1 2
+#ELSEACT
+MESSAGEBOX 提　示：您的装备没有『神秘BUFF③』无法抹去！
+BREAK
+
+#IF
+CHECKSOCKETABLEITEM -1 2 S24 S27
+#ACT
+
+#IF
+CheckContainsText <$STR(S27)> 神秘属性
+#ACT
+MESSAGEBOX 提　示：『神秘属性③』状态：封印中　无需抹去！
+BREAK
+
+#IF
+CHECKGamePoint > 2887
+#ACT
+GamePoint - 2888
+SOCKETABLEITEM 88 88 88 88 -1 2 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 2 88 88 1289 88
+UpDateBoxItem 0
+MESSAGEBOX 提　示：您已成功将〖神秘BUFF③〗抹去！
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+
+BREAK
+#ELSEACT
+MESSAGEBOX 提　示：您没有[2888点]钻石无法抹去BUFF
+BREAK
+
+
+[@抹去第四道]
+#if
+#ACT
+SetUpgradeItem 0
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+#ACT
+MOV S27
+#ELSEACT
+MESSAGEBOX 提　示：你自定义框没有放入冰与火【超脱】，无法抹去！
+BREAK
+
+#IF
+CHECKDRILLHOLE -1 3
+#ELSEACT
+MESSAGEBOX 提　示：您的装备没有『神秘BUFF④』无法抹去！
+BREAK
+
+#IF
+CHECKSOCKETABLEITEM -1 3 S24 S28
+#ACT
+
+#IF
+CheckContainsText <$STR(S28)> 神秘属性
+#ACT
+MESSAGEBOX 提　示：『神秘属性④』状态：封印中　无需抹去！
+BREAK
+
+#IF
+CHECKGamePoint > 2887
+#ACT
+GamePoint - 2888
+SOCKETABLEITEM 88 88 88 88 -1 3 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 3 88 88 1289 88
+UpDateBoxItem 0
+MESSAGEBOX 提　示：您已成功将〖神秘BUFF④〗抹去！
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+
+BREAK
+#ELSEACT
+MESSAGEBOX 提　示：您没有[2888点]钻石无法抹去BUFF
+BREAK
+
+[@必给一道]
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 0
+
+#ACT
+
+movr N$斗笠变量 1304 1310
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 0 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+MOV U8 0
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+SendCenterMsg 252 242 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性①】获得『一条红色BUFF』 1 1
+GuildNoticeMsg 252 70 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性①】获得『一条红色BUFF』
+BREAK
+
+[@必给二道]
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 1
+
+#ACT
+
+movr N$斗笠变量 1304 1310
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 1 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+MOV U8 0
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+SendCenterMsg 252 242 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性②】获得『一条红色BUFF』 1 1
+GuildNoticeMsg 252 70 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性②】获得『一条红色BUFF』
+BREAK
+
+[@必给三道]
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 2
+
+#ACT
+
+movr N$斗笠变量 1304 1310
+SOCKETABLEITEM 88 88 88 88 -1 2 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 2 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+MOV U8 0
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+SendCenterMsg 252 242 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性③】获得『一条红色BUFF』 1 1
+GuildNoticeMsg 252 70 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性③】获得『一条红色BUFF』
+BREAK
+
+[@必给四道]
+#IF
+NOT EQUAL <$BOXITEM[0].NAME>
+CHECKDRILLHOLE -1 3
+
+#ACT
+
+movr N$斗笠变量 1304 1310
+SOCKETABLEITEM 88 88 88 88 -1 3 88 88 0 88
+SOCKETABLEITEM 88 88 88 88 -1 3 88 88 <$STR(N$斗笠变量)> 88
+;SENDUPGRADEITEM
+MOV U8 0
+#CALL [\BUFF触发\勋章BUFF.txt] @自身勋章
+SendCenterMsg 252 242 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性④】获得『一条红色BUFF』 1 1
+GuildNoticeMsg 252 70 〖提示〗恭喜【<$USERNAME>】解开封印【神秘属性④】获得『一条红色BUFF』
+BREAK

@@ -1,0 +1,219 @@
+[@main]
+#IF
+#ACT
+#SAY
+\  \   \
+<>    < [切割晋级]/FCOLOR=253><IMG:91:6:-81:-4>\ \
+<>  <[请将你要升级的切割放入物品框中]/FCOLOR=70>   \ \ \
+<>                                    <升级需要材料：/FCOLOR=150><[神祈之泪]/FCOLOR=250>\ \
+<>                                    <升级需要元宝：/FCOLOR=150><0/FCOLOR=250>\ \  \  \
+
+<><注:材料所有怪物均可掉出，放入装备即可查看升级需求/FCOLOR=230>\  \
+<><ITEMBOX:0:6:239:45:-125:40:40:65:请放入你要升级的装备>
+
+
+
+
+[@ItemIntoBox0]
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[终极]
+#ACT
+ReturnBoxItem 0
+MESSAGEBOX 你的切割神器已经终极了,无法再升级了！
+break
+
+
+#OR
+EQUAL <$BOXITEM[0].NAME> 切割神器·[一阶]
+EQUAL <$BOXITEM[0].NAME> 切割神器·[二阶]
+EQUAL <$BOXITEM[0].NAME> 切割神器·[三阶]
+EQUAL <$BOXITEM[0].NAME> 切割神器·[四阶]
+EQUAL <$BOXITEM[0].NAME> 切割神器·[五阶]
+EQUAL <$BOXITEM[0].NAME> 切割神器·[六阶]
+EQUAL <$BOXITEM[0].NAME> 切割神器·[七阶]
+EQUAL <$BOXITEM[0].NAME> 切割神器·[八阶]
+EQUAL <$BOXITEM[0].NAME> 切割神器·[九阶]
+#ACT
+ReturnBoxItem 0
+MESSAGEBOX 该物品无法在此处升级！
+BREAK
+
+
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[十阶]
+#ACT
+MOV N$材料数量 200
+MOV N$元宝数量 500000
+MOV S$下级名字 切割神器·[超凡]
+MOV S$装备名字 <$BOXITEM[0].NAME>
+goto @合成说明
+BREAK
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[超凡]
+#ACT
+MOV N$材料数量 250
+MOV N$元宝数量 500000
+MOV S$下级名字 切割神器·[不朽]
+MOV S$装备名字 <$BOXITEM[0].NAME>
+goto @合成说明
+BREAK
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[不朽]
+#ACT
+MOV N$材料数量 300
+MOV N$元宝数量 500000
+MOV S$下级名字 切割神器·[星辰]
+MOV S$装备名字 <$BOXITEM[0].NAME>
+goto @合成说明
+BREAK
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[星辰]
+#ACT
+MOV N$材料数量 350
+MOV N$元宝数量 1000000
+MOV S$下级名字 切割神器·[龙啸]
+MOV S$装备名字 <$BOXITEM[0].NAME>
+goto @合成说明
+BREAK
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[龙啸]
+#ACT
+MOV N$材料数量 400
+MOV N$元宝数量 1000000
+MOV S$下级名字 切割神器·[无尽]
+MOV S$装备名字 <$BOXITEM[0].NAME>
+goto @合成说明
+BREAK
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[无尽]
+#ACT
+MOV N$材料数量 500
+MOV N$元宝数量 1000000
+MOV S$下级名字 切割神器·[末日]
+MOV S$装备名字 <$BOXITEM[0].NAME>
+goto @合成说明
+BREAK
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[末日]
+#ACT
+MOV N$材料数量 600
+MOV N$元宝数量 1000000
+MOV S$下级名字 切割神器·[最终]
+MOV S$装备名字 <$BOXITEM[0].NAME>
+goto @合成说明
+BREAK
+
+
+#IF
+EQUAL <$BOXITEM[0].NAME> 切割神器·[最终]
+#ACT
+MOV N$材料数量 888
+MOV N$元宝数量 5000000
+MOV N$钻石数量 3888
+MOV S$下级名字 切割神器·[终极]
+MOV S$装备名字 <$BOXITEM[0].NAME>
+goto @合成说明1
+BREAK
+
+
+[@合成说明1]
+#IF
+#ACT
+#SAY
+\  \   \
+<>    < [切割晋级]/FCOLOR=253><IMG:91:6:-81:-4>\ \
+<>  <[请将你要升级的切割放入物品框中]/FCOLOR=70>   \
+<>                                    <升级需要材料：/FCOLOR=150><神祈之泪*<$STR(N$材料数量)>/FCOLOR=250>\ \
+<>                                    <升级需要元宝：/FCOLOR=150><$STR(N$元宝数量)>\ \
+<>                                    <升级需要钻石：/FCOLOR=150><$STR(N$钻石数量)>\ \
+<>                                     <点击升级/@升级1>\  \
+
+<><注:材料所有怪物均可掉出，放入装备即可查看升级需求/FCOLOR=230>\  \
+<><ITEMBOX:0:6:239:45:-125:40:40:65:请放入你要升级的装备>
+
+
+
+
+
+
+[@合成说明]
+#IF
+#ACT
+#SAY
+\  \   \
+<>    < [切割晋级]/FCOLOR=253><IMG:91:6:-81:-4>\ \
+<>  <[请将你要升级的切割放入物品框中]/FCOLOR=70>   \ \ \
+<>                                    <升级需要材料：/FCOLOR=150><神祈之泪*<$STR(N$材料数量)>/FCOLOR=250>\ \
+<>                                    <升级需要元宝：/FCOLOR=150><$STR(N$元宝数量)>\ \
+<>                                     <点击升级/@升级>\  \
+
+<><注:材料所有怪物均可掉出，放入装备即可查看升级需求/FCOLOR=230>\  \
+<><ITEMBOX:0:6:239:45:-125:40:40:65:请放入你要升级的装备>
+
+
+
+
+
+
+
+[@升级1]
+#if
+CheckBoxItemCount 0 1
+#act
+#elseact
+MESSAGEBOX 不要把物品框的东西拿走！
+BREAK
+
+#IF
+checkitem 神祈之泪 <$STR(N$材料数量)>
+CHECKGAMEGOLD ? <$STR(N$元宝数量)>
+CHECKGAMEPOINT ? <$STR(N$钻石数量)>
+#ACT
+DELBOXITEM 0
+take 神祈之泪 <$STR(N$材料数量)>
+GAMEPOINT - <$STR(N$钻石数量)>
+GAMEGOLD - <$STR(N$元宝数量)>
+;GiveStateItem <$STR(S$下级名字)> 1 1 0 0 1 1 1 1
+GIVESTATEITEM <$STR(S$下级名字)> 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 恭喜您成功的把切割神器<$STR(S$装备名字)>升级为<$STR(S$下级名字)>
+goto @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料或灵符！
+BREAK
+
+
+
+
+
+[@升级]
+#if
+CheckBoxItemCount 0 1
+#act
+#elseact
+MESSAGEBOX 不要把物品框的东西拿走！
+BREAK
+
+#IF
+checkitem 神祈之泪 <$STR(N$材料数量)>
+CHECKGAMEGOLD ? <$STR(N$元宝数量)>
+#ACT
+DELBOXITEM 0
+take 神祈之泪 <$STR(N$材料数量)>
+GAMEGOLD - <$STR(N$元宝数量)>
+;GiveStateItem <$STR(S$下级名字)> 1 1 0 0 1 1 1 1
+GIVESTATEITEM <$STR(S$下级名字)> 1 1 1 0 0 1 1 1 0
+MESSAGEBOX 恭喜您成功的把切割神器<$STR(S$装备名字)>升级为<$STR(S$下级名字)>
+goto @main
+#elseact
+MESSAGEBOX 请检测是否有足够的材料或灵符！
+BREAK
+
+

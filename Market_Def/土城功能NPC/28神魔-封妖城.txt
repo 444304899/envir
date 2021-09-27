@@ -1,0 +1,1574 @@
+[@main]
+#if
+#act
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+
+
+#IF
+NOT CHECKTITLE 神魔·小成
+NOT CHECKTITLE 神魔·大成
+NOT CHECKTITLE 神魔·完满
+equal U25 5
+equal U26 5
+equal U27 5
+equal U28 5
+#act
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+CONFERTITLE 神魔·小成
+
+#IF
+NOT CHECKTITLE 神魔·小成
+NOT CHECKTITLE 神魔·大成
+NOT CHECKTITLE 神魔·完满
+equal U25 10
+equal U26 10
+equal U27 10
+equal U28 10
+#act
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+CONFERTITLE 神魔·大成
+
+#IF
+NOT CHECKTITLE 神魔·小成
+NOT CHECKTITLE 神魔·大成
+NOT CHECKTITLE 神魔·完满
+equal U25 20
+equal U26 20
+equal U27 20
+equal U28 20
+#act
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+CONFERTITLE 神魔·完满
+
+
+#if
+large U29 187
+#act
+#SAY
+\ \ \  \ \  \   \
+<>            <神魔之体.New~/FCOLOR=58> \ \
+<>             <修炼,把自己的变成神魔之体,大幅度提高各项伤害,获得超强属性!!/FCOLOR=87>\  \
+<>             <血脉之力/@升级1><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <生命上限 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u25)>/20)\
+<>             <物理攻击/@升级2><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <攻击伤害 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u26)>/20)\
+<>             <上古神力/@升级3><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <忽视防御 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u27)>/20)\
+<>             <物理免伤/@升级4><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <伤害减少 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u28)>/20)\  \
+
+<>             <失败188次之后，可使用钻石几率点满/FCOLOR=253><当前已点> {《<$STR(U29)>次／188》/FCOLOR=251}  <几率点满|253#称号属性：^230#累计点188次之后还未全部点满..^230#  可使用100钻石击，1%几率点满^242#      (当前总共升级<$STR(U29)>次)/@全满2>       <直接点满|253#称号属性：^230#累计点188次之后还未全部点满..^230#  即可使用2000金币全部满级^242#      (当前总共升级<$STR(U29)>次)/@全满>\ \
+<>             <1.血脉.攻击.神力.免伤.均达到05级获得称号:/FCOLOR=161> <[神魔·小成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^249#爆率提升30%^249#打怪伤害+10%^249#暴击伤害+3%/FCOLOR=70> \
+<>             <2.血脉.攻击.神力.免伤.均达到10级获得称号:/FCOLOR=161> <[神魔·大成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^249#爆率提升60%^249#打怪伤害+20%^249#暴击伤害+5%/FCOLOR=70> \
+<>             <3.血脉.攻击.神力.免伤.均达到20级获得称号:/FCOLOR=161> <[神魔·完满]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^249#爆率提升200%^249#打怪伤害+30%^249#暴击伤害+10%/FCOLOR=70> \
+
+<>             <神魔说明:/FCOLOR=249> <神魔几率50%，失败掉一级，点数配合好触发相应特殊称号，后期无暗藏！！/FCOLOR=249>\
+
+#if
+small u29 188
+#act
+#say
+\ \ \  \ \  \   \
+<>            <神魔之体.New~/FCOLOR=58> \ \
+<>             <修炼,把自己的变成神魔之体,大幅度提高各项伤害,获得超强属性!!/FCOLOR=87>\  \
+<>             <血脉之力/@升级1><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <生命上限 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u25)>/20)\
+<>             <物理攻击/@升级2><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <攻击伤害 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u26)>/20)\
+<>             <上古神力/@升级3><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <忽视防御 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u27)>/20)\
+<>             <物理免伤/@升级4><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <伤害减少 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u28)>/20)\  \
+
+<>             <失败188次之后，可使用钻石几率点满/FCOLOR=253> <当前已点>{《<$STR(U29)>次／188》/FCOLOR=251}              \ \
+<>             <1.血脉.攻击.神力.免伤.均达到05级获得称号:/FCOLOR=161> <[神魔·小成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^249#爆率提升30%^249#打怪伤害+10%^249#暴击伤害+3%/FCOLOR=70> \
+<>             <2.血脉.攻击.神力.免伤.均达到10级获得称号:/FCOLOR=161> <[神魔·大成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^249#爆率提升60%^249#打怪伤害+20%^249#暴击伤害+5%/FCOLOR=70> \
+<>             <3.血脉.攻击.神力.免伤.均达到20级获得称号:/FCOLOR=161> <[神魔·完满]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^249#爆率提升200%^249#打怪伤害+30%^249#暴击伤害+10%/FCOLOR=70> \
+
+<>             <神魔说明:/FCOLOR=249> <神魔几率50%，失败掉一级，点数配合好触发相应特殊称号，后期无暗藏！！/FCOLOR=249>\
+
+
+
+[@全满2]
+#IF
+large U29 187
+#ACT
+#ELSEACT
+MESSAGEBOX [提示]:累计失败188次之后才可使用此功能!!!!!!
+break
+#IF
+equal U25 20
+equal U26 20
+equal U27 20
+equal U28 20
+#act
+MESSAGEBOX 你的所有修炼已经全满了！
+BREAK
+#IF
+CHECKGAMEPOINT < 100
+#ACT
+MESSAGEBOX 错误\\你没有100钻石！
+BREAK
+
+#if
+CHECKGAMEPOINT > 99
+RANDOM 99
+LARGE n$几率点满次 200
+#act
+GAMEPOINT - 100
+MOV U25 20
+MOV U26 20
+MOV U27 20
+MOV U28 20
+DEPRIVETITLE 血脉之力Lv1
+DEPRIVETITLE 血脉之力Lv2
+DEPRIVETITLE 血脉之力Lv3
+DEPRIVETITLE 血脉之力Lv4
+DEPRIVETITLE 血脉之力Lv5
+DEPRIVETITLE 血脉之力Lv6
+DEPRIVETITLE 血脉之力Lv7
+DEPRIVETITLE 血脉之力Lv8
+DEPRIVETITLE 血脉之力Lv9
+DEPRIVETITLE 血脉之力Lv10
+DEPRIVETITLE 血脉之力Lv11
+DEPRIVETITLE 血脉之力Lv12
+DEPRIVETITLE 血脉之力Lv13
+DEPRIVETITLE 血脉之力Lv14
+DEPRIVETITLE 血脉之力Lv15
+DEPRIVETITLE 血脉之力Lv16
+DEPRIVETITLE 血脉之力Lv17
+DEPRIVETITLE 血脉之力Lv18
+DEPRIVETITLE 血脉之力Lv19
+DEPRIVETITLE 血脉之力Lv20
+DEPRIVETITLE 物理攻击Lv1
+DEPRIVETITLE 物理攻击Lv2
+DEPRIVETITLE 物理攻击Lv3
+DEPRIVETITLE 物理攻击Lv4
+DEPRIVETITLE 物理攻击Lv5
+DEPRIVETITLE 物理攻击Lv6
+DEPRIVETITLE 物理攻击Lv7
+DEPRIVETITLE 物理攻击Lv8
+DEPRIVETITLE 物理攻击Lv9
+DEPRIVETITLE 物理攻击Lv10
+DEPRIVETITLE 物理攻击Lv11
+DEPRIVETITLE 物理攻击Lv12
+DEPRIVETITLE 物理攻击Lv13
+DEPRIVETITLE 物理攻击Lv14
+DEPRIVETITLE 物理攻击Lv15
+DEPRIVETITLE 物理攻击Lv16
+DEPRIVETITLE 物理攻击Lv17
+DEPRIVETITLE 物理攻击Lv18
+DEPRIVETITLE 物理攻击Lv19
+DEPRIVETITLE 物理攻击Lv20
+DEPRIVETITLE 上古神力Lv1
+DEPRIVETITLE 上古神力Lv2
+DEPRIVETITLE 上古神力Lv3
+DEPRIVETITLE 上古神力Lv4
+DEPRIVETITLE 上古神力Lv5
+DEPRIVETITLE 上古神力Lv6
+DEPRIVETITLE 上古神力Lv7
+DEPRIVETITLE 上古神力Lv8
+DEPRIVETITLE 上古神力Lv9
+DEPRIVETITLE 上古神力Lv10
+DEPRIVETITLE 上古神力Lv11
+DEPRIVETITLE 上古神力Lv12
+DEPRIVETITLE 上古神力Lv13
+DEPRIVETITLE 上古神力Lv14
+DEPRIVETITLE 上古神力Lv15
+DEPRIVETITLE 上古神力Lv16
+DEPRIVETITLE 上古神力Lv17
+DEPRIVETITLE 上古神力Lv18
+DEPRIVETITLE 上古神力Lv19
+DEPRIVETITLE 上古神力Lv20
+DEPRIVETITLE 物理免伤Lv1
+DEPRIVETITLE 物理免伤Lv2
+DEPRIVETITLE 物理免伤Lv3
+DEPRIVETITLE 物理免伤Lv4
+DEPRIVETITLE 物理免伤Lv5
+DEPRIVETITLE 物理免伤Lv6
+DEPRIVETITLE 物理免伤Lv7
+DEPRIVETITLE 物理免伤Lv8
+DEPRIVETITLE 物理免伤Lv9
+DEPRIVETITLE 物理免伤Lv10
+DEPRIVETITLE 物理免伤Lv11
+DEPRIVETITLE 物理免伤Lv12
+DEPRIVETITLE 物理免伤Lv13
+DEPRIVETITLE 物理免伤Lv14
+DEPRIVETITLE 物理免伤Lv15
+DEPRIVETITLE 物理免伤Lv16
+DEPRIVETITLE 物理免伤Lv17
+DEPRIVETITLE 物理免伤Lv18
+DEPRIVETITLE 物理免伤Lv19
+DEPRIVETITLE 物理免伤Lv20
+
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+CONFERTITLE 神魔·完满
+CONFERTITLE 血脉之力Lv20
+CONFERTITLE 物理攻击Lv20
+CONFERTITLE 上古神力Lv20
+CONFERTITLE 物理免伤Lv20
+MESSAGEBOX 你的所有修炼已经全满了！
+BREAK
+#ELSEACT
+mov n$几率点满次 <$str(t2)>
+INC n$几率点满次 1
+MOV T2 <$str(n$几率点满次)>
+GAMEPOINT - 100
+MESSAGEBOX 运气不佳，失败了。！
+
+
+[@全满]
+#IF
+large U29 187
+#ACT
+#ELSEACT
+MESSAGEBOX [提示]:累计失败188次之后才可使用此功能!!!!!!
+break
+
+
+#IF
+equal U25 20
+equal U26 20
+equal U27 20
+equal U28 20
+#act
+MESSAGEBOX 你的所有修炼已经全满了！
+BREAK
+
+#if
+CHECKGOLD 2000
+#act
+TAKE 金币 2000
+MOV U25 20
+MOV U26 20
+MOV U27 20
+MOV U28 20
+DEPRIVETITLE 血脉之力Lv1
+DEPRIVETITLE 血脉之力Lv2
+DEPRIVETITLE 血脉之力Lv3
+DEPRIVETITLE 血脉之力Lv4
+DEPRIVETITLE 血脉之力Lv5
+DEPRIVETITLE 血脉之力Lv6
+DEPRIVETITLE 血脉之力Lv7
+DEPRIVETITLE 血脉之力Lv8
+DEPRIVETITLE 血脉之力Lv9
+DEPRIVETITLE 血脉之力Lv10
+DEPRIVETITLE 血脉之力Lv11
+DEPRIVETITLE 血脉之力Lv12
+DEPRIVETITLE 血脉之力Lv13
+DEPRIVETITLE 血脉之力Lv14
+DEPRIVETITLE 血脉之力Lv15
+DEPRIVETITLE 血脉之力Lv16
+DEPRIVETITLE 血脉之力Lv17
+DEPRIVETITLE 血脉之力Lv18
+DEPRIVETITLE 血脉之力Lv19
+DEPRIVETITLE 血脉之力Lv20
+DEPRIVETITLE 物理攻击Lv1
+DEPRIVETITLE 物理攻击Lv2
+DEPRIVETITLE 物理攻击Lv3
+DEPRIVETITLE 物理攻击Lv4
+DEPRIVETITLE 物理攻击Lv5
+DEPRIVETITLE 物理攻击Lv6
+DEPRIVETITLE 物理攻击Lv7
+DEPRIVETITLE 物理攻击Lv8
+DEPRIVETITLE 物理攻击Lv9
+DEPRIVETITLE 物理攻击Lv10
+DEPRIVETITLE 物理攻击Lv11
+DEPRIVETITLE 物理攻击Lv12
+DEPRIVETITLE 物理攻击Lv13
+DEPRIVETITLE 物理攻击Lv14
+DEPRIVETITLE 物理攻击Lv15
+DEPRIVETITLE 物理攻击Lv16
+DEPRIVETITLE 物理攻击Lv17
+DEPRIVETITLE 物理攻击Lv18
+DEPRIVETITLE 物理攻击Lv19
+DEPRIVETITLE 物理攻击Lv20
+DEPRIVETITLE 上古神力Lv1
+DEPRIVETITLE 上古神力Lv2
+DEPRIVETITLE 上古神力Lv3
+DEPRIVETITLE 上古神力Lv4
+DEPRIVETITLE 上古神力Lv5
+DEPRIVETITLE 上古神力Lv6
+DEPRIVETITLE 上古神力Lv7
+DEPRIVETITLE 上古神力Lv8
+DEPRIVETITLE 上古神力Lv9
+DEPRIVETITLE 上古神力Lv10
+DEPRIVETITLE 上古神力Lv11
+DEPRIVETITLE 上古神力Lv12
+DEPRIVETITLE 上古神力Lv13
+DEPRIVETITLE 上古神力Lv14
+DEPRIVETITLE 上古神力Lv15
+DEPRIVETITLE 上古神力Lv16
+DEPRIVETITLE 上古神力Lv17
+DEPRIVETITLE 上古神力Lv18
+DEPRIVETITLE 上古神力Lv19
+DEPRIVETITLE 上古神力Lv20
+DEPRIVETITLE 物理免伤Lv1
+DEPRIVETITLE 物理免伤Lv2
+DEPRIVETITLE 物理免伤Lv3
+DEPRIVETITLE 物理免伤Lv4
+DEPRIVETITLE 物理免伤Lv5
+DEPRIVETITLE 物理免伤Lv6
+DEPRIVETITLE 物理免伤Lv7
+DEPRIVETITLE 物理免伤Lv8
+DEPRIVETITLE 物理免伤Lv9
+DEPRIVETITLE 物理免伤Lv10
+DEPRIVETITLE 物理免伤Lv11
+DEPRIVETITLE 物理免伤Lv12
+DEPRIVETITLE 物理免伤Lv13
+DEPRIVETITLE 物理免伤Lv14
+DEPRIVETITLE 物理免伤Lv15
+DEPRIVETITLE 物理免伤Lv16
+DEPRIVETITLE 物理免伤Lv17
+DEPRIVETITLE 物理免伤Lv18
+DEPRIVETITLE 物理免伤Lv19
+DEPRIVETITLE 物理免伤Lv20
+
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+CONFERTITLE 神魔·完满
+CONFERTITLE 血脉之力Lv20
+CONFERTITLE 物理攻击Lv20
+CONFERTITLE 上古神力Lv20
+CONFERTITLE 物理免伤Lv20
+#act
+MESSAGEBOX 你的所有修炼已经全满了！
+BREAK
+#ELSEACT
+MESSAGEBOX 错误\\你没有2000金币！
+BREAK
+
+
+[@升级1]
+#IF
+equal U25 20
+CHECKTITLE 血脉之力Lv20
+#act
+MESSAGEBOX 你的血脉之力已经是最高境界了！
+BREAK
+
+#IF
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+#act
+#ELSEACT
+MESSAGEBOX 错误\\①你没有50000元宝+1个云顶结晶！
+BREAK
+
+
+#IF
+equal U25 19
+CHECKTITLE 血脉之力Lv19
+#act
+mov S$成功给予名称 血脉之力Lv20
+mov S$扣除称号名称 血脉之力Lv19
+mov S$失败给予名称 血脉之力Lv18
+mov N$成功变量数字 20
+mov N$检测变量数字 19
+mov N$失败变量数字 18
+mov N$成功几率数字 10
+
+#IF
+equal U25 18
+CHECKTITLE 血脉之力Lv18
+#act
+mov S$成功给予名称 血脉之力Lv19
+mov S$扣除称号名称 血脉之力Lv18
+mov S$失败给予名称 血脉之力Lv17
+mov N$成功变量数字 19
+mov N$检测变量数字 18
+mov N$失败变量数字 17
+mov N$成功几率数字 6
+
+#IF
+equal U25 17
+CHECKTITLE 血脉之力Lv17
+#act
+mov S$成功给予名称 血脉之力Lv18
+mov S$扣除称号名称 血脉之力Lv17
+mov S$失败给予名称 血脉之力Lv16
+mov N$成功变量数字 18
+mov N$检测变量数字 17
+mov N$失败变量数字 16
+mov N$成功几率数字 6
+
+#IF
+equal U25 16
+CHECKTITLE 血脉之力Lv16
+#act
+mov S$成功给予名称 血脉之力Lv17
+mov S$扣除称号名称 血脉之力Lv16
+mov S$失败给予名称 血脉之力Lv15
+mov N$成功变量数字 17
+mov N$检测变量数字 16
+mov N$失败变量数字 15
+mov N$成功几率数字 6
+
+#IF
+equal U25 15
+CHECKTITLE 血脉之力Lv15
+#act
+mov S$成功给予名称 血脉之力Lv16
+mov S$扣除称号名称 血脉之力Lv15
+mov S$失败给予名称 血脉之力Lv14
+mov N$成功变量数字 16
+mov N$检测变量数字 15
+mov N$失败变量数字 14
+mov N$成功几率数字 6
+
+#IF
+equal U25 14
+CHECKTITLE 血脉之力Lv14
+#act
+mov S$成功给予名称 血脉之力Lv15
+mov S$扣除称号名称 血脉之力Lv14
+mov S$失败给予名称 血脉之力Lv13
+mov N$成功变量数字 15
+mov N$检测变量数字 14
+mov N$失败变量数字 13
+mov N$成功几率数字 6
+
+#IF
+equal U25 13
+CHECKTITLE 血脉之力Lv13
+#act
+mov S$成功给予名称 血脉之力Lv14
+mov S$扣除称号名称 血脉之力Lv13
+mov S$失败给予名称 血脉之力Lv12
+mov N$成功变量数字 14
+mov N$检测变量数字 13
+mov N$失败变量数字 12
+mov N$成功几率数字 6
+
+#IF
+equal U25 12
+CHECKTITLE 血脉之力Lv12
+#act
+mov S$成功给予名称 血脉之力Lv13
+mov S$扣除称号名称 血脉之力Lv12
+mov S$失败给予名称 血脉之力Lv11
+mov N$成功变量数字 13
+mov N$检测变量数字 12
+mov N$失败变量数字 11
+mov N$成功几率数字 6
+
+#IF
+equal U25 11
+CHECKTITLE 血脉之力Lv11
+#act
+mov S$成功给予名称 血脉之力Lv12
+mov S$扣除称号名称 血脉之力Lv11
+mov S$失败给予名称 血脉之力Lv10
+mov N$成功变量数字 12
+mov N$检测变量数字 11
+mov N$失败变量数字 10
+mov N$成功几率数字 6
+
+
+#IF
+equal U25 10
+CHECKTITLE 血脉之力Lv10
+#act
+mov S$成功给予名称 血脉之力Lv11
+mov S$扣除称号名称 血脉之力Lv10
+mov S$失败给予名称 血脉之力Lv9
+mov N$成功变量数字 11
+mov N$检测变量数字 10
+mov N$失败变量数字 9
+mov N$成功几率数字 6
+
+
+
+#IF
+equal U25 9
+CHECKTITLE 血脉之力Lv9
+#act
+mov S$成功给予名称 血脉之力Lv10
+mov S$扣除称号名称 血脉之力Lv9
+mov S$失败给予名称 血脉之力Lv8
+mov N$成功变量数字 10
+mov N$检测变量数字 9
+mov N$失败变量数字 8
+mov N$成功几率数字 5
+
+
+#IF
+equal U25 8
+CHECKTITLE 血脉之力Lv8
+#act
+mov S$成功给予名称 血脉之力Lv9
+mov S$扣除称号名称 血脉之力Lv8
+mov S$失败给予名称 血脉之力Lv7
+mov N$成功变量数字 9
+mov N$检测变量数字 8
+mov N$失败变量数字 7
+mov N$成功几率数字 2
+
+
+#IF
+equal U25 7
+CHECKTITLE 血脉之力Lv7
+#act
+mov S$成功给予名称 血脉之力Lv8
+mov S$扣除称号名称 血脉之力Lv7
+mov S$失败给予名称 血脉之力Lv6
+mov N$成功变量数字 8
+mov N$检测变量数字 7
+mov N$失败变量数字 6
+mov N$成功几率数字 2
+
+
+#IF
+equal U25 6
+CHECKTITLE 血脉之力Lv6
+#act
+mov S$成功给予名称 血脉之力Lv7
+mov S$扣除称号名称 血脉之力Lv6
+mov S$失败给予名称 血脉之力Lv5
+mov N$成功变量数字 7
+mov N$检测变量数字 6
+mov N$失败变量数字 5
+mov N$成功几率数字 2
+
+
+#IF
+equal U25 5
+CHECKTITLE 血脉之力Lv5
+#act
+mov S$成功给予名称 血脉之力Lv6
+mov S$扣除称号名称 血脉之力Lv5
+mov S$失败给予名称 血脉之力Lv4
+mov N$成功变量数字 6
+mov N$检测变量数字 5
+mov N$失败变量数字 4
+mov N$成功几率数字 2
+
+
+#IF
+equal U25 4
+CHECKTITLE 血脉之力Lv4
+#act
+mov S$成功给予名称 血脉之力Lv5
+mov S$扣除称号名称 血脉之力Lv4
+mov S$失败给予名称 血脉之力Lv3
+mov N$成功变量数字 5
+mov N$检测变量数字 4
+mov N$失败变量数字 3
+mov N$成功几率数字 2
+
+
+#IF
+equal U25 3
+CHECKTITLE 血脉之力Lv3
+#act
+mov S$成功给予名称 血脉之力Lv4
+mov S$扣除称号名称 血脉之力Lv3
+mov S$失败给予名称 血脉之力Lv2
+mov N$成功变量数字 4
+mov N$检测变量数字 3
+mov N$失败变量数字 2
+mov N$成功几率数字 2
+
+
+#IF
+equal U25 2
+CHECKTITLE 血脉之力Lv2
+#act
+mov S$成功给予名称 血脉之力Lv3
+mov S$扣除称号名称 血脉之力Lv2
+mov S$失败给予名称 血脉之力Lv1
+mov N$成功变量数字 3
+mov N$检测变量数字 2
+mov N$失败变量数字 1
+mov N$成功几率数字 2
+
+#IF
+equal U25 1
+CHECKTITLE 血脉之力Lv1
+#act
+mov S$成功给予名称 血脉之力Lv2
+mov S$扣除称号名称 血脉之力Lv1
+mov N$成功变量数字 2
+mov N$检测变量数字 1
+mov N$失败变量数字 0
+mov N$成功几率数字 2
+
+
+#IF
+equal U25 0
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 10000
+#act
+MOV U25 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+CONFERTITLE 血脉之力Lv1
+INC U29 1
+goto @main
+MESSAGEBOX 恭喜你炼成血脉之力Lv1成功！！
+break
+
+
+
+
+
+
+
+#IF
+equal U25 <$str(N$检测变量数字)>
+random <$str(N$成功几率数字)>
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+CHECKTITLE <$str(S$扣除称号名称)>
+#act
+INC U29 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+DEPRIVETITLE <$str(S$扣除称号名称)>
+CONFERTITLE <$str(S$成功给予名称)>
+MOV U25 <$str(N$成功变量数字)>
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+MESSAGEBOX 恭喜你炼成<$str(S$成功给予名称)>成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[<$str(S$成功给予名称)>]
+GOTO @main
+#ELSEACT
+GAMEGOLD - 50000
+take 云顶结晶 1
+DEPRIVETITLE <$str(S$扣除称号名称)>
+CONFERTITLE <$str(S$失败给予名称)>
+MOV U25 <$str(N$失败变量数字)>
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+INC U29 1
+MESSAGEBOX 修炼失败等级降低一级！！
+GOTO @main
+BREAK
+
+
+[@升级2]
+#IF
+equal U26 20
+CHECKTITLE 物理攻击Lv20
+#act
+MESSAGEBOX 你的物理攻击已经是最高境界了！
+BREAK
+
+#IF
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+#act
+#ELSEACT
+MESSAGEBOX 你没有50000元宝+1个云顶结晶！
+BREAK
+
+
+#IF
+equal U26 19
+CHECKTITLE 物理攻击Lv19
+#act
+mov S$成功给予名称 物理攻击Lv20
+mov S$扣除称号名称 物理攻击Lv19
+mov S$失败给予名称 物理攻击Lv18
+mov N$成功变量数字 20
+mov N$检测变量数字 19
+mov N$失败变量数字 18
+mov N$成功几率数字 10
+
+#IF
+equal U26 18
+CHECKTITLE 物理攻击Lv18
+#act
+mov S$成功给予名称 物理攻击Lv19
+mov S$扣除称号名称 物理攻击Lv18
+mov S$失败给予名称 物理攻击Lv17
+mov N$成功变量数字 19
+mov N$检测变量数字 18
+mov N$失败变量数字 17
+mov N$成功几率数字 6
+
+#IF
+equal U26 17
+CHECKTITLE 物理攻击Lv17
+#act
+mov S$成功给予名称 物理攻击Lv18
+mov S$扣除称号名称 物理攻击Lv17
+mov S$失败给予名称 物理攻击Lv16
+mov N$成功变量数字 18
+mov N$检测变量数字 17
+mov N$失败变量数字 16
+mov N$成功几率数字 6
+
+#IF
+equal U26 16
+CHECKTITLE 物理攻击Lv16
+#act
+mov S$成功给予名称 物理攻击Lv17
+mov S$扣除称号名称 物理攻击Lv16
+mov S$失败给予名称 物理攻击Lv15
+mov N$成功变量数字 17
+mov N$检测变量数字 16
+mov N$失败变量数字 15
+mov N$成功几率数字 6
+
+#IF
+equal U26 15
+CHECKTITLE 物理攻击Lv15
+#act
+mov S$成功给予名称 物理攻击Lv16
+mov S$扣除称号名称 物理攻击Lv15
+mov S$失败给予名称 物理攻击Lv14
+mov N$成功变量数字 16
+mov N$检测变量数字 15
+mov N$失败变量数字 14
+mov N$成功几率数字 6
+
+#IF
+equal U26 14
+CHECKTITLE 物理攻击Lv14
+#act
+mov S$成功给予名称 物理攻击Lv15
+mov S$扣除称号名称 物理攻击Lv14
+mov S$失败给予名称 物理攻击Lv13
+mov N$成功变量数字 15
+mov N$检测变量数字 14
+mov N$失败变量数字 13
+mov N$成功几率数字 6
+
+#IF
+equal U26 13
+CHECKTITLE 物理攻击Lv13
+#act
+mov S$成功给予名称 物理攻击Lv14
+mov S$扣除称号名称 物理攻击Lv13
+mov S$失败给予名称 物理攻击Lv12
+mov N$成功变量数字 14
+mov N$检测变量数字 13
+mov N$失败变量数字 12
+mov N$成功几率数字 5
+
+#IF
+equal U26 12
+CHECKTITLE 物理攻击Lv12
+#act
+mov S$成功给予名称 物理攻击Lv13
+mov S$扣除称号名称 物理攻击Lv12
+mov S$失败给予名称 物理攻击Lv11
+mov N$成功变量数字 13
+mov N$检测变量数字 12
+mov N$失败变量数字 11
+mov N$成功几率数字 5
+
+#IF
+equal U26 11
+CHECKTITLE 物理攻击Lv11
+#act
+mov S$成功给予名称 物理攻击Lv12
+mov S$扣除称号名称 物理攻击Lv11
+mov S$失败给予名称 物理攻击Lv10
+mov N$成功变量数字 12
+mov N$检测变量数字 11
+mov N$失败变量数字 10
+mov N$成功几率数字 5
+
+
+#IF
+equal U26 10
+CHECKTITLE 物理攻击Lv10
+#act
+mov S$成功给予名称 物理攻击Lv11
+mov S$扣除称号名称 物理攻击Lv10
+mov S$失败给予名称 物理攻击Lv9
+mov N$成功变量数字 11
+mov N$检测变量数字 10
+mov N$失败变量数字 9
+mov N$成功几率数字 3
+
+
+
+#IF
+equal U26 9
+CHECKTITLE 物理攻击Lv9
+#act
+mov S$成功给予名称 物理攻击Lv10
+mov S$扣除称号名称 物理攻击Lv9
+mov S$失败给予名称 物理攻击Lv8
+mov N$成功变量数字 10
+mov N$检测变量数字 9
+mov N$失败变量数字 8
+mov N$成功几率数字 3
+
+
+#IF
+equal U26 8
+CHECKTITLE 物理攻击Lv8
+#act
+mov S$成功给予名称 物理攻击Lv9
+mov S$扣除称号名称 物理攻击Lv8
+mov S$失败给予名称 物理攻击Lv7
+mov N$成功变量数字 9
+mov N$检测变量数字 8
+mov N$失败变量数字 7
+mov N$成功几率数字 2
+
+
+#IF
+equal U26 7
+CHECKTITLE 物理攻击Lv7
+#act
+mov S$成功给予名称 物理攻击Lv8
+mov S$扣除称号名称 物理攻击Lv7
+mov S$失败给予名称 物理攻击Lv6
+mov N$成功变量数字 8
+mov N$检测变量数字 7
+mov N$失败变量数字 6
+mov N$成功几率数字 2
+
+
+#IF
+equal U26 6
+CHECKTITLE 物理攻击Lv6
+#act
+mov S$成功给予名称 物理攻击Lv7
+mov S$扣除称号名称 物理攻击Lv6
+mov S$失败给予名称 物理攻击Lv5
+mov N$成功变量数字 7
+mov N$检测变量数字 6
+mov N$失败变量数字 5
+mov N$成功几率数字 2
+
+
+#IF
+equal U26 5
+CHECKTITLE 物理攻击Lv5
+#act
+mov S$成功给予名称 物理攻击Lv6
+mov S$扣除称号名称 物理攻击Lv5
+mov S$失败给予名称 物理攻击Lv4
+mov N$成功变量数字 6
+mov N$检测变量数字 5
+mov N$失败变量数字 4
+mov N$成功几率数字 2
+
+
+#IF
+equal U26 4
+CHECKTITLE 物理攻击Lv4
+#act
+mov S$成功给予名称 物理攻击Lv5
+mov S$扣除称号名称 物理攻击Lv4
+mov S$失败给予名称 物理攻击Lv3
+mov N$成功变量数字 5
+mov N$检测变量数字 4
+mov N$失败变量数字 3
+mov N$成功几率数字 2
+
+
+#IF
+equal U26 3
+CHECKTITLE 物理攻击Lv3
+#act
+mov S$成功给予名称 物理攻击Lv4
+mov S$扣除称号名称 物理攻击Lv3
+mov S$失败给予名称 物理攻击Lv2
+mov N$成功变量数字 4
+mov N$检测变量数字 3
+mov N$失败变量数字 2
+mov N$成功几率数字 2
+
+
+#IF
+equal U26 2
+CHECKTITLE 物理攻击Lv2
+#act
+mov S$成功给予名称 物理攻击Lv3
+mov S$扣除称号名称 物理攻击Lv2
+mov S$失败给予名称 物理攻击Lv1
+mov N$成功变量数字 3
+mov N$检测变量数字 2
+mov N$失败变量数字 1
+mov N$成功几率数字 2
+
+#IF
+equal U26 1
+CHECKTITLE 物理攻击Lv1
+#act
+mov S$成功给予名称 物理攻击Lv2
+mov S$扣除称号名称 物理攻击Lv1
+mov N$成功变量数字 2
+mov N$检测变量数字 1
+mov N$失败变量数字 0
+mov N$成功几率数字 2
+
+#IF
+equal U26 0
+checkitem 云顶结晶 10
+CHECKGAMEGOLD ? 50000
+#act
+MOV U26 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+CONFERTITLE 物理攻击Lv1
+INC U29 1
+goto @main
+MESSAGEBOX 恭喜你炼成物理攻击Lv1成功！！
+break
+
+
+
+
+#IF
+equal U26 <$str(N$检测变量数字)>
+random <$str(N$成功几率数字)>
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+CHECKTITLE <$str(S$扣除称号名称)>
+#act
+INC U29 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+DEPRIVETITLE <$str(S$扣除称号名称)>
+CONFERTITLE <$str(S$成功给予名称)>
+MOV U26 <$str(N$成功变量数字)>
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+MESSAGEBOX 恭喜你炼成<$str(S$成功给予名称)>成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[<$str(S$成功给予名称)>]
+GOTO @main
+#ELSEACT
+GAMEGOLD - 50000
+take 云顶结晶 1
+DEPRIVETITLE <$str(S$扣除称号名称)>
+CONFERTITLE <$str(S$失败给予名称)>
+MOV U26 <$str(N$失败变量数字)>
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+INC U29 1
+MESSAGEBOX 修炼失败等级降低一级！！
+GOTO @main
+BREAK
+
+[@升级3]
+#IF
+equal U27 20
+CHECKTITLE 上古神力Lv20
+#act
+MESSAGEBOX 你的上古神力已经是最高境界了！
+BREAK
+
+#IF
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+#act
+#ELSEACT
+MESSAGEBOX 你没有50000元宝+1个云顶结晶！
+BREAK
+
+
+#IF
+equal U27 19
+CHECKTITLE 上古神力Lv19
+#act
+mov S$成功给予名称 上古神力Lv20
+mov S$扣除称号名称 上古神力Lv19
+mov S$失败给予名称 上古神力Lv18
+mov N$成功变量数字 20
+mov N$检测变量数字 19
+mov N$失败变量数字 18
+mov N$成功几率数字 10
+
+#IF
+equal U27 18
+CHECKTITLE 上古神力Lv18
+#act
+mov S$成功给予名称 上古神力Lv19
+mov S$扣除称号名称 上古神力Lv18
+mov S$失败给予名称 上古神力Lv17
+mov N$成功变量数字 19
+mov N$检测变量数字 18
+mov N$失败变量数字 17
+mov N$成功几率数字 6
+
+#IF
+equal U27 17
+CHECKTITLE 上古神力Lv17
+#act
+mov S$成功给予名称 上古神力Lv18
+mov S$扣除称号名称 上古神力Lv17
+mov S$失败给予名称 上古神力Lv16
+mov N$成功变量数字 18
+mov N$检测变量数字 17
+mov N$失败变量数字 16
+mov N$成功几率数字 6
+
+#IF
+equal U27 16
+CHECKTITLE 上古神力Lv16
+#act
+mov S$成功给予名称 上古神力Lv17
+mov S$扣除称号名称 上古神力Lv16
+mov S$失败给予名称 上古神力Lv15
+mov N$成功变量数字 17
+mov N$检测变量数字 16
+mov N$失败变量数字 15
+mov N$成功几率数字 6
+
+#IF
+equal U27 15
+CHECKTITLE 上古神力Lv15
+#act
+mov S$成功给予名称 上古神力Lv16
+mov S$扣除称号名称 上古神力Lv15
+mov S$失败给予名称 上古神力Lv14
+mov N$成功变量数字 16
+mov N$检测变量数字 15
+mov N$失败变量数字 14
+mov N$成功几率数字 6
+
+#IF
+equal U27 14
+CHECKTITLE 上古神力Lv14
+#act
+mov S$成功给予名称 上古神力Lv15
+mov S$扣除称号名称 上古神力Lv14
+mov S$失败给予名称 上古神力Lv13
+mov N$成功变量数字 15
+mov N$检测变量数字 14
+mov N$失败变量数字 13
+mov N$成功几率数字 6
+
+#IF
+equal U27 13
+CHECKTITLE 上古神力Lv13
+#act
+mov S$成功给予名称 上古神力Lv14
+mov S$扣除称号名称 上古神力Lv13
+mov S$失败给予名称 上古神力Lv12
+mov N$成功变量数字 14
+mov N$检测变量数字 13
+mov N$失败变量数字 12
+mov N$成功几率数字 6
+
+#IF
+equal U27 12
+CHECKTITLE 上古神力Lv12
+#act
+mov S$成功给予名称 上古神力Lv13
+mov S$扣除称号名称 上古神力Lv12
+mov S$失败给予名称 上古神力Lv11
+mov N$成功变量数字 13
+mov N$检测变量数字 12
+mov N$失败变量数字 11
+mov N$成功几率数字 6
+
+#IF
+equal U27 11
+CHECKTITLE 上古神力Lv11
+#act
+mov S$成功给予名称 上古神力Lv12
+mov S$扣除称号名称 上古神力Lv11
+mov S$失败给予名称 上古神力Lv10
+mov N$成功变量数字 12
+mov N$检测变量数字 11
+mov N$失败变量数字 10
+mov N$成功几率数字 6
+
+
+#IF
+equal U27 10
+CHECKTITLE 上古神力Lv10
+#act
+mov S$成功给予名称 上古神力Lv11
+mov S$扣除称号名称 上古神力Lv10
+mov S$失败给予名称 上古神力Lv9
+mov N$成功变量数字 11
+mov N$检测变量数字 10
+mov N$失败变量数字 9
+mov N$成功几率数字 5
+
+
+
+#IF
+equal U27 9
+CHECKTITLE 上古神力Lv9
+#act
+mov S$成功给予名称 上古神力Lv10
+mov S$扣除称号名称 上古神力Lv9
+mov S$失败给予名称 上古神力Lv8
+mov N$成功变量数字 10
+mov N$检测变量数字 9
+mov N$失败变量数字 8
+mov N$成功几率数字 5
+
+
+#IF
+equal U27 8
+CHECKTITLE 上古神力Lv8
+#act
+mov S$成功给予名称 上古神力Lv9
+mov S$扣除称号名称 上古神力Lv8
+mov S$失败给予名称 上古神力Lv7
+mov N$成功变量数字 9
+mov N$检测变量数字 8
+mov N$失败变量数字 7
+mov N$成功几率数字 2
+
+
+#IF
+equal U27 7
+CHECKTITLE 上古神力Lv7
+#act
+mov S$成功给予名称 上古神力Lv8
+mov S$扣除称号名称 上古神力Lv7
+mov S$失败给予名称 上古神力Lv6
+mov N$成功变量数字 8
+mov N$检测变量数字 7
+mov N$失败变量数字 6
+mov N$成功几率数字 2
+
+
+#IF
+equal U27 6
+CHECKTITLE 上古神力Lv6
+#act
+mov S$成功给予名称 上古神力Lv7
+mov S$扣除称号名称 上古神力Lv6
+mov S$失败给予名称 上古神力Lv5
+mov N$成功变量数字 7
+mov N$检测变量数字 6
+mov N$失败变量数字 5
+mov N$成功几率数字 2
+
+
+#IF
+equal U27 5
+CHECKTITLE 上古神力Lv5
+#act
+mov S$成功给予名称 上古神力Lv6
+mov S$扣除称号名称 上古神力Lv5
+mov S$失败给予名称 上古神力Lv4
+mov N$成功变量数字 6
+mov N$检测变量数字 5
+mov N$失败变量数字 4
+mov N$成功几率数字 2
+
+
+#IF
+equal U27 4
+CHECKTITLE 上古神力Lv4
+#act
+mov S$成功给予名称 上古神力Lv5
+mov S$扣除称号名称 上古神力Lv4
+mov S$失败给予名称 上古神力Lv3
+mov N$成功变量数字 5
+mov N$检测变量数字 4
+mov N$失败变量数字 3
+mov N$成功几率数字 2
+
+
+#IF
+equal U27 3
+CHECKTITLE 上古神力Lv3
+#act
+mov S$成功给予名称 上古神力Lv4
+mov S$扣除称号名称 上古神力Lv3
+mov S$失败给予名称 上古神力Lv2
+mov N$成功变量数字 4
+mov N$检测变量数字 3
+mov N$失败变量数字 2
+mov N$成功几率数字 2
+
+
+#IF
+equal U27 2
+CHECKTITLE 上古神力Lv2
+#act
+mov S$成功给予名称 上古神力Lv3
+mov S$扣除称号名称 上古神力Lv2
+mov S$失败给予名称 上古神力Lv1
+mov N$成功变量数字 3
+mov N$检测变量数字 2
+mov N$失败变量数字 1
+mov N$成功几率数字 2
+
+#IF
+equal U27 1
+CHECKTITLE 上古神力Lv1
+#act
+mov S$成功给予名称 上古神力Lv2
+mov S$扣除称号名称 上古神力Lv1
+mov N$成功变量数字 2
+mov N$检测变量数字 1
+mov N$失败变量数字 0
+mov N$成功几率数字 2
+
+#IF
+equal U27 0
+checkitem 云顶结晶 10
+CHECKGAMEGOLD ? 50000
+#act
+MOV U27 1
+INC U29 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+CONFERTITLE 上古神力Lv1
+goto @main
+MESSAGEBOX 恭喜你炼成上古神力Lv1成功！！
+break
+
+
+
+
+
+
+
+#IF
+equal U27 <$str(N$检测变量数字)>
+random <$str(N$成功几率数字)>
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+CHECKTITLE <$str(S$扣除称号名称)>
+#act
+INC U29 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+DEPRIVETITLE <$str(S$扣除称号名称)>
+CONFERTITLE <$str(S$成功给予名称)>
+MOV U27 <$str(N$成功变量数字)>
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+MESSAGEBOX 恭喜你炼成<$str(S$成功给予名称)>成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[<$str(S$成功给予名称)>]
+GOTO @main
+#ELSEACT
+INC U29 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+DEPRIVETITLE <$str(S$扣除称号名称)>
+CONFERTITLE <$str(S$失败给予名称)>
+MOV U27 <$str(N$失败变量数字)>
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+MESSAGEBOX 修炼失败等级降低一级！！
+GOTO @main
+BREAK
+
+
+[@升级4]
+#IF
+equal U28 20
+CHECKTITLE 物理免伤Lv20
+#act
+MESSAGEBOX 你的物理免伤已经是最高境界了！
+BREAK
+
+#IF
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+#act
+#ELSEACT
+MESSAGEBOX 错误\\①你没有500000元宝+50个云顶结晶！
+BREAK
+
+
+#IF
+equal U28 19
+CHECKTITLE 物理免伤Lv19
+#act
+mov S$成功给予名称 物理免伤Lv20
+mov S$扣除称号名称 物理免伤Lv19
+mov S$失败给予名称 物理免伤Lv18
+mov N$成功变量数字 20
+mov N$检测变量数字 19
+mov N$失败变量数字 18
+mov N$成功几率数字 10
+
+#IF
+equal U28 18
+CHECKTITLE 物理免伤Lv18
+#act
+mov S$成功给予名称 物理免伤Lv19
+mov S$扣除称号名称 物理免伤Lv18
+mov S$失败给予名称 物理免伤Lv17
+mov N$成功变量数字 19
+mov N$检测变量数字 18
+mov N$失败变量数字 17
+mov N$成功几率数字 6
+
+#IF
+equal U28 17
+CHECKTITLE 物理免伤Lv17
+#act
+mov S$成功给予名称 物理免伤Lv18
+mov S$扣除称号名称 物理免伤Lv17
+mov S$失败给予名称 物理免伤Lv16
+mov N$成功变量数字 18
+mov N$检测变量数字 17
+mov N$失败变量数字 16
+mov N$成功几率数字 6
+
+#IF
+equal U28 16
+CHECKTITLE 物理免伤Lv16
+#act
+mov S$成功给予名称 物理免伤Lv17
+mov S$扣除称号名称 物理免伤Lv16
+mov S$失败给予名称 物理免伤Lv15
+mov N$成功变量数字 17
+mov N$检测变量数字 16
+mov N$失败变量数字 15
+mov N$成功几率数字 6
+
+#IF
+equal U28 15
+CHECKTITLE 物理免伤Lv15
+#act
+mov S$成功给予名称 物理免伤Lv16
+mov S$扣除称号名称 物理免伤Lv15
+mov S$失败给予名称 物理免伤Lv14
+mov N$成功变量数字 16
+mov N$检测变量数字 15
+mov N$失败变量数字 14
+mov N$成功几率数字 6
+
+#IF
+equal U28 14
+CHECKTITLE 物理免伤Lv14
+#act
+mov S$成功给予名称 物理免伤Lv15
+mov S$扣除称号名称 物理免伤Lv14
+mov S$失败给予名称 物理免伤Lv13
+mov N$成功变量数字 15
+mov N$检测变量数字 14
+mov N$失败变量数字 13
+mov N$成功几率数字 6
+
+#IF
+equal U28 13
+CHECKTITLE 物理免伤Lv13
+#act
+mov S$成功给予名称 物理免伤Lv14
+mov S$扣除称号名称 物理免伤Lv13
+mov S$失败给予名称 物理免伤Lv12
+mov N$成功变量数字 14
+mov N$检测变量数字 13
+mov N$失败变量数字 12
+mov N$成功几率数字 6
+
+#IF
+equal U28 12
+CHECKTITLE 物理免伤Lv12
+#act
+mov S$成功给予名称 物理免伤Lv13
+mov S$扣除称号名称 物理免伤Lv12
+mov S$失败给予名称 物理免伤Lv11
+mov N$成功变量数字 13
+mov N$检测变量数字 12
+mov N$失败变量数字 11
+mov N$成功几率数字 6
+
+#IF
+equal U28 11
+CHECKTITLE 物理免伤Lv11
+#act
+mov S$成功给予名称 物理免伤Lv12
+mov S$扣除称号名称 物理免伤Lv11
+mov S$失败给予名称 物理免伤Lv10
+mov N$成功变量数字 12
+mov N$检测变量数字 11
+mov N$失败变量数字 10
+mov N$成功几率数字 6
+
+
+#IF
+equal U28 10
+CHECKTITLE 物理免伤Lv10
+#act
+mov S$成功给予名称 物理免伤Lv11
+mov S$扣除称号名称 物理免伤Lv10
+mov S$失败给予名称 物理免伤Lv9
+mov N$成功变量数字 11
+mov N$检测变量数字 10
+mov N$失败变量数字 9
+mov N$成功几率数字 5
+
+
+
+#IF
+equal U28 9
+CHECKTITLE 物理免伤Lv9
+#act
+mov S$成功给予名称 物理免伤Lv10
+mov S$扣除称号名称 物理免伤Lv9
+mov S$失败给予名称 物理免伤Lv8
+mov N$成功变量数字 10
+mov N$检测变量数字 9
+mov N$失败变量数字 8
+mov N$成功几率数字 5
+
+
+#IF
+equal U28 8
+CHECKTITLE 物理免伤Lv8
+#act
+mov S$成功给予名称 物理免伤Lv9
+mov S$扣除称号名称 物理免伤Lv8
+mov S$失败给予名称 物理免伤Lv7
+mov N$成功变量数字 9
+mov N$检测变量数字 8
+mov N$失败变量数字 7
+mov N$成功几率数字 2
+
+
+#IF
+equal U28 7
+CHECKTITLE 物理免伤Lv7
+#act
+mov S$成功给予名称 物理免伤Lv8
+mov S$扣除称号名称 物理免伤Lv7
+mov S$失败给予名称 物理免伤Lv6
+mov N$成功变量数字 8
+mov N$检测变量数字 7
+mov N$失败变量数字 6
+mov N$成功几率数字 2
+
+
+#IF
+equal U28 6
+CHECKTITLE 物理免伤Lv6
+#act
+mov S$成功给予名称 物理免伤Lv7
+mov S$扣除称号名称 物理免伤Lv6
+mov S$失败给予名称 物理免伤Lv5
+mov N$成功变量数字 7
+mov N$检测变量数字 6
+mov N$失败变量数字 5
+mov N$成功几率数字 2
+
+
+#IF
+equal U28 5
+CHECKTITLE 物理免伤Lv5
+#act
+mov S$成功给予名称 物理免伤Lv6
+mov S$扣除称号名称 物理免伤Lv5
+mov S$失败给予名称 物理免伤Lv4
+mov N$成功变量数字 6
+mov N$检测变量数字 5
+mov N$失败变量数字 4
+mov N$成功几率数字 2
+
+
+#IF
+equal U28 4
+CHECKTITLE 物理免伤Lv4
+#act
+mov S$成功给予名称 物理免伤Lv5
+mov S$扣除称号名称 物理免伤Lv4
+mov S$失败给予名称 物理免伤Lv3
+mov N$成功变量数字 5
+mov N$检测变量数字 4
+mov N$失败变量数字 3
+mov N$成功几率数字 2
+
+
+#IF
+equal U28 3
+CHECKTITLE 物理免伤Lv3
+#act
+mov S$成功给予名称 物理免伤Lv4
+mov S$扣除称号名称 物理免伤Lv3
+mov S$失败给予名称 物理免伤Lv2
+mov N$成功变量数字 4
+mov N$检测变量数字 3
+mov N$失败变量数字 2
+mov N$成功几率数字 2
+
+
+#IF
+equal U28 2
+CHECKTITLE 物理免伤Lv2
+#act
+mov S$成功给予名称 物理免伤Lv3
+mov S$扣除称号名称 物理免伤Lv2
+mov S$失败给予名称 物理免伤Lv1
+mov N$成功变量数字 3
+mov N$检测变量数字 2
+mov N$失败变量数字 1
+mov N$成功几率数字 2
+
+#IF
+equal U28 1
+CHECKTITLE 物理免伤Lv1
+#act
+mov S$成功给予名称 物理免伤Lv2
+mov S$扣除称号名称 物理免伤Lv1
+mov N$成功变量数字 2
+mov N$检测变量数字 1
+mov N$失败变量数字 0
+mov N$成功几率数字 2
+
+#IF
+equal U28 0
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+#act
+INC U29 1
+MOV U28 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+CONFERTITLE 物理免伤Lv1
+goto @main
+MESSAGEBOX 恭喜你炼成物理免伤Lv1成功！！
+break
+
+
+
+
+
+
+
+#IF
+equal U28 <$str(N$检测变量数字)>
+random <$str(N$成功几率数字)>
+checkitem 云顶结晶 1
+CHECKGAMEGOLD ? 50000
+CHECKTITLE <$str(S$扣除称号名称)>
+#act
+INC U29 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+DEPRIVETITLE <$str(S$扣除称号名称)>
+CONFERTITLE <$str(S$成功给予名称)>
+MOV U28 <$str(N$成功变量数字)>
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+MESSAGEBOX 恭喜你炼成<$str(S$成功给予名称)>成功！！
+GuildNoticeMsg 5 255 恭喜[<$USERNAME>]成功炼成[<$str(S$成功给予名称)>]
+GOTO @main
+#ELSEACT
+INC U29 1
+GAMEGOLD - 50000
+take 云顶结晶 1
+DEPRIVETITLE <$str(S$扣除称号名称)>
+CONFERTITLE <$str(S$失败给予名称)>
+MOV U28 <$str(N$失败变量数字)>
+DEPRIVETITLE 神魔·小成
+DEPRIVETITLE 神魔·大成
+DEPRIVETITLE 神魔·完满
+MESSAGEBOX 修炼失败等级降低一级！！
+GOTO @main
+BREAK
+
+
+

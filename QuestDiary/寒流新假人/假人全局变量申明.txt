@@ -1,0 +1,118 @@
+[@申明假人变量]
+{
+#IF
+#ACT
+VAR Integer GLOBAL 假人_手动加经验
+;LOADVAR GLOBAL 假人_手动加经验 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String GLOBAL 假人_土城走动几率
+;LOADVAR GLOBAL 假人_土城走动几率 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String GLOBAL 假人_自动上线开关
+;LOADVAR GLOBAL 假人_自动上线开关 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_上线间隔
+;LOADVAR GLOBAL 假人_上线间隔 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_能升最高等级
+;LOADVAR GLOBAL 假人_能升最高等级 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_下图几率
+;LOADVAR GLOBAL 假人_下图几率 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_被人打血低百分之多少反击
+;LOADVAR GLOBAL 假人_被人打血低百分之多少反击 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_下图回城后休息时间最低
+;LOADVAR GLOBAL 假人_下图回城后休息时间最低 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_下图回城后休息时间最高
+;LOADVAR GLOBAL 假人_下图回城后休息时间最高 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_活动频率快
+;LOADVAR GLOBAL 假人_活动频率快 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_活动频率慢
+;LOADVAR GLOBAL 假人_活动频率慢 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_背包剩几格回收
+;LOADVAR GLOBAL 假人_背包剩几格回收 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_新手地图
+;LOADVAR GLOBAL 假人_新手地图 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_新手地图X左
+;LOADVAR GLOBAL 假人_新手地图X左 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_新手地图X右
+;LOADVAR GLOBAL 假人_新手地图X右 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_新手地图Y左
+;LOADVAR GLOBAL 假人_新手地图Y左 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_新手地图Y右
+;LOADVAR GLOBAL 假人_新手地图Y右 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_打怪回城时间为秒
+;LOADVAR GLOBAL 假人_打怪回城时间为秒 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_装备自补男甲
+;LOADVAR GLOBAL 假人_装备自补男甲 ..\QuestDiary\寒流新假人\全局数据Save.txt
+VAR String  GLOBAL 假人_装备自补女衣
+;LOADVAR GLOBAL 假人_装备自补女衣 ..\QuestDiary\寒流新假人\全局数据Save.txt
+VAR String  GLOBAL 假人_装备自补武器
+;LOADVAR GLOBAL 假人_装备自补武器 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_人数上限
+;LOADVAR GLOBAL 假人_人数上限 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_最低下图等级
+;LOADVAR GLOBAL 假人_最低下图等级 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_杀怪快速升级开关
+;LOADVAR GLOBAL 假人_杀怪快速升级开关 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_杀怪补经验最低
+;LOADVAR GLOBAL 假人_杀怪补经验最低 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_杀怪补经验最高
+;LOADVAR GLOBAL 假人_杀怪补经验最高 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_攻击吸血开关
+;LOADVAR GLOBAL 假人_攻击吸血开关 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_攻击吸血最少值
+;LOADVAR GLOBAL 假人_攻击吸血最少值 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_攻击吸血最高值
+;LOADVAR GLOBAL 假人_攻击吸血最高值 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_补伤害开关
+;LOADVAR GLOBAL 假人_补伤害开关 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_补伤害最低值
+;LOADVAR GLOBAL 假人_补伤害最低值 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_补伤害最高值
+;LOADVAR GLOBAL 假人_补伤害最高值 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_血低百分之多少回城
+;LOADVAR GLOBAL 假人_血低百分之多少回城 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_血低于多少值回城
+;LOADVAR GLOBAL 假人_血低于多少值回城 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+VAR String  GLOBAL 假人_盟重地图号
+;LOADVAR GLOBAL 假人_盟重地图号 ..\QuestDiary\寒流新假人\全局数据Save.txt
+VAR String  GLOBAL 假人_回城坐标X左
+;LOADVAR GLOBAL 假人_回城坐标X左 ..\QuestDiary\寒流新假人\全局数据Save.txt
+VAR String  GLOBAL 假人_回城坐标X右
+;LOADVAR GLOBAL 假人_回城坐标X右 ..\QuestDiary\寒流新假人\全局数据Save.txt
+VAR String  GLOBAL 假人_回城坐标Y左
+;LOADVAR GLOBAL 假人_回城坐标Y左 ..\QuestDiary\寒流新假人\全局数据Save.txt
+VAR String  GLOBAL 假人_回城坐标Y右
+;LOADVAR GLOBAL 假人_回城坐标Y右 ..\QuestDiary\寒流新假人\全局数据Save.txt
+
+
+
+}

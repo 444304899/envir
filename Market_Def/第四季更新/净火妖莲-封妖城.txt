@@ -1,0 +1,100 @@
+[@main]
+#if
+#act
+MOV N$可获得神火点 0
+
+
+
+#if
+#act
+#SAY
+\ \ \ \ \ \ \ \ \
+
+<>              <ItemShow:1718:0:0:5:1>        <ItemShow:1719:0:0:5:1>        <ItemShow:1720:0:0:5:1>        <ItemShow:1721:0:0:5:1> \ \ \ \
+<>            <《点击兑换》|253#兑换需要神火点*5000^253#500钻石^253#上一级神火/@兑换5>   <《点击兑换》|253#兑换需要神火点*5000^253#500钻石^253#上一级神火/@兑换6>   <《点击兑换》|253#兑换需要神火点*5000^253#500钻石^253#上一级神火/@兑换7>   <《点击兑换》|253#兑换需要神火点*5000^253#500钻石^253#上一级神火/@兑换8> \ \ \
+
+<>                                  〖<点击关闭/@exit>〗
+
+
+
+
+
+
+[@兑换5]
+#if
+large u13 4999
+checkitem 魂灯紫炎I 1
+checkGAMEPOINT > 499
+#act
+take 魂灯紫炎I 1
+DEC u13 5000
+GIVE 繁涅·妖莲I 1
+GAMEPOINT - 500
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换6]
+#if
+large u13 4999
+checkitem 魂灯紫炎II 1
+checkGAMEPOINT > 499
+#act
+take 魂灯紫炎II 1
+DEC u13 5000
+GIVE 碎涅·妖莲II 1
+GAMEPOINT - 500
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换7]
+#if
+large u13 4999
+checkitem 魂灯紫炎III 1
+checkGAMEPOINT > 499
+#act
+take 魂灯紫炎III 1
+DEC u13 5000
+GIVE 净涅·妖莲III 1
+GAMEPOINT - 500
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+[@兑换8]
+#if
+large u13 4999
+checkitem 魂灯紫炎IV 1
+checkGAMEPOINT > 499
+#act
+take 魂灯紫炎IV 1
+DEC u13 5000
+GIVE 空涅·妖莲IV 1
+GAMEPOINT - 500
+MESSAGEBOX 神火兑换成功..
+break
+#elseact
+MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+break
+
+
+
+
+
+
+
+
+
+
+
+

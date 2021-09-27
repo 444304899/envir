@@ -1,0 +1,105 @@
+[@main]
+#sct
+#say
+\　\ \
+<踏天之力：/FCOLOR=249>{PK时敌人低于30%血时/FCOLOR=250}\
+{20%几率可以直接斩杀,破复活/FCOLOR=250} \ \
+[<如果你却某个字可以在我这里购买/@我要学习>]　\
+[<免费学习/@我要学习1>]　 集齐 "踏" "天" "之" "力" 四个字可以免费合成 \ \
+
+<踏天之力可兑换新区200充值/FCOLOR=250>    <当前金币数量：/FCOLOR=154>〖{<$GOLDCOUNT>/FCOLOR=250}〗\
+
+\
+
+
+
+[@我要学习]
+#IF
+#act
+#say
+\ \ \  \
+<>                    <本服承诺全靠打，无收费地图，爆率全开。/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\ \
+<>                    <1000金币一个字哦/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\ \
+<>                    <踏/@踏>       <天/@天>        <之/@之>        <力/@力>   \
+<>
+
+
+[@力]
+#if
+CheckGold 1000
+#act
+Take 金币 1000
+give 力
+MESSAGEBOX [提示]:购买成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+[@之]
+#if
+CheckGold 1000
+#act
+Take 金币 1000
+give 之
+MESSAGEBOX [提示]:购买成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+
+[@天]
+#if
+CheckGold 1000
+#act
+Take 金币 1000
+give 天
+MESSAGEBOX [提示]:购买成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+
+
+[@踏]
+#if
+CheckGold 1000
+#act
+Take 金币 1000
+give 踏
+MESSAGEBOX [提示]:购买成功!
+#elseact
+MESSAGEBOX 请检测是否有足够的金币！
+BREAK
+
+
+
+
+[@我要学习1]
+#if
+CHECKTITLE 踏天之力
+#act
+messagebox 你已经学习过了，想再花一次钱吗？
+break
+
+#if
+CHECKITEM 踏 1
+CHECKITEM 天 1
+CHECKITEM 之 1
+CHECKITEM 力 1
+#act
+TAKE 踏 1
+TAKE 天 1
+TAKE 之 1
+TAKE 力 1
+CONFERTITLE 踏天之力
+SENDMOVEMSG 0 249 251 200 1 ≮踏天之力≯：玩家『<$USERNAME>』获得了踏天之力，此人极度危险！他将踏天而去吗？
+SENDMOVEMSG 0 249 251 230 1 ≮踏天之力≯：玩家『<$USERNAME>』获得了踏天之力，此人极度危险！他将踏天而去吗？
+break
+#elseact
+messagebox 条件不足！
+
+
+

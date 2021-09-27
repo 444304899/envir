@@ -1,0 +1,22 @@
+[@main]
+#if
+#act
+#say
+<>　        <$USERNAME>!   <欢迎来到服务器:/FCOLOR=242>  {<$SERVERNAME>/FCOLOR=253}\
+<><━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\
+<PLAYIMG:7:10:5:100:0:-1><龙 之 谷:/FCOLOR=242>  <给你一个全新的体验,一切靠打.你绝对没玩过的版本!/AUTOCOLOR=70>\  \
+<PLAYIMG:7:10:5:100:0:-1><地图介绍:/AUTOCOLOR=100>  <发育必经之地./AUTOCOLOR=250>\ \
+<PLAYIMG:7:10:5:100:0:-1><爆率说明:/AUTOCOLOR=100>  <刷新速度*10 怪物数量密集/AUTOCOLOR=161>\  \
+<PLAYIMG:7:10:5:100:0:-1><进图条件:/AUTOCOLOR=151>(每次进入扣除500点券,每秒扣除5点券)    <一星秘境/@传送1>    \
+
+
+[@传送1]
+#if
+CHECKGAMEGOLD > 499
+#act
+GAMEGOLD - 500
+map 1xmj
+SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+#elseact
+SENDMOVEHINTMSG [提示:]\\进图失败,请检查你的等级是否达到要求 103 0 0 -10
+break

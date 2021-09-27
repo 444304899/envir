@@ -1,0 +1,92 @@
+[@main]
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+MOV S$当前区服状态 测试区
+MOV S$记录领取钻石 「<自动记录/FCOLOR=151>」
+#ELSEACT
+MOV S$当前区服状态 正式区
+MOV S$记录领取钻石 「<领取奖励/@领取奖励>」
+
+
+
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\测试区记录\元宝记录账号.txt
+#ACT
+GETRANDOMTEXT ..\QuestDiary\测试区记录\元宝记录\<$USERACCOUNT>.txt N$元宝记录
+#ELSEACT
+MOV N$元宝记录 0
+
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\测试区记录\钻石记录账号.txt
+#ACT
+GETRANDOMTEXT ..\QuestDiary\测试区记录\钻石记录\<$USERACCOUNT>.txt N$钻石记录
+#ELSEACT
+MOV N$钻石记录 0
+
+
+
+
+
+
+#IF
+#ACT
+;OPENMERCHANTBIGDLG 6 674 1 4 -8 -18  1 380 10
+#SAY
+\ \ \ \
+<>  <功能说明：/FCOLOR=251>\
+<>   <1./FCOLOR=103>{测试区通过首爆首杀获得的【钻石】自动进行记录！/FCOLOR=70}\
+<>   <2./FCOLOR=103>{正式开区后，记录的【元宝、钻石】可以领取50%/FCOLOR=242}\ \
+
+<>  <本区当前状态/FCOLOR=250>：{<$STR(S$当前区服状态)>/FCOLOR=253}  <$STR(S$记录领取钻石)>    <正式开区凭账号领取/FCOLOR=210>\ \
+\ \
+<>  <当前共记录：/FCOLOR=250>{<$STR(N$元宝记录)> 元宝/FCOLOR=251}\
+<>  <当前共记录：/FCOLOR=250>{<$STR(N$钻石记录)> 钻石/FCOLOR=249}\
+
+
+
+
+
+[@领取奖励]
+#IF
+CHECKACCOUNTLIST ..\QuestDiary\测试区记录\已领取记录.txt
+#ACT
+MESSAGEBOX \提示：您已经领取过了！
+BREAK
+
+#IF
+EQUAL N$元宝记录 0
+EQUAL N$钻石记录 0
+EQUAL N$人记录 0
+#ACT
+MESSAGEBOX \提示：您测试区没有获得记录！
+BREAK
+#ELSEACT
+ADDACCOUNTLIST ..\QuestDiary\测试区记录\已领取记录.txt
+
+
+#IF
+LARGE N$元宝记录 0
+#ACT
+mov N$元宝领回 <$STR(N$元宝记录)>
+div N$元宝领回 2
+GAMEGOLD + <$STR(N$元宝领回)>
+DELACCOUNTLIST ..\QuestDiary\测试区记录\元宝记录账号.txt
+CLEARNAMELIST ..\QuestDiary\测试区记录\元宝记录\<$USERACCOUNT>.txt
+GUILDNOTICEMSG 251 0 恭喜玩家「<$USERNAME>」领取了测试区记录的【<$STR(N$元宝领回)>元宝】！
+
+#IF
+LARGE N$钻石记录 0
+#ACT
+mov N$钻石领回 <$STR(N$钻石记录)>
+div N$钻石领回 2
+GAMEPOINT + <$STR(N$钻石领回)>
+DELACCOUNTLIST ..\QuestDiary\测试区记录\钻石记录账号.txt
+CLEARNAMELIST ..\QuestDiary\测试区记录\钻石记录\<$USERACCOUNT>.txt
+GUILDNOTICEMSG 251 0 恭喜玩家「<$USERNAME>」领取了测试区记录的【<$STR(N$钻石领回)>钻石】！
+
+
+#IF
+#ACT
+goto @main
+

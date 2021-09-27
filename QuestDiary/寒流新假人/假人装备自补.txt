@@ -1,0 +1,40 @@
+[@假人不会光屁股]
+{
+;==↓↓↓↓↓===假人光身无剑自动补上=============
+#IF
+ISDUMMY
+not CHECKUSEITEM 0
+gender man
+CHECKBAGSIZE 1
+#ACT
+GIVE <$GLOBAL(假人_装备自补男甲)> 1
+AutoTakeOnItem <$GLOBAL(假人_装备自补男甲)> 0
+
+#IF
+ISDUMMY
+not CHECKUSEITEM 0
+gender WOMAN
+CHECKBAGSIZE 1
+#ACT
+GIVE <$GLOBAL(假人_装备自补女衣)> 1
+AutoTakeOnItem <$GLOBAL(假人_装备自补女衣)> 0
+
+#IF
+ISDUMMY
+not CHECKUSEITEM 1
+CHECKBAGSIZE 1
+#ACT
+GIVE <$GLOBAL(假人_装备自补武器)> 1
+AutoTakeOnItem <$GLOBAL(假人_装备自补武器)> 1
+;==↑↑↑↑↑↑↑↑===假人光身无剑自动补上=============
+
+
+#IF
+ISDUMMY
+not CHECKUSEITEM 12
+CHECKBAGSIZE 1
+#ACT
+GIVE 魔血石 1
+AutoTakeOnItem 魔血石 12
+
+}

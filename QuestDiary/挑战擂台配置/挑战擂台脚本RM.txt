@@ -1,0 +1,48 @@
+[@挑战擂台脚本RM]
+{
+#IF
+checkvar GLOBAL 挑战开始判断 = 0
+#ACT
+BREAK
+#IF
+checkvar GLOBAL 挑战开始计时 > 0
+#ACT
+CALCVAR GLOBAL 挑战开始计时 - 1
+BREAK
+#IF
+checkvar GLOBAL 挑战开始判断 = 1
+#ACT
+MOV S20 <$GLOBAL(挑战发起姓名)>
+CALCVAR GLOBAL 挑战发起姓名 =
+CALCVAR GLOBAL 挑战邀请姓名 =
+CALCVAR GLOBAL 挑战发起数量 = 0
+CALCVAR GLOBAL 挑战开始计时 = 0
+CALCVAR GLOBAL 挑战开始判断 = 0
+SAVEVAR GLOBAL 挑战发起姓名
+SAVEVAR GLOBAL 挑战邀请姓名
+SAVEVAR GLOBAL 挑战发起数量
+SAVEVAR GLOBAL 挑战开始计时
+SAVEVAR GLOBAL 挑战开始判断
+S20.SENDMSG 6 $(挑战擂台公告前缀)对不起，对方超时没有接受挑战！
+S20.close
+BREAK
+#IF
+checkvar GLOBAL 挑战开始判断 = 2
+#ACT
+CALCVAR GLOBAL 挑战发起姓名 =
+CALCVAR GLOBAL 挑战邀请姓名 =
+CALCVAR GLOBAL 挑战发起数量 = 0
+CALCVAR GLOBAL 挑战开始计时 = 0
+CALCVAR GLOBAL 挑战开始判断 = 0
+SAVEVAR GLOBAL 挑战发起姓名
+SAVEVAR GLOBAL 挑战邀请姓名
+SAVEVAR GLOBAL 挑战发起数量
+SAVEVAR GLOBAL 挑战开始计时
+SAVEVAR GLOBAL 挑战开始判断
+Gmexecute $(挑战全服触发命令) @挑战擂台清理场地
+SENDMSG 0 $(挑战擂台公告前缀)挑战双方超时未分成胜负，均视为挑战失败！
+BREAK
+
+[@挑战擂台常量加载]
+#CALL [\挑战擂台配置\挑战擂台常量.ini] @挑战擂台常量
+}

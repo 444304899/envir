@@ -1,0 +1,136 @@
+[@捐献检测]
+{
+#IF
+#ACT
+MOV <$GLOBAL(沙城状态控制)> 统计完毕
+MOV <$GLOBAL(红方达标人数)> 0
+MOV <$GLOBAL(蓝方达标人数)> 0
+GMEXECUTE 开始提问 @统计达标人数QM
+GetListString ..\..\..\..\封天红蓝行会\捐献文件\<$STR(A100)>\当前01区.txt 0 I10 I11
+GetListString ..\..\..\..\封天红蓝行会\捐献文件\<$STR(A100)>\当前02区.txt 0 I10 I12
+GetListString ..\..\..\..\封天红蓝行会\捐献文件\<$STR(A100)>\当前03区.txt 0 I10 I13
+GetListString ..\..\..\..\封天红蓝行会\捐献文件\<$STR(A100)>\当前04区.txt 0 I10 I14
+GetListString ..\..\..\..\封天红蓝行会\捐献文件\<$STR(A100)>\当前05区.txt 0 I10 I15
+MOV <$GLOBAL(沙城捐献总数)> 0
+INC <$GLOBAL(沙城捐献总数)> <$STR(I11)>
+INC <$GLOBAL(沙城捐献总数)> <$STR(I12)>
+INC <$GLOBAL(沙城捐献总数)> <$STR(I13)>
+INC <$GLOBAL(沙城捐献总数)> <$STR(I14)>
+INC <$GLOBAL(沙城捐献总数)> <$STR(I15)>
+
+MOV <$GLOBAL(沙手续费记录)> <$GLOBAL(沙城捐献总数)>
+MUL <$GLOBAL(沙手续费记录)> <$GLOBAL(沙奖励手续费)>
+DIV <$GLOBAL(沙手续费记录)> 10
+
+MOV <$GLOBAL(沙奖励实发数)> <$GLOBAL(沙城捐献总数)>
+CALCVAR GLOBAL 沙奖励实发数 - <$GLOBAL(沙手续费记录)>
+
+MOV <$GLOBAL(全满数据记录)> <$GLOBAL(沙奖励实发数)>
+MUL <$GLOBAL(全满数据记录)> <$GLOBAL(全满百分比数)>
+DIV <$GLOBAL(全满数据记录)> 100
+
+MOV <$GLOBAL(扣全满后发数)> <$GLOBAL(沙奖励实发数)>
+CALCVAR GLOBAL 扣全满后发数 - <$GLOBAL(全满数据记录)>
+
+MOV <$GLOBAL(胜方发奖数据)> <$GLOBAL(扣全满后发数)>
+MUL <$GLOBAL(胜方发奖数据)> <$GLOBAL(胜方百分比数)>
+DIV <$GLOBAL(胜方发奖数据)> 10
+
+MOV <$GLOBAL(胜方数据记录)> <$GLOBAL(胜方发奖数据)>
+
+MOV <$GLOBAL(败方发奖数据)> <$GLOBAL(扣全满后发数)>
+CALCVAR GLOBAL 败方发奖数据 - <$GLOBAL(胜方发奖数据)>
+MOV <$GLOBAL(败方数据记录)> <$GLOBAL(败方发奖数据)>
+
+;------------------------------------------------------------------
+MOV <$GLOBAL(胜方全满数据)> <$GLOBAL(全满数据记录)>
+MUL <$GLOBAL(胜方全满数据)> 7
+DIV <$GLOBAL(胜方全满数据)> 10
+
+MOV <$GLOBAL(胜方全满记录)> <$GLOBAL(胜方全满数据)>
+
+
+MOV <$GLOBAL(败方全满数据)> <$GLOBAL(全满数据记录)>
+MUL <$GLOBAL(败方全满数据)> 3
+DIV <$GLOBAL(败方全满数据)> 10
+MOV <$GLOBAL(败方全满记录)> <$GLOBAL(败方全满数据)>
+
+
+#IF
+EQUAL <$OWNERGUILD> <$GLOBAL(红方队伍名字)>
+#ACT
+MOV <$GLOBAL(胜方平均金额)> <$GLOBAL(胜方数据记录)>
+DIV <$GLOBAL(胜方平均金额)> <$GLOBAL(红方达标人数)>
+
+MOV <$GLOBAL(败方平均金额)> <$GLOBAL(败方数据记录)>
+DIV <$GLOBAL(败方平均金额)> <$GLOBAL(蓝方达标人数)>
+
+MOV <$GLOBAL(胜满平均金额)> <$GLOBAL(胜方全满记录)>
+DIV <$GLOBAL(胜满平均金额)> <$GLOBAL(红方大号人数)>
+
+MOV <$GLOBAL(败满平均金额)> <$GLOBAL(败方全满记录)>
+DIV <$GLOBAL(败满平均金额)> <$GLOBAL(蓝方大号人数)>
+
+
+#IF
+EQUAL <$OWNERGUILD> <$GLOBAL(蓝方队伍名字)>
+#ACT
+MOV <$GLOBAL(胜方平均金额)> <$GLOBAL(胜方数据记录)>
+DIV <$GLOBAL(胜方平均金额)> <$GLOBAL(蓝方达标人数)>
+
+MOV <$GLOBAL(败方平均金额)> <$GLOBAL(败方数据记录)>
+DIV <$GLOBAL(败方平均金额)> <$GLOBAL(红方达标人数)>
+
+MOV <$GLOBAL(胜满平均金额)> <$GLOBAL(胜方全满记录)>
+DIV <$GLOBAL(胜满平均金额)> <$GLOBAL(蓝方大号人数)>
+
+MOV <$GLOBAL(败满平均金额)> <$GLOBAL(败方全满记录)>
+DIV <$GLOBAL(败满平均金额)> <$GLOBAL(红方大号人数)>
+
+
+
+#IF
+#ACT
+MOV <$GLOBAL(领奖状态控制)> 领奖关闭
+SAVEVAR GLOBAL 蓝方队伍名字
+SAVEVAR GLOBAL 红方队伍名字
+SAVEVAR GLOBAL 沙城状态控制
+SAVEVAR GLOBAL 领奖状态控制
+SAVEVAR GLOBAL 收人状态控制
+SAVEVAR GLOBAL 沙城捐献总数
+SAVEVAR GLOBAL 限制相差人数
+SAVEVAR GLOBAL 红方总共人数
+SAVEVAR GLOBAL 蓝方总共人数
+SAVEVAR GLOBAL 红方在线人数
+SAVEVAR GLOBAL 蓝方在线人数
+SAVEVAR GLOBAL 红方达标人数
+SAVEVAR GLOBAL 蓝方达标人数
+SAVEVAR GLOBAL 红方大号人数
+SAVEVAR GLOBAL 蓝方大号人数
+SAVEVAR GLOBAL 对话框的编号
+SAVEVAR GLOBAL 对话框图片号
+SAVEVAR GLOBAL 沙奖励手续费
+SAVEVAR GLOBAL 沙手续费记录
+SAVEVAR GLOBAL 沙奖励实发数
+SAVEVAR GLOBAL 扣全满后发数
+SAVEVAR GLOBAL 胜方百分比数
+SAVEVAR GLOBAL 胜方发奖数据
+SAVEVAR GLOBAL 胜方数据记录
+SAVEVAR GLOBAL 胜方平均金额
+SAVEVAR GLOBAL 败方百分比数
+SAVEVAR GLOBAL 败方发奖数据
+SAVEVAR GLOBAL 败方数据记录
+SAVEVAR GLOBAL 败方平均金额
+SAVEVAR GLOBAL 全满百分比数
+SAVEVAR GLOBAL 全满数据记录
+
+SAVEVAR GLOBAL 胜方全满数据
+SAVEVAR GLOBAL 胜方全满记录
+SAVEVAR GLOBAL 败方全满数据
+SAVEVAR GLOBAL 败方全满记录
+
+SAVEVAR GLOBAL 胜满平均金额
+SAVEVAR GLOBAL 败满平均金额
+
+
+}

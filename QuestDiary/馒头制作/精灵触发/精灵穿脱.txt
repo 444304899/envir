@@ -1,0 +1,75 @@
+[@精灵穿脱]
+{
+
+#if
+#act
+MOV n$精灵爆率 0
+
+#IF
+CHECKITEMW 云顶之子(精灵) 1
+#act
+mov n$精灵爆率 2
+
+#IF
+CHECKITEMW 丘比特(精灵) 1
+#act
+mov n$精灵爆率 3
+
+#IF
+CHECKITEMW 无头骑士(精灵) 1
+#act
+mov n$精灵爆率 4
+
+#IF
+CHECKITEMW 黑皇帝(精灵) 1
+#act
+mov n$精灵爆率 5
+
+#IF
+CHECKITEMW 剑之灵(精灵) 1
+#act
+mov n$精灵爆率 6
+
+
+#IF
+CHECKITEMW 冒险王(精灵) 1
+#act
+mov n$精灵爆率 7
+
+#IF
+CHECKITEMW 赛丽亚(精灵) 1
+#act
+mov n$精灵爆率 8
+
+#IF
+CHECKITEMW 天空骑士(精灵) 1
+#act
+mov n$精灵爆率 9
+
+#IF
+CHECKITEMW 天帷巨兽(精灵) 1
+#act
+mov n$精灵爆率 10
+
+#IF
+CHECKITEMW 大斗帝(精灵) 1
+#act
+mov n$精灵爆率 11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
