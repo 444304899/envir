@@ -4,16 +4,14 @@
 #act
 
 #say
-\ \ \  \ \ \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=180.0|y=93.0|color=158,251,249,253|size=16|text=免费解锁封天画卷>
+<Text|x=195.0|y=148.0|color=251|size=16|text=解锁封天大陆|link=@传送1>
 
 
-<>                           <免费解锁封天画卷/AUTOCOLOR=158>\   \
-
-
-
-
-<>                             <解锁封天大陆/@传送1>   \
-
+;<>                           <免费解锁封天画卷/AUTOCOLOR=158>\   \
+;<>                             <解锁封天大陆/@传送1>   \
 
 [@传送1]
 

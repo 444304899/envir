@@ -63,7 +63,7 @@ LARGE G496 0
 #ACT
 SET [22] 1
 CHANGELEVEL = 80
-PGAddHpPer + 100
+AddHpPer + 100
 takew 神秘人[斗笠] 1
 takew 七星剑仙的剑气[活动] 1
 takew 阳光战神的威严[活动] 1

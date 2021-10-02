@@ -5,13 +5,13 @@
 
 
 #if
-PGCheckhpPer < 20
+CheckhpPer < 20
 CHECKTITLE 狂暴之力
 ISONMAP SRDT
 CHECKCURRTARGETRACE = 0
-PGRandomEx 1 10
+RandomEx 1 10
 #act
-PGRangeHarm <$X> <$Y> 8 1 1 3 0 1 1 1
+RangeHarm <$X> <$Y> 8 1 1 3 0 0 3
 SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
 
 
@@ -28,22 +28,22 @@ SENDMSG 7 防御翻倍，持续3秒！！
 
 
 #if
-PGCheckhpPer < 20
+CheckhpPer < 20
 checkitemw 雷鼎 1
 CHECKCURRTARGETRACE = 0
-PGRandomEx 1 50
+RandomEx 1 50
 #act
-PGRangeHarm <$X> <$Y> 8 1 1 3 0 0 1 1
+RangeHarm <$X> <$Y> 8 1 1 3 0 0 3
 SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
 
 
 #if
-PGCheckhpPer < 20
+CheckhpPer < 20
 checkitemw 一岁一枯荣 1
 CHECKCURRTARGETRACE = 0
-PGRandomEx 1 40
+RandomEx 1 40
 #act
-PGRangeHarm <$X> <$Y> 8 1 1 3 0 0 1 1
+RangeHarm <$X> <$Y> 8 1 1 3 0 0 3
 SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
 
 
@@ -54,22 +54,22 @@ SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
 
 
 #if
-PGCheckhpPer < 20
+CheckhpPer < 20
 checkitemw 万森轮盘 1
 CHECKCURRTARGETRACE = 0
-PGRandomEx 1 50
+RandomEx 1 50
 #act
-PGRangeHarm <$X> <$Y> 8 1 1 3 0 0 1 1
+RangeHarm <$X> <$Y> 8 1 1 3 0 0 3
 SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
 
 
 #if
-PGCheckhpPer < 20
+CheckhpPer < 20
 checkitemw 纺锤之锚 1
 CHECKCURRTARGETRACE = 0
-PGRandomEx 1 50
+RandomEx 1 50
 #act
-PGRangeHarm <$X> <$Y> 8 1 1 3 0 0 1 1
+RangeHarm <$X> <$Y> 8 1 1 3 0 0 3
 SendCenterMsg 180 251 恭喜角色:<$USERNAME>,血量少于20%触发击退 0 3
 
 
@@ -127,7 +127,7 @@ checkitemw 阳光战神的威严
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [阳光战神的威严]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[阳光战神的威严]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -137,7 +137,7 @@ checkitemw 阳光战神的威严[活动]
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [阳光战神的威严]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[阳光战神的威严]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -151,7 +151,7 @@ checkitemw 阳光战神的威严【超脱】
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [阳光战神的威严]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[阳光战神的威严]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -165,7 +165,7 @@ checkitemw 五龙铡
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [五龙铡]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[五龙铡]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -175,7 +175,7 @@ checkitemw 李主仙衣≮洪荒终≯
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [李主仙衣≮洪荒终≯]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[李主仙衣≮洪荒终≯]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -185,7 +185,7 @@ checkitemw 人.仙.鬼.怪.≮善恶兩分≯
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [人.仙.鬼.怪.≮善恶兩分≯]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[人.仙.鬼.怪.≮善恶兩分≯]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -196,7 +196,7 @@ checkitemw 孟姝皇袍
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [孟姝皇袍]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[孟姝皇袍]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -207,7 +207,7 @@ checkitemw 至尊青布衫
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [至尊青布衫]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[至尊青布衫]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -217,7 +217,7 @@ checkitemw 天尘●最强状态
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [天尘●最强状态]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[天尘●最强状态]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -227,7 +227,7 @@ checkitemw 罗衫叶叶绣重重
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [罗衫叶叶绣重重]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[罗衫叶叶绣重重]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -237,7 +237,7 @@ checkitemw 极过·极未·极逍遥
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [极过·极未·极逍遥]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[极过·极未·极逍遥]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -247,7 +247,7 @@ checkitemw 鸿蒙灵宝·【雷霄甲】
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [鸿蒙灵宝·【雷霄甲】]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[鸿蒙灵宝·【雷霄甲】]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -260,7 +260,7 @@ checkitemw 一纸因果·你欠我钱
 SMALL N$回血CD 1
 #ACT
 MOV N$回血CD 45
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 70 0 [一纸因果·你欠我钱]BUFF触发,直接恢复自身20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[一纸因果·你欠我钱]BUFF触发,直接恢复自身20%血量. 0 5
 
@@ -276,7 +276,7 @@ MOV N$战斗中 5
 
 
 #IF
-PGCheckhpPer < 25
+CheckhpPer < 25
 equal N$“魔罗伞” 0
 checkitemw “魔罗伞” 1
 #ACT
@@ -290,7 +290,7 @@ mapmove <$Map> <$str(N$飞行X)> <$str(N$飞行Y)>
 
 
 #IF
-PGCheckhpPer < 25
+CheckhpPer < 25
 equal N$方父筑桥 0
 checkitemw 方父筑桥 1
 #ACT
@@ -302,7 +302,7 @@ mapmove <$Map> <$str(N$飞行X)> <$str(N$飞行Y)>
 
 
 #IF
-PGCheckhpPer < 25
+CheckhpPer < 25
 equal N$终有良人相伴 0
 checkitemw 终有良人相伴 1
 #ACT
@@ -315,7 +315,7 @@ mapmove <$Map> <$str(N$飞行X)> <$str(N$飞行Y)>
 
 
 #IF
-PGCheckhpPer < 20
+CheckhpPer < 20
 equal N$终有良人相伴 0
 checkitemw 青灯古庙·伴一生 1
 #ACT
@@ -334,55 +334,55 @@ mapmove <$Map> <$str(N$飞行X)> <$str(N$飞行Y)>
 random 200
 checkitemw “乾坤尺” 1
 #act
-PGAddHpPer + 1
+AddHpPer + 1
 
 #if
 random 200
 checkitemw 碧海焚天 1
 #act
-PGAddHpPer + 2
+AddHpPer + 2
 
 #if
 random 200
 checkitemw 九宫八卦 1
 #act
-PGAddHpPer + 3
+AddHpPer + 3
 
 #if
 random 200
 checkitemw 不灭之握 1
 #act
-PGAddHpPer + 4
+AddHpPer + 4
 
 #if
 random 200
 checkitemw 多罗妖力 1
 #act
-PGAddHpPer + 5
+AddHpPer + 5
 
 #if
 random 200
 checkitemw 季子之血 1
 #act
-PGAddHpPer + 6
+AddHpPer + 6
 
 #if
 random 200
 checkitemw 生命之玺 1
 #act
-PGAddHpPer + 7
+AddHpPer + 7
 
 #if
 random 200
 checkitemw 神力玉玺 1
 #act
-PGAddHpPer + 8
+AddHpPer + 8
 
 #if
 random 200
 checkitemw 万灵血玺 1
 #act
-PGAddHpPer + 9
+AddHpPer + 9
 
 
 
@@ -390,7 +390,7 @@ PGAddHpPer + 9
 random 75
 checkitemw 咒 1
 #act
-PGAddHpPer - 2
+AddHpPer - 2
 
 
 #if
@@ -417,7 +417,7 @@ random 75
 CHECKCURRTARGETRACE = 0
 checkitemw 【天ヶ魔】 1
 #act
-M.PGAddmpPer - 100
+M.AddmpPer - 100
 SendCenterMsg 254 0 《·【天ヶ魔】·》触发,对方扣除所有魔法值!. 0 5
 M.SendCenterMsg 254 0 对方《·【天ヶ魔】·》触发,你被扣除所有魔法值!. 0 5
 
@@ -440,7 +440,7 @@ checkitemw 「赤炎·天照」 1
 equal N$赤炎天照 0
 #act
 mov N$赤炎天照 10
-PGAddHpPer - 5
+AddHpPer - 5
 SendCenterMsg 254 0 《「赤炎·天照」》触发,灼伤了目标5%生命值!. 0 5
 M.SendCenterMsg 254 0 对方《「赤炎·天照」》触发,你被灼伤了5%生命值. 0 5
 

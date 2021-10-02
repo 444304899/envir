@@ -84,12 +84,18 @@ CHECKGAMEGIRD ? <$STR(N20)>
 CALCVAR HUMAN 职位捐款数量1 + <$STR(N20)>
 GAMEGIRD - <$STR(N20)>
 SAVEVAR HUMAN 职位捐款数量1
-SORTVARTOLIST 职位捐款数量1 ..\QuestDiary\大熊数据\灵符捐款数据.txt ..\QuestDiary\大熊数据\灵符捐款排行.txt 0 1
-GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 0 A2 G6
-GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 1 A3 G7
-GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 2 A4 G8
-GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 3 A5 G9
-GetListString ..\QuestDiary\大熊数据\灵符捐款排行.txt 4 A6 G10
+
+SortHumVar 职位捐款数量1 S$灵符捐献玩家名 N$灵符捐献数量 0 1 10
+MOV  A2 S$灵符捐献玩家名1
+MOV  A3 S$灵符捐献玩家名2
+MOV  A4 S$灵符捐献玩家名3
+MOV  A5 S$灵符捐献玩家名4
+MOV  A6 S$灵符捐献玩家名5
+MOV  G6  N$灵符玩家捐献数量1
+MOV  G7  N$灵符玩家捐献数量2
+MOV  G8  N$灵符玩家捐献数量3
+MOV  G9  N$灵符玩家捐献数量4
+MOV  G10  N$灵符玩家捐献数量5
 goto @main
 MESSAGEBOX 捐款成功!
 #CALL [\大熊功能\职位计算.txt] @开始计算

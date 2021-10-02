@@ -3,19 +3,24 @@
 #IF
 #act
 #say
-\ \ \  \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/mijing.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=330.0|y=178.0|color=255|pimg=public/button/jrdt3.png|size=18|mimg=public/button/jrdt2.png|nimg=public/button/jrdt1.png|link=@传送1>
+<Text|x=54.0|y=41.0|color=236|size=16|text=想去看看那传说中的靠山宗秘境吗？>
+<Text|x=54.0|y=61.0|color=236|size=16|text=此地图爆率加成500% 超多怪物>
+<Text|x=54.0|y=81.0|color=236|size=16|text=进图要求秘境卷轴*5张或者50个金币一次>
+<Text|x=54.0|y=121.0|color=236|size=16|text=进图1小时后自动返回靠山宗>
+<Text|x=54.0|y=101.0|color=236|size=16|text=全区进入次数达到10次后触发秘境boss>
+<RText|x=54.0|y=141.0|color=255|size=16|text={<当前进入次数 <$str(g66)>／次,10次后重新计算/FCOLOR=236}>
 
-
-<>         <想去看看那传说中的靠山宗秘境吗？/AUTOCOLOR=158>\
-<>         <此地图爆率加成500% 超多怪物/AUTOCOLOR=158>\
-<>         <进图要求秘境卷轴*5张或者50个金币一次/AUTOCOLOR=158>\
-<>         <进图1小时后自动返回靠山宗/AUTOCOLOR=158>\
-<>         <全区进入次数达到10次后触发秘境boss/AUTOCOLOR=158>\
-<>         <当前进入次数 <$str(g66)>／次,10次后重新计算/AUTOCOLOR=158>\
-<>                      \   \  \
-
-
-<>                  <IMG:176:6:230:-26/@传送1>    \
+;<>         <想去看看那传说中的靠山宗秘境吗？/AUTOCOLOR=158>\
+;<>         <此地图爆率加成500% 超多怪物/AUTOCOLOR=158>\
+;<>         <进图要求秘境卷轴*5张或者50个金币一次/AUTOCOLOR=158>\
+;<>         <进图1小时后自动返回靠山宗/AUTOCOLOR=158>\
+;<>         <全区进入次数达到10次后触发秘境boss/AUTOCOLOR=158>\
+;<>         <当前进入次数 <$str(g66)>／次,10次后重新计算/AUTOCOLOR=158>\
+;<>                      \   \  \
+;<>                  <IMG:176:6:230:-26/@传送1>    \
 
 
 
@@ -27,7 +32,7 @@
 checkitem 秘境卷轴 5
 #act
 take 秘境卷轴 5
-MAPMOVE 靠山宗秘境
+MAPMOVE kaoshanmj
 SENDDELAYMSG 剩余[%s]自动传回靠山宗 3600 250 1 @传回地图
 INC G66 1
 GOTO @脚本
@@ -39,7 +44,7 @@ break
 checkgold 50
 #act
 take 金币 50
-MAPMOVE 靠山宗秘境
+MAPMOVE kaoshanmj
 SENDDELAYMSG 剩余[%s]自动传回靠山宗 3600 250 1 @传回地图
 INC G66 1
 GOTO @脚本
@@ -51,7 +56,7 @@ break
 #if
 large g66 9
 #act
-MonGenEx 靠山宗秘境 60  61 靠山宗秘境boss  10  1 0 253
+MonGenEx kaoshanmj 60  61 靠山宗秘境boss  10  1 0 253
 GOTO @脚本1
 SENDMOVEMSG 0 243 0 130 1 {提示:/FCOLOR=250}靠山宗秘境中{[靠山宗秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 0
 SENDMOVEMSG 0 243 0 170 1 {提示:/FCOLOR=250}靠山宗秘境中{[靠山宗秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 0
@@ -70,7 +75,7 @@ MOV G66 0
 [@传回地图]
 #if
 #act
-MAP DT_2
+MAP kaoshan
 
 
 

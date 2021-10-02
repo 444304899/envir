@@ -69,17 +69,33 @@ BREAK
 #IF
 #ACT
 #SAY
-\ \ \ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ItemShow|x=656.0|y=29.0|width=70|height=70|itemid=11586|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=235.0|y=167.0|effecttype=0|effectid=16418|dir=5|speed=1|scale=1|act=0>
+<Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
+<Text|x=600.0|y=135.0|color=251|size=16|text=1.[时装]·黑崎一护*1>
+<Text|x=600.0|y=163.0|color=251|size=16|text=2.时装羽毛*5000>
+<Text|x=600.0|y=189.0|color=251|size=16|text=3.风灵石·天*300>
+<Text|x=600.0|y=215.0|color=251|size=16|text=4.钻石2000>
+<Button|x=111.0|y=3.0|color=255|text=购买【风灵石·天】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成4>
+<Button|x=346.0|y=4.0|color=255|text=购买【风灵石·天*10】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成5>
+<RText|x=119.0|y=44.0|color=255|size=16|text=<购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}>
+<Button|x=646.0|y=345.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@1级切割>
+<Button|x=242.0|y=345.0|color=255|grey=1|size=18|mimg=public/button/pu2.png|nimg=public/button/pu1.png|pimg=public/button/pu3.png>
+<Button|x=332.0|y=345.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_1>
+
+
+
+
 ;　　　　　　　　    {[[时装]·更木剑八/FCOLOR=70}\
-<PlayImg:27:0:99:50:-50:-105>\
-<Itemshow:1586:0:605:102>\
-
-<playimg:13:725:10:100:578:60:0>\ \
-<ImgEx:41:187:188:189:590:250|250#  合成条件:^-^251# 1.[时装]·黑崎一护*1^-^251# 2.时装羽毛*5000^-^251# 3.风灵石·天*300^-^251# 4.钻石2000/@1级切割>
-<ImgEx:41:180:181:182:126:309>
-<ImgEx:41:183:184:185:123:309/@下一页_1>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
-
-<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+;<PlayImg:27:0:99:50:-50:-105>\
+;<Itemshow:1586:0:605:102>\
+;<playimg:13:725:10:100:578:60:0>\ \
+;<ImgEx:41:187:188:189:590:250|250#  合成条件:^-^251# 1.[时装]·黑崎一护*1^-^251# 2.时装羽毛*5000^-^251# 3.风灵石·天*300^-^251# 4.钻石2000/@1级切割>
+;<ImgEx:41:180:181:182:126:309>
+;<ImgEx:41:183:184:185:123:309/@下一页_1>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+;<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
 
 
 
@@ -87,17 +103,33 @@ BREAK
 #IF
 #ACT
 #SAY
-\ \ \ \
+
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ItemShow|x=656.0|y=29.0|width=70|height=70|itemid=11587|itemcount=1|showtips=1|bgtype=1>
+<Effect|x=235.0|y=167.0|effecttype=0|effectid=16420|dir=5|speed=1|scale=1|act=0>
+<Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
+<Text|x=600.0|y=135.0|color=251|size=16|text=1.[时装]·更木剑八*1>
+<Text|x=600.0|y=163.0|color=251|size=16|text=2.时装羽毛*5000>
+<Text|x=600.0|y=189.0|color=251|size=16|text=3.风灵石·天*400>
+<Text|x=600.0|y=215.0|color=251|size=16|text=4.钻石3000>
+<Button|x=111.0|y=3.0|color=255|text=购买【风灵石·天】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成4>
+<Button|x=346.0|y=4.0|color=255|text=购买【风灵石·天*10】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成5>
+<RText|x=119.0|y=44.0|color=255|size=16|text=<购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}>
+<Button|x=646.0|y=345.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@2级切割>
+<Button|x=242.0|y=345.0|color=255|size=18|mimg=public/button/pu2.png|nimg=public/button/pu1.png|pimg=public/button/pu3.png|link=@main>
+<Button|x=332.0|y=345.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_2>
+
 ;　　　　　　　　    {[[时装]·橘右京/FCOLOR=70}\
-<PlayImg:27:100:130:100:-70:-50>\
-<Itemshow:1587:0:610:102>\
+;<PlayImg:27:100:130:100:-70:-50>\
+;<Itemshow:1587:0:610:102>\
 
-<playimg:13:725:10:100:578:60:0>\ \
-<ImgEx:41:187:188:189:590:250|250#  合成条件:^-^251# 1.[时装]·更木剑八*1^-^251# 2.时装羽毛*5000^-^251# 3.风灵石·天*400^-^251# 4.钻石3000/@2级切割>
-<ImgEx:41:180:181:182:126:309/@main>
-<ImgEx:41:183:184:185:123:309/@下一页_2>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+;<playimg:13:725:10:100:578:60:0>\ \
+;<ImgEx:41:187:188:189:590:250|250#  合成条件:^-^251# 1.[时装]·更木剑八*1^-^251# 2.时装羽毛*5000^-^251# 3.风灵石·天*400^-^251# 4.钻石3000/@2级切割>
+;<ImgEx:41:180:181:182:126:309/@main>
+;<ImgEx:41:183:184:185:123:309/@下一页_2>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
 
-<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+;<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
 
 
 
@@ -105,17 +137,32 @@ BREAK
 #IF
 #ACT
 #SAY
-\ \ \ \
-;　　　　　　　　    {[时装]·鳯求凰/FCOLOR=70}\
-<PlayImg:27:1154:157:40:-100:-75>\
-<Itemshow:1594:0:610:102>\
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ItemShow|x=656.0|y=29.0|width=70|height=70|itemid=11594|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=235.0|y=167.0|effecttype=0|effectid=20295|dir=5|act=0|speed=1|scale=1>
+<Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
+<Text|x=600.0|y=135.0|color=251|size=16|text=1.★★「九天★祥云」★★>
+<Text|x=600.0|y=163.0|color=251|size=16|text=2.[时装]·橘右京]>
+<Text|x=600.0|y=189.0|color=251|size=16|text=3.风灵石·天*3000>
+<Text|x=600.0|y=215.0|color=251|size=16|text=4.钻石5000>
+<Button|x=111.0|y=3.0|color=255|text=购买【风灵石·天】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成4>
+<Button|x=346.0|y=4.0|color=255|text=购买【风灵石·天*10】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成5>
+<RText|x=119.0|y=44.0|color=255|size=16|text=<购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}>
+<Button|x=646.0|y=345.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@3级切割2>
+<Button|x=242.0|y=345.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_1>
+<Button|x=332.0|y=345.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@main>
 
-<playimg:13:725:10:100:578:60:0>\ \
-<ImgEx:41:187:188:189:590:230|250#  合成条件:^-^251# 1.★★「九天★祥云」★★^-^251# 2.[时装]·橘右京]^-^251# 3.风灵石·天*3000^-^251# 4.钻石5000/@3级切割2>
-<ImgEx:41:180:181:182:126:309/@下一页_1>
-<ImgEx:41:183:184:185:123:309/@main>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \  \
-<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}   \
-<ImgEx:41:187:188:189:590:-90|250#  合成条件:^-^251# 30000金币直接购买/@3级切割1>  \
+
+;　　　　　　　　    {[时装]·鳯求凰/FCOLOR=70}\
+;<PlayImg:27:1154:157:40:-100:-75>\
+;<Itemshow:1594:0:610:102>\
+;<playimg:13:725:10:100:578:60:0>\ \
+;<ImgEx:41:187:188:189:590:230|250#  合成条件:^-^251# 1.★★「九天★祥云」★★^-^251# 2.[时装]·橘右京]^-^251# 3.风灵石·天*3000^-^251# 4.钻石5000/@3级切割2>
+;<ImgEx:41:180:181:182:126:309/@下一页_1>
+;<ImgEx:41:183:184:185:123:309/@main>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \  \
+;<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}   \
+;<ImgEx:41:187:188:189:590:-90|250#  合成条件:^-^251# 30000金币直接购买/@3级切割1>  \
 
 
 

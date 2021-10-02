@@ -12,10 +12,37 @@
 +109
 +110
 +111
+;倒计时
+[@jieshu]
+#if
+#act
+SENDMSG 6 倒计时结束了
+goto @jieshu2
+DELBUTTON 101 1
+SENDMSG 6 倒计时
+
+[@StdModeFunc447]
+#IF
+#ACT
+ChangeHumNewValue 1 100000000 60
 
 
+ChangeHumNewValue 39 50 60
+ChangeHumNewValue 40 1000000 60
+ChangeHumNewValue 3 100000000 60
+ChangeHumNewValue 4 100000000 60
+ChangeHumNewValue 13 30 60
+SHOWPHANTOM 30 60
+SENDMSG 6 使用了管理员特制火腿肠爆率、攻击力、生命值大幅提升 时间60秒
+KILLMONBURSTRATE 50000 65535
+SENDMSG 7 当前杀怪物爆率为：<$KILLMONBURSTRATE>倍
+DELAYGOTO 200 @血量全满
 [@主界面按钮设置]
 #CALL [\主界面基础按钮\主界面基础按钮QF.txt] @基础按钮QF
+[@血量全满]
+#IF
+#ACT
+AddHpPer + 100
 [@ButtonClick10]
 #IF
 CHECKLEVELEX > 0
@@ -34,24 +61,13 @@ ADDBUTTON 100 11 71 72 73 0 350 0 -1
 SET [11] 1
 BREAK
 [@usercmd9]
-#IF
-ISADMIN
-#ACT
-#CALL [\寒流新假人\假人控制台.txt] @假人控制
 
 
 [@GETEXP]
-#IF
-ISDUMMY
-EQUAL <$GLOBAL(假人_杀怪快速升级开关)> 开启
-#ACT
-MOVR N$寒流假人升级就是快 <$GLOBAL(假人_杀怪补经验最低)> <$GLOBAL(假人_杀怪补经验最高)>
-CHANGEEXP + <$STR(N$寒流假人升级就是快)>
 
 
 
-
-
+;触发回城
 [@CloseClientBuff1]
 #IF
 #ACT
@@ -61,7 +77,7 @@ MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
 MESSAGEBOX 　　　温馨提示：\　\　　　　　当前在地图时间已到，系统自动将你传回！
 BREAK
 
-
+;顶部按钮触发
 [@ButtonClick2]
 
 #IF
@@ -101,7 +117,7 @@ BREAK
 [@ButtonClick5]
 #IF
 ;#CALL [\大熊功能\神火熔炉.txt] @神火系统
-#CALL [\大熊功能\狂暴.txt] @开启狂暴
+;#CALL [\大熊功能\狂暴.txt] @开启狂暴
 
 
 
@@ -238,18 +254,6 @@ break
 
 [@PlayLevelUp]
 
-#if
-isdummy
-#ACT
-movr N$下图随机数 100
-#CALL [\寒流新假人\假人升级触发.txt] @升级触发
-
-#if
-isdummy
-checklevel <$GLOBAL(假人_最低下图等级)>
-small N$下图随机数 <$GLOBAL(假人_下图几率)>
-#act
-#CALL [\寒流新假人\假人走动打怪.txt] @假人下图打怪
 
 
 #IF
@@ -306,20 +310,20 @@ AddTextListEX ..\..\..\..\..\跨区文件夹\全服商铺名称.txt <$STR(S1)>
 
 
 #IF
-CHECKMYSHOP
+CHECKSHOPSTALLSTATUS
 #ACT
 MESSAGEBOX 你已经有店铺了
 BREAK
 
 #IF
-CHECKSHOPNAME <$STR(S$1)>
+;CHECKSHOPNAME <$STR(S$1)>
 #ACT
 MESSAGEBOX <$STR(S$1)>店铺名称已经存在，请重新选择一个
 BREAK
 
 #IF
 #ACT
-CREATEMYSHOP <$STR(S$1)>
+;CREATEMYSHOP <$STR(S$1)>
 
 [@CreateMyShopOK]
 #SAY
@@ -395,7 +399,7 @@ BREAK
 #Act
 CLEARDELAYGOTO 1
 map <$MAP>
-CloseClientBuff 1
+;CloseClientBuff 1
 Break
 
 
@@ -440,7 +444,7 @@ CLEARDELAYGOTO 1
 movr N$坐标x 131 150
 movr N$坐标y 86 100
 MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
-CloseClientBuff 1
+;CloseClientBuff 1
 Break
 
 
@@ -456,7 +460,7 @@ BREAK
 #Act
 CLEARDELAYGOTO 1
 MAPMOVE 超脱  41 37
-CloseClientBuff 1
+;CloseClientBuff 1
 Break
 
 
@@ -477,7 +481,7 @@ CLEARDELAYGOTO 1
 movr N$坐标x 131 150
 movr N$坐标y 86 100
 MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
-CloseClientBuff 1
+;CloseClientBuff 1
 Break
 
 
@@ -521,8 +525,8 @@ MESSAGEBOX [提示]:你的PK点已经清除,下次小心点哦
 #ACT
 ;这个命令是用来修改，你的变量保存文件和人物名称列表文件里面的人物名称的，如果没有这些可以不使用这个命令
 ;这个命令也只能放在这个地方，放其他地方无效
-CHANGEHUMNAMEFILE ..\QuestDiary\变量文件\HQCQASave.txt
-CHANGEHUMNAMEFILE ..\QuestDiary\会员名称.txt
+;CHANGEHUMNAMEFILE ..\QuestDiary\变量文件\HQCQASave.txt
+;CHANGEHUMNAMEFILE ..\QuestDiary\会员名称.txt
 #SAY
 你的名字修改成功，旧名称：<$USERNAME> 新名称：<$USERNEWNAME>！\ \
 <关闭/@exit>\
@@ -549,46 +553,32 @@ CHANGEHUMNAMEFILE ..\QuestDiary\会员名称.txt
 #IF
 CHECKLEVELEX > 0
 #ACT
-SortHumVarToListEx SRYX-个人杀人 ..\QuestDiary\杀人游戏\杀人游戏排行数据.txt 1 ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1
-AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
-AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
-
+SortHumVar SRYX-个人杀人 S$杀人玩家名 N$杀人数 0 1 3
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数1 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 0 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第1名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第1数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第1名 = <$STR(S$杀人玩家名1)>
+CALCVAR GLOBAL SRYX-杀人第1数 = <$STR(N$杀人数1)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第1名 =
 CALCVAR GLOBAL SRYX-杀人第1数 =
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数2 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第2名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第2数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第2名 = <$STR(S$杀人玩家名2)>
+CALCVAR GLOBAL SRYX-杀人第2数 = <$STR(N$杀人数2)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第2名 =
 CALCVAR GLOBAL SRYX-杀人第2数 =
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数3 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 2 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第3名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第3数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第3名 = <$STR(S$杀人玩家名3)>
+CALCVAR GLOBAL SRYX-杀人第3数 = <$STR(N$杀人数3)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第3名 =
 CALCVAR GLOBAL SRYX-杀人第3数 =
+
 
 #if
 CHECKVAR GLOBAL SRYX-杀人第1名 = <$USERNAME>
@@ -740,7 +730,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 50
+AddHpPer + 50
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发「赤炎·天照」效果,原地复活.... 1 5
 ;BREAK
 
@@ -752,7 +742,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 55
+AddHpPer + 55
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发◎黑鳞铠甲◎效果,原地复活.... 1 5
 ;BREAK
 
@@ -764,7 +754,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 60
+AddHpPer + 60
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发古神皮甲效果,原地复活.... 1 5
 ;BREAK
 
@@ -776,7 +766,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 65
+AddHpPer + 65
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发九曲三相效果,原地复活... 1 5
 
 #IF
@@ -786,7 +776,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 70
+AddHpPer + 70
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发布拉巴斯王者统袍效果,原地复活.... 1 5
 ;BREAK
 
@@ -797,7 +787,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 75
+AddHpPer + 75
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发十万妖魂兽甲效果,原地复活.... 1 5
 ;BREAK
 
@@ -808,7 +798,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 80
+AddHpPer + 80
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发阿耳忒弥斯神袍效果,原地复活... 1 5
 
 ;BREAK
@@ -820,7 +810,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 85
+AddHpPer + 85
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发阳光战神的威严效果,原地复活... 1 5
 ;BREAK
 
@@ -831,7 +821,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 85
+AddHpPer + 85
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发阳光战神的威严效果,原地复活... 1 5
 ;BREAK
 
@@ -845,7 +835,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 90
+AddHpPer + 90
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发五龙铡效果,原地复活... 1 5
 ;BREAK
 
@@ -857,7 +847,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 100
+AddHpPer + 100
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发李主仙衣≮洪荒终≯效果,原地复活... 1 5
 ;BREAK
 
@@ -871,7 +861,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 100
+AddHpPer + 100
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发人.仙.鬼.怪.≮善恶兩分≯效果,原地复活.. 1 5
 ;BREAK
 
@@ -883,7 +873,7 @@ LARGE N$复活CD 299
 #ACT
 MOV N$复活CD 0
 GmExeCute 复活 Self
-PGAddHpPer + 100
+AddHpPer + 100
 SendCenterMsg 70 0 玩家【<$USERNAME>】触发孟姝皇袍效果,原地复活.. 1 5
 ;BREAK
 
@@ -892,7 +882,7 @@ SendCenterMsg 70 0 玩家【<$USERNAME>】触发孟姝皇袍效果,原地复活.. 1 5
 CHECKTITLE 轮回梦中取
 KILLBYHUM
 #ACT
-<$KILLER>.PGAddHpPer + 20
+<$KILLER>.AddHpPer + 20
 <$KILLER>.SENDMSG 7 恭喜你杀死对方，血量恢复20%
 ;BREAK
 
@@ -901,7 +891,7 @@ KILLBYHUM
 CHECKTITLE 镇压【天.地.人】
 KILLBYHUM
 #ACT
-<$KILLER>.PGAddHpPer + 20
+<$KILLER>.AddHpPer + 20
 <$KILLER>.SENDMSG 7 恭喜你杀死对方，血量恢复20%
 
 
@@ -909,7 +899,7 @@ KILLBYHUM
 CHECKTITLE 清棺璇
 KILLBYHUM
 #ACT
-<$KILLER>.PGAddHpPer + 20
+<$KILLER>.AddHpPer + 20
 <$KILLER>.SENDMSG 7 恭喜你杀死对方，血量恢复20%
 
 
@@ -917,26 +907,13 @@ KILLBYHUM
 CHECKTITLE 善庸混天绫
 KILLBYHUM
 #ACT
-<$KILLER>.PGAddHpPer + 20
+<$KILLER>.AddHpPer + 20
 <$KILLER>.SENDMSG 7 恭喜你杀死对方，血量恢复20%
 
 
 
 
-#IF
-ISDUMMY
-KillByHum
-#ACT
-SENDMSG 1 【江湖传言】:在[<$MapTitle>]发生一起凶案[<$USERNAME>]被[<$CURRRTARGETNAME>]杀死了
-DelayGoto 5000 @假人复活回城
-;BREAK
 
-#IF
-ISDUMMY
-#ACT
-SENDMSG 1 【江湖传言】:在[<$MapTitle>]发生一起怪物伤人事件[<$USERNAME>]被[<$CURRRTARGETNAME>]杀死了
-DelayGoto 5000 @假人复活回城
-;BREAK
 
 
 #IF
@@ -1048,7 +1025,7 @@ SETONTIMER 3 3
 SETONTIMER 4 20
 SETONTIMER 51 60
 SetOnTimer 116 1
-CloseClientBuff 1
+;CloseClientBuff 1
 ChangeModeEx 10 1
 HumanHP + 500000000
 #CALL [\大熊功能\职位计算.txt] @开始计算
@@ -1065,29 +1042,11 @@ break
 #ACT
 GmExeCute 复活 Self
 mapmove zc 148 148
-PGAddHpPer + 10
+AddHpPer + 10
 
 
 
 
-
-[@假人复活回城]
-#IF
-ISDUMMY
-#ACT
-GMEXECUTE 复活 Self
-HUMANHP + 80000000
-HUMANMP + 80000000
-movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
-movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
-mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
-DUMMYSTOP
-movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
-movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
-GOTONOW <$str(N$XX)> <$str(N$YY)>
-SETOFFTIMER 253
-MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
-SETONTIMER 252 <$STR(N$频率)>
 
 
 
@@ -1115,11 +1074,6 @@ SETONTIMER 252 <$STR(N$频率)>
 
 
 
-[@Struck]
-#IF
-ISDUMMY
-#ACT
-#CALL [\寒流新假人\假人各种触发.txt] @假人被攻击触发
 
 #IF
 #ACT
@@ -1138,26 +1092,9 @@ ISDUMMY
 
 
 [@MagicStruck]
-#IF
-ISDUMMY
-#ACT
-#CALL [\寒流新假人\假人各种触发.txt] @假人被攻击触发
-
 
 
 [@MagicAttack]
-#IF
-ISDUMMY
-EQUAL <$GLOBAL(假人_补伤害开关)> 开启
-#ACT
-#CALL [\寒流新假人\假人各种触发.txt] @假人补伤害
-
-#IF
-ISDUMMY
-EQUAL <$GLOBAL(假人_攻击吸血开关)> 开启
-#ACT
-#CALL [\寒流新假人\假人各种触发.txt] @假人吸血
-
 
 
 #IF
@@ -1178,9 +1115,9 @@ checkitemw の沙城霸主的战刃 1
 CHECKCURRTARGETRACE = 0
 EQUAL <$CURRRUSEMAGICID> 27
 #act
-P.PGAddHpPer - 15
+P.AddHpPer - 15
 SENDMSG 6 使用野蛮冲撞撞击敌人使目标掉血15%
-
+;自定义技能擒龙手
 [@MagTagFunc71]
 #if
 CHECKCURRTARGETRACE = 0
@@ -1194,7 +1131,7 @@ SENDMSG 6 使用擒龙手使目标锁定2秒，无法移动
 
 
 
-
+;自定义技能吸怪
 [@MagSelfFunc85]
 #if
 ;EQUAL <$CURRRUSEMAGICID> 85
@@ -1202,7 +1139,7 @@ not ISONMAP 封妖城
 not ISONMAP zc
 not ISONMAP 0150
 #act
-PGMoveMonsters <$X> <$Y> 20 0 0 0
+;MoveMonsters <$X> <$Y> 20 0 0 0
 sendmsg 6 范围20的所有怪物都吸过来了
 
 
@@ -1681,7 +1618,7 @@ SENDMOVEMSG 0 243 0 250 1 {符文药剂:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}使
 #CALL [\大熊功能\职位计算.txt] @开始计算
 break
 #ELSEACT
-PGAddHpPer = 0
+AddHpPer = 0
 SENDMOVEMSG 0 243 0 250 1 {符文药剂:/FCOLOR=250}玩家{[<$USERNAME>]/FCOLOR=254}使用符文药剂时突发意外,经脉逆乱而亡! 11 30 0
 MESSAGEBOX [提示]:使用失败,角色死亡!!..
 break
@@ -2541,11 +2478,6 @@ CHANGESPEED 1 0
 #ACT
 LINKPICKUPITEM
 
-#IF
-ISDUMMY
-#act
-mov S$捡到的装备名称  <$CURRTEMNAME>
-#CALL [\寒流新假人\假人自动穿戴更好的装备.txt] @假人自动穿戴更好的装备
 
 
 #IF
@@ -2695,7 +2627,7 @@ SENDMOVEMSG 0 253 255 140 2 <玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]杀戮过重
 
 
 #if
-not ISDUMMY
+;not ISDUMMY
 ISONMAP 混沌星界
 #act
 INC G499 1
@@ -2703,7 +2635,7 @@ SENDMSG 6 当前击杀《混沌星界》怪物数量为【<$STR(G499)>】...
 
 
 #IF
-not ISDUMMY
+;not ISDUMMY
 large G499 2000
 #ACT
 MOV G499 0
@@ -3027,10 +2959,11 @@ inc u24 500
 
 
 
-[@PickUpItem151]
+[@PickUpItem10151]
 #if
 checkitem 1000元宝 1
 #act
+SENDMSG 6 捡到了1000元宝
 take 1000元宝 1
 GAMEGOLD + 1000
 inc u24 1000
@@ -3304,8 +3237,8 @@ SHOWPROGRESSBARDLG 3 @满血材料 能量恢复中,进度%d%... 1 @满血中断
 [@满血材料]
 #IF
 #ACT
-PGAddHpPer + 99
-PGAddmpPer + 99
+AddHpPer + 99
+AddmpPer + 99
 [@满血中断]
 #IF
 #ACT
@@ -3404,7 +3337,9 @@ SETICON 4 19 120 0 -105 10 0 100 0
 #Act
 movr n$切割 1 9
 ;m.AddhpPer - <$STR(n$切割)>
-PGDelMonHpEx <$STR(n$切割)> 2 0 0 <$X> <$Y> 10 3
+;DelMonHpEx <$STR(n$切割)> 2 0 0 <$X> <$Y> 10 3
+RangeHarm <$X> <$Y> 10 300 12 <$STR(n$切割)> 0 2 56
+
 SENDMSG 6 [系统]：倚天辟地切割(<$STR(N$切割)>)%血量
 
 
@@ -3870,15 +3805,11 @@ SHOWPHANTOM 1 2 3 4 5 255 7 8 65535 10
 SHOWPHANTOM 1 2 3 4 5 60 7 8 1 10
 
 
+ 
 
 
 
 
-
-
-[@ESPRangeHarm1]
-#ACT
-;ESPPlayEffect 1
 
 
 

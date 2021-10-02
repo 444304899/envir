@@ -18,50 +18,32 @@ GOTO @初始化排序
 CHECKLEVELEX > 0
 #act
 VAR Integer HUMAN SRYX-个人杀人
-;LOADVAR     HUMAN SRYX-个人杀人 ..\QuestDiary\杀人游戏\杀人游戏排行数据.txt
-
-
 [@初始化排序]
 #IF
 CHECKLEVELEX > 0
 #ACT
-SortHumVarToListEx SRYX-个人杀人 ..\QuestDiary\杀人游戏\杀人游戏排行数据.txt 1 ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1
-AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
-AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
-
+SortHumVar SRYX-个人杀人 S$杀人玩家名 N$杀人数 0 1 3
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数1 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 0 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第1名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第1数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第1名 = <$STR(S$杀人玩家名1)>
+CALCVAR GLOBAL SRYX-杀人第1数 = <$STR(N$杀人数1)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第1名 =
 CALCVAR GLOBAL SRYX-杀人第1数 =
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数2 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第2名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第2数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第2名 = <$STR(S$杀人玩家名2)>
+CALCVAR GLOBAL SRYX-杀人第2数 = <$STR(N$杀人数2)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第2名 =
 CALCVAR GLOBAL SRYX-杀人第2数 =
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数3 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 2 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第3名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第3数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第3名 = <$STR(S$杀人玩家名3)>
+CALCVAR GLOBAL SRYX-杀人第3数 = <$STR(N$杀人数3)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第3名 =
 CALCVAR GLOBAL SRYX-杀人第3数 =

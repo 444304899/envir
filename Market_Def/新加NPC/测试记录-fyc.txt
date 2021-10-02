@@ -33,15 +33,23 @@ MOV N$钻石记录 0
 #ACT
 ;OPENMERCHANTBIGDLG 6 674 1 4 -8 -18  1 380 10
 #SAY
-\ \ \ \
-<>  <功能说明：/FCOLOR=251>\
-<>   <1./FCOLOR=103>{测试区通过首爆首杀获得的【钻石】自动进行记录！/FCOLOR=70}\
-<>   <2./FCOLOR=103>{正式开区后，记录的【元宝、钻石】可以领取50%/FCOLOR=242}\ \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ListView|children={2,3,4,5,6,7,8,9,10,11,12,13,14,15}|x=26.0|y=44.0|width=430|height=160|direction=1|bounce=1|margin=1|reload=0>
+<Text|color=251|size=16|text=功能说明：|id=2>
+<RText|color=255|size=16|text=<1./FCOLOR=103>{测试区通过首爆首杀获得的【钻石】自动进行记录！/FCOLOR=70}|id=3>
+<RText|color=255|size=16|text=<2./FCOLOR=103>{正式开区后，记录的【元宝、钻石】可以领取50%/FCOLOR=242}|id=4>
+\
+<RText|color=255|size=16|text=<本区当前状态/FCOLOR=250>：{<$STR(S$当前区服状态)>/FCOLOR=253}  <$STR(S$记录领取钻石)>    <正式开区凭账号领取/FCOLOR=210>|id=6>
+<RText|color=255|size=16|text=<当前共记录：/FCOLOR=250>{<$STR(N$元宝记录)> 元宝/FCOLOR=251}|id=7>
+<RText|color=255|size=16|text=<当前共记录：/FCOLOR=250>{<$STR(N$钻石记录)> 钻石/FCOLOR=249}|id=8>
 
-<>  <本区当前状态/FCOLOR=250>：{<$STR(S$当前区服状态)>/FCOLOR=253}  <$STR(S$记录领取钻石)>    <正式开区凭账号领取/FCOLOR=210>\ \
-\ \
-<>  <当前共记录：/FCOLOR=250>{<$STR(N$元宝记录)> 元宝/FCOLOR=251}\
-<>  <当前共记录：/FCOLOR=250>{<$STR(N$钻石记录)> 钻石/FCOLOR=249}\
+;<>  <功能说明：/FCOLOR=251>\
+;<>   <1./FCOLOR=103>{测试区通过首爆首杀获得的【钻石】自动进行记录！/FCOLOR=70}\
+;<>   <2./FCOLOR=103>{正式开区后，记录的【元宝、钻石】可以领取50%/FCOLOR=242}\ \
+;<>  <本区当前状态/FCOLOR=250>：{<$STR(S$当前区服状态)>/FCOLOR=253}  <$STR(S$记录领取钻石)>    <正式开区凭账号领取/FCOLOR=210>\ \
+;<>  <当前共记录：/FCOLOR=250>{<$STR(N$元宝记录)> 元宝/FCOLOR=251}\
+;<>  <当前共记录：/FCOLOR=250>{<$STR(N$钻石记录)> 钻石/FCOLOR=249}\
 
 
 

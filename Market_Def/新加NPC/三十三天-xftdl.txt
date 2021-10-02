@@ -2,21 +2,44 @@
 #IF
 #act
 #say
-\ \ \  \
-<Img:266:13:420:0>\
-<>                                                                        <三十三天:/AUTOCOLOR=249><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5>     \  \
-<>                                                                        <怪物介绍：领域所有BOSS/AUTOCOLOR=251>\  \  \
-<Img:266:13:420:-5>\
-<>                                                                        <第七天:/AUTOCOLOR=251>  <ItemShow:1547:0:12:-15:1> <ItemShow:1548:0:17:-15:1> <ItemShow:1549:0:25:-15:1>  \ \
-<>                                                                        <怪物介绍：至尊柳神 大龟驮 混世魔猿/AUTOCOLOR=251>\ \ \
-<Img:266:13:420:-5>\
-<>                                                                        <第九天:/AUTOCOLOR=251>  <ItemShow:1551:0:12:-15:1> <ItemShow:1552:0:17:-15:1> <ItemShow:1553:0:25:-15:1>  \ \
-<>                                                                        <怪物介绍：神圣孔雀 不死仙凰 齐道临/AUTOCOLOR=251>\ \
 
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/dtcs.png|reset=1>
+<Button|x=781.0|y=19.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=399.0|y=395.0|color=255|size=18|pimg=public/button/jrdt3.png|nimg=public/button/jrdt1.png|mimg=public/button/jrdt2.png|link=@传送1>
+<ListView|children={2,3,4,5,6,7,8,9,10,11,12,13,14,15}|x=97.0|y=309.0|width=702|height=78|direction=2|bounce=1|margin=1|reload=0>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=103.0|y=314.0|bgtype=1|grey=0|id=2>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=174.0|y=314.0|bgtype=1|grey=0|id=3>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=246.0|y=314.0|bgtype=1|grey=0|id=4>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=319.0|y=314.0|bgtype=1|grey=0|id=5>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=389.0|y=314.0|bgtype=1|grey=0|id=6>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=458.0|y=314.0|bgtype=1|grey=0|id=7>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=700.0|y=314.0|bgtype=1|grey=0|id=8>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=9>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=10>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=11>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=12>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=13>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=14>
 
+<ListView|children={30,31,32,33}|x=98.0|y=217.0|width=702|height=75|direction=1|bounce=1|margin=2|reload=0>
+<RText|color=255|size=18|text=<封天画卷信物*10/FCOLOR=250>|id=30>
+<RText|color=255|size=18|text=<要求激活仙墟/FCOLOR=250>|id=31>
+<RText|color=255|size=18|text=<要求渡劫三以上/FCOLOR=250>|id=32>
+<RText|color=255|size=18|text=<激活后永久进入/FCOLOR=250>|id=33>
 
+<ListView|children={40}|x=292.0|y=57.0|width=300|height=140|direction=1|bounce=0|margin=1|reload=0>
+<Img|ay=1|x=287.0|y=56.0|width=300|height=359|esc=0|img=public/mmap/33day.png|id=40>
 
-<>                        <IMG:176:6:445:-230|250#封天画卷信物*10^-^250#要求激活仙墟^-^250#要求渡劫三以上^-^250#激活后永久进入/@传送1>
+;<Img:266:13:420:0>\
+;<>                                                                        <三十三天:/AUTOCOLOR=249><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5>     \  \
+;<>                                                                        <怪物介绍：领域所有BOSS/AUTOCOLOR=251>\  \  \
+;<Img:266:13:420:-5>\
+;<>                                                                        <第七天:/AUTOCOLOR=251>  <ItemShow:1547:0:12:-15:1> <ItemShow:1548:0:17:-15:1> <ItemShow:1549:0:25:-15:1>  \ \
+;<>                                                                        <怪物介绍：至尊柳神 大龟驮 混世魔猿/AUTOCOLOR=251>\ \ \
+;<Img:266:13:420:-5>\
+;<>                                                                        <第九天:/AUTOCOLOR=251>  <ItemShow:1551:0:12:-15:1> <ItemShow:1552:0:17:-15:1> <ItemShow:1553:0:25:-15:1>  \ \
+;<>                                                                        <怪物介绍：神圣孔雀 不死仙凰 齐道临/AUTOCOLOR=251>\ \
+;<>                        <IMG:176:6:445:-230|250#封天画卷信物*10^-^250#要求激活仙墟^-^250#要求渡劫三以上^-^250#激活后永久进入/@传送1>
 
 
 [@传送1]
@@ -26,7 +49,7 @@ Check  [402] 1
 Check  [403] 1
 Check  [404] 1
 #act
-MAPMOVE  三十三天  58 26
+MAPMOVE  33day  58 26
 SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
 break
 
@@ -38,7 +61,7 @@ checkitem 封天画卷的信物 10
 #act
 take 封天画卷的信物 10
 set [401] 1
-MAPMOVE  三十三天  58 26
+MAPMOVE  33day  58 26
 SENDMSG 0 {百团大战:|250:15}{玩家|255:15}{『<$USERNAME>』|251:15}{进入了地图：|255:15}{【<$MapTitle>】|250:15}{.探索神秘世界！！|255:15}
 #elseact
 MESSAGEBOX 您还没有实力挑战世界地图！！

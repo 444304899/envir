@@ -21,7 +21,7 @@
 {
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+ReadConfigFileItem ..\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
 
 
 #if
@@ -219,8 +219,8 @@ Take 金币 100
 #ACT
 ;这个命令是用来修改，你的变量保存文件和人物名称列表文件里面的人物名称的，如果没有这些可以不使用这个命令
 ;这个命令也只能放在这个地方，放其他地方无效
-CHANGEHUMNAMEFILE ..\QuestDiary\改名文件\HQCQASave.txt
-CHANGEHUMNAMEFILE ..\QuestDiary\改名名称.txt
+;CHANGEHUMNAMEFILE ..\QuestDiary\改名文件\HQCQASave.txt
+;CHANGEHUMNAMEFILE ..\QuestDiary\改名名称.txt
 #SAY
 你的名字修改成功，旧名称：<$USERNAME> 新名称：<$USERNEWNAME>！\ \
 <关闭/@exit>\
@@ -341,7 +341,7 @@ break
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+ReadConfigFileItem ..\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
 
 #if
 #act

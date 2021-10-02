@@ -3,8 +3,9 @@
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
-PGExtractString : <$STR(S$觉醒配置信息)> S$分割结果数组1
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组1_
+
 mov S$转生材料 <$STR(S$分割结果数组1_1)>
 mov S$奖励暴击 <$STR(S$分割结果数组1_2)>
 mov S$材料数量 <$STR(S$分割结果数组1_3)>
@@ -74,8 +75,9 @@ break
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
-PGExtractString : <$STR(S$觉醒配置信息)> S$分割结果数组2
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
+
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组2_
 mov S$转生材料 <$STR(S$分割结果数组2_1)>
 mov S$奖励暴击 <$STR(S$分割结果数组2_2)>
 mov S$材料数量 <$STR(S$分割结果数组2_3)>
@@ -133,8 +135,8 @@ break
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
-PGExtractString : <$STR(S$觉醒配置信息)> S$分割结果数组3
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组3_
 mov S$转生材料 <$STR(S$分割结果数组3_1)>
 mov S$奖励暴击 <$STR(S$分割结果数组3_2)>
 mov S$材料数量 <$STR(S$分割结果数组3_3)>
@@ -195,8 +197,8 @@ break
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
-PGExtractString : <$STR(S$觉醒配置信息)> S$分割结果数组4
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组4_
 mov S$转生材料 <$STR(S$分割结果数组4_1)>
 mov S$奖励暴击 <$STR(S$分割结果数组4_2)>
 mov S$材料数量 <$STR(S$分割结果数组4_3)>
@@ -260,8 +262,8 @@ CHECKLEVELEX > 200
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
-PGExtractString : <$STR(S$觉醒配置信息)> S$分割结果数组5
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 U21 S$觉醒配置信息
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组5_
 mov S$转生材料 <$STR(S$分割结果数组5_1)>
 mov S$奖励暴击 <$STR(S$分割结果数组5_2)>
 mov S$材料数量 <$STR(S$分割结果数组5_3)>

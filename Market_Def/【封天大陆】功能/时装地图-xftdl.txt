@@ -3,28 +3,30 @@
 #IF
 #act
 #say
-<>                         <playimg:27:1154:157:40:180:70>\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \ \  \ \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/smzd.png|reset=1>
+<Button|x=781.0|y=19.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=100.0|y=90.0|color=150,158,251,249,253|size=16|text=[时装]·鳯求凰专署地图>
+<Text|x=100.0|y=136.0|color=150,251,249,253|size=16|text=此地图剑甲爆率高图>
+<Text|x=100.0|y=182.0|color=150,251,249,253|size=16|text=12小时一只终极BOSS必出终极专署>
+<Text|x=100.0|y=228.0|color=150,251,249,253|size=16|text=牛鼻怪一个人可能干不死哦~~~>
+<Button|x=94.0|y=284.0|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|nimg=public/button/lbtn1.png|color=251|size=18|text=鳯求凰专署地图|link=@时装合成4>
+<Effect|x=455.0|y=162.0|effecttype=0|effectid=20295|dir=5|speed=1|scale=1|act=0>
 
 
-<>                                                   <[时装]·鳯求凰专署地图/AUTOCOLOR=150>\  \
-<>                                                   <此地图剑甲爆率高/AUTOCOLOR=150>\  \
-<>                                                   <12小时一只终极BOSS必出终极专署/AUTOCOLOR=150>\  \
-<>                                                   <牛鼻怪一个人可能干不死哦~~~/AUTOCOLOR=249>\   \
-
-<>                      \
-
-<>                                                         <鳯求凰专署地图/@传送1>    \
-
-
-[
-
+;<>                         <playimg:27:1154:157:40:180:70>\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \ \  \ \
+;<>                                                   <[时装]·鳯求凰专署地图/AUTOCOLOR=150>\  \
+;<>                                                   <此地图剑甲爆率高/AUTOCOLOR=150>\  \
+;<>                                                   <12小时一只终极BOSS必出终极专署/AUTOCOLOR=150>\  \
+;<>                                                   <牛鼻怪一个人可能干不死哦~~~/AUTOCOLOR=249>\   \
+;<>                      \
+;<>                                                         <鳯求凰专署地图/@传送1>    \
 
 
 [@传送1]
 #if
 CHECKITEMW [时装]·鳯求凰 1
 #act
-MAPMOVE  鳯求凰
+MAPMOVE  fengqiuhuang
 SENDDELAYMSG 自动传回封妖城%s 3600 255 0 @给礼物
 SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
 break
@@ -33,7 +35,7 @@ break
 [@给礼物]
 #if
 #act
-MAPMOVE  封妖城 63 72
+MAPMOVE  fyc 63 72
 
 
 

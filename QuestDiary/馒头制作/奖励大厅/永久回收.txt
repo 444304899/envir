@@ -10,7 +10,7 @@ BREAK
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+ReadConfigFileItem ..\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
 
 
 #if

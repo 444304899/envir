@@ -2,13 +2,36 @@
 #if
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \
-<>                                                                                                      <点击关闭/@关闭>  \
-<>                                                  <神秘的过客：/FCOLOR=58> \ \
-<>                                                <收集来这件物品：/FCOLOR=161><无轩之黄魄图纸*5/FCOLOR=250><./FCOLOR=161><1000钻石/FCOLOR=250> \ \
-<>                                                <ItemShow:1609:5:0:-13:1> <+ 1000钻石 =/FCOLOR=161>  <ItemShow:1536:0:0:-13:1>  <《请帮我合成》/@提交>\ \ \
-<>                                                <收集来这件物品：/FCOLOR=161><无轩之玄魄图纸*5 + 无轩之黄魄/FCOLOR=250><./FCOLOR=161><5000钻石/FCOLOR=250> \ \
-<>                                                <ItemShow:1536:1:0:-13:1> + <ItemShow:1610:5:0:-13:1> <+ 5000钻石 =/FCOLOR=161> <ItemShow:1537:0:0:-19:1>  <《请帮我合成》/@提交1>\ \ \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/wxdcc.png|reset=1>
+<Button|x=730.0|y=0.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=110.0|y=80.0|color=58|size=18|text=神秘的过客：>
+<RText|x=135.0|y=132.0|color=255|size=16|text=<收集来这件物品：/FCOLOR=251><无轩之黄魄图纸*5/FCOLOR=250><./FCOLOR=250><1000钻石/FCOLOR=250>>
+<RText|x=135.0|y=248.0|color=255|size=16|text=<收集来这件物品：/FCOLOR=251><无轩之玄魄图纸*5 + 无轩之黄魄/FCOLOR=250><./FCOLOR=250><5000钻石/FCOLOR=250>>
+<Img|x=132.0|y=166.0|img=public/box/itembox.png|esc=0>
+<Img|x=336.0|y=166.0|img=public/box/itembox.png|esc=0>
+<Img|x=114.0|y=278.0|img=public/box/itembox.png|esc=0>
+<Img|x=208.0|y=278.0|img=public/box/itembox.png|esc=0>
+<Img|x=412.0|y=278.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=138.0|y=170.0|itemid=11609|itemcount=5|bgtype=0|showtips=1|color=7|grey=0>
+<ItemShow|x=342.0|y=170.0|itemid=11536|itemcount=1|showtips=1|grey=0|bgtype=0>
+<ItemShow|x=120.0|y=282.0|itemid=11536|itemcount=1|bgtype=0|showtips=1|color=7|grey=0>
+<ItemShow|x=214.0|y=282.0|itemid=11610|itemcount=5|bgtype=0|showtips=1|color=7|grey=0>
+<ItemShow|x=418.0|y=282.0|itemid=11537|itemcount=1|showtips=1|grey=0|bgtype=0>
+<Text|x=227.0|y=192.0|color=251|size=16|text=+ 1000钻石 =>
+<Text|x=305.0|y=300.0|color=251|size=16|text=+ 5000钻石 =>
+<Text|x=192.0|y=300.0|color=251|size=16|text=+>
+<Button|x=528.0|y=188.0|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|nimg=public/button/lbtn1.png|color=251|size=18|text=《请帮我合成》|link=@提交>
+<Button|x=528.0|y=300.0|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|nimg=public/button/lbtn1.png|color=251|size=18|text=《请帮我合成》|link=@提交1>
+
+;<Text|x=540.0|y=192.0|color=251|size=16|text=《请帮我合成》|link=@提交>
+;<Text|x=540.0|y=300.0|color=251|size=16|text=《请帮我合成》|link=@提交1>
+
+;<>                                                                                                      <点击关闭/@关闭>  \
+;<>                                                  <神秘的过客：/FCOLOR=58> \ \
+;<>                                                <收集来这件物品：/FCOLOR=161><无轩之黄魄图纸*5/FCOLOR=250><./FCOLOR=161><1000钻石/FCOLOR=250> \ \
+;<>                                                <ItemShow:1609:5:0:-13:1> <+ 1000钻石 =/FCOLOR=161>  <ItemShow:1536:0:0:-13:1>  <《请帮我合成》/@提交>\ \ \
+;<>                                                <收集来这件物品：/FCOLOR=161><无轩之玄魄图纸*5 + 无轩之黄魄/FCOLOR=250><./FCOLOR=161><5000钻石/FCOLOR=250> \ \
+;<>                                                <ItemShow:1536:1:0:-13:1> + <ItemShow:1610:5:0:-13:1> <+ 5000钻石 =/FCOLOR=161> <ItemShow:1537:0:0:-19:1>  <《请帮我合成》/@提交1>\ \ \
 
 
 

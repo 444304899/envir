@@ -1,0 +1,21 @@
+[@main]
+#if
+#act
+SENDMSG 6 11
+#say
+<生成随机数/@自定义数字><自定义变量排序/@排序>
+[@自定义数字]
+#if
+#act
+VAR Integer HUMAN 自定义数字
+MOVR N$cs 11
+CALCVAR HUMAN 自定义数字 = <$str(N$cs)>
+SAVEVAR HUMAN 自定义数字
+SENDMSG 6 生成了随机数：<$str(N$cs)>自定义变量：<$HUMAN(自定义数字)>
+[@排序]
+#if
+#act
+SortHumVar 自定义数字 S$排序写入变量字符 N$排序写入变量数字 0 1 10
+SENDMSG 0 -<$str(S$排序写入变量字符1)>:<$STR(N$排序写入变量数字1)>
+SENDMSG 0 -<$str(S$排序写入变量字符2)>:<$STR(N$排序写入变量数字2)>
+SENDMSG 0 -<$str(S$排序写入变量字符3)>:<$STR(N$排序写入变量数字3)>

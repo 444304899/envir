@@ -4,18 +4,25 @@
 #if
 #act
 #say
-\ \ \
 
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=140.0|y=47.0|color=150,251,249,253|size=16|text=有此技能一打三？牛B到家>
+<Text|x=55.0|y=69.0|color=150,251,249,253|size=16|text=合成条件400张魔法盾书页>
+<Text|x=250.0|y=69.0|color=150,251,249,253|size=16|text=或者5000个金币购买>
+<Text|x=147.0|y=91.0|color=150,251,249,253|size=16|text=四级魔法盾绝对物超所值>
+<Text|x=248.0|y=122.0|color=151|size=16|text=合成四级魔法盾|link=@传送1>
+<Text|x=82.0|y=122.0|color=151|size=16|text=购买四级魔法盾|link=@传送2>
+<Text|x=82.0|y=170.0|color=151|size=16|text=购买魔法盾书页|link=@传送3>
+<Text|x=247.0|y=170.0|color=151|size=16|text=购买魔法盾书页*10|link=@传送4>
 
-<>                          <有此技能一打三？牛B到家/AUTOCOLOR=158>\
-<>                          <合成条件400张魔法盾书页/AUTOCOLOR=158>\
-<>                          <或者5000个金币购买/AUTOCOLOR=158>\
-<>                          <四级魔法盾绝对物超所值/AUTOCOLOR=158>\
-
-<>                      \
-
-<>                   <合成四级魔法盾/@传送1>       <购买四级魔法盾/@传送2> \ \
-<>                   <购买魔法盾书页|10金币一张/@传送3>       <购买魔法盾书页*10|100金币10张/@传送4>     \
+;<>                          <有此技能一打三？牛B到家/AUTOCOLOR=158>\
+;<>                          <合成条件400张魔法盾书页/AUTOCOLOR=158>\
+;<>                          <或者5000个金币购买/AUTOCOLOR=158>\
+;<>                          <四级魔法盾绝对物超所值/AUTOCOLOR=158>\
+;<>                      \
+;<>                   <合成四级魔法盾/@传送1>       <购买四级魔法盾/@传送2> \ \
+;<>                   <购买魔法盾书页|10金币一张/@传送3>       <购买魔法盾书页*10|100金币10张/@传送4>     \
 
 
 [@传送4]

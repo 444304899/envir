@@ -2,33 +2,46 @@
 #IF
 #act
 #say
-\ \  \  \
-<Img:266:13:420:-5>\
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=public/box/dtcs.png|reset=1|move=1>
+<Button|x=781.0|y=19.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=399.0|y=395.0|color=255|size=18|pimg=public/button/jrdt3.png|nimg=public/button/jrdt1.png|mimg=public/button/jrdt2.png|link=@传送1>
+<ListView|children={2,3,4,5,6,7,8,9,10,11,12,13,14,15}|x=97.0|y=309.0|width=702|height=78|direction=2|bounce=1|margin=1|reload=0>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=103.0|y=314.0|bgtype=1|grey=0|id=2>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=174.0|y=314.0|bgtype=1|grey=0|id=3>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=246.0|y=314.0|bgtype=1|grey=0|id=4>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=319.0|y=314.0|bgtype=1|grey=0|id=5>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=389.0|y=314.0|bgtype=1|grey=0|id=6>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=458.0|y=314.0|bgtype=1|grey=0|id=7>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|x=700.0|y=314.0|bgtype=1|grey=0|id=8>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=9>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=10>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=11>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=12>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=13>
+<ItemShow|itemid=10188|itemcount=1|showtips=1|bgtype=1|grey=0|id=14>
 
-<>                                                                        <靠山宗:  /AUTOCOLOR=249><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5>  \   \
-<>                                                                        <怪物介绍：领域所有BOSS/AUTOCOLOR=251>\  \
-<Img:266:13:420:-5>\
-<>                                                                        <鸿蒙空间:/AUTOCOLOR=251><ItemShow:1484:0:15:-15:1><ItemShow:1487:0:20:-15:1><ItemShow:1490:0:25:-15:1> <ItemShow:1294:0:25:-15:1>  \  \
-<>                                                                        <怪物介绍：苍·龙 天地无情 鸿蒙金榜 鸿蒙神尊  /AUTOCOLOR=251>\ \
-<Img:266:13:420:-5>\
-<>                                                                        <鸿蒙空间:/AUTOCOLOR=251><ItemShow:1485:0:15:-15:1><ItemShow:1482:0:20:-15:1><ItemShow:1480:0:16:-24:1> <ItemShow:1483:0:-3:-24:1> \
-<>                                                                        <彼岸花  :/AUTOCOLOR=251>  \
-<>                                                                        <怪物介绍：古妖 古魔 青衣韩山 季家之子/AUTOCOLOR=251>\ \
-<Img:266:13:420:-5>\
-<>                                                                        <彼岸花  :/AUTOCOLOR=251><ItemShow:1481:0:15:-15:1><ItemShow:1486:0:20:-15:1><ItemShow:1488:0:16:-24:1> <ItemShow:1489:0:7:-16:1>  \ \
-<>                                                                        <怪物介绍：寒土妖帝 血面老怪 靠山老祖 妖女芷香/AUTOCOLOR=251>\
+<ListView|children={30,31,32}|x=98.0|y=217.0|width=702|height=75|direction=1|bounce=1|margin=2|reload=0>
+<RText|color=255|size=18|text=<封天画卷信物*1/FCOLOR=250>|id=30>
+<RText|color=255|size=18|text=<要求渡劫一以上/FCOLOR=250>|id=31>
+<RText|color=255|size=18|text=<激活后永久进入/FCOLOR=250>|id=32>
 
+<ListView|children={40}|x=292.0|y=57.0|width=300|height=140|direction=1|bounce=1|margin=1|reload=0>
+<Img|ay=1|x=287.0|y=56.0|width=300|height=221|esc=0|img=public/mmap/kaoshan.png|id=40>
 
-
-
-
-
-
-<>                        <IMG:176:6:445:-265|250#封天画卷信物*1^-^250#要求渡劫一以上^-^250#激活后永久进入/@传送1>
-
-
-
-
+;<Img:266:13:420:-5>\
+;<><靠山宗:  /AUTOCOLOR=249><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5><Img:265:13:0:-5>  \   \
+;<><怪物介绍：领域所有BOSS/AUTOCOLOR=251>\  \
+;<Img:266:13:420:-5>\
+;<><鸿蒙空间:/AUTOCOLOR=251><ItemShow:1484:0:15:-15:1><ItemShow:1487:0:20:-15:1><ItemShow:1490:0:25:-15:1> <ItemShow:1294:0:25:-15:1>  \  \
+;<><怪物介绍：苍·龙 天地无情 鸿蒙金榜 鸿蒙神尊  /AUTOCOLOR=251>\ \
+;<Img:266:13:420:-5>\
+;<<鸿蒙空间:/AUTOCOLOR=251><ItemShow:1485:0:15:-15:1><ItemShow:1482:0:20:-15:1><ItemShow:1480:0:16:-24:1> <ItemShow:1483:0:-3:-24:1> \
+;<><彼岸花  :/AUTOCOLOR=251>  \
+;<><怪物介绍：古妖 古魔 青衣韩山 季家之子/AUTOCOLOR=251>\ \
+;<Img:266:13:420:-5>\
+;<><彼岸花  :/AUTOCOLOR=251><ItemShow:1481:0:15:-15:1><ItemShow:1486:0:20:-15:1><ItemShow:1488:0:16:-24:1> <ItemShow:1489:0:7:-16:1>  \ \
+;<><怪物介绍：寒土妖帝 血面老怪 靠山老祖 妖女芷香/AUTOCOLOR=251>\
+;<><IMG:176:6:445:-265|250#封天画卷信物*1^-^250#要求渡劫一以上^-^250#激活后永久进入/@传送1>
 
 
 
@@ -37,7 +50,7 @@
 #if
 Check [399] 1
 #act
-MAPMOVE  DT_2 16 153
+MAPMOVE  kaoshan 16 153
 SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
 break
 
@@ -49,5 +62,7 @@ checkitem 封天画卷的信物 1
 #act
 take 封天画卷的信物 1
 set [399] 1
-MAPMOVE  DT_2 16 153
+MAPMOVE  kaoshan 16 153
 SendCenterMsg 70 0 〖传送使者〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..冒险家祝你好运!. 1 10
+#elseact
+MESSAGEBOX 您还没有实力挑战世界地图！！

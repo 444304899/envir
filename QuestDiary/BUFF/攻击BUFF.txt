@@ -9,16 +9,7 @@
 
 
 
-#IF
-Random 100
-CHECKCURRTARGETRACE = 0
-CHECKUSEITEM 3
-CHECKITEMADDVALUE 3 1 = 11
-#ACT
-<$CURRRTARGETNAME>.SCREENEFFECT 0 0 43 931 1 1 3000 0
-SENDMSG 7 神秘BUFF[乌云遮日]特殊效果生效,对方放进入黑屏状态！
-<$CURRRTARGETNAME>.SENDMSG 5 中了神秘BUFF[乌云遮日]，时间3秒！
-break
+
 
 
 
@@ -29,7 +20,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃任何切割包括时装的怪物.txt <$CURRRTARGETNAME
 NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 #act
-m.PGAddHpPer - 1
+m.AddHpPer - 1
 
 
 
@@ -43,12 +34,12 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃任何切割包括时装的怪物.txt <$CURRRTARGETNAME
 NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 #act
-m.PGAddHpPer - 1
+m.AddHpPer - 1
 
 
 
 #if
-PGRandomEx 1 50
+RandomEx 1 50
 <$CURRRTARGETNAME>.checkitem 【卡尔-艾尔】 1
 <$CURRRTARGETNAME>.small N$免疫CD 1
 #ACT
@@ -64,7 +55,7 @@ SENDMSG 7 对方的 【卡尔-艾尔】BUFF触发，免疫所有buff五秒！！
 break
 
 #if
-PGRandomEx 1 100
+RandomEx 1 100
 checkitem 【披得】 1
 #act
 ChangeModeEx 13 1 1 2
@@ -75,7 +66,7 @@ SENDMSG 7 【披得】BUFF触发，攻击使敌人进入蛛网状态2s！！
 
 
 #if
-PGRandomEx 1 30
+RandomEx 1 30
 equal u31 20
 SMALL N$加速CD 0
 #act
@@ -85,7 +76,7 @@ mov N$加速CD 10
 SENDMSG 7 杀人书功能触发无限刀，持续5秒！！！！
 
 #if
-PGRandomEx 1 45
+RandomEx 1 45
 equal u31 19
 SMALL N$加速CD 0
 #act
@@ -95,7 +86,7 @@ mov N$加速CD 10
 SENDMSG 7 杀人书功能触发无限刀，持续4秒！！！！
 
 #if
-PGRandomEx 1 45
+RandomEx 1 45
 equal u31 18
 SMALL N$加速CD 0
 #act
@@ -105,7 +96,7 @@ mov N$加速CD 10
 SENDMSG 7 杀人书功能触发无限刀，持续4秒！！！！
 
 #if
-PGRandomEx 1 45
+RandomEx 1 45
 equal u31 17
 SMALL N$加速CD 0
 #act
@@ -116,7 +107,7 @@ SENDMSG 7 杀人书功能触发无限刀，持续4秒！！！！
 
 
 #if
-PGRandomEx 1 45
+RandomEx 1 45
 equal u31 16
 SMALL N$加速CD 0
 #act
@@ -128,7 +119,7 @@ SENDMSG 7 杀人书功能触发无限刀，持续4秒！！！！
 
 
 #if
-PGRandomEx 1 45
+RandomEx 1 45
 equal u31 15
 ;checkitem 杀人书
 SMALL N$加速CD 0
@@ -140,7 +131,7 @@ SENDMSG 7 杀人书功能触发无限刀，持续4秒！！！！
 
 
 #if
-PGRandomEx 1 60
+RandomEx 1 60
 equal u31 14
 ;checkitem 杀人书
 SMALL N$加速CD 0
@@ -151,7 +142,7 @@ mov N$加速CD 20
 SENDMSG 7 杀人书功能触发无限刀，持续3秒！！！！
 
 #if
-PGRandomEx 1 60
+RandomEx 1 60
 equal u31 13
 ;checkitem 杀人书
 SMALL N$加速CD 0
@@ -163,7 +154,7 @@ SENDMSG 7 杀人书功能触发无限刀，持续3秒！！！！
 
 
 #if
-PGRandomEx 1 60
+RandomEx 1 60
 equal u31 12
 ;checkitem 杀人书
 SMALL N$加速CD 0
@@ -174,7 +165,7 @@ mov N$加速CD 20
 SENDMSG 7 杀人书功能触发无限刀，持续3秒！！！！
 
 #if
-PGRandomEx 1 60
+RandomEx 1 60
 equal u31 11
 ;checkitem 杀人书
 SMALL N$加速CD 0
@@ -186,7 +177,7 @@ SENDMSG 7 杀人书功能触发无限刀，持续3秒！！！！
 
 
 #if
-PGRandomEx 1 60
+RandomEx 1 60
 equal u31 10
 ;checkitem 杀人书
 SMALL N$加速CD 0
@@ -204,7 +195,7 @@ SENDMSG 7 杀人书功能触发无限刀，持续3秒！！！！
 #if
 ;CHECKCURRTARGETRACE = 0
 checkitemw 一指·篡天运 1
-PGRandomEx 1 100
+RandomEx 1 100
 #act
 CHANGESPEED 1 5 3
 <$CURRRTARGETNAME>.CHANGESPEED 1 -4 5
@@ -217,7 +208,7 @@ SENDMSG 7 一指·篡天运BUFF触发，移动速度增加50%持续3秒！！
 #if
 ;CHECKCURRTARGETRACE = 0
 checkitemw 玄华之悲苦 1
-PGRandomEx 1 80
+RandomEx 1 80
 #act
 CHANGESPEED 1 5 3
 <$CURRRTARGETNAME>.CHANGESPEED 1 -4 5
@@ -228,7 +219,7 @@ SENDMSG 7玄华之悲苦BUFF触发，移动速度增加50%持续3秒！！
 #if
 CHECKCURRTARGETRACE = 0
 checkitemw 熏风履 1
-PGRandomEx 1 90
+RandomEx 1 90
 #act
 CHANGESPEED 1 4 3
 <$CURRRTARGETNAME>.CHANGESPEED 1 -4 5
@@ -243,7 +234,7 @@ SENDMSG 7 熏风履BUFF触发，移动速度增加40%持续3秒！！
 #if
 CHECKCURRTARGETRACE = 0
 checkitemw 古神七踏 1
-PGRandomEx 1 120
+RandomEx 1 120
 #act
 CHANGESPEED 1 4 3
 <$CURRRTARGETNAME>.CHANGESPEED 1 -4 5
@@ -257,7 +248,7 @@ SENDMSG 7 古神七踏BUFF触发，移动速度增加40%持续3秒！！
 #if
 CHECKCURRTARGETRACE = 0
 checkitemw 千层绣花毡 1
-PGRandomEx 1 140
+RandomEx 1 140
 #act
 CHANGESPEED 1 3 3
 <$CURRRTARGETNAME>.CHANGESPEED 1 -4 5
@@ -268,7 +259,7 @@ SENDMSG 7 千层绣花毡BUFF触发，移动速度增加30%持续3秒！！
 #if
 CHECKCURRTARGETRACE = 0
 checkitemw 九转轮回 1
-PGRandomEx 1 160
+RandomEx 1 160
 #act
 CHANGESPEED 1 2 3
 <$CURRRTARGETNAME>.CHANGESPEED 1 -4 5
@@ -287,7 +278,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [七星剑仙的剑气]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[七星剑仙的剑气]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -299,7 +290,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [七星剑仙的剑气]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[七星剑仙的剑气]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -314,7 +305,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [七星剑仙的剑气]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[七星剑仙的剑气]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -329,7 +320,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 30
+m.AddHpPer - 30
 SendCenterMsg 70 0 [神.妖.魔.灵.≮古道无仙≯]BUFF触发,直接打掉目标30%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[神.妖.魔.灵.≮古道无仙≯]BUFF触发,直接打掉你30%血量，小心啦. 0 5
 
@@ -340,7 +331,7 @@ random 50
 checkitemw 七星剑仙的剑气
 not CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 7
+m.AddHpPer - 7
 SendCenterMsg 70 0 [七星剑仙的剑气]BUFF触发,直接打掉怪物7%血量 0 10
 
 
@@ -349,7 +340,7 @@ random 50
 checkitemw 七星剑仙的剑气【超脱】
 not CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 10
+m.AddHpPer - 10
 SendCenterMsg 70 0 [七星剑仙的剑气]BUFF触发,直接打掉怪物10%血量 0 10
 
 
@@ -363,7 +354,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [神.妖.魔.灵.≮古道无仙≯]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[神.妖.魔.灵.≮古道无仙≯]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -375,7 +366,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [韩江孤影]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[韩江孤影]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -386,7 +377,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [九山九海·刑罚]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[九山九海·刑罚]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -397,7 +388,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [请带我●去杀人]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[请带我●去杀人]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -409,7 +400,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [原罪·第一剑]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[请原罪·第一剑]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -420,7 +411,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [十万念动【十万界】]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[十万念动【十万界】BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -431,7 +422,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [鸿蒙灵宝·【量天尺】]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[鸿蒙灵宝·【量天尺】】BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -483,7 +474,7 @@ CHECKCURRTARGETRACE = 0
 SMALL N$减血CD 1
 #ACT
 MOV N$减血CD 100
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 [我命如妖·欲封天]BUFF触发,直接打掉目标20%血量 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方[我命如妖·欲封天]BUFF触发,直接打掉你20%血量，小心啦. 0 5
 
@@ -527,7 +518,7 @@ ISONMAP SRDT
 CHECKTITLE 狂暴之力
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 70 0 杀人活动BUFF触发：斩杀目标20%血量. 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 杀人活动BUFF触发：对方将你斩杀20%血量. 0 5
 
@@ -537,7 +528,7 @@ CHECKTITLE 狂暴之力
 ISONMAP SRDT
 CHECKCURRTARGETRACE = 0
 #ACT
-PGAddHpPer + 30
+AddHpPer + 30
 SendCenterMsg 70 0 杀人活动BUFF触发：瞬间恢复30%血量. 0 10
 
 #if
@@ -546,7 +537,7 @@ CHECKTITLE 狂暴之力
 ISONMAP SRDT
 CHECKCURRTARGETRACE = 0
 #ACT
-PGAddHpPer + 30
+AddHpPer + 30
 SendCenterMsg 70 0 杀人活动BUFF触发：瞬间恢复30%血量. 0 10
 
 
@@ -557,14 +548,14 @@ random 2
 checkitemw 唤雨
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 #if
 random 2
 checkitemw 魔戒
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 
 #if
@@ -572,7 +563,7 @@ random 2
 checkitemw ≮魔戒≯
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 
 #if
@@ -580,7 +571,7 @@ random 2
 checkitemw 仙人指路
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 
 
@@ -590,35 +581,35 @@ random 2
 checkitemw 寒尽不知年
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 #if
 random 2
 checkitemw 不死药
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 #if
 random 2
 checkitemw 血妖·戒
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 #if
 random 2
 checkitemw 杀戮本源
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 #if
 random 2
 checkitemw 杀戮本源
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 
 #if
@@ -626,21 +617,21 @@ random 2
 checkitemw 古道三分神
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 #if
 random 2
 checkitemw 灭生拳
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 #if
 random 2
 checkitemw 一缕白发笑苍茫
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 
 #if
@@ -648,14 +639,14 @@ random 2
 checkitemw 九衍金鎏
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 #if
 random 2
 checkitemw 落笔成殇
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 
 #if
@@ -663,21 +654,10 @@ random 2
 checkitemw 启龙·因果魂爪
 CHECKCURRTARGETRACE = 0
 #ACT
-m.PGAddHpPer - 2
+m.AddHpPer - 2
 
 
 
-#IF
-ISDUMMY
-EQUAL <$GLOBAL(假人_补伤害开关)> 开启
-#ACT
-#CALL [\寒流新假人\假人各种触发.txt] @假人补伤害
-
-#IF
-ISDUMMY
-EQUAL <$GLOBAL(假人_攻击吸血开关)> 开启
-#ACT
-#CALL [\寒流新假人\假人各种触发.txt] @假人吸血
 
 
 #IF
@@ -720,7 +700,7 @@ CHECKTITLE 神魔·完满
 
 
 #if
-PGCheckhpPer > 5
+CheckhpPer > 5
 large N$吸血 0
 #act
 mov N$当前伤害 <$PGPKPOWER>
@@ -878,9 +858,9 @@ random 300
 CHECKCURRTARGETRACE = 0
 CHECKTITLE 古神传承
 #act
-<$CURRRTARGETNAME>.PGAddHpPer - 20
-<$CURRRTARGETNAME>.PGAddHpPer - 20
-<$CURRRTARGETNAME>.PGAddHpPer - 20
+<$CURRRTARGETNAME>.AddHpPer - 20
+<$CURRRTARGETNAME>.AddHpPer - 20
+<$CURRRTARGETNAME>.AddHpPer - 20
 SendCenterMsg 70 0 古神传承连斩BUFF触发,敌方连续三次斩掉20%HP. 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方三分归元气连斩BUFF触发,你被连续三次斩掉20%HP. 0 5
 
@@ -889,9 +869,9 @@ SendCenterMsg 70 0 古神传承连斩BUFF触发,敌方连续三次斩掉20%HP. 0 10
 random 170
 CHECKCURRTARGETRACE = 0
 CHECKTITLE 踏天之力
-<$CURRRTARGETNAME>.PGCheckhpPer < 30
+<$CURRRTARGETNAME>.CheckhpPer < 30
 #act
-<$CURRRTARGETNAME>.PGAddHpPer - 30
+<$CURRRTARGETNAME>.AddHpPer - 30
 <$CURRRTARGETNAME>.mov N$防复活 5
 SendCenterMsg 70 0 踏天之力BUFF触发,敌方被直接斩杀. 0 10
 <$CURRRTARGETNAME>.SendCenterMsg 0 250 对方魔化状态BUFF触发,你被直接斩杀. 0 5
@@ -905,7 +885,7 @@ checkitemw の比奇国王的皇冠 1
 equal N$落雷CD 0
 #act
 MOV N$落雷CD 5
-M.PGAddHpPer - 3
+m.AddHpPer - 3
 SENDMSG 6 [提示]皇冠BUFF属性触发：使目标损失3%的血量.
 
 
@@ -929,7 +909,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 checkitemw 切割神器·[末日] 1
 random 30
 #act
-M.PGAddHpPer - 1
+m.AddHpPer - 1
 SENDMSG 6 《切割神器·[末日]》BUFF触发,打掉怪物1%生命值.
 
 
@@ -940,7 +920,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 checkitemw 切割神器·[最终] 1
 random 15
 #act
-M.PGAddHpPer - 2
+m.AddHpPer - 2
 SENDMSG 6 《切割神器·[最终]》BUFF触发,打掉怪物2%生命值.
 
 
@@ -951,7 +931,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 checkitemw 切割神器·[终极] 1
 random 15
 #act
-M.PGAddHpPer - 3
+m.AddHpPer - 3
 SENDMSG 6 《切割神器·[终极]》BUFF触发,打掉怪物3%生命值.
 
 
@@ -962,7 +942,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 checkitemw 切割神器·[限时] 1
 random 15
 #act
-M.PGAddHpPer - 3
+m.AddHpPer - 3
 SENDMSG 6 《切割神器·[限时]》BUFF触发,打掉怪物3%生命值.
 
 
@@ -986,7 +966,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw 魑魅々杀猪刀 1
 #act
-M.PGAddHpPer - 1
+m.AddHpPer - 1
 SENDMSG 6 《魑魅々杀猪刀》BUFF触发,打掉怪物1%的最大生命值.
 
 
@@ -1000,7 +980,8 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw 猎人的宽刃刀 1
 #act
-PGDelMonHpEx 1 0 0 1 <$C.X> <$C.Y> 1
+;PGDelMonHpEx 1 0 0 1 <$C.X> <$C.Y> 1
+RangeHarm <$X> <$Y> 1 300 12 1 0 2 56
 SENDMSG 6 《猎人的宽刃刀》BUFF触发,打掉怪物1%的最大生命值.
 
 #if
@@ -1011,7 +992,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw 游击者的军刀 1
 #act
-M.PGAddHpPer - 2
+m.AddHpPer - 2
 SENDMSG 6 《游击者的军刀》BUFF触发,打掉怪物2%的最大生命值.
 
 #if
@@ -1022,7 +1003,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw 附魔·战士 1
 #act
-M.PGAddHpPer - 3
+m.AddHpPer - 3
 SENDMSG 6 《附魔·战士》BUFF触发,打掉怪物3%的最大生命值.
 
 #IF
@@ -1033,7 +1014,7 @@ NOT CHECKCURRTARGETRACE = 0
 random 70
 checkitemw 地爆·天星 1
 #act
-m.PGAddHpPer - 4
+m.AddHpPer - 4
 SENDMSG 6 《地爆·天星》触发,打掉怪物4%的最大生命值.
 
 
@@ -1045,7 +1026,7 @@ NOT CHECKCURRTARGETRACE = 0
 random 70
 checkitemw 九天·日月 1
 #act
-m.PGAddHpPer - 5
+m.AddHpPer - 5
 SENDMSG 6 《九天·日月》触发,打掉怪物5%的最大生命值.
 
 
@@ -1057,7 +1038,7 @@ NOT CHECKCURRTARGETRACE = 0
 random 70
 checkitemw 九天·日月[限时] 1
 #act
-m.PGAddHpPer - 5
+m.AddHpPer - 5
 SENDMSG 6 《九天·日月[限时]》触发,打掉怪物5%的最大生命值.
 
 
@@ -1075,7 +1056,7 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw 屠戮的裁决※※ 1
 #act
-M.PGAddHpPer - 3
+m.AddHpPer - 3
 SENDMSG 6 《屠戮的裁决※※》BUFF触发,打掉怪物3%的最大生命值.
 
 
@@ -1362,7 +1343,7 @@ CHECKCURRTARGETRACE = 0
 checkitemw 魔尊的泯灭※※ 1
 #act
 MOV N$魔尊的泯灭※※ 0
-M.PGAddHpPer - 15
+m.AddHpPer - 15
 SendCenterMsg 254 0 《·魔尊的泯灭※※·》触发,对敌方造成最大生命值15%伤害!. 0 10
 
 
@@ -1372,7 +1353,7 @@ CHECKCURRTARGETRACE = 0
 checkitemw 天荒 1
 #act
 MOV N$魔尊的泯灭※※ 0
-M.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 254 0 《·天荒·》触发,对敌方造成最大生命值20%伤害!. 0 10
 
 
@@ -1382,7 +1363,7 @@ CHECKCURRTARGETRACE = 0
 checkitemw 季主配剑≮太初始≯ 1
 #act
 MOV N$魔尊的泯灭※※ 0
-M.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 254 0 《·季主配剑≮太初始≯·》触发,对敌方造成最大生命值20%伤害!. 0 10
 
 #if
@@ -1391,7 +1372,7 @@ CHECKCURRTARGETRACE = 0
 checkitemw 神.妖.魔.灵.≮古道无仙≯ 1
 #act
 MOV N$魔尊的泯灭※※ 0
-M.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 254 0 《·神.妖.魔.灵.≮古道无仙≯·》触发,对敌方造成最大生命值20%伤害!. 0 10
 
 
@@ -1401,7 +1382,7 @@ CHECKCURRTARGETRACE = 0
 checkitemw 韩江孤影 1
 #act
 MOV N$魔尊的泯灭※※ 0
-M.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 254 0 《韩江孤影》触发,对敌方造成最大生命值20%伤害!. 0 10
 
 
@@ -1420,7 +1401,7 @@ M.humanhp - 1000000
 SENDMSG 6 《【蚩尤】》BUFF触发,打掉怪物1000000点生命值.
 
 #if
-PGCheckhpPer < 15
+CheckhpPer < 15
 random 70
 CHECKCURRTARGETRACE = 0
 NOT CHECKTEXTLIST ..\QuestDiary\不吃刀刀1%切割的怪.txt <$CURRRTARGETNAME>
@@ -1428,30 +1409,30 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃任何切割包括时装的怪物.txt <$CURRRTARGETNAME
 NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 checkitemw 【牛角】 1
 #act
-M.PGAddHpPer - 35
+m.AddHpPer - 35
 SendCenterMsg 254 0 《·【牛皮腰带】·》触发,打掉目标35%的生命值!. 0 10
 M.SendCenterMsg 254 0 对方《·【牛皮腰带】·》触发,你被打掉35%的生命值!. 0 10
 
 
 #if
-PGCheckhpPer < 15
+CheckhpPer < 15
 random 60
 CHECKCURRTARGETRACE = 0
 checkitemw 南柯一梦 1
 #act
-M.PGAddHpPer - 35
+m.AddHpPer - 35
 SendCenterMsg 254 0 《·南柯一梦·》触发,打掉目标35%的生命值!. 0 10
 M.SendCenterMsg 254 0 对方《·南柯一梦·》触发,你被打掉35%的生命值!. 0 10
 
 
 
 #if
-PGCheckhpPer < 15
+CheckhpPer < 15
 random 50
 CHECKCURRTARGETRACE = 0
 checkitemw 鸿蒙灵宝·再穷无非讨饭 1
 #act
-M.PGAddHpPer - 35
+m.AddHpPer - 35
 SendCenterMsg 254 0 《·鸿蒙灵宝·再穷无非讨饭·》触发,打掉目标35%的生命值!. 0 10
 M.SendCenterMsg 254 0 对方《·鸿蒙灵宝·再穷无非讨饭·》触发,你被打掉35%的生命值!. 0 10
 
@@ -1461,12 +1442,12 @@ M.SendCenterMsg 254 0 对方《·鸿蒙灵宝·再穷无非讨饭·》触发,你被打掉35%的生命值
 
 
 #if
-PGCheckhpPer < 15
+CheckhpPer < 15
 random 60
 CHECKCURRTARGETRACE = 0
 checkitemw 道方扳指 1
 #act
-M.PGAddHpPer - 35
+m.AddHpPer - 35
 SendCenterMsg 254 0 《·道方扳指·》触发,打掉目标35%的生命值!. 0 10
 M.SendCenterMsg 254 0 对方《·道方扳指·》触发,你被打掉35%的生命值!. 0 10
 
@@ -1536,13 +1517,13 @@ M.SENDMSG 6 对方“我命如妖·欲封天”触发！你的攻击防御清零，持续3秒！
 
 
 #if
-PGCheckhpPer > 30
+CheckhpPer > 30
 CHECKCURRTARGETRACE = 0
 random 200
 checkitemw 【屠ヶ龙】 1
 #act
-PGAddHpPer - 15
-M.PGAddHpPer - 50
+AddHpPer - 15
+m.AddHpPer - 50
 SendCenterMsg 254 0 《·【屠ヶ龙】·》触发,打掉目标50%的生命值,同时自身扣除15%的生命值!. 0 10
 M.SendCenterMsg 254 0 对方《·【屠ヶ龙】·》触发,你被打掉50%的生命值!. 0 10
 
@@ -1670,10 +1651,10 @@ SENDMSG 6 《窃法之刃》BUFF触发,打掉怪物3333点的生命值.
 random 60
 NOT CHECKTEXTLIST ..\QuestDiary\不吃任何切割包括时装的怪物.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
-M.PGCheckhpPer < 20
+M.CheckhpPer < 20
 checkitemw ·铁血战旗¤星云刃· 1
 #act
-M.PGAddHpPer - 30
+m.AddHpPer - 30
 SENDMSG 6 《·铁血战旗¤星云刃·》BUFF触发,斩杀当前低于百分之20血量的目标.
 
 
@@ -1683,7 +1664,7 @@ equal N$电锯 0
 CHECKCURRTARGETRACE = 0
 checkitemw 电锯 1
 #act
-M.PGAddHpPer - 10
+m.AddHpPer - 10
 mov n$电锯 60
 
 
@@ -1697,7 +1678,7 @@ equal N$魔灵 7
 CHECKCURRTARGETRACE = 0
 checkitemw 魔灵 1
 #act
-PGAddHpPer + 7
+AddHpPer + 7
 mov n$魔灵 0
 
 
@@ -1707,15 +1688,15 @@ mov n$魔灵 0
 CHECKCURRTARGETRACE = 0
 EQUAL T33 艾克塞之怒
 #act
-M.PGAddHpPer - 1
+m.AddHpPer - 1
 
 
 #if
-M.PGCheckhpPer < 25
+M.CheckhpPer < 25
 CHECKCURRTARGETRACE = 0
 checkitemw “后天袋” 1
 #act
-M.PGAddHpPer - 1
+m.AddHpPer - 1
 
 
 
@@ -1724,7 +1705,7 @@ random 200
 CHECKCURRTARGETRACE = 0
 checkitemw 月华咒刃★ 1
 #act
-m.PGAddHpPer - 10
+m.AddHpPer - 10
 SendCenterMsg 254 0 《·月华咒刃★·》触发,瞬间打掉对方10%的Hp!. 0 5
 M.SendCenterMsg 254 0 对方《·月华咒刃★·》触发,你被对方瞬间打掉10%的Hp!. 0 5
 
@@ -1769,7 +1750,7 @@ checkitemw ·如意金箍棒· 1
 equal N$十字斩刀者 1
 #act
 MOV N$十字斩刀者 30
-PGAddHpPer + 10
+AddHpPer + 10
 SendCenterMsg 254 0 《··如意金箍棒··》触发,自身恢复10%的Hp!. 0 5
 
 #if
@@ -1779,7 +1760,7 @@ checkitemw ·定海の神针· 1
 equal N$十字斩刀斗 0
 #act
 MOV N$十字斩刀斗 30
-M.PGAddHpPer - 10
+m.AddHpPer - 10
 SendCenterMsg 254 0 《··定海の神针··》触发,扣除对方10%的Hp!. 0 5
 
 
@@ -1800,7 +1781,7 @@ equal N$冥火钢牙 0
 #act
 MOV n$出刀次数 0
 MOV N$冥火钢牙 3
-M.PGAddHpPer - 5
+m.AddHpPer - 5
 SendCenterMsg 254 0 《·冥火钢牙·锯锋·》触发,斩杀对方5%的Hp!. 0 5
 
 
@@ -2260,11 +2241,11 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw 切割[终·结] 1
-m.PGCheckhpPer < 16
+m.CheckhpPer < 16
 equal N$终结 0
 #act
 mov N$终结 10
-m.PGAddHpPer - 15
+m.AddHpPer - 15
 SendCenterMsg 254 0 《切割[终·结]》触发,你直接斩杀了目标! 0 5
 
 #IF
@@ -2274,11 +2255,11 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw ★切割[凡] 1
-m.PGCheckhpPer < 21
+m.CheckhpPer < 21
 equal N$★切割[凡] 0
 #act
 mov N$★切割[凡] 10
-m.PGAddHpPer - 20
+m.AddHpPer - 20
 SendCenterMsg 254 0 《★切割[凡]》触发,你直接斩杀了目标! 0 5
 
 #IF
@@ -2288,11 +2269,11 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw ★★★究魄★★★ 1
-m.PGCheckhpPer < 26
+m.CheckhpPer < 26
 equal N$★★★究魄★★★ 0
 #act
 mov N$★★★究魄★★★ 10
-m.PGAddHpPer - 25
+m.AddHpPer - 25
 SendCenterMsg 254 0 《★★★究魄★★★》触发,你直接斩杀了目标! 0 5
 
 #IF
@@ -2302,11 +2283,11 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw ★★★鬼切★★★ 1
-m.PGCheckhpPer < 26
+m.CheckhpPer < 26
 equal N$★★★鬼切★★★ 0
 #act
 mov N$★★★鬼切★★★ 10
-m.PGAddHpPer - 25
+m.AddHpPer - 25
 SendCenterMsg 254 0 《★★★鬼切★★★》触发,你直接斩杀了目标! 0 5
 
 #IF
@@ -2316,11 +2297,11 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw ★★★妖切★★★ 1
-m.PGCheckhpPer < 26
+m.CheckhpPer < 26
 equal N$★★★妖切★★★ 0
 #act
 mov N$★★★妖切★★★ 10
-m.PGAddHpPer - 25
+m.AddHpPer - 25
 SendCenterMsg 254 0 《★★★妖切★★★》触发,你直接斩杀了目标! 0 5
 
 
@@ -2331,11 +2312,11 @@ NOT CHECKTEXTLIST ..\QuestDiary\不吃数值切割的怪.txt <$CURRRTARGETNAME>
 NOT CHECKTEXTLIST ..\QuestDiary\不吃百分比切割.txt <$CURRRTARGETNAME>
 NOT CHECKCURRTARGETRACE = 0
 checkitemw ★★★残月★★★ 1
-m.PGCheckhpPer < 26
+m.CheckhpPer < 26
 equal N$★★★残月★★★ 0
 #act
 mov N$★★★残月★★★ 10
-m.PGAddHpPer - 30
+m.AddHpPer - 30
 SendCenterMsg 254 0 《★★★残月★★★》触发,你直接斩杀了目标! 0 5
 
 
@@ -2346,8 +2327,8 @@ random 200
 CHECKCURRTARGETRACE = 0
 checkitemw 【血魔头颅】 1
 #act
-PGAddHpPer + 10
-M.PGAddHpPer - 10
+AddHpPer + 10
+m.AddHpPer - 10
 SendCenterMsg 254 0 《·【血魔头颅】·》触发,打掉对方10%的Hp,自身恢复10%的Hp!. 0 5
 M.SendCenterMsg 254 0 对方《·【血魔头颅】·》触发,你被对方打掉10%的Hp!. 0 5
 
@@ -2364,7 +2345,7 @@ CHECKTEXTLIST ..\QuestDiary\神殿外围地图.txt <$MAP>
 NOT CHECKCURRTARGETRACE = 0
 large U41 0
 #act
-M.PGAddHpPer - 1 1
+m.AddHpPer - 1 1
 
 #if
 check [101] 1

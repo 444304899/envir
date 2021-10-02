@@ -3,7 +3,7 @@
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+ReadConfigFileItem ..\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
 
 
 ;#if
@@ -1663,69 +1663,69 @@ goto @金币首爆奖励界面
 #if
 #act
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名0	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆金额 S$JMB首爆金额0
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆名额 S$JMB首爆名额0
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆玩家 S$JMB首爆玩家0
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆金额 S$JMB首爆金额0
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆名额 S$JMB首爆名额0
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名0)> JMB首爆玩家 S$JMB首爆玩家0
 inc N$首爆行号 1
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名1	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆金额 S$JMB首爆金额1
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆名额 S$JMB首爆名额1
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆玩家 S$JMB首爆玩家1
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆金额 S$JMB首爆金额1
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆名额 S$JMB首爆名额1
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名1)> JMB首爆玩家 S$JMB首爆玩家1
 inc N$首爆行号 1
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名2	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆金额 S$JMB首爆金额2
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆名额 S$JMB首爆名额2
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆玩家 S$JMB首爆玩家2
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆金额 S$JMB首爆金额2
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆名额 S$JMB首爆名额2
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名2)> JMB首爆玩家 S$JMB首爆玩家2
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名3	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆金额 S$JMB首爆金额3
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆名额 S$JMB首爆名额3
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆玩家 S$JMB首爆玩家3
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆金额 S$JMB首爆金额3
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆名额 S$JMB首爆名额3
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名3)> JMB首爆玩家 S$JMB首爆玩家3
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名4	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆金额 S$JMB首爆金额4
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆名额 S$JMB首爆名额4
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆玩家 S$JMB首爆玩家4
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆金额 S$JMB首爆金额4
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆名额 S$JMB首爆名额4
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名4)> JMB首爆玩家 S$JMB首爆玩家4
 inc N$首爆行号 1
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名5	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆金额 S$JMB首爆金额5
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆名额 S$JMB首爆名额5
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆玩家 S$JMB首爆玩家5
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆金额 S$JMB首爆金额5
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆名额 S$JMB首爆名额5
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名5)> JMB首爆玩家 S$JMB首爆玩家5
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名6	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆金额 S$JMB首爆金额6
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆名额 S$JMB首爆名额6
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆玩家 S$JMB首爆玩家6
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆金额 S$JMB首爆金额6
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆名额 S$JMB首爆名额6
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名6)> JMB首爆玩家 S$JMB首爆玩家6
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名7	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆金额 S$JMB首爆金额7
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆名额 S$JMB首爆名额7
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆玩家 S$JMB首爆玩家7
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆金额 S$JMB首爆金额7
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆名额 S$JMB首爆名额7
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名7)> JMB首爆玩家 S$JMB首爆玩家7
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名8	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆金额 S$JMB首爆金额8
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆名额 S$JMB首爆名额8
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆玩家 S$JMB首爆玩家8
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆金额 S$JMB首爆金额8
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆名额 S$JMB首爆名额8
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名8)> JMB首爆玩家 S$JMB首爆玩家8
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\JMB奖励装备.txt <$Str(N$首爆行号)>	S$首爆名9	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆金额 S$JMB首爆金额9
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆名额 S$JMB首爆名额9
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆玩家 S$JMB首爆玩家9
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆金额 S$JMB首爆金额9
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆名额 S$JMB首爆名额9
+ReadConfigFileItem ..\QuestDiary\限时奖励\JMB奖励参数.txt <$STR(S$首爆名9)> JMB首爆玩家 S$JMB首爆玩家9
 inc N$首爆行号 1
 
 
@@ -1999,74 +1999,74 @@ goto @首爆奖励界面
 #if
 #act
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名0	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆金额 S$钻石首爆金额0
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆名额 S$钻石首爆名额0
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆玩家 S$钻石首爆玩家0
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆金额 S$钻石首爆金额0
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆名额 S$钻石首爆名额0
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名0)> 钻石首爆玩家 S$钻石首爆玩家0
 inc N$首爆行号 1
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名1	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆金额 S$钻石首爆金额1
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆名额 S$钻石首爆名额1
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆玩家 S$钻石首爆玩家1
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆金额 S$钻石首爆金额1
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆名额 S$钻石首爆名额1
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名1)> 钻石首爆玩家 S$钻石首爆玩家1
 inc N$首爆行号 1
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名2	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆金额 S$钻石首爆金额2
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆名额 S$钻石首爆名额2
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆玩家 S$钻石首爆玩家2
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆金额 S$钻石首爆金额2
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆名额 S$钻石首爆名额2
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名2)> 钻石首爆玩家 S$钻石首爆玩家2
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名3	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆金额 S$钻石首爆金额3
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆名额 S$钻石首爆名额3
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆玩家 S$钻石首爆玩家3
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆金额 S$钻石首爆金额3
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆名额 S$钻石首爆名额3
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名3)> 钻石首爆玩家 S$钻石首爆玩家3
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名4	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆金额 S$钻石首爆金额4
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆名额 S$钻石首爆名额4
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆玩家 S$钻石首爆玩家4
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆金额 S$钻石首爆金额4
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆名额 S$钻石首爆名额4
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名4)> 钻石首爆玩家 S$钻石首爆玩家4
 inc N$首爆行号 1
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名5	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆金额 S$钻石首爆金额5
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆名额 S$钻石首爆名额5
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆玩家 S$钻石首爆玩家5
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆金额 S$钻石首爆金额5
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆名额 S$钻石首爆名额5
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名5)> 钻石首爆玩家 S$钻石首爆玩家5
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名6	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆金额 S$钻石首爆金额6
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆名额 S$钻石首爆名额6
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆玩家 S$钻石首爆玩家6
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆金额 S$钻石首爆金额6
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆名额 S$钻石首爆名额6
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名6)> 钻石首爆玩家 S$钻石首爆玩家6
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名7	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆金额 S$钻石首爆金额7
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆名额 S$钻石首爆名额7
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆玩家 S$钻石首爆玩家7
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆金额 S$钻石首爆金额7
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆名额 S$钻石首爆名额7
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名7)> 钻石首爆玩家 S$钻石首爆玩家7
 inc N$首爆行号 1
 
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名8	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆金额 S$钻石首爆金额8
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆名额 S$钻石首爆名额8
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆玩家 S$钻石首爆玩家8
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆金额 S$钻石首爆金额8
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆名额 S$钻石首爆名额8
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名8)> 钻石首爆玩家 S$钻石首爆玩家8
 inc N$首爆行号 1
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名9	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆金额 S$钻石首爆金额9
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆名额 S$钻石首爆名额9
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆玩家 S$钻石首爆玩家9
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆金额 S$钻石首爆金额9
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆名额 S$钻石首爆名额9
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名9)> 钻石首爆玩家 S$钻石首爆玩家9
 inc N$首爆行号 1
 
 GetListString ..\QuestDiary\限时奖励\钻石奖励装备.txt <$Str(N$首爆行号)>	S$首爆名10	S$无用
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆金额 S$钻石首爆金额10
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆名额 S$钻石首爆名额10
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆玩家 S$钻石首爆玩家10
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆金额 S$钻石首爆金额10
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆名额 S$钻石首爆名额10
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$STR(S$首爆名10)> 钻石首爆玩家 S$钻石首爆玩家10
 
 
 

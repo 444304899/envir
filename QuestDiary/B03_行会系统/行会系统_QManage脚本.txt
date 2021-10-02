@@ -19,7 +19,6 @@ CHECKCONTAINSTEXT <$SERVERNAME> 六区
 #ACT
 BREAK
 #IF
-Not ISDUMMY
 #ACT
 VAR Integer HUMAN 个人活跃
 ;LOADVAR HUMAN 个人活跃 ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt

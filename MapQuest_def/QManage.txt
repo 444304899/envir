@@ -44,9 +44,7 @@ MOV G5 172800
 
 ;=================================================================
 
-#if
-#act
-#CALL [\寒流新假人\假人全局变量申明.txt] @申明假人变量
+
 
 
 
@@ -469,35 +467,6 @@ MAPEFFECT 超脱密境9   54 97  17  1194 9 -1 100 0
 
 
 
-#if
-NOT CHECKTEXTLIST ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt 已创建目录
-#act
-ForceDirectories ..\..\..\..\跨区文件夹\<$STR(A0)>
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt 已创建目录 0
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\检测是否已经创建目录.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日0区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日1区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日2区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日3区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日4区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日5区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日6区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日7区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日8区.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt
-CreateFile ..\..\..\..\跨区文件夹\<$STR(A0)>\合区统计.txt
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日0区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日1区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日2区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日3区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日4区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日5区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日6区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日7区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日8区.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 0
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\合区统计.txt 0 0
 
 
 
@@ -529,7 +498,6 @@ VAR Integer HUMAN 攻沙死亡
 
 
 #IF
-not isdummy
 CHECKLEVELEX > 0
 #ACT
 
@@ -537,22 +505,7 @@ CHECKLEVELEX > 0
 
 
 
-#IF
-HAVEGUILD
-NOT CHECKGUILDLIST ..\QuestDiary\寒流新假人\行会列表.txt
-#ACT
-ADDGUILDLIST ..\QuestDiary\寒流新假人\行会列表.txt
-#IF
-ISDUMMY
-#ACT
-VAR string HUMAN 假人是否为新人
-;LOADVAR HUMAN 假人是否为新人 ..\QuestDiary\寒流新假人\假人个人信息保存\新人变量\新人变量.txt
-mov S$假人个人信息保存路径 ..\QuestDiary\寒流新假人\假人个人信息保存\<$USERNAME>.txt
-CreateFile <$str(S$假人个人信息保存路径)>
-#CALL [\寒流新假人\假人登录脚本.txt] @假人登录设置
-SETONTIMER 101 1
-PGStartAutoPickItem 1
-PGStartAutoPickItem 1
+
 
 #IF
 #ACT
@@ -608,12 +561,11 @@ VAR Integer HUMAN 会员福利
 VAR Integer HUMAN 土豪福利
 ;LOADVAR HUMAN 土豪福利 ..\QuestDiary\每日福利.txt
 
-
+;开启自动拾取
 #IF
 #ACT
-SETONTIMER 101 1
-PGStartAutoPickItem 1
-PGStartAutoPickItem 1
+;SETONTIMER 101 1
+PICKUPITEMS 1 3 1000
 
 
 
@@ -635,7 +587,7 @@ SETONTIMER 36 1
 
 #if
 #act
-SETSHOWITEMMSG 0
+;SETSHOWITEMMSG 0
 SETONTIMER 1 1
 SETONTIMER 3 3
 SETONTIMER 78 1
@@ -729,7 +681,7 @@ take 阳光战神的威严[活动] 46
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+;ReadConfigFileItem ..\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
 
 
 
@@ -811,43 +763,43 @@ mov N$【沃玛号角】CD 120
 mov N$咒念 60
 
 
-#IF
-#ACT
-DelTextList ..\..\..\..\跨区文件夹\玩家机器码.txt <$SERVERNAME>:<$USERNAME>:<$MACHINEID>
-AddTextList ..\..\..\..\跨区文件夹\玩家机器码.txt <$SERVERNAME>:<$USERNAME>:<$MACHINEID>
+;#IF
+;#ACT
+;DelTextList ..\..\..\..\跨区文件夹\玩家机器码.txt <$SERVERNAME>:<$USERNAME>:<$MACHINEID>
+;AddTextList ..\..\..\..\跨区文件夹\玩家机器码.txt <$SERVERNAME>:<$USERNAME>:<$MACHINEID>
 
-DelTextList ..\..\..\..\跨区文件夹\玩家IP.txt <$SERVERNAME>:<$USERNAME>:<$IPADDR>
-AddTextList ..\..\..\..\跨区文件夹\玩家IP.txt <$SERVERNAME>:<$USERNAME>:<$IPADDR>
+;DelTextList ..\..\..\..\跨区文件夹\玩家IP.txt <$SERVERNAME>:<$USERNAME>:<$IPADDR>
+;AddTextList ..\..\..\..\跨区文件夹\玩家IP.txt <$SERVERNAME>:<$USERNAME>:<$IPADDR>
 
 
 
-#IF
-CheckTextList ..\..\..\..\跨区文件夹\禁止登陆的IP.txt <$IPADDR>
-#ACT
-KICK
-MessageBox 提示：该IP已被停封！若有疑问请联系客服！
-BREAK
+;#IF
+;CheckTextList ..\..\..\..\跨区文件夹\禁止登陆的IP.txt <$IPADDR>
+;#ACT
+;KICK
+;MessageBox 提示：该IP已被停封！若有疑问请联系客服！
+;BREAK
 
-#IF
-CheckTextList ..\..\..\..\跨区文件夹\禁止登陆的机器码.txt <$MACHINEID>
-#ACT
-KICK
-MessageBox 提示：该机器码已被停封！若有疑问请联系客服！
-BREAK
+;#IF
+;CheckTextList ..\..\..\..\跨区文件夹\禁止登陆的机器码.txt <$MACHINEID>
+;#ACT
+;KICK
+;MessageBox 提示：该机器码已被停封！若有疑问请联系客服！
+;BREAK
 
-#IF
-CheckTextList ..\..\..\..\跨区文件夹\开挂机器码.txt <$MACHINEID>
-#ACT
-KICK
-MessageBox 提示：使用脱机，号已被封！
-BREAK
+;#IF
+;CheckTextList ..\..\..\..\跨区文件夹\开挂机器码.txt <$MACHINEID>
+;#ACT
+;KICK
+;MessageBox 提示：使用脱机，号已被封！
+;BREAK
 
-#IF
-CheckTextList ..\..\..\..\跨区文件夹\开挂IP.txt <$IPADDR>
-#ACT
-KICK
-MessageBox 提示：使用脱机，号已被封！
-BREAK
+;#IF
+;CheckTextList ..\..\..\..\跨区文件夹\开挂IP.txt <$IPADDR>
+;#ACT
+;KICK
+;MessageBox 提示：使用脱机，号已被封！
+;BREAK
 
 
 
@@ -887,7 +839,6 @@ BREAK
 
 
 #if
-not ISDUMMY
 ISONMAP 封妖城
 equal T1
 #act
@@ -949,19 +900,19 @@ INC U44 1
 #IF
 CHECKITEMW 生命之玺
 #ACT
-PGAddHpPer + 1
-PGAddmpPer + 1
+AddHpPer + 1
+AddmpPer + 1
 #IF
 CHECKITEMW 神力玉玺
 #ACT
-PGAddHpPer + 2
-PGAddmpPer + 2
+AddHpPer + 2
+AddmpPer + 2
 
 #IF
 CHECKITEMW 万灵血玺
 #ACT
-PGAddHpPer + 3
-PGAddmpPer + 3
+AddHpPer + 3
+AddmpPer + 3
 
 
 
@@ -1035,26 +986,21 @@ inc N$连续复活CD 1
 
 
 #if
-NOT ISDUMMY
 CHECKLEVELEX < 150
 not ISONMAP srdt
 #act
 CHANGEEXP + 500000
 
-#if
-ISDUMMY
-CHECKLEVELEX < 200
-#act
-CHANGEEXP + 500000
+
 
 
 
 #IF
 isonmap 封妖城
 INSAFEZONE
-PGCheckhpPer < 99
+CheckhpPer < 99
 #act
-PGAddHpPer + 20
+AddHpPer + 20
 PLAYEFFECT 15 370 10 1 80
 SENDMSG 6 华佗再世BUFF触发，安全区每秒增加20%血量。
 
@@ -1062,9 +1008,9 @@ SENDMSG 6 华佗再世BUFF触发，安全区每秒增加20%血量。
 #IF
 isonmap 封妖城
 INSAFEZONE
-PGCheckMpPer < 99
+CheckMpPer < 99
 #act
-PGAddmpPer + 20
+AddmpPer + 20
 PLAYEFFECT 15 370 10 1 80
 SENDMSG 6 华佗再世BUFF触发，安全区每秒增加20%血量。
 
@@ -1304,7 +1250,7 @@ LARGE <$HP> 0
 large N$【沃玛号角】 0
 #act
 dec N$【沃玛号角】 1
-PGAddHpPer + 5
+AddHpPer + 5
 
 
 
@@ -1375,7 +1321,7 @@ dec N$爆裂肠 1
 
 
 #if
-PGCheckhpPer < 30
+CheckhpPer < 30
 checkitemw 争战铠甲★ 1
 SMALL <$HP> <$MAXHP>
 LARGE <$HP> 0
@@ -1383,7 +1329,7 @@ equal N$被攻击 0
 equal N$冥界衣服CD 0
 #ACT
 MOV N$冥界衣服CD 60
-PGAddHpPer + 20
+AddHpPer + 20
 SendCenterMsg 251 14 《争战铠甲★》触发,生命值恢复20%,冷却60秒. 0 10
 
 
@@ -1528,7 +1474,7 @@ SMALL <$HP> <$MAXHP>
 LARGE <$HP> 0
 checkitemw ★★★地★★★ 1
 #act
-PGAddHpPer + 1
+AddHpPer + 1
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1584,7 +1530,7 @@ SMALL <$HP> <$MAXHP>
 LARGE <$HP> 0
 checkitemw 仙女护符 1
 #act
-PGAddHpPer + 1
+AddHpPer + 1
 SENDMSG 6 《仙女护符》BUFF触发,恢复1%的Hp
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [@OnTimer51]
@@ -1803,227 +1749,7 @@ messagebox 操作失败:\\请检查\是否开启狂暴模式
 
 
 
-;=============华丽的分割线，以下↓↓↓=为寒流假人相关参数，不改动假人请向上↑↑↑↑↑
-[@假人重读活跃]
-#IF
-ISDUMMY
-#ACT
-MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
-SETONTIMER 252 <$STR(N$频率)>
-BREAK
 
-[@寒流假人加经验]
-#IF
-ISDUMMY
-;NOT ISONMAP <$GLOBAL(假人_盟重地图号)>
-#ACT
-CHANGEEXP + <$GLOBAL(假人_手动加经验)>
-BREAK
-
-[@寒流假人加等级]
-#IF
-ISDUMMY
-#ACT
-CHANGELEVEL + 1
-BREAK
-
-
-[@寒流假人下图]
-#IF
-ISDUMMY
-#ACT
-MOVR N$时间间隔 1000 29000
-DELAYGOTO <$STR(N$时间间隔)> @假人下图
-
-[@假人下图]
-#IF
-#ACT
-#CALL [\寒流新假人\假人走动打怪.txt] @假人下图打怪
-
-
-[@寒流假人几率回城]
-#IF
-RANDOM 50
-NOT ISONMAP <$GLOBAL(假人_盟重地图号)>
-ISDUMMY
-#ACT
-movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
-movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
-mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
-DUMMYSTOP
-BREAK
-
-[@寒流假人回土城]
-#IF
-NOT ISONMAP 3
-ISDUMMY
-#ACT
-movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
-movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
-mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
-DUMMYSTOP
-BREAK
-
-
-
-[@土城寒流假人全部停止]
-#IF
-ISONMAP <$GLOBAL(假人_盟重地图号)>
-ISDUMMY
-#ACT
-DUMMYSTOP
-BREAK
-
-[@土城假人几率停止]
-#IF
-RANDOM 2
-ISONMAP <$GLOBAL(假人_盟重地图号)>
-ISDUMMY
-#ACT
-SET [222] 1
-DUMMYSTOP
-BREAK
-
-
-[@寒流假人全部停止]
-#IF
-ISDUMMY
-#ACT
-SET [222] 1
-DUMMYSTOP
-BREAK
-
-[@寒流假人全部活动]
-#IF
-ISDUMMY
-#ACT
-SET [222] 0
-DUMMYSTART
-BREAK
-
-
-[@寒流假人全部下线]
-#IF
-ISDUMMY
-#ACT
-MOV I88 0
-KICK
-BREAK
-
-[@寒流假人几率下线]
-#IF
-ISDUMMY
-RANDOM 20
-#ACT
-DEC I88 1
-KICK
-BREAK
-
-[@ontimer251]
-
-#IF
-LARGE N$改回模式 0
-#ACT
-DEC N$改回模式 1
-
-#IF
-SMALL N$改回模式 1
-#ACT
-ChangeAttatckMode 5
-SETOFFTIMER 251
-SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
-SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
-SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
-SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
-SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
-SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
-SENDMSG 7 您被强制和平模式已失效，模式自动改回《行会模式》
-
-[@ONTIMER252]
-#IF
-ISDUMMY
-#ACT
-#CALL [\寒流新假人\假人走动打怪.txt] @假人下图打怪
-
-[@ontimer253]
-#if
-isdummy
-#act
-setofftimer 253
-MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
-SETONTIMER 252 <$STR(N$频率)>
-killslave
-movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
-movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
-mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
-DUMMYSTOP
-movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
-movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
-GOTONOW <$str(N$XX)> <$str(N$YY)>
-HUMANHP = <$MAXHP>
-HUMANMP = <$MAXMP>
-
-
-[@ontimer255]
-#IF
-ISDUMMY
-checkjob Warr
-#act
-#CALL [\寒流新假人\假人装备\战士.txt] @战士
-break
-#if
-ISDUMMY
-checkjob Wizard
-#act
-#CALL [\寒流新假人\假人装备\法师.txt] @法师
-break
-#if
-ISDUMMY
-checkjob Taos
-#act
-#CALL [\寒流新假人\假人装备\道士.txt] @道士
-break
-
-
-
-
-
-
-[@ontimer254]
-
-#IF
-CheckHumBag <$USERNAME> < 25
-#ACT
-#CALL [\寒流新假人\假人回收.txt] @假人一键回收
-GMEXECUTE 清理背包 <$USERNAME>
-
-
-#IF
-ISDUMMY
-NOT ISONMAP <$GLOBAL(假人_盟重地图号)>
-CheckRangeMonCount <$MAP> <$X> <$Y> 20 < 1
-#ACT
-MAP <$map>
-BREAK
-
-#IF
-ISDUMMY
-NOT ISONMAP <$GLOBAL(假人_盟重地图号)>
-CheckRangeMonCount <$MAP> <$X> <$Y> 100 < 5
-#ACT
-movr N$X <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
-movr N$Y <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
-mapmove <$GLOBAL(假人_盟重地图号)> <$str(N$X)> <$str(N$Y)>
-DUMMYSTOP
-movr N$XX <$GLOBAL(假人_回城坐标X左)> <$GLOBAL(假人_回城坐标X右)>
-movr N$YY <$GLOBAL(假人_回城坐标Y左)> <$GLOBAL(假人_回城坐标Y右)>
-GOTONOW <$str(N$XX)> <$str(N$YY)>
-HUMANHP = <$MAXHP>
-HUMANMP = <$MAXMP>
-SETOFFTIMER 253
-MOVR N$频率 <$GLOBAL(假人_活动频率快)> <$GLOBAL(假人_活动频率慢)>
-SETONTIMER 252 <$STR(N$频率)>
-;==↑↑↑↑↑↑↑↑===假人回城后  跑动跑动下，不然SB不动  =============
 
 
 [@捐献等级刷新]
@@ -2290,7 +2016,7 @@ CALCVAR HUMAN 挑战个人开启 =
 #IF
 checkvar GLOBAL 挑战开始判断 = 1
 #ACT
-OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+;OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
 BREAK
 #SAY
 <>\ \ \ \ \ \ \
@@ -2340,7 +2066,7 @@ CALCVAR HUMAN 挑战个人开启2 =
 #IF
 checkvar GLOBAL 挑战开始判断2 = 1
 #ACT
-OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+;OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
 BREAK
 #SAY
 <>\ \ \ \ \ \ \
@@ -2388,7 +2114,7 @@ CALCVAR HUMAN 挑战个人开启3 =
 #IF
 checkvar GLOBAL 挑战开始判断3 = 1
 #ACT
-OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+;OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
 BREAK
 #SAY
 <>\ \ \ \ \ \ \
@@ -2436,7 +2162,7 @@ CALCVAR HUMAN 挑战个人开启4 =
 #IF
 checkvar GLOBAL 挑战开始判断4 = 1
 #ACT
-OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+;OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
 BREAK
 #SAY
 <>\ \ \ \ \ \ \
@@ -2450,46 +2176,32 @@ BREAK
 #IF
 CHECKLEVELEX > 0
 #ACT
-SortHumVarToListEx SRYX-个人杀人 ..\QuestDiary\杀人游戏\杀人游戏排行数据.txt 1 ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1
-AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
-AddTextList ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 　:0
-
+SortHumVar SRYX-个人杀人 S$杀人玩家名 N$杀人数 0 1 3
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数1 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 0 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第1名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第1数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第1名 = <$STR(S$杀人玩家名1)>
+CALCVAR GLOBAL SRYX-杀人第1数 = <$STR(N$杀人数1)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第1名 =
 CALCVAR GLOBAL SRYX-杀人第1数 =
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数2 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 1 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第2名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第2数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第2名 = <$STR(S$杀人玩家名2)>
+CALCVAR GLOBAL SRYX-杀人第2数 = <$STR(N$杀人数2)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第2名 =
 CALCVAR GLOBAL SRYX-杀人第2数 =
 #IF
-CHECKLEVELEX > 0
+LARGE N$杀人数3 0
 #ACT
-GetListString ..\QuestDiary\杀人游戏\杀人游戏排行排名.txt 2 s93 N90
-#IF
-LARGE N90 0
-#ACT
-CALCVAR GLOBAL SRYX-杀人第3名 = <$STR(s93)>
-CALCVAR GLOBAL SRYX-杀人第3数 = <$STR(N90)>
+CALCVAR GLOBAL SRYX-杀人第3名 = <$STR(S$杀人玩家名3)>
+CALCVAR GLOBAL SRYX-杀人第3数 = <$STR(N$杀人数3)>
 #ELSEACT
 CALCVAR GLOBAL SRYX-杀人第3名 =
 CALCVAR GLOBAL SRYX-杀人第3数 =
+
 
 #if
 CHECKVAR GLOBAL SRYX-杀人第1名 = <$USERNAME>
@@ -3324,7 +3036,7 @@ break
 [@OnTimer117]
 #if
 #act
-<$CURRRTARGETNAME>.PGAddHpPer - 2
+<$CURRRTARGETNAME>.AddHpPer - 2
 
 
 
@@ -3383,7 +3095,8 @@ SetOffTimer 115
 #IF
 CHECKITEMW [时装]·鳯求凰 1
 #ACT
-PGDelMonHpEx 3 2 0 0 <$X> <$Y> 3 3
+;PGDelMonHpEx 3 2 0 0 <$X> <$Y> 3 3
+RangeHarm <$X> <$Y> 3 300 12 <$STR(n$切割)> 0 2 56
 
 
 

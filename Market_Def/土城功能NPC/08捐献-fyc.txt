@@ -10,7 +10,7 @@ SENDMSG 4 249 253 本服第三天拿沙，捐献越多沙巴克奖励越多，擒拿手是PK利器，神技在
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
+ReadConfigFileItem ..\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
 GetListString ..\QuestDiary\大熊数据\捐款排行.txt 0 A120 G20
 GetListString ..\QuestDiary\大熊数据\捐款排行.txt 1 A121 G21
 GetListString ..\QuestDiary\大熊数据\捐款排行.txt 2 A122 G22
@@ -315,12 +315,18 @@ ADDSKILL 隐身术 3
 inc G441 <$STR(N20)>
 CALCVAR HUMAN 职位捐款数量 + <$STR(N20)>
 SAVEVAR HUMAN 职位捐款数量
-SORTVARTOLIST 职位捐款数量 ..\QuestDiary\大熊数据\捐款数据.txt ..\QuestDiary\大熊数据\捐款排行.txt 0 1
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 0 A120 G20
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 1 A121 G21
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 2 A122 G22
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 3 A123 G23
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 4 A124 G24
+
+SortHumVar 职位捐款数量 S$捐献玩家名 N$玩家捐献数量 0 1 10
+MOV  A120 S$捐献玩家名1
+MOV  A121 S$捐献玩家名2
+MOV  A122 S$捐献玩家名3
+MOV  A123 S$捐献玩家名4
+MOV  A124 S$捐献玩家名5
+MOV  G20  N$玩家捐献数量1
+MOV  G21  N$玩家捐献数量2
+MOV  G22  N$玩家捐献数量3
+MOV  G23  N$玩家捐献数量4
+MOV  G24  N$玩家捐献数量5
 MESSAGEBOX 捐款成功!
 #CALL [\大熊功能\职位计算.txt] @开始计算
 goto @main
@@ -347,12 +353,17 @@ AddTextListEX ..\..\..\..\跨区文件夹\<$STR(A0)>\今日<$STR(N$当前捐献区)>区.txt <
 
 CALCVAR HUMAN 职位捐款数量 + <$STR(N20)>
 SAVEVAR HUMAN 职位捐款数量
-SORTVARTOLIST 职位捐款数量 ..\QuestDiary\大熊数据\捐款数据.txt ..\QuestDiary\大熊数据\捐款排行.txt 0 1
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 0 A120 G20
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 1 A121 G21
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 2 A122 G22
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 3 A123 G23
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 4 A124 G24
+SortHumVar 职位捐款数量 S$捐献玩家名 N$玩家捐献数量 0 1 10
+MOV  A120 S$捐献玩家名1
+MOV  A121 S$捐献玩家名2
+MOV  A122 S$捐献玩家名3
+MOV  A123 S$捐献玩家名4
+MOV  A124 S$捐献玩家名5
+MOV  G20  N$玩家捐献数量1
+MOV  G21  N$玩家捐献数量2
+MOV  G22  N$玩家捐献数量3
+MOV  G23  N$玩家捐献数量4
+MOV  G24  N$玩家捐献数量5
 MESSAGEBOX 捐款成功!
 Gmexecute 全服触发 @捐献等级刷新
 #CALL [\大熊功能\职位计算.txt] @开始计算
@@ -386,14 +397,17 @@ AddTextListEX ..\..\..\..\跨区文件夹\<$STR(A0)>\今日<$STR(N$当前捐献区)>区.txt <
 
 CALCVAR HUMAN 职位捐款数量 + <$STR(N20)>
 SAVEVAR HUMAN 职位捐款数量
-SORTVARTOLIST 职位捐款数量 ..\QuestDiary\大熊数据\捐款数据.txt ..\QuestDiary\大熊数据\捐款排行.txt 0 1
-
-
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 0 A120 G20
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 1 A121 G21
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 2 A122 G22
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 3 A123 G23
-GetListString ..\QuestDiary\大熊数据\捐款排行.txt 4 A124 G24
+SortHumVar 职位捐款数量 S$捐献玩家名 N$玩家捐献数量 0 1 10
+MOV  A120 S$捐献玩家名1
+MOV  A121 S$捐献玩家名2
+MOV  A122 S$捐献玩家名3
+MOV  A123 S$捐献玩家名4
+MOV  A124 S$捐献玩家名5
+MOV  G20  N$玩家捐献数量1
+MOV  G21  N$玩家捐献数量2
+MOV  G22  N$玩家捐献数量3
+MOV  G23  N$玩家捐献数量4
+MOV  G24  N$玩家捐献数量5
 
 MESSAGEBOX 捐款成功!
 Gmexecute 全服触发 @捐献等级刷新

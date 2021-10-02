@@ -94,7 +94,7 @@ CALCVAR HUMAN 挑战个人开启 =
 #IF
 checkvar GLOBAL 挑战开始判断 = 1
 #ACT
-OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+;OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
 Gmexecute 开始提问 @擂台接受令
 BREAK
 #SAY
@@ -108,7 +108,7 @@ BREAK
 #IF
 checkvar GLOBAL 挑战开始判断 = 0
 #ACT
-OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
+;OpenBigDialogBox 13 325 1 4 0 -50 1 433 100
 BREAK
 #SAY
 <>\ \ \ \ \ \ \

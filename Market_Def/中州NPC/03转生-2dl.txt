@@ -12,8 +12,8 @@ break
 
 #if
 #act
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\配置文件\转生配置.ini 转生 <$RELEVEL> S$转生配置信息
-PGExtractString : <$STR(S$转生配置信息)> S$分割结果数组1
+;ReadConfigFileItem ..\QuestDiary\配置文件\转生配置.ini 转生 <$RELEVEL> S$转生配置信息
+GETVALIDSTRSUPER <$STR(S$转生配置信息)> : S$分割结果数组1_
 mov S$转生材料1 <$STR(S$分割结果数组1_1)>
 mov S$转生材料2 <$STR(S$分割结果数组1_2)>
 mov S$奖励倍攻 <$STR(S$分割结果数组1_3)>

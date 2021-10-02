@@ -3,19 +3,24 @@
 #IF
 #act
 #say
-\ \ \   \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/mijing.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=330.0|y=178.0|color=255|pimg=public/button/jrdt3.png|size=18|mimg=public/button/jrdt2.png|nimg=public/button/jrdt1.png|link=@传送1>
+<Text|x=54.0|y=41.0|color=236|size=16|text=想去看看那传说中的封妖古地秘境吗？>
+<Text|x=54.0|y=61.0|color=236|size=16|text=此地图爆率加成500% 超多怪物>
+<Text|x=54.0|y=81.0|color=236|size=16|text=进图要求秘境卷轴*15张或者150个金币一次>
+<Text|x=54.0|y=121.0|color=236|size=16|text=进图1小时后自动返回如风界>
+<Text|x=54.0|y=101.0|color=236|size=16|text=全区进入次数达到10次后触发秘境boss>
+<RText|x=54.0|y=141.0|color=255|size=16|text={<当前进入次数 <$str(g61)>／次,10次后重新计算/FCOLOR=236}>
 
-
-<>         <想去看看那传说中的封妖古地秘境吗？/AUTOCOLOR=158>\
-<>         <此地图爆率加成500% 超多怪物/AUTOCOLOR=158>\
-<>         <进图要求秘境卷轴*15张或者150个金币一次/AUTOCOLOR=158>\
-<>         <进图1小时后自动返回如风界/AUTOCOLOR=158>\
-<>         <全区进入次数达到10次后触发秘境boss/AUTOCOLOR=158>\
-<>         <当前进入次数 <$str(g61)>／次,10次后重新计算/AUTOCOLOR=158>\
-<>                      \   \  \
-
-
-<>                  <IMG:176:6:230:-26/@传送1>    \
+;<>         <想去看看那传说中的封妖古地秘境吗？/AUTOCOLOR=158>\
+;<>         <此地图爆率加成500% 超多怪物/AUTOCOLOR=158>\
+;<>         <进图要求秘境卷轴*15张或者150个金币一次/AUTOCOLOR=158>\
+;<>         <进图1小时后自动返回封妖古地/AUTOCOLOR=158>\
+;<>         <全区进入次数达到10次后触发秘境boss/AUTOCOLOR=158>\
+;<>         <当前进入次数 <$str(g61)>／次,10次后重新计算/AUTOCOLOR=158>\
+;<>                      \   \  \
+;<>                  <IMG:176:6:230:-26/@传送1>    \
 
 
 
@@ -26,7 +31,7 @@
 checkitem 秘境卷轴 15
 #act
 take 秘境卷轴 15
-MAPMOVE  封妖古地秘境
+MAPMOVE  fygdmj
 INC G61 1
 GOTO @脚本
 SENDDELAYMSG 自动传回封妖古地%s 3600 255 0 @给礼物
@@ -37,7 +42,7 @@ break
 checkgold 150
 #act
 take 金币 150
-MAPMOVE  封妖古地秘境
+MAPMOVE  fygdmj
 INC G61 1
 GOTO @脚本
 SENDDELAYMSG 自动传回封妖古地%s 3600 255 0 @给礼物
@@ -49,7 +54,7 @@ break
 #if
 large g61 9
 #act
-MonGenEx 封妖古地秘境 60  61 封妖古地秘境boss  10  1 0 253
+MonGenEx fygdmj 60  61 封妖古地秘境boss  10  1 0 253
 GOTO @脚本1
 SENDMOVEMSG 0 243 0 130 1 {提示:/FCOLOR=250}封妖古地秘境中{[封妖古地秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 0
 SENDMOVEMSG 0 243 0 170 1 {提示:/FCOLOR=250}封妖古地秘境中{[封妖古地秘境boss]/FCOLOR=254}已经降临，请各位玩家{[前去击杀]/FCOLOR=254} 11 30 0
@@ -68,7 +73,7 @@ MOV G61 0
 [@给礼物]
 #if
 #act
-MAPMOVE  封妖古地
+MAPMOVE  fygd
 
 
 

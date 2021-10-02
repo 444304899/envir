@@ -124,40 +124,22 @@ Goto @攻城统计_界面加载
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 [@杀人榜单_界面加载]
 #ACT
-SortHumVarToListEx 攻城斩杀 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt 1 ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 1
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-AddTextList ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 　:0
-;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 0 S$杀人_第一名 N$杀人_第一数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 1 S$杀人_第二名 N$杀人_第二数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 2 S$杀人_第三名 N$杀人_第三数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 3 S$杀人_第四名 N$杀人_第四数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 4 S$杀人_第五名 N$杀人_第五数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 5 S$杀人_第六名 N$杀人_第六数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 6 S$杀人_第七名 N$杀人_第七数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 7 S$杀人_第八名 N$杀人_第八数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 8 S$杀人_第九名 N$杀人_第九数
-GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀排名.txt 9 S$杀人_第十名 N$杀人_第十数
+SortHumVar 攻城斩杀 S$攻城杀人 N$攻城杀人数 0 1 10
+
+
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #IF
-Large N$杀人_第一数 0
+Large N$攻城杀人数1 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第一名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人1)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第一会
 DEC <$str(S$杀人_第一会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第一名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人1)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第一跃
 DEC S$杀人_第一跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第一名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人1)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第一死
 DEC S$杀人_第一死 攻城被杀=
@@ -166,8 +148,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第一时 攻城计时=
 MOV S$显_第一时 <$str(S$杀人_第一时)>秒
 MOV S$显_第一死 <$str(S$杀人_第一死)>次
-MOV S$显_第一名 <$str(S$杀人_第一名)>
-MOV S$显_第一数 <$str(N$杀人_第一数)>人
+MOV S$显_第一名 <$str(S$攻城杀人1)>
+MOV S$显_第一数 <$str(N$攻城杀人数1)>人
 MOV S$显_第一会 <$str(S$杀人_第一会)>
 MOV S$显_第一跃 <$str(S$杀人_第一跃)>点
 #ELSEACT
@@ -179,17 +161,17 @@ MOV S$显_第一死
 MOV S$显_第一时
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第二数 0
+Large N$攻城杀人数2 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第二名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人2)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第二会
 DEC <$str(S$杀人_第二会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第二名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人2)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第二跃
 DEC S$杀人_第二跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第二名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人2)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第二死
 DEC S$杀人_第二死 攻城被杀=
@@ -198,8 +180,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第二时 攻城计时=
 MOV S$显_第二时 <$str(S$杀人_第二时)>秒
 MOV S$显_第二死 <$str(S$杀人_第二死)>次
-MOV S$显_第二名 <$str(S$杀人_第二名)>
-MOV S$显_第二数 <$str(N$杀人_第二数)>人
+MOV S$显_第二名 <$str(S$攻城杀人2)>
+MOV S$显_第二数 <$str(N$攻城杀人数2)>人
 MOV S$显_第二会 <$str(S$杀人_第二会)>
 MOV S$显_第二跃 <$str(S$杀人_第二跃)>点
 #ELSEACT
@@ -211,17 +193,17 @@ MOV S$显_第二死
 MOV S$显_第一二
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第三数 0
+Large N$攻城杀人数3 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第三名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人3)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第三会
 DEC <$str(S$杀人_第三会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第三名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人3)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第三跃
 DEC <$str(S$杀人_第三跃)> 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第三名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人3)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第三死
 DEC S$杀人_第三死 攻城被杀=
@@ -230,8 +212,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第三时 攻城计时=
 MOV S$显_第三时 <$str(S$杀人_第三时)>秒
 MOV S$显_第三死 <$str(S$杀人_第三死)>次
-MOV S$显_第三名 <$str(S$杀人_第三名)>
-MOV S$显_第三数 <$str(N$杀人_第三数)>人
+MOV S$显_第三名 <$str(S$攻城杀人3)>
+MOV S$显_第三数 <$str(N$攻城杀人数3)>人
 MOV S$显_第三会 <$str(S$杀人_第三会)>
 MOV S$显_第三跃 <$str(S$杀人_第三跃)>点
 #ELSEACT
@@ -243,17 +225,17 @@ MOV S$显_第三死
 MOV S$显_第三时
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第四数 0
+Large N$攻城杀人数4 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第四名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人4)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第四会
 DEC <$str(S$杀人_第四会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第四名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人4)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第四跃
 DEC S$杀人_第四跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第四名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人4)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第四死
 DEC S$杀人_第四死 攻城被杀=
@@ -262,8 +244,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第四时 攻城计时=
 MOV S$显_第四时 <$str(S$杀人_第四时)>秒
 MOV S$显_第四死 <$str(S$杀人_第四死)>次
-MOV S$显_第四名 <$str(S$杀人_第四名)>
-MOV S$显_第四数 <$str(N$杀人_第四数)>人
+MOV S$显_第四名 <$str(S$攻城杀人4)>
+MOV S$显_第四数 <$str(N$攻城杀人数4)>人
 MOV S$显_第四会 <$str(S$杀人_第四会)>
 MOV S$显_第四跃 <$str(S$杀人_第四跃)>点
 #ELSEACT
@@ -275,17 +257,17 @@ MOV S$显_第四死
 MOV S$显_第四时
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第五数 0
+Large N$攻城杀人数5 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第五名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人5)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第五会
 DEC <$str(S$杀人_第五会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第五名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人5)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第五跃
 DEC S$杀人_第五跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第五名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人5)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第五死
 DEC S$杀人_第五死 攻城被杀=
@@ -294,8 +276,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第五时 攻城计时=
 MOV S$显_第五时 <$str(S$杀人_第五时)>秒
 MOV S$显_第五死 <$str(S$杀人_第五死)>次
-MOV S$显_第五名 <$str(S$杀人_第五名)>
-MOV S$显_第五数 <$str(N$杀人_第五数)>人
+MOV S$显_第五名 <$str(S$攻城杀人5)>
+MOV S$显_第五数 <$str(N$攻城杀人数5)>人
 MOV S$显_第五会 <$str(S$杀人_第五会)>
 MOV S$显_第五跃 <$str(S$杀人_第五跃)>点
 #ELSEACT
@@ -307,17 +289,17 @@ MOV S$显_第五死
 MOV S$显_第五时
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第六数 0
+Large N$攻城杀人数6 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第六名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人6)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第六会
 DEC <$str(S$杀人_第六会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第六名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人6)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第六跃
 DEC S$杀人_第六跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第六名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人6)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第六死
 DEC S$杀人_第六死 攻城被杀=
@@ -326,8 +308,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第六时 攻城计时=
 MOV S$显_第六时 <$str(S$杀人_第六时)>秒
 MOV S$显_第六死 <$str(S$杀人_第六死)>次
-MOV S$显_第六名 <$str(S$杀人_第六名)>
-MOV S$显_第六数 <$str(N$杀人_第六数)>人
+MOV S$显_第六名 <$str(S$攻城杀人6)>
+MOV S$显_第六数 <$str(N$攻城杀人数6)>人
 MOV S$显_第六会 <$str(S$杀人_第六会)>
 MOV S$显_第六跃 <$str(S$杀人_第六跃)>点
 #ELSEACT
@@ -339,17 +321,17 @@ MOV S$显_第六死
 MOV S$显_第六时
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第七数 0
+Large N$攻城杀人数7 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第七名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人7)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第七会
 DEC <$str(S$杀人_第七会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第七名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人7)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第七跃
 DEC S$杀人_第七跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第七名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人7)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第七死
 DEC S$杀人_第七死 攻城被杀=
@@ -358,8 +340,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第七时 攻城计时=
 MOV S$显_第七时 <$str(S$杀人_第七时)>秒
 MOV S$显_第七死 <$str(S$杀人_第七死)>次
-MOV S$显_第七名 <$str(S$杀人_第七名)>
-MOV S$显_第七数 <$str(N$杀人_第七数)>人
+MOV S$显_第七名 <$str(S$攻城杀人7)>
+MOV S$显_第七数 <$str(N$攻城杀人数7)>人
 MOV S$显_第七会 <$str(S$杀人_第七会)>
 MOV S$显_第七跃 <$str(S$杀人_第七跃)>点
 #ELSEACT
@@ -371,17 +353,17 @@ MOV S$显_第七死
 MOV S$显_第七时
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第八数 0
+Large N$攻城杀人数8 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第八名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人8)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第八会
 DEC <$str(S$杀人_第八会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第八名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人8)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第八跃
 DEC S$杀人_第八跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第八名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人8)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第八死
 DEC S$杀人_第八死 攻城被杀=
@@ -390,8 +372,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第八时 攻城计时=
 MOV S$显_第八时 <$str(S$杀人_第八时)>秒
 MOV S$显_第八死 <$str(S$杀人_第八死)>次
-MOV S$显_第八名 <$str(S$杀人_第八名)>
-MOV S$显_第八数 <$str(N$杀人_第八数)>人
+MOV S$显_第八名 <$str(S$攻城杀人8)>
+MOV S$显_第八数 <$str(N$攻城杀人数8)>人
 MOV S$显_第八会 <$str(S$杀人_第八会)>
 MOV S$显_第八跃 <$str(S$杀人_第八跃)>点
 #ELSEACT
@@ -403,17 +385,17 @@ MOV S$显_第八死
 MOV S$显_第八时
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第九数 0
+Large N$攻城杀人数9 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第九名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人9)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第九会
 DEC <$str(S$杀人_第九会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第九名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人9)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第九跃
 DEC S$杀人_第九跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第九名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人9)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第九死
 DEC S$杀人_第九死 攻城被杀=
@@ -422,8 +404,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第九时 攻城计时=
 MOV S$显_第九时 <$str(S$杀人_第九时)>秒
 MOV S$显_第九死 <$str(S$杀人_第九死)>次
-MOV S$显_第九名 <$str(S$杀人_第九名)>
-MOV S$显_第九数 <$str(N$杀人_第九数)>人
+MOV S$显_第九名 <$str(S$攻城杀人9)>
+MOV S$显_第九数 <$str(N$攻城杀人数9)>人
 MOV S$显_第九会 <$str(S$杀人_第九会)>
 MOV S$显_第九跃 <$str(S$杀人_第九跃)>点
 #ELSEACT
@@ -435,17 +417,17 @@ MOV S$显_第九死
 MOV S$显_第九时
 ;━━━━━━━━━━━
 #IF
-Large N$杀人_第十数 0
+Large N$攻城杀人数10 0
 #ACT
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$杀人_第十名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt [<$str(S$攻城杀人10)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人机器码记录.txt <$str(N0)> S$杀人_第十会
 DEC <$str(S$杀人_第十会)> 行会=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$杀人_第十名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt [<$str(S$攻城杀人10)>]
 INC N0 1
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人标识.txt <$str(N0)> S$杀人_第十跃
 DEC S$杀人_第十跃 个人活跃=
-GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$杀人_第十名)>]
+GetStringPos ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt [<$str(S$攻城杀人10)>]
 INC N0 2
 GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$杀人_第十死
 DEC S$杀人_第十死 攻城被杀=
@@ -454,8 +436,8 @@ GetListString ..\QuestDiary\B03_行会系统\行会系统_个人斩杀数据.txt <$str(N0)> S$
 DEC S$杀人_第十时 攻城计时=
 MOV S$显_第十时 <$str(S$杀人_第十时)>秒
 MOV S$显_第十死 <$str(S$杀人_第十死)>次
-MOV S$显_第十名 <$str(S$杀人_第十名)>
-MOV S$显_第十数 <$str(N$杀人_第十数)>人
+MOV S$显_第十名 <$str(S$攻城杀人10)>
+MOV S$显_第十数 <$str(N$攻城杀人数10)>人
 MOV S$显_第十会 <$str(S$杀人_第十会)>
 MOV S$显_第十跃 <$str(S$杀人_第十跃)>点
 #ELSEACT

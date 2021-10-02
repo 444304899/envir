@@ -75,7 +75,7 @@ MOV S$出装记录行数1-6 <$STR(N$出装记录行数1-6)>
 #IF
 NOT EQUAl S$出装记录1
 #ACT
-PGExtractString : <$str(S$出装记录1)> S$分割结果数组1
+GETVALIDSTRSUPER <$STR(S$出装记录1)> : S$分割结果数组1_
 mov S$拆分一1 <$STR(S$分割结果数组1_1)>
 mov S$拆分一2 <$STR(S$分割结果数组1_2)>
 mov S$拆分一3 <$STR(S$分割结果数组1_3)>
@@ -85,7 +85,7 @@ mov S$拆分一5 <$STR(S$分割结果数组1_5)>
 #IF
 NOT EQUAl S$出装记录2
 #ACT
-PGExtractString : <$str(S$出装记录2)> S$分割结果数组2
+GETVALIDSTRSUPER <$STR(S$出装记录2)> : S$分割结果数组2_
 mov S$拆分二1 <$STR(S$分割结果数组2_1)>
 mov S$拆分二2 <$STR(S$分割结果数组2_2)>
 mov S$拆分二3 <$STR(S$分割结果数组2_3)>
@@ -95,7 +95,7 @@ mov S$拆分二5 <$STR(S$分割结果数组2_5)>
 #IF
 NOT EQUAl S$出装记录3
 #ACT
-PGExtractString : <$str(S$出装记录3)> S$分割结果数组3
+GETVALIDSTRSUPER <$STR(S$出装记录3)> : S$分割结果数组3_
 mov S$拆分三1 <$STR(S$分割结果数组3_1)>
 mov S$拆分三2 <$STR(S$分割结果数组3_2)>
 mov S$拆分三3 <$STR(S$分割结果数组3_3)>
@@ -105,7 +105,7 @@ mov S$拆分三5 <$STR(S$分割结果数组3_5)>
 #IF
 NOT EQUAl S$出装记录4
 #ACT
-PGExtractString : <$str(S$出装记录4)> S$分割结果数组4
+GETVALIDSTRSUPER <$STR(S$出装记录4)> : S$分割结果数组4_
 mov S$拆分四1 <$STR(S$分割结果数组4_1)>
 mov S$拆分四2 <$STR(S$分割结果数组4_2)>
 mov S$拆分四3 <$STR(S$分割结果数组4_3)>
@@ -115,7 +115,7 @@ mov S$拆分四5 <$STR(S$分割结果数组4_5)>
 #IF
 NOT EQUAl S$出装记录5
 #ACT
-PGExtractString : <$str(S$出装记录5)> S$分割结果数组5
+GETVALIDSTRSUPER <$STR(S$出装记录5)> : S$分割结果数组5_
 mov S$拆分五1 <$STR(S$分割结果数组5_1)>
 mov S$拆分五2 <$STR(S$分割结果数组5_2)>
 mov S$拆分五3 <$STR(S$分割结果数组5_3)>
@@ -125,7 +125,7 @@ mov S$拆分五5 <$STR(S$分割结果数组5_5)>
 #IF
 NOT EQUAl S$出装记录6
 #ACT
-PGExtractString : <$str(S$出装记录6)> S$分割结果数组6
+GETVALIDSTRSUPER <$STR(S$出装记录6)> : S$分割结果数组6_
 mov S$拆分六1 <$STR(S$分割结果数组6_1)>
 mov S$拆分六2 <$STR(S$分割结果数组6_2)>
 mov S$拆分六3 <$STR(S$分割结果数组6_3)>
@@ -410,7 +410,7 @@ MOV S$出装记录行数1-6a <$STR(N$出装记录行数1-6a)>
 #IF
 NOT EQUAl S$出装记录1a
 #ACT
-PGExtractString : <$str(S$出装记录1a)> S$分割结果数组7
+GETVALIDSTRSUPER <$STR(S$出装记录1a)> : S$分割结果数组7_
 mov S$拆分一1a <$STR(S$分割结果数组7_1)>
 mov S$拆分一2a <$STR(S$分割结果数组7_2)>
 mov S$拆分一3a <$STR(S$分割结果数组7_3)>
@@ -420,7 +420,7 @@ mov S$拆分一5a <$STR(S$分割结果数组7_5)>
 #IF
 NOT EQUAl S$出装记录2a
 #ACT
-PGExtractString : <$str(S$出装记录2a)> S$分割结果数组8
+GETVALIDSTRSUPER <$STR(S$出装记录2a)> : S$分割结果数组8_
 mov S$拆分二1a <$STR(S$分割结果数组8_1)>
 mov S$拆分二2a <$STR(S$分割结果数组8_2)>
 mov S$拆分二3a <$STR(S$分割结果数组8_3)>
@@ -430,7 +430,7 @@ mov S$拆分二5a <$STR(S$分割结果数组8_5)>
 #IF
 NOT EQUAl S$出装记录3a
 #ACT
-PGExtractString : <$str(S$出装记录3a)> S$分割结果数组9
+GETVALIDSTRSUPER <$STR(S$出装记录3a)> : S$分割结果数组9_
 mov S$拆分三1a <$STR(S$分割结果数组9_1)>
 mov S$拆分三2a <$STR(S$分割结果数组9_2)>
 mov S$拆分三3a <$STR(S$分割结果数组9_3)>
@@ -440,7 +440,7 @@ mov S$拆分三5a <$STR(S$分割结果数组9_5)>
 #IF
 NOT EQUAl S$出装记录4a
 #ACT
-PGExtractString : <$str(S$出装记录4a)> S$分割结果数组10
+GETVALIDSTRSUPER <$STR(S$出装记录4a)> : S$分割结果数组10_
 mov S$拆分四1a <$STR(S$分割结果数组10_1)>
 mov S$拆分四2a <$STR(S$分割结果数组10_2)>
 mov S$拆分四3a <$STR(S$分割结果数组10_3)>
@@ -450,7 +450,7 @@ mov S$拆分四5a <$STR(S$分割结果数组10_5)>
 #IF
 NOT EQUAl S$出装记录5a
 #ACT
-PGExtractString : <$str(S$出装记录5a)> S$分割结果数组11
+GETVALIDSTRSUPER <$STR(S$出装记录5a)> : S$分割结果数组11_
 mov S$拆分五1a <$STR(S$分割结果数组11_1)>
 mov S$拆分五2a <$STR(S$分割结果数组11_2)>
 mov S$拆分五3a <$STR(S$分割结果数组11_3)>
@@ -460,7 +460,7 @@ mov S$拆分五5a <$STR(S$分割结果数组11_5)>
 #IF
 NOT EQUAl S$出装记录6a
 #ACT
-PGExtractString : <$str(S$出装记录6a)> S$分割结果数组12
+GETVALIDSTRSUPER <$STR(S$出装记录6a)> : S$分割结果数组12_
 mov S$拆分六1a <$STR(S$分割结果数组12_1)>
 mov S$拆分六2a <$STR(S$分割结果数组12_2)>
 mov S$拆分六3a <$STR(S$分割结果数组12_3)>

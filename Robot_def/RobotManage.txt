@@ -1,26 +1,3 @@
-[@假人开始上线]
-#if
-small g51 13
-#act
-break
-#IF
-CHECKVAR GLOBAL 假人_自动上线开关 = 开启
-CHECKDUMMYCOUNT < <$GLOBAL(假人_人数上限)>
-#ACT
-INC I66 1
-
-#IF
-LARGE I66 <$GLOBAL(假人_上线间隔)>
-CHECKDUMMYCOUNT < <$GLOBAL(假人_人数上限)>
-#ACT
-MOV I66 0
-MOVR I11 <$GLOBAL(假人_新手地图X左)> <$GLOBAL(假人_新手地图X右)>
-MOVR I12 <$GLOBAL(假人_新手地图Y左)> <$GLOBAL(假人_新手地图Y右)>
-DUMMYLOGON <$GLOBAL(假人_新手地图)> <$STR(I11)> <$STR(I12)> 1
-BREAK
-
-
-
 
 
 [@MIRYZ角色安全RM]
@@ -80,71 +57,6 @@ CheckContainsText <$SERVERNAME> 总区
 GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\合区统计.txt 0 N99
 inc N99 <$str(g300)>
 AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\合区统计.txt <$STR(N99)> 0
-
-
-
-
-
-
-[@二区记录]
-#IF
-CheckContainsText <$SERVERNAME> 2区
-#ACT
-GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
-inc N99 <$str(g300)>
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
-
-[@三区记录]
-#IF
-CheckContainsText <$SERVERNAME> 3区
-#ACT
-GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计 0 N99
-inc N99 <$str(g300)>
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
-
-[@四区记录]
-#IF
-CheckContainsText <$SERVERNAME> 4区
-#ACT
-GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
-inc N99 <$str(g300)>
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
-
-[@五区记录]
-#IF
-CheckContainsText <$SERVERNAME> 5区
-#ACT
-GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
-inc N99 <$str(g300)>
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
-
-
-[@六区记录]
-#IF
-CheckContainsText <$SERVERNAME> 6区
-#ACT
-GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
-inc N99 <$str(g300)>
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
-
-
-[@七区记录]
-#IF
-CheckContainsText <$SERVERNAME> 七区
-#ACT
-GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
-inc N99 <$str(g300)>
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
-
-
-
-[@八区记录]
-#IF
-CheckContainsText <$SERVERNAME> 八区
-#ACT
-GetListString ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt 0 N99
-inc N99 <$str(g300)>
-AddTextListEx ..\..\..\..\跨区文件夹\<$STR(A0)>\今日统计.txt <$STR(N99)> 0
 
 
 

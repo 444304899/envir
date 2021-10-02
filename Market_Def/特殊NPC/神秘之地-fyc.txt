@@ -129,7 +129,7 @@ checkitem 深渊之地入场券 1
 #act
 take 深渊之地入场券 1
 MAPmove syyh 49 42
-SetClientBuff 12 1 3680 3599 254/当前地图：<$MapTitle> 0 0
+;SetClientBuff 12 1 3680 3599 254/当前地图：<$MapTitle> 0 0
 #elseact
 MESSAGEBOX 进入此地图需要“深渊之地入场券*1”请检查你是否有对应物品!
 break
@@ -143,7 +143,7 @@ checkitem 扎昆洞穴入场券 1
 #act
 take 扎昆洞穴入场券 1
 MAPMOVE ronghuo2boss
-SetClientBuff 12 1 3680 3599 254/当前地图：<$MapTitle> 0 0
+;SetClientBuff 12 1 3680 3599 254/当前地图：<$MapTitle> 0 0
 #elseact
 MESSAGEBOX 进入此地图需要“扎昆洞穴入场券*1”请检查你是否有对应物品!
 break

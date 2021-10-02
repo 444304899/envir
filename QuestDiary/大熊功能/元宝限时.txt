@@ -236,7 +236,7 @@ GetListString ..\QuestDiary\ÏÞÊ±½±Àø\Áé·û½±ÀøÊý¾Ý.txt <$Str(N$Áé·ûÊ×±¬ÐÐºÅ)>	S$Î
 inc N$Áé·ûÊ×±¬ÐÐºÅ 1
 GetListString ..\QuestDiary\ÏÞÊ±½±Àø\Áé·û½±ÀøÊý¾Ý.txt <$Str(N$Áé·ûÊ×±¬ÐÐºÅ)>	S$ÎÞÓÃ		S$Áé·ûÊ×±¬ÈË4
 inc N$Áé·ûÊ×±¬ÐÐºÅ 1
-GetListString ..\QuestDiary\ÏÞÊ±½±Àø\Áé·û½±ÀøÊý¾Ý.txt <$Str(N$Áé·ûÊ×±¬ÐÐºÅ)>	S$Áé·ûÊ×±¬Ãû5	S$ÎÞÓÃ
+ ..\QuestDiary\ÏÞÊ±½±Àø\Áé·û½±ÀøÊý¾Ý.txt <$Str(N$Áé·ûÊ×±¬ÐÐºÅ)>	S$Áé·ûÊ×±¬Ãû5	S$ÎÞÓÃ
 inc N$Áé·ûÊ×±¬ÐÐºÅ 1
 GetListString ..\QuestDiary\ÏÞÊ±½±Àø\Áé·û½±ÀøÊý¾Ý.txt <$Str(N$Áé·ûÊ×±¬ÐÐºÅ)>	S$ÎÞÓÃ		S$Áé·ûÊ×±¬½ð5
 inc N$Áé·ûÊ×±¬ÐÐºÅ 1

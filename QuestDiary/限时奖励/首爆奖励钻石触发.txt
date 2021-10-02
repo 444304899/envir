@@ -22,9 +22,9 @@ BREAK
 #IF
 CHECKTEXTLIST ..\QuestDiary\限时奖励\钻石奖励参数.txt [<$CURRTEMNAME>]
 #ACT
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆金额 S$钻石首爆金额
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆名额 S$钻石首爆名额
-PGReadConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆玩家 S$钻石首爆玩家
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆金额 S$钻石首爆金额
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆名额 S$钻石首爆名额
+ReadConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆玩家 S$钻石首爆玩家
 MOV N$钻石首爆名额 <$STR(S$钻石首爆名额)>
 
 
@@ -53,8 +53,8 @@ CHANGEITEMADDVALUE -1 9 = 1
 DEC N$钻石首爆名额 1
 MOV S$钻石首爆名额 <$STR(N$钻石首爆名额)>
 ADDTEXTLISTEX ..\QuestDiary\限时奖励\钻石首爆数据\<$CURRTEMNAME>.txt <$USERNAME>
-PGWriteConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆名额 S$钻石首爆名额
-PGWriteConfigFileItem D:\Mirserver\Mir200\Envir\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆玩家 <$USERNAME>
+WriteConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆名额 S$钻石首爆名额
+WriteConfigFileItem ..\QuestDiary\限时奖励\钻石奖励参数.txt <$CURRTEMNAME> 钻石首爆玩家 <$USERNAME>
 GAMEPOINT + <$Str(S$钻石首爆金额)>
 goto @钻石jilu
 SENDMOVEMSG 0 253 255 100 1 <恭喜玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]在[/FCOLOR=161>{<$MapTitle>,<$X>,<$Y>/FCOLOR=250}<]处打到一个[/FCOLOR=161>{<$CURRTEMNAME>/FCOLOR=70}<]获得<$STR(S$钻石首爆金额)>钻石奖励,剩余名额<$STR(N$钻石首爆名额)>名/FCOLOR=161>
