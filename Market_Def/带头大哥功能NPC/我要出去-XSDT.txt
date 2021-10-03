@@ -3,7 +3,7 @@
 
 equal T1
 #act
-messagebox 请先设置二级密码！
+sendmsg 9 请先设置二级密码！
 BREAK
 #if
 small g496 1
@@ -16,4 +16,4 @@ GIVESTATEITEM 首充礼包 1 1 1 1 1 1 1 1 0
 DELSKILL 倚天辟地
 DELSKILL 十步一杀
 #elseact
-messagebox 剩余等待时间:<$str(g496)>！
+sendmsg 9 剩余等待时间:<$str(g496)>！

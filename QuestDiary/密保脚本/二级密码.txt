@@ -8,38 +8,69 @@ MOV S1
 MOV S2
 MOV S3
 #SAY
-;\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151> <〖您的帐号存在被盗风险〗/FCOLOR=87>\
-<>                                                    <IMG:169:6:-1:3>         \
-<>                                                    <1、可输入汉字`字符`符号等,一个汉字为2个字符,可输入6-8个字符！/AUTOCOLOR=156>\
-<>                                                    <2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！/AUTOCOLOR=155>\
-<>                                                    <3、设置密保后每次登录IP变化后上线都需要验证，不输入掉线处理！/AUTOCOLOR=145>\
-<>                                                    <4、为了您的装备和元宝，建议您设置二级密码，有效防止盗号！/AUTOCOLOR=147>\
-<>                                                    <IMG:169:6:-1:3>         \
-<>                                                    <设置二级密码/@@InPutString1><当前设置密码为:/FCOLOR=19><$STR(S1)>\
-<>                                                    <设置密保手机/@@InPutString2><当前设置手机为:/FCOLOR=19><$STR(S2)>\
-<>                                                    <设置密保QQ号/@@InPutString3><当前设置QQ号为:/FCOLOR=19><$STR(S3)>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>
-<>                                                   <确认设置当前输入信息·√/@确认设置当前输入信息>  <二级密码忘记可使用手机和QQ号码找回或更改/AUTOCOLOR=249>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/ejmm.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<RText|x=156.0|y=7.0|color=255|size=16|text={<$USERNAME>/FCOLOR=249} <尊敬的游戏玩家,您好/FCOLOR=253> <〖您的帐号存在被盗风险〗/FCOLOR=253>>
+<Text|x=192.0|y=35.0|color=253|size=16|text=1、可输入汉字`字符`符号等,一个汉字为2个字符,可输入6-8个字符！>
+<Text|x=192.0|y=65.0|color=253|size=16|text=2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！>
+<Text|x=192.0|y=95.0|color=253|size=16|text=3、设置密保后每次登录IP变化后上线都需要验证，不输入掉线处理！>
+<Text|x=192.0|y=125.0|color=253|size=16|text=4、为了您的装备和元宝，建议您设置二级密码，有效防止盗号！>
+<Text|x=156.0|y=305.0|color=249|size=16|text=二级密码忘记可使用手机和QQ号码找回或更改>
+<Button|x=202.0|y=158.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=设置二级密码|link=@@InPutString1>
+<Button|x=202.0|y=204.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=设置密保手机|link=@@InPutString2>
+<Button|x=202.0|y=251.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=设置密保QQ号|link=@@InPutString3>
+<RText|x=422.0|y=165.0|color=255|size=16|text=<当前设置密码为:/FCOLOR=253><$STR(S1)>>
+<RText|x=422.0|y=210.0|color=255|size=16|text=<当前设置手机为:/FCOLOR=253><$STR(S2)>>
+<RText|x=422.0|y=255.0|color=255|size=16|text=<当前设置QQ号为:/FCOLOR=253><$STR(S3)>>
+<Button|x=521.0|y=300.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=确认设置当前输入信息|link=@确认设置当前输入信息>
+
+
+;<>                                                    <IMG:169:6:-1:3>         \
+;<>                                                    <1、可输入汉字`字符`符号等,一个汉字为2个字符,可输入6-8个字符！/AUTOCOLOR=156>\
+;<>                                                    <2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！/AUTOCOLOR=155>\
+;<>                                                    <3、设置密保后每次登录IP变化后上线都需要验证，不输入掉线处理！/AUTOCOLOR=145>\
+;<>                                                    <4、为了您的装备和元宝，建议您设置二级密码，有效防止盗号！/AUTOCOLOR=147>\
+;<>                                                    <IMG:169:6:-1:3>         \
+;<>                                                    <设置二级密码/@@InPutString1><当前设置密码为:/FCOLOR=19><$STR(S1)>\
+;<>                                                    <设置密保手机/@@InPutString2><当前设置手机为:/FCOLOR=19><$STR(S2)>\
+;<>                                                    <设置密保QQ号/@@InPutString3><当前设置QQ号为:/FCOLOR=19><$STR(S3)>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>
+;<>                                                   <确认设置当前输入信息·√/@确认设置当前输入信息>  <二级密码忘记可使用手机和QQ号码找回或更改/AUTOCOLOR=249>\
 
 
 #elseACT
 MOV S5
 MOV S6
 #elsesay
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/ejmm.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<RText|x=156.0|y=7.0|color=255|size=16|text={<$USERNAME>/FCOLOR=249} <尊敬的游戏玩家,您好/FCOLOR=253> <〖您的帐号目前安全〗/FCOLOR=250>>
+<Text|x=192.0|y=35.0|color=253|size=16|text=1、您好：我是本服的帐号安全大使！>
+<Text|x=192.0|y=65.0|color=253|size=16|text=2、为了维护玩家的利益,本服推出二级密码功能！>
+<Text|x=192.0|y=95.0|color=253|size=16|text=3、请大家牢记自己的二级密 这是我们帐号最后的一道防线！>
+<Text|x=192.0|y=125.0|color=253|size=16|text=4、二级密码不要设置过于简单,可以随时在我这里更改！>
+
+<Button|x=202.0|y=158.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=验证密保手机|link=@@InPutString5>
+<Button|x=202.0|y=204.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=验证密保QQ号|link=@@InPutString6>
+
+<RText|x=422.0|y=165.0|color=255|size=16|text=<当前输入手机为:/FCOLOR=253><$STR(S5)>>
+<RText|x=422.0|y=210.0|color=255|size=16|text=<当前输入QQ号为:/FCOLOR=253><$STR(S6)>>
+<Button|x=208.0|y=288.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=验证输入信息修改密码|link=@验证输入信息修改密码>
+<Button|x=444.0|y=288.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=关闭对话|link=@exit>
+
 ;\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151>   <〖您的帐号目前安全〗/FCOLOR=250>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <1、您好：我是本服的帐号安全大使！ /AUTOCOLOR=156>\
-<>                                                    <2、为了维护玩家的利益,本服推出二级密码功能！/AUTOCOLOR=155>\
-<>                                                    <3、请大家牢记自己的二级密 这是我们帐号最后的一道防线！/AUTOCOLOR=145>\
-<>                                                    <4、二级密码不要设置过于简单,可以随时在我这里更改！/AUTOCOLOR=147>\
-<>                                                    <IMG:169:6:-1:3>         \
-<>                                                    <验证密保手机/@@InPutString5><当前输入手机为:/FCOLOR=19><$STR(S5)>\
-<>                                                    <验证密保QQ号/@@InPutString6><当前输入QQ号为:/FCOLOR=19><$STR(S6)>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <验证输入信息修改密码/@验证输入信息修改密码>     <关闭对话×/@exit>
+;<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151>   <〖您的帐号目前安全〗/FCOLOR=250>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <1、您好：我是本服的帐号安全大使！ /AUTOCOLOR=156>\
+;<>                                                    <2、为了维护玩家的利益,本服推出二级密码功能！/AUTOCOLOR=155>\
+;<>                                                    <3、请大家牢记自己的二级密 这是我们帐号最后的一道防线！/AUTOCOLOR=145>\
+;<>                                                    <4、二级密码不要设置过于简单,可以随时在我这里更改！/AUTOCOLOR=147>\
+;<>                                                    <IMG:169:6:-1:3>         \
+;<>                                                    <验证密保手机/@@InPutString5><当前输入手机为:/FCOLOR=19><$STR(S5)>\
+;<>                                                    <验证密保QQ号/@@InPutString6><当前输入QQ号为:/FCOLOR=19><$STR(S6)>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <验证输入信息修改密码/@验证输入信息修改密码>     <关闭对话×/@exit>
 
 
 [@InPutString5]
@@ -51,7 +82,7 @@ SENDMSG 7 验证成功，手机号码填写正确，请进行下一步！
 #elseact
 MOV S5
 goto @安全向导设置三
-MESSAGEBOX \\验证失败，请填写正确的手机号码！
+sendmsg 9 \\验证失败，请填写正确的手机号码！
 
 [@InPutString6]
 #if
@@ -62,25 +93,26 @@ SENDMSG 7 验证成功，QQ号码填写正确，请进行下一步！
 #elseact
 MOV S6
 goto @安全向导设置三
-MESSAGEBOX \\验证失败，请填写正确的QQ号码！
+sendmsg 9 \\验证失败，请填写正确的QQ号码！
 
 
 
 [@安全向导设置三]
 #act
 #SAY
+
 ;\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151>   <〖请输入用户验证信息〗/FCOLOR=87>\ \
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <1、您好：我是本服的帐号安全大使！ /AUTOCOLOR=156>\
-<>                                                    <2、为了维护玩家的利益,本服推出二级密码功能！/AUTOCOLOR=155>\
-<>                                                    <3、请大家牢记自己的二级密 这是我们帐号最后的一道防线！/AUTOCOLOR=145>\
-<>                                                    <4、二级密码不要设置过于简单,可以随时在我这里更改！/AUTOCOLOR=147>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <验证密保手机/@@InPutString5><当前输入手机为:/FCOLOR=19><$STR(S5)>\
-<>                                                    <验证密保QQ号/@@InPutString6><当前输入QQ号为:/FCOLOR=19><$STR(S6)>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <验证输入信息修改密码/@验证输入信息修改密码>      <关闭对话×/@exit>
+;<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151>   <〖请输入用户验证信息〗/FCOLOR=87>\ \
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <1、您好：我是本服的帐号安全大使！ /AUTOCOLOR=156>\
+;<>                                                    <2、为了维护玩家的利益,本服推出二级密码功能！/AUTOCOLOR=155>\
+;<>                                                    <3、请大家牢记自己的二级密 这是我们帐号最后的一道防线！/AUTOCOLOR=145>\
+;<>                                                    <4、二级密码不要设置过于简单,可以随时在我这里更改！/AUTOCOLOR=147>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <验证密保手机/@@InPutString5><当前输入手机为:/FCOLOR=19><$STR(S5)>\
+;<>                                                    <验证密保QQ号/@@InPutString6><当前输入QQ号为:/FCOLOR=19><$STR(S6)>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <验证输入信息修改密码/@验证输入信息修改密码>      <关闭对话×/@exit>
 
 [@验证输入信息修改密码]
 #IF
@@ -89,17 +121,17 @@ CheckContainsText <$STR(T2)> <$STR(S5)>
 #act
 #SAY
 ;\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151>   <〖请输入您需要设置的新密码〗/FCOLOR=87>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <1、您好：我是本服的帐号安全大使！ /AUTOCOLOR=156>\
-<>                                                    <2、为了维护玩家的利益,本服推出二级密码功能！/AUTOCOLOR=155>\
-<>                                                    <3、请大家牢记自己的二级密 这是我们帐号最后的一道防线！/AUTOCOLOR=145>\
-<>                                                    <4、二级密码不要设置过于简单,可以随时在我这里更改！/AUTOCOLOR=147>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <验证成功，请设置您的新密码:/AUTOCOLOR=70>\ \
-<>                                                    <输入您的新密码/@@InPutString7><当前输入新密码为:/FCOLOR=19><$STR(S7)>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <确认修改当前输入密码/@确认修改当前输入密码>     <关闭对话×/@exit>
+;<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151>   <〖请输入您需要设置的新密码〗/FCOLOR=87>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <1、您好：我是本服的帐号安全大使！ /AUTOCOLOR=156>\
+;<>                                                    <2、为了维护玩家的利益,本服推出二级密码功能！/AUTOCOLOR=155>\
+;<>                                                    <3、请大家牢记自己的二级密 这是我们帐号最后的一道防线！/AUTOCOLOR=145>\
+;<>                                                    <4、二级密码不要设置过于简单,可以随时在我这里更改！/AUTOCOLOR=147>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <验证成功，请设置您的新密码:/AUTOCOLOR=70>\ \
+;<>                                                    <输入您的新密码/@@InPutString7><当前输入新密码为:/FCOLOR=19><$STR(S7)>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <确认修改当前输入密码/@确认修改当前输入密码>     <关闭对话×/@exit>
 
 [@确认修改当前输入密码]
 #IF
@@ -109,13 +141,13 @@ MOV T1 <$STR(s7)>
 MOV S5
 MOV S6
 MOV S7
-MESSAGEBOX \\【密码修改成功，请牢记您的密码：[<$STR(T1)>]】下次登陆时生效！
+sendmsg 9 【密码修改成功，请牢记您的密码：[<$STR(T1)>]】下次登陆时生效！
 CLOSE
 #elseact
 MOV S5
 MOV S6
 MOV S7
-MESSAGEBOX \设置失败：\\请确保您输入的信息正确！
+sendmsg 9 设置失败：请确保您输入的信息正确！
 GOTO @安全向导设置
 BREAK
 
@@ -127,14 +159,14 @@ CheckStringlength <$STR(s7)> > 8
 EXEACTION S7 S6 S5
 MOV S7
 GOTO @验证输入信息修改密码
-MESSAGEBOX 密码位数大于了八位，请重新输入！←密码过于复杂.\\可以输入汉字、字母、数字、符号等！\\一个汉字为2个字符，可输入6-8个字符！
+sendmsg 9 密码位数大于了八位，请重新输入！密码过于复杂.可以输入汉字、字母、数字、符号等！一个汉字为2个字符，可输入6-8个字符！
 BREAK
 #IF
 CheckStringlength <$STR(s7)> < 6
 #ACT
 MOV S7
 GOTO @验证输入信息修改密码
-MESSAGEBOX 密码位数小于了六位，请重新输入！←密码过于简单.\\可以输入汉字、字母、数字、符号等！\\一个汉字为2个字符，可输入6-8个字符！
+sendmsg 9 密码位数小于了六位，请重新输入！密码过于简单.可以输入汉字、字母、数字、符号等！一个汉字为2个字符，可输入6-8个字符！
 BREAK
 
 #IF
@@ -148,14 +180,14 @@ CheckStringlength <$STR(s1)> > 8
 #ACT
 MOV S1
 GOTO @安全向导设置二
-MESSAGEBOX 密码位数大于了八位，请重新输入！←密码过于复杂.\\可以输入汉字、字母、数字、符号等！\\一个汉字为2个字符，可输入6-8个字符！
+sendmsg 9 密码位数大于了八位，请重新输入！密码过于复杂.可以输入汉字、字母、数字、符号等！一个汉字为2个字符，可输入6-8个字符！
 BREAK
 #IF
 CheckStringlength <$STR(s1)> < 6
 #ACT
 MOV S1
 GOTO @安全向导设置二
-MESSAGEBOX 密码位数小于了六位，请重新输入！←密码过于简单.\\可以输入汉字、字母、数字、符号等！\\一个汉字为2个字符，可输入6-8个字符！
+sendmsg 9 密码位数小于了六位，请重新输入！密码过于简单.可以输入汉字、字母、数字、符号等！一个汉字为2个字符，可输入6-8个字符！
 BREAK
 
 #IF
@@ -169,14 +201,14 @@ CheckStringlength <$STR(s1)> > 8
 #ACT
 MOV S1
 GOTO @安全向导设置二
-MESSAGEBOX 密码位数大于了八位，请重新输入！←密码过于复杂.\\可以输入汉字、字母、数字、符号等！\\一个汉字为2个字符，可输入6-8个字符！
+sendmsg 9 密码位数大于了八位，请重新输入！密码过于复杂.可以输入汉字、字母、数字、符号等！一个汉字为2个字符，可输入6-8个字符！
 BREAK
 #IF
 CheckStringlength <$STR(s1)> < 6
 #ACT
 MOV S1
 GOTO @安全向导设置二
-MESSAGEBOX 密码位数小于了六位，请重新输入！←密码过于简单.\\可以输入汉字、字母、数字、符号等！\\一个汉字为2个字符，可输入6-8个字符！
+sendmsg 9 密码位数小于了六位，请重新输入！密码过于简单.可以输入汉字、字母、数字、符号等！一个汉字为2个字符，可输入6-8个字符！
 BREAK
 
 #IF
@@ -190,19 +222,19 @@ BREAK
 [@安全向导设置二]
 #act
 #SAY
-;\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151> <〖您的帐号存在被盗风险〗/FCOLOR=87>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <1、可输入汉字`字符`符号等,一个汉字为2个字符,可输入6-8个字符！/AUTOCOLOR=156>\
-<>                                                    <2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！/AUTOCOLOR=155>\
-<>                                                    <3、设置密保后每次登录IP变化后上线都需要验证，不输入掉线处理！/AUTOCOLOR=145>\
-<>                                                    <4、为了您的装备和元宝，建议您设置二级密码，有效防止盗号！/AUTOCOLOR=147>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <设置二级密码/@@InPutString1><当前设置密码为:/FCOLOR=19><$STR(S1)>\
-<>                                                    <设置密保手机/@@InPutString2><当前设置手机为:/FCOLOR=19><$STR(S2)>\
-<>                                                    <设置密保QQ号/@@InPutString3><当前设置QQ号为:/FCOLOR=19><$STR(S3)>\
-<>                                                    <IMG:169:6:-1:3>          \
-<>                                                    <确认设置当前输入信息·√/@确认设置当前输入信息>  <二级密码忘记可使用手机和QQ号码找回或更改/AUTOCOLOR=249>\
+
+;<>                                                    {<$USERNAME>/FCOLOR=19} <尊敬的游戏玩家,您好/FCOLOR=151> <〖您的帐号存在被盗风险〗/FCOLOR=87>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <1、可输入汉字`字符`符号等,一个汉字为2个字符,可输入6-8个字符！/AUTOCOLOR=156>\
+;<>                                                    <2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！/AUTOCOLOR=155>\
+;<>                                                    <3、设置密保后每次登录IP变化后上线都需要验证，不输入掉线处理！/AUTOCOLOR=145>\
+;<>                                                    <4、为了您的装备和元宝，建议您设置二级密码，有效防止盗号！/AUTOCOLOR=147>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <设置二级密码/@@InPutString1><当前设置密码为:/FCOLOR=19><$STR(S1)>\
+;<>                                                    <设置密保手机/@@InPutString2><当前设置手机为:/FCOLOR=19><$STR(S2)>\
+;<>                                                    <设置密保QQ号/@@InPutString3><当前设置QQ号为:/FCOLOR=19><$STR(S3)>\
+;<>                                                    <IMG:169:6:-1:3>          \
+;<>                                                    <确认设置当前输入信息·√/@确认设置当前输入信息>  <二级密码忘记可使用手机和QQ号码找回或更改/AUTOCOLOR=249>\
 
 [@InPutString2]
 #IF
@@ -210,14 +242,14 @@ CheckStringlength <$STR(S2)> > 11
 #ACT
 MOV S2
 GOTO @安全向导设置二
-MESSAGEBOX \\设置错误，手机号码为11位数字组成！
+sendmsg 9 设置错误，手机号码为11位数字组成！
 BREAK
 #IF
 CheckStringlength <$STR(S2)> < 11
 #ACT
 MOV S2
 GOTO @安全向导设置二
-MESSAGEBOX \\设置错误，手机号码为11位数字组成！
+sendmsg 9 设置错误，手机号码为11位数字组成！
 BREAK
 
 #IF
@@ -231,14 +263,14 @@ CheckStringlength <$STR(S3)> > 10
 #ACT
 MOV S3
 GOTO @安全向导设置二
-MESSAGEBOX \\设置错误，QQ号码为5-10的数字组成！
+sendmsg 9 设置错误，QQ号码为5-10的数字组成！
 BREAK
 #IF
 CheckStringlength <$STR(S3)> < 5
 #ACT
 MOV S3
 GOTO @安全向导设置二
-MESSAGEBOX \\设置错误，QQ号码为5-10的数字组成！
+sendmsg 9 设置错误，QQ号码为5-10的数字组成！
 BREAK
 
 #IF
@@ -250,21 +282,21 @@ BREAK
 CheckStringlength <$STR(s1)> < 2
 #ACT
 GOTO @安全向导设置
-MESSAGEBOX \\您还没设置您的密码，请重新设置！
+sendmsg 9 您还没设置您的密码，请重新设置！
 BREAK
 
 #IF
 CheckStringlength <$STR(s2)> < 2
 #ACT
 GOTO @安全向导设置
-MESSAGEBOX \\您还没设置设置密保手机请重新设置
+sendmsg 9 您还没设置设置密保手机请重新设置
 BREAK
 
 #IF
 CheckStringlength <$STR(s3)> < 2
 #ACT
 GOTO @安全向导设置
-MESSAGEBOX \\您还没设置设置密保QQ号码，请重新设置
+sendmsg 9 您还没设置设置密保QQ号码，请重新设置
 BREAK
 
 
@@ -280,10 +312,10 @@ mov T4 <$IPADDR>
 MOV S1
 MOV S2
 MOV S3
-MESSAGEBOX \设置密码成功，请牢记您的设置:\　\您当前设置密码：[<$STR(T1)>]\您当前设置手机：[<$STR(T2)>]\您当前设置QQ号：[<$STR(T3)>]\　\下次登录本次设置生效！
+MESSAGEBOX \设置密码成功，请牢记您的设置:\您当前设置密码：[<$STR(T1)>] \您当前设置手机：[<$STR(T2)>] \您当前设置QQ号：[<$STR(T3)>]。\下次登录本次设置生效！
 CLOSE
 #elseact
-MESSAGEBOX \设置失败：\\请确保您输入的信息正确！
+sendmsg 9 \设置失败：请确保您输入的信息正确！
 GOTO @安全向导设置
 BREAK
 

@@ -2,14 +2,27 @@
 #IF
 #Act
 #say
-<><>\
-<接引仙使/FCOLOR=154> <New/FCOLOR=249>\
-<九重雷劫渡苍生，不是那么容易的，小伙子。。/FCOLOR=87>\
-<Img:803:0:0:4>\
-<我这里有可帮你抵消一重雷劫伤害的;‘渡劫丹’不知道你有没有兴趣/FCOLOR=147>\
-<虽然很多地方都有爆，价格嘛100金币点就可以卖给你，你考虑考虑/FCOLOR=147>\ \
-<Img:803:0:0:4>\
-<购买渡劫丹·√/@购买> \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=38.0|y=41.0|color=154|size=16|text=接引仙使>
+<Text|x=108.0|y=40.0|color=249|size=16|text=New>
+<Text|x=68.0|y=64.0|color=87|size=16|text=九重雷劫渡苍生，不是那么容易的，小伙子。。>
+<Text|x=68.0|y=86.0|color=0|size=16|text=我这里有可帮你抵消一重雷劫伤害的;>
+<Text|x=68.0|y=108.0|color=0|size=16|text=‘渡劫丹’不知道你有没有兴趣>
+<Text|x=68.0|y=131.0|color=0|size=16|text=虽然很多地方都有爆，价格嘛100金币点就可以卖给你>
+<Text|x=68.0|y=154.0|size=16|color=0|text=你考虑考虑>
+<Button|x=219.0|y=167.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=购买渡劫丹·√|link=@购买>
+
+
+
+
+;<接引仙使/FCOLOR=154> <New/FCOLOR=249>\
+;<九重雷劫渡苍生，不是那么容易的，小伙子。。/FCOLOR=87>\
+;<Img:803:0:0:4>\
+;<我这里有可帮你抵消一重雷劫伤害的;‘渡劫丹’不知道你有没有兴趣/FCOLOR=147>\
+;<虽然很多地方都有爆，价格嘛100金币点就可以卖给你，你考虑考虑/FCOLOR=147>\ \
+;<Img:803:0:0:4>\
+;<购买渡劫丹·√/@购买> \
 
 
 [@购买]
@@ -20,5 +33,5 @@ TAKE 金币 100
 give 渡劫丹 1
 GuildNoticeMsg 5 255 玩家[<$USERNAME>]获得了：渡劫丹
 #ELSEACT
-MESSAGEBOX 提示：\\你没有100金币
+sendmsg 9 提示：\\你没有100金币
 BREAK

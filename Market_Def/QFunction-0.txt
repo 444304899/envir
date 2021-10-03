@@ -18,7 +18,7 @@
 #act
 SENDMSG 6 倒计时结束了
 goto @jieshu2
-DELBUTTON 101 1
+DELBUTTON 101 5
 SENDMSG 6 倒计时
 
 [@StdModeFunc447]

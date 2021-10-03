@@ -4,13 +4,14 @@
 #act
 #say
 <Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/smzd.png|reset=1>
-<Button|x=781.0|y=19.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
-<Text|x=100.0|y=90.0|color=150,158,251,249,253|size=16|text=[时装]·鳯求凰专署地图>
-<Text|x=100.0|y=136.0|color=150,251,249,253|size=16|text=此地图剑甲爆率高图>
-<Text|x=100.0|y=182.0|color=150,251,249,253|size=16|text=12小时一只终极BOSS必出终极专署>
-<Text|x=100.0|y=228.0|color=150,251,249,253|size=16|text=牛鼻怪一个人可能干不死哦~~~>
-<Button|x=94.0|y=284.0|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|nimg=public/button/lbtn1.png|color=251|size=18|text=鳯求凰专署地图|link=@时装合成4>
-<Effect|x=455.0|y=162.0|effecttype=0|effectid=20295|dir=5|speed=1|scale=1|act=0>
+<Button|x=731.0|y=-1.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=100.0|y=90.0|color=253|size=16|text=[时装]·鳯求凰专署地图>
+<Text|x=100.0|y=136.0|color=249|size=16|text=此地图剑甲爆率高图>
+<Text|x=100.0|y=182.0|color=249|size=16|text=12小时一只终极BOSS必出终极专署>
+<Text|x=100.0|y=228.0|color=249|size=16|text=牛鼻怪一个人可能干不死哦~~~>
+<Button|x=94.0|y=284.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=251|text=鳯求凰专署地图|link=@时装合成4>
+<Effect|x=455.0|y=162.0|effecttype=0|effectid=20295|dir=5|act=0|speed=1|scale=1>
+
 
 
 ;<>                         <playimg:27:1154:157:40:180:70>\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \ \  \ \

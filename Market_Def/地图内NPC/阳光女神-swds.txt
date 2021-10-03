@@ -2,16 +2,32 @@
 #IF
 #Act
 #say
-\ \ \ \ \ \  \ \  \   \   \   \  \   \ \   \
-<>                                                       <终极·衣服.New~/FCOLOR=58> \ \
-<>                                                       <本服唯一特殊打金件！强烈推荐，非必需品。装备全靠打!> \ \
-<>                                                                         <合成条件：/FCOLOR=250><布拉巴斯王者统袍+十万妖魂兽甲/FCOLOR=70>    \
-<>                                                                         <合成条件：/FCOLOR=250><“阳光石·圣”*500 颗/FCOLOR=250>    \
-<>                                                                         <佩戴衣服触发全屏吸怪技能~/FCOLOR=58>\ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/ygns.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=219.0|y=114.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=224.0|y=117.0|width=70|height=70|itemid=11479|itemcount=1|showtips=1|bgtype=0>
+<Text|x=194.0|y=26.0|color=249|size=16|text=终极·衣服.New~>
+<Text|x=228.0|y=54.0|color=249|size=16|text=本服唯一特殊打金件！强烈推荐，非必需品。装备全靠打!>
+<Text|x=326.0|y=86.0|color=253|size=16|text=合成条件:>
+<Text|x=410.0|y=86.0|color=253|size=16|text=布拉巴斯王者统袍+十万妖魂兽甲>
+<Text|x=410.0|y=117.0|color=253|size=16|text=阳光石·圣”*500 颗>
+<Text|x=326.0|y=173.0|color=249|size=16|text=佩戴衣服触发全屏吸怪技能~>
+<RText|x=228.0|y=287.0|color=255|size=16|text=<购买条件：/FCOLOR=249>{售价10金币一颗，每区限量出售<$str(g17)>／999颗/FCOLOR=249}>
+<Button|x=225.0|y=249.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=购买【阳光石·圣】|link=@衣服合成4>
+<Button|x=461.0|y=249.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=购买【阳光石·圣*10】|link=@衣服合成5>
+<Button|x=344.0|y=313.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=合成【阳光战神的威严】|link=@衣服合成1>
 
-<>                                                       <购买【阳光石·圣】/@衣服合成4>    <购买【阳光石·圣*10】/@衣服合成5>  <合成【阳光战神的威严】/@衣服合成1>   \
-<>                                                       <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g17)>／999颗/FCOLOR=70} \
-<>                                                       <ItemShow:1479:0:0:-90:1>  \
+
+
+;<>                                                       <终极·衣服.New~/FCOLOR=58> \ \
+;<>                                                       <本服唯一特殊打金件！强烈推荐，非必需品。装备全靠打!> \ \
+;<>                                                                         <合成条件：/FCOLOR=250><布拉巴斯王者统袍+十万妖魂兽甲/FCOLOR=70>    \
+;<>                                                                         <合成条件：/FCOLOR=250><“阳光石·圣”*500 颗/FCOLOR=250>    \
+;<>                                                                         <佩戴衣服触发全屏吸怪技能~/FCOLOR=58>\ \
+
+;<>                                                       <购买【阳光石·圣】/@衣服合成4>    <购买【阳光石·圣*10】/@衣服合成5>  <合成【阳光战神的威严】/@衣服合成1>   \
+;<>                                                       <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g17)>／999颗/FCOLOR=70} \
+;<>                                                       <ItemShow:1479:0:0:-90:1>  \
 
 
 
@@ -26,19 +42,19 @@ take 十万妖魂兽甲 1
 take 阳光石·圣 500
 ;GiveStateItem 阳光战神的威严  1 1 0 0 1 1 0 1
 GIVESTATEITEM 阳光战神的威严 1 1 1 0 0 1 1 0 0
-MESSAGEBOX [提示]:获得物品:阳光战神的威严
+sendmsg 9 [提示]:获得物品:阳光战神的威严
 SENDMOVEMSG 0 253 255 200 1 恭喜玩家『<$USERNAME>』在十万大山成功锻造【阳光战神的威严】守护上古的战甲现世了，颤抖吧凡人！！
 SENDMOVEMSG 0 253 255 240 1 恭喜玩家『<$USERNAME>』在十万大山成功锻造【阳光战神的威严】守护上古的战甲现世了，颤抖吧凡人！！
 SENDMOVEMSG 0 253 255 280 1 恭喜玩家『<$USERNAME>』在十万大山成功锻造【阳光战神的威严】守护上古的战甲现世了，颤抖吧凡人！！
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 [@衣服合成4]
 #if
 large g17 998
 #act
-MESSAGEBOX [提示]:已经购买了999颗！无法购买
+sendmsg 9 [提示]:已经购买了999颗！无法购买
 break
 
 #if
@@ -48,9 +64,9 @@ take 金币 10
 GIVE 阳光石·圣 1
 INC G17 1
 goto @main
-MESSAGEBOX [提示]:获得物品:[阳光石·圣]
+sendmsg 9 [提示]:获得物品:[阳光石·圣]
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -58,7 +74,7 @@ BREAK
 #if
 large g17 998
 #act
-MESSAGEBOX [提示]:已经购买了999颗！无法购买
+sendmsg 9 [提示]:已经购买了999颗！无法购买
 break
 
 #if
@@ -68,9 +84,9 @@ take 金币 100
 GIVE 阳光石·圣 10
 INC G17 10
 goto @main
-MESSAGEBOX [提示]:获得物品:[阳光石·圣*10]
+sendmsg 9 [提示]:获得物品:[阳光石·圣*10]
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 

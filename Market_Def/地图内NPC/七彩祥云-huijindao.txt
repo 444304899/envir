@@ -4,7 +4,7 @@
 CHECKITEMW 「九天·祥云」★★★ 1
 ChecKitem 「九天·祥云」★★★
 #ACT
-MESSAGEBOX 你已经有顶级「九天·祥云」★★★~
+sendmsg 9 你已经有顶级「九天·祥云」★★★~
 BREAK
 
 #IF
@@ -69,17 +69,30 @@ BREAK
 #IF
 #ACT
 #SAY
-\ \ \ \
+<Img|x=52.0|y=-41.0|esc=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=651.0|y=27.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=656.0|y=32.0|width=70|height=70|itemid=10708|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=157.0|y=65.0|effecttype=0|effectid=16131|dir=5|act=0|speed=1|scale=1>
+<Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
+<Text|x=600.0|y=130.0|color=251|size=16|text=1.神级魂环·SSS*1>
+<Text|x=600.0|y=155.0|color=251|size=16|text=2.时装羽毛*1500>
+<Text|x=600.0|y=180.0|color=251|size=16|text=3.钻石*500>
+<Button|x=111.0|y=3.0|color=255|text=购买【风灵石·天】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成4>
+<Button|x=346.0|y=4.0|color=255|text=购买【风灵石·天*10】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成5>
+<RText|x=119.0|y=44.0|color=255|size=16|text=<购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}>
+<Button|x=646.0|y=345.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@1级切割>
+<Button|x=242.0|y=345.0|color=255|grey=1|size=18|mimg=public/button/pu2.png|nimg=public/button/pu1.png|pimg=public/button/pu3.png>
+<Button|x=332.0|y=345.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_1>
+
 ;　　　　　　　　    {[「九天·祥云」★/FCOLOR=70}\
-<PlayImg:17:1050:12:100:140:50>\
-<Itemshow:708:0:593:90>\
-
-<playimg:13:725:10:100:578:60:0>\ \
-<ImgEx:41:187:188:189:590:250|250#合成条件①：神级魂环·SSS*1^250#合成条件②：时装羽毛*1500^250#合成条件③：钻石*500/@1级切割>
-<ImgEx:41:180:181:182:126:309>
-<ImgEx:41:183:184:185:123:309/@下一页_1>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
-
-<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+;<PlayImg:17:1050:12:100:140:50>\
+;<Itemshow:708:0:593:90>\
+;<playimg:13:725:10:100:578:60:0>\ \
+;<ImgEx:41:187:188:189:590:250|250#合成条件①：神级魂环·SSS*1^250#合成条件②：时装羽毛*1500^250#合成条件③：钻石*500/@1级切割>
+;<ImgEx:41:180:181:182:126:309>
+;<ImgEx:41:183:184:185:123:309/@下一页_1>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+;<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
 
 
 
@@ -87,17 +100,29 @@ BREAK
 #IF
 #ACT
 #SAY
-\ \ \ \
+<Img|x=52.0|y=-41.0|esc=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=651.0|y=27.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=656.0|y=32.0|width=70|height=70|itemid=10709|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=157.0|y=65.0|effecttype=0|effectid=16132|dir=5|act=0|speed=1|scale=1>
+<Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
+<Text|x=600.0|y=130.0|color=251|size=16|text=1.「九天·祥云」★*1>
+<Text|x=600.0|y=155.0|color=251|size=16|text=2.时装羽毛*2000>
+<Text|x=600.0|y=180.0|color=251|size=16|text=3.钻石*1000>
+<Button|x=111.0|y=3.0|color=255|text=购买【风灵石·天】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成4>
+<Button|x=346.0|y=4.0|color=255|text=购买【风灵石·天*10】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成5>
+<RText|x=119.0|y=44.0|color=255|size=16|text=<购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}>
+<Button|x=646.0|y=345.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@2级切割>
+<Button|x=242.0|y=345.0|color=255|size=18|mimg=public/button/pu2.png|nimg=public/button/pu1.png|pimg=public/button/pu3.png|link=@main>
+<Button|x=332.0|y=345.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_2>
 ;　　　　　　　　    {[「九天·祥云」★★/FCOLOR=70}\
-<PlayImg:17:1070:12:100:140:50>\
-<Itemshow:709:0:593:90>\
-
-<playimg:13:725:10:100:578:60:0>\ \
-<ImgEx:41:187:188:189:590:250|250#合成条件①：「九天·祥云」★*1^250#合成条件②：时装羽毛*2000^250#合成条件③：钻石 *1000/@2级切割>
-<ImgEx:41:180:181:182:126:309/@main>
-<ImgEx:41:183:184:185:123:309/@下一页_2>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
-
-<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+;<PlayImg:17:1070:12:100:140:50>\
+;<Itemshow:709:0:593:90>\
+;<playimg:13:725:10:100:578:60:0>\ \
+;<ImgEx:41:187:188:189:590:250|250#合成条件①：「九天·祥云」★*1^250#合成条件②：时装羽毛*2000^250#合成条件③：钻石 *1000/@2级切割>
+;<ImgEx:41:180:181:182:126:309/@main>
+;<ImgEx:41:183:184:185:123:309/@下一页_2>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+;<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
 
 
 
@@ -105,17 +130,32 @@ BREAK
 #IF
 #ACT
 #SAY
-\ \ \ \
+<Img|x=52.0|y=-41.0|esc=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=651.0|y=27.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=656.0|y=32.0|width=70|height=70|itemid=10710|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=157.0|y=65.0|effecttype=0|effectid=16133|dir=5|act=0|speed=1|scale=1>
+<Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
+<Text|x=600.0|y=130.0|color=251|size=16|text=1.「九天·祥云」★★*1>
+<Text|x=600.0|y=155.0|color=251|size=16|text=2.时装羽毛*3000>
+<Text|x=600.0|y=180.0|color=251|size=16|text=3.风灵石·天*200>
+<Button|x=111.0|y=3.0|color=255|text=购买【风灵石·天】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成4>
+<Button|x=346.0|y=4.0|color=255|text=购买【风灵石·天*10】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成5>
+<RText|x=119.0|y=44.0|color=255|size=16|text=<购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}>
+<Button|x=646.0|y=345.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@3级切割>
+<Button|x=242.0|y=345.0|color=255|size=18|mimg=public/button/pu2.png|nimg=public/button/pu1.png|pimg=public/button/pu3.png|link=@下一页_1>
+<Button|x=332.0|y=345.0|grey=1|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png>
+
 ;　　　　　　　　    {[「九天·祥云」★★★/FCOLOR=70}\
-<PlayImg:17:1090:12:100:140:50>\
-<Itemshow:710:0:590:90>\
+;<PlayImg:17:1090:12:100:140:50>\
+;<Itemshow:710:0:590:90>\
 
-<playimg:13:725:10:100:578:60:0>\ \
-<ImgEx:41:187:188:189:590:250|250#合成条件①：「九天·祥云」★★*1^250#合成条件②：时装羽毛*3000^250#合成条件③：风灵石·天*200/@3级切割>
-<ImgEx:41:180:181:182:126:309/@main>
-<ImgEx:41:183:184:185:123:309/@下一页_3>\ \ \ \  \ \ \   \ \ \ \ \ \ \  \ \ \   \ \ \ \ \
+;<playimg:13:725:10:100:578:60:0>\ \
+;<ImgEx:41:187:188:189:590:250|250#合成条件①：「九天·祥云」★★*1^250#合成条件②：时装羽毛*3000^250#合成条件③：风灵石·天*200/@3级切割>
+;<ImgEx:41:180:181:182:126:309/@main>
+;<ImgEx:41:183:184:185:123:309/@下一页_3>
 
-<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
+;<>                      <购买【风灵石·天】/@时装合成4>    <购买【风灵石·天*10】/@时装合成5>     <购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}
 
 
 
@@ -144,9 +184,9 @@ GAMEPOINT - 500
 ;GiveStateItem 「九天·祥云」★ 1 1 0 0 0 1 0 1
 GIVESTATEITEM 「九天·祥云」★ 1 1 1 0 0 0 1 0 0
 SENDMOVEMSG 0 253 255 150 1 <【七彩祥云】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功锻造了[/FCOLOR=161><「九天·祥云」★/FCOLOR=250><]打怪必备切割神器，PK更牛比！！！/FCOLOR=161>
-MESSAGEBOX [提示]:获得物品:「九天·祥云」★
+sendmsg 9 [提示]:获得物品:「九天·祥云」★
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 [@2级切割]
@@ -163,9 +203,9 @@ GIVESTATEITEM 「九天·祥云」★★ 1 1 1 0 0 0 1 0 0
 SENDMOVEMSG 0 253 255 150 1 <【七彩祥云】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功锻造了[/FCOLOR=161><「九天·祥云」★★/FCOLOR=250><]打怪必备切割神器，PK更牛比！！！/FCOLOR=161>
 
 
-MESSAGEBOX [提示]:获得物品:「九天·祥云」★★
+sendmsg 9 [提示]:获得物品:「九天·祥云」★★
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 [@3级切割]
@@ -181,9 +221,9 @@ take 风灵石·天 200
 GIVESTATEITEM 「九天·祥云」★★★ 1 1 1 0 0 0 1 0 0
 SENDMOVEMSG 0 253 255 130 1 <【七彩祥云】：玩家[/FCOLOR=161>{<$USERNAME>/FCOLOR=253}<]成功锻造了[/FCOLOR=161><「九天·祥云」★★★/FCOLOR=250><]打怪必备切割神器，PK更牛比！！！/FCOLOR=161>
 
-MESSAGEBOX [提示]:获得物品:「九天·祥云」★★★
+sendmsg 9 [提示]:获得物品:「九天·祥云」★★★
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -191,7 +231,7 @@ BREAK
 #if
 large g16 998
 #act
-MESSAGEBOX [提示]:已经购买了999颗！无法购买
+sendmsg 9 [提示]:已经购买了999颗！无法购买
 break
 #if
 checkgold 10
@@ -199,10 +239,10 @@ checkgold 10
 take 金币 10
 GIVE 风灵石·天 1
 INC G16 1
-MESSAGEBOX [提示]:获得物品:[风灵石·天]
+sendmsg 9 [提示]:获得物品:[风灵石·天]
 GOTO @main
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -210,7 +250,7 @@ BREAK
 #if
 large g16 998
 #act
-MESSAGEBOX [提示]:已经购买了999颗！无法购买
+sendmsg 9 [提示]:已经购买了999颗！无法购买
 break
 #if
 checkgold 100
@@ -218,10 +258,10 @@ checkgold 100
 take 金币 100
 GIVE 风灵石·天 10
 INC G16 10
-MESSAGEBOX [提示]:获得物品:[风灵石·天*10]
+sendmsg 9 [提示]:获得物品:[风灵石·天*10]
 GOTO @main
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 

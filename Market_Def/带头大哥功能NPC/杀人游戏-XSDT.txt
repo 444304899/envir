@@ -40,22 +40,47 @@ SetStringBlank S$第三数 3 1
 #if
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                     <[活动提示]/FCOLOR=70>  \
-<>                                                     <杀人活动/FCOLOR=161>{<$str(s$活动举行)>　/FCOLOR=151}\ \ \
-<>                                                     <活动规则：进入活动后，获得80级，神秘BUFF，无法回城/FCOLOR=215>\
-<>                                                     <活动规则：活动期间可开启狂暴，死亡不消失，可商铺购买药品/FCOLOR=215>\
-<>                                                     <活动规则：活动时间为7分钟，查看活动奖励/FCOLOR=215> <查看活动奖励
-|253#杀人数第一获得：[称号]杀戮之王+赞助会员+500钻石
-^253#杀人数第二获得：赞助会员+500钻石
-^253#杀人数第三获得：500钻石奖励
-^253#杀人数满20获得：200钻石奖励
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/sryx.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=194.0|y=26.0|color=249|size=16|text=[活动提示]>
+<RText|x=238.0|y=59.0|color=255|size=16|text=<杀人活动/FCOLOR=161>{<$str(s$活动举行)>/FCOLOR=249}>
+<Text|x=238.0|y=112.0|color=253|size=16|text=活动规则：进入活动后，获得80级，神秘BUFF，无法回城>
+<Text|x=238.0|y=146.0|color=253|size=16|text=活动规则：活动期间可开启狂暴，死亡不消失，可商铺购买药品>
+<Text|x=238.0|y=181.0|color=253|size=16|text=活动规则：活动时间为7分钟，查看活动奖励>
+<Button|x=225.0|y=249.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=查看活动奖励|link=@main1>
+<Button|x=461.0|y=249.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=《进入杀人活动》|link=@杀人活动>
 
-^251#当前第一名获得者：【<$str(S$第一名)>】　当前第一名杀人数：【<$str(S$第一数)>】
-^251#当前第二名获得者：【<$str(S$第二名)>】　当前第二名杀人数：【<$str(S$第二数)>】
-^251#当前第三名获得者：【<$str(S$第三名)>】　当前第三名杀人数：【<$str(S$第三数)>】>\
-\ \ \
-<>                                                                          <《进入杀人活动》/@杀人活动>
+;<>                                                     <[活动提示]/FCOLOR=70>  \
+;<>                                                     <杀人活动/FCOLOR=161>{<$str(s$活动举行)>　/FCOLOR=151}\ \ \
+;<>                                                     <活动规则：进入活动后，获得80级，神秘BUFF，无法回城/FCOLOR=215>\
+;<>                                                     <活动规则：活动期间可开启狂暴，死亡不消失，可商铺购买药品/FCOLOR=215>\
+;<>                                                     <活动规则：活动时间为7分钟，查看活动奖励/FCOLOR=215> <查看活动奖励
+;|253#杀人数第一获得：[称号]杀戮之王+赞助会员+500钻石
+;^253#杀人数第二获得：赞助会员+500钻石
+;^253#杀人数第三获得：500钻石奖励
+;^253#杀人数满20获得：200钻石奖励
+
+;^251#当前第一名获得者：【<$str(S$第一名)>】　当前第一名杀人数：【<$str(S$第一数)>】
+;^251#当前第二名获得者：【<$str(S$第二名)>】　当前第二名杀人数：【<$str(S$第二数)>】
+;^251#当前第三名获得者：【<$str(S$第三名)>】　当前第三名杀人数：【<$str(S$第三数)>】>\
+;\ \ \
+;<>                                                                          <《进入杀人活动》/@杀人活动>
+[@main1]
+#IF
+#ACT
+#SAY
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/sryx.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=217.0|y=35.0|color=249|size=16|text=杀人数第一获得：[称号]杀戮之王+赞助会员+500钻石>
+<Text|x=217.0|y=65.0|color=249|size=16|text=二获得：赞助会员+500钻石>
+<Text|x=217.0|y=95.0|color=249|size=16|text=杀人数第三获得：500钻石奖励>
+<Text|x=217.0|y=125.0|color=249|size=16|text=杀人数满20获得：200钻石奖励>
+<RText|x=217.0|y=155.0|color=255|size=16|text=<当前第一名获得者：【/FCOLOR=253>{<$str(S$第一名)>/FCOLOR=249}<】　当前第一名杀人数：【/FCOLOR=253>{<$str(S$第一数)>/FCOLOR=249}<】/FCOLOR=253>>
+<RText|x=217.0|y=185.0|color=255|size=16|text=<当前第二名获得者：【/FCOLOR=253>{<$str(S$第二名)>/FCOLOR=249}<】　当前第二名杀人数：【/FCOLOR=253>{<$str(S$第二数)>/FCOLOR=249}<】/FCOLOR=253>>
+<RText|x=217.0|y=215.0|color=255|size=16|text=<当前第三名获得者：【/FCOLOR=253>{<$str(S$第三名)>/FCOLOR=249}<】　当前第三名杀人数：【/FCOLOR=253>{<$str(S$第三数)>/FCOLOR=249}<】/FCOLOR=253>}>
+<Button|x=212.0|y=269.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=返回|link=@main>
+
+
 [@杀人活动]
 #IF
 small g495 1
@@ -85,4 +110,4 @@ HumanHP + 100000000
 HumanMP + 100000000
 ;SendCenterMsg 70 0 〖杀人活动〗:玩家[<$USERNAME>]进入了地图<$MapTitle>..杀人前三名可获得奖励!. 1 10
 #ELSEACT
-messagebox 活动已关闭,开启时间为正式区开区10分钟,测试区无效
+sendmsg 9 活动已关闭,开启时间为正式区开区10分钟,测试区无效

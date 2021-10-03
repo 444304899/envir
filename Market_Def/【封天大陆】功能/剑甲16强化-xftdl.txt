@@ -4,7 +4,7 @@
 #if
 large <$BOXITEM[0].UPGRADECOUNT> 15
 #act
-MessageBox 强化失败：<$BOXITEM[0].NAME>已经不能再强化了
+sendmsg 9 强化失败：<$BOXITEM[0].NAME>已经不能再强化了
 ReturnBoxItem 0
 break
 
@@ -41,46 +41,89 @@ mov N$需要人民币
 #if
 #act
 #SAY
-\  \ \  \  \
-<>                                                    <[强化属性]||253#说明:
-^255#这里可以15强化到16！
-^255#强化+16,100%成功！
-^251#强化属性＝基础属性×百分比
-^251#武器属性＝攻击.魔法.道术
-^251#衣服属性＝防御.魔御.生命值
-^250#╔====================╗
-^250#‖强化值    强化百分比‖
-^250#‖====================‖
-^250#‖强化+1        1%    ‖
-^250#‖强化+2        2%    ‖
-^250#‖强化+3        3%    ‖
-^250#‖强化+4        5%    ‖
-^250#‖强化+5        7%    ‖
-^250#‖强化+6        10%   ‖
-^250#‖强化+7        15%   ‖
-^250#‖强化+8        20%   ‖
-^250#‖强化+9        30%   ‖
-^250#‖强化+10       40%   ‖
-^250#‖强化+11       50%   ‖
-^250#‖强化+12       70%   ‖
-^250#‖强化+13       100%  ‖
-^250#‖强化+14       140%  ‖
-^250#‖强化+15       200%  ‖
-^250#‖强化+16       280%  ‖
-^250#  ====================╝>\ \ \
+<Img|x=53.0|y=-39.0|esc=1|show=4|bg=1|move=1|img=public/box/jjqh.png|loadDelay=1|reset=1>
+<Button|x=493.0|y=-31.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ITEMBOX|x=265.0|y=33.0|width=70|height=70|boxindex=0|stdmode=*|img=public/box/frjj.png>
+<Img|x=219.0|y=115.0|img=public/box/itembox.png|esc=0>
+<Img|x=306.0|y=115.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=311.0|y=118.0|width=70|height=70|itemid=11751|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=224.0|y=117.0|width=70|height=70|itemid=1|itemcount=1|showtips=1|bgtype=0>
+<Text|x=135.0|y=248.0|color=249|size=16|text=[+16强化] 可用材料+钻石升级至+16 100%成功.>
+<Text|x=109.0|y=288.0|color=249|size=16|text=注意:转移强化16只能在这里转移,其他地方转移后果自负>
+<Button|x=157.0|y=323.0|color=255|mimg=public/button/zbqh2.png|size=16|pimg=public/button/zbqh3.png|nimg=public/button/zbqh1.png|link=@强化>
+<Button|x=359.0|y=323.0|color=255|mimg=public/button/qhzy2.png|size=16|pimg=public/button/qhzy3.png|nimg=public/button/qhzy1.png|link=@main2>
+<Button|x=411.0|y=21.0|nimg=public/button/msgbtn1.png|mimg=public/button/msgbtn2.png|pimg=public/button/msgbtn3.png|size=16|color=255|text=强化属性|link=@main3>
 
-<> <ITEMBOX:0:-1:0:195:-23:40:40:5,10:请放入你要强化的武器或衣服>\ \ \ \  \ \
-<>                         钻石:< <$STR(N$需要人民币)>/FCOLOR=250>   < <$STR(S$需要物品1)>/FCOLOR=250>\
-<>                                     < <$STR(S$需要物品2)>/FCOLOR=250>\ \
-<><playimg:13:725:10:100:170:-195:0>\   \   \
-<>             <[+16强化] 可用材料+钻石升级至+16 100%成功./FCOLOR=249>\
-<>             <注意:转移强化16只能在这里转移,其他地方转移后果自负/FCOLOR=249>\ \
-<>                    <IMG:138:6:0:-3/@强化>      　<IMG:139:6:14:-3/@main2>　　　　　 \ \
+
+
+;<><[强化属性]||253#说明:
+;^255#这里可以15强化到16！
+;^255#强化+16,100%成功！
+;^251#强化属性＝基础属性×百分比
+;^251#武器属性＝攻击.魔法.道术
+;^251#衣服属性＝防御.魔御.生命值
+;^250#╔====================╗
+;^250#‖强化值    强化百分比‖
+;^250#‖====================‖
+;^250#‖强化+1        1%    ‖
+;^250#‖强化+2        2%    ‖
+;^250#‖强化+3        3%    ‖
+;^250#‖强化+4        5%    ‖
+;^250#‖强化+5        7%    ‖
+;^250#‖强化+6        10%   ‖
+;^250#‖强化+7        15%   ‖
+;^250#‖强化+8        20%   ‖
+;^250#‖强化+9        30%   ‖
+;^250#‖强化+10       40%   ‖
+;^250#‖强化+11       50%   ‖
+;^250#‖强化+12       70%   ‖
+;^250#‖强化+13       100%  ‖
+;^250#‖强化+14       140%  ‖
+;^250#‖强化+15       200%  ‖
+;^250#‖强化+16       280%  ‖
+;^250#  ====================╝>\ \ \
+;<> <ITEMBOX:0:-1:0:195:-23:40:40:5,10:请放入你要强化的武器或衣服>\ \ \ \  \ \
+;<>                         钻石:< <$STR(N$需要人民币)>/FCOLOR=250>   < <$STR(S$需要物品1)>/FCOLOR=250>\
+;<>                                     < <$STR(S$需要物品2)>/FCOLOR=250>\ \
+;<><playimg:13:725:10:100:170:-195:0>\   \   \
+;<>             <[+16强化] 可用材料+钻石升级至+16 100%成功./FCOLOR=249>\
+;<>             <注意:转移强化16只能在这里转移,其他地方转移后果自负/FCOLOR=249>\ \
+;<>                    <IMG:138:6:0:-3/@强化>      　<IMG:139:6:14:-3/@main2>　　　　　 \ \
 #act
 break
+[@main3]
 
-
-
+#if
+#act
+#say
+<Img|x=68.0|y=-29.0|bg=1|show=4|loadDelay=1|move=1|esc=1|img=public/box/xkbg.png|reset=1>
+<Button|x=332.0|y=-37.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@main>
+<ListView|children={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25}|x=104.0|y=-11.0|width=220|height=360|direction=1|bounce=1|margin=1|reload=0>
+<Text|color=151|size=16|text=这里可以15强化到16！|id=1>
+<Text|color=151|size=16|text=强化+16,100%成功！|id=2>
+<Text|color=151|size=16|text=强化属性＝基础属性×百分比|id=3>
+<Text|color=250|size=16|text=武器属性＝攻击.魔法.|id=4>
+<Text|color=250|size=16|text=衣服属性＝防御.魔御.生命值|id=5>
+<Text|color=250|size=16|text=╔====================╗|id=6>
+<Text|color=250|size=16|text=‖强化值       强化百分比 ‖|id=7>
+<Text|color=250|size=16|text=‖====================‖|id=8>
+<Text|color=250|size=16|text=‖强化+1             1%    ‖|id=9>
+<Text|color=250|size=16|text=‖强化+2             2%    ‖|id=10>
+<Text|color=250|size=16|text=‖强化+3             3%    ‖|id=11>
+<Text|color=250|size=16|text=‖强化+4             5%    ‖|id=12>
+<Text|color=250|size=16|text=‖强化+5             7%    ‖|id=13>
+<Text|color=250|size=16|text=‖强化+6            10%   ‖|id=14>
+<Text|color=250|size=16|text=‖强化+7            15%   ‖|id=15>
+<Text|color=250|size=16|text=‖强化+8            20%   ‖|id=16>
+<Text|color=250|size=16|text=‖强化+9            30%   ‖|id=17>
+<Text|color=250|size=16|text=‖强化+10           40%   ‖|id=18>
+<Text|color=250|size=16|text=‖强化+11           50%   ‖|id=19>
+<Text|color=250|size=16|text=‖强化+12           70%   ‖|id=20>
+<Text|color=250|size=16|text=‖强化+13          100%  ‖|id=21>
+<Text|color=250|size=16|text=‖强化+14          140%  ‖|id=22>
+<Text|color=250|size=16|text=‖强化+15          200%  ‖|id=23>
+<Text|color=250|size=16|text=‖强化+16          280%  ‖|id=24>
+<Text|color=250|size=16|text= ====================╝|id=25>
 
 [@ItemIntoBox1]
 #if
@@ -156,7 +199,7 @@ CHANGECUSTOMITEMABIL -1 2 3 0
 #if
 large <$BOXITEM[0].UPGRADECOUNT> 15
 #act
-MessageBox 强化失败：<$BOXITEM[0].NAME>已经不能再强化了
+sendmsg 9 强化失败：<$BOXITEM[0].NAME>已经不能再强化了
 ReturnBoxItem 0
 break
 
@@ -173,7 +216,7 @@ break
 #if
 not CheckBoxItemCount 0 1
 #act
-MessageBox 强化失败：你并没有放入装备这里只能强化+15的装备！
+sendmsg 9 强化失败：你并没有放入装备这里只能强化+15的装备！
 break
 
 
@@ -208,11 +251,11 @@ take 装备强化石 <$STR(N$强化石数量)>
 take 五股烈焰吞天魔剑 1
 take 九曲天刀 1
 UpDateBoxItem 0
-MessageBox 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
+sendmsg 9 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
 goto @计算强化后的属性
 break
 #elseact
-messagebox 条件不足
+sendmsg 9 条件不足
 
 
 [@15qianghuay]
@@ -227,11 +270,11 @@ GAMEPOINT - 5000
 take 古神皮甲 1
 take 九曲三相 1
 UpDateBoxItem 0
-MessageBox 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
+sendmsg 9 强化成功：装备强化等级:<$BOXITEM[0].UPGRADECOUNT>
 goto @计算强化后的属性
 break
 #elseact
-messagebox 条件不足
+sendmsg 9 条件不足
 
 
 
@@ -352,17 +395,22 @@ break
 #if
 #act
 #SAY
-\  \  \
-<>                                <[强化转移]||253#
-强化+10或以上的装备可以进行转移.转移过后
-^-^新的装备获得强化级数和强化属性
-^-^每次转移需要扣除1000灵符
-^-^第一个框放入你已经强化的武器或者衣服
-^-^第二个框放入需要被强化的新装备> \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/qhzy.png|reset=1>
+<Button|x=426.0|y=0.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@main>
+<ITEMBOX|x=131.0|y=90.0|width=70|height=70|boxindex=0|stdmode=1|img=public/box/itembox.png>
+<ITEMBOX|x=283.0|y=90.0|width=70|height=70|boxindex=0|stdmode=1|img=public/box//itembox.png>
+<Button|x=119.0|y=192.0|color=255|mimg=public/button/zbqh2.png|size=16|pimg=public/button/zbqh3.png|nimg=public/button/zbqh1.png|link=@main>
+<Button|x=277.0|y=192.0|color=255|mimg=public/button/qhzy2.png|size=16|pimg=public/button/qhzy3.png|nimg=public/button/qhzy1.png|link=@开始转移>
+;<>                                <[强化转移]||253#
+;强化+10或以上的装备可以进行转移.转移过后
+;^-^新的装备获得强化级数和强化属性
+;^-^每次转移需要扣除1000灵符
+;^-^第一个框放入你已经强化的武器或者衣服
+;^-^第二个框放入需要被强化的新装备> \
 
-<>    <ITEMBOX:3:12:47:40:35:34:34:5,10:请放入已经强化+10或以上的装备>　 　<ITEMBOX:4:12:47:60:35:34:34:5,10:后放入要转移的装备>\\
-\　\ \　\ \　\ 　\       转移后,被继承的装备将会返还 ！\
-<>    <IMG:138:6:0:3/@main>       　<IMG:139:6:14:3/@开始转移>　　　　　 \ \
+;<>    <ITEMBOX:3:12:47:40:35:34:34:5,10:请放入已经强化+10或以上的装备>　 　<ITEMBOX:4:12:47:60:35:34:34:5,10:后放入要转移的装备>\\
+;\　\ \　\ \　\ 　\       转移后,被继承的装备将会返还 ！\
+;<>    <IMG:138:6:0:3/@main>       　<IMG:139:6:14:3/@开始转移>　　　　　 \ \
 
 
 
@@ -380,7 +428,7 @@ break
 
 #if
 #act
-MessageBox 你放入的装备并没有强化到+10或以上.无法转移
+sendmsg 9 你放入的装备并没有强化到+10或以上.无法转移
 ReturnBoxItem 3
 break
 
@@ -395,14 +443,14 @@ SetUpgradeItem 4
 #if
 equal <$BOXITEM[3].NAME>
 #act
-MessageBox 请先在左边框中放入强化+10或以上的装备.再到右边框中放入需要被强化的装备
+sendmsg 9 请先在左边框中放入强化+10或以上的装备.再到右边框中放入需要被强化的装备
 ReturnBoxItem 4
 break
 
 #if
 large <$BOXITEM[4].UPGRADECOUNT> 0
 #act
-MessageBox 你放入的装备已经强化过了.无法被转移
+sendmsg 9 你放入的装备已经强化过了.无法被转移
 ReturnBoxItem 4
 break
 
@@ -447,14 +495,14 @@ break
 CompareText <$BOXITEM[3].STDMODE> 10
 CompareText <$BOXITEM[4].STDMODE> 5
 #act
-messagebox 请放相同装备
+sendmsg 9 请放相同装备
 break
 
 #if
 CompareText <$BOXITEM[3].STDMODE> 5
 CompareText <$BOXITEM[4].STDMODE> 10
 #act
-messagebox 请放相同装备
+sendmsg 9 请放相同装备
 break
 
 #if
@@ -464,7 +512,7 @@ SetUpgradeItem 4
 #if
 CHECKGameGird < 1000
 #ACT
-MessageBox 你的灵符太少了.无法转移
+sendmsg 9 你的灵符太少了.无法转移
 ReturnBoxItem 3
 ReturnBoxItem 4
 break
@@ -545,7 +593,7 @@ ChangeItemName -1 <$BOXITEM[3].NAME>
 UpDateBoxItem 3
 ReturnBoxItem 3
 goto @main
-;MESSAGEBOX 转移成功!!
+;sendmsg 9 转移成功!!
 break
 
 

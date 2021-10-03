@@ -4,12 +4,40 @@
 #if
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                                                                   <当前神火点:/FCOLOR=253><$STR(u13)>\
-<>                                                       <ItemShow:1508:0:0:5:1>        <ItemShow:1509:0:0:5:1>        <ItemShow:1510:0:0:5:1>        <ItemShow:1511:0:0:5:1> \ \ \ \
-<>                                                     <《点击兑换》|253#兑换需要神火点*1000/@兑换1>   <《点击兑换》|253#兑换需要神火点*1000/@兑换2>   <《点击兑换》|253#兑换需要神火点*1000/@兑换3>   <《点击兑换》|253#兑换需要神火点*1000/@兑换4> \ \ \
-<>                                                       <ItemShow:1513:0:0:5:1>        <ItemShow:1514:0:0:5:1>        <ItemShow:1515:0:0:5:1>        <ItemShow:1516:0:0:5:1> \ \ \ \
-<>                                                     <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换5>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换6>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换7>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换8> \ \ \
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/shrl.png|reset=1>
+<Button|x=730.0|y=0.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<RText|x=126.0|y=60.0|color=255|size=16|text=<当前神火点:  /FCOLOR=253><$STR(u13)>>
+<Img|x=130.0|y=100.0|img=public/box/itembox.png|esc=0>
+<Img|x=280.0|y=100.0|img=public/box/itembox.png|esc=0>
+<Img|x=430.0|y=100.0|img=public/box/itembox.png|esc=0>
+<Img|x=580.0|y=100.0|img=public/box/itembox.png|esc=0>
+<Img|x=130.0|y=238.0|img=public/box/itembox.png|esc=0>
+<Img|x=280.0|y=238.0|img=public/box/itembox.png|esc=0>
+<Img|x=430.0|y=238.0|img=public/box/itembox.png|esc=0>
+<Img|x=580.0|y=238.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=135.0|y=102.0|width=70|height=70|itemid=10862|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=285.0|y=102.0|width=70|height=70|itemid=10863|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=435.0|y=102.0|width=70|height=70|itemid=10864|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=585.0|y=102.0|width=70|height=70|itemid=10865|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=135.0|y=240.0|width=70|height=70|itemid=11508|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=285.0|y=240.0|width=70|height=70|itemid=11509|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=435.0|y=240.0|width=70|height=70|itemid=11510|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=585.0|y=240.0|width=70|height=70|itemid=11511|itemcount=1|showtips=1|bgtype=0>
+<Button|x=121.0|y=189.0|color=255|pimg=public/button/djdh3.png|size=18|mimg=public/button/djdh2.png|nimg=public/button/djdh1.png|link=@兑换1>
+<Button|x=271.0|y=188.0|color=255|pimg=public/button/djdh3.png|size=18|mimg=public/button/djdh2.png|nimg=public/button/djdh1.png|link=@兑换2>
+<Button|x=421.0|y=189.0|color=255|pimg=public/button/djdh3.png|size=18|mimg=public/button/djdh2.png|nimg=public/button/djdh1.png|link=@兑换3>
+<Button|x=571.0|y=190.0|color=255|pimg=public/button/djdh3.png|size=18|mimg=public/button/djdh2.png|nimg=public/button/djdh1.png|link=@兑换4>
+<Button|x=121.0|y=327.0|color=255|pimg=public/button/djdh3.png|size=18|mimg=public/button/djdh2.png|nimg=public/button/djdh1.png|link=@兑换5>
+<Button|x=271.0|y=327.0|color=255|pimg=public/button/djdh3.png|size=18|mimg=public/button/djdh2.png|nimg=public/button/djdh1.png|link=@兑换6>
+<Button|x=421.0|y=327.0|color=255|pimg=public/button/djdh3.png|size=18|mimg=public/button/djdh2.png|nimg=public/button/djdh1.png|link=@兑换7>
+<Button|x=571.0|y=327.0|color=255|pimg=public/button/djdh3.png|size=18|mimg=public/button/djdh2.png|nimg=public/button/djdh1.png|link=@兑换8>
+
+
+;<><当前神火点:/FCOLOR=253><$STR(u13)>\
+;<> <ItemShow:1508:0:0:5:1>        <ItemShow:1509:0:0:5:1>        <ItemShow:1510:0:0:5:1>        <ItemShow:1511:0:0:5:1> \ \ \ \
+;<> <《点击兑换》|253#兑换需要神火点*1000/@兑换1>   <《点击兑换》|253#兑换需要神火点*1000/@兑换2>   <《点击兑换》|253#兑换需要神火点*1000/@兑换3>   <《点击兑换》|253#兑换需要神火点*1000/@兑换4> \ \ \
+;<>  <ItemShow:1513:0:0:5:1>        <ItemShow:1514:0:0:5:1>        <ItemShow:1515:0:0:5:1>        <ItemShow:1516:0:0:5:1> \ \ \ \
+;<> <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换5>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换6>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换7>   <《点击兑换》|253#兑换需要神火点*2000^253#上一级神火/@兑换8> \ \ \
 
 
 
@@ -17,20 +45,39 @@
 
 [@兑换1]
 #if
+#act
+#say
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@神火系统>
+<Text|x=102.0|y=86.0|color=249|size=18|text=兑换需要神火点*1000，是否确定兑换>
+<Button|x=96.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=确定|link=@确认兑换1>
+<Button|x=291.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=取消|link=@神火系统>
+
+[@确认兑换1]
+#if
 large u13 999
 checkitem 神火·灵体护身I 1
 #act
 take 神火·灵体护身I 1
 DEC u13 1000
 GIVE 异火焚仙I 1
-MESSAGEBOX 神火兑换成功..
+sendmsg 9 神火兑换成功..
 break
 #elseact
-MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+sendmsg 9 [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
 break
 
-
 [@兑换2]
+#if
+#act
+#say
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@神火系统>
+<Text|x=102.0|y=86.0|color=249|size=18|text=兑换需要神火点*1000，是否确定兑换>
+<Button|x=96.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=确定|link=@确认兑换2>
+<Button|x=291.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=取消|link=@神火系统>
+
+[@确认兑换2]
 #if
 large u13 999
 checkitem 神火·灵体护身II 1
@@ -38,14 +85,23 @@ checkitem 神火·灵体护身II 1
 take 神火·灵体护身II 1
 DEC u13 1000
 GIVE 异火焚仙II 1
-MESSAGEBOX 神火兑换成功..
+sendmsg 9 神火兑换成功..
 break
 #elseact
-MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+sendmsg 9 [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
 break
 
-
 [@兑换3]
+#if
+#act
+#say
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@神火系统>
+<Text|x=102.0|y=86.0|color=249|size=18|text=兑换需要神火点*1000，是否确定兑换>
+<Button|x=96.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=确定|link=@确认兑换3>
+<Button|x=291.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=取消|link=@神火系统>
+
+[@确认兑换3]
 #if
 large u13 999
 checkitem 神火·灵体护身III 1
@@ -53,14 +109,23 @@ checkitem 神火·灵体护身III 1
 take 神火·灵体护身III 1
 DEC u13 1000
 GIVE 异火焚仙III 1
-MESSAGEBOX 神火兑换成功..
+sendmsg 9 神火兑换成功..
 break
 #elseact
-MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+sendmsg 9 [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
 break
 
-
 [@兑换4]
+#if
+#act
+#say
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@神火系统>
+<Text|x=102.0|y=86.0|color=249|size=18|text=兑换需要神火点*1000，是否确定兑换>
+<Button|x=96.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=确定|link=@确认兑换4>
+<Button|x=291.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=取消|link=@神火系统>
+
+[@确认兑换4]
 #if
 large u13 999
 checkitem 神火·灵体护身IV 1
@@ -68,14 +133,24 @@ checkitem 神火·灵体护身IV 1
 take 神火·灵体护身IV 1
 DEC u13 1000
 GIVE 异火焚仙IV 1
-MESSAGEBOX 神火兑换成功..
+sendmsg 9 神火兑换成功..
 break
 #elseact
-MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+sendmsg 9 [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
 break
 
 
 ;----------------------------
+
+[@兑换5]
+#if
+#act
+#say
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@神火系统>
+<Text|x=102.0|y=86.0|color=249|size=18|text=兑换需要神火点*1000及上一级神火\是否确定兑换>
+<Button|x=96.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=确定|link=@确认兑换4>
+<Button|x=291.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=取消|link=@神火系统>
 
 [@兑换5]
 #if
@@ -85,14 +160,23 @@ checkitem 异火焚仙I 1
 take 异火焚仙I 1
 DEC u13 2000
 GIVE 魂灯紫炎I 1
-MESSAGEBOX 神火兑换成功..
+sendmsg 9 神火兑换成功..
 break
 #elseact
-MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+sendmsg 9 [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
 break
 
-
 [@兑换6]
+#if
+#act
+#say
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@神火系统>
+<Text|x=102.0|y=86.0|color=249|size=18|text=兑换需要神火点*1000及上一级神火\是否确定兑换>
+<Button|x=96.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=确定|link=@确认兑换6>
+<Button|x=291.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=取消|link=@神火系统>
+
+[@确认兑换6]
 #if
 large u13 1999
 checkitem 异火焚仙II 1
@@ -100,14 +184,23 @@ checkitem 异火焚仙II 1
 take 异火焚仙II 1
 DEC u13 2000
 GIVE 魂灯紫炎II 1
-MESSAGEBOX 神火兑换成功..
+sendmsg 9 神火兑换成功..
 break
 #elseact
-MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+sendmsg 9 [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
 break
 
-
 [@兑换7]
+#if
+#act
+#say
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@神火系统>
+<Text|x=102.0|y=86.0|color=249|size=18|text=兑换需要神火点*1000及上一级神火\是否确定兑换>
+<Button|x=96.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=确定|link=@确认兑换7>
+<Button|x=291.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=取消|link=@神火系统>
+
+[@确认兑换7]
 #if
 large u13 1999
 checkitem 异火焚仙III 1
@@ -115,14 +208,23 @@ checkitem 异火焚仙III 1
 take 异火焚仙III 1
 DEC u13 1000
 GIVE 魂灯紫炎III 1
-MESSAGEBOX 神火兑换成功..
+sendmsg 9 神火兑换成功..
 break
 #elseact
-MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+sendmsg 9 [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
 break
 
-
 [@兑换8]
+#if
+#act
+#say
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@神火系统>
+<Text|x=102.0|y=86.0|color=249|size=18|text=兑换需要神火点*1000及上一级神火\是否确定兑换>
+<Button|x=96.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=确定|link=@确认兑换8>
+<Button|x=291.0|y=158.0|pimg=public/button/msgbtn3.png|mimg=public/button/msgbtn2.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=取消|link=@神火系统>
+
+[@确认兑换8]
 #if
 large u13 1999
 checkitem 异火焚仙IV 1
@@ -130,10 +232,10 @@ checkitem 异火焚仙IV 1
 take 异火焚仙IV 1
 DEC u13 2000
 GIVE 魂灯紫炎IV 1
-MESSAGEBOX 神火兑换成功..
+sendmsg 9 神火兑换成功..
 break
 #elseact
-MESSAGEBOX [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
+sendmsg 9 [提示:]\\你的神火点不足，或者缺少上一级神火，无法兑换
 break
 
 

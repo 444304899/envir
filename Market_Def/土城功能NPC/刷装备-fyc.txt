@@ -1,16 +1,13 @@
 [@main]
-#if
+#IF
 #act
-ReadConfigFileItem ..\QuestDiary\配置文件\转生配置.ini 转生 <$RELEVEL> S$转生配置信息
-GETVALIDSTRSUPER <$STR(S$转生配置信息)> : S$分割结果数组1_
-mov S$转生材料1 <$STR(S$分割结果数组1_1)>
-mov S$转生材料2 <$STR(S$分割结果数组1_2)>
-mov S$奖励倍攻 <$STR(S$分割结果数组1_3)>
-mov S$需求金币 <$STR(S$分割结果数组1_4)>
-mov S$材料数量 <$STR(S$分割结果数组1_5)>
-SENDMSG 6 转生5：<$STR(S$分割结果数组1_5)>
-SENDMSG 6 转生：<$STR(S$转生配置信息)>
-[@kaishi]
-#if
+#say
+<shengcheng/@shengcheng> <shengcheng1/@shengcheng1> 
+[@shengcheng]
+#IF
 #act
-ADDBUTTON 101 1 <COUNTDOWN|id=5|x=70|y=73|time=3|count=1|size=16|color=249|link=@jieshu>
+ADDBUTTON 101  5 <ItemShow|x=70|y=29.0|width=73|height=70|itemid=10697|itemcount=1|showtips=1|bgtype=0><COUNTDOWN|id=5|x=70|y=73|time=3|count=1|size=16|color=249|width=0|height=0|link=@jieshu>
+[@shengcheng1]
+#IF
+#act
+delBUTTON 101  5

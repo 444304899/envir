@@ -4,7 +4,7 @@
 CHECKITEMW ★★「九天★祥云」★★ 1
 ChecKitem ★★「九天★祥云」★★
 #ACT
-MESSAGEBOX 你已经有顶级★★「九天★祥云」★★~
+sendmsg 9 你已经有顶级★★「九天★祥云」★★~
 BREAK
 
 #IF
@@ -57,13 +57,14 @@ BREAK
 #SAY
 <Img|x=52.0|y=-41.0|esc=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|reset=1>
 <Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=651.0|y=27.0|img=public/box/itembox.png|esc=0>
 <ItemShow|x=656.0|y=32.0|width=70|height=70|itemid=11588|itemcount=1|showtips=1|bgtype=0>
 <Effect|x=157.0|y=65.0|effecttype=0|effectid=16134|dir=5|act=0|speed=1|scale=1>
 <Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
-<Text|x=600.0|y=135.0|color=251|size=16|text=1.「九天·祥云」★★★*1>
-<Text|x=600.0|y=163.0|color=251|size=16|text=2.时装羽毛*5000>
-<Text|x=600.0|y=189.0|color=251|size=16|text=3.风灵石·天*300>
-<Text|x=600.0|y=215.0|color=251|size=16|text=4.钻石*2000>
+<Text|x=600.0|y=130.0|color=251|size=16|text=1.「九天·祥云」★★★*1>
+<Text|x=600.0|y=155.0|color=251|size=16|text=2.时装羽毛*5000>
+<Text|x=600.0|y=180.0|color=251|size=16|text=3.风灵石·天*300>
+<Text|x=600.0|y=205.0|color=251|size=16|text=4.钻石*2000>
 <Button|x=111.0|y=3.0|color=255|text=购买【风灵石·天】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成4>
 <Button|x=346.0|y=4.0|color=255|text=购买【风灵石·天*10】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成5>
 <RText|x=119.0|y=44.0|color=255|size=16|text=<购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}>
@@ -90,13 +91,14 @@ BREAK
 #SAY
 <Img|x=52.0|y=-41.0|esc=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|reset=1>
 <Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=651.0|y=27.0|img=public/box/itembox.png|esc=0>
 <ItemShow|x=656.0|y=32.0|width=70|height=70|itemid=11589|itemcount=1|showtips=1|bgtype=0>
 <Effect|x=157.0|y=65.0|effecttype=0|effectid=16135|dir=5|act=0|speed=1|scale=1>
 <Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
-<Text|x=600.0|y=135.0|color=251|size=16|text=1.★★「九天·祥云」★★*1>
-<Text|x=600.0|y=163.0|color=251|size=16|text=2.时装羽毛*10000>
-<Text|x=600.0|y=189.0|color=251|size=16|text=3.风灵石·天*400>
-<Text|x=600.0|y=215.0|color=251|size=16|text=4.钻石*3000>
+<Text|x=600.0|y=130.0|color=251|size=16|text=1.★★「九天·祥云」★★*1>
+<Text|x=600.0|y=155.0|color=251|size=16|text=2.时装羽毛*10000>
+<Text|x=600.0|y=180.0|color=251|size=16|text=3.风灵石·天*400>
+<Text|x=600.0|y=205.0|color=251|size=16|text=4.钻石*3000>
 <Button|x=111.0|y=3.0|color=255|text=购买【风灵石·天】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成4>
 <Button|x=346.0|y=4.0|color=255|text=购买【风灵石·天*10】|pimg=public/button/lbtn3.png|size=18|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|link=@时装合成5>
 <RText|x=119.0|y=44.0|color=255|size=16|text=<购买条件：/FCOLOR=250>{售价10金币一颗，每区限量出售<$str(g16)>／999颗/FCOLOR=70}>
@@ -135,9 +137,9 @@ take 时装羽毛 5000
 ;GiveStateItem ★★「九天·祥云」★★  1 1 1 0 0 1 1 1
 GIVESTATEITEM ★★「九天·祥云」★★ 1 1 1 1 0 0 1 1 0
 GAMEPOINT - 2000
-MESSAGEBOX [提示]:获得物品:★★「九天·祥云」★★
+sendmsg 9 [提示]:获得物品:★★「九天·祥云」★★
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 [@2级切割]
@@ -153,9 +155,9 @@ take 时装羽毛 10000
 ;GiveStateItem ★★「九天★祥云」★★  1 1 1 0 0 1 1 1
 GIVESTATEITEM ★★「九天★祥云」★★ 1 1 1 1 0 0 1 1 0
 GAMEPOINT - 3000
-MESSAGEBOX [提示]:获得物品:★★「九天★祥云」★★
+sendmsg 9 [提示]:获得物品:★★「九天★祥云」★★
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -163,7 +165,7 @@ BREAK
 #if
 large g16 998
 #act
-MESSAGEBOX [提示]:已经购买了999颗！无法购买
+sendmsg 9 [提示]:已经购买了999颗！无法购买
 break
 #if
 checkgold 10
@@ -171,10 +173,10 @@ checkgold 10
 take 金币 10
 GIVE 风灵石·天 1
 INC G16 1
-MESSAGEBOX [提示]:获得物品:[风灵石·天]
+sendmsg 9 [提示]:获得物品:[风灵石·天]
 GOTO @main
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -182,7 +184,7 @@ BREAK
 #if
 large g16 998
 #act
-MESSAGEBOX [提示]:已经购买了999颗！无法购买
+sendmsg 9 [提示]:已经购买了999颗！无法购买
 break
 #if
 checkgold 100
@@ -190,10 +192,10 @@ checkgold 100
 take 金币 100
 GIVE 风灵石·天 10
 INC G16 10
-MESSAGEBOX [提示]:获得物品:[风灵石·天*10]
+sendmsg 9 [提示]:获得物品:[风灵石·天*10]
 GOTO @main
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 

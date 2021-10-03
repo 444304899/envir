@@ -6,6 +6,7 @@
 #SAY
 <Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/shizhuang.png|loadDelay=1|esc=1>
 <Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=651.0|y=27.0|img=public/box/itembox.png|esc=0>
 <ItemShow|x=656.0|y=29.0|width=70|height=70|itemid=11594|itemcount=1|showtips=1|bgtype=0>
 <Effect|x=235.0|y=167.0|effecttype=0|effectid=20295|dir=5|speed=1|act=0|scale=1>
 <Text|x=600.0|y=105.0|color=250|size=16|text=合成条件:>
@@ -52,9 +53,9 @@ GAMEPOINT - 2000
 take 风灵石·天 300
 ;GiveStateItem [时装]·更木剑八 1 1 1 0 0 1 1 1
 GIVESTATEITEM [时装]·更木剑八 1 1 1 1 0 0 1 1 0
-MESSAGEBOX [提示]:获得物品:[时装]·更木剑八
+sendmsg 9 [提示]:获得物品:[时装]·更木剑八
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -71,9 +72,9 @@ take 时装羽毛 5000
 ;GiveStateItem [时装]·橘右京 1 1 1 0 0 1 1 1
 GIVESTATEITEM [时装]·橘右京 1 1 1 1 0 0 1 1 0
 GAMEPOINT - 3000
-MESSAGEBOX [提示]:获得物品:[时装]·橘右京
+sendmsg 9 [提示]:获得物品:[时装]·橘右京
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -86,9 +87,9 @@ CheckGold 30000
 TAKE 金币  30000
 ;GiveStateItem [时装]·鳯求凰 1 1 1 0 0 1 1 1
 GIVESTATEITEM [时装]·鳯求凰 1 1 1 1 0 0 1 1 0
-MESSAGEBOX [提示]:获得物品:[时装]·鳯求凰
+sendmsg 9 [提示]:获得物品:[时装]·鳯求凰
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -105,9 +106,9 @@ take [时装]·橘右京] 1
 GAMEPOINT - 3000
 ;GiveStateItem [时装]·鳯求凰 1 1 1 0 0 1 1 1
 GIVESTATEITEM [时装]·鳯求凰 1 1 1 1 0 0 1 1 0
-MESSAGEBOX [提示]:获得物品:[时装]·鳯求凰
+sendmsg 9 [提示]:获得物品:[时装]·鳯求凰
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -115,7 +116,7 @@ BREAK
 #if
 large g16 998
 #act
-MESSAGEBOX [提示]:已经购买了999颗！无法购买
+sendmsg 9 [提示]:已经购买了999颗！无法购买
 break
 #if
 checkgold 10
@@ -123,10 +124,10 @@ checkgold 10
 take 金币 10
 GIVE 风灵石·天 1
 INC G16 1
-MESSAGEBOX [提示]:获得物品:[风灵石·天]
+sendmsg 9 [提示]:获得物品:[风灵石·天]
 GOTO @main
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 
@@ -134,7 +135,7 @@ BREAK
 #if
 large g16 998
 #act
-MESSAGEBOX [提示]:已经购买了999颗！无法购买
+sendmsg 9 [提示]:已经购买了999颗！无法购买
 break
 #if
 checkgold 100
@@ -142,10 +143,10 @@ checkgold 100
 take 金币 100
 GIVE 风灵石·天 10
 INC G16 10
-MESSAGEBOX [提示]:获得物品:[风灵石·天*10]
+sendmsg 9 [提示]:获得物品:[风灵石·天*10]
 GOTO @main
 #elseact
-MESSAGEBOX 请检测是否有足够的材料！
+sendmsg 9 请检测是否有足够的材料！
 BREAK
 
 

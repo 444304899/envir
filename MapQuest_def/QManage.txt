@@ -478,7 +478,7 @@ MAPEFFECT 超脱密境9   54 97  17  1194 9 -1 100 0
 CHECKLEVELEX > 0
 #ACT
 VAR Integer HUMAN 活跃点数
-;LOADVAR HUMAN 活跃点数 ..\QuestDiary\临时数据\攻沙数据.txt
+;LOADVAR HUMAN 活跃点数 ..\QuestDiary\临时数据\攻沙数据.txt 
 VAR Integer HUMAN 攻沙杀人
 ;LOADVAR HUMAN 攻沙杀人 ..\QuestDiary\临时数据\攻沙数据.txt
 VAR Integer HUMAN 攻沙死亡
