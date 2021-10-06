@@ -166,6 +166,18 @@ MOV N$当前捐献区 8
 
 #if
 #act
+SortHumVar 职位捐款数量 S$捐献玩家名 N$玩家捐献数量 0 1 10
+MOV  A120 S$捐献玩家名1
+MOV  A121 S$捐献玩家名2
+MOV  A122 S$捐献玩家名3
+MOV  A123 S$捐献玩家名4
+MOV  A124 S$捐献玩家名5
+MOV  G20  N$玩家捐献数量1
+MOV  G21  N$玩家捐献数量2
+MOV  G22  N$玩家捐献数量3
+MOV  G23  N$玩家捐献数量4
+MOV  G24  N$玩家捐献数量5
+
 MOV S$职位人名1 <$STR(A120)>
 MOV S$职位人名2 <$STR(A121)>
 MOV S$职位人名3 <$STR(A122)>
@@ -200,44 +212,85 @@ SetStringBlank S$捐献金额4 14 1
 ;SetStringBlank S$捐献金额5 14 1
 SetStringBlank S$捐献金额5 14 1
 
-
 #if
 #act
 #SAY
-\ \ \  \ \
-<>         <IMG:78:6:0:-3><[沙城捐献]:/FCOLOR=250><所有的捐献金额都会记录沙巴克奖池/FCOLOR=161>                   <你当前的金币:/FCOLOR=161> <[<$GOLDCOUNT>]/FCOLOR=253> \
-<>         <IMG:78:6:0:-3><[最低捐献]:/FCOLOR=250><累计捐献达到 200金币,即可获得属性加成/FCOLOR=161>         <捐献排名越高,获得的属性越强!/FCOLOR=70>  \
-<>         <IMG:170:6:-4:5> \
-<>         <IMG:70:6:0:-5><第一名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名1)>/FCOLOR=249><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额1)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第一名属性加成|-^250#增加 3 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 500% ^-^250#打怪伤害提升 + 100%^-^250#神力倍数增加 + 1.50^-^250#刀切割怪物1%/FCOLOR=151> \
-<>         <IMG:70:6:0:-5><第二名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名2)>/FCOLOR=251><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额2)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第二名属性加成|-^250#增加 2 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 300% ^-^250#打怪伤害提升 + 30%^-^250#神力倍数增加 + 1.30/FCOLOR=151>\
-<>         <IMG:70:6:0:-5><第三名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名3)>/FCOLOR=116><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额3)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第三名属性加成|-^250#增加 1 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 200% ^-^250#打怪伤害提升 + 15%^-^250#神力倍数增加 + 1.10/FCOLOR=151>\
-<>         <IMG:70:6:0:-5><第四名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名4)>/FCOLOR=244><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额4)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第四名属性加成|-^250#打怪爆率提升 + 100% ^-^250#打怪伤害提升 + 10%^-^250#神力倍数增加 + 1.05/FCOLOR=151>\
-<>         <IMG:70:6:0:-5><第五名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名5)>/FCOLOR=146><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额5)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第五名属性加成|-^250#打怪爆率提升 + 80% ^-^250#打怪伤害提升 + 5%^-^250#神力倍数增加 + 1.02/FCOLOR=151>\
-<>         <IMG:170:6:-4:5> \
-<>         <IMG:79:6:-2:-4><凡是累计捐献达到5000金币,获得第一名爆率和神力,封顶5000金币/FCOLOR=224>  <你当前累计捐献金额:/FCOLOR=70> <$HUMAN(职位捐款数量)>\
-<>         <IMG:79:6:-2:-4><增加打怪爆率100%,5%吸血,沙捐体力10%,刀刀切割+10000,隐身术.自动回收./FCOLOR=224><攻击速度+100%/FCOLOR=249> \
-<>         <IMG:79:6:-2:-4><获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> \
-<>         <IMG:170:6:-4:5> \
-<>                               <IMG:74:6:0:-2><百团大战今日一区累计金额:/FCOLOR=150>  <[<$STR(S$区数量1)>]/FCOLOR=251>  <金币/FCOLOR=251>\
-<>                               <IMG:74:6:0:-2><百团大战今日二区累计金额:/FCOLOR=150>  <[<$STR(S$区数量2)>]/FCOLOR=251>  <金币/FCOLOR=251>\
-<>                               <IMG:74:6:0:-2><百团大战今日三区累计金额:/FCOLOR=150>  <[<$STR(S$区数量3)>]/FCOLOR=251>  <金币/FCOLOR=251>\
-<>                               <IMG:74:6:0:-2><百团大战今日四区累计金额:/FCOLOR=150>  <[<$STR(S$区数量3)>]/FCOLOR=251>  <金币/FCOLOR=251>\
-<>                               <IMG:74:6:0:-2><百团大战今日五区累计金额:/FCOLOR=150>  <[<$STR(S$区数量5)>]/FCOLOR=251>  <金币/FCOLOR=251>\
-<>                               <IMG:74:6:0:-2><百团大战今日六区累计金额:/FCOLOR=150>  <[<$STR(S$区数量6)>]/FCOLOR=251>  <金币/FCOLOR=251>\
-<>                               <IMG:74:6:0:-2><百团大战今日七区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+<Img|x=48.0|y=-33.0|esc=1|show=4|bg=1|move=1|img=public/box/shajuan1.png|loadDelay=1|reset=1>
+<Button|x=837.0|y=-1.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
 
-<>            <【我要捐献】/@@InPutInteger20>       <IMG:74:6:0:-2><百团大战今日四区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>       <【奖励说明】
-|250#奖励说明：只限2个行会，行会值班自觉收人避免一边倒！
-^251#奖励说明：出现一边倒或只有一个行会或三个行会,取消奖励！
-^253#奖励说明：请城主带截图联系管理，建立微信群（转区系统有管理二维码）
-^254#奖励说明：奖励以微信红包形式发送，半小时之内找管理发放奖励！
-^254#奖励说明：第二次合区后双方10人以上才有现今奖励，只奖励胜利方>\
+<RText|x=460.0|y=93.0|color=255|size=14|text=<$STR(S$捐献玩家名1)/FCOLOR=249>>
+<RText|x=460.0|y=124.0|color=255|size=14|text=<$STR(S$捐献玩家名2)/FCOLOR=249>>
+<RText|x=460.0|y=155.0|color=255|size=14|text=<$STR(S$捐献玩家名3)/FCOLOR=249>>
+<RText|x=600.0|y=93.0|color=255|size=14|text=< <$STR(N$玩家捐献数量1)>/FCOLOR=151>>
+<RText|x=600.0|y=124.0|color=255|size=14|text=< <$STR(N$玩家捐献数量2)>/FCOLOR=151>>
+<RText|x=600.0|y=155.0|color=255|size=14|text=< <$STR(N$玩家捐献数量3)>/FCOLOR=151>>
+<Text|x=753.0|y=93.0|tips=<第一名属性加成/FCOLOR=250>^-增加 3 级上限^-擒龙手^-打怪爆率提升 + 500% ^-打怪伤害提升 + 100%^-神力倍数增加 + 1.50^-刀切割怪物1%|tipsx=0|tipsy=176|size=14|color=151|text=属性加成>
+<Text|x=753.0|y=124.0|tips=<第二名属性加成/FCOLOR=250>^-增加 2 级上限^-擒龙手^-打怪爆率提升 + 300% ^-打怪伤害提升 + 30%^-神力倍数增加 + 1.30|tipsy=156|size=14|color=151|text=属性加成>
+<Text|x=753.0|y=155.0|tips=<第三名属性加成/FCOLOR=250>^-增加 1 级上限^-擒龙手^-打怪爆率提升 + 200% ^-打怪伤害提升 + 15%^-神力倍数增加 + 1.10|tipsy=156|size=14|color=151|text=属性加成>
+<Img|x=120.0|y=249.0|img=public/micon/000078.png|esc=0>
+<Img|x=120.0|y=271.0|img=public/micon/000078.png|esc=0>
+<Img|x=120.0|y=316.0|img=public/micon/000079.png|esc=0>
+<Img|x=120.0|y=337.0|img=public/micon/000079.png|esc=0>
+<Img|x=120.0|y=358.0|img=public/micon/000079.png|esc=0>
+<RText|x=135.0|y=249.0|color=255|size=14|text=<[沙城捐献]:/FCOLOR=249><所有的捐献金额都会记录沙巴克奖池/FCOLOR=102>                   <你当前的金币:/FCOLOR=102> < [<$GOLDCOUNT>]/FCOLOR=253>>
+<RText|x=135.0|y=271.0|color=255|size=14|text=<[最低捐献]:/FCOLOR=249><累计捐献达到 200金币,即可获得属性加成/FCOLOR=102>         <捐献排名越高,获得的属性越强!/FCOLOR=70>>
+<RText|x=135.0|y=316.0|color=255|size=14|text=<凡是累计捐献达到5000金币,获得第一名爆率和神力,封顶5000金币/FCOLOR=253><  你当前累计捐献金额: /FCOLOR=70><<$HUMAN(职位捐款数量)>/FCOLOR=249>>
+<RText|x=135.0|y=337.0|color=255|size=14|text=<增加打怪爆率100%,5%吸血,沙捐体力10%,刀刀切割+10000,隐身术.自动回收./FCOLOR=253><攻击速度+100%/FCOLOR=249>>
+<RText|x=135.0|y=358.0|color=255|size=14|text=<获取首爆金币资格/FCOLOR=253> <获取首爆金币资格/FCOLOR=249> <获取首爆金币资格/FCOLOR=253> <获取首爆金币资格/FCOLOR=249>>
+<RText|x=208.0|y=74.0|color=255|size=14|text=<[<$STR(S$区数量1)>]/FCOLOR=251>  <金币/FCOLOR=251>>
+<RText|x=208.0|y=106.0|color=255|size=14|text=<[<$STR(S$区数量2)>]/FCOLOR=251>  <金币/FCOLOR=251>>
+<RText|x=208.0|y=138.0|color=255|size=14|text=<[<$STR(S$区数量3)>]/FCOLOR=251>  <金币/FCOLOR=251>>
+<RText|x=208.0|y=170.0|color=255|size=14|text=<[<$STR(S$区数量4)>]/FCOLOR=251>  <金币/FCOLOR=251>>
+<RText|x=126.0|y=400.0|color=255|size=14|text=<今日总捐献为:/FCOLOR=253> <[<$STR(S$总数量)>]/FCOLOR=249>                 <官方收取费用后发放：/FCOLOR=253>{[<$STR(S$发放总数)>]/FCOLOR=249}>
+<RText|x=126.0|y=425.0|color=255|size=14|text=<胜利方奖励70%:/FCOLOR=253><[<$STR(S$胜利方)>]/FCOLOR=249>                 <失败方奖励30%：/FCOLOR=253>     {[<$STR(S$失败方)>]/FCOLOR=249}>
+<RText|x=126.0|y=450.0|color=255|size=14|text=<官方收取50%（管理费+平台提现+服务器） (提示：合区后所有捐献清零，玩家理性捐献！/FCOLOR=102>>
+<Img|x=118.0|y=240.0|img=public/box/bk1.png|esc=0>
+<Img|x=118.0|y=300.0|img=public/box/bk1.png|esc=0>
+<Img|x=118.0|y=385.0|img=public/box/bk1.png|esc=0>
+<Img|x=118.0|y=480.0|img=public/box/bk1.png|esc=0>
+<Button|x=242.0|y=500.0|tips= <【奖励说明】/FCOLOR=249>
+^1、只限2个行会，行会值班自觉收人避免一边倒！
+^2、出现一边倒或只有一个行会或三个行会,取消奖励！
+^3、请城主带截图联系管理，建立微信群（转区系统有管理二维码）
+^4、奖励以微信红包形式发送，半小时之内找管理发放奖励！
+^5、第二次合区后双方10人以上才有现今奖励，只奖励胜利方|tipsy=0|mimg=public/button/jlsm2.png|color=255|size=16|nimg=public/button/jlsm1.png|pimg=public/button/jlsm3.png>
+<Button|x=560.0|y=500.0|color=255|mimg=public/button/wyjx2.png|size=16|pimg=public/button/wyjx3.png|nimg=public/button/wyjx1.png|link=@@InPutInteger20>
+
+
+
+
+;<>         <IMG:78:6:0:-3><[沙城捐献]:/FCOLOR=250><所有的捐献金额都会记录沙巴克奖池/FCOLOR=161>                   <你当前的金币:/FCOLOR=161> < [<$GOLDCOUNT>]/FCOLOR=253> \
+;<>         <IMG:78:6:0:-3><[最低捐献]:/FCOLOR=250><累计捐献达到 200金币,即可获得属性加成/FCOLOR=161>         <捐献排名越高,获得的属性越强!/FCOLOR=70>  \
+;<>         <IMG:170:6:-4:5> \
+;<>         <IMG:70:6:0:-5><第一名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名1)>/FCOLOR=249><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额1)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第一名属性加成|-^250#增加 3 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 500% ^-^250#打怪伤害提升 + 100%^-^250#神力倍数增加 + 1.50^-^250#刀切割怪物1%/FCOLOR=151> \
+;<>         <IMG:70:6:0:-5><第二名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名2)>/FCOLOR=251><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额2)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第二名属性加成|-^250#增加 2 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 300% ^-^250#打怪伤害提升 + 30%^-^250#神力倍数增加 + 1.30/FCOLOR=151>\
+;<>         <IMG:70:6:0:-5><第三名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名3)>/FCOLOR=116><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额3)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第三名属性加成|-^250#增加 1 级上限^-^250#擒龙手^-^250#打怪爆率提升 + 200% ^-^250#打怪伤害提升 + 15%^-^250#神力倍数增加 + 1.10/FCOLOR=151>\
+;<>         <IMG:70:6:0:-5><第四名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名4)>/FCOLOR=244><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额4)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第四名属性加成|-^250#打怪爆率提升 + 100% ^-^250#打怪伤害提升 + 10%^-^250#神力倍数增加 + 1.05/FCOLOR=151>\
+;<>         <IMG:70:6:0:-5><第五名/FCOLOR=254><:/FCOLOR=246>< <$STR(S$职位人名5)>/FCOLOR=146><IMG:57:6:6:-2><【捐献数量】:/FCOLOR=58>< <$STR(S$捐献金额5)>/FCOLOR=161><IMG:0:6:0:-3><点击查看第五名属性加成|-^250#打怪爆率提升 + 80% ^-^250#打怪伤害提升 + 5%^-^250#神力倍数增加 + 1.02/FCOLOR=151>\
+;<>         <IMG:170:6:-4:5> \
+;<>         <IMG:79:6:-2:-4><凡是累计捐献达到5000金币,获得第一名爆率和神力,封顶5000金币/FCOLOR=224>  <你当前累计捐献金额:/FCOLOR=70> <$HUMAN(职位捐款数量)>\
+;<>         <IMG:79:6:-2:-4><增加打怪爆率100%,5%吸血,沙捐体力10%,刀刀切割+10000,隐身术.自动回收./FCOLOR=224><攻击速度+100%/FCOLOR=249> \
+;<>         <IMG:79:6:-2:-4><获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> <获取首爆金币资格/FCOLOR=224> \
+;<>         <IMG:170:6:-4:5> \
+;<>                               <IMG:74:6:0:-2><百团大战今日一区累计金额:/FCOLOR=150>  <[<$STR(S$区数量1)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;<>                               <IMG:74:6:0:-2><百团大战今日二区累计金额:/FCOLOR=150>  <[<$STR(S$区数量2)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;<>                               <IMG:74:6:0:-2><百团大战今日三区累计金额:/FCOLOR=150>  <[<$STR(S$区数量3)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;<>                               <IMG:74:6:0:-2><百团大战今日四区累计金额:/FCOLOR=150>  <[<$STR(S$区数量3)>]/FCOLOR=251>  <金币/FCOLOR=251>\
 ;<>                               <IMG:74:6:0:-2><百团大战今日五区累计金额:/FCOLOR=150>  <[<$STR(S$区数量5)>]/FCOLOR=251>  <金币/FCOLOR=251>\
-;<>                 <IMG:74:6:0:-2><百团大战今日六区累计金额:/FCOLOR=150>  <[<$STR(S$区数量6)>]/FCOLOR=251>  <金币/FCOLOR=251>\
-;<>                  <IMG:74:6:0:-2><百团大战今日七区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>\   \
-<>                   <今日总捐献为:/FCOLOR=224> <[<$STR(S$总数量)>]/FCOLOR=251>                 <官方收取费用后发放：/FCOLOR=224>{[<$STR(S$发放总数)>]/FCOLOR=251}           \
-<>                   <胜利方奖励70%:/FCOLOR=224><[<$STR(S$胜利方)>]/FCOLOR=251>                 <失败方奖励30%：/FCOLOR=224>     {[<$STR(S$失败方)>]/FCOLOR=251}           \ \
-<>         <官方收取50%（管理费+平台提现+服务器） (提示：合区后所有捐献清零，玩家理性捐献！/FCOLOR=95> \
+;<>                               <IMG:74:6:0:-2><百团大战今日六区累计金额:/FCOLOR=150>  <[<$STR(S$区数量6)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;<>                               <IMG:74:6:0:-2><百团大战今日七区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;<>            <【我要捐献】/@@InPutInteger20>       <IMG:74:6:0:-2><百团大战今日四区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>       <【奖励说明】
+;|250#奖励说明：只限2个行会，行会值班自觉收人避免一边倒！
+;^251#奖励说明：出现一边倒或只有一个行会或三个行会,取消奖励！
+;^253#奖励说明：请城主带截图联系管理，建立微信群（转区系统有管理二维码）
+;^254#奖励说明：奖励以微信红包形式发送，半小时之内找管理发放奖励！
+;^254#奖励说明：第二次合区后双方10人以上才有现今奖励，只奖励胜利方>\
+;;<>                               <IMG:74:6:0:-2><百团大战今日五区累计金额:/FCOLOR=150>  <[<$STR(S$区数量5)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;;<>                 <IMG:74:6:0:-2><百团大战今日六区累计金额:/FCOLOR=150>  <[<$STR(S$区数量6)>]/FCOLOR=251>  <金币/FCOLOR=251>\
+;;<>                  <IMG:74:6:0:-2><百团大战今日七区累计金额:/FCOLOR=150>  <[<$STR(S$区数量7)>]/FCOLOR=251>  <金币/FCOLOR=251>\   \
+;<>                   <今日总捐献为:/FCOLOR=224> <[<$STR(S$总数量)>]/FCOLOR=251>                 <官方收取费用后发放：/FCOLOR=224>{[<$STR(S$发放总数)>]/FCOLOR=251}           \
+;<>                   <胜利方奖励70%:/FCOLOR=224><[<$STR(S$胜利方)>]/FCOLOR=251>                 <失败方奖励30%：/FCOLOR=224>     {[<$STR(S$失败方)>]/FCOLOR=251}           \ \
+;<>         <官方收取50%（管理费+平台提现+服务器） (提示：合区后所有捐献清零，玩家理性捐献！/FCOLOR=95> \
 
 
 
@@ -252,7 +305,7 @@ large S$合区信息 0
 NOT CHECKTITLE 沙城捐献
 SMALL N20 150
 #act
-MESSAGEBOX [提示]：对不起，合区后第一次捐献最少150金币！
+sendmsg 9 [提示]：对不起，合区后第一次捐献最少150金币！
 break
 
 #if
@@ -260,7 +313,7 @@ small S$合区信息 0
 NOT CHECKTITLE 沙城捐献
 LARGE N20 50000
 #act
-MESSAGEBOX [提示]：对不起，第一次捐献最多5000金币！
+sendmsg 9 [提示]：对不起，第一次捐献最多5000金币！
 break
 
 
@@ -271,7 +324,7 @@ small S$合区信息 1
 NOT CHECKTITLE 沙城捐献
 SMALL N20 200
 #act
-MESSAGEBOX [提示]：对不起，第一次捐献最少200金币！
+sendmsg 9 [提示]：对不起，第一次捐献最少200金币！
 break
 
 #if
@@ -279,27 +332,27 @@ small S$合区信息 1
 NOT CHECKTITLE 沙城捐献
 LARGE N20 5000
 #act
-MESSAGEBOX [提示]：对不起，第一次捐献最多5000金币！
+sendmsg 9 [提示]：对不起，第一次捐献最多5000金币！
 break
 
 
 ;#if
 ;CHECKVAR HUMAN 职位捐款数量 > 4999
 ;#act
-;messagebox 已捐献封顶
+;sendmsg 9 已捐献封顶
 ;break
 
 #if
 SMALL N20 100
 #act
-MESSAGEBOX [提示]：对不起，捐献最少100金币！
+sendmsg 9 [提示]：对不起，捐献最少100金币！
 break
 
 
 #IF
 NOT CHECKGOLD <$STR(N20)>
 #ACT
-MESSAGEBOX 你的金币不足！！！
+sendmsg 9 你的金币不足！！！
 BREAK
 
 
@@ -313,6 +366,7 @@ TAKE 金币  <$STR(N20)>
 CONFERTITLE 沙城捐献
 ADDSKILL 隐身术 3
 inc G441 <$STR(N20)>
+
 CALCVAR HUMAN 职位捐款数量 + <$STR(N20)>
 SAVEVAR HUMAN 职位捐款数量
 
@@ -327,7 +381,8 @@ MOV  G21  N$玩家捐献数量2
 MOV  G22  N$玩家捐献数量3
 MOV  G23  N$玩家捐献数量4
 MOV  G24  N$玩家捐献数量5
-MESSAGEBOX 捐款成功!
+sendmsg 9 捐款成功!
+
 #CALL [\大熊功能\职位计算.txt] @开始计算
 goto @main
 BREAK
@@ -364,10 +419,9 @@ MOV  G21  N$玩家捐献数量2
 MOV  G22  N$玩家捐献数量3
 MOV  G23  N$玩家捐献数量4
 MOV  G24  N$玩家捐献数量5
-MESSAGEBOX 捐款成功!
+sendmsg 9 捐款成功!
 Gmexecute 全服触发 @捐献等级刷新
 #CALL [\大熊功能\职位计算.txt] @开始计算
-
 goto @main
 BREAK
 
@@ -409,7 +463,9 @@ MOV  G22  N$玩家捐献数量3
 MOV  G23  N$玩家捐献数量4
 MOV  G24  N$玩家捐献数量5
 
-MESSAGEBOX 捐款成功!
+sendmsg 9 捐款成功!
+;SENDMSG 6 -<$str(S$捐献玩家名2)>:<$STR(N$玩家捐献数量2)>
+SENDMSG 6 -<$str(A120)>:<$STR(G20)>
 Gmexecute 全服触发 @捐献等级刷新
 #CALL [\大熊功能\职位计算.txt] @开始计算
 
@@ -420,7 +476,7 @@ BREAK
 
 #if
 #act
-messagebox 操作失败:\\请检查\\1,金币是否足够
+sendmsg 9 操作失败:请检查金币是否足够
 break
 
 

@@ -110,13 +110,13 @@ ISONMAP xgzqmj
 ISONMAP xkchmj
 ISONMAP yzglmj
 ISONMAP yljsmj
-;ISONMAP 318级
+;ISONMAP 318j
 #act
 INC N$爆率加成 500
 INC N$爆率显示 1000
 
 #if
-ISONMAP 318级
+ISONMAP 318j
 #act
 ;INC N$爆率加成 10
 ;INC N$爆率显示 500

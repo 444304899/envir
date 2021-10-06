@@ -140,46 +140,46 @@ PLAYMAGICBALLEFFECT 12 2146 18 100 -1 1 1 0 53 6
 
 
 
-MAPEFFECT 混沌星界 134 175 17  1194 9 -1 100 0
-MAPEFFECT 混沌星界 34 76 17  1194 9 -1 100 0
-MAPEFFECT 混沌星界 19 196 17  1194 9 -1 100 0
-MAPEFFECT 混沌星界 73 27 17  1194 9 -1 100 0
+MAPEFFECT hdxj 134 175 17  1194 9 -1 100 0
+MAPEFFECT hdxj 34 76 17  1194 9 -1 100 0
+MAPEFFECT hdxj 19 196 17  1194 9 -1 100 0
+MAPEFFECT hdxj 73 27 17  1194 9 -1 100 0
 
-MAPEFFECT 斯卡萨巢穴 92 56 17  1194 9 -1 100 0
+MAPEFFECT skscx 92 56 17  1194 9 -1 100 0
 
-MAPEFFECT 灰烬岛 72 76 17  1194 9 -1 100 0
-MAPEFFECT 灰烬岛 44 228 17  1194 9 -1 100 0
-MAPEFFECT 灰烬岛 206 193 17  1194 9 -1 100 0
-MAPEFFECT 灰烬岛 161 127 17  1194 9 -1 100 0
-MAPEFFECT 莱托废墟 28 91 17  1194 9 -1 100 0
-MAPEFFECT 沼泽森林 8 7 17  1194 9 -1 100 0
-MAPEFFECT 镜像世界 33 170 17  1194 9 -1 100 0
-MAPEFFECT 布拉巴斯 32 75 17  1194 9 -1 100 0
+MAPEFFECT huijindao 72 76 17  1194 9 -1 100 0
+MAPEFFECT huijindao 44 228 17  1194 9 -1 100 0
+MAPEFFECT huijindao 206 193 17  1194 9 -1 100 0
+MAPEFFECT huijindao 161 127 17  1194 9 -1 100 0
+MAPEFFECT ltfx 28 91 17  1194 9 -1 100 0
+MAPEFFECT zzsl 8 7 17  1194 9 -1 100 0
+MAPEFFECT jxsj 33 170 17  1194 9 -1 100 0
+MAPEFFECT blbs 32 75 17  1194 9 -1 100 0
 
-MAPEFFECT 玛法古城 8 142 17  1194 9 -1 100 0
-MAPEFFECT 玛法古城 9 16 17  1194 9 -1 100 0
-MAPEFFECT 玛法古城 229 116 17  1194 9 -1 100 0
-MAPEFFECT 玛法古城 226 32 17  1194 9 -1 100 0
-MAPEFFECT 神秘之地 11 17 17  1194 9 -1 100 0
-MAPEFFECT 泰坦之城 75 122 17  1194 9 -1 100 0
-MAPEFFECT 金字塔遗迹 44 109 17  1194 9 -1 100 0
-MAPEFFECT 玛法遗迹 24 40 17  1194 9 -1 100 0
+MAPEFFECT mfgc 8 142 17  1194 9 -1 100 0
+MAPEFFECT mfgc 9 16 17  1194 9 -1 100 0
+MAPEFFECT mfgc 229 116 17  1194 9 -1 100 0
+MAPEFFECT mfgc 226 32 17  1194 9 -1 100 0
+MAPEFFECT smzd 11 17 17  1194 9 -1 100 0
+MAPEFFECT ttzc 75 122 17  1194 9 -1 100 0
+MAPEFFECT jztyj 44 109 17  1194 9 -1 100 0
+MAPEFFECT mfyj 24 40 17  1194 9 -1 100 0
 
-MAPEFFECT 十万大山 33 95 17  1194 9 -1 100 0
-MAPEFFECT 十万大山 345 327 17  1194 9 -1 100 0
-MAPEFFECT 十万大山 308 112 17  1194 9 -1 100 0
-MAPEFFECT 三百五十里 18 71 17  1194 9 -1 100 0
-MAPEFFECT 西天 82 15 17  1194 9 -1 100 0
-MAPEFFECT 华山 180 181 17  1194 9 -1 100 0
+MAPEFFECT swds 33 95 17  1194 9 -1 100 0
+MAPEFFECT swds 345 327 17  1194 9 -1 100 0
+MAPEFFECT swds 308 112 17  1194 9 -1 100 0
+MAPEFFECT 350li 18 71 17  1194 9 -1 100 0
+MAPEFFECT xitian 82 15 17  1194 9 -1 100 0
+MAPEFFECT huashan 180 181 17  1194 9 -1 100 0
 
-MAPEFFECT 混沌星界 504 147 17  1194 9 -1 100 0
-MAPEFFECT 混沌星界 22 762 17  1194 9 -1 100 0
-MAPEFFECT 混沌星界 578 419 17  1194 9 -1 100 0
-MAPEFFECT 混沌星界 208 86 17  1194 9 -1 100 0
-MAPEFFECT 七杀贪狼星 69 72 17  1194 9 -1 100 0
-MAPEFFECT 武曲禄存星 72 22 17  1194 9 -1 100 0
-MAPEFFECT 暗夜廉贞星 157 158 17  1194 9 -1 100 0
-MAPEFFECT 守护神 60 133 17  1194 9 -1 100 0
+MAPEFFECT hdxj 504 147 17  1194 9 -1 100 0
+MAPEFFECT hdxj 22 762 17  1194 9 -1 100 0
+MAPEFFECT hdxj 578 419 17  1194 9 -1 100 0
+MAPEFFECT hdxj 208 86 17  1194 9 -1 100 0
+MAPEFFECT 7stlx 69 72 17  1194 9 -1 100 0
+MAPEFFECT wqlcx 72 22 17  1194 9 -1 100 0
+MAPEFFECT aylzx 157 158 17  1194 9 -1 100 0
+MAPEFFECT shouhushen 60 133 17  1194 9 -1 100 0
 
 ;MAPEFFECT rongyan11  165  91  17  1194 9 -1 100 0
 ;MAPEFFECT rongyan12  67   134  17  1194 9 -1 100 0
@@ -280,189 +280,189 @@ MAPEFFECT fmb 213 229 17  1194 9 -1 100 0
 MAPEFFECT fmb 37 30 17  1194 9 -1 100 0
 MAPEFFECT ymzl 36 33 17  1194 9 -1 100 0
 ;MAPEFFECT T10 39 16 17  1194 9 -1 100 0
-MAPEFFECT 克洛诺斯海岛 188 657  17  1194 9 -1 100 0
-MAPEFFECT 克洛诺斯海岛 341 11 17  1194 9 -1 100 0
-MAPEFFECT 西海岸 287 545 17  1194 9 -1 100 0
-;MAPEFFECT 西海岸 638 65 17  1194 9 -1 100 0
-MAPEFFECT 天空之城  93 98 17  1194 9 -1 100 0
-MAPEFFECT 城主宫殿  50 58 17  1194 9 -1 100 0
-MAPEFFECT 天空之城  154 161 17  1194 9 -1 100 0
-MAPEFFECT 石巨人塔  137 228 17  1194 9 -1 100 0
-MAPEFFECT 天空之城  299 108 17  1194 9 -1 100 0
-MAPEFFECT 人偶玄关  25 127 17  1194 9 -1 100 0
-MAPEFFECT 天空之城  288 307 17  1194 9 -1 100 0
-MAPEFFECT 黑暗玄廊 38 138 17  1194 9 -1 100 0
-MAPEFFECT 人偶玄关 132 122 17  1194 9 -1 100 0
-MAPEFFECT 黑暗玄廊  28 65 17  1194 9 -1 100 0
-MAPEFFECT 石巨人塔  122 132 17  1194 9 -1 100 0
-MAPEFFECT 龙人之塔  52 50 17  1194 9 -1 100 0
+MAPEFFECT klnshd 188 657  17  1194 9 -1 100 0
+MAPEFFECT klnshd 341 11 17  1194 9 -1 100 0
+MAPEFFECT xihaian 287 545 17  1194 9 -1 100 0
+;MAPEFFECT xihaian 638 65 17  1194 9 -1 100 0
+MAPEFFECT tkzc  93 98 17  1194 9 -1 100 0
+MAPEFFECT czgd  50 58 17  1194 9 -1 100 0
+MAPEFFECT tkzc  154 161 17  1194 9 -1 100 0
+MAPEFFECT sjrt  137 228 17  1194 9 -1 100 0
+MAPEFFECT tkzc  299 108 17  1194 9 -1 100 0
+MAPEFFECT roxg  25 127 17  1194 9 -1 100 0
+MAPEFFECT tkzc  288 307 17  1194 9 -1 100 0
+MAPEFFECT haxl 38 138 17  1194 9 -1 100 0
+MAPEFFECT roxg 132 122 17  1194 9 -1 100 0
+MAPEFFECT haxl  28 65 17  1194 9 -1 100 0
+MAPEFFECT sjrt  122 132 17  1194 9 -1 100 0
+MAPEFFECT lrzt  52 50 17  1194 9 -1 100 0
 ;MAPEFFECT 西海岸 694 678 17  1194 9 -1 100 0
 ;MAPEFFECT 赫顿玛尔区域  28 91 17  1194 9 -1 100 0
 ;MAPEFFECT 西海岸  652 380 17  1194 9 -1 100 0
-MAPEFFECT 神殿外围  761 725 17  1194 9 -1 100 0
-MAPEFFECT 神殿外围   60 53 17  1194 9 -1 100 0
-MAPEFFECT 极昼  99 107 17  1194 9 -1 100 0
-MAPEFFECT 极昼  10 15 17  1194 9 -1 100 0
-MAPEFFECT 炼狱  108 42 17  1194 9 -1 100 0
-MAPEFFECT 神殿外围   727 131 17  1194 9 -1 100 0
-MAPEFFECT 天维禁地 48 42 17  1194 9 -1 100 0
-MAPEFFECT 神殿外围   524 269 17  1194 9 -1 100 0
-MAPEFFECT 第二脊椎 181 29 17  1194 9 -1 100 0
-MAPEFFECT 第二脊椎 113 111 17  1194 9 -1 100 0
-MAPEFFECT 第一脊椎 23 22 17  1194 9 -1 100 0
-MAPEFFECT 神殿外围   270 537 17  1194 9 -1 100 0
-MAPEFFECT 第一脊椎 36 226 17  1194 9 -1 100 0
+MAPEFFECT sdww  761 725 17  1194 9 -1 100 0
+MAPEFFECT sdww   60 53 17  1194 9 -1 100 0
+MAPEFFECT jizhou  99 107 17  1194 9 -1 100 0
+MAPEFFECT jizhou  10 15 17  1194 9 -1 100 0
+MAPEFFECT lianyu  108 42 17  1194 9 -1 100 0
+MAPEFFECT sdww   727 131 17  1194 9 -1 100 0
+MAPEFFECT twjd 48 42 17  1194 9 -1 100 0
+MAPEFFECT sdww   524 269 17  1194 9 -1 100 0
+MAPEFFECT d2jz 181 29 17  1194 9 -1 100 0
+MAPEFFECT d2jz 113 111 17  1194 9 -1 100 0
+MAPEFFECT d1jz 23 22 17  1194 9 -1 100 0
+MAPEFFECT sdww   270 537 17  1194 9 -1 100 0
+MAPEFFECT d1jz 36 226 17  1194 9 -1 100 0
 ;MAPEFFECT 西海岸 251 34 17  1194 9 -1 100 0
-MAPEFFECT 阿法利亚营地 27 46 17  1194 9 -1 100 0
-MAPEFFECT 暗黑城入口  49 136 17  1194 9 -1 100 0
-MAPEFFECT 暗黑城入口  114 27 17  1194 9 -1 100 0
-MAPEFFECT 暗黑城  14 96 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹远古 174 200 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹远古 21 190 17  1194 9 -1 100 0
-MAPEFFECT 格兰之森  39 201 17  1194 9 -1 100 0
-MAPEFFECT 暗黑废墟  263 267 17  1194 9 -1 100 0
-MAPEFFECT 格兰之森  42 47 17  1194 9 -1 100 0
-MAPEFFECT 雷鸣殿   124 122 17  1194 9 -1 100 0
-MAPEFFECT 格兰之森  219 123 17  1194 9 -1 100 0
-MAPEFFECT 猛毒废墟 45 105 17  1194 9 -1 100 0
-MAPEFFECT 格兰之森  180 14 17  1194 9 -1 100 0
-MAPEFFECT 格拉卡  142 129 17  1194 9 -1 100 0
-MAPEFFECT 格兰之森  188 224 17  1194 9 -1 100 0
-MAPEFFECT 幽暗密林  282 22 17  1194 9 -1 100 0
-MAPEFFECT 格拉卡  39 27 17  1194 9 -1 100 0
-MAPEFFECT 烈焰格拉卡 57 54 17  1194 9 -1 100 0
-MAPEFFECT 幽暗密林 26 271 17  1194 9 -1 100 0
-MAPEFFECT 幽暗密林深处  106 25 17  1194 9 -1 100 0
-;MAPEFFECT 王之遗迹远古  21 190 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹风  13 18 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹远古 198 382 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹炎  13 18 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹远古 381 214 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹雷  13 18 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹远古  206 22 17  1194 9 -1 100 0
-MAPEFFECT 王之遗迹冰  13 18 17  1194 9 -1 100 0
+MAPEFFECT aflyyd 27 46 17  1194 9 -1 100 0
+MAPEFFECT ahcrk  49 136 17  1194 9 -1 100 0
+MAPEFFECT ahcrk  114 27 17  1194 9 -1 100 0
+MAPEFFECT anheicheng  14 96 17  1194 9 -1 100 0
+MAPEFFECT wzyjyg 174 200 17  1194 9 -1 100 0
+MAPEFFECT wzyjyg 21 190 17  1194 9 -1 100 0
+MAPEFFECT glzs  39 201 17  1194 9 -1 100 0
+MAPEFFECT ahfx  263 267 17  1194 9 -1 100 0
+MAPEFFECT glzs  42 47 17  1194 9 -1 100 0
+MAPEFFECT leimingdian   124 122 17  1194 9 -1 100 0
+MAPEFFECT glzs  219 123 17  1194 9 -1 100 0
+MAPEFFECT mdfx 45 105 17  1194 9 -1 100 0
+MAPEFFECT glzs  180 14 17  1194 9 -1 100 0
+MAPEFFECT gelaka  142 129 17  1194 9 -1 100 0
+MAPEFFECT glzs  188 224 17  1194 9 -1 100 0
+MAPEFFECT yaml  282 22 17  1194 9 -1 100 0
+MAPEFFECT gelaka  39 27 17  1194 9 -1 100 0
+MAPEFFECT lyglk 57 54 17  1194 9 -1 100 0
+MAPEFFECT yaml 26 271 17  1194 9 -1 100 0
+MAPEFFECT yamlsc  106 25 17  1194 9 -1 100 0
+;MAPEFFECT wzyjyg  21 190 17  1194 9 -1 100 0
+MAPEFFECT wzyjf  13 18 17  1194 9 -1 100 0
+MAPEFFECT wzyjyg 198 382 17  1194 9 -1 100 0
+MAPEFFECT wzyjy  13 18 17  1194 9 -1 100 0
+MAPEFFECT wzyjyg 381 214 17  1194 9 -1 100 0
+MAPEFFECT wzyjl  13 18 17  1194 9 -1 100 0
+MAPEFFECT wzyjyg  206 22 17  1194 9 -1 100 0
+MAPEFFECT wzyjb  13 18 17  1194 9 -1 100 0
 
-MAPEFFECT 海上列车  226 250   17  1194 9 -1 100 0
-MAPEFFECT 海上列车  40  58   17  1194 9 -1 100 0
-MAPEFFECT 海贼团部 9  231 17  1194 9 -1 100 0
-MAPEFFECT 雾都赫伊斯  239 35  17  1194 9 -1 100 0
-MAPEFFECT  阿登高地  25 75 17  1194 9 -1 100 0
+MAPEFFECT hslc  226 250   17  1194 9 -1 100 0
+MAPEFFECT hslc  40  58   17  1194 9 -1 100 0
+MAPEFFECT hztb 9  231 17  1194 9 -1 100 0
+MAPEFFECT wdhys  239 35  17  1194 9 -1 100 0
+MAPEFFECT  adgd  25 75 17  1194 9 -1 100 0
 ;-------
-;MAPEFFECT 西海岸  111 117 17  1194 9 -1 100 0
-MAPEFFECT 万年雪山  283 276 17  1194 9 -1 100 0
-MAPEFFECT 万年雪山  67 39 17  1194 9 -1 100 0
-MAPEFFECT 冰心少年  113 65 17  1194 9 -1 100 0
-MAPEFFECT 冰心少年  63 71 17  1194 9 -1 100 0
-MAPEFFECT 斯卡萨巢穴  30 84 17  1194 9 -1 100 0
-MAPEFFECT 万年雪山  239 35 17  1194 9 -1 100 0
-MAPEFFECT 白色废墟  33 120 17  1194 9 -1 100 0
-MAPEFFECT 白色废墟  110 31 17  1194 9 -1 100 0
-MAPEFFECT 利库天井  13 41 17  1194 9 -1 100 0
-MAPEFFECT 万年雪山  66 232 17  1194 9 -1 100 0
-MAPEFFECT 山脊  15 329 17  1194 9 -1 100 0
-MAPEFFECT 山脊  486 185 17  1194 9 -1 100 0
-MAPEFFECT 布万加修炼场  25 75 17  1194 9 -1 100 0
+;MAPEFFECT xihaian  111 117 17  1194 9 -1 100 0
+MAPEFFECT wnxs  283 276 17  1194 9 -1 100 0
+MAPEFFECT wnxs  67 39 17  1194 9 -1 100 0
+MAPEFFECT bxsn  113 65 17  1194 9 -1 100 0
+MAPEFFECT bxsn  63 71 17  1194 9 -1 100 0
+MAPEFFECT skscx  30 84 17  1194 9 -1 100 0
+MAPEFFECT wnxs  239 35 17  1194 9 -1 100 0
+MAPEFFECT bsfx  33 120 17  1194 9 -1 100 0
+MAPEFFECT bsfx  110 31 17  1194 9 -1 100 0
+MAPEFFECT lktj  13 41 17  1194 9 -1 100 0
+MAPEFFECT wnxs  66 232 17  1194 9 -1 100 0
+MAPEFFECT shanji  15 329 17  1194 9 -1 100 0
+MAPEFFECT shanji  486 185 17  1194 9 -1 100 0
+MAPEFFECT bwjxlc  25 75 17  1194 9 -1 100 0
 
 ;-------
 
 
 
 
-;MAPEFFECT 克洛诺斯海岛  20 659 17  1194 9 -1 100 0
-;MAPEFFECT 神之都·根特 36 59 17  1194 9 -1 100 0
+;MAPEFFECT klnshd  20 659 17  1194 9 -1 100 0
+;MAPEFFECT gente 36 59 17  1194 9 -1 100 0
 
-MAPEFFECT 神之都·根特 372 261 17  1194 9 -1 100 0
-MAPEFFECT 安特贝鲁峡谷  12 17  17  1194 9 -1 100 0
+MAPEFFECT gente 372 261 17  1194 9 -1 100 0
+MAPEFFECT atblxg  12 17  17  1194 9 -1 100 0
 
-MAPEFFECT 神之都·根特  52 322 17  1194 9 -1 100 0
-MAPEFFECT 根特南门  21 179  17  1194 9 -1 100 0
+MAPEFFECT gente  52 322 17  1194 9 -1 100 0
+MAPEFFECT gtnm  21 179  17  1194 9 -1 100 0
 
-MAPEFFECT 根特南门  165 35 17  1194 9 -1 100 0
-MAPEFFECT 夜间袭击地 128 22 17  1194 9 -1 100 0
+MAPEFFECT gtnm  165 35 17  1194 9 -1 100 0
+MAPEFFECT yjxjz 128 22 17  1194 9 -1 100 0
 
-MAPEFFECT 神之都·根特   230 88 17  1194 9 -1 100 0
-MAPEFFECT 根特北门 90 88 17  1194 9 -1 100 0
+MAPEFFECT gente   230 88 17  1194 9 -1 100 0
+MAPEFFECT gtbm 90 88 17  1194 9 -1 100 0
 
-MAPEFFECT 根特北门  13 12 17  1194 9 -1 100 0
-MAPEFFECT 追击歼灭地 45 44 17  1194 9 -1 100 0
+MAPEFFECT gtbm  13 12 17  1194 9 -1 100 0
+MAPEFFECT zjjmd 45 44 17  1194 9 -1 100 0
 
-MAPEFFECT 神之都·根特  115 36 17  1194 9 -1 100 0
-MAPEFFECT 根特东门 71 85 17  1194 9 -1 100 0
+MAPEFFECT gente  115 36 17  1194 9 -1 100 0
+MAPEFFECT gtdm 71 85 17  1194 9 -1 100 0
 
-MAPEFFECT 根特东门 21 25 17  1194 9 -1 100 0
-MAPEFFECT 卡勒特补给地  158 160 17  1194 9 -1 100 0
+MAPEFFECT gtdm 21 25 17  1194 9 -1 100 0
+MAPEFFECT kltbjd  158 160 17  1194 9 -1 100 0
 
-MAPEFFECT 神之都·根特  95 437 17  1194 9 -1 100 0
-MAPEFFECT 根特外围 254 244 17  1194 9 -1 100 0
+MAPEFFECT gente  95 437 17  1194 9 -1 100 0
+MAPEFFECT gtww 254 244 17  1194 9 -1 100 0
 
-MAPEFFECT 根特外围 51 35 17  1194 9 -1 100 0
-MAPEFFECT 根特防御地 76 139 17  1194 9 -1 100 0
+MAPEFFECT gtww 51 35 17  1194 9 -1 100 0
+MAPEFFECT gtfyd 76 139 17  1194 9 -1 100 0
 ;---------------------------------------------------------------------------------------------------------------------------------
 
-MAPEFFECT 海上列车  40 58   17  1194 9 -1 100 0
-MAPEFFECT 海贼团部   9 231 17  1194 9 -1 100 0
+MAPEFFECT hslc  40 58   17  1194 9 -1 100 0
+MAPEFFECT hztb   9 231 17  1194 9 -1 100 0
 
-MAPEFFECT 雾都赫伊斯  239 35  17  1194 9 -1 100 0
-MAPEFFECT 阿登高地     25 75 17  1194 9 -1 100 0
-
-
-MAPEFFECT 鲁夫特悬空海港 239 293 17  1194 9 -1 100 0
-MAPEFFECT 鲁夫特悬空海港  30 222 17  1194 9 -1 100 0
-MAPEFFECT 鲁夫特悬空海港  35  29 17  1194 9 -1 100 0
+MAPEFFECT wdhys  239 35  17  1194 9 -1 100 0
+MAPEFFECT adgd     25 75 17  1194 9 -1 100 0
 
 
+MAPEFFECT lftxkhg 239 293 17  1194 9 -1 100 0
+MAPEFFECT lftxkhg  30 222 17  1194 9 -1 100 0
+MAPEFFECT lftxkhg  35  29 17  1194 9 -1 100 0
 
-MAPEFFECT 踏天路 10 27 17  1194 9 -1 100 0
-MAPEFFECT 踏天桥 11 10 17  1194 9 -1 100 0
-MAPEFFECT 踏天桥 89 14 17  1194 9 -1 100 0
 
 
-MAPEFFECT 血肉传承 23 18 17  1194 9 -1 100 0
-MAPEFFECT 骨骼传承 42  9 17  1194 9 -1 100 0
-MAPEFFECT 骨骼传承 98  9 17  1194 9 -1 100 0
+MAPEFFECT tatianlu 10 27 17  1194 9 -1 100 0
+MAPEFFECT tatianqiao 11 10 17  1194 9 -1 100 0
+MAPEFFECT tatianqiao 89 14 17  1194 9 -1 100 0
 
-MAPEFFECT 隐藏空间 72 25 17  1194 9 -1 100 0
 
-MAPEFFECT 仙墟      15  87  17  1194 9 -1 100 0
-MAPEFFECT 仙墟      87  94  17  1194 9 -1 100 0
-MAPEFFECT 祭祀之地  49  82  17  1194 9 -1 100 0
-MAPEFFECT 丹界一脉  43  82  17  1194 9 -1 100 0
-MAPEFFECT 三十三天   6  68  17  1194 9 -1 100 0
-MAPEFFECT 三十三天  58  15  17  1194 9 -1 100 0
-MAPEFFECT 第七九天  60  14  17  1194 9 -1 100 0
-MAPEFFECT 第九天    60  14  17  1194 9 -1 100 0
-MAPEFFECT 第九山海 117  72  17  1194 9 -1 100 0
-MAPEFFECT 东胜      49  11  17  1194 9 -1 100 0
-MAPEFFECT 第九山海  66  25  17  1194 9 -1 100 0
-MAPEFFECT 南天       6  97  17  1194 9 -1 100 0
-MAPEFFECT 第九山海  67  123 17  1194 9 -1 100 0
-MAPEFFECT 西牛      77  9   17  1194 9 -1 100 0
-MAPEFFECT 如风界    84  11  17  1194 9 -1 100 0
-MAPEFFECT DT_1      19 118  17  1194 9 -1 100 0
-MAPEFFECT 如风界    16 15  17  1194 9 -1 100 0
-MAPEFFECT 仙古道场  12 68   17  1194 9 -1 100 0
-MAPEFFECT DT_2      9  159  17  1194 9 -1 100 0
-MAPEFFECT 彼岸      16  51  17  1194 9 -1 100 0
-MAPEFFECT 封妖城    140  93  43  926  1 -1 100 0
+MAPEFFECT xrcc 23 18 17  1194 9 -1 100 0
+MAPEFFECT ggcc 42  9 17  1194 9 -1 100 0
+MAPEFFECT ggcc 98  9 17  1194 9 -1 100 0
 
-MAPEFFECT 棋盘   43 23  17  1194 9 -1 100 0
-MAPEFFECT 棋盘1   43 23  17  1194 9 -1 100 0
+MAPEFFECT yckj 72 25 17  1194 9 -1 100 0
 
-MAPEFFECT 棋盘1   13 47  17  1194 9 -1 100 0
-MAPEFFECT 棋盘2   13 47  17  1194 9 -1 100 0
+MAPEFFECT xianxu      15  87  17  1194 9 -1 100 0
+MAPEFFECT xianxu      87  94  17  1194 9 -1 100 0
+MAPEFFECT jszd  49  82  17  1194 9 -1 100 0
+MAPEFFECT djym  43  82  17  1194 9 -1 100 0
+MAPEFFECT 33day   6  68  17  1194 9 -1 100 0
+MAPEFFECT 33day  58  15  17  1194 9 -1 100 0
+MAPEFFECT d79tian  60  14  17  1194 9 -1 100 0
+MAPEFFECT d9tian    60  14  17  1194 9 -1 100 0
+MAPEFFECT d9sh 117  72  17  1194 9 -1 100 0
+MAPEFFECT dongsheng      49  11  17  1194 9 -1 100 0
+MAPEFFECT d9sh  66  25  17  1194 9 -1 100 0
+MAPEFFECT nantian       6  97  17  1194 9 -1 100 0
+MAPEFFECT d9sh  67  123 17  1194 9 -1 100 0
+MAPEFFECT xiniu      77  9   17  1194 9 -1 100 0
+MAPEFFECT rufengjie    84  11  17  1194 9 -1 100 0
+MAPEFFECT sgdh      19 118  17  1194 9 -1 100 0
+MAPEFFECT rufengjie    16 15  17  1194 9 -1 100 0
+MAPEFFECT xgdc  12 68   17  1194 9 -1 100 0
+MAPEFFECT kaoshan      9  159  17  1194 9 -1 100 0
+MAPEFFECT bian      16  51  17  1194 9 -1 100 0
+MAPEFFECT fyc    140  93  43  926  1 -1 100 0
 
-MAPEFFECT 海化桑田   13 47  17  1194 9 -1 100 0
+MAPEFFECT qipan   43 23  17  1194 9 -1 100 0
+MAPEFFECT qipan1   43 23  17  1194 9 -1 100 0
 
-MAPEFFECT 超脱地图   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境1   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境2   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境3   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境4   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境5   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境6   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境7   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境8   54 97  17  1194 9 -1 100 0
-MAPEFFECT 超脱密境9   54 97  17  1194 9 -1 100 0
+MAPEFFECT qipan1   13 47  17  1194 9 -1 100 0
+MAPEFFECT qipan2   13 47  17  1194 9 -1 100 0
+
+MAPEFFECT hhst   13 47  17  1194 9 -1 100 0
+
+MAPEFFECT chaotuotu   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu1   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu2   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu3   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu4   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu5   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu6   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu7   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu8   54 97  17  1194 9 -1 100 0
+MAPEFFECT chaotuotu9   54 97  17  1194 9 -1 100 0
 
 
 
@@ -488,13 +488,13 @@ VAR Integer HUMAN 攻沙死亡
 
 
 ;#or
-;not ISONMAP 封妖城
+;not ISONMAP fyc
 ;not ISONMAP xsdt
-;not ISONMAP SRDT
+;not ISONMAP srdt
 ;#ACT
 ;movr N$坐标x 131 150
 ;movr N$坐标y 86 100
-;MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+;MAPMOVE fyc <$STR(N$坐标x)>  <$STR(N$坐标y)>
 
 
 #IF
@@ -839,7 +839,7 @@ BREAK
 
 
 #if
-ISONMAP 封妖城
+ISONMAP fyc
 equal T1
 #act
 movr N$坐标x 29 35
@@ -854,18 +854,18 @@ CHECKUNDERWAR 沙巴克
 #Act
 movr N$坐标x 131 150
 movr N$坐标y 86 100
-MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
-MESSAGEBOX  攻城期间不允许在非攻城区域地图
+MAPMOVE fyc <$STR(N$坐标x)>  <$STR(N$坐标y)>
+SENDMSG 9  攻城期间不允许在非攻城区域地图
 
 
 #IF
-ISONMAP 318级
+ISONMAP 318j
 NOT CHECKLEVELEX = 318
 #ACT
 movr N$坐标x 131 150
 movr N$坐标y 86 100
-MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
-MESSAGEBOX  你已经不是最高等级了,免费送你回城
+MAPMOVE fyc <$STR(N$坐标x)>  <$STR(N$坐标y)>
+SENDMSG 9  你已经不是最高等级了,免费送你回城
 
 
 #if
@@ -880,12 +880,12 @@ give 5亿元宝蛋 4
 
 
 #IF
-ISONMAP 个人捐献第一地图
+ISONMAP grjx1st
 not equal A2 <$USERNAME>
 #ACT
 movr N$坐标x 131 150
 movr N$坐标y 86 100
-MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+MAPMOVE fyc <$STR(N$坐标x)>  <$STR(N$坐标y)>
 MESSAGEBOX  你已经不是个人捐献排名第一,免费送你回城
 
 
@@ -919,7 +919,7 @@ AddmpPer + 3
 
 #if
 large g496 0
-not ISONMAP 二级
+not ISONMAP erji
 not ISONMAP xsdt
 not ISONMAP srdt
 #act
@@ -996,7 +996,7 @@ CHANGEEXP + 500000
 
 
 #IF
-isonmap 封妖城
+isonmap fyc
 INSAFEZONE
 CheckhpPer < 99
 #act
@@ -1006,7 +1006,7 @@ SENDMSG 6 华佗再世BUFF触发，安全区每秒增加20%血量。
 
 
 #IF
-isonmap 封妖城
+isonmap fyc
 INSAFEZONE
 CheckMpPer < 99
 #act
@@ -1077,7 +1077,7 @@ BREAK
 
 
 #if
-ISONMAP 封妖城
+ISONMAP fyc
 #act
 CLEARDELAYGOTO 1
 
@@ -1491,12 +1491,12 @@ AddHpPer + 1
 
 
 #IF
-CheckMapHumanCount  DJT  < 1
+CheckMapHumanCount  djt  < 1
 #ACT
 MOV A19
 
 #IF
-ISONMAP DJT
+ISONMAP djt
 large G19 0
 #ACT
 CHANGEEXP + 100000
@@ -1560,7 +1560,7 @@ large U21 4
 CHECKRENEWLEVEL > 14
 CheckHumInRange 2dl 34 37 5
 #act
-MAPMOVE 克洛诺斯海岛 290 339
+MAPMOVE klnshd 290 339
 
 
 
@@ -1584,8 +1584,8 @@ BREAK
 
 #if
 #act
-MAPMOVE 封妖城 180 91
-;MAPMOVE 封妖城 <$STR(N$坐标Y)>  <$STR(N$坐标X)>
+MAPMOVE fyc 180 91
+;MAPMOVE fyc <$STR(N$坐标Y)>  <$STR(N$坐标X)>
 
 
 [@眼疾手快]
@@ -1608,7 +1608,7 @@ BREAK
 
 #if
 #act
-MAP 活动地图
+MAP hddt
 
 
 
@@ -1619,12 +1619,18 @@ MAP 活动地图
 #SAY
 \ \ \
 
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<RText|x=42.0|y=48.0|color=253|size=16|text=<      1.活动说明:/FCOLOR=253>< 忆青春，可曾记得神秘的幻境迷宫？/FCOLOR=70>>
+<RText|x=42.0|y=77.0|color=253|size=16|text=<      2.迷宫走法:/FCOLOR=253>< 上上左下右下/FCOLOR=250>>
+<RText|x=42.0|y=106.0|color=253|size=16|text=<      3.奖励物品:/FCOLOR=253>< 大量钻石,大量金币.可提现,真实有效!./FCOLOR=241>>
+<RText|x=42.0|y=135.0|color=253|size=16|text=<      4.进入条件:/FCOLOR=253>< 需开启狂暴,捐献才可进入./FCOLOR=241>>
+<Button|x=190.0|y=169.0|mimg=public/button/msgbtn2.png|pimg=public/button/msgbtn3.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=参加活动|link=@参加迷宫>
 
-<>          <      1.活动说明:/FCOLOR=150>< 忆青春，可曾记得神秘的幻境迷宫？/FCOLOR=70> \ \
-<>          <      2.迷宫走法:/FCOLOR=150>< 上上左下右下/FCOLOR=250> \ \
-<>          <      3.奖励物品:/FCOLOR=150>< 大量钻石,大量金币.可提现,真实有效!./FCOLOR=241> \ \
-<>          <      4.进入条件:/FCOLOR=150>< 需开启狂暴,捐献才可进入./FCOLOR=241> \  \
-<>                              <《参加活动》/@参加迷宫>
+;<>          <      1.活动说明:/FCOLOR=150>< 忆青春，可曾记得神秘的幻境迷宫？/FCOLOR=70> \ \
+;<>          <      2.迷宫走法:/FCOLOR=150>< 上上左下右下/FCOLOR=250> \ \
+;<>          <      3.奖励物品:/FCOLOR=150>< 大量钻石,大量金币.可提现,真实有效!./FCOLOR=241> \ \
+;<>          <      4.进入条件:/FCOLOR=150>< 需开启狂暴,捐献才可进入./FCOLOR=241> \  \
+;<>                              <《参加活动》/@参加迷宫>
 
 
 [@参加迷宫]
@@ -1638,7 +1644,7 @@ BREAK
 CHECKTITLE 沙城捐献
 CHECKTITLE 狂暴之力
 #act
-MAPMOVE T2061
+MAPMOVE t2061
 SendCenterMsg 70 0 〖迷宫〗:玩家[<$USERNAME>]进入了地图<$MapTitle>.探索未知领域!. 1 10
 #ELSEACT
 MESSAGEBOX [提示:]\\活动还没开启！,你没有开启狂暴之力,
@@ -1658,11 +1664,17 @@ break
 small G400 6
 #act
 #SAY
-\ \ \
-<>                               <[活动提示]/FCOLOR=70>\ \
-<>                      <封妖城正在举行世界/FCOLOR=161>\
-<>                      <Boss活动，几率必爆专属哦哟!/FCOLOR=161>\ \
-<>                              <《参加活动》/@参加世界Boss>
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=49.0|y=48.0|color=249|size=16|text=[活动提示]>
+<Text|x=111.0|y=77.0|color=253|size=16|text=封妖城正在举行世界>
+<Text|x=111.0|y=105.0|color=253|size=16|text=Boss活动，几率必爆专属哦哟!>
+<Button|x=190.0|y=169.0|mimg=public/button/msgbtn2.png|pimg=public/button/msgbtn3.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=参加活动|link=@参加世界Boss>
+
+;<>                               <[活动提示]/FCOLOR=70>\ \
+;<>                      <封妖城正在举行世界/FCOLOR=161>\
+;<>                      <Boss活动，几率必爆专属哦哟!/FCOLOR=161>\ \
+;<>                              <《参加活动》/@参加世界Boss>
 
 
 
@@ -1679,21 +1691,33 @@ BREAK
 #if
 #act
 #SAY
-\ \ \
-<>                               <[活动提示]/FCOLOR=70>\ \
-<>                      <封妖城正在举行牛气冲天【必爆】/FCOLOR=161>\
-<>                        <Boss活动，必爆专属哦哟!/FCOLOR=161>\ \
-<>                              <《参加活动》/@参加世界99Boss>
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=49.0|y=48.0|color=249|size=16|text=[活动提示]>
+<Text|x=111.0|y=77.0|color=253|size=16|text=封妖城正在举行牛气冲天【必爆】>
+<Text|x=111.0|y=105.0|color=253|size=16|text=Boss活动，必爆专属哦哟!>
+<Button|x=190.0|y=169.0|mimg=public/button/msgbtn2.png|pimg=public/button/msgbtn3.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=参加活动|link=@参加世界99Boss>
+
+;<>                               <[活动提示]/FCOLOR=70>\ \
+;<>                      <封妖城正在举行牛气冲天【必爆】/FCOLOR=161>\
+;<>                        <Boss活动，必爆专属哦哟!/FCOLOR=161>\ \
+;<>                              <《参加活动》/@参加世界99Boss>
 
 [@活动BOS1]
 #if
 #act
 #SAY
-\ \ \
-<>                             <[活动提示]/FCOLOR=70>\ \
-<>                      <必经之地正在举行牛气冲天【必爆】/FCOLOR=161>\
-<>                        <Boss活动，必爆专属哦哟!/FCOLOR=161>\ \
-<>                            <《参加活动》/@参加世界99Boss1>
+<Img|show=4|bg=1|loadDelay=1|move=1|esc=1|img=public/box/msgbox.png|reset=1>
+<Button|x=446.0|y=3.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=49.0|y=48.0|color=249|size=16|text=[活动提示]>
+<Text|x=111.0|y=77.0|color=253|size=16|text=必经之地正在举行牛气冲天【必爆】>
+<Text|x=111.0|y=105.0|color=253|size=16|text=Boss活动，必爆专属哦哟!>
+<Button|x=190.0|y=169.0|mimg=public/button/msgbtn2.png|pimg=public/button/msgbtn3.png|nimg=public/button/msgbtn1.png|size=16|color=255|text=参加活动|link=@参加世界99Boss1>
+;\ \ \
+;<>                             <[活动提示]/FCOLOR=70>\ \
+;<>                      <必经之地正在举行牛气冲天【必爆】/FCOLOR=161>\
+;<>                        <Boss活动，必爆专属哦哟!/FCOLOR=161>\ \
+;<>                            <《参加活动》/@参加世界99Boss1>
 
 
 
@@ -1701,7 +1725,7 @@ BREAK
 
 #if
 #act
-MAPMOVE  封妖城 109 92
+MAPMOVE  fyc 109 92
 BREAK
 
 
@@ -1710,7 +1734,7 @@ BREAK
 
 #if
 #act
-MAPMOVE 必经之地 54 55
+MAPMOVE bjzd 54 55
 BREAK
 
 
@@ -1895,12 +1919,12 @@ BREAK
 
 [@星界回城]
 #if
-ISONMAP 苍茫星空
+ISONMAP cmxk
 #ACT
 MOVR N$XX 131 750
 MOVR N$YY 86 110
-DELNPC 苍茫星空  封妖古地
-MAPMOVE 封妖城 <$STR(N$XX)> <$STR(N$YY)>
+DELNPC cmxk  fygd
+MAPMOVE fyc <$STR(N$XX)> <$STR(N$YY)>
 
 
 
@@ -2623,7 +2647,7 @@ MESSAGEBOX [提示]：对不起，答题错误！
 
 [@OnTimer99]
 #IF
-not ISONMAP DJT
+not ISONMAP djt
 #ACT
 mov U34 1
 mov G19 1
@@ -2882,7 +2906,7 @@ MOV N$雷劫伤害 60000000
 
 
 #IF
-ISONMAP DJT
+ISONMAP djt
 SMALL U34 9
 large U9 0
 #ACT
@@ -2894,7 +2918,7 @@ SENDMSG 6 渡劫丹为您抵消了一层雷劫伤害！
 BREAK
 
 #IF
-ISONMAP DJT
+ISONMAP djt
 SMALL U34 9
 #ACT
 PLAYSOUND Wav\M11-2.wav 1 4
@@ -2904,7 +2928,7 @@ INC U34 1
 BREAK
 
 #IF
-ISONMAP DJT
+ISONMAP djt
 equal U34 9
 #ACT
 MOV U34 0
@@ -2935,7 +2959,7 @@ CONFERTITLE <$STR(S$称号名称)>
 SCENEVIBRATION 1 1 1
 movr N$坐标x 131 150
 movr N$坐标y 86 100
-MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+MAPMOVE fyc <$STR(N$坐标x)>  <$STR(N$坐标y)>
 messagebox [飞升成功]：\\恭喜成功飞升,获得称号：“<$STR(S$称号名称)>”！
 GuildNoticeMsg 250 0 恭喜：{[%s]|151:0:1}成功飞升，脱离凡道，位列仙班，羽化成仙，成功晋升至“<$STR(S$称号名称)>”...
 SENDMOVEMSG 0 150 0 80 1 恭喜：[{<$USERNAME>/FCOLOR=254}]成功飞升，脱离凡道，位列仙班，成功晋升至“<$STR(S$称号名称)>”...
@@ -2964,7 +2988,7 @@ SendCenterMsg 245 251 【<$STR(A19)>】正在飞升渡劫，是否前往观看？ 0 5
 
 [@进渡劫]
 #ACT
-MAP DJT
+MAP djt
 
 [@神力刷新]
 #ACT

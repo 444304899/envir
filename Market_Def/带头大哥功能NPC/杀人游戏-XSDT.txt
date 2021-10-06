@@ -43,7 +43,7 @@ SetStringBlank S$第三数 3 1
 <Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/sryx.png|loadDelay=1|reset=1>
 <Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
 <Text|x=194.0|y=26.0|color=249|size=16|text=[活动提示]>
-<RText|x=238.0|y=59.0|color=255|size=16|text=<杀人活动/FCOLOR=161>{<$str(s$活动举行)>/FCOLOR=249}>
+<RText|x=238.0|y=59.0|color=255|size=16|text=<杀人活动/FCOLOR=249>{<$str(s$活动举行)>/FCOLOR=249}>
 <Text|x=238.0|y=112.0|color=253|size=16|text=活动规则：进入活动后，获得80级，神秘BUFF，无法回城>
 <Text|x=238.0|y=146.0|color=253|size=16|text=活动规则：活动期间可开启狂暴，死亡不消失，可商铺购买药品>
 <Text|x=238.0|y=181.0|color=253|size=16|text=活动规则：活动时间为7分钟，查看活动奖励>

@@ -3,26 +3,41 @@
 #if
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                          <[加入QQ群领取豪华礼包]/FCOLOR=70>\
-<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【刀刀切割+1000】/FCOLOR=250> \
-<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【施毒术*1】/FCOLOR=250> \
-<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【开天斩*1】/FCOLOR=250> \
-<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【逐日剑法*1】/FCOLOR=250> \
-<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【十星勋章*1】/FCOLOR=250> \
-<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【手术刀+10*1】/FCOLOR=250> \
-<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【麻醉枪+10*1】/FCOLOR=250> \ \ \ \ \
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/gzlb.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=180.0|y=26.0|color=249|size=16|text=[加入QQ群领取豪华礼包]>
+<RText|x=186.0|y=55.0|color=255|size=16|text=<加入QQ群领取豪华礼包:/FCOLOR=252> <【刀刀切割+1000】/FCOLOR=253>>
+<RText|x=186.0|y=75.0|color=255|size=16|text=<加入QQ群领取豪华礼包:/FCOLOR=252> <【施毒术*1】/FCOLOR=253>>
+<RText|x=186.0|y=95.0|color=255|size=16|text=<加入QQ群领取豪华礼包:/FCOLOR=252> <【开天斩*1】/FCOLOR=253>>
+<RText|x=186.0|y=115.0|color=255|size=16|text=<加入QQ群领取豪华礼包:/FCOLOR=252> <【逐日剑法*1】/FCOLOR=253>>
+<RText|x=186.0|y=135.0|color=255|size=16|text=<加入QQ群领取豪华礼包:/FCOLOR=252> <【十星勋章*1】/FCOLOR=253>>
+<RText|x=186.0|y=155.0|color=255|size=16|text=<加入QQ群领取豪华礼包:/FCOLOR=252> <【手术刀+10*1】/FCOLOR=253>>
+<RText|x=186.0|y=175.0|color=255|size=16|text=<加入QQ群领取豪华礼包:/FCOLOR=252> <【麻醉枪+10*1】/FCOLOR=253>>
+<Img|x=188.0|y=201.0|img=public/box/itembox.png|esc=0>
+<Img|x=288.0|y=201.0|img=public/box/itembox.png|esc=0>
+<Img|x=388.0|y=201.0|img=public/box/itembox.png|esc=0>
+<Img|x=488.0|y=201.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=193.0|y=204.0|width=70|height=70|itemid=11722|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=293.0|y=204.0|width=70|height=70|itemid=10509|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=393.0|y=204.0|width=70|height=70|itemid=11092|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=493.0|y=204.0|width=70|height=70|itemid=10585|itemcount=1|showtips=1|bgtype=0>
+<Text|x=180.0|y=283.0|color=249|size=16|text=加入QQ群198605888"(赠送:自动拾取)>
+<Button|x=485.0|y=273.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=输入激活码|link=@@InPutString69>
+<Text|x=181.0|y=321.0|color=249|size=16|text=玩家交流群 ①198605888  ②198605888>
+<Button|x=485.0|y=315.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=一键加群请点我|link=@加群>
 
+;<>                                          <[加入QQ群领取豪华礼包]/FCOLOR=70>\
+;<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【刀刀切割+1000】/FCOLOR=250> \
+;<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【施毒术*1】/FCOLOR=250> \
+;<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【开天斩*1】/FCOLOR=250> \
+;<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【逐日剑法*1】/FCOLOR=250> \
+;<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【十星勋章*1】/FCOLOR=250> \
+;<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【手术刀+10*1】/FCOLOR=250> \
+;<>                                          <加入QQ群领取豪华礼包:/FCOLOR=158> <【麻醉枪+10*1】/FCOLOR=250> \ \ \ \ \
 ;<>                                        \ \ \
-
-<>                                        <加入QQ群198605888"/FCOLOR=249>             <输入激活码/@@InPutString69> <(赠送:自动拾取)/FCOLOR=250> \    \
-
-
-
-
-<>                                           <玩家交流群 ①198605888  ②198605888/FCOLOR=161>           <一键加群请点我!/@加群>  \
-
-<>                                                            <ItemShow:1723:0:95:-104:1>  <ItemShow:509:0:95:-104:1>  <ItemShow:1092:0:95:-101:1>  <ItemShow:585:0:95:-101:1>\
+;<>                                        <加入QQ群198605888"/FCOLOR=249>             <输入激活码/@@InPutString69> <(赠送:自动拾取)/FCOLOR=250> \    \
+;<>                                           <玩家交流群 ①198605888  ②198605888/FCOLOR=161>           <一键加群请点我!/@加群>  \
+;<>                                                            <ItemShow:1723:0:95:-104:1>  <ItemShow:509:0:95:-104:1>  <ItemShow:1092:0:95:-101:1>  <ItemShow:585:0:95:-101:1>\
 
 
 
@@ -197,6 +212,7 @@ GIVESTATEITEM 杀人书（封） 1 1 1 1 1 1 1 1 0
 SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
 SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
 SENDMSG 0 Q群礼包:玩家[<$USERNAME>]输入激活码获得大量奖励!.
-MESSAGEBOX [提示]：恭喜你领取成功！
+SENDMSG 9 [提示]：恭喜你领取成功！
 #ELSEACT
-MESSAGEBOX [提示]：对不起，激活码错误\\[提示]：或者你已经领过了该礼包！
+SENDMSG 9 [提示]：对不起，激活码错误
+SENDMSG 9 [提示]：或者你已经领过了该礼包！

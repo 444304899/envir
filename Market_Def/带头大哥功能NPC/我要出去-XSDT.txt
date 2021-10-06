@@ -10,7 +10,7 @@ small g496 1
 #act
 movr N$坐标x 131 150
 movr N$坐标y 86 100
-MAPMOVE 封妖城 <$STR(N$坐标x)>  <$STR(N$坐标y)>
+MAPMOVE fyc <$STR(N$坐标x)>  <$STR(N$坐标y)>
 ;GiveStateItem  首充礼包 1 1 1 1 1 1 1 1
 GIVESTATEITEM 首充礼包 1 1 1 1 1 1 1 1 0
 DELSKILL 倚天辟地

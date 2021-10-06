@@ -3,10 +3,15 @@
 #if
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                      吾是这片大陆的统治者，,掌管着许多事物。希望我能对你有帮助\ \
-<>                                                      <请务必在攻沙前一小时创建行会，否则行会无法参与沙巴克争夺>\ \
-<>                                                      <请求创建行会./@创建>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/hhcj.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=258.0|y=93.0|color=253|size=16|text=吾是这片大陆的统治者，,掌管着许多事物。希望我能对你有帮助>
+<Text|x=258.0|y=134.0|color=253|size=16|text=请务必在攻沙前一小时创建行会，否则行会无法参与沙巴克争夺>
+<Button|x=347.0|y=258.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=请求创建行会|link=@创建>
+
+;<>                                                      吾是这片大陆的统治者，,掌管着许多事物。希望我能对你有帮助\ \
+;<>                                                      <请务必在攻沙前一小时创建行会，否则行会无法参与沙巴克争夺>\ \
+;<>                                                      <请求创建行会./@创建>\
 
 
 
@@ -18,7 +23,7 @@
 #act
 goto @创建行会
 #elseact
-messagebox 防止捣乱.必须充值100元以上才可以创建行会！
+SENDMSG 9 防止捣乱.必须充值100元以上才可以创建行会！
 BREAK
 
 [@创建行会]
@@ -26,11 +31,18 @@ BREAK
 ;CHECKGAMEDIAMOND > 99
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                        欢迎来到<百团大战>.我是管理各种事情的国王.你有什么事情吗？\ \
-<>                                                        请注意:您在填写行会名称时一定要慎重。如果包含不健康、\ \
-<>                                                        有悖于社会精神文明的字眼，我们可以在不通知的情况下\ \
-<>                                                          <开始创建/@@InPutString88>
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/hhcj.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=258.0|y=93.0|color=253|size=16|text=欢迎来到<百团大战>.我是管理各种事情的国王.你有什么事情吗？>
+<Text|x=258.0|y=134.0|color=253|size=16|text=请注意:您在填写行会名称时一定要慎重。如果包含不健康、>
+<Text|x=258.0|y=175.0|color=253|size=16|text=有悖于社会精神文明的字眼，我们可以在不通知的情况下>
+<Button|x=233.0|y=265.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=返回|link=@main>
+<Button|x=470.0|y=266.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=开始创建|link=@@InPutString88>
+
+;<>                                                        欢迎来到<百团大战>.我是管理各种事情的国王.你有什么事情吗？\ \
+;<>                                                        请注意:您在填写行会名称时一定要慎重。如果包含不健康、\ \
+;<>                                                        有悖于社会精神文明的字眼，我们可以在不通知的情况下\ \
+;<>                                                          <开始创建/@@InPutString88>
 
 
 [@InPutString88]
@@ -38,12 +50,12 @@ BREAK
 #OR
 CheckStringlength S14 > 16
 #ACT
-messagebox 无法创建，行会名字3-8个汉字！
+SENDMSG 9 无法创建，行会名字3-8个汉字！
 Break
 #IF
 EQUAL S88
 #ACT
-messagebox 无法创建，行会名字3-8个汉字！
+SENDMSG 9 无法创建，行会名字3-8个汉字！
 Break
 #OR
 CheckContainsText S88 a
@@ -73,12 +85,12 @@ CheckContainsText S88 x
 CheckContainsText S88 y
 CheckContainsText S88 z
 #ACT
-messagebox 无法创建，行会名字3-8个汉字！
+SENDMSG 9 无法创建，行会名字3-8个汉字！
 Break
 #IF
 HAVEGUILD
 #ACT
-messagebox 无法创建，请先退出当前行会！
+SENDMSG 9 无法创建，请先退出当前行会！
 BREAK
 
 #IF
@@ -86,8 +98,8 @@ CHECKITEM 沃玛号角 1
 #ACT
 take 沃玛号角 1
 AddGuild <$STR(S88)> <$USERNAME>
-messagebox 创建成功！
+SENDMSG 9 创建成功！
 Break
 #ELSEACT
-messagebox 要取得位于沃玛寺庙底部深处的沃玛教主所拥有的号角！
-
+SENDMSG 9 要取得位于沃玛寺庙底部深处的沃玛教主所拥有的号角！
+SENDMSG 6 要取得位于沃玛寺庙底部深处的沃玛教主所拥有的号角！

@@ -9,18 +9,28 @@ BREAK
 #if
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                           <playimg:13:0:15:150:160:-28> \
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/zghy.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=418.0|y=11.0|effecttype=0|effectid=20299|dir=5|speed=1|scale=1|act=0>
+<RText|x=215.0|y=73.0|color=255|size=16|text=<您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>>
+<RText|x=264.0|y=122.0|color=255|size=16|text=<1./FCOLOR=249>< 30积分兑换一个[强化+10卷轴]/FCOLOR=253>>
+<RText|x=264.0|y=170.0|color=255|size=16|text=<2./FCOLOR=249>< 50积分兑换一个[强化+12卷轴]/FCOLOR=253>>
+<RText|x=264.0|y=218.0|color=255|size=16|text=<3./FCOLOR=249>< 100积分兑换一个[强化+13卷轴]/FCOLOR=253>>
+<Button|x=532.0|y=120.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=确定兑换|link=@卷轴1>
+<Button|x=532.0|y=168.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|color=255|size=16|text=确定兑换|link=@卷轴2>
+<Button|x=532.0|y=216.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=确定兑换|link=@卷轴3>
+<Effect|x=89.0|y=173.0|effecttype=0|effectid=20298|dir=5|speed=1|scale=1|act=0>
+<Text|x=248.0|y=329.0|color=254,251,168,191,250,70,245,249,253|size=16|text=提示：积分大于2000有神秘彩蛋，请勿轻易兑换强化卷！>
 
-<>                                               <您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>\ \
-
-<>                                         <1./FCOLOR=250>< 30积分兑换一个[强化+10卷轴]/FCOLOR=151>             <确定兑换/@卷轴1>\ \
-<>                                         <2./FCOLOR=250>< 50积分兑换一个[强化+12卷轴]/FCOLOR=151>             <确定兑换/@卷轴2>\ \
-<>                                        <3./FCOLOR=250><100积分兑换一个[强化+13卷轴]/FCOLOR=151>             <确定兑换/@卷轴3> \ \
-<>                           <IMG:96:6:30:-100>  <IMG:96:6:188:-100>\
-<>              <提示：积分大于2000有神秘彩蛋，请勿轻易兑换强化卷！/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                           <IMG:96:6:30:-100>  <IMG:96:6:188:-100>\ \
-<>                           <IMG:96:6:30:-100>  <IMG:96:6:188:-100>  \  \
+;<>                           <playimg:13:0:15:150:160:-28> \
+;<>                                               <您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>\ \
+;<>                                         <1./FCOLOR=250>< 30积分兑换一个[强化+10卷轴]/FCOLOR=151>             <确定兑换/@卷轴1>\ \
+;<>                                         <2./FCOLOR=250>< 50积分兑换一个[强化+12卷轴]/FCOLOR=151>             <确定兑换/@卷轴2>\ \
+;<>                                        <3./FCOLOR=250><100积分兑换一个[强化+13卷轴]/FCOLOR=151>             <确定兑换/@卷轴3> \ \
+;<>                           <IMG:96:6:30:-100>  <IMG:96:6:188:-100>\
+;<>              <提示：积分大于2000有神秘彩蛋，请勿轻易兑换强化卷！/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
+;<>                           <IMG:96:6:30:-100>  <IMG:96:6:188:-100>\ \
+;<>                           <IMG:96:6:30:-100>  <IMG:96:6:188:-100>  \  \
 
 
 
@@ -31,51 +41,69 @@ CHECKGAMEDIAMOND > 29
 #act
 GAMEDIAMOND - 30
 give 强化+10卷轴 1
-MessageBox 购买成功！！
+SENDMSG 9 购买成功！！
 #elseact
-MessageBox 积分不足！！
+SENDMSG 9 积分不足！！
 [@卷轴2]
 #IF
 CHECKGAMEDIAMOND > 49
 #act
 GAMEDIAMOND - 50
 give 强化+12卷轴 1
-MessageBox 购买成功！！
+SENDMSG 9 购买成功！！
 #elseact
-MessageBox 积分不足！！
+SENDMSG 9 积分不足！！
 [@卷轴3]
 #IF
 CHECKGAMEDIAMOND > 99
 #act
 GAMEDIAMOND - 100
 give 强化+13卷轴 1
-MessageBox 购买成功！！
+SENDMSG 9 购买成功！！
 #elseact
-MessageBox 积分不足！！
+SENDMSG 9 积分不足！！
 
 [@积分兑换]
 #if
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                  <playimg:13:0:15:150:160:-28> \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/zghy.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=418.0|y=11.0|effecttype=0|effectid=20299|dir=5|act=0|speed=1|scale=1>
+<RText|x=213.0|y=60.0|color=255|size=16|text=<您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>>
+<Img|x=267.0|y=98.0|img=public/micon/000084.png|esc=0>
+<Img|x=451.0|y=98.0|img=public/micon/000084.png|esc=0>
+<Img|x=267.0|y=140.0|img=public/micon/000084.png|esc=0>
+<Img|x=451.0|y=140.0|img=public/micon/000084.png|esc=0>
+<Img|x=267.0|y=182.0|img=public/micon/000084.png|esc=0>
+<Img|x=451.0|y=182.0|img=public/micon/000084.png|esc=0>
+<Img|x=267.0|y=224.0|img=public/micon/000084.png|esc=0>
+<Img|x=451.0|y=224.0|img=public/micon/000084.png|esc=0>
+<RText|x=280.0|y=92.0|color=255|size=16|text=<1./FCOLOR=102><攻击倍数 + 10%/FCOLOR=253>>
+<RText|x=466.0|y=92.0|color=255|size=16|text=<2./FCOLOR=102><攻击吸血 + 5%/FCOLOR=253>>
+<RText|x=280.0|y=134.0|color=255|size=16|text=<3./FCOLOR=102><附加伤害 + 8888/FCOLOR=253>>
+<RText|x=466.0|y=134.0|color=255|size=16|text=<4./FCOLOR=102><装备回收 + 100%/FCOLOR=253>>
+<RText|x=280.0|y=176.0|color=255|size=16|text=<5./FCOLOR=102><人物爆率 + 100%/FCOLOR=253>>
+<RText|x=466.0|y=176.0|color=255|size=16|text=<6./FCOLOR=102><自动挂机/FCOLOR=253>>
+<RText|x=280.0|y=218.0|color=255|size=16|text=<7./FCOLOR=102><学习 魔法神盾/FCOLOR=253>>
+<RText|x=466.0|y=218.0|color=255|size=16|text=<8./FCOLOR=102><学习 十步一杀/FCOLOR=253>>
+<Button|x=388.0|y=285.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=我要领取|link=@领取1>
+<Effect|x=89.0|y=173.0|effecttype=0|effectid=20298|dir=5|act=0|speed=1|scale=1>
+<Text|x=308.0|y=332.0|color=254,251,168,191,250,70,245,249,253|size=16|text=提示：积分有神秘彩蛋，可领取全民任务>
 
-<>                                                               <您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>\ \
-
-<>                                                         <1./FCOLOR=250><攻击倍数 + 10%/FCOLOR=151>              <2./FCOLOR=250><攻击吸血 + 5%/FCOLOR=151>\ \
-<>                                                         <3./FCOLOR=250><附加伤害 + 8888/FCOLOR=151>             <4./FCOLOR=250><装备回收 + 100%/FCOLOR=151>\ \
-<>                                                         <5./FCOLOR=250><人物爆率 + 100%/FCOLOR=253>             <6./FCOLOR=250><自动挂机/FCOLOR=151> \ \
-<>                                                         <7./FCOLOR=250><学习 魔法神盾/FCOLOR=253>             <8./FCOLOR=250><学习 十步一杀/FCOLOR=151> \ \
-
-<>                                                <IMG:96:6:30:-100>  <IMG:96:6:174:-100>\ \
-<>                                                <IMG:96:6:30:-100>  <IMG:96:6:174:-100>\
-<>                                                                  <提示：积分有神秘彩蛋，可领取全民任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253>  \
-<>                                                <IMG:96:6:30:-100>  <IMG:96:6:174:-100>  \
-
-<> \
-<>                                                  <IMG:130:6:155:-90|246#累计充值钻石58元,免费领取，不扣钻石/@领取1>\
-
-<>                                                <playimg:13:180:27:100:-65:-190|249#各位老板赚大钱>\
+;<>                                                  <playimg:13:0:15:150:160:-28> \
+;<>                                                               <您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>\ \
+;<>                                                         <1./FCOLOR=250><攻击倍数 + 10%/FCOLOR=151>              <2./FCOLOR=250><攻击吸血 + 5%/FCOLOR=151>\ \
+;<>                                                         <3./FCOLOR=250><附加伤害 + 8888/FCOLOR=151>             <4./FCOLOR=250><装备回收 + 100%/FCOLOR=151>\ \
+;<>                                                         <5./FCOLOR=250><人物爆率 + 100%/FCOLOR=253>             <6./FCOLOR=250><自动挂机/FCOLOR=151> \ \
+;<>                                                         <7./FCOLOR=250><学习 魔法神盾/FCOLOR=253>             <8./FCOLOR=250><学习 十步一杀/FCOLOR=151> \ \
+;<>                                                <IMG:96:6:30:-100>  <IMG:96:6:174:-100>\ \
+;<>                                                <IMG:96:6:30:-100>  <IMG:96:6:174:-100>\
+;<>                                                                  <提示：积分有神秘彩蛋，可领取全民任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253>  \
+;<>                                                <IMG:96:6:30:-100>  <IMG:96:6:174:-100>  \
+;<> \
+;<>                                                  <IMG:130:6:155:-90|246#累计充值钻石58元,免费领取，不扣钻石/@领取1>\
+;<>                                                <playimg:13:180:27:100:-65:-190|249#各位老板赚大钱>\
 
 
 
@@ -94,10 +122,10 @@ SETONTIMER 36 1
 ;ADDSKILL 护体神盾
 SENDMOVEMSG 0 253 255 150 1 ≮系统公告≯：[<$USERNAME>]成为百团大战赞助玩家，本服58元满赞助，无其他隐藏消费！
 SENDMOVEMSG 0 249 251 350 1 ≮系统公告≯：[<$USERNAME>]成为百团大战赞助玩家，本服58元满赞助，无其他隐藏消费！
-MessageBox 购买成功：\　\恭喜您成为本服云顶赞助玩家！
+SENDMSG 9 购买成功：\　\恭喜您成为本服云顶赞助玩家！
 break
 #elseact
-MESSAGEBOX  请检查钻石充值是否达到58元！或已经成为封天大陆赞助会员！
+SENDMSG 9  请检查钻石充值是否达到58元！或已经成为封天大陆赞助会员！
 break
 
 

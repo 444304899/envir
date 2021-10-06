@@ -16,52 +16,96 @@ break
 NOT EQUAL G11 1
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/sclj.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=337.0|y=15.0|size=18|color=252|text=◆　新区城主奖励领奖台　◆>
+<RText|x=168.0|y=61.0|color=253|size=16|text=<攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=253>>
+<RText|x=168.0|y=91.0|color=253|size=16|text=<攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=249>>
+<RText|x=168.0|y=121.0|color=253|size=16|text=<攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=249>>
+<RText|x=168.0|y=151.0|color=253|size=16|text=<领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=249>之间，超过时间无法领取，后果自负！>
+<RText|x=168.0|y=181.0|color=253|size=16|text=<攻城状态：/FCOLOR=252><没有攻城>>
+<RText|x=168.0|y=211.0|color=253|size=16|text=<所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>>
+<Button|x=163.0|y=237.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=领取新区城主奖励|link=@新区奖励>
+<RText|x=392.0|y=244.0|color=253|size=16|text=系统自动识别提示：<目前该区为新区/FCOLOR=252>>
 
-
-<>　　　                                                     　　　     <◆　新区城主奖励领奖台　◆/FCOLOR=254>\ \
-<>                                                     <攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=151>\
-<>                                                     <攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=250>  \
-<>                                                     <攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=250>   \
-<>                                                     <领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=250>之间，超过时间无法领取，后果自负！\
-<>                                                     <攻城状态：/FCOLOR=146><没有攻城>   \
-<>                                                     <所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>\ \
-<>                                                     <领取新区城主奖励/@新区奖励>    系统自动识别提示：<目前该区为新区/FCOLOR=254>
 #ELSESAY
-\　 \
-<>　　　                                                 　　　        <◆　新区城主奖励领奖台　◆/FCOLOR=254>\ \
-<>                                                     <攻沙模式：/FCOLOR=249><新区第3天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=151>\
-<>                                                     <攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=250>  \
-<>                                                     <攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=250>   \
-<>                                                     <领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=250>之间，超过时间无法领取，后果自负！\
-<>                                                     <攻城状态：/FCOLOR=146><没有攻城>   \
-<>                                                     <所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>\ \
-<>                                                     <领取老区城主奖励/@老区奖励>    系统自动识别提示：<目前该区为老区/FCOLOR=254>
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/sclj.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=337.0|y=15.0|size=18|color=252|text=◆　新区城主奖励领奖台　◆>
+<RText|x=168.0|y=61.0|color=253|size=16|text=<攻沙模式：/FCOLOR=249><新区第3天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=253>>
+<RText|x=168.0|y=91.0|color=253|size=16|text=<攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=249>>
+<RText|x=168.0|y=121.0|color=253|size=16|text=<攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=249>>
+<RText|x=168.0|y=151.0|color=253|size=16|text=<领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=249>之间，超过时间无法领取，后果自负！>
+<RText|x=168.0|y=181.0|color=253|size=16|text=<攻城状态：/FCOLOR=252><没有攻城>>
+<RText|x=168.0|y=211.0|color=253|size=16|text=<所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>>
+<Button|x=163.0|y=237.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=领取老区城主奖励|link=@老区奖励>
+<RText|x=392.0|y=244.0|color=253|size=16|text=系统自动识别提示：<目前该区为老区/FCOLOR=252>>
+
+;<>　　　                                                     　　　     <◆　新区城主奖励领奖台　◆/FCOLOR=254>\ \
+;<>                                                     <攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=151>\
+;<>                                                     <攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=250>  \
+;<>                                                     <攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=250>   \
+;<>                                                     <领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=250>之间，超过时间无法领取，后果自负！\
+;<>                                                     <攻城状态：/FCOLOR=146><没有攻城>   \
+;<>                                                     <所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>\ \
+;<>                                                     <领取新区城主奖励/@新区奖励>    系统自动识别提示：<目前该区为新区/FCOLOR=254>
+;#ELSESAY
+;<>　　　                                                 　　　        <◆　新区城主奖励领奖台　◆/FCOLOR=254>\ \
+;<>                                                     <攻沙模式：/FCOLOR=249><新区第3天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=151>\
+;<>                                                     <攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=250>  \
+;<>                                                     <攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=250>   \
+;<>                                                     <领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=250>之间，超过时间无法领取，后果自负！\
+;<>                                                     <攻城状态：/FCOLOR=146><没有攻城>   \
+;<>                                                     <所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>\ \
+;<>                                                     <领取老区城主奖励/@老区奖励>    系统自动识别提示：<目前该区为老区/FCOLOR=254>
 
 [@攻城中]
 
 #IF
 NOT EQUAL G11 1
 #SAY
-\
-<                               ▁/AUTOCOLOR=249,95,70,133,146,241,238><▂/AUTOCOLOR=95,70,133,146,241,238,249><▃/AUTOCOLOR=70,133,146,241,238,249,95><▄/AUTOCOLOR=133,146,241,238,249,95,70><▅/AUTOCOLOR=146,241,238,249,95,70,133><▇/AUTOCOLOR=241,238,249,95,70,133,146><█/AUTOCOLOR=238,249,95,70,133,146,241>　<◆　新区城主奖励领奖台　◆/FCOLOR=254>　<█/AUTOCOLOR=238,249,95,70,133,146,241><▇/AUTOCOLOR=241,238,249,95,70,133,146><▅/AUTOCOLOR=146,241,238,249,95,70,133><▄/AUTOCOLOR=133,146,241,238,249,95,70><▃/AUTOCOLOR=70,133,146,241,238,249,95><▂/AUTOCOLOR=95,70,133,146,241,238,249><▁/AUTOCOLOR=249,95,70,133,146,241,238>\ \
-<                               攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=151>\
-<>                                <攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=250>  \
-<>                                <攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=250>   \
-<                               领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=250>之间，超过时间无法领取，后果自负！\
-<                               攻城状态：/FCOLOR=146><正在攻城>   \
-<                               所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>\
-<                               领取新区城主奖励/@新区奖励>    系统自动识别提示：<目前该区为新区/FCOLOR=254>
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/sclj.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<RText|x=246.0|y=16.0|size=18|color=252|text=<▁/AUTOCOLOR=249,95,70,133,146,241,238><▂/AUTOCOLOR=95,70,133,146,241,238,249><▃/AUTOCOLOR=70,133,146,241,238,249,95><▄/AUTOCOLOR=133,146,241,238,249,95,70><▅/AUTOCOLOR=146,241,238,249,95,70,133><▇/AUTOCOLOR=241,238,249,95,70,133,146><█/AUTOCOLOR=238,249,95,70,133,146,241>　<◆　新区城主奖励领奖台　◆/FCOLOR=252>　<█/AUTOCOLOR=238,249,95,70,133,146,241><▇/AUTOCOLOR=241,238,249,95,70,133,146><▅/AUTOCOLOR=146,241,238,249,95,70,133><▄/AUTOCOLOR=133,146,241,238,249,95,70><▃/AUTOCOLOR=70,133,146,241,238,249,95><▂/AUTOCOLOR=95,70,133,146,241,238,249><▁/AUTOCOLOR=249,95,70,133,146,241,238>>
+<RText|x=168.0|y=61.0|color=253|size=16|text=<攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=253>>
+<RText|x=168.0|y=91.0|color=253|size=16|text=<攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=249>>
+<RText|x=168.0|y=121.0|color=253|size=16|text=<攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=249>>
+<RText|x=168.0|y=151.0|color=253|size=16|text=<领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=249>之间，超过时间无法领取，后果自负！>
+<RText|x=168.0|y=181.0|color=253|size=16|text=<攻城状态：/FCOLOR=252><正在攻城>>
+<RText|x=168.0|y=211.0|color=253|size=16|text=<所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>>
+<Button|x=163.0|y=237.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=领取新区城主奖励|link=@新区奖励>
+<RText|x=392.0|y=244.0|color=253|size=16|text=系统自动识别提示：<目前该区为新区/FCOLOR=252>>
 #ELSESAY
-\
-<                               ▁/AUTOCOLOR=249,95,70,133,146,241,238><▂/AUTOCOLOR=95,70,133,146,241,238,249><▃/AUTOCOLOR=70,133,146,241,238,249,95><▄/AUTOCOLOR=133,146,241,238,249,95,70><▅/AUTOCOLOR=146,241,238,249,95,70,133><▇/AUTOCOLOR=241,238,249,95,70,133,146><█/AUTOCOLOR=238,249,95,70,133,146,241>　<◆　老区城主奖励领奖台　◆/FCOLOR=254>　<█/AUTOCOLOR=238,249,95,70,133,146,241><▇/AUTOCOLOR=241,238,249,95,70,133,146><▅/AUTOCOLOR=146,241,238,249,95,70,133><▄/AUTOCOLOR=133,146,241,238,249,95,70><▃/AUTOCOLOR=70,133,146,241,238,249,95><▂/AUTOCOLOR=95,70,133,146,241,238,249><▁/AUTOCOLOR=249,95,70,133,146,241,238>\ \
-<                               攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=151>\
-<>                                <攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=250>  \
-<>                                <攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=250>   \
-<                               领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=250>之间，超过时间无法领取，后果自负！\
-<                               攻城状态：/FCOLOR=146><正在攻城>  \
-<                               所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>\
-<                               领取老区城主奖励/@老区奖励>    系统自动识别提示：<目前该区为老区/FCOLOR=254>
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/sclj.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<RText|x=246.0|y=16.0|size=18|color=252|text=<▁/AUTOCOLOR=249,95,70,133,146,241,238><▂/AUTOCOLOR=95,70,133,146,241,238,249><▃/AUTOCOLOR=70,133,146,241,238,249,95><▄/AUTOCOLOR=133,146,241,238,249,95,70><▅/AUTOCOLOR=146,241,238,249,95,70,133><▇/AUTOCOLOR=241,238,249,95,70,133,146><█/AUTOCOLOR=238,249,95,70,133,146,241>　<◆　老区城主奖励领奖台　◆/FCOLOR=252>　<█/AUTOCOLOR=238,249,95,70,133,146,241><▇/AUTOCOLOR=241,238,249,95,70,133,146><▅/AUTOCOLOR=146,241,238,249,95,70,133><▄/AUTOCOLOR=133,146,241,238,249,95,70><▃/AUTOCOLOR=70,133,146,241,238,249,95><▂/AUTOCOLOR=95,70,133,146,241,238,249><▁/AUTOCOLOR=249,95,70,133,146,241,238>>
+<RText|x=168.0|y=61.0|color=253|size=16|text=<攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=253>>
+<RText|x=168.0|y=91.0|color=253|size=16|text=<攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=249>>
+<RText|x=168.0|y=121.0|color=253|size=16|text=<攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=249>>
+<RText|x=168.0|y=151.0|color=253|size=16|text=<领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=249>之间，超过时间无法领取，后果自负！>
+<RText|x=168.0|y=181.0|color=253|size=16|text=<攻城状态：/FCOLOR=252><正在攻城>>
+<RText|x=168.0|y=211.0|color=253|size=16|text=<所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>>
+<Button|x=163.0|y=237.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=18|color=255|text=领取老区城主奖励|link=@老区奖励>
+<RText|x=392.0|y=244.0|color=253|size=16|text=系统自动识别提示：<目前该区为老区/FCOLOR=252>>
+;\
+;<                               ▁/AUTOCOLOR=249,95,70,133,146,241,238><▂/AUTOCOLOR=95,70,133,146,241,238,249><▃/AUTOCOLOR=70,133,146,241,238,249,95><▄/AUTOCOLOR=133,146,241,238,249,95,70><▅/AUTOCOLOR=146,241,238,249,95,70,133><▇/AUTOCOLOR=241,238,249,95,70,133,146><█/AUTOCOLOR=238,249,95,70,133,146,241>　<◆　新区城主奖励领奖台　◆/FCOLOR=254>　<█/AUTOCOLOR=238,249,95,70,133,146,241><▇/AUTOCOLOR=241,238,249,95,70,133,146><▅/AUTOCOLOR=146,241,238,249,95,70,133><▄/AUTOCOLOR=133,146,241,238,249,95,70><▃/AUTOCOLOR=70,133,146,241,238,249,95><▂/AUTOCOLOR=95,70,133,146,241,238,249><▁/AUTOCOLOR=249,95,70,133,146,241,238>\ \
+;<                               攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=151>\
+;<>                                <攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=250>  \
+;<>                                <攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=250>   \
+;<                               领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=250>之间，超过时间无法领取，后果自负！\
+;<                               攻城状态：/FCOLOR=146><正在攻城>   \
+;<                               所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>\
+;<                               领取新区城主奖励/@新区奖励>    系统自动识别提示：<目前该区为新区/FCOLOR=254>
+;#ELSESAY
+;\
+;<                               ▁/AUTOCOLOR=249,95,70,133,146,241,238><▂/AUTOCOLOR=95,70,133,146,241,238,249><▃/AUTOCOLOR=70,133,146,241,238,249,95><▄/AUTOCOLOR=133,146,241,238,249,95,70><▅/AUTOCOLOR=146,241,238,249,95,70,133><▇/AUTOCOLOR=241,238,249,95,70,133,146><█/AUTOCOLOR=238,249,95,70,133,146,241>　<◆　老区城主奖励领奖台　◆/FCOLOR=254>　<█/AUTOCOLOR=238,249,95,70,133,146,241><▇/AUTOCOLOR=241,238,249,95,70,133,146><▅/AUTOCOLOR=146,241,238,249,95,70,133><▄/AUTOCOLOR=133,146,241,238,249,95,70><▃/AUTOCOLOR=70,133,146,241,238,249,95><▂/AUTOCOLOR=95,70,133,146,241,238,249><▁/AUTOCOLOR=249,95,70,133,146,241,238>\ \
+;<                               攻沙模式：/FCOLOR=249><新区第2天下午合区，集体拿沙，老区天天拿沙！/FCOLOR=151>\
+;<>                                <攻沙奖励：/FCOLOR=249>新区奖励:<300000灵符+微信红包(按捐献分红)/FCOLOR=250>  \
+;<>                                <攻沙奖励：/FCOLOR=249>老区奖励:<100000灵符/FCOLOR=250>   \
+;<                               领取时间：/FCOLOR=249>攻城后<22.00-22.20/FCOLOR=250>之间，超过时间无法领取，后果自负！\
+;<                               攻城状态：/FCOLOR=146><正在攻城>  \
+;<                               所属行会：/FCOLOR=253><$OWNERGUILD>　　<城主姓名：/FCOLOR=253><$LORD>\
+;<                               领取老区城主奖励/@老区奖励>    系统自动识别提示：<目前该区为老区/FCOLOR=254>
 
 [@新区奖励]
 #IF
@@ -69,7 +113,7 @@ HOUR 22 22
 MIN 01 20
 #ACT
 #ELSEACT
-MESSAGEBOX 奖励领取时间为每晚的22点01分-22点20分！
+SENDMSG 9 奖励领取时间为每晚的22点01分-22点20分！
 break
 
 #IF
@@ -77,7 +121,7 @@ ISCASTLEMASTER
 #ACT
 goto @新区奖励1
 #ELSEACT
-MESSAGEBOX [提示]：你不是沙城主，无权领奖！
+SENDMSG 9 [提示]：你不是沙城主，无权领奖！
 
 [@新区奖励1]
 #IF
@@ -92,9 +136,9 @@ SENDMSG 0 沙城主:<$USERNAME>领取了新区攻沙奖励300000灵符！~
 SENDMSG 0 沙城主:<$USERNAME>领取了新区攻沙奖励300000灵符！~
 SENDMSG 0 沙城主:<$USERNAME>领取了新区攻沙奖励300000灵符！~
 SENDMSG 0 沙城主:<$USERNAME>领取了新区攻沙奖励300000灵符！~
-MESSAGEBOX 恭喜领取沙城基础奖励\\\请截图给群管理叫上兄弟领红包！！！
+SENDMSG 9 恭喜领取沙城基础奖励\\\请截图给群管理叫上兄弟领红包！！！
 #ELSEACT
-MESSAGEBOX 奖励已经领过了不能重复领取！
+SENDMSG 9 奖励已经领过了不能重复领取！
 break
 
 [@老区奖励]
@@ -103,7 +147,7 @@ hour 22
 min 00 20
 #ACT
 #ELSEACT
-MESSAGEBOX 奖励领取时间为每晚的22点01分-22点20分！
+SENDMSG 9 奖励领取时间为每晚的22点01分-22点20分！
 break
 
 #IF
@@ -111,7 +155,7 @@ ISCASTLEMASTER
 #ACT
 goto @老区奖励1
 #ELSEACT
-MESSAGEBOX [提示]：你不是沙城主，无权领奖！
+SENDMSG 9 [提示]：你不是沙城主，无权领奖！
 
 [@老区奖励1]
 #IF
@@ -124,9 +168,9 @@ SENDMSG 0 沙城主:<$USERNAME>领取了老区攻沙奖励100000灵符
 SENDMSG 0 沙城主:<$USERNAME>领取了老区攻沙奖励100000灵符
 SENDMSG 0 沙城主:<$USERNAME>领取了老区攻沙奖励100000灵符
 SENDMSG 0 沙城主:<$USERNAME>领取了老区攻沙奖励100000灵符
-MESSAGEBOX 恭喜领取沙城基础奖励
+SENDMSG 9 恭喜领取沙城基础奖励
 #ELSEACT
-MESSAGEBOX 奖励已经领过了不能重复领取！
+SENDMSG 9 奖励已经领过了不能重复领取！
 break
 
 

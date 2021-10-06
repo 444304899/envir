@@ -3,19 +3,39 @@
 #if
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \ \
-<>                                                        <playimg:13:20:15:150:132:-25> \
-<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加属性:/FCOLOR=70> <人物爆率 + 20%/FCOLOR=95>     \
-<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加属性:/FCOLOR=70> <人物体力 + 20%/FCOLOR=95>      \
-<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加属性:/FCOLOR=70> <人物倍攻 + 12%/FCOLOR=95>      \
-<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加属性:/FCOLOR=70> <攻 魔 道 + 10%/FCOLOR=95>      \
-<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加技能:/FCOLOR=70> <半月弯刀  /FCOLOR=95>      \
-<>                                                                       <IMG:60:6:-2:-3><开启花费:/FCOLOR=7>  <《40金币》/FCOLOR=253>          \
-<>                                                         <IMG:169:6:-1:3>         \
-<>                                                                   <(开启狂暴之后下线,小退不会消失)/FCOLOR=161> \
-<>                                                                       <(被怪物杀死,不会消失,)/FCOLOR=161> \
-<>                                                                       <(被人物杀死,属性消失.)/FCOLOR=161> \
-<>                                                                            <ImgEx:41:130:131:132:-10:25/@狂暴1> \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/kbzl.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=411.0|y=-5.0|effecttype=0|effectid=20297|dir=5|scale=1|act=0|speed=1>
+<Img|x=299.0|y=45.0|img=public/micon/000078.png|esc=0>
+<Img|x=299.0|y=67.0|img=public/micon/000078.png|esc=0>
+<Img|x=299.0|y=89.0|img=public/micon/000078.png|esc=0>
+<Img|x=299.0|y=111.0|img=public/micon/000078.png|esc=0>
+<Img|x=299.0|y=133.0|img=public/micon/000078.png|esc=0>
+<RText|x=312.0|y=43.0|color=255|size=16|text=<【狂暴】/FCOLOR=249><增加属性:/FCOLOR=70> <人物爆率 + 20%/FCOLOR=102>>
+<RText|x=312.0|y=65.0|color=255|size=16|text=<【狂暴】/FCOLOR=249><增加属性:/FCOLOR=70> <人物体力 + 20%/FCOLOR=102>>
+<RText|x=312.0|y=87.0|color=255|size=16|text=<【狂暴】/FCOLOR=249><增加属性:/FCOLOR=70> <人物倍攻 + 12%/FCOLOR=102>>
+<RText|x=312.0|y=109.0|color=255|size=16|text=<【狂暴】/FCOLOR=249><增加属性:/FCOLOR=70> <攻 魔 道 + 10%/FCOLOR=102>>
+<RText|x=312.0|y=131.0|color=255|size=16|text=<【狂暴】/FCOLOR=249><增加技能:/FCOLOR=70> <半月弯刀  /FCOLOR=102>>
+<Img|x=357.0|y=177.0|img=public/micon/000060.png|esc=0>
+<RText|x=375.0|y=176.0|color=255|size=14|text=<开启花费:/FCOLOR=249>  <《40金币》/FCOLOR=253>>
+<Img|x=153.0|y=204.0|width=600|height=5|esc=0|img=public/box/bk1.png>
+<Text|x=328.0|y=220.0|color=102|size=14|text=(开启狂暴之后下线,小退不会消失)>
+<Text|x=350.0|y=246.0|color=102|size=14|text=(被怪物杀死,不会消失,)>
+<Text|x=350.0|y=271.0|color=102|size=14|text=(被人物杀死,属性消失.)>
+<Button|x=320.0|y=301.0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|size=16|color=255|text=开启狂暴|link=@狂暴1>
+
+;<>                                                        <playimg:13:20:15:150:132:-25> \
+;<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加属性:/FCOLOR=70> <人物爆率 + 20%/FCOLOR=95>     \
+;<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加属性:/FCOLOR=70> <人物体力 + 20%/FCOLOR=95>      \
+;<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加属性:/FCOLOR=70> <人物倍攻 + 12%/FCOLOR=95>      \
+;<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加属性:/FCOLOR=70> <攻 魔 道 + 10%/FCOLOR=95>      \
+;<>                                                                <IMG:78:6:0:-3><【狂暴】/FCOLOR=58><增加技能:/FCOLOR=70> <半月弯刀  /FCOLOR=95>      \
+;<>                                                                       <IMG:60:6:-2:-3><开启花费:/FCOLOR=7>  <《40金币》/FCOLOR=253>          \
+;<>                                                         <IMG:169:6:-1:3>         \
+;<>                                                                   <(开启狂暴之后下线,小退不会消失)/FCOLOR=161> \
+;<>                                                                       <(被怪物杀死,不会消失,)/FCOLOR=161> \
+;<>                                                                       <(被人物杀死,属性消失.)/FCOLOR=161> \
+;<>                                                                            <ImgEx:41:130:131:132:-10:25/@狂暴1> \
 
 
 
@@ -30,9 +50,9 @@ CONFERTITLE 狂暴之力
 TAKE 金币 40
 ADDSKILL 半月弯刀 3
 #CALL [\大熊功能\职位计算.txt] @开始计算
-messagebox 开启成功,请小心行事!
+sendmsg 9 开启成功,请小心行事!
 SENDMOVEMSG 0 249 251 100 1 ≮狂暴之力≯：玩家『<$USERNAME>』使用金币点开启了[狂暴状态]全属性大量增加，击杀他可以获得20金币奖励！
 #elseact
-messagebox 操作失败:\\请检查\\1,金币是否有40\\2,是否现在已经在狂暴模式之中
+sendmsg 9 操作失败:请检查 1,金币是否有40  2,是否现在已经在狂暴模式之中
 break
 }
