@@ -3,7 +3,7 @@
 #if
 CHECKRENEWLEVEL > 29
 #act
-MESSAGEBOX 你的转生都已经完成了！
+SENDMSG 9 你的转生都已经完成了！
 break
 
 #if
@@ -20,32 +20,39 @@ GETVALIDSTRSUPER <$STR(S$转生配置信息)> : S$分割结果数组1_
 mov S$转生材料1 <$STR(S$分割结果数组1_1)>
 mov S$转生材料2 <$STR(S$分割结果数组1_2)>
 mov S$奖励倍攻 <$STR(S$分割结果数组1_3)>
-mov S$需求金币 <$STR(S$分割结果数组1_4)>
+mov S$需求元宝 <$STR(S$分割结果数组1_4)>
 mov S$材料数量 <$STR(S$分割结果数组1_5)>
-
-
 
 #if
 #act
 #SAY
-<>\ \
-<><PlayImg:13:673:10:200:-20:-10:5>\
+<Img|x=19.0|y=-35.0|reset=1|show=4|bg=1|move=1|img=public/box/zszl1.png|loadDelay=1|esc=1>
+<Button|x=550.0|y=-39.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=415.0|y=275.0|effecttype=0|effectid=20341|dir=5|act=0|scale=1|speed=1>
+<Effect|x=20.0|y=7.0|effecttype=0|effectid=20342|dir=5|act=0|speed=1|scale=1>
+<RText|x=360.0|y=8.0|color=253|size=14|text=<当前转生为:/FCOLOR=249>< <$RELEVEL>/FCOLOR=70>>
+<RText|x=360.0|y=31.0|color=253|size=14|text=<转生方式:/FCOLOR=70>>
+<RText|x=360.0|y=54.0|color=253|size=14|text=<进阶需要材料:/FCOLOR=102> < <$STR(S$转生材料1)>*<$STR(S$材料数量)>/FCOLOR=250>>
+<RText|x=360.0|y=73.0|color=253|size=14|text=<进阶需要元宝:/FCOLOR=102> < <$STR(S$需求元宝)> /FCOLOR=151>>
+<RText|x=360.0|y=92.0|color=253|size=14|text=<奖励人物转生倍攻:/FCOLOR=102> < <$STR(S$奖励倍攻)> /FCOLOR=254>>
+<RText|x=360.0|y=129.0|color=253|size=14|text=<云顶结晶/FCOLOR=250><作为游戏通用材料，可用/FCOLOR=102>\<于转升，提升自身等级，游戏中后/FCOLOR=102>\<期提升也需用到大量打到了可一定/FCOLOR=102>\<要保存起来,以免到时候不够用/FCOLOR=102>\>
+<RText|x=360.0|y=218.0|size=14|color=253|text=<转生达到10转额外奖励技能:/FCOLOR=253>\<群体施毒术/FCOLOR=250>>
+<Button|x=422.0|y=275.0|height=42|nimg=public/button/empty.png|mimg=public/button/empty.png|pimg=public/button/empty.png|color=255|size=18|link=@转生>
 
-<>                                                                <当前转生为:/FCOLOR=255>< <$RELEVEL>/FCOLOR=70>\ \
-<>                                                        <转生方式:/FCOLOR=70>\
-<>                                                        <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料1)>*<$STR(S$材料数量)>/FCOLOR=250>\
+
+;<><PlayImg:13:673:10:200:-20:-10:5>\
+;<>                                                                <当前转生为:/FCOLOR=255>< <$RELEVEL>/FCOLOR=70>\ \
+;<>                                                        <转生方式:/FCOLOR=70>\
+;<>                                                        <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料1)>*<$STR(S$材料数量)>/FCOLOR=250>\
 ;<>                                                        <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料2)>*<$STR(S$材料数量2)>/FCOLOR=250>\
-<>                                                        <当前转生需要元宝:/FCOLOR=103> < <$STR(S$需求金币)> /FCOLOR=151>\
-<>                                                        <奖励人物转生倍攻:/FCOLOR=103> < <$STR(S$奖励倍攻)> /FCOLOR=254>      \ \        \
-
-<>                                                        <云顶结晶/FCOLOR=250><作为游戏通用材料，可用于/FCOLOR=103>\
-<>                                                        <转升，提升自身等级，游戏中后期/FCOLOR=103>\
-<>                                                        <提升也需用到大量打到了可一定要/FCOLOR=103>\
-<>                                                        <保存起来,以免到时候不够用/FCOLOR=103>\  \ \
-
-<>                                                      <转生达到10转额外奖励技能:群体施毒术/FCOLOR=158> \
-
-<>  <PlayImg:13:663:9:200:360:10:0/@转生>  \
+;<>                                                        <当前转生需要元宝:/FCOLOR=103> < <$STR(S$需求金币)> /FCOLOR=151>\
+;<>                                                        <奖励人物转生倍攻:/FCOLOR=103> < <$STR(S$奖励倍攻)> /FCOLOR=254>      \ \        \
+;<>                                                        <云顶结晶/FCOLOR=250><作为游戏通用材料，可用于/FCOLOR=103>\
+;<>                                                        <转升，提升自身等级，游戏中后期/FCOLOR=103>\
+;<>                                                        <提升也需用到大量打到了可一定要/FCOLOR=103>\
+;<>                                                        <保存起来,以免到时候不够用/FCOLOR=103>\  \ \
+;<>                                                      <转生达到10转额外奖励技能:群体施毒术/FCOLOR=158> \
+;<>  <PlayImg:13:663:9:200:360:10:0/@转生>  \
 
 
 
@@ -66,7 +73,7 @@ CHECKRENEWLEVEL < 20
 RENEWLEVEL 1
 GAMEGOLD - <$STR(S$需求金币)>
 take <$STR(S$转生材料1)> <$STR(S$材料数量)>
-MESSAGEBOX 转生成功,当前转生等级为<$RELEVEL>..
+SENDMSG 9 转生成功,当前转生等级为<$RELEVEL>..
 SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
 GOTO @转生检测
 goto @main
@@ -76,7 +83,7 @@ break
 
 #if
 #act
-MESSAGEBOX 转生失败，请检查你的条件是否都满足。
+SENDMSG 9 转生失败，请检查你的条件是否都满足。
 goto @main
 break
 
@@ -87,7 +94,7 @@ break
 #if
 CHECKRENEWLEVEL > 29
 #act
-MESSAGEBOX 你已经达到了当前转生巅峰，无法继续提升！
+SENDMSG 9 你已经达到了当前转生巅峰，无法继续提升！
 break
 
 
@@ -110,26 +117,34 @@ mov S$材料数量2 <$STR(S$分割结果数组2_6)>
 #if
 #act
 #SAY
-<>\ \
-<><PlayImg:13:673:10:200:-20:-10:5>\
+<Img|x=19.0|y=-35.0|esc=1|show=4|bg=1|move=1|img=public/box/zszl1.png|loadDelay=1|reset=1>
+<Button|x=550.0|y=-39.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=415.0|y=275.0|effecttype=0|effectid=20341|dir=5|speed=1|act=0|scale=1>
+<Effect|x=20.0|y=7.0|effecttype=0|effectid=20342|dir=5|speed=1|act=0|scale=1>
+<RText|x=360.0|y=8.0|color=253|size=14|text=<当前转生为:/FCOLOR=249>< <$RELEVEL>/FCOLOR=70>>
+<RText|x=360.0|y=31.0|color=253|size=14|text=<转生方式:/FCOLOR=70>>
+<RText|x=360.0|y=54.0|color=253|size=14|text=<进阶需要材料:/FCOLOR=102> < <$STR(S$转生材料1)>*<$STR(S$材料数量)>/FCOLOR=250>>
+<RText|x=360.0|y=73.0|color=253|size=14|text=<进阶需要材料:/FCOLOR=102> < <$STR(S$转生材料2)>*<$STR(S$材料数量2)>/FCOLOR=250>>
+<RText|x=360.0|y=92.0|color=253|size=14|text=<进阶需要元宝:/FCOLOR=102> < <$STR(S$需求元宝)> /FCOLOR=151>>
+<RText|x=360.0|y=112.0|color=253|size=14|text=<奖励人物转生倍攻:/FCOLOR=102> < <$STR(S$奖励倍攻)> /FCOLOR=254>>
+<RText|x=360.0|y=140.0|color=253|size=14|text=<云顶结晶/FCOLOR=250><作为游戏通用材料，可用/FCOLOR=102>\<于转升，提升自身等级，游戏中后/FCOLOR=102>\<期提升也需用到大量打到了可一定/FCOLOR=102>\<要保存起来,以免到时候不够用/FCOLOR=102>\>
+<RText|x=360.0|y=226.0|color=253|size=14|text=<转生达到10转额外奖励技能:/FCOLOR=253>\<群体施毒术/FCOLOR=250>>
+<Button|x=422.0|y=275.0|height=42|nimg=public/button/empty.png|mimg=public/button/empty.png|pimg=public/button/empty.png|color=255|size=18|link=@转生a>
 
-<>                                                                <当前转生为:/FCOLOR=255>< <$RELEVEL>/FCOLOR=70>\ \
-<>                                                        <转生方式:/FCOLOR=70>\
-<>                                                        <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料1)>*<$STR(S$材料数量)>/FCOLOR=250>\
-<>                                                        <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料2)>*<$STR(S$材料数量2)>/FCOLOR=250>\
-<>                                                        <当前转生需要元宝:/FCOLOR=103> < <$STR(S$需求金币)> /FCOLOR=151>\
-<>                                                        <奖励人物转生倍攻:/FCOLOR=103> < <$STR(S$奖励倍攻)> /FCOLOR=254>      \ \
-
-<>                                                        <云顶结晶/FCOLOR=250><作为游戏通用材料，可用于/FCOLOR=103>\
-<>                                                        <转升，提升自身等级，游戏中后期/FCOLOR=103>\
-<>                                                        <提升也需用到大量打到了可一定要/FCOLOR=103>\
-<>                                                        <保存起来,以免到时候不够用/FCOLOR=103>\  \
-
-<>                                                        <20转后转生需要人物等级达到300，/FCOLOR=103>\
-<>                                                        <每次提升转生，额外增加自身等级+1/FCOLOR=103> \
-
-
-<>  <PlayImg:13:663:9:200:360:10:0/@转生a>  \
+;<><PlayImg:13:673:10:200:-20:-10:5>\
+;<>                                                                <当前转生为:/FCOLOR=255>< <$RELEVEL>/FCOLOR=70>\ \
+;<>                                                        <转生方式:/FCOLOR=70>\
+;<>                                                        <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料1)>*<$STR(S$材料数量)>/FCOLOR=250>\
+;<>                                                        <当前转生需要材料:/FCOLOR=103> < <$STR(S$转生材料2)>*<$STR(S$材料数量2)>/FCOLOR=250>\
+;<>                                                        <当前转生需要元宝:/FCOLOR=103> < <$STR(S$需求金币)> /FCOLOR=151>\
+;<>                                                        <奖励人物转生倍攻:/FCOLOR=103> < <$STR(S$奖励倍攻)> /FCOLOR=254>      \ \
+;<>                                                        <云顶结晶/FCOLOR=250><作为游戏通用材料，可用于/FCOLOR=103>\
+;<>                                                        <转升，提升自身等级，游戏中后期/FCOLOR=103>\
+;<>                                                        <提升也需用到大量打到了可一定要/FCOLOR=103>\
+;<>                                                        <保存起来,以免到时候不够用/FCOLOR=103>\  \
+;<>                                                        <20转后转生需要人物等级达到300，/FCOLOR=103>\
+;<>                                                        <每次提升转生，额外增加自身等级+1/FCOLOR=103> \
+;<>  <PlayImg:13:663:9:200:360:10:0/@转生a>  \
 
 
 
@@ -162,7 +177,7 @@ RENEWLEVEL 1
 GAMEGOLD - <$STR(S$需求金币)>
 take <$STR(S$转生材料1)> <$STR(S$材料数量)>
 take <$STR(S$转生材料2)> <$STR(S$材料数量2)>
-MESSAGEBOX 转生成功,当前转生等级为<$RELEVEL>..
+SENDMSG 9 转生成功,当前转生等级为<$RELEVEL>..
 SENDMSG 0 {人物转生:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$RELEVEL>次转生】|250:15}
 goto @main
 break
@@ -171,7 +186,7 @@ break
 
 #if
 #act
-MESSAGEBOX 转生失败，请检查你的条件是否都满足。
+SENDMSG 9 转生失败，请检查你的条件是否都满足。
 goto @main
 break
 

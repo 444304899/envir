@@ -53,38 +53,71 @@ CONFERTITLE 神魔·完满
 large U29 187
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \
-<>                                         <神魔之体.New~/FCOLOR=58> \ \
-<>                                          <修炼,把自己的变成神魔之体,大幅度提高各项伤害,获得超强属性!!/FCOLOR=87>\  \
-<>                                          <血脉之力/@升级1><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <生命上限 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u25)>/20)\
-<>                                          <物理攻击/@升级2><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <攻击伤害 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u26)>/20)\
-<>                                          <上古神力/@升级3><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <忽视防御 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u27)>/20)\
-<>                                          <物理免伤/@升级4><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <伤害减少 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u28)>/20)\  \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/smzt.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=125.0|y=1.0|color=249|size=16|text=神魔之体.New~>
+<Text|x=126.0|y=22.0|color=249|size=16|text=修炼,把自己的变成神魔之体,大幅度提高各项伤害,获得超强属性!!>
+<RText|x=211.0|y=51.0|color=255|size=16|text=<·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <生命上限 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u25)>/20)>
+<RText|x=211.0|y=81.0|color=255|size=16|text=<·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <攻击伤害 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u26)>/20)>
+<RText|x=211.0|y=114.0|color=255|size=16|text=<·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <忽视防御 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u27)>/20)>
+<RText|x=211.0|y=146.0|color=255|size=16|text=<·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <伤害减少 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u28)>/20)>
+<Button|x=120.0|y=48.0|width=90|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=血脉之力|link=@升级1>
+<Button|x=120.0|y=80.0|width=90|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=物理攻击|link=@升级2>
+<Button|x=120.0|y=112.0|width=90|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=上古神力|link=@升级3>
+<Button|x=120.0|y=144.0|width=90|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=物理免伤|link=@升级4>
+<RText|x=125.0|y=180.0|color=255|size=16|text=<失败188次之后，可使用钻石几率点满/FCOLOR=253> <当前已点>{《<$STR(U29)>次／188》/FCOLOR=251}>
+<RText|x=125.0|y=215.0|color=255|size=16|text=<1.血脉.攻击.神力.免伤.均达到05级获得称号:/FCOLOR=161> <[神魔·小成]/FCOLOR=250>
+<RText|x=125.0|y=250.0|color=255|size=16|text=<2.血脉.攻击.神力.免伤.均达到10级获得称号:/FCOLOR=161> <[神魔·大成]/FCOLOR=250>
+<RText|x=125.0|y=286.0|color=255|size=16|text=<3.血脉.攻击.神力.免伤.均达到20级获得称号:/FCOLOR=161> <[神魔·完满]/FCOLOR=250>
+<Button|x=645.0|y=214.0|width=120|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|color=251|size=16|pimg=public/button/lbtn3.png|text=查看称号属性>
+<Button|x=645.0|y=248.0|width=120|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|color=251|size=16|pimg=public/button/lbtn3.png|text=查看称号属性>
+<Button|x=645.0|y=284.0|width=120|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|color=251|size=16|pimg=public/button/lbtn3.png|text=查看称号属性>
+<RText|x=125.0|y=328.0|color=255|size=16|text=<神魔说明:/FCOLOR=249> <神魔几率50%，失败掉一级，点数配合好触发相应特殊称号，后期无暗藏！！/FCOLOR=249>>
 
-<>                                          <失败188次之后，可使用钻石几率点满/FCOLOR=253><当前已点> {《<$STR(U29)>次／188》/FCOLOR=251}  <几率点满|253#称号属性：^230#累计点188次之后还未全部点满..^230#  可使用100钻石击，1%几率点满,慎点！^242#      (当前总共升级<$STR(U29)>次)/@全满2>       <直接点满|253#称号属性：^230#累计点188次之后还未全部点满..^230#  即可使用2000金币全部满级^242#      (当前总共升级<$STR(U29)>次)/@全满>\ \
-<>                                          <1.血脉.攻击.神力.免伤.均达到05级获得称号:/FCOLOR=161> <[神魔·小成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升30%^250#打怪伤害+10%^250#暴击伤害+3%/FCOLOR=70> \
-<>                                          <2.血脉.攻击.神力.免伤.均达到10级获得称号:/FCOLOR=161> <[神魔·大成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升60%^250#打怪伤害+20%^250#暴击伤害+5%/FCOLOR=70> \
-<>                                          <3.血脉.攻击.神力.免伤.均达到20级获得称号:/FCOLOR=161> <[神魔·完满]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升200%^250#打怪伤害+30%^250#暴击伤害+10%^249#攻击速度+100%/FCOLOR=70> \
-
-<>                                          <神魔说明:/FCOLOR=249> <神魔几率50%，失败掉一级，点数配合好触发相应特殊称号，后期无暗藏！！/FCOLOR=249>\
+;<>                                         <神魔之体.New~/FCOLOR=58> \ \
+;<>                                          <修炼,把自己的变成神魔之体,大幅度提高各项伤害,获得超强属性!!/FCOLOR=87>\  \
+;<>                                          <血脉之力/@升级1><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <生命上限 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u25)>/20)\
+;<>                                          <物理攻击/@升级2><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <攻击伤害 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u26)>/20)\
+;<>                                          <上古神力/@升级3><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <忽视防御 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u27)>/20)\
+;<>                                          <物理免伤/@升级4><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <伤害减少 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u28)>/20)\  \
+;<>                                          <失败188次之后，可使用钻石几率点满/FCOLOR=253><当前已点> {《<$STR(U29)>次／188》/FCOLOR=251}  <几率点满|253#称号属性：^230#累计点188次之后还未全部点满..^230#  可使用100钻石击，1%几率点满,慎点！^242#      (当前总共升级<$STR(U29)>次)/@全满2>       <直接点满|253#称号属性：^230#累计点188次之后还未全部点满..^230#  即可使用2000金币全部满级^242#      (当前总共升级<$STR(U29)>次)/@全满>\ \
+;<>                                          <1.血脉.攻击.神力.免伤.均达到05级获得称号:/FCOLOR=161> <[神魔·小成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升30%^250#打怪伤害+10%^250#暴击伤害+3%/FCOLOR=70> \
+;<>                                          <2.血脉.攻击.神力.免伤.均达到10级获得称号:/FCOLOR=161> <[神魔·大成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升60%^250#打怪伤害+20%^250#暴击伤害+5%/FCOLOR=70> \
+;<>                                          <3.血脉.攻击.神力.免伤.均达到20级获得称号:/FCOLOR=161> <[神魔·完满]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升200%^250#打怪伤害+30%^250#暴击伤害+10%^249#攻击速度+100%/FCOLOR=70> \
+;<>                                          <神魔说明:/FCOLOR=249> <神魔几率50%，失败掉一级，点数配合好触发相应特殊称号，后期无暗藏！！/FCOLOR=249>\
 
 #if
 small u29 188
 #act
 #SAY
-\ \ \  \ \  \ \    \   \    \    \   \  \   \  \
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/smzt.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=125.0|y=1.0|color=249|size=16|text=神魔之体.New~>
+<Text|x=126.0|y=22.0|color=249|size=16|text=修炼,把自己的变成神魔之体,大幅度提高各项伤害,获得超强属性!!>
+<RText|x=211.0|y=51.0|color=255|size=16|text=<·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <生命上限 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u25)>/20)>
+<RText|x=211.0|y=81.0|color=255|size=16|text=<·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <攻击伤害 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u26)>/20)>
+<RText|x=211.0|y=114.0|color=255|size=16|text=<·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <忽视防御 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u27)>/20)>
+<RText|x=211.0|y=146.0|color=255|size=16|text=<·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <伤害减少 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u28)>/20)>
+<Button|x=120.0|y=48.0|width=90|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=血脉之力|link=@升级1>
+<Button|x=120.0|y=80.0|width=90|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=物理攻击|link=@升级2>
+<Button|x=120.0|y=112.0|width=90|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=上古神力|link=@升级3>
+<Button|x=120.0|y=144.0|width=90|height=26|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=物理免伤|link=@升级4>
+<RText|x=124.0|y=180.0|color=255|size=16|text=<失败188次之后，可使用钻石几率点满/FCOLOR=253> <当前已点>{《<$STR(U29)>次／188》/FCOLOR=251}>
+<RText|x=124.0|y=207.0|color=255|size=16|text=<1.血脉.攻击.神力.免伤.均达到05级获得称号:/FCOLOR=161> <[神魔·小成]/FCOLOR=250> <鼠标移动此处查看称号属性>
+<RText|x=125.0|y=232.0|color=255|size=16|text=<2.血脉.攻击.神力.免伤.均达到10级获得称号:/FCOLOR=161> <[神魔·大成]/FCOLOR=250> <鼠标移动此处查看称号属性>
+<RText|x=125.0|y=258.0|color=255|size=16|text=<3.血脉.攻击.神力.免伤.均达到20级获得称号:/FCOLOR=161> <[神魔·完满]/FCOLOR=250> <鼠标移动此处查看称号属性>
+<RText|x=125.0|y=293.0|color=255|size=16|text=<神魔说明:/FCOLOR=249> <神魔几率50%，失败掉一级，点数配合好触发相应特殊称号，后期无暗藏！！/FCOLOR=249>>
+
 <>                                         <神魔之体.New~/FCOLOR=58> \ \
 <>                                          <修炼,把自己的变成神魔之体,大幅度提高各项伤害,获得超强属性!!/FCOLOR=87>\  \
 <>                                          <血脉之力/@升级1><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <生命上限 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u25)>/20)\
 <>                                          <物理攻击/@升级2><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <攻击伤害 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u26)>/20)\
 <>                                          <上古神力/@升级3><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <忽视防御 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u27)>/20)\
 <>                                          <物理免伤/@升级4><·√/FCOLOR=58> <需要/FCOLOR=116> <[云顶结晶*1]/FCOLOR=250> + <[元宝*50000]/FCOLOR=151> <伤害减少 + 1%/FCOLOR=245> <成功率50%/FCOLOR=229>  (<$STR(u28)>/20)\  \
-
 <>                                          <失败188次之后，可使用钻石几率点满/FCOLOR=253> <当前已点>{《<$STR(U29)>次／188》/FCOLOR=251}              \ \
 <>                                          <1.血脉.攻击.神力.免伤.均达到05级获得称号:/FCOLOR=161> <[神魔·小成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升30%^250#打怪伤害+10%/FCOLOR=70> \
 <>                                          <2.血脉.攻击.神力.免伤.均达到10级获得称号:/FCOLOR=161> <[神魔·大成]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升60%^250#打怪伤害+20%/FCOLOR=70> \
 <>                                          <3.血脉.攻击.神力.免伤.均达到20级获得称号:/FCOLOR=161> <[神魔·完满]/FCOLOR=250> <鼠标移动此处查看称号属性|253#称号属性：^250#爆率提升200%^250#打怪伤害+30%^250#暴击伤害+10%^249#攻击速度+100%//FCOLOR=70> \
-
 <>                                          <神魔说明:/FCOLOR=249> <神魔几率50%，失败掉一级，点数配合好触发相应特殊称号，后期无暗藏！！/FCOLOR=249>\
 
 

@@ -1,0 +1,719 @@
+[@main]
+
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 <$STR(U21)> S$觉醒配置信息
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组1_
+mov S$转生材料 <$STR(S$分割结果数组1_1)>
+mov S$奖励暴击 <$STR(S$分割结果数组1_2)>
+mov S$材料数量 <$STR(S$分割结果数组1_3)>
+mov S$需求元宝 <$STR(S$分割结果数组1_4)>
+mov S$需求灵符 <$STR(S$分割结果数组1_5)>
+
+
+
+#if
+#act
+#SAY
+<Img|x=51.0|y=-3.0|esc=1|show=4|bg=1|move=1|img=public/box/rwsjjx1.png|loadDelay=1|reset=1>
+<Button|x=780.0|y=9.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=420.0|y=446.0|effecttype=0|effectid=20300|dir=5|act=0|speed=1|scale=1>
+<Text|x=258.0|y=47.0|color=253|size=16|text=本服人物升级采用纯打怪模式,拒绝无脑泡点的简单玩法!只要你>
+<Text|x=258.0|y=66.0|color=253|size=16|text=肯花时间,人物绝对可以满级!在后期所有BOSS均可爆出终极装备>
+<Text|x=258.0|y=86.0|color=253|size=16|text=一切看脸,本服装备多,地图多,玩法多..可以满足各种玩家!>
+<Img|x=258.0|y=114.0|img=public/micon/000078.png|esc=0>
+<Img|x=258.0|y=163.0|img=public/micon/000078.png|esc=0>
+<RText|x=274.0|y=113.0|color=255|size=16|text=<人物升级:/FCOLOR=102><[0-150]/FCOLOR=249><级,每级需要材料:/FCOLOR=102><[云顶结晶*2]/FCOLOR=249>>
+<RText|x=274.0|y=160.0|color=255|size=16|text=<人物升级:/FCOLOR=102><[150-200]/FCOLOR=249><级,每级需要材料:/FCOLOR=102><[云顶结晶*10]/FCOLOR=249>>
+<Button|x=645.0|y=110.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击升级|link=@升级1>
+<Button|x=646.0|y=156.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击升级|link=@升级2>
+<Text|x=258.0|y=199.0|color=249|size=16|text=游戏提示:升级所需要的所有材料均可在游戏内产出>
+<Text|x=258.0|y=219.0|color=249|size=16|text=游戏提示:达到200级之后,可进行觉醒轮回突破>
+<Text|x=258.0|y=239.0|color=249|size=16|text=游戏提示:榜一可提升到203级，榜二可到202，榜三可到201>
+<Button|x=130.0|y=316.0|width=120|height=30|rotate=0|tips=觉醒介绍：^每次觉醒都可以提升人物等级,后期进图，或者PK都是不可多得牛逼属性。^第一次觉醒可突破等级上限至210级。^第二次觉醒可突破等级上限至220级。^第三次觉醒可突破等级上限至230级。^第四次觉醒可突破等级上限至240级。^第五次觉醒可突破等级上限至250级。^第六次觉醒可突破等级上限至260级。^第七次觉醒可突破等级上限至270级。^第八次觉醒可突破等级上限至280级。^第九次觉醒可突破等级上限至290级。^第十次觉醒可突破等级上限至300级。|pimg=public/button/lbtn3.png|size=16|nimg=public/button/lbtn1.png|color=255|mimg=public/button/lbtn2.png|text=[觉醒介绍]>
+<Button|x=633.0|y=316.0|width=120|height=30|rotate=0|tips=觉醒介绍：^每次觉醒都可以提升人物等级,后期进图，或者PK都是不可多得牛逼属性。^第一次觉醒可突破等级上限至210级。^第二次觉醒可突破等级上限至220级。^第三次觉醒可突破等级上限至230级。^第四次觉醒可突破等级上限至240级。^第五次觉醒可突破等级上限至250级。^第六次觉醒可突破等级上限至260级。^第七次觉醒可突破等级上限至270级。^第八次觉醒可突破等级上限至280级。^第九次觉醒可突破等级上限至290级。^第十次觉醒可突破等级上限至300级。|pimg=public/button/lbtn3.png|size=16|nimg=public/button/lbtn1.png|color=255|mimg=public/button/lbtn2.png|text=[觉醒介绍]>
+<Img|x=111.0|y=375.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=404.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=445.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=474.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=495.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=522.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=376.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=404.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=460.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=525.0|img=public/micon/000088.png|esc=0>
+<RText|x=127.0|y=370.0|color=255|size=16|text=<当前觉醒次数:/FCOLOR=150>< <$STR(U21)>/FCOLOR=250>>
+<RText|x=633.0|y=370.0|color=255|size=16|text=<当前觉醒次数:/FCOLOR=150>< <$STR(U21)>/FCOLOR=250>>
+<RText|x=130.0|y=399.0|color=255|size=16|text=<需要材料:/FCOLOR=103>>
+<RText|x=130.0|y=420.0|color=255|size=16|text=<$STR(S$转生材料)>*<$STR(S$材料数量)>>
+<RText|x=635.0|y=399.0|color=255|size=16|text=<需要材料:/FCOLOR=103>>
+<RText|x=635.0|y=420.0|color=255|size=16|text=<$STR(S$转生材料)>*<$STR(S$材料数量)>>
+<RText|x=129.0|y=440.0|color=255|size=16|text=<需要元宝:/FCOLOR=103><$STR(S$需求元宝)>>
+<RText|x=635.0|y=455.0|color=255|size=16|text=<需要元宝:/FCOLOR=103><$STR(S$需求元宝)>>
+<RText|x=129.0|y=469.0|color=255|size=16|text=<需要灵符:/FCOLOR=103><$STR(S$需求灵符)>>
+<RText|x=128.0|y=490.0|color=255|size=16|text=<人物暴击伤害:/FCOLOR=103><$STR(S$奖励暴击)>>
+<RText|x=128.0|y=516.0|color=255|size=16|text=<等级上限提升:/FCOLOR=103>< +10/FCOLOR=254>>
+<RText|x=636.0|y=519.0|color=255|size=16|text=<等级上限提升:/FCOLOR=103>< +10/FCOLOR=254>>
+<Button|x=132.0|y=549.0|width=120|height=30|rotate=0|size=16|color=255|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|text=点击觉醒①|link=@觉醒>
+<Button|x=645.0|y=552.0|width=120|height=30|rotate=0|size=16|color=255|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|text=点击觉醒②|link=@觉醒1>
+
+;=================================================
+
+[@排名1]
+
+#if
+CHECKLEVELEX < 203
+#act
+SENDMSG 9 排名第一等级要大于202
+break
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 <$str(U21)> S$觉醒配置信息
+
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组2_
+mov S$转生材料 <$STR(S$分割结果数组2_1)>
+mov S$奖励暴击 <$STR(S$分割结果数组2_2)>
+mov S$材料数量 <$STR(S$分割结果数组2_3)>
+mov S$需求元宝 <$STR(S$分割结果数组2_4)>
+mov S$需求灵符 <$STR(S$分割结果数组2_5)>
+
+
+#if
+CHECKLEVELEX > 202
+#act
+#SAY
+
+<Img|x=51.0|y=-3.0|esc=1|show=4|bg=1|move=1|img=public/box/rwsjjx1.png|loadDelay=1|reset=1>
+<Button|x=780.0|y=9.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=420.0|y=446.0|effecttype=0|effectid=20300|dir=5|act=0|speed=1|scale=1>
+<Text|x=258.0|y=47.0|color=253|size=16|text=本服人物升级采用纯打怪模式,拒绝无脑泡点的简单玩法!只要你>
+<Text|x=258.0|y=66.0|color=253|size=16|text=肯花时间,人物绝对可以满级!在后期所有BOSS均可爆出终极装备>
+<Text|x=258.0|y=86.0|color=253|size=16|text=一切看脸,本服装备多,地图多,玩法多..可以满足各种玩家!>
+<Img|x=258.0|y=114.0|img=public/micon/000078.png|esc=0>
+<Img|x=258.0|y=163.0|img=public/micon/000078.png|esc=0>
+<RText|x=274.0|y=113.0|color=255|size=16|text=<人物升级:/FCOLOR=102><[0-150]/FCOLOR=249><级,每级需要材料:/FCOLOR=102><[云顶结晶*2]/FCOLOR=249>>
+<RText|x=274.0|y=160.0|color=255|size=16|text=<人物升级:/FCOLOR=102><[150-200]/FCOLOR=249><级,每级需要材料:/FCOLOR=102><[云顶结晶*10]/FCOLOR=249>>
+<Button|x=645.0|y=110.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击升级|link=@升级1>
+<Button|x=646.0|y=156.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击升级|link=@升级2>
+<Text|x=258.0|y=199.0|color=249|size=16|text=游戏提示:升级所需要的所有材料均可在游戏内产出>
+<Text|x=258.0|y=219.0|color=249|size=16|text=游戏提示:达到200级之后,可进行觉醒轮回突破>
+<Text|x=258.0|y=239.0|color=249|size=16|text=游戏提示:榜一可提升到203级，榜二可到202，榜三可到201>
+<Button|x=130.0|y=316.0|width=120|height=30|rotate=0|tips=觉醒介绍：^每次觉醒都可以提升人物等级,后期进图，或者PK都是不可多得牛逼属性。^第一次觉醒可突破等级上限至210级。^第二次觉醒可突破等级上限至220级。^第三次觉醒可突破等级上限至230级。^第四次觉醒可突破等级上限至240级。^第五次觉醒可突破等级上限至250级。^第六次觉醒可突破等级上限至260级。^第七次觉醒可突破等级上限至270级。^第八次觉醒可突破等级上限至280级。^第九次觉醒可突破等级上限至290级。^第十次觉醒可突破等级上限至300级。|pimg=public/button/lbtn3.png|size=16|nimg=public/button/lbtn1.png|color=255|mimg=public/button/lbtn2.png|text=[觉醒介绍]>
+<Button|x=633.0|y=316.0|width=120|height=30|rotate=0|tips=觉醒介绍：^每次觉醒都可以提升人物等级,后期进图，或者PK都是不可多得牛逼属性。^第一次觉醒可突破等级上限至210级。^第二次觉醒可突破等级上限至220级。^第三次觉醒可突破等级上限至230级。^第四次觉醒可突破等级上限至240级。^第五次觉醒可突破等级上限至250级。^第六次觉醒可突破等级上限至260级。^第七次觉醒可突破等级上限至270级。^第八次觉醒可突破等级上限至280级。^第九次觉醒可突破等级上限至290级。^第十次觉醒可突破等级上限至300级。|pimg=public/button/lbtn3.png|size=16|nimg=public/button/lbtn1.png|color=255|mimg=public/button/lbtn2.png|text=[觉醒介绍]>
+<Img|x=111.0|y=375.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=404.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=445.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=474.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=495.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=522.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=376.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=404.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=460.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=525.0|img=public/micon/000088.png|esc=0>
+<RText|x=127.0|y=370.0|color=255|size=16|text=<当前觉醒次数:/FCOLOR=150>< <$STR(U21)>/FCOLOR=250>>
+<RText|x=633.0|y=370.0|color=255|size=16|text=<当前觉醒次数:/FCOLOR=150>< <$STR(U21)>/FCOLOR=250>>
+<RText|x=130.0|y=399.0|color=255|size=16|text=<需要材料:/FCOLOR=103>>
+<RText|x=130.0|y=420.0|color=255|size=16|text=<$STR(S$转生材料)>*<$STR(S$材料数量)>>
+<RText|x=635.0|y=399.0|color=255|size=16|text=<需要材料:/FCOLOR=103>>
+<RText|x=635.0|y=420.0|color=255|size=16|text=<$STR(S$转生材料)>*<$STR(S$材料数量)>>
+<RText|x=129.0|y=440.0|color=255|size=16|text=<需要元宝:/FCOLOR=103><$STR(S$需求元宝)>>
+<RText|x=635.0|y=455.0|color=255|size=16|text=<需要元宝:/FCOLOR=103><$STR(S$需求元宝)>>
+<RText|x=129.0|y=469.0|color=255|size=16|text=<需要灵符:/FCOLOR=103><$STR(S$需求灵符)>>
+<RText|x=128.0|y=490.0|color=255|size=16|text=<人物暴击伤害:/FCOLOR=103><$STR(S$奖励暴击)>>
+<RText|x=128.0|y=516.0|color=255|size=16|text=<等级上限提升:/FCOLOR=103>< +10/FCOLOR=254>>
+<RText|x=636.0|y=519.0|color=255|size=16|text=<等级上限提升:/FCOLOR=103>< +10/FCOLOR=254>>
+<Button|x=132.0|y=549.0|width=120|height=30|rotate=0|size=16|color=255|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|text=点击觉醒①|link=@1觉醒>
+<Button|x=645.0|y=552.0|width=120|height=30|rotate=0|size=16|color=255|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|text=点击觉醒②|link=@1觉醒1>
+
+
+
+
+
+
+;=================================================
+
+[@排名2]
+#if
+CHECKLEVELEX < 202
+#act
+SENDMSG 9 排名第二等级要大于201
+break
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 <$str(U21)> S$觉醒配置信息
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组3_
+mov S$转生材料 <$STR(S$分割结果数组3_1)>
+mov S$奖励暴击 <$STR(S$分割结果数组3_2)>
+mov S$材料数量 <$STR(S$分割结果数组3_3)>
+mov S$需求元宝 <$STR(S$分割结果数组3_4)>
+mov S$需求灵符 <$STR(S$分割结果数组3_5)>
+
+
+#if
+CHECKLEVELEX > 201
+#act
+#SAY
+<Img|x=51.0|y=-3.0|esc=1|show=4|bg=1|move=1|img=public/box/rwsjjx1.png|loadDelay=1|reset=1>
+<Button|x=780.0|y=9.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=420.0|y=446.0|effecttype=0|effectid=20300|dir=5|act=0|speed=1|scale=1>
+<Text|x=258.0|y=47.0|color=253|size=16|text=本服人物升级采用纯打怪模式,拒绝无脑泡点的简单玩法!只要你>
+<Text|x=258.0|y=66.0|color=253|size=16|text=肯花时间,人物绝对可以满级!在后期所有BOSS均可爆出终极装备>
+<Text|x=258.0|y=86.0|color=253|size=16|text=一切看脸,本服装备多,地图多,玩法多..可以满足各种玩家!>
+<Img|x=258.0|y=114.0|img=public/micon/000078.png|esc=0>
+<Img|x=258.0|y=163.0|img=public/micon/000078.png|esc=0>
+<RText|x=274.0|y=113.0|color=255|size=16|text=<人物升级:/FCOLOR=102><[0-150]/FCOLOR=249><级,每级需要材料:/FCOLOR=102><[云顶结晶*2]/FCOLOR=249>>
+<RText|x=274.0|y=160.0|color=255|size=16|text=<人物升级:/FCOLOR=102><[150-200]/FCOLOR=249><级,每级需要材料:/FCOLOR=102><[云顶结晶*10]/FCOLOR=249>>
+<Button|x=645.0|y=110.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击升级|link=@升级1>
+<Button|x=646.0|y=156.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击升级|link=@升级2>
+<Text|x=258.0|y=199.0|color=249|size=16|text=游戏提示:升级所需要的所有材料均可在游戏内产出>
+<Text|x=258.0|y=219.0|color=249|size=16|text=游戏提示:达到200级之后,可进行觉醒轮回突破>
+<Text|x=258.0|y=239.0|color=249|size=16|text=游戏提示:榜一可提升到203级，榜二可到202，榜三可到201>
+<Button|x=130.0|y=316.0|width=120|height=30|rotate=0|tips=觉醒介绍：^每次觉醒都可以提升人物等级,后期进图，或者PK都是不可多得牛逼属性。^第一次觉醒可突破等级上限至210级。^第二次觉醒可突破等级上限至220级。^第三次觉醒可突破等级上限至230级。^第四次觉醒可突破等级上限至240级。^第五次觉醒可突破等级上限至250级。^第六次觉醒可突破等级上限至260级。^第七次觉醒可突破等级上限至270级。^第八次觉醒可突破等级上限至280级。^第九次觉醒可突破等级上限至290级。^第十次觉醒可突破等级上限至300级。|pimg=public/button/lbtn3.png|size=16|nimg=public/button/lbtn1.png|color=255|mimg=public/button/lbtn2.png|text=[觉醒介绍]>
+<Button|x=633.0|y=316.0|width=120|height=30|rotate=0|tips=觉醒介绍：^每次觉醒都可以提升人物等级,后期进图，或者PK都是不可多得牛逼属性。^第一次觉醒可突破等级上限至210级。^第二次觉醒可突破等级上限至220级。^第三次觉醒可突破等级上限至230级。^第四次觉醒可突破等级上限至240级。^第五次觉醒可突破等级上限至250级。^第六次觉醒可突破等级上限至260级。^第七次觉醒可突破等级上限至270级。^第八次觉醒可突破等级上限至280级。^第九次觉醒可突破等级上限至290级。^第十次觉醒可突破等级上限至300级。|pimg=public/button/lbtn3.png|size=16|nimg=public/button/lbtn1.png|color=255|mimg=public/button/lbtn2.png|text=[觉醒介绍]>
+<Img|x=111.0|y=375.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=404.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=445.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=474.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=495.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=522.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=376.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=404.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=460.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=525.0|img=public/micon/000088.png|esc=0>
+<RText|x=127.0|y=370.0|color=255|size=16|text=<当前觉醒次数:/FCOLOR=150>< <$STR(U21)>/FCOLOR=250>>
+<RText|x=633.0|y=370.0|color=255|size=16|text=<当前觉醒次数:/FCOLOR=150>< <$STR(U21)>/FCOLOR=250>>
+<RText|x=130.0|y=399.0|color=255|size=16|text=<需要材料:/FCOLOR=103>>
+<RText|x=130.0|y=420.0|color=255|size=16|text=<$STR(S$转生材料)>*<$STR(S$材料数量)>>
+<RText|x=635.0|y=399.0|color=255|size=16|text=<需要材料:/FCOLOR=103>>
+<RText|x=635.0|y=420.0|color=255|size=16|text=<$STR(S$转生材料)>*<$STR(S$材料数量)>>
+<RText|x=129.0|y=440.0|color=255|size=16|text=<需要元宝:/FCOLOR=103><$STR(S$需求元宝)>>
+<RText|x=635.0|y=455.0|color=255|size=16|text=<需要元宝:/FCOLOR=103><$STR(S$需求元宝)>>
+<RText|x=129.0|y=469.0|color=255|size=16|text=<需要灵符:/FCOLOR=103><$STR(S$需求灵符)>>
+<RText|x=128.0|y=490.0|color=255|size=16|text=<人物暴击伤害:/FCOLOR=103><$STR(S$奖励暴击)>>
+<RText|x=128.0|y=516.0|color=255|size=16|text=<等级上限提升:/FCOLOR=103>< +10/FCOLOR=254>>
+<RText|x=636.0|y=519.0|color=255|size=16|text=<等级上限提升:/FCOLOR=103>< +10/FCOLOR=254>>
+<Button|x=132.0|y=549.0|width=120|height=30|rotate=0|size=16|color=255|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|text=点击觉醒①|link=@2觉醒>
+<Button|x=645.0|y=552.0|width=120|height=30|rotate=0|size=16|color=255|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|text=点击觉醒②|link=@2觉醒1>
+
+
+
+
+
+
+
+;=================================================
+
+
+[@排名3]
+
+#if
+CHECKLEVELEX < 201
+#act
+SENDMSG 9 排名第三等级要大于200
+break
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 <$str(U21)> S$觉醒配置信息
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组4_
+mov S$转生材料 <$STR(S$分割结果数组4_1)>
+mov S$奖励暴击 <$STR(S$分割结果数组4_2)>
+mov S$材料数量 <$STR(S$分割结果数组4_3)>
+mov S$需求元宝 <$STR(S$分割结果数组4_4)>
+mov S$需求灵符 <$STR(S$分割结果数组4_5)>
+
+
+#if
+CHECKLEVELEX > 200
+#act
+#SAY
+<Img|x=51.0|y=-3.0|esc=1|show=4|bg=1|move=1|img=public/box/rwsjjx1.png|loadDelay=1|reset=1>
+<Button|x=780.0|y=9.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Effect|x=420.0|y=446.0|effecttype=0|effectid=20300|dir=5|act=0|speed=1|scale=1>
+<Text|x=258.0|y=47.0|color=253|size=16|text=本服人物升级采用纯打怪模式,拒绝无脑泡点的简单玩法!只要你>
+<Text|x=258.0|y=66.0|color=253|size=16|text=肯花时间,人物绝对可以满级!在后期所有BOSS均可爆出终极装备>
+<Text|x=258.0|y=86.0|color=253|size=16|text=一切看脸,本服装备多,地图多,玩法多..可以满足各种玩家!>
+<Img|x=258.0|y=114.0|img=public/micon/000078.png|esc=0>
+<Img|x=258.0|y=163.0|img=public/micon/000078.png|esc=0>
+<RText|x=274.0|y=113.0|color=255|size=16|text=<人物升级:/FCOLOR=102><[0-150]/FCOLOR=249><级,每级需要材料:/FCOLOR=102><[云顶结晶*2]/FCOLOR=249>>
+<RText|x=274.0|y=160.0|color=255|size=16|text=<人物升级:/FCOLOR=102><[150-200]/FCOLOR=249><级,每级需要材料:/FCOLOR=102><[云顶结晶*10]/FCOLOR=249>>
+<Button|x=645.0|y=110.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击升级|link=@升级1>
+<Button|x=646.0|y=156.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击升级|link=@升级2>
+<Text|x=258.0|y=199.0|color=249|size=16|text=游戏提示:升级所需要的所有材料均可在游戏内产出>
+<Text|x=258.0|y=219.0|color=249|size=16|text=游戏提示:达到200级之后,可进行觉醒轮回突破>
+<Text|x=258.0|y=239.0|color=249|size=16|text=游戏提示:榜一可提升到203级，榜二可到202，榜三可到201>
+<Button|x=130.0|y=316.0|width=120|height=30|rotate=0|tips=觉醒介绍：^每次觉醒都可以提升人物等级,后期进图，或者PK都是不可多得牛逼属性。^第一次觉醒可突破等级上限至210级。^第二次觉醒可突破等级上限至220级。^第三次觉醒可突破等级上限至230级。^第四次觉醒可突破等级上限至240级。^第五次觉醒可突破等级上限至250级。^第六次觉醒可突破等级上限至260级。^第七次觉醒可突破等级上限至270级。^第八次觉醒可突破等级上限至280级。^第九次觉醒可突破等级上限至290级。^第十次觉醒可突破等级上限至300级。|pimg=public/button/lbtn3.png|size=16|nimg=public/button/lbtn1.png|color=255|mimg=public/button/lbtn2.png|text=[觉醒介绍]>
+<Button|x=633.0|y=316.0|width=120|height=30|rotate=0|tips=觉醒介绍：^每次觉醒都可以提升人物等级,后期进图，或者PK都是不可多得牛逼属性。^第一次觉醒可突破等级上限至210级。^第二次觉醒可突破等级上限至220级。^第三次觉醒可突破等级上限至230级。^第四次觉醒可突破等级上限至240级。^第五次觉醒可突破等级上限至250级。^第六次觉醒可突破等级上限至260级。^第七次觉醒可突破等级上限至270级。^第八次觉醒可突破等级上限至280级。^第九次觉醒可突破等级上限至290级。^第十次觉醒可突破等级上限至300级。|pimg=public/button/lbtn3.png|size=16|nimg=public/button/lbtn1.png|color=255|mimg=public/button/lbtn2.png|text=[觉醒介绍]>
+<Img|x=111.0|y=375.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=404.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=445.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=474.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=495.0|img=public/micon/000088.png|esc=0>
+<Img|x=111.0|y=522.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=376.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=404.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=460.0|img=public/micon/000088.png|esc=0>
+<Img|x=616.0|y=525.0|img=public/micon/000088.png|esc=0>
+<RText|x=127.0|y=370.0|color=255|size=16|text=<当前觉醒次数:/FCOLOR=150>< <$STR(U21)>/FCOLOR=250>>
+<RText|x=633.0|y=370.0|color=255|size=16|text=<当前觉醒次数:/FCOLOR=150>< <$STR(U21)>/FCOLOR=250>>
+<RText|x=130.0|y=399.0|color=255|size=16|text=<需要材料:/FCOLOR=103>>
+<RText|x=130.0|y=420.0|color=255|size=16|text=<$STR(S$转生材料)>*<$STR(S$材料数量)>>
+<RText|x=635.0|y=399.0|color=255|size=16|text=<需要材料:/FCOLOR=103>>
+<RText|x=635.0|y=420.0|color=255|size=16|text=<$STR(S$转生材料)>*<$STR(S$材料数量)>>
+<RText|x=129.0|y=440.0|color=255|size=16|text=<需要元宝:/FCOLOR=103><$STR(S$需求元宝)>>
+<RText|x=635.0|y=455.0|color=255|size=16|text=<需要元宝:/FCOLOR=103><$STR(S$需求元宝)>>
+<RText|x=129.0|y=469.0|color=255|size=16|text=<需要灵符:/FCOLOR=103><$STR(S$需求灵符)>>
+<RText|x=128.0|y=490.0|color=255|size=16|text=<人物暴击伤害:/FCOLOR=103><$STR(S$奖励暴击)>>
+<RText|x=128.0|y=516.0|color=255|size=16|text=<等级上限提升:/FCOLOR=103>< +10/FCOLOR=254>>
+<RText|x=636.0|y=519.0|color=255|size=16|text=<等级上限提升:/FCOLOR=103>< +10/FCOLOR=254>>
+<Button|x=132.0|y=549.0|width=120|height=30|rotate=0|size=16|color=255|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|text=点击觉醒①|link=@3觉醒>
+<Button|x=645.0|y=552.0|width=120|height=30|rotate=0|size=16|color=255|mimg=public/button/lbtn2.png|nimg=public/button/lbtn1.png|pimg=public/button/lbtn3.png|text=点击觉醒②|link=@3觉醒1>
+
+
+
+
+
+
+
+;=================================================
+
+
+
+
+
+
+
+
+
+
+[@觉醒]
+
+
+#if
+#act
+ReadConfigFileItem ..\QuestDiary\配置文件\觉醒配置.ini 觉醒 <$str(U21)> S$觉醒配置信息
+GETVALIDSTRSUPER <$STR(S$觉醒配置信息)> : S$分割结果数组5_
+mov S$转生材料 <$STR(S$分割结果数组5_1)>
+mov S$奖励暴击 <$STR(S$分割结果数组5_2)>
+mov S$材料数量 <$STR(S$分割结果数组5_3)>
+mov S$需求元宝 <$STR(S$分割结果数组5_4)>
+mov S$需求灵符 <$STR(S$分割结果数组5_5)>
+
+
+
+#if
+equal U21 10
+#act
+SENDMSG 9 你的人物觉醒已完成。
+break
+
+
+#if
+equal A120 <$USERNAME>
+#act
+GOTO @排名1
+break
+
+#if
+equal A121 <$USERNAME>
+#act
+GOTO @排名2
+break
+
+#if
+equal A122 <$USERNAME>
+#act
+GOTO @排名3
+break
+
+
+#if
+CHECKLEVELEX < 200
+#act
+SENDMSG 9 你现在还太弱了，提升到200级之后在来把
+break
+
+
+
+
+
+#if
+CHECKGAMEGIRD ? <$STR(S$需求灵符)>
+CHECKGAMEGOLD ? <$STR(S$需求元宝)>
+checkitem <$STR(S$转生材料)> <$STR(S$材料数量)>
+small U21 10
+#act
+INC U21 1
+INC U22 1
+inc u1 10
+GAMEGIRD - <$STR(S$需求灵符)>
+GAMEGOLD - <$STR(S$需求元宝)>
+CHANGELEVEL + 10
+take <$STR(S$转生材料)> <$STR(S$材料数量)>
+#CALL [\BUFF\暴击伤害.txt] @计算
+SENDMSG 9 觉醒成功,当前觉醒次数为<$STR(U21)>..
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+goto @main
+break
+
+
+
+#if
+#act
+SENDMSG 9 觉醒失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+[@觉醒1]
+
+#if
+equal U21 10
+#act
+SENDMSG 9 你的人物觉醒已完成。
+break
+
+
+#if
+equal A120 <$USERNAME>
+#act
+GOTO @排名1
+break
+
+#if
+equal A121 <$USERNAME>
+#act
+GOTO @排名2
+break
+
+#if
+equal A122 <$USERNAME>
+#act
+GOTO @排名3
+break
+
+
+#if
+CHECKLEVELEX < 200
+#act
+SENDMSG 9 你现在还太弱了，提升到200级之后在来把
+break
+
+
+
+
+
+
+#if
+CHECKGAMEGOLD ? <$STR(S$需求元宝)>
+checkitem <$STR(S$转生材料)> <$STR(S$材料数量)>
+small U21 10
+#act
+INC U21 1
+inc u1 10
+CHANGELEVEL + 10
+GAMEGOLD - <$STR(S$需求元宝)>
+take <$STR(S$转生材料)> <$STR(S$材料数量)>
+#CALL [\BUFF\暴击伤害.txt] @计算
+SENDMSG 9 觉醒成功,当前觉醒次数为<$STR(U21)>..
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+goto @main
+break
+
+
+
+#if
+#act
+SENDMSG 9 觉醒失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+;====1111===============================
+
+
+
+[@1觉醒]
+#if
+CHECKLEVELEX > 202
+CHECKGAMEGIRD ? <$STR(S$需求灵符)>
+CHECKGAMEGOLD ? <$STR(S$需求元宝)>
+checkitem <$STR(S$转生材料)> <$STR(S$材料数量)>
+small U21 10
+#act
+INC U21 1
+INC U22 1
+inc u1 10
+GAMEGIRD - <$STR(S$需求灵符)>
+GAMEGOLD - <$STR(S$需求元宝)>
+CHANGELEVEL + 10
+take <$STR(S$转生材料)> <$STR(S$材料数量)>
+#CALL [\BUFF\暴击伤害.txt] @计算
+SENDMSG 9 觉醒成功,当前觉醒次数为<$STR(U21)>..
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+goto @main
+break
+
+
+#if
+#act
+SENDMSG 9 觉醒失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+[@1觉醒1]
+#if
+CHECKGAMEGOLD ? <$STR(S$需求元宝)>
+checkitem <$STR(S$转生材料)> <$STR(S$材料数量)>
+small U21 10
+#act
+INC U21 1
+inc u1 10
+CHANGELEVEL + 10
+GAMEGOLD - <$STR(S$需求元宝)>
+take <$STR(S$转生材料)> <$STR(S$材料数量)>
+#CALL [\BUFF\暴击伤害.txt] @计算
+SENDMSG 9 觉醒成功,当前觉醒次数为<$STR(U21)>..
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+goto @main
+break
+
+
+
+#if
+#act
+SENDMSG 9 觉醒失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+
+
+
+
+
+
+;====1111===============================
+
+
+
+[@2觉醒]
+#if
+CHECKGAMEGIRD ? <$STR(S$需求灵符)>
+CHECKGAMEGOLD ? <$STR(S$需求元宝)>
+checkitem <$STR(S$转生材料)> <$STR(S$材料数量)>
+small U21 10
+#act
+INC U21 1
+INC U22 1
+inc u1 10
+GAMEGIRD - <$STR(S$需求灵符)>
+GAMEGOLD - <$STR(S$需求元宝)>
+CHANGELEVEL + 10
+take <$STR(S$转生材料)> <$STR(S$材料数量)>
+#CALL [\BUFF\暴击伤害.txt] @计算
+SENDMSG 9 觉醒成功,当前觉醒次数为<$STR(U21)>..
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+goto @main
+break
+
+
+
+#if
+#act
+SENDMSG 9 觉醒失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+[@2觉醒1]
+#if
+CHECKGAMEGOLD ? <$STR(S$需求元宝)>
+checkitem <$STR(S$转生材料)> <$STR(S$材料数量)>
+small U21 10
+#act
+INC U21 1
+inc u1 10
+CHANGELEVEL + 10
+GAMEGOLD - <$STR(S$需求元宝)>
+take <$STR(S$转生材料)> <$STR(S$材料数量)>
+#CALL [\BUFF\暴击伤害.txt] @计算
+SENDMSG 9 觉醒成功,当前觉醒次数为<$STR(U21)>..
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+goto @main
+break
+
+
+
+#if
+#act
+SENDMSG 9 觉醒失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+
+
+
+
+;====1111===============================
+
+
+
+[@3觉醒]
+#if
+CHECKGAMEGIRD ? <$STR(S$需求灵符)>
+CHECKGAMEGOLD ? <$STR(S$需求元宝)>
+checkitem <$STR(S$转生材料)> <$STR(S$材料数量)>
+small U21 10
+#act
+INC U21 1
+INC U22 1
+inc u1 10
+GAMEGIRD - <$STR(S$需求灵符)>
+GAMEGOLD - <$STR(S$需求元宝)>
+CHANGELEVEL + 10
+take <$STR(S$转生材料)> <$STR(S$材料数量)>
+#CALL [\BUFF\暴击伤害.txt] @计算
+SENDMSG 9 觉醒成功,当前觉醒次数为<$STR(U21)>..
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+goto @main
+break
+
+
+
+#if
+#act
+SENDMSG 9 觉醒失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+[@3觉醒1]
+#if
+CHECKGAMEGOLD ? <$STR(S$需求元宝)>
+checkitem <$STR(S$转生材料)> <$STR(S$材料数量)>
+small U21 10
+#act
+INC U21 1
+inc u1 10
+CHANGELEVEL + 10
+GAMEGOLD - <$STR(S$需求元宝)>
+take <$STR(S$转生材料)> <$STR(S$材料数量)>
+#CALL [\BUFF\暴击伤害.txt] @计算
+SENDMSG 9 觉醒成功,当前觉醒次数为<$STR(U21)>..
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+SENDMSG 0 {人物觉醒:|250:15}{恭喜玩家|255:15}{『<$USERNAME>』|251:15}{成功完成了|255:15}{【第<$STR(U21)>次觉醒】|250:15}{.实力获得了超级强大的提升！！|255:15}
+goto @main
+break
+
+
+
+#if
+#act
+SENDMSG 9 觉醒失败，请检查你的条件是否都满足。
+goto @main
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@升级1]
+#if
+CHECKLEVELEX < 150
+checkitem 云顶结晶 2
+#act
+take 云顶结晶 2
+CHANGELEVEL + 1
+SENDMSG 9 [提示:]人物等级+1.
+break
+#elseact
+SENDMSG 9 [提示:]你的材料不足或者已经超过150级了.
+break
+
+[@升级2]
+#if
+CHECKLEVELEX > 149
+CHECKLEVELEX < 203
+equal a120 <$USERNAME>
+checkitem 云顶结晶 10
+#act
+take 云顶结晶 10
+CHANGELEVEL + 1
+SENDMSG 9 [提示:]人物等级+1.
+break
+#if
+CHECKLEVELEX > 149
+CHECKLEVELEX < 202
+equal a121 <$USERNAME>
+checkitem 云顶结晶 10
+#act
+take 云顶结晶 10
+CHANGELEVEL + 1
+SENDMSG 9 [提示:]人物等级+1.
+break
+
+#if
+CHECKLEVELEX > 149
+CHECKLEVELEX < 201
+equal a122 <$USERNAME>
+checkitem 云顶结晶 10
+#act
+take 云顶结晶 10
+CHANGELEVEL + 1
+SENDMSG 9 [提示:]人物等级+1.
+break
+
+#if
+CHECKLEVELEX > 149
+CHECKLEVELEX < 200
+checkitem 云顶结晶 10
+#act
+take 云顶结晶 10
+CHANGELEVEL + 1
+SENDMSG 9 [提示:]人物等级+1.
+break
+#elseact
+SENDMSG 9 [提示:]你的材料不足或者不足150级或者已经超过200级了.
+break

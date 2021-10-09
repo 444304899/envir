@@ -4,4 +4,4 @@ CHECKTITLE 狂暴之力
 #act
 map 0101
 #elseact
-messagebox 操作失败:\\请检查\是否开启狂暴模式
+sendmsg 9 操作失败:\\请检查\是否开启狂暴模式

@@ -67,10 +67,10 @@ SENDMSG 9 积分不足！！
 #if
 #act
 #SAY
-<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/zghy.png|loadDelay=1|esc=1>
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/zghy.png|loadDelay=1|reset=1>
 <Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
-<Effect|x=418.0|y=11.0|effecttype=0|effectid=20299|dir=5|act=0|speed=1|scale=1>
-<RText|x=213.0|y=60.0|color=255|size=16|text=<您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>>
+<Effect|x=418.0|y=11.0|effecttype=0|effectid=20299|dir=5|speed=1|act=0|scale=1>
+<RText|x=213.0|y=55.0|color=255|size=16|text=<您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>>
 <Img|x=267.0|y=98.0|img=public/micon/000084.png|esc=0>
 <Img|x=451.0|y=98.0|img=public/micon/000084.png|esc=0>
 <Img|x=267.0|y=140.0|img=public/micon/000084.png|esc=0>
@@ -87,9 +87,11 @@ SENDMSG 9 积分不足！！
 <RText|x=466.0|y=176.0|color=255|size=16|text=<6./FCOLOR=102><自动挂机/FCOLOR=253>>
 <RText|x=280.0|y=218.0|color=255|size=16|text=<7./FCOLOR=102><学习 魔法神盾/FCOLOR=253>>
 <RText|x=466.0|y=218.0|color=255|size=16|text=<8./FCOLOR=102><学习 十步一杀/FCOLOR=253>>
-<Button|x=388.0|y=285.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=我要领取|link=@领取1>
-<Effect|x=89.0|y=173.0|effecttype=0|effectid=20298|dir=5|act=0|speed=1|scale=1>
+<RText|x=280.0|y=278.0|size=14|color=152|text=累计充值钻石58元,免费领取，不扣钻石>
+<Button|x=550.0|y=272.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=我要领取|link=@领取1>
+<Effect|x=89.0|y=173.0|effecttype=0|effectid=20298|dir=5|speed=1|act=0|scale=1>
 <Text|x=308.0|y=332.0|color=254,251,168,191,250,70,245,249,253|size=16|text=提示：积分有神秘彩蛋，可领取全民任务>
+
 
 ;<>                                                  <playimg:13:0:15:150:160:-28> \
 ;<>                                                               <您当前总共累计充值积分为:/FCOLOR=58><(<$GAMEDIAMOND>)/FCOLOR=70>\ \

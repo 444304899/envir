@@ -3,7 +3,7 @@
 CHECKITEMW 切割神器·[终极] 1
 ChecKitem 切割神器·[终极]
 #ACT
-MESSAGEBOX 你已经有顶级[切割神器·[终极]]了~
+SENDMSG 9 你已经有顶级[切割神器·[终极]]了~
 BREAK
 
 #IF
@@ -266,268 +266,318 @@ BREAK
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[一阶]/FCOLOR=70}\
-<PlayImg:19:430:15:100:40:0>\
-<Itemshow:509:0:342:4>\
-
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件：QQ礼包赠送/@1级切割>
-<ImgEx:41:180:181:182:176:189>
-<ImgEx:41:183:184:185:173:189/@下一页_1>\
-
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10509|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=104.0|y=48.0|effecttype=0|effectid=20301|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.QQ礼包赠送>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@1级切割>
+<Button|x=342.0|y=283.0|color=255|grey=1|size=18|mimg=public/button/pu2.png|nimg=public/button/pu1.png|pimg=public/button/pu3.png>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_1>
 
 [@下一页_1]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[二阶]/FCOLOR=70}\
-<PlayImg:19:430:15:100:40:0>\
-<Itemshow:510:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[一阶]*1^250#合成条件②：神祈之泪 * 10/@2级切割>
-<ImgEx:41:180:181:182:176:189/@main>
-<ImgEx:41:183:184:185:173:189/@下一页_2>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|esc=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10510|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=104.0|y=48.0|effecttype=0|effectid=20301|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[一阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 10>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@2级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@main>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_2>
 
 [@下一页_2]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[三阶]/FCOLOR=70}\
-<PlayImg:19:450:15:100:50:10>\
-<Itemshow:511:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[二阶]*1^250#合成条件②：神祈之泪 * 20/@3级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_1>
-<ImgEx:41:183:184:185:173:189/@下一页_3>\
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10511|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=129.0|y=77.0|effecttype=0|effectid=20302|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[二阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 20>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@3级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_1>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_3>
 
 [@下一页_3]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[四阶]/FCOLOR=70}\
-<PlayImg:19:450:15:100:50:10>\
-<Itemshow:512:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[三阶]*1^250#合成条件②：神祈之泪 * 30/@4级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_2>
-<ImgEx:41:183:184:185:173:189/@下一页_4>\
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10512|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=129.0|y=77.0|effecttype=0|effectid=20302|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[三阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 30>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@4级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_2>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_4>
 
 [@下一页_4]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[五阶]/FCOLOR=70}\
-<PlayImg:19:470:15:100:30:-25>\
-<Itemshow:513:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[四阶]*1^250#合成条件②：神祈之泪 * 40/@5级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_3>
-<ImgEx:41:183:184:185:173:189/@下一页_5>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|esc=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10513|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=107.0|y=23.0|effecttype=0|effectid=20303|dir=5|speed=1|act=0|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[四阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 40>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@5级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_3>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_5>
 
 [@下一页_5]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[六阶]/FCOLOR=70}\
-<PlayImg:19:470:15:100:30:-25>\
-<Itemshow:514:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[五阶]*1^250#合成条件②：神祈之泪 * 50/@6级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_4>
-<ImgEx:41:183:184:185:173:189/@下一页_6>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|esc=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10514|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=107.0|y=23.0|effecttype=0|effectid=20303|dir=5|speed=1|act=0|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[五阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 50>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@6级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_4>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_6>
 
 [@下一页_6]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[七阶]/FCOLOR=70}\
-<PlayImg:19:490:15:100:50:0>\
-<Itemshow:515:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[六阶]*1^250#合成条件②：神祈之泪 * 60/@7级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_5>
-<ImgEx:41:183:184:185:173:189/@下一页_7>\
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10515|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=126.0|y=69.0|effecttype=0|effectid=20304|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[六阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 60>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@7级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_5>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_7>
 
 [@下一页_7]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[八阶]/FCOLOR=70}\
-<PlayImg:19:510:15:100:50:0>\
-<Itemshow:516:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[七阶]*1^250#合成条件②：神祈之泪 * 70/@8级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_6>
-<ImgEx:41:183:184:185:173:189/@下一页_8>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|esc=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10516|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=122.0|y=53.0|effecttype=0|effectid=20305|dir=5|speed=1|act=0|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[七阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 70>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@8级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_6>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_8>
 
 [@下一页_8]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[九阶]/FCOLOR=70}\
-<PlayImg:19:530:15:100:50:0>\
-<Itemshow:517:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[八阶]*1^250#合成条件②：神祈之泪 * 80/@9级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_7>
-<ImgEx:41:183:184:185:173:189/@下一页_9>\
-
-
-
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10517|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=124.0|y=79.0|effecttype=0|effectid=20306|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[八阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 80>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@9级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_7>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_9>
 
 [@下一页_9]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[十阶]/FCOLOR=70}\
-<PlayImg:19:550:15:100:50:0>\
-<Itemshow:518:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[九阶]*1^250#合成条件②：神祈之泪 * 90/@10级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_8>
-<ImgEx:41:183:184:185:173:189/@下一页_10>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|esc=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10518|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=126.0|y=64.0|effecttype=0|effectid=20307|dir=5|speed=1|act=0|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[九阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 90>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@10级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_8>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_10>
 
 
 [@下一页_10]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[超凡]/FCOLOR=70}\
-<PlayImg:19:570:15:100:50:0>\
-<Itemshow:519:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[十阶]*1^250#合成条件②：神祈之泪 * 200^250#合成条件③：元宝*500000/@11级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_9>
-<ImgEx:41:183:184:185:173:189/@下一页_11>\
-
-
-
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|esc=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10519|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=126.0|y=64.0|effecttype=0|effectid=20308|dir=5|speed=1|act=0|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[十阶]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 200>
+<Text|x=347.0|y=170.0|color=251|size=16|text=3.元宝*500000>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@11级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_9>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_11>
 
 [@下一页_11]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[不朽]/FCOLOR=70}\
-<PlayImg:19:590:15:100:50:0>\
-<Itemshow:520:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[超凡]*1^250#合成条件②：神祈之泪 *250^250#合成条件③：元宝*500000/@12级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_10>
-<ImgEx:41:183:184:185:173:189/@下一页_12>\
-
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|esc=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10520|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=126.0|y=64.0|effecttype=0|effectid=20309|dir=5|speed=1|act=0|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[超凡]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 250>
+<Text|x=347.0|y=170.0|color=251|size=16|text=3.元宝*500000>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@12级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_10>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_12>
 
 
 [@下一页_12]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[星辰]/FCOLOR=70}\
-<PlayImg:19:610:15:100:50:0>\
-<Itemshow:521:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[不朽]*1^250#合成条件②：神祈之泪 *300^250#合成条件③：元宝*500000/@13级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_11>
-<ImgEx:41:183:184:185:173:189/@下一页_13>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|esc=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10521|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=126.0|y=64.0|effecttype=0|effectid=20310|dir=5|speed=1|act=0|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[不朽]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 300>
+<Text|x=347.0|y=170.0|color=251|size=16|text=3.元宝*500000>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@13级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_11>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_13>
 
 
 [@下一页_13]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[龙啸]/FCOLOR=70}\
-<PlayImg:19:630:15:100:50:0>\
-<Itemshow:522:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[星辰]*1^250#合成条件②：神祈之泪 *350^250#合成条件③：元宝*1000000/@14级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_12>
-<ImgEx:41:183:184:185:173:189/@下一页_14>\
-
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10522|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=116.0|y=53.0|effecttype=0|effectid=20311|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[星辰]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 350>
+<Text|x=347.0|y=170.0|color=251|size=16|text=3.元宝*1000000>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@14级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_12>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_14>
 
 [@下一页_14]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[无尽]/FCOLOR=70}\
-<PlayImg:19:650:15:100:30:0>\
-<Itemshow:523:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[龙啸]*1^250#合成条件②：神祈之泪 *400^250#合成条件③：元宝*1000000/@15级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_13>
-<ImgEx:41:183:184:185:173:189/@下一页_15>\
-
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10523|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=103.0|y=42.0|effecttype=0|effectid=20312|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[龙啸]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 400>
+<Text|x=347.0|y=170.0|color=251|size=16|text=3.元宝*1000000>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@15级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_13>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_15>
 
 [@下一页_15]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[末日]/FCOLOR=70}\
-<PlayImg:19:670:15:100:30:0>\
-<Itemshow:524:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[无尽]*1^250#合成条件②：神祈之泪 *500^250#合成条件③：元宝*1000000/@16级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_14>
-<ImgEx:41:183:184:185:173:189/@下一页_16>\
-
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10524|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=103.0|y=42.0|effecttype=0|effectid=20313|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[无尽]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 500>
+<Text|x=347.0|y=170.0|color=251|size=16|text=3.元宝*1000000>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@16级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_14>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_16>
 
 [@下一页_16]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[最终]/FCOLOR=70}\
-<PlayImg:19:690:15:100:35:0>\
-<Itemshow:525:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[末日]*1^250#合成条件②：神祈之泪 *600^250#合成条件③：元宝*1000000^250#合成条件④：钻石数量*500/@17级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_15>
-<ImgEx:41:183:184:185:173:189/@下一页_17>\
-
-
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10525|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=103.0|y=42.0|effecttype=0|effectid=20314|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[末日]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 600>
+<Text|x=347.0|y=170.0|color=251|size=16|text=3.元宝*1000000>
+<Text|x=347.0|y=192.0|color=251|size=16|text=4.钻石数量*500>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@17级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_15>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|link=@下一页_17>
 [@下一页_17]
 #IF
 #ACT
 #SAY
-\ \ \ \
 ;　　　　　　　　    {切割神器·[终极]/FCOLOR=70}\
-<PlayImg:19:710:15:100:35:0>\
-<Itemshow:526:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#合成条件①：切割神器·[最终]*1^250#合成条件②：神祈之泪 *888^250#合成条件③：元宝*5000000^250#合成条件④：钻石数量*1000/@18级切割>
-<ImgEx:41:180:181:182:176:189/@下一页_16>
-<ImgEx:41:183:184:185:173:189/@下一页_17>\
-
-
-
-[@下一页_18]
-#IF
-#ACT
-#SAY
-\ \ \ \
-;　　　　　　　　    {切割神器·[终极]/FCOLOR=70}\
-<PlayImg:19:710:15:100:35:0>\
-<Itemshow:526:0:342:4>\
-<playimg:13:725:10:100:313:-38:0>\ \
-<ImgEx:41:187:188:189:315:150|250#已经是终极切割/@18级切割111111>
-<ImgEx:41:180:181:182:176:189/@下一页_17>
-<ImgEx:41:183:184:185:173:189/@下一页_17>\
-
-
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/qgsq.png|loadDelay=1|reset=1>
+<Button|x=489.0|y=-30.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Img|x=398.0|y=29.0|img=public/box/itembox.png|esc=0>
+<ItemShow|x=403.0|y=32.0|width=70|height=70|itemid=10526|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=103.0|y=42.0|effecttype=0|effectid=20315|dir=5|act=0|speed=1|scale=1>
+<Text|x=347.0|y=104.0|color=250|size=16|text=合成条件:>
+<Text|x=347.0|y=126.0|color=251|size=16|text=1.切割神器·[最终]*1>
+<Text|x=347.0|y=148.0|color=251|size=16|text=2.神祈之泪 * 888>
+<Text|x=347.0|y=170.0|color=251|size=16|text=3.元宝*5000000>
+<Text|x=347.0|y=192.0|color=251|size=16|text=4.钻石数量*1000>
+<Button|x=388.0|y=237.0|color=255|pimg=public/button/qrdz3.png|size=18|mimg=public/button/qrdz2.png|nimg=public/button/qrdz1.png|link=@18级切割>
+<Button|x=342.0|y=283.0|color=255|mimg=public/button/pu2.png|size=18|pimg=public/button/pu3.png|nimg=public/button/pu1.png|link=@下一页_16>
+<Button|x=432.0|y=283.0|color=255|pimg=public/button/pd3.png|size=18|mimg=public/button/pd2.png|nimg=public/button/pd1.png|grey=1>
 ;---------------------------------------------------------------------------------
 
 
@@ -551,7 +601,7 @@ GIVESTATEITEM 切割神器·[终极] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_18
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[终极]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -573,7 +623,7 @@ GIVESTATEITEM 切割神器·[最终] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_17
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[最终]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -594,7 +644,7 @@ GIVESTATEITEM 切割神器·[末日] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_16
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[末日]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -614,7 +664,7 @@ GIVESTATEITEM 切割神器·[无尽] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_15
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切切割神器·[无尽]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -633,7 +683,7 @@ GIVESTATEITEM 切割神器·[龙啸] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_14
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[龙啸]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -652,7 +702,7 @@ GIVESTATEITEM 切割神器·[星辰] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_13
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[星辰]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -671,7 +721,7 @@ GIVESTATEITEM 切割神器·[不朽] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_12
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[不朽]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -690,7 +740,7 @@ GIVESTATEITEM 切割神器·[超凡] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_11
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[超凡]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -706,7 +756,7 @@ GIVESTATEITEM 切割神器·[十阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_10
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[十阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -722,7 +772,7 @@ GIVESTATEITEM 切割神器·[九阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_9
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[九阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -738,7 +788,7 @@ GIVESTATEITEM 切割神器·[八阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_8
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[八阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -754,7 +804,7 @@ GIVESTATEITEM 切割神器·[七阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_7
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[七阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -770,7 +820,7 @@ GIVESTATEITEM 切割神器·[六阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_6
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[六阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -786,7 +836,7 @@ GIVESTATEITEM 切割神器·[五阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_5
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[五阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -802,7 +852,7 @@ GIVESTATEITEM 切割神器·[四阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_4
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[四阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -819,7 +869,7 @@ GIVESTATEITEM 切割神器·[三阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_3
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[三阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -836,7 +886,7 @@ GIVESTATEITEM 切割神器·[二阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_2
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了切割神器·[二阶]！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 
 
@@ -853,6 +903,6 @@ GIVESTATEITEM 切割神器·[二阶] 1 1 1 0 0 1 1 1 0
 GOTO @下一页_1
 GuildNoticeMsg 249 151 ぐ恭喜玩家[<$Username>]锻造了『切割神器·[一阶』！！
 #ELSEACT
-MESSAGEBOX 材料不足，或者你背包没有相应的切割神器~
+SENDMSG 9 材料不足，或者你背包没有相应的切割神器~
 BREAK
 

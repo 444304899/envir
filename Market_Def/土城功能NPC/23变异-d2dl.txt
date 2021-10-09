@@ -20,23 +20,18 @@ MOV S$技能跳转 @强化刺杀
 MOV S$技能名称 刺杀剑术
 GOTO @检测技能
 #SAY
-<><IMGEX:42:17:18:19:525:30/@exit>\ \ \
-<IMGEX:42:23:23:23:200:7>
-<IMGEX:42:24:24:24:200:7/@强化烈火>
-<IMGEX:42:26:26:26:200:7/@强化逐日>
-<IMGEX:42:28:28:28:200:7/@强化开天>\
-<>\
-<><IMGEX:42:30:31:31:410:123/@开始强化技能>\
-<>\
-<>\
-<>\
-<>\
-<>\ \ \
-<>                  {当前/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{强化等级为/FCOLOR=243}"{<$STR(N$当前技能等级)>/FCOLOR=254}"{
-重/FCOLOR=243}\
-<>                  {技能每强化/FCOLOR=243}“{1/FCOLOR=249}”{重增加该技能威力/FCOLOR=243}"{10%/FCOLOR=249}"\
-<>                  {技能最高可强化至/FCOLOR=243}“{9/FCOLOR=251}”{重/FCOLOR=243}\
-<>                  {当前强化/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{下一重需要/FCOLOR=243}“{元宝/FCOLOR=254}*{<$STR(N$强化元宝)>/FCOLOR=251}+{技能强化卷/FCOLOR=254}*{<$STR(N$当前技能书页)>/FCOLOR=251}”\
+<Img|x=-21.0|y=-83.0|width=700|height=369|show=4|reset=1|bg=1|move=1|loadDelay=1|img=public/box/00754.png|esc=1>
+<Button|x=626.0|y=-37.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=266.0|y=20.0|nimg=public/button/00745.png|size=16|color=255|link=@强化刺杀>
+<Button|x=357.0|y=20.0|color=255|size=16|nimg=public/button/00746.png|link=@强化烈火>
+<Button|x=448.0|y=20.0|color=255|size=16|nimg=public/button/00748.png|link=@强化逐日>
+<Button|x=539.0|y=20.0|color=255|size=16|nimg=public/button/00750.png|link=@强化开天>
+<Button|x=519.0|y=176.0|pimg=public/button/00753.png|color=255|nimg=public/button/00752.png|size=18|link=@开始强化技能>
+<RText|x=120.0|y=162.0|color=253|size=16|text={当前/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{强化等级为/FCOLOR=243}"{<$STR(N$当前技能等级)>/FCOLOR=254}"{重/FCOLOR=243}>
+<RText|x=120.0|y=182.0|color=253|size=16|text={技能每强化/FCOLOR=243}“{1/FCOLOR=249}”{重增加该技能威力/FCOLOR=243}"{10%/FCOLOR=249}>
+<RText|x=120.0|y=202.0|color=253|size=16|text={技能最高可强化至/FCOLOR=243}“{9/FCOLOR=251}”{重/FCOLOR=243}>
+<RText|x=120.0|y=222.0|color=253|size=16|text={当前强化/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{下一重需要/FCOLOR=243}“{元宝/FCOLOR=254}*{<$STR(N$强化元宝)>/FCOLOR=251}+{技能强化卷/FCOLOR=254}*{<$STR(N$当前技能书页)>/FCOLOR=251}>
+
 [@强化烈火]
 #IF
 #ACT
@@ -44,23 +39,18 @@ MOV S$技能跳转 @强化烈火
 MOV S$技能名称 烈火剑法
 GOTO @检测技能
 #SAY
-<><IMGEX:42:17:18:19:525:30/@exit>\ \ \
-<IMGEX:42:22:22:22:200:7/@强化刺杀>
-<IMGEX:42:25:25:25:200:7>
-<IMGEX:42:26:26:26:200:7/@强化逐日>
-<IMGEX:42:28:28:28:200:7/@强化开天>\
-<>\
-<><IMGEX:42:30:31:31:410:123/@开始强化技能>\
-<>\
-<>\
-<>\
-<>\
-<>\ \ \
-<>                  {当前/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{强化等级为/FCOLOR=243}"{<$STR(N$当前技能等级)>/FCOLOR=254}"{
-重/FCOLOR=243}\
-<>                  {技能每强化/FCOLOR=243}“{1/FCOLOR=249}”{重增加该技能威力/FCOLOR=243}"{10%/FCOLOR=249}"\
-<>                  {技能最高可强化至/FCOLOR=243}“{9/FCOLOR=251}”{重/FCOLOR=243}\
-<>                  {当前强化/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{下一重需要/FCOLOR=243}“{元宝/FCOLOR=254}*{<$STR(N$强化元宝)>/FCOLOR=251}+{技能强化卷/FCOLOR=254}*{<$STR(N$当前技能书页)>/FCOLOR=251}”\
+<Img|x=-21.0|y=-83.0|width=700|height=369|show=4|reset=1|bg=1|move=1|loadDelay=1|img=public/box/00754.png|esc=1>
+<Button|x=626.0|y=-37.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=266.0|y=20.0|nimg=public/button/00744.png|size=16|color=255|link=@强化刺杀>
+<Button|x=357.0|y=20.0|color=255|size=16|nimg=public/button/00747.png|link=@强化烈火>
+<Button|x=448.0|y=20.0|color=255|size=16|nimg=public/button/00748.png|link=@强化逐日>
+<Button|x=539.0|y=20.0|color=255|size=16|nimg=public/button/00750.png|link=@强化开天>
+<Button|x=519.0|y=176.0|pimg=public/button/00753.png|color=255|nimg=public/button/00752.png|size=18|link=@开始强化技能>
+<RText|x=120.0|y=162.0|color=253|size=16|text={当前/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{强化等级为/FCOLOR=243}"{<$STR(N$当前技能等级)>/FCOLOR=254}"{重/FCOLOR=243}>
+<RText|x=120.0|y=182.0|color=253|size=16|text={技能每强化/FCOLOR=243}“{1/FCOLOR=249}”{重增加该技能威力/FCOLOR=243}"{10%/FCOLOR=249}>
+<RText|x=120.0|y=202.0|color=253|size=16|text={技能最高可强化至/FCOLOR=243}“{9/FCOLOR=251}”{重/FCOLOR=243}>
+<RText|x=120.0|y=222.0|color=253|size=16|text={当前强化/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{下一重需要/FCOLOR=243}“{元宝/FCOLOR=254}*{<$STR(N$强化元宝)>/FCOLOR=251}+{技能强化卷/FCOLOR=254}*{<$STR(N$当前技能书页)>/FCOLOR=251}>
+
 [@强化逐日]
 #IF
 #ACT
@@ -68,23 +58,18 @@ MOV S$技能跳转 @强化逐日
 MOV S$技能名称 逐日剑法
 GOTO @检测技能
 #SAY
-<><IMGEX:42:17:18:19:525:30/@exit>\ \ \
-<IMGEX:42:22:22:22:200:7/@强化刺杀>
-<IMGEX:42:24:24:24:200:7/@强化烈火>
-<IMGEX:42:27:27:27:200:7>
-<IMGEX:42:28:28:28:200:7/@强化开天>\
-<>\
-<><IMGEX:42:30:31:31:410:123/@开始强化技能>\
-<>\
-<>\
-<>\
-<>\
-<>\ \ \
-<>                  {当前/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{强化等级为/FCOLOR=243}"{<$STR(N$当前技能等级)>/FCOLOR=254}"{
-重/FCOLOR=243}\
-<>                  {技能每强化/FCOLOR=243}“{1/FCOLOR=249}”{重增加该技能威力/FCOLOR=243}"{10%/FCOLOR=249}"\
-<>                  {技能最高可强化至/FCOLOR=243}“{9/FCOLOR=251}”{重/FCOLOR=243}\
-<>                  {当前强化/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{下一重需要/FCOLOR=243}“{元宝/FCOLOR=254}*{<$STR(N$强化元宝)>/FCOLOR=251}+{技能强化卷/FCOLOR=254}*{<$STR(N$当前技能书页)>/FCOLOR=251}”\
+
+<Img|x=-21.0|y=-83.0|width=700|height=369|show=4|reset=1|bg=1|move=1|loadDelay=1|img=public/box/00754.png|esc=1>
+<Button|x=626.0|y=-37.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=266.0|y=20.0|nimg=public/button/00744.png|size=16|color=255|link=@强化刺杀>
+<Button|x=357.0|y=20.0|color=255|size=16|nimg=public/button/00746.png|link=@强化烈火>
+<Button|x=448.0|y=20.0|color=255|size=16|nimg=public/button/00749.png|link=@强化逐日>
+<Button|x=539.0|y=20.0|color=255|size=16|nimg=public/button/00750.png|link=@强化开天>
+<Button|x=519.0|y=176.0|pimg=public/button/00753.png|color=255|nimg=public/button/00752.png|size=18|link=@开始强化技能>
+<RText|x=120.0|y=162.0|color=253|size=16|text={当前/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{强化等级为/FCOLOR=243}"{<$STR(N$当前技能等级)>/FCOLOR=254}"{重/FCOLOR=243}>
+<RText|x=120.0|y=182.0|color=253|size=16|text={技能每强化/FCOLOR=243}“{1/FCOLOR=249}”{重增加该技能威力/FCOLOR=243}"{10%/FCOLOR=249}>
+<RText|x=120.0|y=202.0|color=253|size=16|text={技能最高可强化至/FCOLOR=243}“{9/FCOLOR=251}”{重/FCOLOR=243}>
+<RText|x=120.0|y=222.0|color=253|size=16|text={当前强化/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{下一重需要/FCOLOR=243}“{元宝/FCOLOR=254}*{<$STR(N$强化元宝)>/FCOLOR=251}+{技能强化卷/FCOLOR=254}*{<$STR(N$当前技能书页)>/FCOLOR=251}>
 
 [@强化开天]
 #IF
@@ -93,44 +78,36 @@ MOV S$技能跳转 @强化开天
 MOV S$技能名称 开天斩
 GOTO @检测技能
 #SAY
-<><IMGEX:42:17:18:19:525:30/@exit>\ \ \
-<IMGEX:42:22:22:22:200:7/@强化刺杀>
-<IMGEX:42:24:24:24:200:7/@强化烈火>
-<IMGEX:42:26:26:26:200:7/@强化逐日>
-<IMGEX:42:29:29:29:200:7>\
-<>\
-<><IMGEX:42:30:31:31:410:123/@开始强化技能>\
-<>\
-<>\
-<>\
-<>\
-<>\ \ \
-<>                  {当前/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{强化等级为/FCOLOR=243}"{<$STR(N$当前技能等级)>/FCOLOR=254}"{
-重/FCOLOR=243}\
-<>                  {技能每强化/FCOLOR=243}“{1/FCOLOR=249}”{重增加该技能威力/FCOLOR=243}"{10%/FCOLOR=249}"\
-<>                  {技能最高可强化至/FCOLOR=243}“{9/FCOLOR=251}”{重/FCOLOR=243}\
-<>                  {当前强化/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{下一重需要/FCOLOR=243}“{元宝/FCOLOR=254}*{<$STR(N$强化元宝)>/FCOLOR=251}+{技能强化卷/FCOLOR=254}*{<$STR(N$当前技能书页)>/FCOLOR=251}”\
-
-
+<Img|x=-21.0|y=-83.0|width=700|height=369|show=4|reset=1|bg=1|move=1|loadDelay=1|img=public/box/00754.png|esc=1>
+<Button|x=626.0|y=-37.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=266.0|y=20.0|nimg=public/button/00744.png|size=16|color=255|link=@强化刺杀>
+<Button|x=357.0|y=20.0|color=255|size=16|nimg=public/button/00746.png|link=@强化烈火>
+<Button|x=448.0|y=20.0|color=255|size=16|nimg=public/button/00748.png|link=@强化逐日>
+<Button|x=539.0|y=20.0|color=255|size=16|nimg=public/button/00751.png|link=@强化开天>
+<Button|x=519.0|y=176.0|pimg=public/button/00753.png|color=255|nimg=public/button/00752.png|size=18|link=@开始强化技能>
+<RText|x=120.0|y=162.0|color=253|size=16|text={当前/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{强化等级为/FCOLOR=243}"{<$STR(N$当前技能等级)>/FCOLOR=254}"{重/FCOLOR=243}>
+<RText|x=120.0|y=182.0|color=253|size=16|text={技能每强化/FCOLOR=243}“{1/FCOLOR=249}”{重增加该技能威力/FCOLOR=243}"{10%/FCOLOR=249}>
+<RText|x=120.0|y=202.0|color=253|size=16|text={技能最高可强化至/FCOLOR=243}“{9/FCOLOR=251}”{重/FCOLOR=243}>
+<RText|x=120.0|y=222.0|color=253|size=16|text={当前强化/FCOLOR=243}[{<$STR(S$技能名称)>/FCOLOR=250}]{下一重需要/FCOLOR=243}“{元宝/FCOLOR=254}*{<$STR(N$强化元宝)>/FCOLOR=251}+{技能强化卷/FCOLOR=254}*{<$STR(N$当前技能书页)>/FCOLOR=251}>
 
 [@开始强化技能]
 #OR
 large N$当前技能等级 8
 CHECKSKILL <$STR(S$技能名称)> = 9 1
 #ACT
-MESSAGEBOX 当前技能【<$STR(S$技能名称)>】已经“<$STR(N$当前技能等级)>”重
+SENDMSG 9 当前技能【<$STR(S$技能名称)>】已经“<$STR(N$当前技能等级)>”重
 BREAK
 
 #IF
 NOT CHECKGAMEGOLD ? <$STR(N$强化元宝)>
 #ACT
-MESSAGEBOX 缺少元宝*<$STR(N$强化元宝)>，无法强化
+SENDMSG 9 缺少元宝*<$STR(N$强化元宝)>，无法强化
 BREAK
 
 #IF
 not CHECKITEM  技能强化卷  <$STR(N$当前技能书页)>
 #ACT
-MESSAGEBOX 缺少技能强化卷*<$STR(N$当前技能书页)>，无法强化
+SENDMSG 9 缺少技能强化卷*<$STR(N$当前技能书页)>，无法强化
 BREAK
 
 #IF
@@ -241,7 +218,8 @@ MOV N$$强化元宝 3000000
 #IF
 #ACT
 #SAY
-\<IMGEX:38:335:336:337:0:32/@强化刺杀>  <IMGEX:38:332:333:334:0:32/@强化烈火>   <IMGEX:38:329:330:331:0:32/@强化开天>   
+\<IMGEX:38:335:336:337:0:32/@强化刺杀>  <IMGEX:38:332:333:334:0:32/@强化烈火>   <IMGEX:38:329:330:331:0:32/@强化开天>   
+
 <IMGEX:38:338:339:340:0:32/@强化逐日>\ \ \ \ \ \ \ \
 <>         <强化烈火剑法一重/FCOLOR=250>                   <强化一重/@LH1>\
 <>         <强化烈火剑法二重/FCOLOR=250>                   <强化二重/@LH2>\
@@ -256,7 +234,8 @@ MOV N$$强化元宝 3000000
 #IF
 #ACT
 #SAY
-\<IMGEX:38:335:336:337:0:32/@强化刺杀>  <IMGEX:38:332:333:334:0:32/@强化烈火>   <IMGEX:38:329:330:331:0:32/@强化开天>   
+\<IMGEX:38:335:336:337:0:32/@强化刺杀>  <IMGEX:38:332:333:334:0:32/@强化烈火>   <IMGEX:38:329:330:331:0:32/@强化开天>   
+
 <IMGEX:38:338:339:340:0:32/@强化逐日>\ \ \ \ \ \ \ \
 <>         <强化开天斩一重/FCOLOR=250>                   <强化一重/@KT1>\
 <>         <强化开天斩二重/FCOLOR=250>                   <强化二重/@KT2>\
@@ -271,7 +250,8 @@ MOV N$$强化元宝 3000000
 #IF
 #ACT
 #SAY
-\<IMGEX:38:335:336:337:0:32/@强化刺杀>  <IMGEX:38:332:333:334:0:32/@强化烈火>   <IMGEX:38:329:330:331:0:32/@强化开天>   
+\<IMGEX:38:335:336:337:0:32/@强化刺杀>  <IMGEX:38:332:333:334:0:32/@强化烈火>   <IMGEX:38:329:330:331:0:32/@强化开天>   
+
 <IMGEX:38:338:339:340:0:32/@强化逐日>\ \ \ \ \ \ \ \
 <>         <强化逐日剑法一重/FCOLOR=250>                   <强化一重/@ZR1>\
 <>         <强化逐日剑法二重/FCOLOR=250>                   <强化二重/@ZR2>\

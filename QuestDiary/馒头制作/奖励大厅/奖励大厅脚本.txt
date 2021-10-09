@@ -9,74 +9,161 @@ ReadConfigFileItem ..\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
 ;#if
 ;large S$合区信息 0
 ;#act
-;MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+;SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 ;break
 
 
 #if
 #act
 #say
-<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
-<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
-<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
-<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
-<>\ \ \ \ \
-<> {No.1/FCOLOR=150}          {★★★魍魉★★★/FCOLOR=70}          { 5钻石/FCOLOR=150}       <$STR(G200)>/20     <点击回收|246#一次合区后取消该福利/@福利回收1> \ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/jldt.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=177.0|y=-1.0|color=251|size=16|text=编号>
+<Text|x=286.0|y=-1.0|color=251|size=16|text=物品名称>
+<Text|x=438.0|y=-1.0|color=251|size=16|text=奖励金额>
+<Text|x=541.0|y=-1.0|color=251|size=16|text=名额>
+<Text|x=628.0|y=-1.0|color=251|size=16|text=物品回收>
+<Button|x=124.0|y=140.0|rotate=0|pimg=public/button/00175.png|nimg=public/button/00173.png|mimg=public/button/00174.png|size=16|color=255|grey=1>
+<Button|x=752.0|y=140.0|rotate=0|nimg=public/button/00170.png|mimg=public/button/00171.png|size=16|color=255|pimg=public/button/00172.png|link=@第二页>
+<Button|x=172.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=新区福利|link=@奖励大厅触发NAM>
+<Button|x=309.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=钻石首爆|link=@限时奖励人民币NAM>
+<Button|x=463.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=金币首爆|link=@限时奖励金币NAM>
+<Button|x=609.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=永久回收|link=@永久回收触发NAM>
 
-<> {No.2/FCOLOR=150}            {魑魅々杀猪刀/FCOLOR=70}            { 5钻石/FCOLOR=150}       <$STR(G201)>/20     <点击回收|246#一次合区后取消该福利/@福利回收2> \ \
+<Text|x=175.0|y=28.0|color=150|size=16|text=No.1>
+<Text|x=175.0|y=59.0|color=150|size=16|text=No.2>
+<Text|x=175.0|y=90.0|color=150|size=16|text=No.3>
+<Text|x=175.0|y=121.0|color=150|size=16|text=No.4>
+<Text|x=175.0|y=152.0|color=150|size=16|text=No.5>
+<Text|x=175.0|y=183.0|color=150|size=16|text=No.6>
+<Text|x=175.0|y=214.0|color=150|size=16|text=No.7>
+<Text|x=175.0|y=245.0|color=150|size=16|text=No.8>
+<Text|x=175.0|y=276.0|color=150|size=16|text=No.9>
+<Text|x=175.0|y=307.0|color=150|size=16|text=No.10>
 
-<> {No.3/FCOLOR=150}              {寒冰卍神甲/FCOLOR=70}            { 5钻石/FCOLOR=150}       <$STR(G202)>/20     <点击回收|246#一次合区后取消该福利/@福利回收3> \ \
+<Text|x=245.0|y=28.0|color=70|size=16|text=★★★魍魉★★★>
+<Text|x=245.0|y=59.0|color=70|size=16|text=魑魅々杀猪刀>
+<Text|x=245.0|y=90.0|color=70|size=16|text=寒冰卍神甲>
+<Text|x=245.0|y=121.0|color=70|size=16|text=日炎斗篷>
+<Text|x=245.0|y=152.0|color=70|size=16|text=卑劣手杖>
+<Text|x=245.0|y=183.0|color=70|size=16|text=抑制符咒>
+<Text|x=245.0|y=214.0|color=70|size=16|text=窃法之刃>
+<Text|x=245.0|y=245.0|color=70|size=16|text=亡灵手套>
+<Text|x=245.0|y=276.0|color=70|size=16|text=适应性头盔>
+<Text|x=245.0|y=307.0|color=70|size=16|text=号令之旗>
 
-<> {No.4/FCOLOR=150}              {日炎斗篷/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G203)>/20     <点击回收|246#一次合区后取消该福利/@福利回收4> \ \
+<Text|x=449.0|y=28.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=59.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=90.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=121.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=152.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=183.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=214.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=245.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=276.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=307.0|color=150|size=16|text=5钻石>
 
-<> {No.5/FCOLOR=150}              {卑劣手杖/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G204)>/20     <点击回收|246#一次合区后取消该福利/@福利回收5> \ \
+<RText|x=525.0|y=28.0|color=150|size=16|text=<$STR(G200)>/20>
+<RText|x=525.0|y=59.0|color=150|size=16|text=<$STR(G201)>/20>
+<RText|x=525.0|y=90.0|color=150|size=16|text=<$STR(G202)>/20>
+<RText|x=525.0|y=121.0|color=150|size=16|text=<$STR(G203)>/20>
+<RText|x=525.0|y=152.0|color=150|size=16|text=<$STR(G204)>/20>
+<RText|x=525.0|y=183.0|color=150|size=16|text=<$STR(G205)>/20>
+<RText|x=525.0|y=214.0|color=150|size=16|text=<$STR(G206)>/20>
+<RText|x=525.0|y=245.0|color=150|size=16|text=<$STR(G207)>/20>
+<RText|x=525.0|y=276.0|color=150|size=16|text=<$STR(G208)>/20>
+<RText|x=525.0|y=307.0|color=150|size=16|text=<$STR(G209)>/20>
 
-<> {No.6/FCOLOR=150}              {抑制符咒/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G205)>/20     <点击回收|246#一次合区后取消该福利/@福利回收6> \ \
+<Button|x=609.0|y=23.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收1>
+<Button|x=609.0|y=54.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收2>
+<Button|x=609.0|y=85.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收3>
+<Button|x=609.0|y=116.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收4>
+<Button|x=609.0|y=147.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收5>
+<Button|x=609.0|y=178.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收6>
+<Button|x=609.0|y=209.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收7>
+<Button|x=609.0|y=240.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收8>
+<Button|x=609.0|y=271.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收9>
+<Button|x=609.0|y=302.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收10>
 
-<> {No.7/FCOLOR=150}              {窃法之刃/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G206)>/20     <点击回收|246#一次合区后取消该福利/@福利回收7> \ \
-
-<> {No.8/FCOLOR=150}              {亡灵手套/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G207)>/20     <点击回收|246#一次合区后取消该福利/@福利回收8> \ \
-
-<> {No.9/FCOLOR=150}             {适应性头盔/FCOLOR=70}             { 5钻石/FCOLOR=150}       <$STR(G208)>/20     <点击回收|246#一次合区后取消该福利/@福利回收9> \ \
-
-<> {No.10/FCOLOR=150}             {号令之旗/FCOLOR=70}              { 5钻石/FCOLOR=150}       <$STR(G209)>/20     <点击回收|246#一次合区后取消该福利/@福利回收10>\ \
-
-
-<>                                    <上一页/@奖励大厅触发NAM>    <下一页/@第二页>   <1／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
-
+<Text|x=204.0|y=335.0|color=249|size=16|text=新区福利共计15000钻石合区后关闭>
+<Text|x=550.0|y=335.0|color=249|size=16|text=一次合区后取消该福利>
 
 [@第二页]
 #if
 #act
 #say
-<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
-<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
-<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
-<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
-<>\ \ \ \ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/jldt.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=177.0|y=-1.0|color=251|size=16|text=编号>
+<Text|x=286.0|y=-1.0|color=251|size=16|text=物品名称>
+<Text|x=438.0|y=-1.0|color=251|size=16|text=奖励金额>
+<Text|x=541.0|y=-1.0|color=251|size=16|text=名额>
+<Text|x=628.0|y=-1.0|color=251|size=16|text=物品回收>
+<Button|x=124.0|y=140.0|rotate=0|pimg=public/button/00175.png|nimg=public/button/00173.png|mimg=public/button/00174.png|size=16|color=255|link=@奖励大厅触发NAM>
+<Button|x=752.0|y=140.0|rotate=0|nimg=public/button/00170.png|mimg=public/button/00171.png|size=16|color=255|pimg=public/button/00172.png|link=@第三页>
+<Button|x=172.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=新区福利|link=@奖励大厅触发NAM>
+<Button|x=309.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=钻石首爆|link=@限时奖励人民币NAM>
+<Button|x=463.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=金币首爆|link=@限时奖励金币NAM>
+<Button|x=609.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=永久回收|link=@永久回收触发NAM>
 
-<> {No.11/FCOLOR=150}            {禁忌法相/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G210)>/20     <点击回收|246#一次合区后取消该福利/@福利回收11>      \ \
+<Text|x=175.0|y=28.0|color=150|size=16|text=No.11>
+<Text|x=175.0|y=59.0|color=150|size=16|text=No.12>
+<Text|x=175.0|y=90.0|color=150|size=16|text=No.13>
+<Text|x=175.0|y=121.0|color=150|size=16|text=No.14>
+<Text|x=175.0|y=152.0|color=150|size=16|text=No.15>
+<Text|x=175.0|y=183.0|color=150|size=16|text=No.16>
+<Text|x=175.0|y=214.0|color=150|size=16|text=No.17>
+<Text|x=175.0|y=245.0|color=150|size=16|text=No.18>
+<Text|x=175.0|y=276.0|color=150|size=16|text=No.19>
+<Text|x=175.0|y=307.0|color=150|size=16|text=No.20>
 
-<> {No.12/FCOLOR=150}            {疾风之靴/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G211)>/20     <点击回收|246#一次合区后取消该福利/@福利回收12>      \  \
+<Text|x=245.0|y=28.0|color=70|size=16|text=禁忌法相>
+<Text|x=245.0|y=59.0|color=70|size=16|text=魑魅々杀猪刀>
+<Text|x=245.0|y=90.0|color=70|size=16|text=巨人腰带>
+<Text|x=245.0|y=121.0|color=70|size=16|text=仙女护符>
+<Text|x=245.0|y=152.0|color=70|size=16|text=恶魔的枷锁>
+<Text|x=245.0|y=183.0|color=70|size=16|text=冤魂的哭声>
+<Text|x=245.0|y=214.0|color=70|size=16|text=魅惑之心>
+<Text|x=245.0|y=245.0|color=70|size=16|text=『毒灭万物』>
+<Text|x=245.0|y=276.0|color=70|size=16|text=王座之争>
+<Text|x=245.0|y=307.0|color=70|size=16|text=永夜〝无光>
 
-<> {No.13/FCOLOR=150}            {巨人腰带/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G212)>/20     <点击回收|246#一次合区后取消该福利/@福利回收13> \ \
+<Text|x=449.0|y=28.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=59.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=90.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=121.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=152.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=183.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=214.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=245.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=276.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=307.0|color=150|size=16|text=5钻石>
 
-<> {No.14/FCOLOR=150}            {仙女护符/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G213)>/20     <点击回收|246#一次合区后取消该福利/@福利回收14> \ \
+<RText|x=525.0|y=28.0|color=150|size=16|text=<$STR(G210)>/20>
+<RText|x=525.0|y=59.0|color=150|size=16|text=<$STR(G211)>/20>
+<RText|x=525.0|y=90.0|color=150|size=16|text=<$STR(G212)>/20>
+<RText|x=525.0|y=121.0|color=150|size=16|text=<$STR(G213)>/20>
+<RText|x=525.0|y=152.0|color=150|size=16|text=<$STR(G214)>/20>
+<RText|x=525.0|y=183.0|color=150|size=16|text=<$STR(G215)>/20>
+<RText|x=525.0|y=214.0|color=150|size=16|text=<$STR(G216)>/20>
+<RText|x=525.0|y=245.0|color=150|size=16|text=<$STR(G217)>/20>
+<RText|x=525.0|y=276.0|color=150|size=16|text=<$STR(G218)>/20>
+<RText|x=525.0|y=307.0|color=150|size=16|text=<$STR(G219)>/20>
 
-<> {No.15/FCOLOR=150}            {恶魔的枷锁/FCOLOR=70}            { 5钻石/FCOLOR=150}        <$STR(G214)>/20     <点击回收|246#一次合区后取消该福利/@福利回收15> \ \
+<Button|x=609.0|y=23.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收11>
+<Button|x=609.0|y=54.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收12>
+<Button|x=609.0|y=85.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收13>
+<Button|x=609.0|y=116.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收14>
+<Button|x=609.0|y=147.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收15>
+<Button|x=609.0|y=178.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收16>
+<Button|x=609.0|y=209.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收17>
+<Button|x=609.0|y=240.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收18>
+<Button|x=609.0|y=271.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收19>
+<Button|x=609.0|y=302.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收20>
 
-<> {No.16/FCOLOR=150}            {冤魂的哭声/FCOLOR=70}            { 5钻石/FCOLOR=150}        <$STR(G215)>/20     <点击回收|246#一次合区后取消该福利/@福利回收16> \ \
-
-<> {No.17/FCOLOR=150}            {魅惑之心/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G216)>/20     <点击回收|246#一次合区后取消该福利/@福利回收17> \ \
-
-<> {No.18/FCOLOR=150}           {『毒灭万物』/FCOLOR=70}           { 5钻石/FCOLOR=150}        <$STR(G217)>/20     <点击回收|246#一次合区后取消该福利/@福利回收18> \ \
-
-<> {No.19/FCOLOR=150}            {王座之争/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G218)>/20     <点击回收|246#一次合区后取消该福利/@福利回收19> \ \
-
-<> {No.20/FCOLOR=150}            {永夜〝无光/FCOLOR=70}            { 5钻石/FCOLOR=150}        <$STR(G219)>/20     <点击回收|246#一次合区后取消该福利/@福利回收20> \ \
-
-
-<>                                    <上一页/@奖励大厅触发NAM>    <下一页/@第三页>   <2／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
+<Text|x=204.0|y=335.0|color=249|size=16|text=新区福利共计15000钻石合区后关闭>
+;<Text|x=500.0|y=335.0|color=249|size=16|text=2／5>
+<Text|x=550.0|y=335.0|color=249|size=16|text=一次合区后取消该福利>
 
 
 
@@ -85,116 +172,233 @@ ReadConfigFileItem ..\QuestDiary\配置文件\合区状态.ini 当前状态 0 S$合区信息
 #if
 #act
 #say
-<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
-<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
-<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
-<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
-<>\ \ \ \ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/jldt.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=177.0|y=-1.0|color=251|size=16|text=编号>
+<Text|x=286.0|y=-1.0|color=251|size=16|text=物品名称>
+<Text|x=438.0|y=-1.0|color=251|size=16|text=奖励金额>
+<Text|x=541.0|y=-1.0|color=251|size=16|text=名额>
+<Text|x=628.0|y=-1.0|color=251|size=16|text=物品回收>
+<Button|x=124.0|y=140.0|rotate=0|pimg=public/button/00175.png|nimg=public/button/00173.png|mimg=public/button/00174.png|size=16|color=255|link=@第二页>
+<Button|x=752.0|y=140.0|rotate=0|nimg=public/button/00170.png|mimg=public/button/00171.png|size=16|color=255|pimg=public/button/00172.png|link=@第四页>
+<Button|x=172.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=新区福利|link=@奖励大厅触发NAM>
+<Button|x=309.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=钻石首爆|link=@限时奖励人民币NAM>
+<Button|x=463.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=金币首爆|link=@限时奖励金币NAM>
+<Button|x=609.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=永久回收|link=@永久回收触发NAM>
 
-<> {No.21/FCOLOR=150}          {治疗＂守卫/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G220)>/20     <点击回收|246#一次合区后取消该福利/@福利回收21> \ \
+<Text|x=175.0|y=28.0|color=150|size=16|text=No.21>
+<Text|x=175.0|y=59.0|color=150|size=16|text=No.22>
+<Text|x=175.0|y=90.0|color=150|size=16|text=No.23>
+<Text|x=175.0|y=121.0|color=150|size=16|text=No.24>
+<Text|x=175.0|y=152.0|color=150|size=16|text=No.25>
+<Text|x=175.0|y=183.0|color=150|size=16|text=No.26>
+<Text|x=175.0|y=214.0|color=150|size=16|text=No.27>
+<Text|x=175.0|y=245.0|color=150|size=16|text=No.28>
+<Text|x=175.0|y=276.0|color=150|size=16|text=No.29>
+<Text|x=175.0|y=307.0|color=150|size=16|text=No.30>
 
-<> {No.22/FCOLOR=150}          {梦魇ぺ恒古/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G221)>/20     <点击回收|246#一次合区后取消该福利/@福利回收22> \ \
+<Text|x=245.0|y=28.0|color=70|size=16|text=治疗＂守卫>
+<Text|x=245.0|y=59.0|color=70|size=16|text=梦魇ぺ恒古>
+<Text|x=245.0|y=90.0|color=70|size=16|text=天罡べ霸体>
+<Text|x=245.0|y=121.0|color=70|size=16|text=冠军披风★>
+<Text|x=245.0|y=152.0|color=70|size=16|text=放逐之刃★>
+<Text|x=245.0|y=183.0|color=70|size=16|text=争战铠甲★>
+<Text|x=245.0|y=214.0|color=70|size=16|text=月华咒刃★>
+<Text|x=245.0|y=245.0|color=70|size=16|text=★破败王者之刃★>
+<Text|x=245.0|y=276.0|color=70|size=16|text=★石像鬼板甲★>
+<Text|x=245.0|y=307.0|color=70|size=16|text=铁血战旗¤星云刃>
 
-<> {No.23/FCOLOR=150}          {天罡べ霸体/FCOLOR=70}              { 5钻石/FCOLOR=150}        <$STR(G222)>/20     <点击回收|246#一次合区后取消该福利/@福利回收23> \ \
+<Text|x=449.0|y=28.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=59.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=90.0|color=150|size=16|text=5钻石>
+<Text|x=449.0|y=121.0|color=150|size=16|text=8钻石>
+<Text|x=449.0|y=152.0|color=150|size=16|text=8钻石>
+<Text|x=449.0|y=183.0|color=150|size=16|text=8钻石>
+<Text|x=449.0|y=214.0|color=150|size=16|text=8钻石>
+<Text|x=449.0|y=245.0|color=150|size=16|text=10钻石>
+<Text|x=449.0|y=276.0|color=150|size=16|text=10钻石>
+<Text|x=449.0|y=307.0|color=150|size=16|text=10钻石>
 
-<> {No.24/FCOLOR=150}          {冠军披风★/FCOLOR=70}              {  8钻石/FCOLOR=150}       <$STR(G223)>/20     <点击回收|246#一次合区后取消该福利/@福利回收24> \ \
+<RText|x=525.0|y=28.0|color=150|size=16|text=<$STR(G220)>/20>
+<RText|x=525.0|y=59.0|color=150|size=16|text=<$STR(G221)>/20>
+<RText|x=525.0|y=90.0|color=150|size=16|text=<$STR(G222)>/20>
+<RText|x=525.0|y=121.0|color=150|size=16|text=<$STR(G223)>/20>
+<RText|x=525.0|y=152.0|color=150|size=16|text=<$STR(G224)>/20>
+<RText|x=525.0|y=183.0|color=150|size=16|text=<$STR(G225)>/20>
+<RText|x=525.0|y=214.0|color=150|size=16|text=<$STR(G226)>/20>
+<RText|x=525.0|y=245.0|color=150|size=16|text=<$STR(G227)>/20>
+<RText|x=525.0|y=276.0|color=150|size=16|text=<$STR(G228)>/20>
+<RText|x=525.0|y=307.0|color=150|size=16|text=<$STR(G229)>/20>
 
-<> {No.25/FCOLOR=150}          {放逐之刃★/FCOLOR=70}              {  8钻石/FCOLOR=150}       <$STR(G224)>/20     <点击回收|246#一次合区后取消该福利/@福利回收25> \ \
+<Button|x=609.0|y=23.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收21>
+<Button|x=609.0|y=54.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收22>
+<Button|x=609.0|y=85.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收23>
+<Button|x=609.0|y=116.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收24>
+<Button|x=609.0|y=147.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收25>
+<Button|x=609.0|y=178.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收26>
+<Button|x=609.0|y=209.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收27>
+<Button|x=609.0|y=240.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收28>
+<Button|x=609.0|y=271.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收29>
+<Button|x=609.0|y=302.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收30>
 
-<> {No.26/FCOLOR=150}          {争战铠甲★/FCOLOR=70}              {  8钻石/FCOLOR=150}       <$STR(G225)>/20     <点击回收|246#一次合区后取消该福利/@福利回收26> \ \
-
-<> {No.27/FCOLOR=150}          {月华咒刃★/FCOLOR=70}              {  8钻石/FCOLOR=150}       <$STR(G226)>/20     <点击回收|246#一次合区后取消该福利/@福利回收27> \ \
-
-<> {No.28/FCOLOR=150}          {★破败王者之刃★/FCOLOR=70}        { 10钻石/FCOLOR=150}       <$STR(G227)>/20     <点击回收|246#一次合区后取消该福利/@福利回收28> \ \
-
-<> {No.29/FCOLOR=150}          {★石像鬼板甲★/FCOLOR=70}          { 10钻石/FCOLOR=150}       <$STR(G228)>/20     <点击回收|246#一次合区后取消该福利/@福利回收29> \ \
-
-<> {No.30/FCOLOR=150}          {铁血战旗¤星云刃/FCOLOR=70}        { 10钻石/FCOLOR=150}       <$STR(G229)>/20     <点击回收|246#一次合区后取消该福利/@福利回收30> \ \
-
-
-<>                                    <上一页/@第二页>    <下一页/@第四页>   <3／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
-
-
-
-
+<Text|x=204.0|y=335.0|color=249|size=16|text=新区福利共计15000钻石合区后关闭>
+<Text|x=550.0|y=335.0|color=249|size=16|text=一次合区后取消该福利>
 
 [@第四页]
 
 #if
 #act
 #say
-<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
-<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
-<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
-<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
-<>\ \ \ \ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/jldt.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=177.0|y=-1.0|color=251|size=16|text=编号>
+<Text|x=286.0|y=-1.0|color=251|size=16|text=物品名称>
+<Text|x=438.0|y=-1.0|color=251|size=16|text=奖励金额>
+<Text|x=541.0|y=-1.0|color=251|size=16|text=名额>
+<Text|x=628.0|y=-1.0|color=251|size=16|text=物品回收>
+<Button|x=124.0|y=140.0|rotate=0|pimg=public/button/00175.png|nimg=public/button/00173.png|mimg=public/button/00174.png|size=16|color=255|link=@第三页>
+<Button|x=752.0|y=140.0|rotate=0|nimg=public/button/00170.png|mimg=public/button/00171.png|size=16|color=255|pimg=public/button/00172.png|link=@第五页>
+<Button|x=172.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=新区福利|link=@奖励大厅触发NAM>
+<Button|x=309.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=钻石首爆|link=@限时奖励人民币NAM>
+<Button|x=463.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=金币首爆|link=@限时奖励金币NAM>
+<Button|x=609.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=永久回收|link=@永久回收触发NAM>
 
-<> {No.31/FCOLOR=150}          {·兽武修真¤软金甲·/FCOLOR=70}    { 10钻石/FCOLOR=150}       <$STR(G230)>/20     <点击回收|246#一次合区后取消该福利/@福利回收31> \ \
+<Text|x=175.0|y=28.0|color=150|size=16|text=No.31>
+<Text|x=175.0|y=59.0|color=150|size=16|text=No.32>
+<Text|x=175.0|y=90.0|color=150|size=16|text=No.33>
+<Text|x=175.0|y=121.0|color=150|size=16|text=No.34>
+<Text|x=175.0|y=152.0|color=150|size=16|text=No.35>
+<Text|x=175.0|y=183.0|color=150|size=16|text=No.36>
+<Text|x=175.0|y=214.0|color=150|size=16|text=No.37>
+<Text|x=175.0|y=245.0|color=150|size=16|text=No.38>
+<Text|x=175.0|y=276.0|color=150|size=16|text=No.39>
+<Text|x=175.0|y=307.0|color=150|size=16|text=No.40>
 
-<> {No.32/FCOLOR=150}          {【屠ヶ龙】/FCOLOR=70}              { 10钻石/FCOLOR=150}       <$STR(G231)>/20     <点击回收|246#一次合区后取消该福利/@福利回收32> \ \
+<Text|x=245.0|y=28.0|color=70|size=16|text=·兽武修真¤软金甲·>
+<Text|x=245.0|y=59.0|color=70|size=16|text=【屠ヶ龙】>
+<Text|x=245.0|y=90.0|color=70|size=16|text=【天ヶ魔】>
+<Text|x=245.0|y=121.0|color=70|size=16|text=●●盘古斧●●>
+<Text|x=245.0|y=152.0|color=70|size=16|text=●●鸿蒙●●>
+<Text|x=245.0|y=183.0|color=70|size=16|text=の沙城霸主的战刃>
+<Text|x=245.0|y=214.0|color=70|size=16|text=·白肆的祈祷※※>
+<Text|x=245.0|y=245.0|color=70|size=16|text=·紫府金剑·>
+<Text|x=245.0|y=276.0|color=70|size=16|text=·如意金箍棒·>
+<Text|x=245.0|y=307.0|color=70|size=16|text=·定海の神针·>
 
-<> {No.33/FCOLOR=150}          {【天ヶ魔】/FCOLOR=70}              { 10钻石/FCOLOR=150}       <$STR(G232)>/20     <点击回收|246#一次合区后取消该福利/@福利回收33> \ \
+<Text|x=449.0|y=28.0|color=150|size=16|text=10钻石>
+<Text|x=449.0|y=59.0|color=150|size=16|text=10钻石>
+<Text|x=449.0|y=90.0|color=150|size=16|text=10钻石>
+<Text|x=449.0|y=121.0|color=150|size=16|text=10钻石>
+<Text|x=449.0|y=152.0|color=150|size=16|text=10钻石>
+<Text|x=449.0|y=183.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=214.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=245.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=276.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=307.0|color=150|size=16|text=20钻石>
 
-<> {No.34/FCOLOR=150}          {●●盘古斧●●/FCOLOR=70}          { 10钻石/FCOLOR=150}       <$STR(G233)>/20     <点击回收|246#一次合区后取消该福利/@福利回收34> \ \
+<RText|x=525.0|y=28.0|color=150|size=16|text=<$STR(G230)>/20>
+<RText|x=525.0|y=59.0|color=150|size=16|text=<$STR(G231)>/20>
+<RText|x=525.0|y=90.0|color=150|size=16|text=<$STR(G232)>/20>
+<RText|x=525.0|y=121.0|color=150|size=16|text=<$STR(G233)>/20>
+<RText|x=525.0|y=152.0|color=150|size=16|text=<$STR(G234)>/20>
+<RText|x=525.0|y=183.0|color=150|size=16|text=<$STR(G235)>/20>
+<RText|x=525.0|y=214.0|color=150|size=16|text=<$STR(G236)>/20>
+<RText|x=525.0|y=245.0|color=150|size=16|text=<$STR(G237)>/20>
+<RText|x=525.0|y=276.0|color=150|size=16|text=<$STR(G238)>/20>
+<RText|x=525.0|y=307.0|color=150|size=16|text=<$STR(G239)>/20>
 
-<> {No.35/FCOLOR=150}          {●●鸿蒙●●/FCOLOR=70}            { 10钻石/FCOLOR=150}       <$STR(G234)>/20     <点击回收|246#一次合区后取消该福利/@福利回收35> \ \
+<Button|x=609.0|y=23.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收31>
+<Button|x=609.0|y=54.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收32>
+<Button|x=609.0|y=85.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收33>
+<Button|x=609.0|y=116.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收34>
+<Button|x=609.0|y=147.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收35>
+<Button|x=609.0|y=178.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收36>
+<Button|x=609.0|y=209.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收37>
+<Button|x=609.0|y=240.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收38>
+<Button|x=609.0|y=271.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收39>
+<Button|x=609.0|y=302.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收40>
 
-<> {No.36/FCOLOR=150}          {の沙城霸主的战刃/FCOLOR=70}        { 20钻石/FCOLOR=150}       <$STR(G235)>/15     <点击回收|246#一次合区后取消该福利/@福利回收36> \ \
-<>
-<> {No.37/FCOLOR=150}          {·白肆的祈祷※※/FCOLOR=70}        { 20钻石/FCOLOR=150}       <$STR(G236)>/15     <点击回收|246#一次合区后取消该福利/@福利回收37> \ \
-
-<> {No.38/FCOLOR=150}          {·紫府金剑·/FCOLOR=70}            { 20钻石/FCOLOR=150}       <$STR(G237)>/15     <点击回收|246#一次合区后取消该福利/@福利回收38> \ \
-
-<> {No.39/FCOLOR=150}          {·如意金箍棒·/FCOLOR=70}          { 20钻石/FCOLOR=150}       <$STR(G238)>/15     <点击回收|246#一次合区后取消该福利/@福利回收39> \ \
-
-<> {No.40/FCOLOR=150}          {·定海の神针·/FCOLOR=70}          { 20钻石/FCOLOR=150}       <$STR(G239)>/15     <点击回收|246#一次合区后取消该福利/@福利回收40>\ \
-
-
-<>                                    <上一页/@第三页>    <下一页/@第五页>   <4／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
-
+<Text|x=204.0|y=335.0|color=249|size=16|text=新区福利共计15000钻石合区后关闭>
+<Text|x=550.0|y=335.0|color=249|size=16|text=一次合区后取消该福利>
 
 
 [@第五页]
-#if
-#act
-#say
-<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
-<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
-<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
-<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
-<>\ \ \ \ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/jldt.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=177.0|y=-1.0|color=251|size=16|text=编号>
+<Text|x=286.0|y=-1.0|color=251|size=16|text=物品名称>
+<Text|x=438.0|y=-1.0|color=251|size=16|text=奖励金额>
+<Text|x=541.0|y=-1.0|color=251|size=16|text=名额>
+<Text|x=628.0|y=-1.0|color=251|size=16|text=物品回收>
+<Button|x=124.0|y=140.0|rotate=0|pimg=public/button/00175.png|nimg=public/button/00173.png|mimg=public/button/00174.png|size=16|color=255|link=@第四页>
+<Button|x=752.0|y=140.0|rotate=0|nimg=public/button/00170.png|mimg=public/button/00171.png|size=16|color=255|pimg=public/button/00172.png|grey=1>
+<Button|x=172.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=新区福利|link=@奖励大厅触发NAM>
+<Button|x=309.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=钻石首爆|link=@限时奖励人民币NAM>
+<Button|x=463.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=金币首爆|link=@限时奖励金币NAM>
+<Button|x=609.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=永久回收|link=@永久回收触发NAM>
 
-<> {No.41/FCOLOR=150}          {咒 /FCOLOR=70}                     { 20钻石/FCOLOR=150}       <$STR(G240)>/15     <点击回收|246#一次合区后取消该福利/@福利回收41> \ \
+<Text|x=175.0|y=28.0|color=150|size=16|text=No.41>
+<Text|x=175.0|y=59.0|color=150|size=16|text=No.42>
+<Text|x=175.0|y=90.0|color=150|size=16|text=No.43>
+<Text|x=175.0|y=121.0|color=150|size=16|text=No.44>
+<Text|x=175.0|y=152.0|color=150|size=16|text=No.45>
+<Text|x=175.0|y=183.0|color=150|size=16|text=No.46>
+<Text|x=175.0|y=214.0|color=150|size=16|text=No.47>
+<Text|x=175.0|y=245.0|color=150|size=16|text=No.48>
+<Text|x=175.0|y=276.0|color=150|size=16|text=No.49>
+<Text|x=175.0|y=307.0|color=150|size=16|text=No.50>
 
-<> {No.42/FCOLOR=150}          {刑天の/FCOLOR=70}                  { 20钻石/FCOLOR=150}       <$STR(G241)>/15     <点击回收|246#一次合区后取消该福利/@福利回收42> \ \
+<Text|x=245.0|y=28.0|color=70|size=16|text=咒>
+<Text|x=245.0|y=59.0|color=70|size=16|text=刑天の>
+<Text|x=245.0|y=90.0|color=70|size=16|text=封神の>
+<Text|x=245.0|y=121.0|color=70|size=16|text=创世の>
+<Text|x=245.0|y=152.0|color=70|size=16|text=方天画戟の神兵>
+<Text|x=245.0|y=183.0|color=70|size=16|text=权利の剑>
+<Text|x=245.0|y=214.0|color=70|size=16|text=「赤炎·天照」>
+<Text|x=245.0|y=245.0|color=70|size=16|text=冥火钢牙·锯锋>
+<Text|x=245.0|y=276.0|color=70|size=16|text=◎黑鳞铠甲◎>
+<Text|x=245.0|y=307.0|color=70|size=16|text=风蚀之殇-残影>
 
-<> {No.43/FCOLOR=150}          {封神の/FCOLOR=70}                  { 20钻石/FCOLOR=150}       <$STR(G242)>/15     <点击回收|246#一次合区后取消该福利/@福利回收43> \ \
+<Text|x=449.0|y=28.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=59.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=90.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=121.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=152.0|color=150|size=16|text=20钻石>
+<Text|x=449.0|y=183.0|color=150|size=16|text=30钻石>
+<Text|x=449.0|y=214.0|color=150|size=16|text=30钻石>
+<Text|x=449.0|y=245.0|color=150|size=16|text=30钻石>
+<Text|x=449.0|y=276.0|color=150|size=16|text=50钻石>
+<Text|x=449.0|y=307.0|color=150|size=16|text=50钻石>
 
-<> {No.44/FCOLOR=150}          {创世の/FCOLOR=70}                  { 20钻石/FCOLOR=150}       <$STR(G243)>/15     <点击回收|246#一次合区后取消该福利/@福利回收44> \ \
+<RText|x=525.0|y=28.0|color=150|size=16|text=<$STR(G240)>/20>
+<RText|x=525.0|y=59.0|color=150|size=16|text=<$STR(G241)>/20>
+<RText|x=525.0|y=90.0|color=150|size=16|text=<$STR(G242)>/20>
+<RText|x=525.0|y=121.0|color=150|size=16|text=<$STR(G243)>/20>
+<RText|x=525.0|y=152.0|color=150|size=16|text=<$STR(G244)>/20>
+<RText|x=525.0|y=183.0|color=150|size=16|text=<$STR(G245)>/20>
+<RText|x=525.0|y=214.0|color=150|size=16|text=<$STR(G246)>/20>
+<RText|x=525.0|y=245.0|color=150|size=16|text=<$STR(G247)>/20>
+<RText|x=525.0|y=276.0|color=150|size=16|text=<$STR(G248)>/20>
+<RText|x=525.0|y=307.0|color=150|size=16|text=<$STR(G249)>/20>
 
-<> {No.45/FCOLOR=150}          {方天画戟の神兵/FCOLOR=70}          { 20钻石/FCOLOR=150}       <$STR(G244)>/15     <点击回收|246#一次合区后取消该福利/@福利回收45> \ \
+<Button|x=609.0|y=23.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收41>
+<Button|x=609.0|y=54.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收42>
+<Button|x=609.0|y=85.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收43>
+<Button|x=609.0|y=116.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收44>
+<Button|x=609.0|y=147.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收45>
+<Button|x=609.0|y=178.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收46>
+<Button|x=609.0|y=209.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收47>
+<Button|x=609.0|y=240.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收48>
+<Button|x=609.0|y=271.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收49>
+<Button|x=609.0|y=302.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=点击回收|link=@福利回收50>
 
-<> {No.46/FCOLOR=150}          {权利の剑/FCOLOR=70}                { 30钻石/FCOLOR=150}       <$STR(G245)>/10     <点击回收|246#一次合区后取消该福利/@福利回收46> \ \
-
-<> {No.47/FCOLOR=150}          {「赤炎·天照」/FCOLOR=70}          { 30钻石/FCOLOR=150}       <$STR(G246)>/10     <点击回收|246#一次合区后取消该福利/@福利回收47> \ \
-
-<> {No.48/FCOLOR=150}          {冥火钢牙·锯锋/FCOLOR=70}          { 30钻石/FCOLOR=150}       <$STR(G247)>/10     <点击回收|246#一次合区后取消该福利/@福利回收48> \ \
-
-<> {No.49/FCOLOR=150}          {◎黑鳞铠甲◎/FCOLOR=70}            { 50钻石/FCOLOR=150}       <$STR(G248)>/10     <点击回收|246#一次合区后取消该福利/@福利回收49> \ \
-
-<> {No.50/FCOLOR=150}          {风蚀之殇-残影/FCOLOR=70}           { 50钻石/FCOLOR=150}       <$STR(G249)>/10     <点击回收|246#一次合区后取消该福利/@福利回收50>  \ \
-
-
-<>                                    <上一页/@第四页>    <下一页/@第六页>   <5／5/FCOLOR=250> <新区福利共计15000钻石合区后关闭>\
-
-
-
-
+<Text|x=204.0|y=335.0|color=249|size=16|text=新区福利共计15000钻石合区后关闭>
+<Text|x=550.0|y=335.0|color=249|size=16|text=一次合区后取消该福利>
 
 [@第六页]
 #if
 #act
-messagebox 已经是最后一页了！
+SENDMSG 9 已经是最后一页了！
 ;OPENMERCHANTBIGDLG 13 387 1 4 0 -50 1 560 17
 ;#say
 ;<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
@@ -219,12 +423,12 @@ messagebox 已经是最后一页了！
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g249 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G249 0
@@ -235,22 +439,22 @@ GAMEPOINT + 50
 DEC G249 1
 INC G300 50
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『风蚀之殇-残影 』/FCOLOR=251>获得了50钻石。当前剩余名额还有<『<$STR(G249)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;;goto @第九页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 [@福利回收49]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g248 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G248 0
@@ -261,10 +465,10 @@ GAMEPOINT + 50
 DEC G248 1
 INC G300 50
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『◎黑鳞铠甲◎ 』/FCOLOR=251>获得了50钻石。当前剩余名额还有<『<$STR(G248)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第九页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 ;===============
@@ -272,12 +476,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g247 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G247 0
@@ -288,10 +492,10 @@ GAMEPOINT + 30
 DEC G247 1
 INC G300 30
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『冥火钢牙·锯锋 』/FCOLOR=251>获得了30钻石。当前剩余名额还有<『<$STR(G247)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第八页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -299,12 +503,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g246 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G246 0
@@ -315,10 +519,10 @@ GAMEPOINT + 30
 DEC G246 1
 INC G300 30
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『「赤炎·天照」 』/FCOLOR=251>获得了30钻石。当前剩余名额还有<『<$STR(G246)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第八页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -326,12 +530,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g245 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G245 0
@@ -342,10 +546,10 @@ GAMEPOINT + 30
 DEC G245 1
 INC G300 30
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『权利の剑 』/FCOLOR=251>获得了30钻石。当前剩余名额还有<『<$STR(G245)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第八页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -353,12 +557,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g244 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G244 0
@@ -369,10 +573,10 @@ GAMEPOINT + 20
 DEC G244 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『方天画戟の神兵 』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G244)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第八页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -380,12 +584,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g243 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G243 0
@@ -396,22 +600,22 @@ GAMEPOINT + 20
 DEC G243 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『封神の 』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G243)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第八页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 [@福利回收43]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g242 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G242 0
@@ -422,22 +626,22 @@ GAMEPOINT + 20
 DEC G242 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『封神の 』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G242)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第八页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 ;===============
 [@福利回收42]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g241 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G241 0
@@ -448,22 +652,22 @@ GAMEPOINT + 20
 DEC G241 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『刑天の』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G241)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第七页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 [@福利回收41]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g240 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -475,22 +679,22 @@ GAMEPOINT + 20
 DEC G240 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『咒』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G240)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;;goto @第七页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 [@福利回收40]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g239 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G239 0
@@ -501,22 +705,22 @@ GAMEPOINT + 20
 DEC G239 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·定海の神针·』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G239)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;;goto @第七页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 [@福利回收39]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g238 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G238 0
@@ -527,22 +731,22 @@ GAMEPOINT + 20
 DEC G238 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·如意金箍棒·』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G238)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第七页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 [@福利回收38]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g237 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G237 0
@@ -553,10 +757,10 @@ GAMEPOINT + 20
 DEC G237 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·紫府金剑』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G237)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第七页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -565,12 +769,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g236 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G236 0
@@ -581,10 +785,10 @@ GAMEPOINT + 20
 DEC G236 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『白肆的祈祷※※』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G236)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第七页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 ;===============
 
@@ -592,12 +796,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g235 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G235 0
@@ -608,10 +812,10 @@ GAMEPOINT + 20
 DEC G235 1
 INC G300 20
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『の沙城霸主的战刃』/FCOLOR=251>获得了20钻石。当前剩余名额还有<『<$STR(G235)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第六页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -619,12 +823,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g234 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G234 0
@@ -635,10 +839,10 @@ GAMEPOINT + 10
 DEC G234 1
 INC G300 10
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『●●鸿蒙●● 』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G234)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第六页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -646,12 +850,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g233 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G233 0
@@ -662,10 +866,10 @@ GAMEPOINT + 10
 DEC G233 1
 INC G300 10
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『●●盘古斧●●』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G233)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第六页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -673,12 +877,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g232 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G232 0
@@ -689,22 +893,22 @@ GAMEPOINT + 10
 DEC G232 1
 INC G300 10
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『【天ヶ魔】』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G232)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第六页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 [@福利回收32]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g231 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G231 0
@@ -715,22 +919,22 @@ GAMEPOINT + 10
 DEC G231 1
 INC G300 10
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『【屠ヶ龙】』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G231)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第六页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 ;===============
 [@福利回收31]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g230 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G230 0
@@ -741,10 +945,10 @@ GAMEPOINT + 10
 DEC G230 1
 INC G300 10
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·兽武修真¤软金甲』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G230)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第六页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 ;===============
 
@@ -752,12 +956,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g229 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G229 0
@@ -768,22 +972,22 @@ GAMEPOINT + 10
 DEC G229 1
 INC G300 10
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『·铁血战旗¤星云刃』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G229)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 ;===============
 [@福利回收29]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g228 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G228 0
@@ -794,10 +998,10 @@ GAMEPOINT + 10
 DEC G228 1
 INC G300 10
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『★石像鬼板甲★』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G228)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 ;===============
 
@@ -805,12 +1009,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g227 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G227 0
@@ -821,10 +1025,10 @@ GAMEPOINT + 10
 DEC G227 1
 INC G300 10
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『★破败王者之刃★』/FCOLOR=251>获得了10钻石。当前剩余名额还有<『<$STR(G227)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 ;===============
@@ -832,12 +1036,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g226 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G226 0
@@ -848,10 +1052,10 @@ GAMEPOINT + 8
 DEC G226 1
 INC G300 8
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『月华咒刃★』/FCOLOR=251>获得了8钻石。当前剩余名额还有<『<$STR(G226)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 ;===============
@@ -860,12 +1064,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g225 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G225 0
@@ -876,10 +1080,10 @@ GAMEPOINT + 8
 DEC G225 1
 INC G300 8
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『争战铠甲★』/FCOLOR=251>获得了8钻石。当前剩余名额还有<『<$STR(G225)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 ;===============
@@ -888,12 +1092,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g224 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 #if
 large G224 0
@@ -904,10 +1108,10 @@ GAMEPOINT + 8
 DEC G224 1
 INC G300 8
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『放逐之刃★』/FCOLOR=251>获得了8钻石。当前剩余名额还有<『<$STR(G224)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -915,12 +1119,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g223 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -932,10 +1136,10 @@ GAMEPOINT + 8
 DEC G223 1
 INC G300 8
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『冠军披风★ 』/FCOLOR=251>获得了8钻石。当前剩余名额还有<『<$STR(G223)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -945,13 +1149,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g200 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -963,10 +1167,10 @@ GAMEPOINT + 5
 DEC G200 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『★★★魍魉★★★』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G200)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -974,13 +1178,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g201 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -992,10 +1196,10 @@ GAMEPOINT + 5
 DEC G201 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『魑魅々杀猪刀』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G201)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1003,13 +1207,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g202 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1021,10 +1225,10 @@ GAMEPOINT + 5
 DEC G202 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『寒冰卍神甲』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G202)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1034,12 +1238,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g203 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1051,10 +1255,10 @@ GAMEPOINT + 5
 DEC G203 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『日炎斗篷』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G203)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1063,13 +1267,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g204 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1081,10 +1285,10 @@ GAMEPOINT + 5
 DEC G204 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『卑劣手杖』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G204)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1095,13 +1299,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g205 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1113,10 +1317,10 @@ GAMEPOINT + 5
 DEC G205 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『抑制符咒』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G205)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1126,13 +1330,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g206 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1144,10 +1348,10 @@ GAMEPOINT + 5
 DEC G206 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『抑制符咒』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G206)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1158,13 +1362,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g207 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1176,10 +1380,10 @@ GAMEPOINT + 5
 DEC G207 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『亡灵手套』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G207)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1189,13 +1393,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g208 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1207,10 +1411,10 @@ GAMEPOINT + 5
 DEC G208 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『适应性头盔』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G208)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @奖励大厅触发NAM
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1221,12 +1425,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g209 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1238,10 +1442,10 @@ GAMEPOINT + 5
 DEC G209 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『号令之旗』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G209)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第二页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1251,13 +1455,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g210 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1269,10 +1473,10 @@ GAMEPOINT + 5
 DEC G210 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『禁忌法相』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G210)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第二页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1283,13 +1487,13 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 
 #if
 equal g211 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1301,10 +1505,10 @@ GAMEPOINT + 5
 DEC G211 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『疾风之靴』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G211)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第二页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1313,12 +1517,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g212 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1330,10 +1534,10 @@ GAMEPOINT + 5
 DEC G212 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『巨人腰带』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G212)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第三页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1342,12 +1546,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g213 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1359,10 +1563,10 @@ GAMEPOINT + 5
 DEC G213 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『仙女护符』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G213)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第三页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1373,12 +1577,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g214 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1390,10 +1594,10 @@ GAMEPOINT + 5
 DEC G214 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『恶魔的枷锁』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G214)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第三页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1401,12 +1605,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g215 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1418,10 +1622,10 @@ GAMEPOINT + 5
 DEC G215 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『冤魂的哭声』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G215)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第三页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1429,12 +1633,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g216 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1446,22 +1650,22 @@ GAMEPOINT + 5
 DEC G216 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『魅惑之心』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G216)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第三页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 [@福利回收18]
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g217 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1473,10 +1677,10 @@ GAMEPOINT + 5
 DEC G217 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『毒灭万物』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G217)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;goto @第三页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1485,12 +1689,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g218 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1502,10 +1706,10 @@ GAMEPOINT + 5
 DEC G218 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『王座之争』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G218)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1515,12 +1719,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g219 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1532,10 +1736,10 @@ GAMEPOINT + 5
 DEC G219 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『永夜〝无光』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G219)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1545,12 +1749,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g220 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1562,10 +1766,10 @@ GAMEPOINT + 5
 DEC G220 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『治疗＂守卫』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G220)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1575,12 +1779,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g221 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1592,10 +1796,10 @@ GAMEPOINT + 5
 DEC G221 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『梦魇ぺ恒古』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G221)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1605,12 +1809,12 @@ break
 #if
 large S$合区信息 0
 #act
-MessageBox 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
+SENDMSG 9 此为新区福利，当前服务器已经进行过合区，无法再享受该福利..
 break
 #if
 equal g222 0
 #act
-MessageBox 该装备回收名额已满，无法再继续回收..
+SENDMSG 9 该装备回收名额已满，无法再继续回收..
 break
 
 #if
@@ -1622,10 +1826,10 @@ GAMEPOINT + 5
 DEC G222 1
 INC G300 5
 SENDMOVEMSG 0 22 0 20 1 ≮新区福利≯：恭喜玩家<『<$USERNAME>』/FCOLOR=250>成功回收了<『天罡べ霸体』/FCOLOR=251>获得了5钻石。当前剩余名额还有<『<$STR(G222)>个』/FCOLOR=250>！
-MessageBox 装备回收成功钻石获得增加..
+SENDMSG 9 装备回收成功钻石获得增加..
 ;;goto @第四页
 #ELSEACT
-MessageBox [提示]:请检查你背包内是否有对应装备!!!
+SENDMSG 9 [提示]:请检查你背包内是否有对应装备!!!
 break
 
 
@@ -1893,37 +2097,76 @@ MOV 	N$首爆颜色9 147
 #if
 #act
 #say
-<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
-<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
-<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
-<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
-<>\ \ \ \ \
-<> {No.<$str(S$首爆序号1)>/FCOLOR=150}    {<$STR(S$首爆名0)>/FCOLOR=253}         {<$str(S$JMB首爆金额0)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额0)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家0)>/FCOLOR=<$Str(N$首爆颜色0)>}  \ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/jldt.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=177.0|y=-1.0|color=251|size=16|text=编号>
+<Text|x=286.0|y=-1.0|color=251|size=16|text=物品名称>
+<Text|x=438.0|y=-1.0|color=251|size=16|text=奖励金额>
+<Text|x=541.0|y=-1.0|color=251|size=16|text=名额>
+<Text|x=628.0|y=-1.0|color=251|size=16|text=领取状态>
+<Button|x=124.0|y=140.0|rotate=0|pimg=public/button/00175.png|nimg=public/button/00173.png|mimg=public/button/00174.png|size=16|color=255|link=@金币首爆翻页减>
+<Button|x=752.0|y=140.0|rotate=0|nimg=public/button/00170.png|mimg=public/button/00171.png|size=16|color=255|pimg=public/button/00172.png|link=@金币首爆翻页加>
+<Button|x=172.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=新区福利|link=@奖励大厅触发NAM>
+<Button|x=309.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=钻石首爆|link=@限时奖励人民币NAM>
+<Button|x=463.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=金币首爆|link=@限时奖励金币NAM>
+<Button|x=609.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=永久回收|link=@永久回收触发NAM>
 
-<> {No.<$str(S$首爆序号2)>/FCOLOR=150}    {<$STR(S$首爆名1)>/FCOLOR=253}         {<$str(S$JMB首爆金额1)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额1)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家1)>/FCOLOR=<$Str(N$首爆颜色1)>}  \ \
+<RText|x=175.0|y=28.0|color=150|size=16|text={No.<$str(S$首爆序号1)>/FCOLOR=150}>
+<RText|x=175.0|y=59.0|color=150|size=16|text={No.<$str(S$首爆序号2)>/FCOLOR=150}>
+<RText|x=175.0|y=90.0|color=150|size=16|text={No.<$str(S$首爆序号3)>/FCOLOR=150}>
+<RText|x=175.0|y=121.0|color=150|size=16|text={No.<$str(S$首爆序号4)>/FCOLOR=150}>
+<RText|x=175.0|y=152.0|color=150|size=16|text={No.<$str(S$首爆序号5)>/FCOLOR=150}>
+<RText|x=175.0|y=183.0|color=150|size=16|text={No.<$str(S$首爆序号6)>/FCOLOR=150}>
+<RText|x=175.0|y=214.0|color=150|size=16|text={No.<$str(S$首爆序号7)>/FCOLOR=150}>
+<RText|x=175.0|y=245.0|color=150|size=16|text={No.<$str(S$首爆序号8)>/FCOLOR=150}>
+<RText|x=175.0|y=276.0|color=150|size=16|text={No.<$str(S$首爆序号9)>/FCOLOR=150}>
+<RText|x=175.0|y=307.0|color=150|size=16|text={No.<$str(S$首爆序号10)>/FCOLOR=150}>
 
-<> {No.<$str(S$首爆序号3)>/FCOLOR=150}    {<$STR(S$首爆名2)>/FCOLOR=253}         {<$str(S$JMB首爆金额2)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额2)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家2)>/FCOLOR=<$Str(N$首爆颜色2)>}  \ \
+<RText|x=245.0|y=28.0|color=70|size=16|text={<$STR(S$首爆名0)>/FCOLOR=253}>
+<RText|x=245.0|y=59.0|color=70|size=16|text={<$STR(S$首爆名1)>/FCOLOR=253}>
+<RText|x=245.0|y=90.0|color=70|size=16|text={<$STR(S$首爆名2)>/FCOLOR=253}>
+<RText|x=245.0|y=121.0|color=70|size=16|text={<$STR(S$首爆名3)>/FCOLOR=253}>
+<RText|x=245.0|y=152.0|color=70|size=16|text={<$STR(S$首爆名4)>/FCOLOR=253}>
+<RText|x=245.0|y=183.0|color=70|size=16|text={<$STR(S$首爆名5)>/FCOLOR=253}>
+<RText|x=245.0|y=214.0|color=70|size=16|text={<$STR(S$首爆名6)>/FCOLOR=253}>
+<RText|x=245.0|y=245.0|color=70|size=16|text={<$STR(S$首爆名7)>/FCOLOR=253}>
+<RText|x=245.0|y=276.0|color=70|size=16|text={<$STR(S$首爆名8)>/FCOLOR=253}>
+<RText|x=245.0|y=307.0|color=70|size=16|text={<$STR(S$首爆名9)>/FCOLOR=253}>
 
-<> {No.<$str(S$首爆序号4)>/FCOLOR=150}    {<$STR(S$首爆名3)>/FCOLOR=253}         {<$str(S$JMB首爆金额3)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额3)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色3)>}  \ \
+<RText|x=440.0|y=28.0|color=150|size=16|text={<$str(S$JMB首爆金额0)>金币/FCOLOR=150}>
+<RText|x=440.0|y=59.0|color=150|size=16|text={<$str(S$JMB首爆金额1)>金币/FCOLOR=150}>
+<RText|x=440.0|y=90.0|color=150|size=16|text={<$str(S$JMB首爆金额2)>金币/FCOLOR=150}>
+<RText|x=440.0|y=121.0|color=150|size=16|text={<$str(S$JMB首爆金额3)>金币/FCOLOR=150}>
+<RText|x=440.0|y=152.0|color=150|size=16|text={<$str(S$JMB首爆金额4)>金币/FCOLOR=150}>
+<RText|x=440.0|y=183.0|color=150|size=16|text={<$str(S$JMB首爆金额5)>金币/FCOLOR=150}>
+<RText|x=440.0|y=214.0|color=150|size=16|text={<$str(S$JMB首爆金额6)>金币/FCOLOR=150}>
+<RText|x=440.0|y=245.0|color=150|size=16|text={<$str(S$JMB首爆金额7)>金币/FCOLOR=150}>
+<RText|x=440.0|y=276.0|color=150|size=16|text={<$str(S$JMB首爆金额8)>金币/FCOLOR=150}>
+<RText|x=440.0|y=307.0|color=150|size=16|text={<$str(S$JMB首爆金额9)>金币/FCOLOR=150}>
 
-<> {No.<$str(S$首爆序号5)>/FCOLOR=150}    {<$STR(S$首爆名4)>/FCOLOR=253}         {<$str(S$JMB首爆金额4)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额4)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色4)>}  \ \
+<RText|x=540.0|y=28.0|color=150|size=16|text={<$STR(S$JMB首爆名额0)>/FCOLOR=<$Str(N$首爆颜色0)>}>
+<RText|x=540.0|y=59.0|color=150|size=16|text={<$STR(S$JMB首爆名额1)>/FCOLOR=<$Str(N$首爆颜色1)>}>
+<RText|x=540.0|y=90.0|color=150|size=16|text={<$STR(S$JMB首爆名额2)>/FCOLOR=<$Str(N$首爆颜色2)>}>
+<RText|x=540.0|y=121.0|color=150|size=16|text={<$STR(S$JMB首爆名额3)>/FCOLOR=<$Str(N$首爆颜色3)>}>
+<RText|x=540.0|y=152.0|color=150|size=16|text={<$STR(S$JMB首爆名额4)>/FCOLOR=<$Str(N$首爆颜色4)>}>
+<RText|x=540.0|y=183.0|color=150|size=16|text={<$STR(S$JMB首爆名额5)>/FCOLOR=<$Str(N$首爆颜色5)>}>
+<RText|x=540.0|y=214.0|color=150|size=16|text={<$STR(S$JMB首爆名额6)>/FCOLOR=<$Str(N$首爆颜色6)>}>
+<RText|x=540.0|y=245.0|color=150|size=16|text={<$STR(S$JMB首爆名额7)>/FCOLOR=<$Str(N$首爆颜色7)>}>
+<RText|x=540.0|y=276.0|color=150|size=16|text={<$STR(S$JMB首爆名额8)>/FCOLOR=<$Str(N$首爆颜色8)>}>
+<RText|x=540.0|y=307.0|color=150|size=16|text={<$STR(S$JMB首爆名额9)>/FCOLOR=<$Str(N$首爆颜色9)>}>
 
-<> {No.<$str(S$首爆序号6)>/FCOLOR=150}    {<$STR(S$首爆名5)>/FCOLOR=253}         {<$str(S$JMB首爆金额5)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额5)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家5)>/FCOLOR=<$Str(N$首爆颜色5)>}  \ \
+<RText|x=609.0|y=28.0|color=150|size=16|text={<$STR(S$JMB首爆玩家0)>/FCOLOR=<$Str(N$首爆颜色0)>}>
+<RText|x=609.0|y=59.0|color=150|size=16|text={<$STR(S$JMB首爆玩家1)>/FCOLOR=<$Str(N$首爆颜色1)>}>
+<RText|x=609.0|y=90.0|color=150|size=16|text={<$STR(S$JMB首爆玩家2)>/FCOLOR=<$Str(N$首爆颜色2)>}>
+<RText|x=609.0|y=121.0|color=150|size=16|text={<$STR(S$JMB首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色3)>}>
+<RText|x=609.0|y=152.0|color=150|size=16|text={<$STR(S$JMB首爆玩家4)>/FCOLOR=<$Str(N$首爆颜色4)>}>
+<RText|x=609.0|y=183.0|color=150|size=16|text={<$STR(S$JMB首爆玩家5)>/FCOLOR=<$Str(N$首爆颜色5)>}>
+<RText|x=609.0|y=214.0|color=150|size=16|text={<$STR(S$JMB首爆玩家6)>/FCOLOR=<$Str(N$首爆颜色6)>}>
+<RText|x=609.0|y=245.0|color=150|size=16|text={<$STR(S$JMB首爆玩家7)>/FCOLOR=<$Str(N$首爆颜色7)>}>
+<RText|x=609.0|y=276.0|color=150|size=16|text={<$STR(S$JMB首爆玩家8)>/FCOLOR=<$Str(N$首爆颜色8)>}>
+<RText|x=609.0|y=307.0|color=150|size=16|text={<$STR(S$JMB首爆玩家9)>/FCOLOR=<$Str(N$首爆颜色9)>}>
 
-<> {No.<$str(S$首爆序号7)>/FCOLOR=150}    {<$STR(S$首爆名6)>/FCOLOR=253}         {<$str(S$JMB首爆金额6)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额6)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家6)>/FCOLOR=<$Str(N$首爆颜色6)>}  \ \
-
-<> {No.<$str(S$首爆序号8)>/FCOLOR=150}    {<$STR(S$首爆名7)>/FCOLOR=253}         {<$str(S$JMB首爆金额7)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额7)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家7)>/FCOLOR=<$Str(N$首爆颜色7)>}  \ \
-
-<> {No.<$str(S$首爆序号9)>/FCOLOR=150}    {<$STR(S$首爆名8)>/FCOLOR=253}         {<$str(S$JMB首爆金额8)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额8)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家8)>/FCOLOR=<$Str(N$首爆颜色8)>}  \ \
-
-<> {No.<$str(S$首爆序号10)>/FCOLOR=150}    {<$STR(S$首爆名9)>/FCOLOR=253}         {<$str(S$JMB首爆金额9)>金币/FCOLOR=150}          {<$STR(S$JMB首爆名额9)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$JMB首爆玩家9)>/FCOLOR=<$Str(N$首爆颜色9)>}  \ \
-
-<>                                    <上一页/@金币首爆翻页减>    <下一页/@金币首爆翻页加>   <限时奖励打完为止/FCOLOR=151>
-
-
-
-
-
+<Text|x=204.0|y=335.0|color=249|size=16|text=限时奖励打完为止>
 
 
 [@金币首爆翻页减]
@@ -1944,7 +2187,7 @@ DEC N$首爆当页 1
 dec N$首爆行号 20
 goto @金币首爆奖励界面
 #elseact
-messagebox 已经是第一页了！
+SENDMSG 9 已经是第一页了！
 
 
 [@金币首爆翻页加]
@@ -1964,7 +2207,7 @@ INC N$首爆序号10 10
 INC N$首爆当页 1
 goto @金币首爆奖励界面
 #elseact
-messagebox 已经是最后一页了！
+SENDMSG 9 已经是最后一页了！
 
 
 
@@ -2240,33 +2483,77 @@ MOV 	N$首爆颜色10 147
 #if
 #act
 #say
-<><ImgEX:13:395:395:395:80:5/@奖励大厅触发NAM>
-<><ImgEX:13:388:388:388:90:5/@限时奖励人民币NAM>
-<><ImgEX:13:390:390:390:100:5/@限时奖励金币NAM>
-<><ImgEX:13:389:389:389:110:5/@永久回收触发NAM>\
-<>\ \ \ \ \
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/jldt.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|x=177.0|y=-1.0|color=251|size=16|text=编号>
+<Text|x=286.0|y=-1.0|color=251|size=16|text=物品名称>
+<Text|x=438.0|y=-1.0|color=251|size=16|text=奖励金额>
+<Text|x=541.0|y=-1.0|color=251|size=16|text=名额>
+<Text|x=628.0|y=-1.0|color=251|size=16|text=领取状态>
+<Button|x=124.0|y=140.0|rotate=0|pimg=public/button/00175.png|nimg=public/button/00173.png|mimg=public/button/00174.png|size=16|color=255|link=@钻石首爆翻页减>
+<Button|x=752.0|y=140.0|rotate=0|nimg=public/button/00170.png|mimg=public/button/00171.png|size=16|color=255|pimg=public/button/00172.png|link=@钻石首爆翻页加>
+<Button|x=172.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=新区福利|link=@奖励大厅触发NAM>
+<Button|x=309.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=钻石首爆|link=@限时奖励人民币NAM>
+<Button|x=463.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=金币首爆|link=@限时奖励金币NAM>
+<Button|x=609.0|y=-40.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=永久回收|link=@永久回收触发NAM>
 
-<> {No.<$str(S$首爆序号1)>/FCOLOR=150}     {<$STR(S$首爆名0)>/FCOLOR=253}        {<$str(S$钻石首爆金额0)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额0)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家0)>/FCOLOR=<$Str(N$首爆颜色0)>}    \ \
+<RText|x=175.0|y=28.0|color=150|size=16|text={No.<$str(S$首爆序号1)>/FCOLOR=150}>
+<RText|x=175.0|y=59.0|color=150|size=16|text={No.<$str(S$首爆序号2)>/FCOLOR=150}>
+<RText|x=175.0|y=90.0|color=150|size=16|text={No.<$str(S$首爆序号3)>/FCOLOR=150}>
+<RText|x=175.0|y=121.0|color=150|size=16|text={No.<$str(S$首爆序号4)>/FCOLOR=150}>
+<RText|x=175.0|y=152.0|color=150|size=16|text={No.<$str(S$首爆序号5)>/FCOLOR=150}>
+<RText|x=175.0|y=183.0|color=150|size=16|text={No.<$str(S$首爆序号6)>/FCOLOR=150}>
+<RText|x=175.0|y=214.0|color=150|size=16|text={No.<$str(S$首爆序号7)>/FCOLOR=150}>
+<RText|x=175.0|y=245.0|color=150|size=16|text={No.<$str(S$首爆序号8)>/FCOLOR=150}>
+<RText|x=175.0|y=276.0|color=150|size=16|text={No.<$str(S$首爆序号9)>/FCOLOR=150}>
+<RText|x=175.0|y=307.0|color=150|size=16|text={No.<$str(S$首爆序号10)>/FCOLOR=150}>
 
-<> {No.<$str(S$首爆序号2)>/FCOLOR=150}     {<$STR(S$首爆名1)>/FCOLOR=253}        {<$str(S$钻石首爆金额1)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额1)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家1)>/FCOLOR=<$Str(N$首爆颜色1)>}    \ \
+<RText|x=240.0|y=28.0|color=70|size=16|text={<$STR(S$首爆名0)>/FCOLOR=253}>
+<RText|x=240.0|y=59.0|color=70|size=16|text={<$STR(S$首爆名1)>/FCOLOR=253}>
+<RText|x=240.0|y=90.0|color=70|size=16|text={<$STR(S$首爆名2)>/FCOLOR=253}>
+<RText|x=240.0|y=121.0|color=70|size=16|text={<$STR(S$首爆名3)>/FCOLOR=253}>
+<RText|x=240.0|y=152.0|color=70|size=16|text={<$STR(S$首爆名4)>/FCOLOR=253}>
+<RText|x=240.0|y=183.0|color=70|size=16|text={<$STR(S$首爆名5)>/FCOLOR=253}>
+<RText|x=240.0|y=214.0|color=70|size=16|text={<$STR(S$首爆名6)>/FCOLOR=253}>
+<RText|x=240.0|y=245.0|color=70|size=16|text={<$STR(S$首爆名7)>/FCOLOR=253}>
+<RText|x=240.0|y=276.0|color=70|size=16|text={<$STR(S$首爆名8)>/FCOLOR=253}>
+<RText|x=240.0|y=307.0|color=70|size=16|text={<$STR(S$首爆名9)>/FCOLOR=253}>
 
-<> {No.<$str(S$首爆序号3)>/FCOLOR=150}     {<$STR(S$首爆名2)>/FCOLOR=253}        {<$str(S$钻石首爆金额2)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额2)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家2)>/FCOLOR=<$Str(N$首爆颜色2)>}    \ \
+<RText|x=449.0|y=28.0|color=150|size=16|text={<$str(S$钻石首爆金额0)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=59.0|color=150|size=16|text={<$str(S$钻石首爆金额1)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=90.0|color=150|size=16|text={<$str(S$钻石首爆金额2)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=121.0|color=150|size=16|text={<$str(S$钻石首爆金额3)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=152.0|color=150|size=16|text={<$str(S$钻石首爆金额4)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=183.0|color=150|size=16|text={<$str(S$钻石首爆金额5)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=214.0|color=150|size=16|text={<$str(S$钻石首爆金额6)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=245.0|color=150|size=16|text={<$str(S$钻石首爆金额7)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=276.0|color=150|size=16|text={<$str(S$钻石首爆金额8)>钻石/FCOLOR=150}>
+<RText|x=449.0|y=307.0|color=150|size=16|text={<$str(S$钻石首爆金额9)>钻石/FCOLOR=150}>
 
-<> {No.<$str(S$首爆序号4)>/FCOLOR=150}     {<$STR(S$首爆名3)>/FCOLOR=253}        {<$str(S$钻石首爆金额3)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额3)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色3)>}    \ \
+<RText|x=540.0|y=28.0|color=150|size=16|text={<$STR(S$钻石首爆名额0)>/FCOLOR=<$Str(N$首爆颜色0)>}>
+<RText|x=540.0|y=59.0|color=150|size=16|text={<$STR(S$钻石首爆名额1)>/FCOLOR=<$Str(N$首爆颜色1)>}>
+<RText|x=540.0|y=90.0|color=150|size=16|text={<$STR(S$钻石首爆名额2)>/FCOLOR=<$Str(N$首爆颜色2)>}>
+<RText|x=540.0|y=121.0|color=150|size=16|text={<$STR(S$钻石首爆名额3)>/FCOLOR=<$Str(N$首爆颜色3)>}>
+<RText|x=540.0|y=152.0|color=150|size=16|text={<$STR(S$钻石首爆名额4)>/FCOLOR=<$Str(N$首爆颜色4)>}>
+<RText|x=540.0|y=183.0|color=150|size=16|text={<$STR(S$钻石首爆名额5)>/FCOLOR=<$Str(N$首爆颜色5)>}>
+<RText|x=540.0|y=214.0|color=150|size=16|text={<$STR(S$钻石首爆名额6)>/FCOLOR=<$Str(N$首爆颜色6)>}>
+<RText|x=540.0|y=245.0|color=150|size=16|text={<$STR(S$钻石首爆名额7)>/FCOLOR=<$Str(N$首爆颜色7)>}>
+<RText|x=540.0|y=276.0|color=150|size=16|text={<$STR(S$钻石首爆名额8)>/FCOLOR=<$Str(N$首爆颜色8)>}>
+<RText|x=540.0|y=307.0|color=150|size=16|text={<$STR(S$钻石首爆名额9)>/FCOLOR=<$Str(N$首爆颜色9)>}>
 
-<> {No.<$str(S$首爆序号5)>/FCOLOR=150}     {<$STR(S$首爆名4)>/FCOLOR=253}        {<$str(S$钻石首爆金额4)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额4)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色4)>}    \ \
+<RText|x=609.0|y=28.0|color=150|size=16|text={<$STR(S$钻石首爆玩家0)>/FCOLOR=<$Str(N$首爆颜色0)>}>
+<RText|x=609.0|y=59.0|color=150|size=16|text={<$STR(S$钻石首爆玩家1)>/FCOLOR=<$Str(N$首爆颜色1)>}>
+<RText|x=609.0|y=90.0|color=150|size=16|text={<$STR(S$钻石首爆玩家2)>/FCOLOR=<$Str(N$首爆颜色2)>}>
+<RText|x=609.0|y=121.0|color=150|size=16|text={<$STR(S$钻石首爆玩家3)>/FCOLOR=<$Str(N$首爆颜色3)>}>
+<RText|x=609.0|y=152.0|color=150|size=16|text={<$STR(S$钻石首爆玩家4)>/FCOLOR=<$Str(N$首爆颜色4)>}>
+<RText|x=609.0|y=183.0|color=150|size=16|text={<$STR(S$钻石首爆玩家5)>/FCOLOR=<$Str(N$首爆颜色5)>}>
+<RText|x=609.0|y=214.0|color=150|size=16|text={<$STR(S$钻石首爆玩家6)>/FCOLOR=<$Str(N$首爆颜色6)>}>
+<RText|x=609.0|y=245.0|color=150|size=16|text={<$STR(S$钻石首爆玩家7)>/FCOLOR=<$Str(N$首爆颜色7)>}>
+<RText|x=609.0|y=276.0|color=150|size=16|text={<$STR(S$钻石首爆玩家8)>/FCOLOR=<$Str(N$首爆颜色8)>}>
+<RText|x=609.0|y=307.0|color=150|size=16|text={<$STR(S$钻石首爆玩家9)>/FCOLOR=<$Str(N$首爆颜色9)>}>
 
-<> {No.<$str(S$首爆序号6)>/FCOLOR=150}     {<$STR(S$首爆名5)>/FCOLOR=253}        {<$str(S$钻石首爆金额5)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额5)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家5)>/FCOLOR=<$Str(N$首爆颜色5)>}    \ \
+<Text|x=204.0|y=335.0|color=249|size=16|text=钻石首爆打完为止>
 
-<> {No.<$str(S$首爆序号7)>/FCOLOR=150}     {<$STR(S$首爆名6)>/FCOLOR=253}        {<$str(S$钻石首爆金额6)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额6)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家6)>/FCOLOR=<$Str(N$首爆颜色6)>}    \ \
-
-<> {No.<$str(S$首爆序号8)>/FCOLOR=150}     {<$STR(S$首爆名7)>/FCOLOR=253}        {<$str(S$钻石首爆金额7)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额7)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家7)>/FCOLOR=<$Str(N$首爆颜色7)>}    \ \
-
-<> {No.<$str(S$首爆序号9)>/FCOLOR=150}     {<$STR(S$首爆名8)>/FCOLOR=253}        {<$str(S$钻石首爆金额8)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额8)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家8)>/FCOLOR=<$Str(N$首爆颜色8)>}    \ \
-
-<> {No.<$str(S$首爆序号10)>/FCOLOR=150}     {<$STR(S$首爆名9)>/FCOLOR=253}        {<$str(S$钻石首爆金额9)>钻石/FCOLOR=150}          {<$STR(S$钻石首爆名额9)>/FCOLOR=<$Str(N$首爆颜色0)>}      <领取状态：/FCOLOR=250>    {<$STR(S$钻石首爆玩家9)>/FCOLOR=<$Str(N$首爆颜色9)>}    \ \
-
-<>                                    <上一页/@钻石首爆翻页减>    <下一页/@钻石首爆翻页加>   <钻石首爆打完为止/FCOLOR=151>
 
 
 
@@ -2294,7 +2581,7 @@ DEC N$首爆当页 1
 dec N$首爆行号 20
 goto @首爆奖励界面
 #elseact
-messagebox 已经是第一页了！
+SENDMSG 9 已经是第一页了！
 
 
 [@钻石首爆翻页加]
@@ -2314,7 +2601,7 @@ INC N$首爆序号10 10
 INC N$首爆当页 1
 goto @首爆奖励界面
 #elseact
-messagebox 已经是最后一页了！
+SENDMSG 9 已经是最后一页了！
 
 
 

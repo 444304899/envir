@@ -46,392 +46,696 @@ break
 check [100] 0
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \    \
-<>                                                          <IMG:7:6:-2:0><攻击: 20-20 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 20-20/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 20-20/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  200/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升10%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>  \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“免费”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“免费”/@称号1> \
-<>                             <playimg:7:736:14:70:-49:-300><IMG:0:6:-189:-285>\ \
-<>                             <playimg:7:750:14:70:-49:-295>\ \
-<>                             <playimg:7:764:14:70:-49:-290>\ \
-<>                             <playimg:7:778:14:70:-49:-285>\ \
-<>                             <playimg:7:792:14:70:-49:-280>\ \
-<>                             <playimg:7:820:14:70:-49:-275>\ \
-<>                             <playimg:7:834:14:70:-49:-270>\ \
-<>                             <playimg:7:848:14:70:-49:-265>\ \
-
-
+<Img|x=52.0|y=-47.0|reset=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|esc=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20316|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20317|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20318|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20319|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20320|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20321|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=255.0|effecttype=0|effectid=20322|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=292.0|effecttype=0|effectid=20323|dir=5|speed=1|act=0|scale=1>
+<Img|x=94.0|y=47.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=177.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=323.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 20-20>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 20-20>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 20-20>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 200>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升10%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=350.0|y=296.0|color=253|size=16|text=“免费”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号1>
 
 #IF
 CHECKTITLE 新的征程
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 40-40 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 40-40/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 40-40/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  400/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升20%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*10”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*10”/@称号2> \
-<>                             <playimg:7:736:14:70:-49:-300>\ \
-<>                             <playimg:7:750:14:70:-49:-295><IMG:0:6:-189:-280>\ \
-<>                             <playimg:7:764:14:70:-49:-290>\ \
-<>                             <playimg:7:778:14:70:-49:-285>\ \
-<>                             <playimg:7:792:14:70:-49:-280>\ \
-<>                             <playimg:7:820:14:70:-49:-275>\ \
-<>                             <playimg:7:834:14:70:-49:-270>\ \
-<>                             <playimg:7:848:14:70:-49:-265>\ \
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20316|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20317|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20318|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20319|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20320|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20321|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=255.0|effecttype=0|effectid=20322|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=292.0|effecttype=0|effectid=20323|dir=5|act=0|speed=1|scale=1>
+<Img|x=94.0|y=84.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=177.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 40-40>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 40-40>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 40-40>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 400>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升20%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*10”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号2>
 
 #IF
 CHECKTITLE 冰河踏破者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 60-60 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 60-60/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 60-60/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  600/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升30%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*30”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*30”/@称号3> \
-<>                             <playimg:7:736:14:70:-49:-300>\ \
-<>                             <playimg:7:750:14:70:-49:-295>\ \
-<>                             <playimg:7:764:14:70:-49:-290><IMG:0:6:-189:-275>\ \
-<>                             <playimg:7:778:14:70:-49:-285>\ \
-<>                             <playimg:7:792:14:70:-49:-280>\ \
-<>                             <playimg:7:820:14:70:-49:-275>\ \
-<>                             <playimg:7:834:14:70:-49:-270>\ \
-<>                             <playimg:7:848:14:70:-49:-265>\ \
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20316|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20317|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20318|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20319|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20320|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20321|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=255.0|effecttype=0|effectid=20322|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=292.0|effecttype=0|effectid=20323|dir=5|act=0|speed=1|scale=1>
+<Img|x=94.0|y=121.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=177.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 60-60>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 60-60>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 60-60>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 600>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升30%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*30”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号3>
 
 #IF
 CHECKTITLE 星界旅行者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 80-80 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 80-80/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 80-80/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  800/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升40%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*40”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*40”/@称号4> \
-<>                             <playimg:7:736:14:70:-49:-300>\ \
-<>                             <playimg:7:750:14:70:-49:-295>\ \
-<>                             <playimg:7:764:14:70:-49:-290>\ \
-<>                             <playimg:7:778:14:70:-49:-285><IMG:0:6:-189:-270>\ \
-<>                             <playimg:7:792:14:70:-49:-280>\ \
-<>                             <playimg:7:820:14:70:-49:-275>\ \
-<>                             <playimg:7:834:14:70:-49:-270>\ \
-<>                             <playimg:7:848:14:70:-49:-265>\ \
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20316|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20317|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20318|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20319|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20320|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20321|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=255.0|effecttype=0|effectid=20322|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=292.0|effecttype=0|effectid=20323|dir=5|act=0|speed=1|scale=1>
+<Img|x=94.0|y=158.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=177.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 80-80>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 80-80>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 80-80>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 800>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升40%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*40”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号4>
 
 #IF
 CHECKTITLE 暮光征服者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 100-100 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 100-100/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 100-100/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  1000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升50%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*50”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*50”/@称号5> \
-<>                             <playimg:7:736:14:70:-49:-300>\ \
-<>                             <playimg:7:750:14:70:-49:-295>\ \
-<>                             <playimg:7:764:14:70:-49:-290>\ \
-<>                             <playimg:7:778:14:70:-49:-285>\ \
-<>                             <playimg:7:792:14:70:-49:-280><IMG:0:6:-189:-265>\ \
-<>                             <playimg:7:820:14:70:-49:-275>\ \
-<>                             <playimg:7:834:14:70:-49:-270>\ \
-<>                             <playimg:7:848:14:70:-49:-265>\ \
-
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20316|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20317|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20318|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20319|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20320|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20321|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=255.0|effecttype=0|effectid=20322|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=292.0|effecttype=0|effectid=20323|dir=5|act=0|speed=1|scale=1>
+<Img|x=94.0|y=195.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=177.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 100-100>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 100-100>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 100-100>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 1000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升50%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*50”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号5>
 
 #IF
 CHECKTITLE 灭世终结者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 120-120 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 120-120/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 120-120/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  1200/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升60%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*60”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*60”/@称号6> \
-<>                             <playimg:7:736:14:70:-49:-300>\ \
-<>                             <playimg:7:750:14:70:-49:-295>\ \
-<>                             <playimg:7:764:14:70:-49:-290>\ \
-<>                             <playimg:7:778:14:70:-49:-285>\ \
-<>                             <playimg:7:792:14:70:-49:-280>\ \
-<>                             <playimg:7:820:14:70:-49:-275><IMG:0:6:-189:-260>\ \
-<>                             <playimg:7:834:14:70:-49:-270>\ \
-<>                             <playimg:7:848:14:70:-49:-265>\ \
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20316|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20317|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20318|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20319|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20320|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20321|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=255.0|effecttype=0|effectid=20322|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=292.0|effecttype=0|effectid=20323|dir=5|act=0|speed=1|scale=1>
+<Img|x=94.0|y=232.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=177.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 120-120>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 120-120>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 120-120>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 1200>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升60%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*60”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号6>
 
 #IF
 CHECKTITLE 灰烬审判军
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 140-140 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 140-140/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 140-140/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  1400/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升70%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*70”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*70”/@称号7> \
-<>                             <playimg:7:736:14:70:-49:-300>\ \
-<>                             <playimg:7:750:14:70:-49:-295>\ \
-<>                             <playimg:7:764:14:70:-49:-290>\ \
-<>                             <playimg:7:778:14:70:-49:-285>\ \
-<>                             <playimg:7:792:14:70:-49:-280>\ \
-<>                             <playimg:7:820:14:70:-49:-275>\ \
-<>                             <playimg:7:834:14:70:-49:-270><IMG:0:6:-189:-255>\ \
-<>                             <playimg:7:848:14:70:-49:-265>\ \
-
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20316|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20317|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20318|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20319|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20320|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20321|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=255.0|effecttype=0|effectid=20322|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=292.0|effecttype=0|effectid=20323|dir=5|act=0|speed=1|scale=1>
+<Img|x=94.0|y=269.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=177.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 140-140>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 140-140>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 140-140>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 1400>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升70%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*70”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号7>
 
 
 #IF
 CHECKTITLE 黑曜石杀手
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 160-160 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 160-160/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 160-160/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  1600/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升80%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*80”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*80”/@称号8> \
-<>                             <playimg:7:736:14:70:-49:-300>\ \
-<>                             <playimg:7:750:14:70:-49:-295>\ \
-<>                             <playimg:7:764:14:70:-49:-290>\ \
-<>                             <playimg:7:778:14:70:-49:-285>\ \
-<>                             <playimg:7:792:14:70:-49:-280>\ \
-<>                             <playimg:7:820:14:70:-49:-275>\ \
-<>                             <playimg:7:834:14:70:-49:-270>\ \
-<>                             <playimg:7:848:14:70:-49:-265><IMG:0:6:-189:-250>\ \
-
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20316|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20317|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20318|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20319|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20320|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20321|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=255.0|effecttype=0|effectid=20322|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=292.0|effecttype=0|effectid=20323|dir=5|act=0|speed=1|scale=1>
+<Img|x=94.0|y=306.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=177.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 160-160>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 160-160>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 160-160>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 1600>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升80%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*80”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号8>
 
 [@mainb]
 #IF
 CHECKTITLE 魔法追寻者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 260-260 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 260-260/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 260-260/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  2600/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升90%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \  \  \  \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*100”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*100”/@称号1b> \ \
-<>                             <playimg:7:610:14:70:-49:-315> <IMG:0:6:-205:-300>\ \
-<>                             <playimg:7:624:14:70:-49:-310>\ \
-<>                             <playimg:7:638:14:70:-49:-305>\ \
-<>                             <playimg:7:652:14:70:-49:-300>\ \
-<>                             <playimg:7:666:14:70:-49:-295>\ \
-<>                             <playimg:7:680:14:70:-49:-290>\ \
-<>                             <playimg:7:1010:30:60:-90:-305>\ \
-<>                             <playimg:7:1040:30:60:-90:-300>\ \
-
-
+<Img|x=52.0|y=-47.0|reset=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|esc=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20324|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20325|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20326|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20327|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20328|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20329|dir=5|speed=1|act=0|scale=1>
+<Effect|x=50.0|y=235.0|effecttype=0|effectid=20333|dir=5|speed=1|act=0|scale=1>
+<Effect|x=50.0|y=272.0|effecttype=0|effectid=20334|dir=5|speed=1|act=0|scale=1>
+<Img|x=82.0|y=47.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=440.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 260-260>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 260-260>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 260-260>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 2600>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升90%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*100”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号1b>
 
 #IF
 CHECKTITLE 海加尔的复仇
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 320-320 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 320-320/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 320-320/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  3200/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升100%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*150”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*150”/@称号2b> \ \
-<>                             <playimg:7:610:14:70:-49:-315> \ \
-<>                             <playimg:7:624:14:70:-49:-310> <IMG:0:6:-205:-295>\ \
-<>                             <playimg:7:638:14:70:-49:-305>\ \
-<>                             <playimg:7:652:14:70:-49:-300>\ \
-<>                             <playimg:7:666:14:70:-49:-295>\ \
-<>                             <playimg:7:680:14:70:-49:-290>\ \
-<>                             <playimg:7:1010:30:60:-90:-305>\ \
-<>                             <playimg:7:1040:30:60:-90:-300>\ \
+<Img|x=52.0|y=-47.0|reset=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|esc=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20324|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20325|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20326|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20327|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20328|dir=5|speed=1|act=0|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20329|dir=5|speed=1|act=0|scale=1>
+<Effect|x=50.0|y=235.0|effecttype=0|effectid=20333|dir=5|speed=1|act=0|scale=1>
+<Effect|x=50.0|y=272.0|effecttype=0|effectid=20334|dir=5|speed=1|act=0|scale=1>
+<Img|x=82.0|y=84.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 320-320>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 320-320>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 320-320>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 3200>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升100%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*150”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号2b>
 
 #IF
 CHECKTITLE 地狱咆哮终结者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 380-380 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 380-380/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 380-380/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  3800/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升110%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \  \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*200”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*200”/@称号3b> \ \
-<>                             <playimg:7:610:14:70:-49:-315> \ \
-<>                             <playimg:7:624:14:70:-49:-310> \ \
-<>                             <playimg:7:638:14:70:-49:-305> <IMG:0:6:-205:-290>\ \
-<>                             <playimg:7:652:14:70:-49:-300>\ \
-<>                             <playimg:7:666:14:70:-49:-295>\ \
-<>                             <playimg:7:680:14:70:-49:-290>\ \
-<>                             <playimg:7:1010:30:60:-90:-305>\ \
-<>                             <playimg:7:1040:30:60:-90:-300>\ \
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20324|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20325|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20326|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20327|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20328|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20329|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=235.0|effecttype=0|effectid=20333|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=272.0|effecttype=0|effectid=20334|dir=5|act=0|speed=1|scale=1>
+<Img|x=82.0|y=121.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 380-380>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 380-380>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 380-380>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 3800>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升110%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*200”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号3b>
 
 #IF
 CHECKTITLE 奥格瑞玛解放者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 440-440 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 440-440/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 440-440/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  4400/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升120%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*250”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*250”/@称号4b> \ \
-<>                             <playimg:7:610:14:70:-49:-315> \ \
-<>                             <playimg:7:624:14:70:-49:-310> \ \
-<>                             <playimg:7:638:14:70:-49:-305>\ \
-<>                             <playimg:7:652:14:70:-49:-300> <IMG:0:6:-205:-285>\ \
-<>                             <playimg:7:666:14:70:-49:-295>\ \
-<>                             <playimg:7:680:14:70:-49:-290>\ \
-<>                             <playimg:7:1010:30:60:-90:-305>\ \
-<>                             <playimg:7:1040:30:60:-90:-300>\ \
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20324|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20325|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20326|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20327|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20328|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20329|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=235.0|effecttype=0|effectid=20333|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=272.0|effecttype=0|effectid=20334|dir=5|act=0|speed=1|scale=1>
+<Img|x=82.0|y=158.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 440-440>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 440-440>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 440-440>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 4400>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升120%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*250”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号4b>
+
 
 #IF
 CHECKTITLE 奥格瑞玛征服者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 500-500 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 500-500/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 500-500/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  5000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升130%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*300”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*300”/@称号5b> \ \
-<>                             <playimg:7:610:14:70:-49:-315> \ \
-<>                             <playimg:7:624:14:70:-49:-310> \ \
-<>                             <playimg:7:638:14:70:-49:-305>\ \
-<>                             <playimg:7:652:14:70:-49:-300>\ \
-<>                             <playimg:7:666:14:70:-49:-295> <IMG:0:6:-205:-280>\ \
-<>                             <playimg:7:680:14:70:-49:-290>\ \
-<>                             <playimg:7:1010:30:60:-90:-305>\ \
-<>                             <playimg:7:1040:30:60:-90:-300>\ \
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20324|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20325|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20326|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20327|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20328|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20329|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=235.0|effecttype=0|effectid=20333|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=272.0|effecttype=0|effectid=20334|dir=5|act=0|speed=1|scale=1>
+<Img|x=82.0|y=195.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 500-500>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 500-500>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 500-500>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 5000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升130%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*300”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号5b>
 
 #IF
 CHECKTITLE 破碎世界的守护者
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 560-560 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 560-560/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 560-560/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  5600/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升140%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*350”/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*350”/@称号6b> \ \
-<>                             <playimg:7:610:14:70:-49:-315> \ \
-<>                             <playimg:7:624:14:70:-49:-310> \ \
-<>                             <playimg:7:638:14:70:-49:-305>\ \
-<>                             <playimg:7:652:14:70:-49:-300>\ \
-<>                             <playimg:7:666:14:70:-49:-295>\ \
-<>                             <playimg:7:680:14:70:-49:-290> <IMG:0:6:-205:-275>\ \
-<>                             <playimg:7:1010:30:60:-90:-305>\ \
-<>                             <playimg:7:1040:30:60:-90:-300>\ \
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20324|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20325|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20326|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20327|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20328|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20329|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=235.0|effecttype=0|effectid=20333|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=272.0|effecttype=0|effectid=20334|dir=5|act=0|speed=1|scale=1>
+<Img|x=82.0|y=232.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 560-560>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 560-560>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 560-560>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 5600>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升140%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=需要:“称号卷*350”>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号6b>
 
 #IF
 CHECKTITLE 艾泽拉斯的救世主
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 620-620 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 620-620/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 620-620/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  6200/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升150%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \  \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*400”/FCOLOR=254> \
-<>                                                       <IMG:91:6:-2:-2><2.需要:“元宝”*1000000/FCOLOR=254> \
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*400”/@称号7b> \ \
-<>                             <playimg:7:610:14:70:-49:-330> \ \
-<>                             <playimg:7:624:14:70:-49:-325> \ \
-<>                             <playimg:7:638:14:70:-49:-320>\ \
-<>                             <playimg:7:652:14:70:-49:-315>\ \
-<>                             <playimg:7:666:14:70:-49:-310>\ \
-<>                             <playimg:7:680:14:70:-49:-305> \ \
-<>                             <playimg:7:1010:30:60:-90:-320> <IMG:0:6:-275:-320>\ \
-<>                             <playimg:7:1040:30:60:-90:-315>\ \
-
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20324|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20325|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20326|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20327|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20328|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20329|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=235.0|effecttype=0|effectid=20333|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=272.0|effecttype=0|effectid=20334|dir=5|act=0|speed=1|scale=1>
+<Img|x=82.0|y=269.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Img|x=290.0|y=315.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 620-620>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 620-620>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 620-620>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 6200>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升150%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=1.需要:“称号卷*400”>
+<Text|x=313.0|y=315.0|color=253|size=16|text=2.需要:“元宝”*1000000>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号7b>
 
 #IF
 CHECKTITLE 觉醒·热血之魂
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 700-700 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 700-700/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 700-700/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  7000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升160%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷*450”/FCOLOR=254> \
-<>                                                       <IMG:91:6:-2:-2><2.需要:“元宝”*2000000/FCOLOR=254> \
-
-<ImgEx:13:659:660:661:360:20|95#  需要:“称号卷*450”/@称号8b> \ \
-<>                             <playimg:7:610:14:70:-49:-330> \ \
-<>                             <playimg:7:624:14:70:-49:-325> \ \
-<>                             <playimg:7:638:14:70:-49:-320>\ \
-<>                             <playimg:7:652:14:70:-49:-315>\ \
-<>                             <playimg:7:666:14:70:-49:-310>\ \
-<>                             <playimg:7:680:14:70:-49:-305> \ \
-<>                             <playimg:7:1010:30:60:-90:-320>\ \
-<>                             <playimg:7:1040:30:60:-90:-315> <IMG:0:6:-275:-315>\ \
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=88.0|y=33.0|effecttype=0|effectid=20324|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=70.0|effecttype=0|effectid=20325|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=107.0|effecttype=0|effectid=20326|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=146.0|effecttype=0|effectid=20327|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=181.0|effecttype=0|effectid=20328|dir=5|act=0|speed=1|scale=1>
+<Effect|x=88.0|y=218.0|effecttype=0|effectid=20329|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=235.0|effecttype=0|effectid=20333|dir=5|act=0|speed=1|scale=1>
+<Effect|x=50.0|y=272.0|effecttype=0|effectid=20334|dir=5|act=0|speed=1|scale=1>
+<Img|x=82.0|y=306.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Img|x=290.0|y=315.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 700-700>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 700-700>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 700-700>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 7000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升160%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=1.需要:“称号卷*450”>
+<Text|x=313.0|y=315.0|color=253|size=16|text=2.需要:“元宝”*2000000>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号8b>
 
 
 [@称号1b]
@@ -443,9 +747,9 @@ DEPRIVETITLE 魔法追寻者
 CONFERTITLE 海加尔的复仇 1
 take 称号卷 100
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 [@称号2b]
@@ -457,9 +761,9 @@ DEPRIVETITLE 海加尔的复仇
 CONFERTITLE 地狱咆哮终结者 1
 take 称号卷 150
 goto @mainb
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -472,9 +776,9 @@ DEPRIVETITLE 地狱咆哮终结者
 CONFERTITLE 奥格瑞玛解放者 1
 take 称号卷 200
 goto @mainb
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -487,9 +791,9 @@ DEPRIVETITLE 奥格瑞玛解放者
 CONFERTITLE 奥格瑞玛征服者 1
 take 称号卷 250
 goto @mainb
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 [@称号5b]
@@ -501,9 +805,9 @@ DEPRIVETITLE 奥格瑞玛征服者
 CONFERTITLE 破碎世界的守护者 1
 take 称号卷 300
 goto @mainb
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -516,9 +820,9 @@ DEPRIVETITLE 破碎世界的守护者
 CONFERTITLE 艾泽拉斯的救世主 1
 take 称号卷 350
 goto @mainb
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -533,9 +837,9 @@ DEPRIVETITLE 艾泽拉斯的救世主
 CONFERTITLE 觉醒·热血之魂 1
 take 称号卷 400
 goto @mainb
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -552,9 +856,9 @@ DEPRIVETITLE 觉醒·热血之魂
 CONFERTITLE 集结·战斗号角 1
 take 称号卷 450
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -571,9 +875,9 @@ check [100] 0
 set [100] 1
 CONFERTITLE 新的征程 1
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -586,9 +890,9 @@ DEPRIVETITLE 新的征程
 CONFERTITLE 冰河踏破者 1
 take 称号卷 10
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -602,9 +906,9 @@ DEPRIVETITLE 冰河踏破者
 CONFERTITLE 星界旅行者 1
 take 称号卷 30
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -617,9 +921,9 @@ DEPRIVETITLE 星界旅行者
 CONFERTITLE 暮光征服者 1
 take 称号卷 40
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -633,9 +937,9 @@ DEPRIVETITLE 暮光征服者
 CONFERTITLE 灭世终结者 1
 take 称号卷 50
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 [@称号6]
@@ -647,9 +951,9 @@ DEPRIVETITLE 灭世终结者
 CONFERTITLE 灰烬审判军 1
 take 称号卷 60
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 [@称号7]
@@ -661,9 +965,9 @@ DEPRIVETITLE 灰烬审判军
 CONFERTITLE 黑曜石杀手 1
 take 称号卷 70
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 [@称号8]
@@ -677,9 +981,9 @@ DEPRIVETITLE 黑曜石杀手
 CONFERTITLE 魔法追寻者 1
 take 称号卷 80
 goto @main
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -693,142 +997,263 @@ break
 CHECKTITLE 集结·战斗号角
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 800-800 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 800-800/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 800-800/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  8000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升180%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \ \
-<>                                                       <IMG:91:6:-2:-2><1.需要:“称号卷”*500/FCOLOR=254> \
-<>                                                       <IMG:91:6:-2:-2><2.需要:“元宝”*3000000/FCOLOR=254> \
-<>                             <playimg:7:1070:30:60:-90:-320> <IMG:0:6:-280:-282>\ \
-<>                             <playimg:7:1100:30:60:-90:-315> \ \
-<>                             <playimg:7:1130:30:60:-95:-310> \ \
-<>                             <playimg:7:1160:30:60:-95:-305> \ \
-<>                             <playimg:7:1190:30:60:-95:-300> \ \
-<>                             <playimg:7:1220:30:60:-95:-295> \ \
-<ImgEx:13:659:660:661:360:-180/@称号1C>
+<Img|x=52.0|y=-47.0|reset=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|esc=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=51.0|y=12.0|effecttype=0|effectid=20335|dir=5|speed=1|act=0|scale=1>
+<Effect|x=51.0|y=49.0|effecttype=0|effectid=20336|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=86.0|effecttype=0|effectid=20337|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=123.0|effecttype=0|effectid=20338|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=161.0|effecttype=0|effectid=20339|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=198.0|effecttype=0|effectid=20340|dir=5|speed=1|act=0|scale=1>
+<Img|x=82.0|y=47.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Img|x=290.0|y=315.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 800-800>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 800-800>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 800-800>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 8000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升180%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=1.需要:“称号卷*500>
+<Text|x=313.0|y=315.0|color=253|size=16|text=2.需要:“元宝”*3000000>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号1C>
 
 
 #IF
 CHECKTITLE 暴走·极限突破
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 1000-1000 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 1000-1000/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 1000-1000/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  10000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升200%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \  \
-<>                                                      <IMG:91:6:-2:-2><1.需要:“称号卷”*550/FCOLOR=254> \
-<>                                                      <IMG:91:6:-2:-2><2.需要:“元宝”*5000000/FCOLOR=254> \
-<>                             <playimg:7:1070:30:60:-90:-320> \ \
-<>                             <playimg:7:1100:30:60:-90:-315> <IMG:0:6:-280:-277>\ \
-<>                             <playimg:7:1130:30:60:-95:-310> \ \
-<>                             <playimg:7:1160:30:60:-95:-305> \ \
-<>                             <playimg:7:1190:30:60:-95:-300> \ \
-<>                             <playimg:7:1220:30:60:-95:-295> \ \
-<ImgEx:13:659:660:661:360:-180/@称号2C>
+<Img|x=52.0|y=-47.0|reset=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|esc=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=51.0|y=12.0|effecttype=0|effectid=20335|dir=5|speed=1|act=0|scale=1>
+<Effect|x=51.0|y=49.0|effecttype=0|effectid=20336|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=86.0|effecttype=0|effectid=20337|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=123.0|effecttype=0|effectid=20338|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=161.0|effecttype=0|effectid=20339|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=198.0|effecttype=0|effectid=20340|dir=5|speed=1|act=0|scale=1>
+<Img|x=82.0|y=84.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Img|x=290.0|y=315.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 1000-1000>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 1000-1000>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 1000-1000>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 10000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升200%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=1.需要:“称号卷*550>
+<Text|x=313.0|y=315.0|color=253|size=16|text=2.需要:“元宝”*5000000>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号2C>
 
 
 #IF
 CHECKTITLE 天启·信仰之歌
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 1200-1200 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 1200-1200/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 1200-1200/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  12000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升220%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \  \
-<>                                                      <IMG:91:6:-2:-2><1.需要:“称号卷”*600/FCOLOR=254> \
-<>                                                      <IMG:91:6:-2:-2><2.需要:“元宝”*8000000/FCOLOR=254> \
-<>                             <playimg:7:1070:30:60:-90:-320> \ \
-<>                             <playimg:7:1100:30:60:-90:-315> \ \
-<>                             <playimg:7:1130:30:60:-95:-310> <IMG:0:6:-280:-272>\ \
-<>                             <playimg:7:1160:30:60:-95:-305> \ \
-<>                             <playimg:7:1190:30:60:-95:-300> \ \
-<>                             <playimg:7:1220:30:60:-95:-295> \ \
-<ImgEx:13:659:660:661:360:-180/@称号3C>
-
+<Img|x=52.0|y=-47.0|reset=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|esc=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=51.0|y=12.0|effecttype=0|effectid=20335|dir=5|speed=1|act=0|scale=1>
+<Effect|x=51.0|y=49.0|effecttype=0|effectid=20336|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=86.0|effecttype=0|effectid=20337|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=123.0|effecttype=0|effectid=20338|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=161.0|effecttype=0|effectid=20339|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=198.0|effecttype=0|effectid=20340|dir=5|speed=1|act=0|scale=1>
+<Img|x=82.0|y=121.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Img|x=290.0|y=315.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 1200-1200>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 1200-1200>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 1200-1200>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 12000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升220%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=1.需要:“称号卷*600>
+<Text|x=313.0|y=315.0|color=253|size=16|text=2.需要:“元宝”*8000000>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号3C>
 
 
 #IF
 CHECKTITLE 进化之光·混沌开天
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 1400-1400 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 1400-1400/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 1400-1400/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  14000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升240%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \  \
-<>                                                      <IMG:91:6:-2:-2><1.需要:“称号卷”*650/FCOLOR=254> \
-<>                                                      <IMG:91:6:-2:-2><2.需要:“元宝”*10000000/FCOLOR=254> \
-<>                             <playimg:7:1070:30:60:-90:-320> \ \
-<>                             <playimg:7:1100:30:60:-90:-315> \ \
-<>                             <playimg:7:1130:30:60:-95:-310> \ \
-<>                             <playimg:7:1160:30:60:-95:-305> <IMG:0:6:-280:-267>\ \
-<>                             <playimg:7:1190:30:60:-95:-300> \ \
-<>                             <playimg:7:1220:30:60:-95:-295> \ \
-<ImgEx:13:659:660:661:360:-180/@称号4C>
+<Img|x=52.0|y=-47.0|reset=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|esc=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=51.0|y=12.0|effecttype=0|effectid=20335|dir=5|speed=1|act=0|scale=1>
+<Effect|x=51.0|y=49.0|effecttype=0|effectid=20336|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=86.0|effecttype=0|effectid=20337|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=123.0|effecttype=0|effectid=20338|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=161.0|effecttype=0|effectid=20339|dir=5|speed=1|act=0|scale=1>
+<Effect|x=48.0|y=198.0|effecttype=0|effectid=20340|dir=5|speed=1|act=0|scale=1>
+<Img|x=82.0|y=158.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Img|x=290.0|y=315.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 1400-1400>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 1400-1400>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 1400-1400>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 14000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升240%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=1.需要:“称号卷*650>
+<Text|x=313.0|y=315.0|color=253|size=16|text=2.需要:“元宝”*10000000>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号4C>
 
 #IF
 CHECKTITLE 战鼓震天·异界战歌
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 1600-1600 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 1600-1600/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 1600-1600/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  16000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升260%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \  \
-<>                                                      <IMG:91:6:-2:-2><1.需要:“称号卷”*700/FCOLOR=254> \
-<>                                                      <IMG:91:6:-2:-2><2.需要:“元宝”*2000W+1000钻石/FCOLOR=254> \
-<>                             <playimg:7:1070:30:60:-90:-320> \ \
-<>                             <playimg:7:1100:30:60:-90:-315> \ \
-<>                             <playimg:7:1130:30:60:-95:-310> \ \
-<>                             <playimg:7:1160:30:60:-95:-305> \ \
-<>                             <playimg:7:1190:30:60:-95:-300> <IMG:0:6:-280:-265>\ \
-<>                             <playimg:7:1220:30:60:-95:-295> \ \
-<ImgEx:13:659:660:661:360:-180/@称号5C>
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=51.0|y=12.0|effecttype=0|effectid=20335|dir=5|act=0|speed=1|scale=1>
+<Effect|x=51.0|y=49.0|effecttype=0|effectid=20336|dir=5|act=0|speed=1|scale=1>
+<Effect|x=48.0|y=86.0|effecttype=0|effectid=20337|dir=5|act=0|speed=1|scale=1>
+<Effect|x=48.0|y=123.0|effecttype=0|effectid=20338|dir=5|act=0|speed=1|scale=1>
+<Effect|x=48.0|y=161.0|effecttype=0|effectid=20339|dir=5|act=0|speed=1|scale=1>
+<Effect|x=48.0|y=198.0|effecttype=0|effectid=20340|dir=5|act=0|speed=1|scale=1>
+<Img|x=82.0|y=195.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Img|x=257.0|y=315.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 1600-1600>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 1600-1600>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 1600-1600>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 16000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升260%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=1.需要:“称号卷*700>
+<Text|x=279.0|y=315.0|color=253|size=16|text=2.需要:“元宝”*2000W+1000钻石>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号5C>
 
 
 #IF
 CHECKTITLE 毕方之炎·夜空魅影
 #ACT
 #SAY
-\ \ \  \ \ \ \ \  \  \ \ \
-<>                                                   <称号可大量提升全属性，打怪爆率/FCOLOR=161>  \ \ \ \   \
-<>                                                          <IMG:7:6:-2:0><攻击: 2000-2000 /FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><魔法: 2000-2000/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><道术: 2000-2000/FCOLOR=161>\
-<>                                                          <IMG:7:6:-2:0><生命:  20000/FCOLOR=161> \
-<>                                                        <IMG:86:6:0:-2><打怪爆率提升300%/FCOLOR=253><IMG:103:6:0:-2>   \
-<>                                                        <IMG:86:6:0:-2>< 攻击元素提升 /FCOLOR=253><IMG:103:6:0:-2>   \ \ \ \  \
-<>                                                      <IMG:91:6:-2:-2><1.需要:“称号卷”*1000/FCOLOR=254> \
-<>                                                      <IMG:91:6:-2:-2><2.需要:“元宝”*5000W+1000钻石/FCOLOR=254> \
-<>                             <playimg:7:1070:30:60:-90:-320> \ \
-<>                             <playimg:7:1100:30:60:-90:-315> \ \
-<>                             <playimg:7:1130:30:60:-95:-310> \ \
-<>                             <playimg:7:1160:30:60:-95:-305> \ \
-<>                             <playimg:7:1190:30:60:-95:-300> \ \
-<>                             <playimg:7:1220:30:60:-95:-295> <IMG:0:6:-280:-257>\ \
-<ImgEx:13:659:660:661:360:-180/@称号6C>
-
-
-
+<Img|x=52.0|y=-47.0|esc=1|show=4|bg=1|move=1|img=public/box/chsj.png|loadDelay=1|reset=1>
+<Button|x=494.0|y=-47.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Button|x=82.0|y=41.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=78.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=115.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=152.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=189.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=226.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=263.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=300.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Button|x=82.0|y=337.0|width=147|height=35|rotate=0|size=18|color=255|nimg=public/button/chenghao1.png|pimg=public/button/chenghao3.png|mimg=public/button/chenghao2.png>
+<Effect|x=51.0|y=12.0|effecttype=0|effectid=20335|dir=5|act=0|speed=1|scale=1>
+<Effect|x=51.0|y=49.0|effecttype=0|effectid=20336|dir=5|act=0|speed=1|scale=1>
+<Effect|x=48.0|y=86.0|effecttype=0|effectid=20337|dir=5|act=0|speed=1|scale=1>
+<Effect|x=48.0|y=123.0|effecttype=0|effectid=20338|dir=5|act=0|speed=1|scale=1>
+<Effect|x=48.0|y=161.0|effecttype=0|effectid=20339|dir=5|act=0|speed=1|scale=1>
+<Effect|x=48.0|y=198.0|effecttype=0|effectid=20340|dir=5|act=0|speed=1|scale=1>
+<Img|x=82.0|y=232.0|width=20|height=21|esc=0|img=public/micon/00000.png>
+<Img|x=308.0|y=155.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=138.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=121.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=308.0|y=104.0|width=16|height=16|esc=0|img=public/micon/00007.png>
+<Img|x=289.0|y=178.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=448.0|y=178.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=307.0|y=204.0|width=20|height=21|esc=0|img=public/micon/000086.png>
+<Img|x=425.0|y=204.0|width=20|height=21|esc=0|img=public/micon/00103.png>
+<Img|x=290.0|y=296.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Img|x=257.0|y=315.0|width=20|height=21|esc=0|img=public/micon/00091.png>
+<Text|x=255.0|y=45.0|color=102|size=16|text=称号可大量提升全属性，打怪爆率>
+<Text|x=327.0|y=101.0|color=253|size=16|text=攻击: 2000-2000>
+<Text|x=327.0|y=118.0|color=253|size=16|text=魔法: 2000-2000>
+<Text|x=328.0|y=135.0|color=253|size=16|text=道术: 2000-2000>
+<Text|x=328.0|y=152.0|color=253|size=16|text=生命: 20000>
+<Text|x=310.0|y=178.0|color=253|size=16|text=打怪爆率提升300%>
+<Text|x=328.0|y=204.0|color=253|size=16|text=攻击元素提升>
+<Text|x=313.0|y=296.0|color=253|size=16|text=1.需要:“称号卷*1000>
+<Text|x=279.0|y=315.0|color=253|size=16|text=2.需要:“元宝”*5000W+1000钻石>
+<Button|x=314.0|y=349.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=251|size=16|text=确认提升|link=@称号6C>
 
 
 
@@ -843,9 +1268,9 @@ DEPRIVETITLE 集结·战斗号角
 CONFERTITLE 暴走·极限突破 1
 take 称号卷 500
 goto @高级称号
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -861,9 +1286,9 @@ DEPRIVETITLE 暴走·极限突破
 CONFERTITLE 天启·信仰之歌 1
 take 称号卷 550
 goto @高级称号
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -880,9 +1305,9 @@ DEPRIVETITLE 天启·信仰之歌
 CONFERTITLE 进化之光·混沌开天 1
 take 称号卷 600
 goto @高级称号
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -899,9 +1324,9 @@ CONFERTITLE 战鼓震天·异界战歌 1
 take 称号卷 650
 
 goto @高级称号
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -921,9 +1346,9 @@ CONFERTITLE 毕方之炎·夜空魅影 1
 take 称号卷 700
 
 goto @高级称号
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 
@@ -942,9 +1367,9 @@ DEPRIVETITLE 毕方之炎·夜空魅影
 CONFERTITLE 勇士的荣耀·最终幻想 1
 take 称号卷 1000
 goto @高级称号
-MESSAGEBOX 称号升级成功..
+SENDMSG 9 称号升级成功..
 #ELSEACT
-MESSAGEBOX [提示]:请检查您是否达到条件或者是否领取过此称号!!!
+SENDMSG 9 [提示]:请检查您是否达到条件或者是否领取过此称号!!!
 break
 
 

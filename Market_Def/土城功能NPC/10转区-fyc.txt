@@ -2,7 +2,7 @@
 ;#IF
 ;CheckContainsText <$SERVERNAME> ²âÊÔ
 ;#ACT
-;messagebox ²âÊÔÇø½ûÖ¹²Ù×÷£¡
+;SENDMSG 9 ²âÊÔÇø½ûÖ¹²Ù×÷£¡
 ;BREAK
 
 
@@ -17,29 +17,48 @@ MOV S$×ªÇø×´Ì¬ <²»¿É×ªÇø>
 #IF
 #Act
 #say
-\ \ \
-<>         <¡ýÇë´ó¼Ò»¨¼¸·ÖÖÓ×ÐÏ¸ÔÄ¶ÁÒÔÏÂÄÚÈÝ£¬ºúÂÒ²Ù×÷µ¼ÖÂ³ö´íÎÞ·¨Õý³£ÁìÈ¡×ªÇø³åÖµµÄÒ»ÂÉºó¹û×Ô¸º¡ý/FCOLOR=31>\
+<Img|x=52.0|y=-46.0|reset=1|show=4|bg=1|move=1|img=public/box/zhhs.png|loadDelay=1|esc=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<Text|id=2|x=115.0|y=-5.0|color=102|size=16|text=¡ýÇë´ó¼Ò»¨¼¸·ÖÖÓ×ÐÏ¸ÔÄ¶ÁÒÔÏÂÄÚÈÝ£¬ºúÂÒ²Ù×÷µ¼ÖÂ³ö´íÎÞ·¨Õý³£ÁìÈ¡×ªÇø³åÖµµÄÒ»ÂÉºó¹û×Ô¸º¡ý>
+<RText|id=3|x=152.0|y=20.0|color=255|size=16|text=<£±¡¢/FCOLOR=102><ÕËºÅÕæÊµ³äÖµµãÖ»Òª´óÓÚ500¼´¿É»ñµÃ20%µÄÕæÊµ×ªÇøÌõ¼þ£¬¿ÉÒÔ×ªµ½ÈÎºÎÐÂÇø/FCOLOR=191>>
+<RText|id=4|x=152.0|y=40.0|color=255|size=16|text=<£²¡¢/FCOLOR=102><½ûÖ¹¶à¸öÖ±³åÕËºÅ×ªµ½Í¬Ò»¸öÐÂÇøÕËºÅ.ÒÔÃâ³ö´í.ºó¹û×Ô¸º.Îñ±ØÏëÇå³þ/FCOLOR=2>>
+<RText|id=5|x=152.0|y=60.0|color=255|size=16|text=<£³¡¢/FCOLOR=102><Ö±³äÕËºÅ×ªÇøÐèÒªµ±Ç°ÕËºÅ×¢²áÊ±ÌîÐ´µÄÉúÈÕ¡¢ÃÜ±£×¢²á×ÊÁÏ,×¢²áÕËºÅÊ±ÇÐ¼Ç½ØÍ¼/FCOLOR=253>>
+<RText|id=6|x=152.0|y=80.0|color=255|size=16|text=<£´¡¢/FCOLOR=102><ÐÂÇøÁìÈ¡×ªÇø³äÖµµÄÎ¨Ò»ÈÏÖ¤·½Ê½¾ÍÊÇ×ªÇøÊ±ÌîÐ´µÄÐÂÇøÕËºÅ.ÇëÎñ±ØÍ×ÉÆ±£¹ÜÀÎ¼Ç/FCOLOR=249>>
+<RText|id=7|x=152.0|y=100.0|color=255|size=16|text=<£µ¡¢/FCOLOR=102><ÀÏÇøÕËºÅÉêÇë×ªÇøºó£¬ÕËºÅ»á´¦ÓÚ·âÍ£×´Ì¬£¬Îª±ÜÃâ×Ê½ðËðÊ§,ÇëÏÈ½«×°±¸×ªÒÆºÃÅ¶/FCOLOR=156>>
+<RText|id=8|x=152.0|y=120.0|color=255|size=16|text=<£¶¡¢/FCOLOR=102><ÀýÈç:ÄãÀÏÇøÕËºÅÉÏÓÐ500ÕæÊµ³äÖµ£¬×ªÇøºóÈÎºÎÐÂÇø¶¼ÄÜÁìÈ¡100³äÖµ£¬ÀÏÇøÇå¿Õ£¡/FCOLOR=116>>
+<RText|id=9|x=159.0|y=140.0|color=255|size=16|text=<ÕËºÅ×ªÇø×´Ì¬£º/FCOLOR=249>  <$STR(S$×ªÇø×´Ì¬)>  <µ±Ç°ÕËºÅ¿É×ªÇø³äÖµÕæÊµµãÎª£º/FCOLOR=156><$GAMEGLORY> <µã/FCOLOR=156>>
+<Img|id=10|x=260.0|y=174.0|width=389|esc=0|img=public/box/greybox.png>
+<RText|x=386.0|y=185.0|color=255|size=16|text=<Ö±³åÕÊºÅ²Ù×÷Çø/FCOLOR=116>>
+<RText|x=274.0|y=209.0|color=255|size=16|text=<ÌáÊ¾£º×ªÐÂÇøÕËºÅÖ»ÄÜÁìÈ¡Ò»´Î×ªÇø³äÖµ,µþ¼ÓÎÞÐ§/FCOLOR=249>>
+<Button|x=315.0|y=273.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=ÎÒÒª½øÐÐ×ªÇø|link=@Ö±³å>
+<Button|x=314.0|y=234.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=ÁìÈ¡×ªÇøÊý¾Ý|link=@Ö±³åÁìÈ¡>
+<RText|x=460.0|y=237.0|color=255|size=16|text=<£¨×ªÇø²Ù×÷£©/FCOLOR=224>>
+<RText|x=460.0|y=276.0|color=255|size=16|text=<£¨ÐÂÇøÁìÈ¡£©/FCOLOR=224>>
+<RText|x=120.0|y=325.0|color=255|size=16|text=<ÖØÒªÌáÐÑ£º×ªÇø²Ù×÷É÷ÖØ£¬Ò»µ©×ªÇø³É¹¦£¬¼¼ÊõÒ²ÎÞ·¨½â·âÄãµÄÕËºÅ£¬ÇëÌáÇ°»ØÊÕ»òÕß×ªÒÆ×°±¸/AUTOCOLOR=251,168,191,70,245,249,253>>
 
-<> <¡ù·â¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£±¡¢/FCOLOR=158><ÕËºÅÕæÊµ³äÖµµãÖ»Òª´óÓÚ500¼´¿É»ñµÃ20%µÄÕæÊµ×ªÇøÌõ¼þ£¬¿ÉÒÔ×ªµ½ÈÎºÎÐÂÇø/FCOLOR=191>        <¡ù·â¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
-<> <¡ùÌì¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£²¡¢/FCOLOR=158><½ûÖ¹¶à¸öÖ±³åÕËºÅ×ªµ½Í¬Ò»¸öÐÂÇøÕËºÅ.ÒÔÃâ³ö´í.ºó¹û×Ô¸º.Îñ±ØÏëÇå³þ/FCOLOR=224>             <¡ùÌì¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
-<> <¡ùÂ¼¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£³¡¢/FCOLOR=158><Ö±³äÕËºÅ×ªÇøÐèÒªµ±Ç°ÕËºÅ×¢²áÊ±ÌîÐ´µÄÉúÈÕ¡¢ÃÜ±£×¢²á×ÊÁÏ,×¢²áÕËºÅÊ±ÇÐ¼Ç½ØÍ¼/FCOLOR=253>   <¡ùÂ¼¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
-<> <¡ùÐÂ¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£µ¡¢/FCOLOR=158><ÐÂÇøÁìÈ¡×ªÇø³äÖµµÄÎ¨Ò»ÈÏÖ¤·½Ê½¾ÍÊÇ×ªÇøÊ±ÌîÐ´µÄÐÂÇøÕËºÅ.ÇëÎñ±ØÍ×ÉÆ±£¹ÜÀÎ¼Ç/FCOLOR=249>   <¡ùÐÂ¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
-<> <¡ù×ª¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£¶¡¢/FCOLOR=158><ÀÏÇøÕËºÅÉêÇë×ªÇøºó£¬ÕËºÅ»á´¦ÓÚ·âÍ£×´Ì¬£¬Îª±ÜÃâ×Ê½ðËðÊ§,ÇëÏÈ½«×°±¸×ªÒÆºÃÅ¶/FCOLOR=254>   <¡ù×ª¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
-<> <¡ùÇø¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£·¡¢/FCOLOR=158><ÀýÈç:ÄãÀÏÇøÕËºÅÉÏÓÐ500ÕæÊµ³äÖµ£¬×ªÇøºóÈÎºÎÐÂÇø¶¼ÄÜÁìÈ¡100³äÖµ£¬ÀÏÇøÇå¿Õ£¡/FCOLOR=151>   <¡ùÇø¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\ \
-<>                    <ÕËºÅ×ªÇø×´Ì¬£º/FCOLOR=249>  <$STR(S$×ªÇø×´Ì¬)>  <µ±Ç°ÕËºÅ¿É×ªÇø³äÖµÕæÊµµãÎª£º/FCOLOR=227><$GAMEGLORY> <µã/FCOLOR=254> \ \
-<>                        <¨X---------------------------------------------¨[/FCOLOR=246>  \
-<>                        <©ª/FCOLOR=246>               <Ö±³åÕÊºÅ²Ù×÷Çø/FCOLOR=116>                <©ª/FCOLOR=246>\
-<>                        <©ª/FCOLOR=246><ÌáÊ¾£º×ªÐÂÇøÕËºÅÖ»ÄÜÁìÈ¡Ò»´Î×ªÇø³äÖµ,µþ¼ÓÎÞÐ§/FCOLOR=249><©ª/FCOLOR=246>\
-<>                        <¨d---------------------------------------------¨g/FCOLOR=246> \
-<>                        <©ª/FCOLOR=246>                                             <©ª/FCOLOR=246> \
-<>                        <©ª/FCOLOR=246>       <ÎÒÒª½øÐÐ×ªÇø/@Ö±³å>      <£¨×ªÇø²Ù×÷£©/FCOLOR=224>        <©ª/FCOLOR=246> \
-<>                        <©ª/FCOLOR=246>                                             <©ª/FCOLOR=246> \
-<>                        <©ª/FCOLOR=246>       <ÁìÈ¡×ªÇøÊý¾Ý/@Ö±³åÁìÈ¡>      <£¨ÐÂÇøÁìÈ¡£©/FCOLOR=224>        <©ª/FCOLOR=246> \
-<>                        <©ª/FCOLOR=246>                                             <©ª/FCOLOR=246> \
-<>                        <¨^---------------------------------------------¨a/FCOLOR=246> \ \
-<> <¡ï¡ï¡ïÖØÒªÌáÐÑ£º×ªÇø²Ù×÷É÷ÖØ£¬Ò»µ©×ªÇø³É¹¦£¬¼¼ÊõÒ²ÎÞ·¨½â·âÄãµÄÕËºÅ£¬ÇëÌáÇ°»ØÊÕ»òÕß×ªÒÆ×°±¸¡ï¡ï¡ï/AUTOCOLOR=251,168,191,70,245,249,253>\
-<> <¡ï¡ï¡ïÖØÒªÌáÐÑ£º×ªÇø²Ù×÷É÷ÖØ£¬Ò»µ©×ªÇø³É¹¦£¬¼¼ÊõÒ²ÎÞ·¨½â·âÄãµÄÕËºÅ£¬ÇëÌáÇ°»ØÊÕ»òÕß×ªÒÆ×°±¸¡ï¡ï¡ï/AUTOCOLOR=251,168,191,70,245,249,253>\
-<> <¡ï¡ï¡ïÖØÒªÌáÐÑ£º×ªÇø²Ù×÷É÷ÖØ£¬Ò»µ©×ªÇø³É¹¦£¬¼¼ÊõÒ²ÎÞ·¨½â·âÄãµÄÕËºÅ£¬ÇëÌáÇ°»ØÊÕ»òÕß×ªÒÆ×°±¸¡ï¡ï¡ï/AUTOCOLOR=251,168,191,70,245,249,253>\
+
+
+;<>         <¡ýÇë´ó¼Ò»¨¼¸·ÖÖÓ×ÐÏ¸ÔÄ¶ÁÒÔÏÂÄÚÈÝ£¬ºúÂÒ²Ù×÷µ¼ÖÂ³ö´íÎÞ·¨Õý³£ÁìÈ¡×ªÇø³åÖµµÄÒ»ÂÉºó¹û×Ô¸º¡ý/FCOLOR=31>\;
+;<> <¡ù·â¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£±¡¢/FCOLOR=158><ÕËºÅÕæÊµ³äÖµµãÖ»Òª´óÓÚ500¼´¿É»ñµÃ20%µÄÕæÊµ×ªÇøÌõ¼þ£¬¿ÉÒÔ×ªµ½ÈÎºÎÐÂÇø/FCOLOR=191>        <¡ù·â¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
+;<> <¡ùÌì¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£²¡¢/FCOLOR=158><½ûÖ¹¶à¸öÖ±³åÕËºÅ×ªµ½Í¬Ò»¸öÐÂÇøÕËºÅ.ÒÔÃâ³ö´í.ºó¹û×Ô¸º.Îñ±ØÏëÇå³þ/FCOLOR=224>             <¡ùÌì¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
+;<> <¡ùÂ¼¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£³¡¢/FCOLOR=158><Ö±³äÕËºÅ×ªÇøÐèÒªµ±Ç°ÕËºÅ×¢²áÊ±ÌîÐ´µÄÉúÈÕ¡¢ÃÜ±£×¢²á×ÊÁÏ,×¢²áÕËºÅÊ±ÇÐ¼Ç½ØÍ¼/FCOLOR=253>   <¡ùÂ¼¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
+;<> <¡ùÐÂ¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£µ¡¢/FCOLOR=158><ÐÂÇøÁìÈ¡×ªÇø³äÖµµÄÎ¨Ò»ÈÏÖ¤·½Ê½¾ÍÊÇ×ªÇøÊ±ÌîÐ´µÄÐÂÇøÕËºÅ.ÇëÎñ±ØÍ×ÉÆ±£¹ÜÀÎ¼Ç/FCOLOR=249>   <¡ùÐÂ¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
+;<> <¡ù×ª¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£¶¡¢/FCOLOR=158><ÀÏÇøÕËºÅÉêÇë×ªÇøºó£¬ÕËºÅ»á´¦ÓÚ·âÍ£×´Ì¬£¬Îª±ÜÃâ×Ê½ðËðÊ§,ÇëÏÈ½«×°±¸×ªÒÆºÃÅ¶/FCOLOR=254>   <¡ù×ª¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\
+;<> <¡ùÇø¡ù/AUTOCOLOR=251,168,191,70,245,249,253>  <£·¡¢/FCOLOR=158><ÀýÈç:ÄãÀÏÇøÕËºÅÉÏÓÐ500ÕæÊµ³äÖµ£¬×ªÇøºóÈÎºÎÐÂÇø¶¼ÄÜÁìÈ¡100³äÖµ£¬ÀÏÇøÇå¿Õ£¡/FCOLOR=151>   <¡ùÇø¡ù/AUTOCOLOR=251,168,191,70,245,249,253>\ \
+;<>                    <ÕËºÅ×ªÇø×´Ì¬£º/FCOLOR=249>  <$STR(S$×ªÇø×´Ì¬)>  <µ±Ç°ÕËºÅ¿É×ªÇø³äÖµÕæÊµµãÎª£º/FCOLOR=227><$GAMEGLORY> <µã/FCOLOR=254> \ \
+;<>                        <¨X---------------------------------------------¨[/FCOLOR=246>  \
+;<>                        <©ª/FCOLOR=246>               <Ö±³åÕÊºÅ²Ù×÷Çø/FCOLOR=116>                <©ª/FCOLOR=246>\
+;<>                        <©ª/FCOLOR=246><ÌáÊ¾£º×ªÐÂÇøÕËºÅÖ»ÄÜÁìÈ¡Ò»´Î×ªÇø³äÖµ,µþ¼ÓÎÞÐ§/FCOLOR=249><©ª/FCOLOR=246>\
+;<>                        <¨d---------------------------------------------¨g/FCOLOR=246> \
+;<>                        <©ª/FCOLOR=246>                                             <©ª/FCOLOR=246> \
+;<>                        <©ª/FCOLOR=246>       <ÎÒÒª½øÐÐ×ªÇø/@Ö±³å>      <£¨×ªÇø²Ù×÷£©/FCOLOR=224>        <©ª/FCOLOR=246> \
+;<>                        <©ª/FCOLOR=246>                                             <©ª/FCOLOR=246> \
+;<>                        <©ª/FCOLOR=246>       <ÁìÈ¡×ªÇøÊý¾Ý/@Ö±³åÁìÈ¡>      <£¨ÐÂÇøÁìÈ¡£©/FCOLOR=224>        <©ª/FCOLOR=246> \
+;<>                        <©ª/FCOLOR=246>                                             <©ª/FCOLOR=246> \
+;<>                        <¨^---------------------------------------------¨a/FCOLOR=246> \ \
+;<> <¡ï¡ï¡ïÖØÒªÌáÐÑ£º×ªÇø²Ù×÷É÷ÖØ£¬Ò»µ©×ªÇø³É¹¦£¬¼¼ÊõÒ²ÎÞ·¨½â·âÄãµÄÕËºÅ£¬ÇëÌáÇ°»ØÊÕ»òÕß×ªÒÆ×°±¸¡ï¡ï¡ï/AUTOCOLOR=251,168,191,70,245,249,253>\
+;<> <¡ï¡ï¡ïÖØÒªÌáÐÑ£º×ªÇø²Ù×÷É÷ÖØ£¬Ò»µ©×ªÇø³É¹¦£¬¼¼ÊõÒ²ÎÞ·¨½â·âÄãµÄÕËºÅ£¬ÇëÌáÇ°»ØÊÕ»òÕß×ªÒÆ×°±¸¡ï¡ï¡ï/AUTOCOLOR=251,168,191,70,245,249,253>\
+;<> <¡ï¡ï¡ïÖØÒªÌáÐÑ£º×ªÇø²Ù×÷É÷ÖØ£¬Ò»µ©×ªÇø³É¹¦£¬¼¼ÊõÒ²ÎÞ·¨½â·âÄãµÄÕËºÅ£¬ÇëÌáÇ°»ØÊÕ»òÕß×ªÒÆ×°±¸¡ï¡ï¡ï/AUTOCOLOR=251,168,191,70,245,249,253>\
 
 
 
@@ -48,7 +67,7 @@ MOV S$×ªÇø×´Ì¬ <²»¿É×ªÇø>
 #IF
 CHECKCONTAINSTEXT <$SERVERNAME> ²âÊÔ
 #ACT
-MESSAGEBOX ²âÊÔÇø²»¿ªÆô×ªÇø¹¦ÄÜ£¡£¡£¡£¡£¡£¡£¡
+SENDMSG 9 ²âÊÔÇø²»¿ªÆô×ªÇø¹¦ÄÜ£¡£¡£¡£¡£¡£¡£¡
 BREAK
 
 
@@ -56,7 +75,7 @@ BREAK
 #IF
 CHECKGAMEGLORY < 499
 #Act
-MESSAGEBOX ¼ì²âµ½ÄãÄ¿Ç°µÄÕËºÅÕæÊµ³äÖµµãÊýÁ¿²»×ã500µã£¬½ûÖ¹¸ÃÑ¡Ïî×ªÇø£¡
+SENDMSG 9 ¼ì²âµ½ÄãÄ¿Ç°µÄÕËºÅÕæÊµ³äÖµµãÊýÁ¿²»×ã500µã£¬½ûÖ¹¸ÃÑ¡Ïî×ªÇø£¡
 BREAK
 
 #IF
@@ -66,31 +85,45 @@ MOV N$ÕËºÅÊÖÐø·Ñ¼ÆËã <$GAMEGLORY>
 MUL N$ÕËºÅÊÖÐø·Ñ¼ÆËã 20
 DIV N$ÕËºÅÊÖÐø·Ñ¼ÆËã 100
 #SAY
-\ \ \  \ \
+<Img|x=52.0|y=-46.0|esc=1|show=4|bg=1|move=1|img=public/box/zhhs.png|loadDelay=1|reset=1>
+<Button|x=774.0|y=-42.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<RText|x=106.0|y=-3.0|color=255|size=16|text=<¡î¡î¡î¡î¡î¡î¡î¡î¡û¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï/FCOLOR=250><ÕÊ ºÅ ×ª Çø Ïµ Í³/FCOLOR=253><¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ú¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î/FCOLOR=250>>
+<RText|x=114.0|y=21.0|color=255|size=16|text=<ÊäÈëÒÔÏÂ×ÊÁÏÑéÖ¤ÎÞÎóºó·½¿ÉÕËºÅ×ªÇø£º/FCOLOR=242>  <Äú¿ÉÒÔÐÂÇøÕËºÅ¿ÉÁìÈ¡/FCOLOR=254><$str(N$ÕËºÅÊÖÐø·Ñ¼ÆËã)><ÕæÊµµã/FCOLOR=254>>
+<Button|x=147.0|y=47.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=ÇëÊäÈëÉúÈÕ|link=@@inputstring76(ÇëÊäÈë×¢²áÉúÈÕ£º¡¡¡¡¡¡¡¡¡¡¡¡ÉúÈÕ¸ñÊ½£º1989/01/01)>
+<Button|x=147.0|y=81.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=ÃÜ±£ÎÊÌâÒ»|link=@@inputstring75(ÇëÊä½¨ºÅÎÊÌâÒ»£º)>
+<Button|x=147.0|y=115.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=ÃÜ±£´ð°¸Ò»|link=@@inputstring74(ÇëÊä½¨ºÅ´ð°¸Ò»£º)>
+<Button|x=147.0|y=149.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=ÃÜ±£ÎÊÌâ¶þ|link=@@inputstring73(ÇëÊä½¨ºÅÎÊÌâ¶þ£º)>
+<Button|x=147.0|y=183.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=ÃÜ±£´ð°¸¶þ|link=@@inputstring72(ÇëÊä½¨ºÅ´ð°¸¶þ£º)>
+<Button|x=147.0|y=217.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=ÐÂÇøÕËºÅÎª|link=@@inputstring71(ÕâÀïÊäÈëÒª×ªÐÂÇøµÄÕËºÅ4-10Î»Êý×ÖÄ¸£º)>
+<Button|x=147.0|y=251.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=È·ÈÏÕËºÅ×ªÇø|link=@È·ÈÏÕËºÅ×ªÇø>
+<RText|x=291.0|y=52.0|color=255|size=16|text=<µ±Ç°µÄÉúÈÕ£º/FCOLOR=242> <$STR(S76)>>
+<RText|x=292.0|y=86.0|color=255|size=16|text=<µ±Ç°ÎÊÌâÒ»£º/FCOLOR=242> <$STR(S75)>>
+<RText|x=294.0|y=120.0|color=255|size=16|text=<µ±Ç°´ð°¸Ò»£º/FCOLOR=242> <$STR(S74)>>
+<RText|x=295.0|y=154.0|color=255|size=16|text=<µ±Ç°ÎÊÌâ¶þ£º/FCOLOR=242> <$STR(S73)>>
+<RText|x=296.0|y=188.0|color=255|size=16|text=<µ±Ç°´ð°¸¶þ£º/FCOLOR=242> <$STR(S72)>>
+<RText|x=296.0|y=222.0|color=255|size=16|text=<ÐÂÇøÕËºÅÎª/@@inputstring71(ÕâÀïÊäÈëÒª×ªÐÂÇøµÄÕËºÅ4-10Î»Êý×ÖÄ¸£º)>    <ÐÂÇøÕËºÅÎª£º/FCOLOR=242> <$STR(S71)>>
+<RText|x=298.0|y=256.0|color=255|size=16|text=<×¢£º´Ë²Ù×÷½«Çå¿Õ³äÖµµã£¬ÐÂÇøÕÊºÅÎÞÌõ¼þÁìÈ¡/FCOLOR=254>>
+<Text|x=135.0|y=307.0|color=249|size=16|text=×¢£º×ªÇø³É¹¦£¬´ËÕËºÅ½«×Ô¶¯·âºÅ´¦Àí£¡ÎÞ·¨½â·â£¡ÇëÌáÇ°×ªÒÆºÃ¹óÖØ×°±¸£¡>
+<Text|x=135.0|y=330.0|color=249|size=16|text=×¢£º´Ë¹¦ÄÜÇëÔÚÈ·¶¨Òª×ªÇøµÄÇé¿öÏÂ£¬¡°½÷É÷²Ù×÷¡±£¡²Ù×÷ÁËÓÖ²»Ïë×ªÇøµÄ£¬Ò»ÂÉ²»Óè´¦Àí£¡£¡>
 
-<>        <¡î¡î¡î¡î¡î¡î¡î¡î¡û¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï/FCOLOR=250><ÕÊ ºÅ ×ª Çø Ïµ Í³/FCOLOR=253><¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ú¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î/FCOLOR=250>\ \ \
 
-
-<>                  <ÊäÈëÒÔÏÂ×ÊÁÏÑéÖ¤ÎÞÎóºó·½¿ÉÕËºÅ×ªÇø£º/FCOLOR=242>  <Äú¿ÉÒÔÐÂÇøÕËºÅ¿ÉÁìÈ¡/FCOLOR=254><$str(N$ÕËºÅÊÖÐø·Ñ¼ÆËã)><ÕæÊµµã/FCOLOR=254>\ \
-
-
-<>                  <ÇëÊäÈëÉúÈÕ/@@inputstring76(ÇëÊäÈë×¢²áÉúÈÕ£º¡¡¡¡¡¡¡¡¡¡¡¡ÉúÈÕ¸ñÊ½£º1989/01/01)>    <µ±Ç°µÄÉúÈÕ£º/FCOLOR=242> <$STR(S76)>\
-<>                  <ÃÜ±£ÎÊÌâÒ»/@@inputstring75(ÇëÊä½¨ºÅÎÊÌâÒ»£º)>    <µ±Ç°ÎÊÌâÒ»£º/FCOLOR=242> <$STR(S75)>\
-<>                  <ÃÜ±£´ð°¸Ò»/@@inputstring74(ÇëÊä½¨ºÅ´ð°¸Ò»£º)>    <µ±Ç°´ð°¸Ò»£º/FCOLOR=242> <$STR(S74)>\
-<>                  <ÃÜ±£ÎÊÌâ¶þ/@@inputstring73(ÇëÊä½¨ºÅÎÊÌâ¶þ£º)>    <µ±Ç°ÎÊÌâ¶þ£º/FCOLOR=242> <$STR(S73)>\
-<>                  <ÃÜ±£´ð°¸¶þ/@@inputstring72(ÇëÊä½¨ºÅ´ð°¸¶þ£º)>    <µ±Ç°´ð°¸¶þ£º/FCOLOR=242> <$STR(S72)>\
-<>                  <ÐÂÇøÕËºÅÎª/@@inputstring71(ÕâÀïÊäÈëÒª×ªÐÂÇøµÄÕËºÅ4-10Î»Êý×ÖÄ¸£º)>    <ÐÂÇøÕËºÅÎª£º/FCOLOR=242> <$STR(S71)>\ \
-
-<>                  {×ªÇø³É¹¦ºó£¬ÐÂÇø¿ÉÁìÈ¡£º×ªÇø½ð¶îµÄ10%£¬ÀýÈç×ª500³äÖµµã.ÐÂÇø¿ÉÁìÈ¡50³äÖµµã/FCOLOR=149}\ \
-
-<>                  <È·ÈÏÕËºÅ×ªÇø/@È·ÈÏÕËºÅ×ªÇø>   <×¢£º´Ë²Ù×÷½«Çå¿Õ³äÖµµã£¬ÐÂÇøÕÊºÅÎÞÌõ¼þÁìÈ¡/FCOLOR=254>\ \
-<>                  <µã»÷È·ÈÏÊäÈëºó£¬Èç¹ûÊäÈë´íÎó£¬»á±»Ö±½ÓÌßÏÂÏß>\
-<>                  <µã»÷È·ÈÏÊäÈëºó£¬Èç¹ûÊäÈë´íÎó£¬»á±»Ö±½ÓÌßÏÂÏß>\
-<>                  <×¢£º×ªÇø³É¹¦£¬´ËÕËºÅ½«×Ô¶¯·âºÅ´¦Àí£¡ÎÞ·¨½â·â£¡ÇëÌáÇ°×ªÒÆºÃ¹óÖØ×°±¸£¡>\
-<>                  <×¢£º×ªÇø³É¹¦£¬´ËÕËºÅ½«×Ô¶¯·âºÅ´¦Àí£¡ÎÞ·¨½â·â£¡ÇëÌáÇ°×ªÒÆºÃ¹óÖØ×°±¸£¡>\
-<>                  <×¢£º×ªÇø³É¹¦£¬´ËÕËºÅ½«×Ô¶¯·âºÅ´¦Àí£¡ÎÞ·¨½â·â£¡ÇëÌáÇ°×ªÒÆºÃ¹óÖØ×°±¸£¡>\
-<>                  <×¢£º´Ë¹¦ÄÜÇëÔÚÈ·¶¨Òª×ªÇøµÄÇé¿öÏÂ£¬¡°½÷É÷²Ù×÷¡±£¡²Ù×÷ÁËÓÖ²»Ïë×ªÇøµÄ£¬Ò»ÂÉ²»Óè´¦Àí£¡£¡>\
-<>                  <×¢£º´Ë¹¦ÄÜÇëÔÚÈ·¶¨Òª×ªÇøµÄÇé¿öÏÂ£¬¡°½÷É÷²Ù×÷¡±£¡²Ù×÷ÁËÓÖ²»Ïë×ªÇøµÄ£¬Ò»ÂÉ²»Óè´¦Àí£¡£¡>\
+;<>        <¡î¡î¡î¡î¡î¡î¡î¡î¡û¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï/FCOLOR=250><ÕÊ ºÅ ×ª Çø Ïµ Í³/FCOLOR=253><¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ú¡î¡î¡î¡î¡î¡î¡î¡î¡î¡î/FCOLOR=250>\ \ \
+;<>                  <ÊäÈëÒÔÏÂ×ÊÁÏÑéÖ¤ÎÞÎóºó·½¿ÉÕËºÅ×ªÇø£º/FCOLOR=242>  <Äú¿ÉÒÔÐÂÇøÕËºÅ¿ÉÁìÈ¡/FCOLOR=254><$str(N$ÕËºÅÊÖÐø·Ñ¼ÆËã)><ÕæÊµµã/FCOLOR=254>\ \
+;<>                  <ÇëÊäÈëÉúÈÕ/@@inputstring76(ÇëÊäÈë×¢²áÉúÈÕ£º¡¡¡¡¡¡¡¡¡¡¡¡ÉúÈÕ¸ñÊ½£º1989/01/01)>    <µ±Ç°µÄÉúÈÕ£º/FCOLOR=242> <$STR(S76)>\
+;<>                  <ÃÜ±£ÎÊÌâÒ»/@@inputstring75(ÇëÊä½¨ºÅÎÊÌâÒ»£º)>    <µ±Ç°ÎÊÌâÒ»£º/FCOLOR=242> <$STR(S75)>\
+;<>                  <ÃÜ±£´ð°¸Ò»/@@inputstring74(ÇëÊä½¨ºÅ´ð°¸Ò»£º)>    <µ±Ç°´ð°¸Ò»£º/FCOLOR=242> <$STR(S74)>\
+;<>                  <ÃÜ±£ÎÊÌâ¶þ/@@inputstring73(ÇëÊä½¨ºÅÎÊÌâ¶þ£º)>    <µ±Ç°ÎÊÌâ¶þ£º/FCOLOR=242> <$STR(S73)>\
+;<>                  <ÃÜ±£´ð°¸¶þ/@@inputstring72(ÇëÊä½¨ºÅ´ð°¸¶þ£º)>    <µ±Ç°´ð°¸¶þ£º/FCOLOR=242> <$STR(S72)>\
+;<>                  <ÐÂÇøÕËºÅÎª/@@inputstring71(ÕâÀïÊäÈëÒª×ªÐÂÇøµÄÕËºÅ4-10Î»Êý×ÖÄ¸£º)>    <ÐÂÇøÕËºÅÎª£º/FCOLOR=242> <$STR(S71)>\ \
+;<>                  {×ªÇø³É¹¦ºó£¬ÐÂÇø¿ÉÁìÈ¡£º×ªÇø½ð¶îµÄ10%£¬ÀýÈç×ª500³äÖµµã.ÐÂÇø¿ÉÁìÈ¡50³äÖµµã/FCOLOR=149}\ \
+;<>                  <È·ÈÏÕËºÅ×ªÇø/@È·ÈÏÕËºÅ×ªÇø>   <×¢£º´Ë²Ù×÷½«Çå¿Õ³äÖµµã£¬ÐÂÇøÕÊºÅÎÞÌõ¼þÁìÈ¡/FCOLOR=254>\ \
+;<>                  <µã»÷È·ÈÏÊäÈëºó£¬Èç¹ûÊäÈë´íÎó£¬»á±»Ö±½ÓÌßÏÂÏß>\
+;<>                  <µã»÷È·ÈÏÊäÈëºó£¬Èç¹ûÊäÈë´íÎó£¬»á±»Ö±½ÓÌßÏÂÏß>\
+;<>                  <×¢£º×ªÇø³É¹¦£¬´ËÕËºÅ½«×Ô¶¯·âºÅ´¦Àí£¡ÎÞ·¨½â·â£¡ÇëÌáÇ°×ªÒÆºÃ¹óÖØ×°±¸£¡>\
+;<>                  <×¢£º×ªÇø³É¹¦£¬´ËÕËºÅ½«×Ô¶¯·âºÅ´¦Àí£¡ÎÞ·¨½â·â£¡ÇëÌáÇ°×ªÒÆºÃ¹óÖØ×°±¸£¡>\
+;<>                  <×¢£º×ªÇø³É¹¦£¬´ËÕËºÅ½«×Ô¶¯·âºÅ´¦Àí£¡ÎÞ·¨½â·â£¡ÇëÌáÇ°×ªÒÆºÃ¹óÖØ×°±¸£¡>\
+;<>                  <×¢£º´Ë¹¦ÄÜÇëÔÚÈ·¶¨Òª×ªÇøµÄÇé¿öÏÂ£¬¡°½÷É÷²Ù×÷¡±£¡²Ù×÷ÁËÓÖ²»Ïë×ªÇøµÄ£¬Ò»ÂÉ²»Óè´¦Àí£¡£¡>\
+;<>                  <×¢£º´Ë¹¦ÄÜÇëÔÚÈ·¶¨Òª×ªÇøµÄÇé¿öÏÂ£¬¡°½÷É÷²Ù×÷¡±£¡²Ù×÷ÁËÓÖ²»Ïë×ªÇøµÄ£¬Ò»ÂÉ²»Óè´¦Àí£¡£¡>\
 
 
 
@@ -141,7 +174,7 @@ BREAK
 EQUAL S71 <$USERACCOUNT>
 #ACT
 MOV S71
-MESSAGEBOX ÐÂÇøÕËºÅ½ûÖ¹Óëµ±Ç°ÕËºÅÏàÍ¬£¡£¡£¡
+SENDMSG 9 ÐÂÇøÕËºÅ½ûÖ¹Óëµ±Ç°ÕËºÅÏàÍ¬£¡£¡£¡
 BREAK
 
 #IF
@@ -159,7 +192,7 @@ EQUAL S73
 EQUAL S72
 EQUAL S71
 #ACT
-MESSAGEBOX ÇëÌîÐ´ÍêÕû£¬ÔÙµã»÷×ªÇøÑ¡Ïî£¡£¡£¡
+SENDMSG 9 ÇëÌîÐ´ÍêÕû£¬ÔÙµã»÷×ªÇøÑ¡Ïî£¡£¡£¡
 BREAK
 
 #IF
@@ -172,7 +205,7 @@ EQUAL S72 <$ANSWER2>
 goto @ÑéÖ¤Í¨¹ý
 BREAK
 #ELSEACT
-MESSAGEBOX ÃÜ±£ÐÅÏ¢ÊäÈë´íÎó£¡                                           ;ÄãÒÑ±»ÌßÏÂÏß£¡
+SENDMSG 9 ÃÜ±£ÐÅÏ¢ÊäÈë´íÎó£¡                                           ;ÄãÒÑ±»ÌßÏÂÏß£¡
 ;KICK                                                       ÕâÀïÉèÖÃÈç¹ûÊäÈë´íÎóÖ±½ÓµôÏß
 BREAK
 
@@ -190,13 +223,13 @@ GAMEGLORY - 99999999
 AddTextListEx ..\..\..\..\·âÌì×ªÇøÏµÍ³\·âÌì×ªÇøÊý¾Ý\Ö±³åºÅÕËºÅ½ð¶îÊý¾Ý.txt <$str(S$Ö±³åºÅ»ØÊÕÊý¾Ý)> 0
 AddTextListEx ..\..\..\..\·âÌì×ªÇøÏµÍ³\·âÌì×ªÇøÊý¾Ý\Ö±³åºÅÐÂÇøÕËºÅ.txt <$str(S71)> 0
 AddTextListEx ..\..\..\..\·âÌì×ªÇøÏµÍ³\·âÌì×ªÇøÊý¾Ý\Ö±³åºÅÊý¾Ý¼ÇÂ¼.txt <$DATETIME>·þÎñÆ÷£º¡¾<$SERVERNAME>¡¿Íæ¼Ò£º¡¾<$USERNAME>¡¿ÀÏÇøÕËºÅ£º¡¾<$USERACCOUNT>¡¿½ð¶î£º¡¾<$str(N$×ªÇøµãÊý)>¡¿ÐÂÇøÕËºÅ£º¡¾<$str(s71)>¡¿ 0
-MESSAGEBOX ¹§Ï²Äã³É¹¦×ªÇø³äÖµµã£º<$str(N$×ªÇøµãÊý)>£¬ÐÂÇøÕËºÅÎª<$str(s71)>£¬ÇëÀÎ¼Ç£¡\ºÅÒÑ±»·âÍ££¡
+SENDMSG 9 ¹§Ï²Äã³É¹¦×ªÇø³äÖµµã£º<$str(N$×ªÇøµãÊý)>£¬ÐÂÇøÕËºÅÎª<$str(s71)>£¬ÇëÀÎ¼Ç£¡\ºÅÒÑ±»·âÍ££¡
 ;KICK
 map ×ªÇøÀÎ·¿
 DELAYGOTO 1000 @Ð¡ÍË
 BREAK
 #ELSEACT
-MESSAGEBOX ÕËºÅ³¤¶È½öÏÞ4-10Î»£¡
+SENDMSG 9 ÕËºÅ³¤¶È½öÏÞ4-10Î»£¡
 BREAK
 
 
@@ -204,7 +237,7 @@ BREAK
 #IF
 #ACT
 SENDMOVEMSG 0 253 255 350 1 Íæ¼Ò¡¼<$USERNAME>¡½Ê¹ÓÃ¶À¼Ò×ÔÖú×ªÇø³É¹¦£¬ÐÖµÜÃÇÐÂÇø¼û£¡
-MESSAGEBOX ¹§Ï²Äã³É¹¦×ªÇø³äÖµµã£º<$str(N$×ªÇøµãÊý)>£¬ÐÂÇøÕËºÅÎª<$str(s71)>£¬ÇëÀÎ¼Ç£¡\ºÅÒÑ±»·âÍ££¡
+SENDMSG 9 ¹§Ï²Äã³É¹¦×ªÇø³äÖµµã£º<$str(N$×ªÇøµãÊý)>£¬ÐÂÇøÕËºÅÎª<$str(s71)>£¬ÇëÀÎ¼Ç£¡\ºÅÒÑ±»·âÍ££¡
 KICK
 
 
@@ -218,14 +251,14 @@ GetStringPos  ..\..\..\..\·âÌì×ªÇøÏµÍ³\·âÌì×ªÇøÊý¾Ý\Ö±³åºÅÐÂÇøÕËºÅ.txt <$USERACC
 #IF
 CHECKCONTAINSTEXT <$SERVERNAME> ²âÊÔ
 #ACT
-MESSAGEBOX ²âÊÔÇø²»ÄÜÖ´ÐÐ,ÇëÕýÊ½¿ªÇøÔÚÁìÈ¡
+SENDMSG 9 ²âÊÔÇø²»ÄÜÖ´ÐÐ,ÇëÕýÊ½¿ªÇøÔÚÁìÈ¡
 BREAK
 
 
 #IF
 EQUAL N0 9999999
 #ACT
-messagebox ¸ÃÕËºÅÎÞ×ªÇø¼ÇÂ¼»òÒÑ¾­ÁìÈ¡¹ý
+SENDMSG 9 ¸ÃÕËºÅÎÞ×ªÇø¼ÇÂ¼»òÒÑ¾­ÁìÈ¡¹ý
 BREAK
 #ELSEACT
 GetListString ..\..\..\..\·âÌì×ªÇøÏµÍ³\·âÌì×ªÇøÊý¾Ý\Ö±³åºÅÕËºÅ½ð¶îÊý¾Ý.txt <$STR(N0)> S$ÐÂÇøÕËºÅ N$Ö±³åºÅ³äÖµ½ð¶î
@@ -236,7 +269,7 @@ MOV N$ÕËºÅÊÖÐø·Ñ¼ÆËãÁìÈ¡ <$str(N$Ö±³åºÅ³äÖµ½ð¶î)>
 MUL N$ÕËºÅÊÖÐø·Ñ¼ÆËãÁìÈ¡ 20
 DIV N$ÕËºÅÊÖÐø·Ñ¼ÆËãÁìÈ¡ 20
 
-MessageBox µ±Ç°ÕËºÅ¿ÉÒÔÃâ·ÑÁìÈ¡³äÖµ<$str(N$ÕËºÅÊÖÐø·Ñ¼ÆËãÁìÈ¡)> ³äÖµµã£¬Ö»ÄÜÁìÈ¡Ò»´Î¡£ @È·¶¨Ö±³åºÅ³äÖµÁìÈ¡ @È¡Ïû
+SENDMSG 9 µ±Ç°ÕËºÅ¿ÉÒÔÃâ·ÑÁìÈ¡³äÖµ<$str(N$ÕËºÅÊÖÐø·Ñ¼ÆËãÁìÈ¡)> ³äÖµµã£¬Ö»ÄÜÁìÈ¡Ò»´Î¡£ @È·¶¨Ö±³åºÅ³äÖµÁìÈ¡ @È¡Ïû
 BREAK
 
 
@@ -245,7 +278,7 @@ BREAK
 #IF
 EQUAL T9 ling
 #act
-messagebox ´ËºÅÒÑ¾­ÁìÈ¡¹ýÁË£¬²»ÄÜ¶à´ÎÁìÈ¡Å¶~
+SENDMSG 9 ´ËºÅÒÑ¾­ÁìÈ¡¹ýÁË£¬²»ÄÜ¶à´ÎÁìÈ¡Å¶~
 BREAK
 
 #if
@@ -284,7 +317,7 @@ SENDMSG 1 ¡ï[%s]:¹§Ï²Íæ¼Ò<$USERNAME>Í¨¹ýÕËºÅ×ªÇø»ñµÃ<$str(N$Ö±³åºÅ»ý·Ö)>»ý·Ö,Èç¹
 SENDMSG 1 ¡ï[%s]:¹§Ï²Íæ¼Ò<$USERNAME>Í¨¹ýÕËºÅ×ªÇø»ñµÃ<$str(N$Ö±³åºÅµã¾í)>µã¾í,Èç¹ûÄúÒ²Ïë»ñµÃ,Çë¸Ï¿ì³äÖµ°É!
 BREAK
 #ELSEACT
-MESSAGEBOX ÄúÃ»ÓÐ×ªÇøÊý¾Ý£¬ÇëÈ·¶¨Äã×ªÇøÊ±ÉèÖÃµÄÊÇ±¾ÕËºÅ£¡
+SENDMSG 9 ÄúÃ»ÓÐ×ªÇøÊý¾Ý£¬ÇëÈ·¶¨Äã×ªÇøÊ±ÉèÖÃµÄÊÇ±¾ÕËºÅ£¡
 BREAK
 
 

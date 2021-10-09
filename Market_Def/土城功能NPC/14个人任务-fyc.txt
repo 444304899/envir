@@ -1,212 +1,166 @@
 [@main]
 
-
-
 #IF
 CHECK [90] 0
 #act
-mov s$任务按钮 <接受任务/@接受任务1>
-
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=接受任务|link=@接受任务1>
 
 
 #IF
 CHECK [90] 1
 #act
-mov n$任务按钮 <任务已接>
-
-
-
-
-
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=任务已接|grey=1>
 
 
 #if
 #act
 #SAY
-\ \ \ \ \ \ \ \ \ \  \ \ \
-<>                                                                       <点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                      <全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \   \  \
+<Img|x=-27.0|y=-65.0|width=610|height=500|rotate=0|show=4|bg=1|esc=1|move=1|loadDelay=1|img=public/box/qmrw.png|reset=1>
+<Button|x=533.0|y=-63.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ListView|children={2,3,4,5,6,7,8}|x=12.0|y=11.0|width=188|height=410|direction=1|bounce=1|margin=1|reload=0>
+<Button|id=2|x=12.0|y=12.0|color=255|pimg=public/button/00689.png|size=18|nimg=public/button/00688.png|link=@main>
+<Button|id=3|x=12.0|y=12.0|color=255|pimg=public/button/00691.png|size=18|nimg=public/button/00690.png|link=@main1>
+<Button|id=4|x=12.0|y=12.0|color=255|pimg=public/button/00693.png|size=18|nimg=public/button/00692.png|link=@main2>
+<Button|id=5|x=12.0|y=12.0|color=255|pimg=public/button/00695.png|size=18|nimg=public/button/00694.png|link=@main3>
+<Button|id=6|x=12.0|y=12.0|color=255|pimg=public/button/00697.png|size=18|nimg=public/button/00696.png|link=@main4>
+<Button|id=7|x=12.0|y=12.0|color=255|pimg=public/button/00699.png|size=18|nimg=public/button/00698.png|link=@main5>
+<Button|id=8|x=12.0|y=12.0|color=255|pimg=public/button/00701.png|size=18|nimg=public/button/00700.png|link=@main6>
+<RText|x=270.0|y=32.0|color=255|size=16|text=<点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253>>
+<RText|x=217.0|y=183.0|color=255|size=16|text=<虚空·行者/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(虚空·行者)>/10\<异兽·玄蜂/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(异兽·玄蜂)>/10\<亡剑林/FCOLOR=253>      <当前击杀：/FCOLOR=161> <$HUMAN(亡剑林)>/10\>
+<RText|x=218.0|y=252.0|color=255|size=16|text=<任务奖励：/FCOLOR=250>\<攻击附带10000真实伤害/FCOLOR=250>\<五行石*300/FCOLOR=250>\<称号卷*500,神祈之泪*500/FCOLOR=250>>
+<Text|x=218.0|y=341.0|color=250|size=16|text=一键完成：需要充值达到30元>
+<$STR(S$任务按钮)>
+<Button|x=399.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=提交任务|link=@提交任务1>
 
-<>                                   \    \  \ \
-
-<>                                                                   <虚空·行者/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(虚空·行者)>/10\
-<>                                                                   <异兽·玄蜂/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(异兽·玄蜂)>/10\
-<>                                                                   <亡剑林/FCOLOR=253>      <当前击杀：/FCOLOR=161> <$HUMAN(亡剑林)>/10\  \
-
-<>                                                              <任务奖励：攻击附带10000真实伤害/FCOLOR=250>\
-<>                                                              <任务奖励：五行石*300,称号卷*500,神祈之泪*500/FCOLOR=250>\
-<>                                                              <一键完成：需要充值达到30元/FCOLOR=250>\ \ \ \
-<>                                                                       <$STR(S$任务按钮)>       <提交任务/@提交任务1>\
-
-
-<ImgEx:13:688:689:688:153:-355/@main> \
-\
-<ImgEx:13:690:691:690:153:-310/@main1> \
-\
-<ImgEx:13:692:693:692:153:-265/@main2> \
-\
-<ImgEx:13:694:695:694:153:-220/@main3> \
-\
-<ImgEx:13:696:697:696:153:-175/@main4> \
-\
-<ImgEx:13:698:699:698:153:-130/@main5> \
-\
-<ImgEx:13:700:701:700:153:-85/@main6> \
+;    <点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
+;    <击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
+;    <承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
+;   <全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \   \  \
+;<>                                   \    \  \ \
+;<虚空·行者/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(虚空·行者)>/10\
+;<异兽·玄蜂/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(异兽·玄蜂)>/10\
+;<亡剑林/FCOLOR=253>      <当前击杀：/FCOLOR=161> <$HUMAN(亡剑林)>/10\  \
+;<>                                                              <任务奖励：攻击附带10000真实伤害/FCOLOR=250>\
+;<>                                                              <任务奖励：五行石*300,称号卷*500,神祈之泪*500/FCOLOR=250>\
+;<>                                                              <一键完成：需要充值达到30元/FCOLOR=250>\ \ \ \
+;    <$STR(S$任务按钮)>       <提交任务/@提交任务1>\
+;<ImgEx:13:688:689:688:153:-355/@main> \
+;\
+;<ImgEx:13:690:691:690:153:-310/@main1> \
+;\
+;<ImgEx:13:692:693:692:153:-265/@main2> \
+;\
+;<ImgEx:13:694:695:694:153:-220/@main3> \
+;\
+;<ImgEx:13:696:697:696:153:-175/@main4> \
+;\
+;<ImgEx:13:698:699:698:153:-130/@main5> \
+;\
+;<ImgEx:13:700:701:700:153:-85/@main6> \
 
 [@main1]
 #IF
 CHECK [91] 0
 #act
-mov s$任务按钮 <接受任务/@接受任务2>
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=接受任务|link=@接受任务2>
 
 
 #IF
 CHECK [91] 1
 #act
-mov s$任务按钮 <任务已接>
-
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=任务已接|grey=1>
 
 
 #if
 #act
 #SAY
-\ \ \ \ \ \ \ \ \ \  \ \ \
-<>                                                                       <点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                      <全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \   \  \
-<>                                   \   \  \ \
-
-<>                                                                   <虚空·先知/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(虚空·先知)>/15\
-<>                                                                   <异兽·罔象/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(异兽·罔象)>/15\
-<>                                                                   <码云/FCOLOR=253>        <当前击杀：/FCOLOR=161> <$HUMAN(码云)>/15\  \
-
-<>                                                              <任务奖励：打怪爆率+10%/FCOLOR=250>\
-<>                                                              <任务奖励：称号卷*800,神祈之泪*800,五行石*400/FCOLOR=250>\
-<>                                                              <一键完成：需要充值达到50元/FCOLOR=250>\ \ \ \
-<>                                                                       <$STR(S$任务按钮)>       <提交任务/@提交任务2>\
-
-
-<ImgEx:13:688:689:688:153:-355/@main> \
-\
-<ImgEx:13:690:691:690:153:-310/@main1> \
-\
-<ImgEx:13:692:693:692:153:-265/@main2> \
-\
-<ImgEx:13:694:695:694:153:-220/@main3> \
-\
-<ImgEx:13:696:697:696:153:-175/@main4> \
-\
-<ImgEx:13:698:699:698:153:-130/@main5> \
-\
-<ImgEx:13:700:701:700:153:-85/@main6> \
-
-
+<Img|x=-27.0|y=-65.0|width=610|height=500|rotate=0|show=4|bg=1|esc=1|move=1|loadDelay=1|img=public/box/qmrw.png|reset=1>
+<Button|x=533.0|y=-63.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ListView|children={2,3,4,5,6,7,8}|x=12.0|y=11.0|width=188|height=410|direction=1|bounce=1|margin=1|reload=0>
+<Button|id=2|x=12.0|y=12.0|color=255|pimg=public/button/00689.png|size=18|nimg=public/button/00688.png|link=@main>
+<Button|id=3|x=12.0|y=12.0|color=255|pimg=public/button/00691.png|size=18|nimg=public/button/00690.png|link=@main1>
+<Button|id=4|x=12.0|y=12.0|color=255|pimg=public/button/00693.png|size=18|nimg=public/button/00692.png|link=@main2>
+<Button|id=5|x=12.0|y=12.0|color=255|pimg=public/button/00695.png|size=18|nimg=public/button/00694.png|link=@main3>
+<Button|id=6|x=12.0|y=12.0|color=255|pimg=public/button/00697.png|size=18|nimg=public/button/00696.png|link=@main4>
+<Button|id=7|x=12.0|y=12.0|color=255|pimg=public/button/00699.png|size=18|nimg=public/button/00698.png|link=@main5>
+<Button|id=8|x=12.0|y=12.0|color=255|pimg=public/button/00701.png|size=18|nimg=public/button/00700.png|link=@main6>
+<RText|x=270.0|y=32.0|color=255|size=16|text=<点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253>>
+<RText|x=217.0|y=183.0|color=255|size=16|text=<虚空·先知/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(虚空·先知)>/15\
+<异兽·罔象/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(异兽·罔象)>/15\
+<码云/FCOLOR=253>        <当前击杀：/FCOLOR=161> <$HUMAN(码云)>/15\>
+<RText|x=218.0|y=252.0|color=255|size=16|text=<任务奖励：/FCOLOR=250>\<打怪爆率+10%/FCOLOR=250>\<称号卷*800,神祈之泪*800,五行石*400/FCOLOR=250>\<一键完成：需要充值达到50元/FCOLOR=250>>
+<$STR(S$任务按钮)>
+<Button|x=399.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=提交任务|link=@提交任务2>
 
 [@main2]
 #IF
 CHECK [92] 0
 #act
-mov s$任务按钮 <接受任务/@接受任务3>
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=接受任务|link=@接受任务3>
 
 
 #IF
 CHECK [92] 1
 #act
-mov s$任务按钮 <任务已接>
-
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=任务已接|grey=1>
 
 
 #if
 #act
 #SAY
-\ \ \ \ \ \ \ \ \ \  \ \ \
-<>                                                                       <点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                      <全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \   \  \
-<>                                   \   \   \   \
-
-<>                                                                   <虚空·遁地兽/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(虚空·遁地兽)>/30\
-<>                                                                   <异兽·魍魉/FCOLOR=253>    <当前击杀：/FCOLOR=161> <$HUMAN(异兽·魍魉)>/30\
-<>                                                                   <麻花藤/FCOLOR=253>        <当前击杀：/FCOLOR=161> <$HUMAN(麻花藤)>/30\  \
-<>                                                              <任务奖励：打怪爆率+20%/FCOLOR=250>\
-<>                                                              <任务奖励：1%切割生肖:猎人的宽刃刀/FCOLOR=250>\
-<>                                                              <任务奖励：称号卷*1000,神祈之泪*1000,五行石*500/FCOLOR=250>\
-<>                                                              <一键完成：需要充值达到100元/FCOLOR=250>\ \ \
-<>                                                                       <$STR(S$任务按钮)>       <提交任务/@提交任务3>\
-
-<ImgEx:13:688:689:688:153:-355/@main> \
-\
-<ImgEx:13:690:691:690:153:-310/@main1> \
-\
-<ImgEx:13:692:693:692:153:-265/@main2> \
-\
-<ImgEx:13:694:695:694:153:-220/@main3> \
-\
-<ImgEx:13:696:697:696:153:-175/@main4> \
-\
-<ImgEx:13:698:699:698:153:-130/@main5> \
-\
-<ImgEx:13:700:701:700:153:-85/@main6> \
-
-
+<Img|x=-27.0|y=-65.0|width=610|height=500|rotate=0|show=4|bg=1|esc=1|move=1|loadDelay=1|img=public/box/qmrw.png|reset=1>
+<Button|x=533.0|y=-63.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ListView|children={2,3,4,5,6,7,8}|x=12.0|y=11.0|width=188|height=410|direction=1|bounce=1|margin=1|reload=0>
+<Button|id=2|x=12.0|y=12.0|color=255|pimg=public/button/00689.png|size=18|nimg=public/button/00688.png|link=@main>
+<Button|id=3|x=12.0|y=12.0|color=255|pimg=public/button/00691.png|size=18|nimg=public/button/00690.png|link=@main1>
+<Button|id=4|x=12.0|y=12.0|color=255|pimg=public/button/00693.png|size=18|nimg=public/button/00692.png|link=@main2>
+<Button|id=5|x=12.0|y=12.0|color=255|pimg=public/button/00695.png|size=18|nimg=public/button/00694.png|link=@main3>
+<Button|id=6|x=12.0|y=12.0|color=255|pimg=public/button/00697.png|size=18|nimg=public/button/00696.png|link=@main4>
+<Button|id=7|x=12.0|y=12.0|color=255|pimg=public/button/00699.png|size=18|nimg=public/button/00698.png|link=@main5>
+<Button|id=8|x=12.0|y=12.0|color=255|pimg=public/button/00701.png|size=18|nimg=public/button/00700.png|link=@main6>
+<RText|x=270.0|y=32.0|color=255|size=16|text=<点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253>>
+<RText|x=217.0|y=183.0|color=255|size=16|text=<虚空·遁地兽/FCOLOR=253>  <当前击杀：/FCOLOR=161> <$HUMAN(虚空·遁地兽)>/30\
+<异兽·魍魉/FCOLOR=253>    <当前击杀：/FCOLOR=161> <$HUMAN(异兽·魍魉)>/30\
+<麻花藤/FCOLOR=253>        <当前击杀：/FCOLOR=161> <$HUMAN(麻花藤)>/30\>
+<RText|x=218.0|y=252.0|color=255|size=16|text=<任务奖励：/FCOLOR=250>\<打怪爆率+20%/FCOLOR=250>\<1%切割生肖:猎人的宽刃刀/FCOLOR=250>\<称号卷*1000,神祈之泪*1000,五行石*500/FCOLOR=250>\<一键完成：需要充值达到100元/FCOLOR=250>>
+<$STR(S$任务按钮)>
+<Button|x=399.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=提交任务|link=@提交任务3>
 
 [@main3]
 #IF
 #ACT
 ;LOADVAR HUMAN ★★★云顶之奕★★★ ..\QuestDiary\个人任务\★★★云顶之奕★★★.txt
-
-
-
 #IF
 CHECK [96] 0
 #act
-mov s$任务按钮 <接受任务/@接受任务4>
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=接受任务|link=@接受任务4>
 
 
 #IF
 CHECK [96] 1
 #act
-mov s$任务按钮 <任务已接>
-
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=任务已接|grey=1>
 
 
 #if
 #act
 #SAY
-\ \ \ \ \ \ \ \ \ \  \ \ \
-<>                                                                       <点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                      <全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \   \  \
-<>                                   \  \  \  \
-<>                                                                   <★★★云顶之奕★★★/FCOLOR=253>   \
-<>                                                                   <当前击杀：/FCOLOR=161> <$HUMAN(★★★云顶之奕★★★)>/10\ \ \
-<>                                                              <任务奖励：打怪爆率+30%/FCOLOR=250>\
-<>                                                              <任务奖励：2%切割生肖:游击者的军刀/FCOLOR=250>\
-<>                                                              <任务奖励：称号卷*1500,神祈之泪*1500,五行石*700/FCOLOR=250>\
-<>                                                              <一键完成：需要充值达到150元/FCOLOR=250>\ \   \
-<>                                                                       <$STR(S$任务按钮)>       <提交任务/@提交任务4>\
-
-
-<ImgEx:13:688:689:688:153:-355/@main> \
-\
-<ImgEx:13:690:691:690:153:-310/@main1> \
-\
-<ImgEx:13:692:693:692:153:-265/@main2> \
-\
-<ImgEx:13:694:695:694:153:-220/@main3> \
-\
-<ImgEx:13:696:697:696:153:-175/@main4> \
-\
-<ImgEx:13:698:699:698:153:-130/@main5> \
-\
-<ImgEx:13:700:701:700:153:-85/@main6> \
-
-
+<Img|x=-27.0|y=-65.0|width=610|height=500|rotate=0|show=4|bg=1|esc=1|move=1|loadDelay=1|img=public/box/qmrw.png|reset=1>
+<Button|x=533.0|y=-63.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ListView|children={2,3,4,5,6,7,8}|x=12.0|y=11.0|width=188|height=410|direction=1|bounce=1|margin=1|reload=0>
+<Button|id=2|x=12.0|y=12.0|color=255|pimg=public/button/00689.png|size=18|nimg=public/button/00688.png|link=@main>
+<Button|id=3|x=12.0|y=12.0|color=255|pimg=public/button/00691.png|size=18|nimg=public/button/00690.png|link=@main1>
+<Button|id=4|x=12.0|y=12.0|color=255|pimg=public/button/00693.png|size=18|nimg=public/button/00692.png|link=@main2>
+<Button|id=5|x=12.0|y=12.0|color=255|pimg=public/button/00695.png|size=18|nimg=public/button/00694.png|link=@main3>
+<Button|id=6|x=12.0|y=12.0|color=255|pimg=public/button/00697.png|size=18|nimg=public/button/00696.png|link=@main4>
+<Button|id=7|x=12.0|y=12.0|color=255|pimg=public/button/00699.png|size=18|nimg=public/button/00698.png|link=@main5>
+<Button|id=8|x=12.0|y=12.0|color=255|pimg=public/button/00701.png|size=18|nimg=public/button/00700.png|link=@main6>
+<RText|x=270.0|y=32.0|color=255|size=16|text=<点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253>>
+<RText|x=217.0|y=183.0|color=255|size=16|text=<★★★云顶之奕★★★/FCOLOR=253>   \
+<当前击杀：/FCOLOR=161> <$HUMAN(★★★云顶之奕★★★)>/10\>
+<RText|x=218.0|y=252.0|color=255|size=16|text=<任务奖励：/FCOLOR=250>\<打怪爆率+30%/FCOLOR=250>\<2%切割生肖:游击者的军刀/FCOLOR=250>\<称号卷*1500,神祈之泪*1500,五行石*700/FCOLOR=250>\<一键完成：需要充值达到150元/FCOLOR=250>>
+<$STR(S$任务按钮)>
+<Button|x=399.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=提交任务|link=@提交任务4>
 
 
 [@提交任务4]
@@ -222,7 +176,7 @@ give 称号卷 1500
 ;GiveStateItem 游击者的军刀 1 1 0 0 0 1 0 1
 GIVESTATEITEM 游击者的军刀 1 1 1 0 0 0 1 0 0
 ;GiveStateItem [时装]·冥の王 1 1 0 0 0 1 0 1
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了杀怪爆率100%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了杀怪爆率100%！
 break
 
 
@@ -239,69 +193,46 @@ give 称号卷 1500
 ;GiveStateItem 游击者的军刀 1 1 0 0 0 1 0 1
 GIVESTATEITEM 游击者的军刀 1 1 1 0 0 0 1 0 0
 ;GiveStateItem [时装]·冥の王 1 1 0 0 0 1 0 1
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了杀怪爆率100%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了杀怪爆率100%！
 SENDMOVEMSG 0 249 251 200 1 ≮个人任务≯：玩家『<$USERNAME>』成功完成了史诗级任务，获得了大量属性加成！！
 #elseact
-messagebox [提示]：:\\1,是否接受完任务\\2,是否已经达到提交要求\\3,是否已经提交完成任务！
+SENDMSG 9 请确认：1,是否接受完任务
+SENDMSG 9 请确认：2,是否已经达到提交要求
+SENDMSG 9 请确认：3,是否已经提交完成任务！
 break
 
 ;=========================================
 [@main4]
 #IF
-#ACT
-;VAR Integer HUMAN 魔王★
-;LOADVAR HUMAN 魔王★ ..\QuestDiary\个人任务\魔王★.txt
-
-
-#IF
 CHECK [98] 0
 #act
-mov s$任务按钮 <接受任务/@接受任务5>
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=接受任务|link=@接受任务5>
 
 
 #IF
 CHECK [98] 1
 #act
-mov s$任务按钮 <任务已接>
-
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=任务已接|grey=1>
 
 
 #if
 #act
 #SAY
-\ \ \ \ \ \ \ \ \ \  \ \ \
-<>                                                                       <点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                      <全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \   \  \
-
-<>                                   \  \ \  \
-
-<>                                                                   <  魔王★/FCOLOR=253>     <当前击杀：/FCOLOR=161> <$HUMAN(魔王★)>/20\ \
-<>                               \  \
-<>                                                              <任务奖励：打怪爆率+40%/FCOLOR=250>\
-<>                                                              <任务奖励：3%切割生肖:附魔·战士/FCOLOR=250>\
-<>                                                              <任务奖励：五行石*1000 称号卷*2000/FCOLOR=250>\
-<>                                                              <一键完成：需要充值达到200元/FCOLOR=250>\
-<>                                                                        <满切割满称号/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\ \
-<>                                                                       <$STR(S$任务按钮)>       <提交任务/@提交任务5>\
-
-
-<ImgEx:13:688:689:688:153:-355/@main> \
-\
-<ImgEx:13:690:691:690:153:-310/@main1> \
-\
-<ImgEx:13:692:693:692:153:-265/@main2> \
-\
-<ImgEx:13:694:695:694:153:-220/@main3> \
-\
-<ImgEx:13:696:697:696:153:-175/@main4> \
-\
-<ImgEx:13:698:699:698:153:-130/@main5> \
-\
-<ImgEx:13:700:701:700:153:-85/@main6> \
-
-
+<Img|x=-27.0|y=-65.0|width=610|height=500|rotate=0|show=4|bg=1|esc=1|move=1|loadDelay=1|img=public/box/qmrw.png|reset=1>
+<Button|x=533.0|y=-63.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ListView|children={2,3,4,5,6,7,8}|x=12.0|y=11.0|width=188|height=410|direction=1|bounce=1|margin=1|reload=0>
+<Button|id=2|x=12.0|y=12.0|color=255|pimg=public/button/00689.png|size=18|nimg=public/button/00688.png|link=@main>
+<Button|id=3|x=12.0|y=12.0|color=255|pimg=public/button/00691.png|size=18|nimg=public/button/00690.png|link=@main1>
+<Button|id=4|x=12.0|y=12.0|color=255|pimg=public/button/00693.png|size=18|nimg=public/button/00692.png|link=@main2>
+<Button|id=5|x=12.0|y=12.0|color=255|pimg=public/button/00695.png|size=18|nimg=public/button/00694.png|link=@main3>
+<Button|id=6|x=12.0|y=12.0|color=255|pimg=public/button/00697.png|size=18|nimg=public/button/00696.png|link=@main4>
+<Button|id=7|x=12.0|y=12.0|color=255|pimg=public/button/00699.png|size=18|nimg=public/button/00698.png|link=@main5>
+<Button|id=8|x=12.0|y=12.0|color=255|pimg=public/button/00701.png|size=18|nimg=public/button/00700.png|link=@main6>
+<RText|x=270.0|y=32.0|color=255|size=16|text=<点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253>>
+<RText|x=217.0|y=183.0|color=255|size=16|text=<  魔王★/FCOLOR=253>     <当前击杀：/FCOLOR=161> <$HUMAN(魔王★)>/20\>
+<RText|x=218.0|y=252.0|color=255|size=16|text=<任务奖励：/FCOLOR=250>\<打怪爆率+40%/FCOLOR=250>\<3%切割生肖:附魔·战士/FCOLOR=250>\<五行石*1000 称号卷*2000/FCOLOR=250>\<一键完成：需要充值达到200元/FCOLOR=250>>
+<$STR(S$任务按钮)>
+<Button|x=399.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=提交任务|link=@提交任务5>
 
 [@提交任务5]
 #if
@@ -315,7 +246,7 @@ give 称号卷 2000
 ;GiveStateItem 附魔·战士  1 1 0 0 0 1 0 1
 GIVESTATEITEM 附魔·战士 1 1 1 0 0 0 1 0 0
 ;GiveStateItem [时装]·冰の火 1 1 0 0 0 1 0 1
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了杀怪爆率200%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了杀怪爆率200%！
 break
 
 
@@ -331,10 +262,12 @@ give 称号卷 2000
 ;GiveStateItem 附魔·战士 1 1 0 0 0 1 0 1
 GIVESTATEITEM 附魔·战士 1 1 1 0 0 0 1 0 0
 ;GiveStateItem [时装]·冰の火 1 1 0 0 0 1 0 1
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了杀怪爆率200%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了杀怪爆率200%！
 SENDMOVEMSG 0 249 251 200 1 ≮个人任务≯：玩家『<$USERNAME>』成功完成了传说级任务，获得了大量属性加成！！
 #elseact
-messagebox [提示]：:\\1,是否接受完任务\\2,是否已经达到提交要求\\3,是否已经提交完成任务！
+SENDMSG 9 请确认：1,是否接受完任务
+SENDMSG 9 请确认：2,是否已经达到提交要求
+SENDMSG 9 请确认：3,是否已经提交完成任务！
 break
 
 ;=============================================================================
@@ -343,61 +276,35 @@ break
 ;=========================================
 [@main5]
 #IF
-#ACT
-
-;LOADVAR HUMAN 魔王★★ ..\QuestDiary\个人任务\魔王★★.txt
-
-
-#IF
 CHECK [108] 0
 #act
-mov s$任务按钮 <接受任务/@接受任务6>
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=接受任务|link=@接受任务6>
 
 
 #IF
 CHECK [108] 1
 #act
-mov s$任务按钮 <任务已接>
-
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=任务已接|grey=1>
 
 
 #if
 #act
 #SAY
-\ \ \ \ \ \ \ \ \ \  \ \ \
-<>                                                                       <点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                      <全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \   \  \
-
-<>                                   \  \ \  \
-
-<>                                                                   <  魔王★★/FCOLOR=253>     <当前击杀：/FCOLOR=161> <$HUMAN(魔王★★)>/30\
-<>                               \  \  \
-<>                                                              <任务奖励：打怪爆率+100%/FCOLOR=250>\
-<>                                                              <任务奖励：五行石*2500/FCOLOR=250>\
-<>                                                              <任务奖励：4%切割装备:地爆·天星/FCOLOR=250>\
-<>                                                              <任务奖励：神之信徒称号卷/FCOLOR=250>\
-<>                                                              <一键完成：需要充值达到500元/FCOLOR=250>\ \
-
-<>                                                                       <$STR(S$任务按钮)>       <提交任务/@提交任务6>\
-
-
-<ImgEx:13:688:689:688:153:-355/@main> \
-\
-<ImgEx:13:690:691:690:153:-310/@main1> \
-\
-<ImgEx:13:692:693:692:153:-265/@main2> \
-\
-<ImgEx:13:694:695:694:153:-220/@main3> \
-\
-<ImgEx:13:696:697:696:153:-175/@main4> \
-\
-<ImgEx:13:698:699:698:153:-130/@main5> \
-\
-<ImgEx:13:700:701:700:153:-85/@main6> \
-
-
+<Img|x=-27.0|y=-65.0|width=610|height=500|rotate=0|show=4|bg=1|esc=1|move=1|loadDelay=1|img=public/box/qmrw.png|reset=1>
+<Button|x=533.0|y=-63.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ListView|children={2,3,4,5,6,7,8}|x=12.0|y=11.0|width=188|height=410|direction=1|bounce=1|margin=1|reload=0>
+<Button|id=2|x=12.0|y=12.0|color=255|pimg=public/button/00689.png|size=18|nimg=public/button/00688.png|link=@main>
+<Button|id=3|x=12.0|y=12.0|color=255|pimg=public/button/00691.png|size=18|nimg=public/button/00690.png|link=@main1>
+<Button|id=4|x=12.0|y=12.0|color=255|pimg=public/button/00693.png|size=18|nimg=public/button/00692.png|link=@main2>
+<Button|id=5|x=12.0|y=12.0|color=255|pimg=public/button/00695.png|size=18|nimg=public/button/00694.png|link=@main3>
+<Button|id=6|x=12.0|y=12.0|color=255|pimg=public/button/00697.png|size=18|nimg=public/button/00696.png|link=@main4>
+<Button|id=7|x=12.0|y=12.0|color=255|pimg=public/button/00699.png|size=18|nimg=public/button/00698.png|link=@main5>
+<Button|id=8|x=12.0|y=12.0|color=255|pimg=public/button/00701.png|size=18|nimg=public/button/00700.png|link=@main6>
+<RText|x=270.0|y=32.0|color=255|size=16|text=<点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253>>
+<RText|x=217.0|y=183.0|color=255|size=16|text=<  魔王★★/FCOLOR=253>     <当前击杀：/FCOLOR=161> <$HUMAN(魔王★★)>/30\>
+<RText|x=218.0|y=252.0|color=255|size=16|text=<任务奖励：/FCOLOR=250>\<打怪爆率+100%/FCOLOR=250>\<3%切割生肖:附魔·战士/FCOLOR=250>\<五行石*2500,神之信徒称号卷/FCOLOR=250>\<一键完成：需要充值达到500元/FCOLOR=250>>
+<$STR(S$任务按钮)>
+<Button|x=399.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=提交任务|link=@提交任务6>
 
 [@提交任务6]
 #if
@@ -412,7 +319,7 @@ give 神之信徒称号卷 1
 ;GiveStateItem 地爆·天星 1 1 0 0 0 1 0 1
 GIVESTATEITEM 地爆·天星 1 1 1 0 0 0 1 0 0
 ;GiveStateItem [时装]·孙の悟饭 1 1 0 0 0 1 0 1
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了杀怪爆率300%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了杀怪爆率300%！
 break
 
 
@@ -429,10 +336,12 @@ give 神之信徒称号卷 1
 ;GiveStateItem 地爆·天星 1 1 0 0 0 1 0 1
 GIVESTATEITEM 地爆·天星 1 1 1 0 0 0 1 0 0
 ;GiveStateItem [时装]·孙の悟饭 1 1 0 0 0 1 0 1
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了杀怪爆率300%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了杀怪爆率300%！
 SENDMOVEMSG 0 249 251 200 1 ≮个人任务≯：玩家『<$USERNAME>』成功完成了传说级任务，获得了大量属性加成！！
 #elseact
-messagebox [提示]：:\\1,是否接受完任务\\2,是否已经达到提交要求\\3,是否已经提交完成任务！
+SENDMSG 9 请确认：1,是否接受完任务
+SENDMSG 9 请确认：2,是否已经达到提交要求
+SENDMSG 9 请确认：3,是否已经提交完成任务！
 break
 
 ;=============================================================================
@@ -444,58 +353,35 @@ break
 ;=========================================
 [@main6]
 #IF
-#ACT
-;LOADVAR HUMAN 魔王★★★ ..\QuestDiary\个人任务\魔王★★★.txt
-
-
-#IF
 CHECK [228] 0
 #act
-mov s$任务按钮 <接受任务/@接受任务7>
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=接受任务|link=@接受任务7>
 
 
 #IF
 CHECK [228] 1
 #act
-mov s$任务按钮 <任务已接>
-
+mov s$任务按钮 <Button|x=239.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=任务已接|grey=1>
 
 
 #if
 #act
 #SAY
-\ \ \ \ \ \ \ \ \ \  \ \ \
-<>                                                                       <点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                       <承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \
-<>                                                                      <全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \   \  \
-
-<>                                   \   \ \   \
-
-<>                                                                   <  魔王★★★/FCOLOR=253>     <当前击杀：/FCOLOR=161> <$HUMAN(魔王★★★)>/40\
-<>                               \  \ \
-<>                                                              <任务奖励：打怪爆率+300%/FCOLOR=250>\
-<>                                                              <任务奖励：五行石*5000/FCOLOR=250>\
-<>                                                              <任务奖励：5%生肖切割装备:九天·日月/FCOLOR=250>\
-<>                                                              <任务奖励：倚天辟地(所有怪爆,1-10%切割)/FCOLOR=250>\
-<>                                                              <一键完成：需要充值达到1000元/FCOLOR=250>\ \
-<>                                                                       <$STR(S$任务按钮)>       <提交任务/@提交任务7>\
-
-
-<ImgEx:13:688:689:688:153:-355/@main> \
-\
-<ImgEx:13:690:691:690:153:-310/@main1> \
-\
-<ImgEx:13:692:693:692:153:-265/@main2> \
-\
-<ImgEx:13:694:695:694:153:-220/@main3> \
-\
-<ImgEx:13:696:697:696:153:-175/@main4> \
-\
-<ImgEx:13:698:699:698:153:-130/@main5> \
-\
-<ImgEx:13:700:701:700:153:-85/@main6> \
-
+<Img|x=-27.0|y=-65.0|width=610|height=500|rotate=0|show=4|bg=1|esc=1|move=1|loadDelay=1|img=public/box/qmrw.png|reset=1>
+<Button|x=533.0|y=-63.0|color=255|mimg=public/button/close2.png|size=18|pimg=public/button/close3.png|nimg=public/button/close1.png|link=@exit>
+<ListView|children={2,3,4,5,6,7,8}|x=12.0|y=11.0|width=188|height=410|direction=1|bounce=1|margin=1|reload=0>
+<Button|id=2|x=12.0|y=12.0|color=255|pimg=public/button/00689.png|size=18|nimg=public/button/00688.png|link=@main>
+<Button|id=3|x=12.0|y=12.0|color=255|pimg=public/button/00691.png|size=18|nimg=public/button/00690.png|link=@main1>
+<Button|id=4|x=12.0|y=12.0|color=255|pimg=public/button/00693.png|size=18|nimg=public/button/00692.png|link=@main2>
+<Button|id=5|x=12.0|y=12.0|color=255|pimg=public/button/00695.png|size=18|nimg=public/button/00694.png|link=@main3>
+<Button|id=6|x=12.0|y=12.0|color=255|pimg=public/button/00697.png|size=18|nimg=public/button/00696.png|link=@main4>
+<Button|id=7|x=12.0|y=12.0|color=255|pimg=public/button/00699.png|size=18|nimg=public/button/00698.png|link=@main5>
+<Button|id=8|x=12.0|y=12.0|color=255|pimg=public/button/00701.png|size=18|nimg=public/button/00700.png|link=@main6>
+<RText|x=270.0|y=32.0|color=255|size=16|text=<点击左侧选择你要接受任务/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<击杀任务要求怪物数量完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<承诺所有任务都可打怪完成/AUTOCOLOR=254,251,168,191,250,70,245,249,253> \<全部任务提交可叠加爆率500%/AUTOCOLOR=254,251,168,191,250,70,245,249,253>>
+<RText|x=217.0|y=183.0|color=255|size=16|text=<  魔王★★★/FCOLOR=253>     <当前击杀：/FCOLOR=161> <$HUMAN(魔王★★★)>/40\>
+<RText|x=218.0|y=235.0|color=255|size=16|text=<任务奖励：/FCOLOR=250>\<打怪爆率+300%/FCOLOR=250>\<五行石*5000/FCOLOR=250>\<5%生肖切割装备:九天·日月/FCOLOR=250>\<倚天辟地(所有怪爆,1-10%切割)/FCOLOR=250>\<一键完成：需要充值达到1000元/FCOLOR=250>>
+<$STR(S$任务按钮)>
+<Button|x=399.0|y=371.0|width=120|height=30|rotate=0|nimg=public/button/lbtn1.png|mimg=public/button/lbtn2.png|pimg=public/button/lbtn3.png|color=255|size=16|text=提交任务|link=@提交任务7>
 
 
 [@提交任务7]
@@ -510,7 +396,7 @@ give 五行石 5000
 GIVESTATEITEM 九天·日月 1 1 1 0 0 0 1 0 0
 ;GiveStateItem 生命之玺 1 1 0 0 0 1 0 1
 ADDSKILL 倚天辟地 3
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了杀怪爆率500%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了杀怪爆率500%！
 break
 
 
@@ -526,10 +412,12 @@ give 五行石 5000
 GIVESTATEITEM 九天·日月 1 1 1 0 0 0 1 0 0
 ;GiveStateItem 生命之玺 1 1 0 0 0 0 0 1
 ADDSKILL 倚天辟地 3
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了杀怪爆率500%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了杀怪爆率500%！
 SENDMOVEMSG 0 249 251 200 1 ≮个人任务≯：玩家『<$USERNAME>』成功完成了传说级任务，获得了大量属性加成！！
 #elseact
-messagebox [提示]：:\\1,是否接受完任务\\2,是否已经达到提交要求\\3,是否已经提交完成任务！
+SENDMSG 9 请确认：1,是否接受完任务
+SENDMSG 9 请确认：2,是否已经达到提交要求
+SENDMSG 9 请确认：3,是否已经提交完成任务！
 break
 
 ;=============================================================================
@@ -561,7 +449,7 @@ set [93] 1
 give 五行石 300
 give 称号卷 500
 give 神祈之泪 500
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了10000点攻击附加真实伤害！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了10000点攻击附加真实伤害！
 break
 
 
@@ -578,10 +466,12 @@ set [93] 1
 give 五行石 300
 give 称号卷 500
 give 神祈之泪 500
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了10000点攻击附加真实伤害！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了10000点攻击附加真实伤害！
 SENDMOVEMSG 0 249 251 200 1 ≮个人任务≯：玩家『<$USERNAME>』成功完成了低级任务，获得了大量属性加成！！
 #elseact
-messagebox [提示]：:\\1,是否接受完任务\\2,是否已经达到提交要求\\3,是否已经提交完成任务！
+SENDMSG 9 请确认：1,是否接受完任务
+SENDMSG 9 请确认：2,是否已经达到提交要求
+SENDMSG 9 请确认：3,是否已经提交完成任务！
 break
 
 
@@ -597,7 +487,7 @@ set [94] 1
 give 五行石 400
 give 称号卷 800
 give 神祈之泪 800
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了属性加成：打怪爆率+50%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了属性加成：打怪爆率+50%！
 break
 
 
@@ -614,10 +504,12 @@ set [94] 1
 give 五行石 400
 give 称号卷 800
 give 神祈之泪 800
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了属性加成：打怪爆率+50%！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了属性加成：打怪爆率+50%！
 SENDMOVEMSG 0 249 251 200 1 ≮个人任务≯：玩家『<$USERNAME>』成功完成了中级任务，获得了大量属性加成！！
 #elseact
-messagebox [提示]：:\\1,是否接受完任务\\2,是否已经达到提交要求\\3,是否已经提交完成任务！
+SENDMSG 9 请确认：1,是否接受完任务
+SENDMSG 9 请确认：2,是否已经达到提交要求
+SENDMSG 9 请确认：3,是否已经提交完成任务！
 break
 
 
@@ -636,7 +528,7 @@ give 神祈之泪 1000
 ;GiveStateItem 猎人的宽刃刀 1 1 0 0 0 1 0 1
 GIVESTATEITEM 猎人的宽刃刀 1 1 1 0 0 0 1 0 0
 ;GiveStateItem [时装]·忍の鬼鲛 1 1 0 0 0 1 0 1
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了属性加成：怪物爆率+50%！！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了属性加成：怪物爆率+50%！！
 break
 
 
@@ -656,10 +548,12 @@ give 神祈之泪 1000
 ;GiveStateItem 猎人的宽刃刀 1 1 0 0 0 1 0 1
 GIVESTATEITEM 猎人的宽刃刀 1 1 1 0 0 0 1 0 0
 ;GiveStateItem [时装]·忍の鬼鲛 1 1 0 0 0 1 0 1
-MESSAGEBOX [提示]：恭喜你已经完成任务.获得了属性加成：怪物爆率+50%！！
+SENDMSG 9 [提示]：恭喜你已经完成任务.获得了属性加成：怪物爆率+50%！！
 SENDMOVEMSG 0 249 251 200 1 ≮个人任务≯：玩家『<$USERNAME>』成功完成了高级任务，获得了大量属性加成！！
 #elseact
-messagebox [提示]：:\\1,是否接受完任务\\2,是否已经达到提交要求\\3,是否已经提交完成任务！
+SENDMSG 9 请确认：1,是否接受完任务
+SENDMSG 9 请确认：2,是否已经达到提交要求
+SENDMSG 9 请确认：3,是否已经提交完成任务！
 break
 
 
@@ -678,14 +572,14 @@ CHECK [90] 0
 #ACT
 SET [90] 1
 goto @main
-MESSAGEBOX [提示]：任务已接受.请按右边任务详细完成！！
+SENDMSG 9 [提示]：任务已接受.请按右边任务详细完成！！
 break
 
 
 #IF
 CHECK [90] 1
 #act
-MESSAGEBOX [提示]：对不起，你已经接受过此任务！！！
+SENDMSG 9 [提示]：对不起，你已经接受过此任务！！！
 break
 
 
@@ -696,14 +590,14 @@ CHECK [91] 0
 #ACT
 SET [91] 1
 goto @main1
-MESSAGEBOX [提示]：任务已接受.请按右边任务详细完成！！
+SENDMSG 9 [提示]：任务已接受.请按右边任务详细完成！！
 break
 
 
 #IF
 CHECK [91] 1
 #act
-MESSAGEBOX [提示]：对不起，你已经接受过此任务！！！
+SENDMSG 9 [提示]：对不起，你已经接受过此任务！！！
 break
 
 
@@ -714,14 +608,14 @@ CHECK [92] 0
 #ACT
 SET [92] 1
 goto @main2
-MESSAGEBOX [提示]：任务已接受.请按右边任务详细完成！！
+SENDMSG 9 [提示]：任务已接受.请按右边任务详细完成！！
 break
 
 
 #IF
 CHECK [92] 1
 #act
-MESSAGEBOX [提示]：对不起，你已经接受过此任务！！！
+SENDMSG 9 [提示]：对不起，你已经接受过此任务！！！
 break
 
 
@@ -732,14 +626,14 @@ CHECK [96] 0
 #ACT
 SET [96] 1
 goto @main3
-MESSAGEBOX [提示]：任务已接受.请按右边任务详细完成！！
+SENDMSG 9 [提示]：任务已接受.请按右边任务详细完成！！
 break
 
 
 #IF
 CHECK [96] 1
 #act
-MESSAGEBOX [提示]：对不起，你已经接受过此任务！！！
+SENDMSG 9 [提示]：对不起，你已经接受过此任务！！！
 break
 
 
@@ -749,14 +643,14 @@ CHECK [98] 0
 #ACT
 SET [98] 1
 goto @main4
-MESSAGEBOX [提示]：任务已接受.请按右边任务详细完成！！
+SENDMSG 9 [提示]：任务已接受.请按右边任务详细完成！！
 break
 
 
 #IF
 CHECK [98] 1
 #act
-MESSAGEBOX [提示]：对不起，你已经接受过此任务！！！
+SENDMSG 9 [提示]：对不起，你已经接受过此任务！！！
 break
 
 
@@ -766,14 +660,14 @@ CHECK [108] 0
 #ACT
 SET [108] 1
 goto @main5
-MESSAGEBOX [提示]：任务已接受.请按右边任务详细完成！！
+SENDMSG 9 [提示]：任务已接受.请按右边任务详细完成！！
 break
 
 
 #IF
 CHECK [108] 1
 #act
-MESSAGEBOX [提示]：对不起，你已经接受过此任务！！！
+SENDMSG 9 [提示]：对不起，你已经接受过此任务！！！
 break
 
 
@@ -785,14 +679,14 @@ CHECK [228] 0
 #ACT
 SET [228] 1
 goto @main6
-MESSAGEBOX [提示]：任务已接受.请按右边任务详细完成！！
+SENDMSG 9 [提示]：任务已接受.请按右边任务详细完成！！
 break
 
 
 #IF
 CHECK [228] 1
 #act
-MESSAGEBOX [提示]：对不起，你已经接受过此任务！！！
+SENDMSG 9 [提示]：对不起，你已经接受过此任务！！！
 break
 
 
